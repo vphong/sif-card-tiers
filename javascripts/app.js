@@ -56,7 +56,7 @@ app.factory('Cards', function($http) {
 });
 
 
-app.controller('TierCtrl', function($scope, Cards) {
+app.controller('TierCtrl', function($scope, $filter, Cards) {
     $scope.cardsBase = "jp";
     $scope.cardsBase.upcoming = false;
     $scope.filters = {
@@ -75,7 +75,7 @@ app.controller('TierCtrl', function($scope, Cards) {
         $scope.cards = Cards.cleanCards($scope.cards);
     }
 
-    var url = "https://crossorigin.me/http://schoolido.lu/api/cards/?&page_size=150&ordering=-id&rarity=SR,UR&japan-only=true";
+    var url = "https://crossorigin.me/http://schoolido.lu/api/cards/?&page_size=50&ordering=-id&rarity=SR,UR&japan-only=true";
     $scope.$watch('cardsBase', function(n, o) {
         if (n !== o) {
             $scope.cardsBase = n;
@@ -95,8 +95,21 @@ app.controller('TierCtrl', function($scope, Cards) {
     };
 
     $scope.sortBy = function(type) {
-    $scope.sort.reverse = ($scope.sort.type === type) ? !$scope.sort.reverse : false;
-    $scope.sort.type = type;
+        $scope.sort.reverse = ($scope.sort.type === type) ? !$scope.sort.reverse : false;
+        $scope.sort.type = type;
+    };
 
-  };
+
+    // TODO: filter by server
+    // TODO: filter by attribute
+    // TODO: filter by rarity
+    // TODO: filter by origin
+    // TODO: filter by group
+    // TODO: display by idlz
+
+    // TODO: parse skill for info
+    // TODO: calculate skill contribution
+    // TODO: calculate total card strength
+    // TODO: pagination
+
 });
