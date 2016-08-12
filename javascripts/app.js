@@ -1,5 +1,7 @@
 var app = angular.module('tierList', ['ui.bootstrap']);
 
+// TODO: loading spinner
+
 app.factory('Cards', function($http) {
 
     var ret = {};
@@ -43,11 +45,11 @@ app.factory('Cards', function($http) {
             delete cards[i].clean_ur_idolized;
             delete cards[i].skill_up_cards;
             delete cards[i].total_owners;
-            delete cards[i].event.note;
+            //delete cards[i].event.note;
             delete cards[i].promo_item;
             delete cards[i].promo_link;
             delete cards[i].promo_item;
-            //cards[i].premium = ((cards[i].event !== null) && (cards[i].is_promo != null));
+            cards[i].premium = (!cards[i].event) && (!cards[i].is_promo);
         }
         return cards;
     }
@@ -61,10 +63,10 @@ app.controller('TierCtrl', function($scope, $filter, Cards) {
     $scope.cardsBase.upcoming = false;
     $scope.filters = {
         attribute: 'all',
+        origin: {premium: 'true',
+        promo: 'true',
+        evnt: 'true'}
     }
-
-    $scope.sortType = 'name';
-    $scope.sortReverse = false;
 
     $scope.cards = {};
 
@@ -94,18 +96,34 @@ app.controller('TierCtrl', function($scope, $filter, Cards) {
         Cards.getCards(url).success(getCardsSuccess);
     };
 
+    $scope.sort = { reverse: '', type: ''};
     $scope.sortBy = function(type) {
         $scope.sort.reverse = ($scope.sort.type === type) ? !$scope.sort.reverse : false;
         $scope.sort.type = type;
     };
-
+  $scope.arrFromSortType = Object.keys($scope.sort).map(function(key) {
+    return $scope.sort[key];
+  });
 
     // TODO: filter by server
     // TODO: filter by attribute
     // TODO: filter by rarity
     // TODO: filter by origin
+    $scope.byOrigin = function(card) {
+      /*var ret = ($scope.filters.premium == card.premium) ||
+      ($scope.filters.promo == card.is_promo) ||
+      ($scope.filters.event == card.event);
+      console.log(ret);*/
+      var filterPremium = ($scope.filters.premium == card.premium);
+      var filterPromo = ($scope.filters.promo == card.is_promo);
+      var filterEvent = ($scope.filters.evnt == (card.event==null));
+      var showIf = filterPremium && filterPromo && filterEvent;
+      return showIf;
+    }
     // TODO: filter by group
+    // TODO: filter by skill
     // TODO: display by idlz
+
 
     // TODO: parse skill for info
     // TODO: calculate skill contribution
