@@ -133,42 +133,42 @@ app.controller('TierCtrl', function($scope, $filter, Cards) {
 
     // TODO: parse skill for info
     // TODO: calculate skill contribution
-    // TODO: calculate total card strength: center skill, secondary skill, friend skill, bond
+    //****** calculate total card strength: center skill, secondary skill, friend skill, bond
     var stat_to_mod = function(card) {
-        if ($scope.filters.idlz && (card.attribute == "Pure"))
-            stat = card.idolized_maximum_statistics_pure;
-        else if (!$scope.filters.idlz && (card.attribute == "Pure"))
-            stat = card.non_idolized_maximum_statistics_pure;
-        else if ($scope.filters.idlz && (card.attribute == "Smile"))
-            stat = card.idolized_maximum_statistics_smile;
-        else if (!$scope.filters.idlz && (card.attribute == "Smile"))
-            stat = card.non_idolized_maximum_statistics_smile;
-        else if ($scope.filters.idlz && (card.attribute == "Cool"))
-            stat = card.idolized_maximum_statistics_cool;
-        else if (!$scope.filters.idlz && (card.attribute == "Cool"))
-            stat = card.non_idolized_maximum_statistics_cool;
+            if ($scope.filters.idlz && (card.attribute == "Pure"))
+                stat = card.idolized_maximum_statistics_pure;
+            else if (!$scope.filters.idlz && (card.attribute == "Pure"))
+                stat = card.non_idolized_maximum_statistics_pure;
+            else if ($scope.filters.idlz && (card.attribute == "Smile"))
+                stat = card.idolized_maximum_statistics_smile;
+            else if (!$scope.filters.idlz && (card.attribute == "Smile"))
+                stat = card.non_idolized_maximum_statistics_smile;
+            else if ($scope.filters.idlz && (card.attribute == "Cool"))
+                stat = card.idolized_maximum_statistics_cool;
+            else if (!$scope.filters.idlz && (card.attribute == "Cool"))
+                stat = card.non_idolized_maximum_statistics_cool;
 
-        // bond bonus
-        if ($scope.filters.idlz && card.rarity == "UR")
-            stat += 1000;
-        else if ((!$scope.filters.idlz && card.rarity == "UR") || ($scope.filters.idlz && card.rarity == "SR"))
-            stat += 500;
-        else if (!$scope.filters.idlz && card.rarity == "SR")
-            stat += 250;
-        return stat;
-    }
-    // common center skill bonus
-    $scope.calcCenterSkillBonusCommon = function(card) {
-        // skills: on-attribute (9%), group bonus (3%)
-        // twice for team leader + guest partner
-        // TODO: find out how new secondary skills affect stat
-        return (stat_to_mod(card) * (.09)) * 2;
+            // bond bonus
+            if ($scope.filters.idlz && card.rarity == "UR")
+                stat += 1000;
+            else if ((!$scope.filters.idlz && card.rarity == "UR") || ($scope.filters.idlz && card.rarity == "SR"))
+                stat += 500;
+            else if (!$scope.filters.idlz && card.rarity == "SR")
+                stat += 250;
+            return stat;
+        }
+        // common center skill bonus
+    var calcLeaderSkillBonus = function(card, type) {
+      var statToMod = stat_to_mod(card);
+        if (type == "common") return statToMod + (statToMod* (.09 + .03)) * 2;
+        else return statToMod + (statToMod * (.09 + .06)) * 2;
     };
     // optimal center skill bonus
-    $scope.calcCenterSkillBonusOptimal = function (card) {
-        // skills: on-attribute (9%), years/subunit bonus (6%)
-        // twice for team leader + guest partner
-        return stat_to_mod(card) * .09 * 2;
+    $scope.cScore = function(card) {
+      return calcLeaderSkillBonus(card, "common")
+    }
+    $scope.oScore = function(card) {
+      return calcLeaderSkillBonus(card, "optimal")
     }
     var stat = 0;
     // TODO: pagination

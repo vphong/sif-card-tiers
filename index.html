@@ -108,8 +108,8 @@
                                     <span ng-show="sort.type == 'cool' && !sort.reverse" class="glyphicon glyphicon-chevron-down"></span>
                                     <span ng-show="sort.type == 'cool' && sort.reverse" class="glyphicon glyphicon-chevron-up"></span>
                                 </td>
-                                <td>Center skill (common)</td>
-                                <td>Center skill (optimal)</td>
+                                <td>C-Score</td>
+                                <td>O-Score</td>
                             </tr>
                         </thead>
                         <tbody>
@@ -125,8 +125,8 @@
                                 <td>{{filters.idlz || card.is_promo ? card.idolized_maximum_statistics_smile : card.non_idolized_maximum_statistics_smile}}</td>
                                 <td>{{filters.idlz || card.is_promo ? card.idolized_maximum_statistics_pure : card.non_idolized_maximum_statistics_pure}}</td>
                                 <td>{{filters.idlz || card.is_promo ? card.idolized_maximum_statistics_cool : card.non_idolized_maximum_statistics_cool}}</td>
-                                <td>{{calcLeaderSkillBonusCommon(card) | number: 1}}</td>
-                                <td>{{calcLeaderSkillBonusOptimal(card) | number: 1}}</td>
+                                <td>{{cScore(card)| number: 1}}</td>
+                                <td>{{oScore(card) | number: 1}}</td>
                             </tr>
                         </tbody>
                     </table>
