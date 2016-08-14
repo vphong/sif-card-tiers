@@ -6,6 +6,10 @@ app.factory('Cards', function($http) {
 
     var ret = {};
 
+
+
+
+
     ret.getCards = function(url) {
         return $http.get(url);
     }
@@ -20,8 +24,6 @@ app.factory('Cards', function($http) {
             delete cards[i].idol.main_unit;
             delete cards[i].idol.chibi_small;
             delete cards[i].idol.sub_unit;
-            delete cards[i].center_skill;
-            delete cards[i].center_skill_details;
             delete cards[i].japanese_center_skill;
             delete cards[i].japanese_center_skill_details;
             delete cards[i].video_story;
@@ -50,6 +52,7 @@ app.factory('Cards', function($http) {
             delete cards[i].promo_link;
             delete cards[i].promo_item;
             cards[i].premium = (!cards[i].event) && (!cards[i].is_promo);
+
         }
         return cards;
     }
@@ -63,9 +66,11 @@ app.controller('TierCtrl', function($scope, $filter, Cards) {
     $scope.cardsBase.upcoming = false;
     $scope.filters = {
         attribute: 'all',
-        origin: {premium: 'true',
-        promo: 'true',
-        evnt: 'true'}
+        origin: {
+            premium: 'true',
+            promo: 'true',
+            evnt: 'true'
+        }
     }
 
     $scope.cards = {};
@@ -96,30 +101,31 @@ app.controller('TierCtrl', function($scope, $filter, Cards) {
         Cards.getCards(url).success(getCardsSuccess);
     };
 
-    $scope.sort = { reverse: '', type: ''};
+    $scope.sort = {
+        reverse: '',
+        type: ''
+    };
     $scope.sortBy = function(type) {
         $scope.sort.reverse = ($scope.sort.type === type) ? !$scope.sort.reverse : false;
         $scope.sort.type = type;
     };
-  $scope.arrFromSortType = Object.keys($scope.sort).map(function(key) {
-    return $scope.sort[key];
-  });
+
 
     // TODO: filter by server
     // TODO: filter by attribute
     // TODO: filter by rarity
     // TODO: filter by origin
     $scope.byOrigin = function(card) {
-      /*var ret = ($scope.filters.premium == card.premium) ||
-      ($scope.filters.promo == card.is_promo) ||
-      ($scope.filters.event == card.event);
-      console.log(ret);*/
-      var filterPremium = ($scope.filters.premium == card.premium);
-      var filterPromo = ($scope.filters.promo == card.is_promo);
-      var filterEvent = ($scope.filters.evnt == (card.event==null));
-      var showIf = filterPremium && filterPromo && filterEvent;
-      return showIf;
-    }
+        /*var ret = ($scope.filters.premium == card.premium) ||
+        ($scope.filters.promo == card.is_promo) ||
+        ($scope.filters.event == card.event);
+        console.log(ret);*/
+        var filterPremium = ($scope.filters.premium == card.premium);
+        var filterPromo = ($scope.filters.promo == card.is_promo);
+        var filterEvent = ($scope.filters.evnt == (card.event == null));
+        var showIf = filterPremium && filterPromo && filterEvent;
+        return filterPremium;
+    };
     // TODO: filter by group
     // TODO: filter by skill
     // TODO: display by idlz
@@ -127,7 +133,44 @@ app.controller('TierCtrl', function($scope, $filter, Cards) {
 
     // TODO: parse skill for info
     // TODO: calculate skill contribution
-    // TODO: calculate total card strength
+    // TODO: calculate total card strength: center skill, secondary skill, friend skill, bond
+    var stat_to_mod = function(card) {
+        if ($scope.filters.idlz && (card.attribute == "Pure"))
+            stat = card.idolized_maximum_statistics_pure;
+        else if (!$scope.filters.idlz && (card.attribute == "Pure"))
+            stat = card.non_idolized_maximum_statistics_pure;
+        else if ($scope.filters.idlz && (card.attribute == "Smile"))
+            stat = card.idolized_maximum_statistics_smile;
+        else if (!$scope.filters.idlz && (card.attribute == "Smile"))
+            stat = card.non_idolized_maximum_statistics_smile;
+        else if ($scope.filters.idlz && (card.attribute == "Cool"))
+            stat = card.idolized_maximum_statistics_cool;
+        else if (!$scope.filters.idlz && (card.attribute == "Cool"))
+            stat = card.non_idolized_maximum_statistics_cool;
+
+        // bond bonus
+        if ($scope.filters.idlz && card.rarity == "UR")
+            stat += 1000;
+        else if ((!$scope.filters.idlz && card.rarity == "UR") || ($scope.filters.idlz && card.rarity == "SR"))
+            stat += 500;
+        else if (!$scope.filters.idlz && card.rarity == "SR")
+            stat += 250;
+        return stat;
+    }
+    // common center skill bonus
+    $scope.calcCenterSkillBonusCommon = function(card) {
+        // skills: on-attribute (9%), group bonus (3%)
+        // twice for team leader + guest partner
+        // TODO: find out how new secondary skills affect stat
+        return (stat_to_mod(card) * (.09)) * 2;
+    };
+    // optimal center skill bonus
+    $scope.calcCenterSkillBonusOptimal = function (card) {
+        // skills: on-attribute (9%), years/subunit bonus (6%)
+        // twice for team leader + guest partner
+        return stat_to_mod(card) * .09 * 2;
+    }
+    var stat = 0;
     // TODO: pagination
 
 });
