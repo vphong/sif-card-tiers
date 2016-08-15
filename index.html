@@ -13,6 +13,7 @@
         <link rel="stylesheet" href="https://bootswatch.com/yeti/bootstrap.min.css">
         <link rel="stylesheet" href="stylesheets/custom.css">
 
+        <script src="javascripts/card_data.js"></script>
         <script src="javascripts/app.js"></script>
 
         <meta name="viewport" content="width=device-width">
@@ -32,7 +33,7 @@
                     </p>
                         <p>
                             <tt>card[0]:
-                                {{cards[11].skill_details|json}}</tt>
+                                {{cards[0]|json}}</tt>
                         </p>
                     <form>
                         <div class="form-group">
@@ -125,13 +126,11 @@
                                     <span ng-show="sort.type == 'oScore' && !sort.reverse" class="glyphicon glyphicon-chevron-down"></span>
                                     <span ng-show="sort.type == 'oScore' && sort.reverse" class="glyphicon glyphicon-chevron-up"></span>
                                 </td>
-                                <td>Skill</td>
                                 <td>Skill contr</td>
-                                <td>Skill act</td>
                             </tr>
                         </thead>
                         <tbody bs-loading-overlay>
-                            <tr ng-repeat="card in cards | orderBy:sort.type:sort.reverse | filter:searchCards:strict" ng-if="byOrigin(card)">
+                            <tr ng-repeat="card in cards | orderBy:sort.type:sort.reverse | filter:searchCards:strict | pagination: page * pageSize | limitTo: pageSize" ng-if="byOrigin(card)">
                                 <td>
                                     <a href="{{website_url}}"><img src="{{filters.idlz || card.is_promo ? card.round_card_idolized_image : card.round_card_image}}" class="display-image" / pull-left>
                                         {{card.translated_collection}}
@@ -149,6 +148,7 @@
                             </tr>
                         </tbody>
                     </table>
+                    <ul uib-pagination total-items="numberOfPages" ng-model="page" max-size="maxSize" class="pagination-sm" boundary-link-numbers="true" rotate="false"></ul>
                 </div>
 
             </section>
