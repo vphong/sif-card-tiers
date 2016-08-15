@@ -8,6 +8,8 @@
         <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular.js"></script>
         <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular-animate.js"></script>
         <script src="https://angular-ui.github.io/bootstrap/ui-bootstrap-tpls-2.0.1.js"></script>
+        <script src="https://rawgit.com/bsalex/angular-loading-overlay/master/dist/angular-loading-overlay.js"></script>
+        <script src="https://rawgit.com/bsalex/angular-loading-overlay-http-interceptor/master/dist/angular-loading-overlay-http-interceptor.js"></script>
         <link rel="stylesheet" href="https://bootswatch.com/yeti/bootstrap.min.css">
         <link rel="stylesheet" href="stylesheets/custom.css">
 
@@ -25,9 +27,13 @@
 
                 <div ng-controller="TierCtrl">
                     <p>
-                        <tt>card[0]:
-                            {{cards[0]|json}}</tt>
+                        <tt>url:
+                            {{url}}</tt>
                     </p>
+                        <p>
+                            <tt>card[0]:
+                                {{cards[11].skill_details|json}}</tt>
+                        </p>
                     <form>
                         <div class="form-group">
                             <div class="input-group">
@@ -70,16 +76,19 @@
 
                     <div class="btn-group">
                         <label class="btn btn-primary btn-sm" ng-model="filters.ur" ng-init="filters.ur=true" ng-click="updateURL()" uib-btn-checkbox>UR</label>
+                        <label class="btn btn-primary btn-sm" ng-model="filters.ssr" ng-init="filters.ssr=true" ng-click="updateURL()" uib-btn-checkbox>SSR</label>
                         <label class="btn btn-primary btn-sm" ng-model="filters.sr" ng-init="filters.sr=true" ng-click="updateURL()" uib-btn-checkbox>SR</label>
                     </div>
 
                     <label class="btn btn-primary btn-sm" ng-model="filters.idlz" ng-init="filters.idlz=false" uib-btn-checkbox="false">Idolized?</label>
+
                     <div class="btn-group">
                         <label class="btn btn-primary btn-sm" ng-model="filters.premium" ng-init="filters.premium=true" ng-click="updateURL()" uib-btn-checkbox="true">Premium</label>
                         <label class="btn btn-primary btn-sm" ng-model="filters.promo" ng-init="filters.promo=true" ng-click="updateURL()" uib-btn-checkbox="true">Promos</label>
                         <label class="btn btn-primary btn-sm" ng-model="filters.event" ng-init="filters.event=true" ng-click="updateURL()" uib-btn-checkbox="true">Events</label>
                     </div>
                     <div class="btn-group">
+                       <label class="btn btn-primary btn-sm" ng-model="filters.skill" ng-click="updateURL()" uib-btn-radio="'all'">All</label>
                         <label class="btn btn-primary btn-sm" ng-model="filters.skill" ng-click="updateURL()" uib-btn-radio="'scorer'">Scorer</label>
                         <label class="btn btn-primary btn-sm" ng-model="filters.skill" ng-click="updateURL()" uib-btn-radio="'pl'">Perfect Lock</label>
                         <label class="btn btn-primary btn-sm" ng-model="filters.skill" ng-click="updateURL()" uib-btn-radio="'healer'">Healer</label>
@@ -116,9 +125,12 @@
                                     <span ng-show="sort.type == 'oScore' && !sort.reverse" class="glyphicon glyphicon-chevron-down"></span>
                                     <span ng-show="sort.type == 'oScore' && sort.reverse" class="glyphicon glyphicon-chevron-up"></span>
                                 </td>
+                                <td>Skill</td>
+                                <td>Skill contr</td>
+                                <td>Skill act</td>
                             </tr>
                         </thead>
-                        <tbody>
+                        <tbody bs-loading-overlay>
                             <tr ng-repeat="card in cards | orderBy:sort.type:sort.reverse | filter:searchCards:strict" ng-if="byOrigin(card)">
                                 <td>
                                     <a href="{{website_url}}"><img src="{{filters.idlz || card.is_promo ? card.round_card_idolized_image : card.round_card_image}}" class="display-image" / pull-left>
@@ -133,6 +145,7 @@
                                 <td>{{filters.idlz || card.is_promo ? card.idolized_maximum_statistics_cool : card.non_idolized_maximum_statistics_cool}}</td>
                                 <td>{{cScore(card)| number: 1}}</td>
                                 <td>{{oScore(card) | number: 1}}</td>
+                                <td>{{skillContr(card)|number:2}}</td>
                             </tr>
                         </tbody>
                     </table>

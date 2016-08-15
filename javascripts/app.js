@@ -1,6 +1,18 @@
-var app = angular.module('tierList', ['ui.bootstrap']);
+var app = angular.module('tierList', ['ui.bootstrap', 'bsLoadingOverlay', 'bsLoadingOverlayHttpInterceptor']);
 
-// TODO: loading spinner
+app.factory('allHttpInterceptor', function(bsLoadingOverlayHttpInterceptorFactoryFactory) {
+    return bsLoadingOverlayHttpInterceptorFactoryFactory();
+});
+
+app.config(function($httpProvider) {
+    $httpProvider.interceptors.push('allHttpInterceptor');
+});
+app.run(function(bsLoadingOverlayService) {
+    bsLoadingOverlayService.setGlobalConfig({
+        delay: 900, // Minimal delay to hide loading overlay in ms.
+        templateUrl: 'loading-overlay.html' // Template url for overlay element. If not specified - no overlay element is created.
+    });
+});
 
 app.factory('Cards', function($http) {
 
@@ -48,7 +60,21 @@ app.factory('Cards', function($http) {
             delete cards[i].promo_link;
             delete cards[i].promo_item;
             cards[i].premium = (!cards[i].event) && (!cards[i].is_promo);
+            var skill_details_array = cards[i].skill_details.replace(/[,\/#!$%\^&\*;:{}=\-_`~()]/g, "").split(" ");
+            var endStr = skill_details_array.length - 1;
+            console.log(skill_details_array)
+            cards[i].skill_activation_num = skill_details_array[2];
+            cards[i].skill_activation_type = skill_details_array[3];
+            if (cards[i].skill_activation_type != "hit")
+                cards[i].skill_activation_percent = skill_details_array[7] / 100;
+            else cards[i].skill_activation_percent = skill_details_array[9] / 100;
 
+            if (cards[i].skill == "Score Up")
+                cards[i].skill_activation = skill_details_array[endStr - 3];
+            else if (cards[i].skill == "Perfect Lock")
+                cards[i].skill_activation = skill_details_array[endStr - 5];
+            else if (cards[i].skill == "Healer")
+                cards[i].skill_activation = skill_details_array[endStr - 2];
         }
         return cards;
     }
@@ -74,42 +100,48 @@ app.controller('TierCtrl', function($scope, $filter, Cards) {
     }
 
 
-    $scope.url = "https://crossorigin.me/http://schoolido.lu/api/cards/?&page_size=25&ordering=-id&rarity=SR,UR&japan-only=false&skill=score up&idol_main_unit=μ's";
+    $scope.url = "https://crossorigin.me/http://schoolido.lu/api/cards/?&page_size=25&ordering=-id&rarity=SR,SSR,UR&japan-only=false&skill=score up&idol_main_unit=μ's";
     var base = "https://crossorigin.me/http://schoolido.lu/api/cards/?&page_size=25&ordering=-id";
 
     var getCards = function() {
         Cards.getCards($scope.url).success(getCardsSuccess);
     };
     $scope.updateURL = function() {
-      $scope.url = base;
-      var filters = $scope.filters;
+        $scope.url = base;
+        var filters = $scope.filters;
 
-      if (filters.server == "en") $scope.url += "&japan-only=false";
-      else $scope.url += "&japan-only=true";
+        if (filters.server == "en") $scope.url += "&japan-only=false";
+        else $scope.url += "&japan-only=true";
 
-      if (filters.attribute == "smile") $scope.url += "&attribute=Smile";
-      else if (filters.attribute == "pure") $scope.url += "&attribute=Pure";
-      else if (filters.attribute == "cool") $scope.url += "&attribute=Cool";
+        if (filters.attribute == "smile") $scope.url += "&attribute=Smile";
+        else if (filters.attribute == "pure") $scope.url += "&attribute=Pure";
+        else if (filters.attribute == "cool") $scope.url += "&attribute=Cool";
 
-      if (filters.ur && !filters.sr) $scope.url += "&rarity=UR";
-      else if (filters.ur && filters.sr) $scope.url += "&rarity=UR,SR";
-      else if (!filters.ur && filers.sr) $scope.url += "&rarity=SR";
+        // FIXME
 
-      /*if (filters.premium && !filters.promo && !filters.event)
-          $scope.url += "&is_promo=false&is_event=false";
-      else if (filters.premium && filters.promo && !filters.event)
-          $scope.url += "&is_event=false";
-      else if (filters.premium && !filters.promo && filters.event)
-          $scope.url += "&is_event=false";*/
+        if (filters.ur && filters.ssr && filters.sr) $scope.url += "&rarity=UR,SSR,SR";
+        else if (filers.ur && filters.ssr && !filters.sr) $scope.url += "&rarity=UR,SSR";
+        else if (filters.ur && !filters.ssr && filters.sr) $scope.url += "&rarity=UR,SR";
+        else if (filters.ur && !filters.ssr && !filters.sr) $scope.url += "&rarity=URR";
+        else if (!filters.ur && filters.ssr && filters.sr) $scope.url += "%rarity=SR,SSR";
+        else if (!filters.ur && filters.ssr && !filters.sr) $scope.url += "%rarity=SSR";
+        else if (!filters.ur && !filters.ssr && filters.sr) $scope.url += "%rarity=SR";
 
-      if (filters.skill == "scorer") $scope.url += "&skill=score up";
-      else if (filters.skill == "pl") $scope.url += "&skill=perfect lock";
-      else if (filters.skill == "healer") $scope.url += "&skill=healer";
+        /*if (filters.premium && !filters.promo && !filters.event)
+            $scope.url += "&is_promo=false&is_event=false";
+        else if (filters.premium && filters.promo && !filters.event)
+            $scope.url += "&is_event=false";
+        else if (filters.premium && !filters.promo && filters.event)
+            $scope.url += "&is_event=false";*/
 
-      if (filters.muse && !filters.aqours) $scope.url += "&idol_main_unit=μ's";
-      else if (!filters.muse && filters.aqours) $scope.url += "&idol_main_unit=Aqours";
-      else if (filters.muse && filters.aqours) $scope.url += "&idol_main_unit=μ's,Aqours"
-      getCards();
+        if (filters.skill == "scorer") $scope.url += "&skill=score up";
+        else if (filters.skill == "pl") $scope.url += "&skill=perfect lock";
+        else if (filters.skill == "healer") $scope.url += "&skill=healer";
+
+        if (filters.muse && !filters.aqours) $scope.url += "&idol_main_unit=μ's";
+        else if (!filters.muse && filters.aqours) $scope.url += "&idol_main_unit=Aqours";
+        else if (filters.muse && filters.aqours) $scope.url += "&idol_main_unit=μ's,Aqours"
+        getCards();
     }
 
     getCards();
@@ -186,22 +218,39 @@ app.controller('TierCtrl', function($scope, $filter, Cards) {
             stat += 250;
         return stat;
     };
-    var calcLeaderSkillBonus = function(card, type) {
-        var statToMod = stat_to_mod(card);
-        if (type == "common") return statToMod + (statToMod * (.09 + .03)) * 2;
-        else if (type == "optimal") return statToMod + (statToMod * (.09 + .06)) * 2;
-        else return false;
-    };
     // common center skill bonus
     $scope.cScore = function(card) {
-        card.cScore = calcLeaderSkillBonus(card, "common");
+        var statToMod = stat_to_mod(card);
+        card.cScore = statToMod + (statToMod * (.09 + .03)) * 2;;
         return card.cScore
     };
     // optimal center skill bonus
     $scope.oScore = function(card) {
-        card.oScore = calcLeaderSkillBonus(card, "optimal");
-        return card.oScore
+        var statToMod = stat_to_mod(card);
+        card.oScore = statToMod + (statToMod * (.09 + .06)) * 2;
+        return card.oScore;
     };
+
+    $scope.skillContr = function(card) {
+			card.skill_contr = 0;
+			var notesActivation = (550 / card.skill_activation_num) * card.skill_activation_percent;
+			if (card.skill == "Score Up") {
+				// activation types: notes, time, combo string, perfects
+				if (card.skill_activation_type == "perfects") {
+					card.skill_contr = notesActivation * .85 * card.skill_activation;
+				}
+				else if (card.skill_activation_type == "time") {
+					card.skill_contr = (125 / card.skill_activation_num) * card.skill_activation_percent * card.skill_activation;
+				}
+				else { // notes or combo string
+					card.skill_contr = notesActivation * card.skill_activation;
+				}
+			} else if (card.skill == "Perfect Lock" || card.skill == "Healer") {
+				card.skill_contr = notesActivation * card.skill_activation;
+			}
+			return card.skill_contr
+    }
+
     var stat = 0;
     // TODO: pagination
 
