@@ -25,16 +25,8 @@
 
                 <div ng-controller="TierCtrl">
                     <p>
-                        <tt>url:
-                            {{url}}</tt>
-                    </p>
-                    <p>
                         <tt>card[0]:
                             {{cards[0]|json}}</tt>
-                    </p>
-                    <p>
-                        <tt>sort:
-                            {{sort}}</tt>
                     </p>
                     <form>
                         <div class="form-group">
@@ -50,9 +42,9 @@
                     </form>
 
                     <div class="btn-group">
-                        <label class="btn btn-primary btn-sm" ng-model="cardsBase" uib-btn-radio="'jp'">JP</label>
+                        <label class="btn btn-primary btn-sm" ng-model="filters.server" ng-click="updateURL()" uib-btn-radio="'jp'">JP</label>
                         <div class="btn-group" uib-dropdown>
-                            <label id="split-button" class="btn btn-primary btn-sm en-toggle" ng-model="cardsBase" uib-btn-radio="'en'">EN</label>
+                            <label id="split-button" class="btn btn-primary btn-sm en-toggle" ng-click="updateURL()" ng-model="filters.server" uib-btn-radio="'en'">EN</label>
 
                             <!---<button type="button" class="btn btn-primary en-toggle-caret" ng-disabled="filters.server=='jp'" uib-dropdown-toggle>
                                 <span class="caret"></span>
@@ -68,44 +60,39 @@
                         </div>
                     </div>
 
-                    <button class="btn-info" ng-click="getCards()">Get cards!</button>
 
                     <div class="btn-group">
-                        <label class="btn btn-primary btn-sm" ng-model="filters.attribute" uib-btn-radio="'all'">All</label>
-                        <label class="btn btn-primary btn-sm" ng-model="filters.attribute" uib-btn-radio="'smile'">Smile</label>
-                        <label class="btn btn-primary btn-sm" ng-model="filters.attribute" uib-btn-radio="'pure'">Pure</label>
-                        <label class="btn btn-primary btn-sm" ng-model="filters.attribute" uib-btn-radio="'cool'">Cool</label>
+                        <label class="btn btn-primary btn-sm" ng-model="filters.attribute" ng-click="updateURL()" uib-btn-radio="'all'">All</label>
+                        <label class="btn btn-primary btn-sm" ng-model="filters.attribute" ng-click="updateURL()" uib-btn-radio="'smile'">Smile</label>
+                        <label class="btn btn-primary btn-sm" ng-model="filters.attribute" ng-click="updateURL()" uib-btn-radio="'pure'">Pure</label>
+                        <label class="btn btn-primary btn-sm" ng-model="filters.attribute" ng-click="updateURL()" uib-btn-radio="'cool'">Cool</label>
                     </div>
 
                     <div class="btn-group">
-                        <label class="btn btn-primary btn-sm" ng-model="filters.ur" ng-init="filters.ur=true" uib-btn-checkbox>UR</label>
-                        <label class="btn btn-primary btn-sm" ng-model="filters.sr" ng-init="filters.sr=true" uib-btn-checkbox>SR</label>
+                        <label class="btn btn-primary btn-sm" ng-model="filters.ur" ng-init="filters.ur=true" ng-click="updateURL()" uib-btn-checkbox>UR</label>
+                        <label class="btn btn-primary btn-sm" ng-model="filters.sr" ng-init="filters.sr=true" ng-click="updateURL()" uib-btn-checkbox>SR</label>
                     </div>
 
                     <label class="btn btn-primary btn-sm" ng-model="filters.idlz" ng-init="filters.idlz=false" uib-btn-checkbox="false">Idolized?</label>
                     <div class="btn-group">
-                        <label class="btn btn-primary btn-sm" ng-model="filters.premium" ng-init="filters.premium=true" uib-btn-checkbox="true">Premium</label>
-                        <label class="btn btn-primary btn-sm" ng-model="filters.promo" ng-init="filters.promo=true" uib-btn-checkbox="true">Promos</label>
-                        <label class="btn btn-primary btn-sm" ng-model="filters.evnt" ng-init="filters.evnt=true" uib-btn-checkbox="true">Events</label>
+                        <label class="btn btn-primary btn-sm" ng-model="filters.premium" ng-init="filters.premium=true" ng-click="updateURL()" uib-btn-checkbox="true">Premium</label>
+                        <label class="btn btn-primary btn-sm" ng-model="filters.promo" ng-init="filters.promo=true" ng-click="updateURL()" uib-btn-checkbox="true">Promos</label>
+                        <label class="btn btn-primary btn-sm" ng-model="filters.event" ng-init="filters.event=true" ng-click="updateURL()" uib-btn-checkbox="true">Events</label>
                     </div>
                     <div class="btn-group">
-                        <label class="btn btn-primary btn-sm" ng-model="filters.skill" uib-btn-rado="'Scorer'">Scorer</label>
-                        <label class="btn btn-primary btn-sm" ng-model="filters.skill" uib-btn-rado="'Perfect Lock'">Perfect Lock</label>
-                        <label class="btn btn-primary btn-sm" ng-model="filters.skill" uib-btn-rado="'Healer'">Healer</label>
+                        <label class="btn btn-primary btn-sm" ng-model="filters.skill" ng-click="updateURL()" uib-btn-radio="'scorer'">Scorer</label>
+                        <label class="btn btn-primary btn-sm" ng-model="filters.skill" ng-click="updateURL()" uib-btn-radio="'pl'">Perfect Lock</label>
+                        <label class="btn btn-primary btn-sm" ng-model="filters.skill" ng-click="updateURL()" uib-btn-radio="'healer'">Healer</label>
                     </div>
 
                     <div class="btn-group">
-                        <label class="btn btn-primary btn-sm" ng-model="filters.muse" ng-init="filters.muse=true" uib-btn-checkbox="true">μ's</label>
-                        <label class="btn btn-primary btn-sm" ng-model="filters.aqours" ng-init="filters.aqours=false" uib-btn-checkbox="true">Aqours</label>
+                        <label class="btn btn-primary btn-sm" ng-model="filters.muse" ng-init="filters.muse=true" ng-click="updateURL()" uib-btn-checkbox="true">μ's</label>
+                        <label class="btn btn-primary btn-sm" ng-model="filters.aqours" ng-init="filters.aqours=false" ng-click="updateURL()" uib-btn-checkbox="true">Aqours</label>
                     </div>
                     <table class="table table-bordered table-striped">
                         <thead>
                             <tr>
-                                <td ng-click="sortBy('idol.name')">Card
-                                    <span ng-show="sort.type == 'idol.name' && !sort.reverse" class="glyphicon glyphicon-chevron-down"></span>
-                                    <span ng-show="sort.type == 'idol.name' && sort.reverse" class="glyphicon glyphicon-chevron-up"></span>
-                                </td>
-                                <td ng-click="sortBy('id')">ID
+                                <td ng-click="sortBy('id')">Card
                                     <span ng-show="sort.type == 'id' && !sort.reverse" class="glyphicon glyphicon-chevron-down"></span>
                                     <span ng-show="sort.type == 'id' && sort.reverse" class="glyphicon glyphicon-chevron-up"></span>
                                 </td>
@@ -141,7 +128,6 @@
                                         <span ng-show="card.event" class="glyphicon glyphicon-heart"></span>
                                     </a>
                                 </td>
-                                <td>{{card.id}}</td>
                                 <td>{{filters.idlz || card.is_promo ? card.idolized_maximum_statistics_smile : card.non_idolized_maximum_statistics_smile}}</td>
                                 <td>{{filters.idlz || card.is_promo ? card.idolized_maximum_statistics_pure : card.non_idolized_maximum_statistics_pure}}</td>
                                 <td>{{filters.idlz || card.is_promo ? card.idolized_maximum_statistics_cool : card.non_idolized_maximum_statistics_cool}}</td>

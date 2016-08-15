@@ -6,10 +6,6 @@ app.factory('Cards', function($http) {
 
     var ret = {};
 
-
-
-
-
     ret.getCards = function(url) {
         return $http.get(url);
     }
@@ -62,10 +58,10 @@ app.factory('Cards', function($http) {
 
 
 app.controller('TierCtrl', function($scope, $filter, Cards) {
-    $scope.cardsBase = "jp";
-    $scope.cardsBase.upcoming = false;
     $scope.filters = {
         attribute: 'all',
+        server: 'jp',
+        skill: 'scorer'
     }
 
     $scope.cards = [];
@@ -78,26 +74,45 @@ app.controller('TierCtrl', function($scope, $filter, Cards) {
     }
 
 
-    $scope.url = "https://crossorigin.me/http://schoolido.lu/api/cards/?&page_size=50&ordering=-id&rarity=SR,UR&japan-only=true";
-    var base = "https://crossorigin.me/http://schoolido.lu/api/cards/?&page_size=50&ordering=-id";
-    $scope.$watch('filters', function(n, o) {
-        if (n !== o) {
-            console.log("changed filters")
-            console.log($scope.filters)
-            $scope.filters = n;
+    $scope.url = "https://crossorigin.me/http://schoolido.lu/api/cards/?&page_size=25&ordering=-id&rarity=SR,UR&japan-only=false&skill=score up&idol_main_unit=μ's";
+    var base = "https://crossorigin.me/http://schoolido.lu/api/cards/?&page_size=25&ordering=-id";
 
-            if (n.attribute == 'smile') base += "&attribute=smile";
-            if (n.attribute == 'pure') base += "&attribute=pure";
-            if (n.attribute == 'cool') base += "&attribute=cool";
-
-            $scope.url = base;
-
-        }
-    })
-
-    $scope.getCards = function() {
+    var getCards = function() {
         Cards.getCards($scope.url).success(getCardsSuccess);
     };
+    $scope.updateURL = function() {
+      $scope.url = base;
+      var filters = $scope.filters;
+
+      if (filters.server == "en") $scope.url += "&japan-only=false";
+      else $scope.url += "&japan-only=true";
+
+      if (filters.attribute == "smile") $scope.url += "&attribute=Smile";
+      else if (filters.attribute == "pure") $scope.url += "&attribute=Pure";
+      else if (filters.attribute == "cool") $scope.url += "&attribute=Cool";
+
+      if (filters.ur && !filters.sr) $scope.url += "&rarity=UR";
+      else if (filters.ur && filters.sr) $scope.url += "&rarity=UR,SR";
+      else if (!filters.ur && filers.sr) $scope.url += "&rarity=SR";
+
+      /*if (filters.premium && !filters.promo && !filters.event)
+          $scope.url += "&is_promo=false&is_event=false";
+      else if (filters.premium && filters.promo && !filters.event)
+          $scope.url += "&is_event=false";
+      else if (filters.premium && !filters.promo && filters.event)
+          $scope.url += "&is_event=false";*/
+
+      if (filters.skill == "scorer") $scope.url += "&skill=score up";
+      else if (filters.skill == "pl") $scope.url += "&skill=perfect lock";
+      else if (filters.skill == "healer") $scope.url += "&skill=healer";
+
+      if (filters.muse && !filters.aqours) $scope.url += "&idol_main_unit=μ's";
+      else if (!filters.muse && filters.aqours) $scope.url += "&idol_main_unit=Aqours";
+      else if (filters.muse && filters.aqours) $scope.url += "&idol_main_unit=μ's,Aqours"
+      getCards();
+    }
+
+    getCards();
 
     $scope.sort = {
         reverse: true,
@@ -143,51 +158,50 @@ app.controller('TierCtrl', function($scope, $filter, Cards) {
     };
     // TODO: filter by group
     // TODO: filter by skill
-    // TODO: display by idlz
 
 
     // TODO: parse skill for info
-    // TODO: calculate skill contribution
-    //****** calculate total card strength: center skill, secondary skill, friend skill, bond
-    var stat_to_mod = function(card) {
-            if ($scope.filters.idlz && (card.attribute == "Pure"))
-                stat = card.idolized_maximum_statistics_pure;
-            else if (!$scope.filters.idlz && (card.attribute == "Pure"))
-                stat = card.non_idolized_maximum_statistics_pure;
-            else if ($scope.filters.idlz && (card.attribute == "Smile"))
-                stat = card.idolized_maximum_statistics_smile;
-            else if (!$scope.filters.idlz && (card.attribute == "Smile"))
-                stat = card.non_idolized_maximum_statistics_smile;
-            else if ($scope.filters.idlz && (card.attribute == "Cool"))
-                stat = card.idolized_maximum_statistics_cool;
-            else if (!$scope.filters.idlz && (card.attribute == "Cool"))
-                stat = card.non_idolized_maximum_statistics_cool;
 
-            // bond bonus
-            if ($scope.filters.idlz && card.rarity == "UR")
-                stat += 1000;
-            else if ((!$scope.filters.idlz && card.rarity == "UR") || ($scope.filters.idlz && card.rarity == "SR"))
-                stat += 500;
-            else if (!$scope.filters.idlz && card.rarity == "SR")
-                stat += 250;
-            return stat;
-        }
-        // common center skill bonus
+    // ****** calculate skill contribution
+    var stat_to_mod = function(card) {
+        if ($scope.filters.idlz && (card.attribute == "Pure"))
+            stat = card.idolized_maximum_statistics_pure;
+        else if (!$scope.filters.idlz && (card.attribute == "Pure"))
+            stat = card.non_idolized_maximum_statistics_pure;
+        else if ($scope.filters.idlz && (card.attribute == "Smile"))
+            stat = card.idolized_maximum_statistics_smile;
+        else if (!$scope.filters.idlz && (card.attribute == "Smile"))
+            stat = card.non_idolized_maximum_statistics_smile;
+        else if ($scope.filters.idlz && (card.attribute == "Cool"))
+            stat = card.idolized_maximum_statistics_cool;
+        else if (!$scope.filters.idlz && (card.attribute == "Cool"))
+            stat = card.non_idolized_maximum_statistics_cool;
+
+        // bond bonus
+        if ($scope.filters.idlz && card.rarity == "UR")
+            stat += 1000;
+        else if ((!$scope.filters.idlz && card.rarity == "UR") || ($scope.filters.idlz && card.rarity == "SR"))
+            stat += 500;
+        else if (!$scope.filters.idlz && card.rarity == "SR")
+            stat += 250;
+        return stat;
+    };
     var calcLeaderSkillBonus = function(card, type) {
         var statToMod = stat_to_mod(card);
         if (type == "common") return statToMod + (statToMod * (.09 + .03)) * 2;
         else if (type == "optimal") return statToMod + (statToMod * (.09 + .06)) * 2;
         else return false;
     };
-    // optimal center skill bonus
+    // common center skill bonus
     $scope.cScore = function(card) {
         card.cScore = calcLeaderSkillBonus(card, "common");
         return card.cScore
-    }
+    };
+    // optimal center skill bonus
     $scope.oScore = function(card) {
         card.oScore = calcLeaderSkillBonus(card, "optimal");
         return card.oScore
-    }
+    };
     var stat = 0;
     // TODO: pagination
 
