@@ -66,14 +66,9 @@ app.controller('TierCtrl', function($scope, $filter, Cards) {
     $scope.cardsBase.upcoming = false;
     $scope.filters = {
         attribute: 'all',
-        origin: {
-            premium: 'true',
-            promo: 'true',
-            evnt: 'true'
-        }
     }
 
-    $scope.cards = {};
+    $scope.cards = [];
 
     var count = 0;
     var getCardsSuccess = function(data, status) {
@@ -82,33 +77,53 @@ app.controller('TierCtrl', function($scope, $filter, Cards) {
         $scope.cards = Cards.cleanCards($scope.cards);
     }
 
-    var url = "https://crossorigin.me/http://schoolido.lu/api/cards/?&page_size=50&ordering=-id&rarity=SR,UR&japan-only=true";
-    $scope.$watch('cardsBase', function(n, o) {
+
+    $scope.url = "https://crossorigin.me/http://schoolido.lu/api/cards/?&page_size=50&ordering=-id&rarity=SR,UR&japan-only=true";
+    var base = "https://crossorigin.me/http://schoolido.lu/api/cards/?&page_size=50&ordering=-id";
+    $scope.$watch('filters', function(n, o) {
         if (n !== o) {
-            $scope.cardsBase = n;
+            console.log("changed filters")
+            console.log($scope.filters)
+            $scope.filters = n;
 
-            if ($scope.cardsBase == "jp")
-                url = "https://crossorigin.me/http://schoolido.lu/api/cards/?&ordering=-id&rarity=SR,UR&japan-only=true";
-            else if ($scope.cardsBase == "en")
-                url = "https://crossorigin.me/http://schoolido.lu/api/cards/?&ordering=-id&rarity=SR,UR&japan-only=false";
-            else {
+            if (n.attribute == 'smile') base += "&attribute=smile";
+            if (n.attribute == 'pure') base += "&attribute=pure";
+            if (n.attribute == 'cool') base += "&attribute=cool";
 
-            }
+            $scope.url = base;
+
         }
     })
 
     $scope.getCards = function() {
-        Cards.getCards(url).success(getCardsSuccess);
+        Cards.getCards($scope.url).success(getCardsSuccess);
     };
 
     $scope.sort = {
-        reverse: '',
-        type: ''
+        reverse: true,
+        type: 'id',
+        typeAttr: ''
     };
     $scope.sortBy = function(type) {
-        $scope.sort.reverse = ($scope.sort.type === type) ? !$scope.sort.reverse : false;
-        $scope.sort.type = type;
+        $scope.sort.reverse = ($scope.sort.type == type) || ($scope.sort.typeAttr == type) ? !$scope.sort.reverse : true;
+        $scope.sort.typeAttr = type;
+
+        if (type == 'smile' && $scope.filters.idlz)
+            $scope.sort.type = "idolized_maximum_statistics_smile";
+        else if (type == 'smile' && !$scope.filters.idlz)
+            $scope.sort.type = "non_idolized_maximum_statistics_smile";
+        else if (type == 'pure' && $scope.filters.idlz)
+            $scope.sort.type = "idolized_maximum_statistics_pure";
+        else if (type == 'pure' && !$scope.filters.idlz)
+            $scope.sort.type = "non_idolized_maximum_statistics_pure";
+        else if (type == 'cool' && $scope.filters.idlz)
+            $scope.sort.type = "idolized_maximum_statistics_cool";
+        else if (type == 'cool' && !$scope.filters.idlz)
+            $scope.sort.type = "non_idolized_maximum_statistics_cool";
+        else $scope.sort.type = type;
+
     };
+
 
 
     // TODO: filter by server
@@ -159,16 +174,19 @@ app.controller('TierCtrl', function($scope, $filter, Cards) {
         }
         // common center skill bonus
     var calcLeaderSkillBonus = function(card, type) {
-      var statToMod = stat_to_mod(card);
-        if (type == "common") return statToMod + (statToMod* (.09 + .03)) * 2;
-        else return statToMod + (statToMod * (.09 + .06)) * 2;
+        var statToMod = stat_to_mod(card);
+        if (type == "common") return statToMod + (statToMod * (.09 + .03)) * 2;
+        else if (type == "optimal") return statToMod + (statToMod * (.09 + .06)) * 2;
+        else return false;
     };
     // optimal center skill bonus
     $scope.cScore = function(card) {
-      return calcLeaderSkillBonus(card, "common")
+        card.cScore = calcLeaderSkillBonus(card, "common");
+        return card.cScore
     }
     $scope.oScore = function(card) {
-      return calcLeaderSkillBonus(card, "optimal")
+        card.oScore = calcLeaderSkillBonus(card, "optimal");
+        return card.oScore
     }
     var stat = 0;
     // TODO: pagination
