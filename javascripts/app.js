@@ -88,9 +88,6 @@ app.factory('Cards', function($http) {
                 cards[i].skill_activation = skill_details_array[endStr - 5];
             else if (cards[i].skill == "Healer")
                 cards[i].skill_activation = skill_details_array[endStr - 2];
-            statToMod = stat_to_mod(cards[i]);
-            cards[i].oScore = statToMod + (statToMod * (.09 + .06)) * 2;
-
 
         }
         return cards;
