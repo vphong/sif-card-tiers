@@ -6,7 +6,7 @@ app.factory('allHttpInterceptor', function(bsLoadingOverlayHttpInterceptorFactor
 
 app.config(function($stateProvider, $urlRouterProvider) {
 
-    $urlRouterProvider.otherwise("/");
+    $urlRouterProvider.otherwise("/user");
 
     $stateProvider
         .state("default", {
@@ -28,11 +28,11 @@ app.controller('TabCtrl', function($rootScope, $scope, $state) {
     $scope.tabs = [{
         heading: "All Cards",
         route: "all",
-        active: true
+        active: false
     }, {
         heading: "User Cards",
         route: "user",
-        active: false
+        active: true
     }, ];
 
     $scope.go = function(route) {
@@ -161,20 +161,20 @@ app.controller('TierCtrl', function($scope, $filter, Cards) {
         else if (filters.premium && !filters.promo && filters.event)
             $scope.url += "&is_event=false";*/
 
-        if (filters.skill == "scorer") $scope.url += "&skill=score up";
+        if (filters.skill == "scorer") $scope.url += "&skill=score%20up";
         else if (filters.skill == "pl") $scope.url += "&skill=perfect lock";
         else if (filters.skill == "healer") $scope.url += "&skill=healer";
 
-        if (filters.muse && !filters.aqours) $scope.url += "&idol_main_unit=μ's/";
-        else if (!filters.muse && filters.aqours) $scope.url += "&idol_main_unit=Aqours/";
-        else if (filters.muse && filters.aqours) $scope.url += "&idol_main_unit=μ's,Aqours/"
+        if (filters.muse && !filters.aqours) $scope.url += "&idol_main_unit=μ's";
+        else if (!filters.muse && filters.aqours) $scope.url += "&idol_main_unit=Aqours";
+        else if (filters.muse && filters.aqours) $scope.url += "&idol_main_unit=μ's,Aqours"
         getCards();
     }
 
     getCards();
 
     $scope.sort = {
-        reverse: true,
+        reverse: false,
         type: 'cScore',
         typeAttr: ''
     };
