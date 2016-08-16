@@ -1,8 +1,55 @@
-var app = angular.module('tierList', ['ui.bootstrap', 'bsLoadingOverlay', 'bsLoadingOverlayHttpInterceptor' ]);
+var app = angular.module('tierList', ['ui.bootstrap', 'bsLoadingOverlay', 'bsLoadingOverlayHttpInterceptor', 'ui.router']);
 
 app.factory('allHttpInterceptor', function(bsLoadingOverlayHttpInterceptorFactoryFactory) {
     return bsLoadingOverlayHttpInterceptorFactoryFactory();
 });
+
+app.config(function($stateProvider, $urlRouterProvider) {
+
+    $urlRouterProvider.otherwise("/");
+
+    $stateProvider
+        .state("default", {
+            abstract: true,
+            url: "/",
+            templateUrl: "user_cards.html"
+        })
+        .state("all", {
+            url: "/all",
+            templateUrl: "all_cards.html"
+        })
+        .state("user", {
+            url: "/user",
+            templateUrl: "user_cards.html"
+        })
+});
+
+app.controller('TabCtrl', function($rootScope, $scope, $state) {
+    $scope.tabs = [{
+        heading: "All Cards",
+        route: "all",
+        active: true
+    }, {
+        heading: "User Cards",
+        route: "user",
+        active: false
+    }, ];
+
+    $scope.go = function(route) {
+        $state.go(route);
+    };
+
+    $scope.active = function(route) {
+        return $state.is(route);
+    };
+
+    $scope.$on("$stateChangeSuccess", function() {
+        $scope.tabs.forEach(function(tab) {
+            tab.active = $scope.active(tab.route);
+        });
+    });
+});
+
 
 app.config(function($httpProvider) {
     $httpProvider.interceptors.push('allHttpInterceptor');
@@ -24,6 +71,7 @@ app.factory('Cards', function($http) {
 
     ret.cleanCards = function(cards) {
         var len = cards.length;
+        var statToMod;
         for (var i = 0; i < len; i++) {
             cards[i].premium = (!cards[i].event) && (!cards[i].is_promo);
             var skill_details_array = cards[i].skill_details.replace(/[,\/#!$%\^&\*;:{}=\-_`~()]/g, "").split(" ");
@@ -40,6 +88,10 @@ app.factory('Cards', function($http) {
                 cards[i].skill_activation = skill_details_array[endStr - 5];
             else if (cards[i].skill == "Healer")
                 cards[i].skill_activation = skill_details_array[endStr - 2];
+            statToMod = stat_to_mod(cards[i]);
+            cards[i].oScore = statToMod + (statToMod * (.09 + .06)) * 2;
+
+
         }
         return cards;
     }
@@ -73,14 +125,13 @@ app.controller('TierCtrl', function($scope, $filter, Cards) {
         $scope.next = data.next;
         $scope.prev = data.previous;
         $scope.cards = data.results;
-				console.log(data)
         $scope.cards = Cards.cleanCards($scope.cards);
     };
     $scope.numberOfPages = Math.ceil($scope.cards.length / $scope.pageSize);
 
 
-    $scope.url = "http://schoolido.lu/api/cards/?&page_size=125&ordering=-id&rarity=SR,SSR,UR&japan-only=False&skill=score up&idol_main_unit=μ's";
-    var base = "https://crossorigin.me/http://schoolido.lu/api/cardids/?&page_size=25&ordering=-id/";
+    $scope.url = "https://crossorigin.me/https://schoolido.lu/api/cards/?&page_size=10&ordering=-id&rarity=SR,SSR,UR&japan-only=False&skill=score up&idol_main_unit=μ's";
+    var base = "https://crossorigin.me/http://schoolido.lu/api/cards/?&page_size=25&ordering=-id/";
 
     var getCards = function() {
         Cards.getCards($scope.url).success(getCardsSuccess);
@@ -127,7 +178,7 @@ app.controller('TierCtrl', function($scope, $filter, Cards) {
 
     $scope.sort = {
         reverse: true,
-        type: 'id',
+        type: 'cScore',
         typeAttr: ''
     };
     $scope.sortBy = function(type) {
@@ -147,6 +198,7 @@ app.controller('TierCtrl', function($scope, $filter, Cards) {
         else if (type == 'cool' && !$scope.filters.idlz)
             $scope.sort.type = "non_idolized_maximum_statistics_cool";
         else $scope.sort.type = type;
+        console.log($scope.sort.type)
 
     };
 
@@ -171,9 +223,6 @@ app.controller('TierCtrl', function($scope, $filter, Cards) {
     // TODO: filter by skill
 
 
-    // TODO: parse skill for info
-
-    // ****** calculate skill contribution
     var stat_to_mod = function(card) {
         if ($scope.filters.idlz && (card.attribute == "Pure"))
             stat = card.idolized_maximum_statistics_pure;
@@ -197,19 +246,19 @@ app.controller('TierCtrl', function($scope, $filter, Cards) {
             stat += 250;
         return stat;
     };
-    // common center skill bonus
     $scope.cScore = function(card) {
         var statToMod = stat_to_mod(card);
         card.cScore = statToMod + (statToMod * (.09 + .03)) * 2;;
-        return card.cScore
-    };
-    // optimal center skill bonus
-    $scope.oScore = function(card) {
-        var statToMod = stat_to_mod(card);
-        card.oScore = statToMod + (statToMod * (.09 + .06)) * 2;
-        return card.oScore;
-    };
+        return card.cScore;
 
+    }
+    $scope.oScore = function(card) {
+            var statToMod = stat_to_mod(card);
+            card.oScore = statToMod + (statToMod * (.09 + .06)) * 2;;
+            return card.oScore;
+
+        }
+        // ****** calculate skill contribution
     $scope.skillContr = function(card) {
         card.skill_contr = 0;
         var notesActivation = (550 / card.skill_activation_num) * card.skill_activation_percent;

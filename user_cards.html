@@ -1,0 +1,44 @@
+    <form>
+        <div class="form-group">
+            <div class="input-group">
+                <div class="input-group-addon">
+                    <i class="glyphicon glyphicon-search"></i>
+                </div>
+
+                <input type="text" class="form-control" placeholder="School Idol Tomodachi Username" ng-model="searchCards">
+
+            </div>
+        </div>
+    </form>
+
+    <div class="btn-group">
+        <label class="btn btn-primary btn-sm" ng-model="filters.attribute" ng-click="updateURL()" uib-btn-radio="'all'">All</label>
+        <label class="btn btn-primary btn-sm" ng-model="filters.attribute" ng-click="updateURL()" uib-btn-radio="'smile'">Smile</label>
+        <label class="btn btn-primary btn-sm" ng-model="filters.attribute" ng-click="updateURL()" uib-btn-radio="'pure'">Pure</label>
+        <label class="btn btn-primary btn-sm" ng-model="filters.attribute" ng-click="updateURL()" uib-btn-radio="'cool'">Cool</label>
+    </div>
+
+    <div class="btn-group">
+        <label class="btn btn-primary btn-sm" ng-model="filters.ur" ng-init="filters.ur=true" ng-click="updateURL()" uib-btn-checkbox>UR</label>
+        <label class="btn btn-primary btn-sm" ng-model="filters.ssr" ng-init="filters.ssr=true" ng-click="updateURL()" uib-btn-checkbox>SSR</label>
+        <label class="btn btn-primary btn-sm" ng-model="filters.sr" ng-init="filters.sr=true" ng-click="updateURL()" uib-btn-checkbox>SR</label>
+    </div>
+
+    <label class="btn btn-primary btn-sm" ng-model="filters.idlz" ng-init="filters.idlz=false" uib-btn-checkbox="false">Idolized?</label>
+
+    <div class="btn-group">
+        <label class="btn btn-primary btn-sm" ng-model="filters.premium" ng-init="filters.premium=true" ng-click="updateURL()" uib-btn-checkbox="true">Premium</label>
+        <label class="btn btn-primary btn-sm" ng-model="filters.promo" ng-init="filters.promo=true" ng-click="updateURL()" uib-btn-checkbox="true">Promos</label>
+        <label class="btn btn-primary btn-sm" ng-model="filters.event" ng-init="filters.event=true" ng-click="updateURL()" uib-btn-checkbox="true">Events</label>
+    </div>
+    <div class="btn-group">
+        <label class="btn btn-primary btn-sm" ng-model="filters.skill" ng-click="updateURL()" uib-btn-radio="'all'">All</label>
+        <label class="btn btn-primary btn-sm" ng-model="filters.skill" ng-click="updateURL()" uib-btn-radio="'scorer'">Scorer</label>
+        <label class="btn btn-primary btn-sm" ng-model="filters.skill" ng-click="updateURL()" uib-btn-radio="'pl'">Perfect Lock</label>
+        <label class="btn btn-primary btn-sm" ng-model="filters.skill" ng-click="updateURL()" uib-btn-radio="'healer'">Healer</label>
+    </div>
+
+    <div class="btn-group">
+        <label class="btn btn-primary btn-sm" ng-model="filters.muse" ng-init="filters.muse=true" ng-click="updateURL()" uib-btn-checkbox="true">μ's</label>
+        <label class="btn btn-primary btn-sm" ng-model="filters.aqours" ng-init="filters.aqours=false" ng-click="updateURL()" uib-btn-checkbox="true">Aqours</label>
+    </div>
