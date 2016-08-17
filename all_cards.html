@@ -9,6 +9,8 @@
                 <input type="text" class="form-control" placeholder="Search for specific girls" ng-model="searchCards">
 
             </div>
+            <p>{{url}}</p>
+            <pre>{{filters|json}}</pre>
         </div>
     </form>
 
@@ -52,9 +54,9 @@
         <label class="btn btn-primary btn-sm" ng-model="filters.event" ng-init="filters.event=true" ng-click="updateURL()" uib-btn-checkbox="true">Events</label>
     </div>
     <div class="btn-group">
-        <label class="btn btn-primary btn-sm" ng-model="filters.skill" ng-click="updateURL()" uib-btn-radio="'scorer'">Scorer</label>
-        <label class="btn btn-primary btn-sm" ng-model="filters.skill" ng-click="updateURL()" uib-btn-radio="'pl'">Perfect Lock</label>
-        <label class="btn btn-primary btn-sm" ng-model="filters.skill" ng-click="updateURL()" uib-btn-radio="'healer'">Healer</label>
+        <label class="btn btn-primary btn-sm" ng-model="filters.skill" uib-btn-radio="'scorer'" ng-click="updateURL()">Scorer</label>
+        <label class="btn btn-primary btn-sm" ng-model="filters.skill" uib-btn-radio="'pl'" ng-click="updateURL()">Perfect Lock</label>
+        <label class="btn btn-primary btn-sm" ng-model="filters.skill" uib-btn-radio="'healer'" ng-click="updateURL()">Healer</label>
     </div>
 
     <div class="btn-group">

@@ -136,8 +136,8 @@ app.controller('TierCtrl', function($scope, $filter, Cards) {
     $scope.numberOfPages = Math.ceil($scope.cards.length / $scope.pageSize);
 
 
-    $scope.url = "https://crossorigin.me/https://schoolido.lu/api/cards/?&page_size=10&ordering=-id&rarity=SR,SSR,UR&japan-only=False&skill=score up&idol_main_unit=μ's";
-    var base = "https://crossorigin.me/http://schoolido.lu/api/cards/?&page_size=25&ordering=-id/";
+    $scope.url = "https://crossorigin.me/https://schoolido.lu/api/cards/?&page_size=25&ordering=-id&rarity=SR,SSR,UR&japan-only=False&skill=score up&idol_main_unit=μ's";
+    var base = "https://crossorigin.me/http://schoolido.lu/api/cards/?&page_size=25&ordering=-id";
 
     var getCards = function() {
         Cards.getUrl($scope.url).success(getCardsSuccess);
@@ -169,14 +169,14 @@ app.controller('TierCtrl', function($scope, $filter, Cards) {
             $scope.url += "&is_event=false";
         else if (filters.premium && !filters.promo && filters.event)
             $scope.url += "&is_event=false";*/
-
+console.log(filters.skill)
         if (filters.skill == "scorer") $scope.url += "&skill=score%20up";
-        else if (filters.skill == "pl") $scope.url += "&skill=perfect lock";
+        else if (filters.skill == "pl") $scope.url += "&skill=perfect%20lock";
         else if (filters.skill == "healer") $scope.url += "&skill=healer";
 
         if (filters.muse && !filters.aqours) $scope.url += "&idol_main_unit=μ's";
         else if (!filters.muse && filters.aqours) $scope.url += "&idol_main_unit=Aqours";
-        else if (filters.muse && filters.aqours) $scope.url += "&idol_main_unit=μ's,Aqours"
+        else if (filters.muse && filters.aqours) $scope.url += "&idol_main_unit=Aqours,μ's"
         getCards();
     }
 
