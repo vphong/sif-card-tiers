@@ -89,6 +89,7 @@
                     <span ng-show="sort.type == 'oScore' && sort.reverse" class="glyphicon glyphicon-chevron-up"></span>
                 </td>
                 <td>Skill contr</td>
+                <td ng-show="filters.skill='scorer'">Skill contr w/ __ Charm</td>
             </tr>
         </thead>
         <tbody bs-loading-overlay>
@@ -106,7 +107,8 @@
                 <td>{{filters.idlz || card.is_promo ? card.idolized_maximum_statistics_cool : card.non_idolized_maximum_statistics_cool}}</td>
                 <td>{{cScore(card) | number: 1}}</td>
                 <td>{{oScore(card) | number: 1}}</td>
-                <td>{{skillContr(card)|number:2}}</td>
+                <td>{{skillContr(card, false)|number:2}}</td>
+                <td>{{skillContr(card, true)|number:2}}</td>
             </tr>
         </tbody>
     </table>

@@ -6,7 +6,7 @@ app.factory('allHttpInterceptor', function(bsLoadingOverlayHttpInterceptorFactor
 
 app.config(function($stateProvider, $urlRouterProvider) {
 
-    $urlRouterProvider.otherwise("/user");
+    $urlRouterProvider.otherwise("/all");
 
     $stateProvider
         .state("default", {
@@ -75,19 +75,26 @@ app.factory('Cards', function($http) {
         for (var i = 0; i < len; i++) {
             cards[i].premium = (!cards[i].event) && (!cards[i].is_promo);
             var skill_details_array = cards[i].skill_details.replace(/[,\/#!$%\^&\*;:{}=\-_`~()]/g, "").split(" ");
-            var endStr = skill_details_array.length - 1;
-            cards[i].skill_activation_num = skill_details_array[2];
-            cards[i].skill_activation_type = skill_details_array[3];
-            if (cards[i].skill_activation_type != "hit")
-                cards[i].skill_activation_percent = skill_details_array[7] / 100;
-            else cards[i].skill_activation_percent = skill_details_array[9] / 100;
 
-            if (cards[i].skill == "Score Up")
-                cards[i].skill_activation = skill_details_array[endStr - 3];
-            else if (cards[i].skill == "Perfect Lock")
-                cards[i].skill_activation = skill_details_array[endStr - 5];
-            else if (cards[i].skill == "Healer")
-                cards[i].skill_activation = skill_details_array[endStr - 2];
+            var len = skill_details_array.length;
+            var curr;
+            var numCount = 0;
+            for (var j = 0; j < len; j++) {
+              curr = skill_details_array[j];
+              if (!isNaN(curr) && numCount == 0) {
+                cards[i].skill_activation_num = curr;
+                cards[i].skill_activation_type = skill_details_array[j+1];
+                numCount++;
+              }
+              else if (!isNaN(curr) && numCount == 1) {
+                cards[i].skill_activation_percent = curr/100;
+                numCount++;
+              }
+              else if (!isNaN(curr) && numCount == 2) {
+                cards[i].skill_activation = curr;
+                numCount++;
+              }
+            }
 
         }
         return cards;
@@ -257,20 +264,30 @@ app.controller('TierCtrl', function($scope, $filter, Cards) {
 
         }
         // ****** calculate skill contribution
-    $scope.skillContr = function(card) {
+    $scope.skillContr = function(card, equippedSkill) {
         card.skill_contr = 0;
-        var notesActivation = (550 / card.skill_activation_num) * card.skill_activation_percent;
+        var baseNotesActivation = (550 / card.skill_activation_num) * card.skill_activation_percent * card.skill_activation;
+        var charm_multiplier = 1;
+        var heel_multiplier = 1;
+
+        if (equippedSkill) {
+            charm_multiplier = 2.5;
+            heel_multipler = 270;
+        }
+
         if (card.skill == "Score Up") {
             // activation types: notes, time, combo string, perfects
             if (card.skill_activation_type == "perfects") {
-                card.skill_contr = notesActivation * .85 * card.skill_activation;
+                card.skill_contr = baseNotesActivation * .85 * charm_multiplier;
             } else if (card.skill_activation_type == "time") {
-                card.skill_contr = (125 / card.skill_activation_num) * card.skill_activation_percent * card.skill_activation;
+                card.skill_contr = (125 / card.skill_activation_num) * card.skill_activation_percent * card.skill_activation * charm_multiplier;
             } else { // notes or combo string
-                card.skill_contr = notesActivation * card.skill_activation;
+                card.skill_contr = baseNotesActivation * charm_multiplier;
             }
-        } else if (card.skill == "Perfect Lock" || card.skill == "Healer") {
-            card.skill_contr = notesActivation * card.skill_activation;
+        } else if (card.skill == "Perfect Lock") {
+            card.skill_contr = baseNotesActivation;
+        } else if (card.skill == "Healer") {
+            card.skill_contr = baseNotesActivation * heel_multiplier;
         }
         return card.skill_contr
     }
