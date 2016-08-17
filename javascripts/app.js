@@ -299,12 +299,14 @@ console.log(filters.skill)
 
 app.controller('UserCtrl', function($scope, $filter, Cards) {
     $scope.sit = {};
-    $scope.sit.user = "dreamsicl"
+    $scope.sit.user = "dreamsicl";
+    var accUrlBase = "https://schoolido.lu/api/accounts/?owner__username=";
     $scope.updateUser = function() {
-        $scope.sit.accountsUrl = "http://schoolido.lu/api/accounts/?owner__username=" + $scope.sit.user;
+        $scope.sit.accountsUrl =  accUrlBase + $scope.sit.user;
     }
     $scope.updateUser();
 
+    var oCardUrlBase = "https://schoolido.lu/api/ownedcards/?expand_card&card__rarity=SR,SSR,UR&stored=deck&owner_account=";
     var getAccountsSuccess = function(data, status) {
         var accounts = data.results;
         var len = accounts.length
@@ -316,7 +318,7 @@ app.controller('UserCtrl', function($scope, $filter, Cards) {
         }
         $scope.sit.chosenAccountName = $scope.sit.accountNames[0];
         $scope.sit.chosenAccountID = $scope.sit.accountIDs[0];
-        $scope.sit.ownedCardsUrl = "http://schoolido.lu/api/ownedcards/?expand_card&card__rarity=SR,SSR,UR&stored=deck&owner_account=" + $scope.sit.chosenAccountID;
+        $scope.sit.ownedCardsUrl = oCardUrlBase + $scope.sit.chosenAccountID;
     }
     var getAccounts = function() {
         Cards.getUrl($scope.sit.accountsUrl).success(getAccountsSuccess);
@@ -332,7 +334,7 @@ app.controller('UserCtrl', function($scope, $filter, Cards) {
                 break;
             } else i++;
         }
-        $scope.sit.ownedCardsUrl = "http://schoolido.lu/api/ownedcards/?expand_card&card__rarity=SR,SSR,UR&stored=deck&owner_account=" + $scope.sit.chosenAccountID;
+        $scope.sit.ownedCardsUrl = oCardUrlBase + $scope.sit.chosenAccountID;
     }
 
     $scope.cards = [];
