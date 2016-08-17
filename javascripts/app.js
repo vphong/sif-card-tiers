@@ -12,7 +12,7 @@ app.config(function($stateProvider, $urlRouterProvider) {
         .state("default", {
             abstract: true,
             url: "/",
-            templateUrl: "user_cards.html"
+            templateUrl: "all_cards.html"
         })
         .state("all", {
             url: "/all",
@@ -65,7 +65,7 @@ app.factory('Cards', function($http) {
 
     var ret = {};
 
-    ret.getCards = function(url) {
+    ret.getUrl = function(url) {
         return $http.get(url);
     }
 
@@ -117,13 +117,15 @@ app.controller('TierCtrl', function($scope, $filter, Cards) {
     $scope.prev = "";
     $scope.page = 0;
     $scope.pageSize = 10;
+
     var getCardsSuccess = function(data, status) {
         count = data.count;
         $scope.next = data.next;
         $scope.prev = data.previous;
         $scope.cards = data.results;
         $scope.cards = Cards.cleanCards($scope.cards);
-    };
+
+    }
     $scope.numberOfPages = Math.ceil($scope.cards.length / $scope.pageSize);
 
 
@@ -131,7 +133,7 @@ app.controller('TierCtrl', function($scope, $filter, Cards) {
     var base = "https://crossorigin.me/http://schoolido.lu/api/cards/?&page_size=25&ordering=-id/";
 
     var getCards = function() {
-        Cards.getCards($scope.url).success(getCardsSuccess);
+        Cards.getUrl($scope.url).success(getCardsSuccess);
     };
     $scope.updateURL = function() {
         $scope.url = base;
@@ -195,7 +197,6 @@ app.controller('TierCtrl', function($scope, $filter, Cards) {
         else if (type == 'cool' && !$scope.filters.idlz)
             $scope.sort.type = "non_idolized_maximum_statistics_cool";
         else $scope.sort.type = type;
-        console.log($scope.sort.type)
 
     };
 
@@ -276,5 +277,113 @@ app.controller('TierCtrl', function($scope, $filter, Cards) {
 
     var stat = 0;
     // TODO: pagination
+
+});
+
+app.controller('UserCtrl', function($scope, $filter, Cards) {
+    $scope.sit = {};
+    $scope.sit.user = "dreamsicl"
+    $scope.updateUser = function() {
+        $scope.sit.accountsUrl = "http://schoolido.lu/api/accounts/?owner__username=" + $scope.sit.user;
+    }
+    $scope.updateUser();
+
+    var getAccountsSuccess = function(data, status) {
+        var accounts = data.results;
+        var len = accounts.length
+        $scope.sit.accountIDs = [];
+        $scope.sit.accountNames = [];
+        for (var i = 0; i < len; i++) {
+            $scope.sit.accountIDs.push(accounts[i].id);
+            $scope.sit.accountNames.push(accounts[i].nickname + " " + accounts[i].language);
+        }
+        $scope.sit.chosenAccountName = $scope.sit.accountNames[0];
+        $scope.sit.chosenAccountID = $scope.sit.accountIDs[0];
+        $scope.sit.ownedCardsUrl = "http://schoolido.lu/api/ownedcards/?expand_card&card__rarity=SR,SSR,UR&stored=deck&owner_account=" + $scope.sit.chosenAccountID;
+    }
+    var getAccounts = function() {
+        Cards.getUrl($scope.sit.accountsUrl).success(getAccountsSuccess);
+    };
+    getAccounts();
+
+    $scope.chooseAccount = function() {
+        var i = 0;
+        var len = $scope.sit.accountNames.length;
+        while (i < len) {
+            if ($scope.sit.accountNames[i] == $scope.sit.chosenAccountName) {
+                $scope.sit.chosenAccountID = $scope.sit.accountIDs[i]
+                break;
+            } else i++;
+        }
+        $scope.sit.ownedCardsUrl = "http://schoolido.lu/api/ownedcards/?expand_card&card__rarity=SR,SSR,UR&stored=deck&owner_account=" + $scope.sit.chosenAccountID;
+    }
+
+    $scope.cards = [];
+    var getCardsSuccess = function(data, status) {
+        var userCards = data.results;
+        var len = userCards.length;
+        for (var i = 0; i < len; i++) {
+            $scope.cards.push(userCards[i].card);
+        }
+        $scope.cards = Card.cleanCards($scope.cards);
+
+    }
+    $scope.getCards = function() {
+        Cards.getUrl($scope.sit.ownedCardsUrl).success(getCardsSuccess);
+    };
+
+    var stat_to_mod = function(card) {
+        if ($scope.filters.idlz && (card.attribute == "Pure"))
+            stat = card.idolized_maximum_statistics_pure;
+        else if (!$scope.filters.idlz && (card.attribute == "Pure"))
+            stat = card.non_idolized_maximum_statistics_pure;
+        else if ($scope.filters.idlz && (card.attribute == "Smile"))
+            stat = card.idolized_maximum_statistics_smile;
+        else if (!$scope.filters.idlz && (card.attribute == "Smile"))
+            stat = card.non_idolized_maximum_statistics_smile;
+        else if ($scope.filters.idlz && (card.attribute == "Cool"))
+            stat = card.idolized_maximum_statistics_cool;
+        else if (!$scope.filters.idlz && (card.attribute == "Cool"))
+            stat = card.non_idolized_maximum_statistics_cool;
+
+        // bond bonus
+        if ($scope.filters.idlz && card.rarity == "UR")
+            stat += 1000;
+        else if ((!$scope.filters.idlz && card.rarity == "UR") || ($scope.filters.idlz && card.rarity == "SR"))
+            stat += 500;
+        else if (!$scope.filters.idlz && card.rarity == "SR")
+            stat += 250;
+        return stat;
+    };
+    $scope.cScore = function(card) {
+        var statToMod = stat_to_mod(card);
+        card.cScore = statToMod + (statToMod * (.09 + .03)) * 2;;
+        return card.cScore;
+
+    }
+    $scope.oScore = function(card) {
+            var statToMod = stat_to_mod(card);
+            card.oScore = statToMod + (statToMod * (.09 + .06)) * 2;;
+            return card.oScore;
+
+        }
+        // ****** calculate skill contribution
+    $scope.skillContr = function(card) {
+        card.skill_contr = 0;
+        var notesActivation = (550 / card.skill_activation_num) * card.skill_activation_percent;
+        if (card.skill == "Score Up") {
+            // activation types: notes, time, combo string, perfects
+            if (card.skill_activation_type == "perfects") {
+                card.skill_contr = notesActivation * .85 * card.skill_activation;
+            } else if (card.skill_activation_type == "time") {
+                card.skill_contr = (125 / card.skill_activation_num) * card.skill_activation_percent * card.skill_activation;
+            } else { // notes or combo string
+                card.skill_contr = notesActivation * card.skill_activation;
+            }
+        } else if (card.skill == "Perfect Lock" || card.skill == "Healer") {
+            card.skill_contr = notesActivation * card.skill_activation;
+        }
+        return card.skill_contr
+    }
 
 });
