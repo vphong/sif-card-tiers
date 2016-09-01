@@ -12,3 +12,7 @@ td {
 .st-sort-descent:before {
     content: '\25BC';
 }
+.list-inline {
+  display: flex;
+  justify-content: space-between;
+}

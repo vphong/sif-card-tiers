@@ -1,6 +1,6 @@
 var app = angular.module('tierList', ['ui.bootstrap',
     'bsLoadingOverlay', 'bsLoadingOverlayHttpInterceptor',
-    'ui.router', 'smart-table'
+    'ui.router', 'smart-table', 'LocalStorageModule'
 ]);
 
 app.factory('allHttpInterceptor', function(bsLoadingOverlayHttpInterceptorFactoryFactory) {
@@ -26,7 +26,34 @@ app.config(function($stateProvider, $urlRouterProvider) {
             templateUrl: "user_cards.html"
         })
 });
+app.directive('stPersist', function(localStorageService) {
+    return {
+        require: '^stTable',
+        link: function(scope, element, attr, ctrl) {
+            var nameSpace = attr.stPersist;
 
+            //save the table state every time it changes
+            scope.$watch(function() {
+                return ctrl.tableState();
+            }, function(newValue, oldValue) {
+                if (newValue !== oldValue) {
+                    localStorageService.set(nameSpace, JSON.stringify(newValue));
+                }
+            }, true);
+
+            //fetch the table state when the directive is loaded
+            if (localStorage.getItem(nameSpace)) {
+                var savedState = JSON.parse(localStorageService.get(nameSpace));
+                var tableState = ctrl.tableState();
+
+                angular.extend(tableState, savedState);
+                ctrl.pipe();
+
+            }
+
+        }
+    };
+});;
 app.controller('TabCtrl', function($rootScope, $scope, $state) {
     $scope.tabs = [{
         heading: "All Cards",
@@ -64,40 +91,67 @@ app.run(function(bsLoadingOverlayService) {
     });
 });
 
+app.directive('stCheck', function() {
+    return {
+        restrict: 'E',
+        scope: {
+            predicate: '@'
+        },
+        require: '^stTable',
+        template: '<input type="checkbox" ng-model="sel" ng-change="change()"/>',
+        link: function(scope, element, attr, ctrl) {
+            scope.change = function change() {
+                ctrl.search(scope.sel, scope.predicate);
+            }
+        }
+    }
+})
 app.factory('Cards', function($http) {
     ret = {};
     ret.cleanCards = function(cards) {
         var len = cards.length;
         var statToMod;
         var name;
+        var i = 0;
+        while (i < len) {
+            id = cards[i].id;
+            if (cards[i].is_special || id == 385) {
 
-        for (var i = 0; i < len; ++i) {
-            name = cards[i].idol.name;
 
-            if (!cards[i].non_idolized_maximum_statistics_cool) {
-                continue;
-            }
-            else {cards[i].premium = (!cards[i].event) && (!cards[i].is_promo);
-            var skill_details_array = cards[i].skill_details.replace(/[,\/#!$%\^&\*;:{}=\-_`~()]/g, "").split(" ");
+                cards.splice(i, 1);
+                len = cards.length;
 
-            var slen = skill_details_array.length;
-            var curr;
-            var numCount = 0;
-            for (var j = 0; j < slen; j++) {
-                curr = skill_details_array[j];
-                if (!isNaN(curr) && numCount == 0) {
-                    cards[i].skill_activation_num = curr;
-                    cards[i].skill_activation_type = skill_details_array[j + 1];
-                    numCount++;
-                } else if (!isNaN(curr) && numCount == 1) {
-                    cards[i].skill_activation_percent = curr / 100;
-                    numCount++;
-                } else if (!isNaN(curr) && numCount == 2) {
-                    cards[i].skill_activation = curr;
-                    numCount++;
-                    break;
+
+
+            } else {
+                cards[i].full_name = cards[i].rarity;
+                if (cards[i].translated_collection) cards[i].full_name += " " + cards[i].translated_collection;
+                else if (cards[i].is_promo) cards[i].full_name += " Promo"
+                cards[i].full_name += " " + cards[i].idol.name;
+
+                cards[i].premium = (!cards[i].event) && (!cards[i].is_promo);
+                var skill_details_array = cards[i].skill_details.replace(/[,\/#!$%\^&\*;:{}=\-_`~()]/g, "").split(" ");
+
+                var slen = skill_details_array.length;
+                var curr;
+                var numCount = 0;
+                for (var j = 0; j < slen; j++) {
+                    curr = skill_details_array[j];
+                    if (!isNaN(curr) && numCount == 0) {
+                        cards[i].skill_activation_num = curr;
+                        cards[i].skill_activation_type = skill_details_array[j + 1];
+                        numCount++;
+                    } else if (!isNaN(curr) && numCount == 1) {
+                        cards[i].skill_activation_percent = curr / 100;
+                        numCount++;
+                    } else if (!isNaN(curr) && numCount == 2) {
+                        cards[i].skill_activation = curr;
+                        numCount++;
+                        break;
+                    }
                 }
-            }}
+            }
+            ++i;
         }
 
         return cards;
@@ -106,12 +160,6 @@ app.factory('Cards', function($http) {
     return ret;
 });
 
-app.filter('pagination', function() {
-    return function(input, start) {
-        start = +start;
-        return input.slice(start);
-    };
-});
 
 app.controller('TierCtrl', function($scope, $filter, Cards, CardData) {
     $scope.filters = {
@@ -124,16 +172,21 @@ app.controller('TierCtrl', function($scope, $filter, Cards, CardData) {
         aqours: true
     };
 
+$scope.pag = {
+  size: 30,
+  display: 5,
+}
     $scope.updateFilter = function() {
+        // console.log("local table = " + localStorageService.get("cardTable"))
 
         var filters = $scope.filters;
         var cards = [];
         var card;
-        var len = CardData.length;
-        console.log(len)
+        var baseCards = Cards.cleanCards(CardData);
+        var len = baseCards.length;
 
         for (var i = 0; i < len; i++) {
-            card = CardData[i];
+            card = baseCards[i];
             if (((filters.server == "en" && !card.japan_only) ||
                     (filters.server == "jp")) &&
 
@@ -159,10 +212,15 @@ app.controller('TierCtrl', function($scope, $filter, Cards, CardData) {
                 cards.push(card);
             }
 
+
         }
+        tablestate.pagination.numberOfPages = cards.length / $scope.pag.size;
         $scope.cards = Cards.cleanCards(cards);
+
+
     }
     $scope.cards = Cards.cleanCards(CardData);
+
 
 
     $scope.sort = {
@@ -268,7 +326,8 @@ app.controller('TierCtrl', function($scope, $filter, Cards, CardData) {
     }
 
     var stat = 0;
-    // TODO: pagination
+
+
 
 });
 

@@ -1,22 +1,36 @@
 <div ng-controller="TierCtrl">
-    <form>
-        <div class="form-group">
-            <div class="input-group">
-                <div class="input-group-addon">
-                    <i class="glyphicon glyphicon-search"></i>
-                </div>
 
-                <input type="text" class="form-control" placeholder="Search for specific girls" ng-model="searchCards">
 
-            </div>
-            <pre>{{cards[0].skill|json}}</pre>
 
-        </div>
-    </form>
-    <table st-table="cards" class="table table-striped">
+    <table st-table="cards" st-safe-source="cards" class="table table-striped">
         <thead>
             <tr>
-                <th st-skip-natural="true" st-sort="id" st-sort-default="reverse">Card</th>
+                <td colspan="8">
+                    Filter by:
+                    <ul class="list-inline">
+                        <li>Server:<br>
+                            <div class="btn-group">
+                                <label class="btn btn-primary btn-sm" ng-model="filters.server" ng-click="updateFilter()" uib-btn-radio="'jp'">Japan</label>
+                                <label class="btn btn-primary btn-sm" ng-model="filters.server" ng-click="updateFilter()" uib-btn-radio="'en'">Global</label>
+                            </div>
+                        </li>
+                        <li>Rarity<br>
+                            <div class="btn-group">
+                                <label class="btn btn-primary btn-sm" ng-model="filters.sr" ng-click="updateFilter()" uib-btn-checkbox="true">SR</label>
+                                <label class="btn btn-primary btn-sm" ng-model="filters.ssr" ng-click="updateFilter()" uib-btn-checkbox="true">SSR</label>
+                                <label class="btn btn-primary btn-sm" ng-model="filters.ur" ng-click="updateFilter()" uib-btn-checkbox="true">UR</label>
+                            </div>
+                        </li>
+                        <li>Attribute</li>
+                        <li>Origin</li>
+                        <li>Skill</li>
+                        <li>Idol Group</li>
+                    </ul>
+                </td>
+            </tr>
+            <tr>
+                <th st-skip-natural="true" st-sort="id" st-sort-default="reverse">ID</th>
+                <th>Card Name</th>
                 <th st-skip-natural="true" st-sort="filters.idlz ? idolized_maximum_statistics_smile : non_idolized_maximum_statistics_smile">Smile</th>
                 <th st-skip-natural="true" st-sort="filters.idlz ? idolized_maximum_statistics_pure : non_idolized_maximum_statistics_pure">Pure</th>
                 <th st-skip-natural="true" st-sort="filters.idlz ? idolized_maximum_statistics_cool : non_idolized_maximum_statistics_cool">Cool</th>
@@ -26,25 +40,32 @@
                 <th ng-show="filters.sc" st-skip-natural="true" st-sort="cScore">Score Up Skill Contribution</th>
 
             </tr>
+            <tr></tr>
         </thead>
         <tbody>
+          <tr>
+            <td colspan=8>
+<pre>{{tableState}}</pre>
+            </td>
+          </tr>
             <tr ng-repeat="card in cards">
+                <td>{{card.id}}</td>
                 <td>
                     <table>
+
                         <td>
                             <!--<img src="{{filters.idlz || card.is_promo ? card.round_card_idolized_image : card.round_card_image}}" class="display-image">-->
                         </td>
                         <td style="padding-left: 5px;font-size: 1.1em">
                             <a href="{{website_url}}">
                                 <span ng-show="card.event" class="glyphicon glyphicon-star" uib-tooltip="Event card"></span>
-                                <span ng-show="card.is_promo" class="glyphicon glyphicon-piggy-bank" uib-tooltip="Promo card"></span>
                                 <span ng-show="card.skill=='Score Up'" class="glyphicon glyphicon-plus" uib-tooltip="Scorer"></span>
                                 <span ng-show="card.skill=='Healer'" class="glyphicon glyphicon-heart" uib-tooltip="Healer"></span>
                                 <span ng-show="card.skill=='Perfect Lock'" class="glyphicon glyphicon-lock" uib-tooltip="Perfect Locker"></span>
-                                {{card.translated_collection}}
-                                {{card.idol.name}}
+                                {{card.full_name}}
                             </a>
                         </td>
+
 
                     </table>
                 </td>
@@ -55,12 +76,10 @@
                 <td>{{oScore(card) | number: 1}}</td>
                 <td ng-show="filters.sc">
                     <span ng-show="card.skill=='Healer'">
-                        <small>Base:<br></small>0.00<br>
                         <small>w/ Heel:<br></small>{{skillContr(card, "sc")|number:2}}</span>
                     <span ng-show="card.skill=='Perfect Lock'">Base:
                         <br>0.00</span>
                     <span ng-show="card.skill=='Score Up'">
-
                         <small>Base:<br></small>{{skillContr(card,"sc", false)|number:2}}<br>
                         <small>w/ Charm:<br></small>{{skillContr(card,"sc",true)|number:2}}</span>
                 </td>
@@ -69,8 +88,8 @@
         </tbody>
         <tfoot>
             <tr>
-                <td colspan="7" class="text-center">
-                    <div st-pagination="" st-items-by-page="30"></div>
+                <td colspan="8" class="text-center">
+                    <div st-pagination st-items-by-page="pag.size" st-displayed-pages="pag.display" st-template="custom_pagination.html"></div>
                 </td>
             </tr>
         </tfoot>
