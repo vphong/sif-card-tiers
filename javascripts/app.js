@@ -1,4 +1,7 @@
-var app = angular.module('tierList', ['ui.bootstrap', 'bsLoadingOverlay', 'bsLoadingOverlayHttpInterceptor', 'ui.router']);
+var app = angular.module('tierList', ['ui.bootstrap',
+    'bsLoadingOverlay', 'bsLoadingOverlayHttpInterceptor',
+    'ui.router', 'smart-table'
+]);
 
 app.factory('allHttpInterceptor', function(bsLoadingOverlayHttpInterceptorFactoryFactory) {
     return bsLoadingOverlayHttpInterceptorFactoryFactory();
@@ -62,41 +65,41 @@ app.run(function(bsLoadingOverlayService) {
 });
 
 app.factory('Cards', function($http) {
-
-    var ret = {};
-
-    ret.getUrl = function(url) {
-        return $http.get(url);
-    }
-
+    ret = {};
     ret.cleanCards = function(cards) {
         var len = cards.length;
         var statToMod;
-        for (var i = 0; i < len; i++) {
-            cards[i].premium = (!cards[i].event) && (!cards[i].is_promo);
+        var name;
+
+        for (var i = 0; i < len; ++i) {
+            name = cards[i].idol.name;
+
+            if (!cards[i].non_idolized_maximum_statistics_cool) {
+                continue;
+            }
+            else {cards[i].premium = (!cards[i].event) && (!cards[i].is_promo);
             var skill_details_array = cards[i].skill_details.replace(/[,\/#!$%\^&\*;:{}=\-_`~()]/g, "").split(" ");
 
-            var len = skill_details_array.length;
+            var slen = skill_details_array.length;
             var curr;
             var numCount = 0;
-            for (var j = 0; j < len; j++) {
-              curr = skill_details_array[j];
-              if (!isNaN(curr) && numCount == 0) {
-                cards[i].skill_activation_num = curr;
-                cards[i].skill_activation_type = skill_details_array[j+1];
-                numCount++;
-              }
-              else if (!isNaN(curr) && numCount == 1) {
-                cards[i].skill_activation_percent = curr/100;
-                numCount++;
-              }
-              else if (!isNaN(curr) && numCount == 2) {
-                cards[i].skill_activation = curr;
-                numCount++;
-              }
-            }
-
+            for (var j = 0; j < slen; j++) {
+                curr = skill_details_array[j];
+                if (!isNaN(curr) && numCount == 0) {
+                    cards[i].skill_activation_num = curr;
+                    cards[i].skill_activation_type = skill_details_array[j + 1];
+                    numCount++;
+                } else if (!isNaN(curr) && numCount == 1) {
+                    cards[i].skill_activation_percent = curr / 100;
+                    numCount++;
+                } else if (!isNaN(curr) && numCount == 2) {
+                    cards[i].skill_activation = curr;
+                    numCount++;
+                    break;
+                }
+            }}
         }
+
         return cards;
     }
 
@@ -110,85 +113,66 @@ app.filter('pagination', function() {
     };
 });
 
-app.controller('TierCtrl', function($scope, $filter, Cards) {
+app.controller('TierCtrl', function($scope, $filter, Cards, CardData) {
     $scope.filters = {
-        attribute: 'all',
         server: 'jp',
-        skill: 'scorer'
-    }
-
-    $scope.cards = {};
-
-    var count = 0;
-    $scope.next = "";
-    $scope.prev = "";
-    $scope.page = 0;
-    $scope.pageSize = 10;
-
-    var getCardsSuccess = function(data, status) {
-        count = data.count;
-        $scope.next = data.next;
-        $scope.prev = data.previous;
-        $scope.cards = data.results;
-        $scope.cards = Cards.cleanCards($scope.cards);
-
-    }
-    $scope.numberOfPages = Math.ceil($scope.cards.length / $scope.pageSize);
-
-
-    $scope.url = "https://crossorigin.me/https://schoolido.lu/api/cards/?&page_size=25&ordering=-id&rarity=SR,SSR,UR&japan-only=False&skill=score up&idol_main_unit=μ's";
-    var base = "https://crossorigin.me/http://schoolido.lu/api/cards/?&page_size=25&ordering=-id";
-
-    var getCards = function() {
-        Cards.getUrl($scope.url).success(getCardsSuccess);
+        attribute: 'all',
+        sc: true,
+        pl: true,
+        hl: true,
+        muse: true,
+        aqours: true
     };
-    $scope.updateURL = function() {
-        $scope.url = base;
+
+    $scope.updateFilter = function() {
+
         var filters = $scope.filters;
+        var cards = [];
+        var card;
+        var len = CardData.length;
+        console.log(len)
 
-        if (filters.server == "en") $scope.url += "&japan-only=False";
-        else $scope.url += "&japan-only=True";
+        for (var i = 0; i < len; i++) {
+            card = CardData[i];
+            if (((filters.server == "en" && !card.japan_only) ||
+                    (filters.server == "jp")) &&
 
-        if (filters.attribute == "smile") $scope.url += "&attribute=Smile";
-        else if (filters.attribute == "pure") $scope.url += "&attribute=Pure";
-        else if (filters.attribute == "cool") $scope.url += "&attribute=Cool";
+                ((filters.attribute == "all" && card.attribute) ||
+                    (filters.attribute == "smile" && card.attribute == "Smile") ||
+                    (filters.attribute == "pure" && card.attribute == "Pure") ||
+                    (filters.attribute == "cool" && card.attribute == "Cool")) &&
 
-        // FIXME
+                ((filters.ur && card.rarity == "UR") ||
+                    (filters.ssr && card.rarity == "SSR") ||
+                    (filters.sr && card.rarity == "SR")) &&
 
-        if (filters.ur && filters.ssr && filters.sr) $scope.url += "&rarity=UR,SSR,SR";
-        else if (filers.ur && filters.ssr && !filters.sr) $scope.url += "&rarity=UR,SSR";
-        else if (filters.ur && !filters.ssr && filters.sr) $scope.url += "&rarity=UR,SR";
-        else if (filters.ur && !filters.ssr && !filters.sr) $scope.url += "&rarity=URR";
-        else if (!filters.ur && filters.ssr && filters.sr) $scope.url += "%rarity=SR,SSR";
-        else if (!filters.ur && filters.ssr && !filters.sr) $scope.url += "%rarity=SSR";
-        else if (!filters.ur && !filters.ssr && filters.sr) $scope.url += "%rarity=SR";
+                ((filters.premium && card.premium) ||
+                    (filters.promo && card.is_promo) ||
+                    (filters.event && card.event)) &&
 
-        /*if (filters.premium && !filters.promo && !filters.event)
-            $scope.url += "&is_promo=false&is_event=false";
-        else if (filters.premium && filters.promo && !filters.event)
-            $scope.url += "&is_event=false";
-        else if (filters.premium && !filters.promo && filters.event)
-            $scope.url += "&is_event=false";*/
-console.log(filters.skill)
-        if (filters.skill == "scorer") $scope.url += "&skill=score%20up";
-        else if (filters.skill == "pl") $scope.url += "&skill=perfect%20lock";
-        else if (filters.skill == "healer") $scope.url += "&skill=healer";
+                ((filters.sc && card.skill == "Score Up") ||
+                    (filters.pl && card.skill == "Perfect Lock") ||
+                    (filters.hl && card.skill == "Healer")) &&
 
-        if (filters.muse && !filters.aqours) $scope.url += "&idol_main_unit=μ's";
-        else if (!filters.muse && filters.aqours) $scope.url += "&idol_main_unit=Aqours";
-        else if (filters.muse && filters.aqours) $scope.url += "&idol_main_unit=Aqours,μ's"
-        getCards();
+                ((filters.muse && card.idol.main_unit == "μ's") ||
+                    (filters.aqours && card.idol.main_unit == "Aqours"))) {
+                cards.push(card);
+            }
+
+        }
+        $scope.cards = Cards.cleanCards(cards);
     }
+    $scope.cards = Cards.cleanCards(CardData);
 
-    getCards();
 
     $scope.sort = {
-        reverse: false,
+        ascending: true,
         type: 'cScore',
         typeAttr: ''
     };
     $scope.sortBy = function(type) {
-        $scope.sort.reverse = ($scope.sort.type == type) || ($scope.sort.typeAttr == type) ? !$scope.sort.reverse : true;
+
+        $scope.sort.ascending = ($scope.sort.type == type) || ($scope.sort.typeAttr == type) ? !$scope.sort.ascending : true;
         $scope.sort.typeAttr = type;
 
         if (type == 'smile' && $scope.filters.idlz)
@@ -208,24 +192,6 @@ console.log(filters.skill)
     };
 
 
-
-    // TODO: filter by server
-    // TODO: filter by attribute
-    // TODO: filter by rarity
-    // TODO: filter by origin
-    $scope.byOrigin = function(card) {
-        /*var ret = ($scope.filters.premium == card.premium) ||
-        ($scope.filters.promo == card.is_promo) ||
-        ($scope.filters.event == card.event);
-        console.log(ret);*/
-        var filterPremium = ($scope.filters.premium == card.premium);
-        var filterPromo = ($scope.filters.promo == card.is_promo);
-        var filterEvent = ($scope.filters.evnt == (card.event == null));
-        var showIf = filterPremium && filterPromo && filterEvent;
-        return filterPremium;
-    };
-    // TODO: filter by group
-    // TODO: filter by skill
 
 
     var stat_to_mod = function(card) {
@@ -264,32 +230,41 @@ console.log(filters.skill)
 
         }
         // ****** calculate skill contribution
-    $scope.skillContr = function(card, equippedSkill) {
+    $scope.skillContr = function(card, skillType, charm) {
         card.skill_contr = 0;
         var baseNotesActivation = (550 / card.skill_activation_num) * card.skill_activation_percent * card.skill_activation;
-        var charm_multiplier = 1;
-        var heel_multiplier = 1;
 
-        if (equippedSkill) {
+        var charm_multiplier = 1;
+        if (charm) {
             charm_multiplier = 2.5;
-            heel_multipler = 270;
         }
+
 
         if (card.skill == "Score Up") {
             // activation types: notes, time, combo string, perfects
             if (card.skill_activation_type == "perfects") {
-                card.skill_contr = baseNotesActivation * .85 * charm_multiplier;
+                card.score_contr = baseNotesActivation * .85 * charm_multiplier;
             } else if (card.skill_activation_type == "time") {
-                card.skill_contr = (125 / card.skill_activation_num) * card.skill_activation_percent * card.skill_activation * charm_multiplier;
+                card.score_contr = (125 / card.skill_activation_num) * card.skill_activation_percent * card.skill_activation * charm_multiplier;
             } else { // notes or combo string
-                card.skill_contr = baseNotesActivation * charm_multiplier;
+                card.score_contr = baseNotesActivation * charm_multiplier;
             }
+            card.heal_contr = 0;
+            card.pl_contr = 0;
         } else if (card.skill == "Perfect Lock") {
-            card.skill_contr = baseNotesActivation;
+            card.pl_contr = baseNotesActivation;
+            card.score_contr = 0;
+            card.heal_contr = 0;
         } else if (card.skill == "Healer") {
-            card.skill_contr = baseNotesActivation * heel_multiplier;
+            card.score_contr = baseNotesActivation * 270;
+            card.heal_contr = baseNotesActivation * 1;
+            card.pl_contr = 0;
         }
-        return card.skill_contr
+        if (skillType == "sc") return card.score_contr;
+        else if (skillType == "pl") return card.pl_contr;
+        else return card.heal_contr;
+
+        // TODO: account for R/promo skills
     }
 
     var stat = 0;
@@ -302,7 +277,7 @@ app.controller('UserCtrl', function($scope, $filter, Cards) {
     $scope.sit.user = "dreamsicl";
     var accUrlBase = "https://schoolido.lu/api/accounts/?owner__username=";
     $scope.updateUser = function() {
-        $scope.sit.accountsUrl =  accUrlBase + $scope.sit.user;
+        $scope.sit.accountsUrl = accUrlBase + $scope.sit.user;
     }
     $scope.updateUser();
 

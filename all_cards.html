@@ -9,110 +9,124 @@
                 <input type="text" class="form-control" placeholder="Search for specific girls" ng-model="searchCards">
 
             </div>
-            <p>{{url}}</p>
-            <pre>{{filters|json}}</pre>
+            <pre>{{cards[0].skill|json}}</pre>
+
         </div>
     </form>
-
-    <div class="btn-group">
-        <label class="btn btn-primary btn-sm" ng-model="filters.server" ng-click="updateURL()" uib-btn-radio="'jp'">JP</label>
-        <div class="btn-group" uib-dropdown>
-            <label id="split-button" class="btn btn-primary btn-sm en-toggle" ng-click="updateURL()" ng-model="filters.server" uib-btn-radio="'en'">EN</label>
-
-            <!---<button type="button" class="btn btn-primary en-toggle-caret" ng-disabled="filters.server=='jp'" uib-dropdown-toggle>
-                                <span class="caret"></span>
-                            </button>
-                            <ul class="dropdown-menu" uib-dropdown-menu role="menu" aria-labelledby="split-button">
-                                <li role="menuitem">
-                                    <label class="btn btn-primary btn-sm" ng-model="filters.upcoming" ng-init="filters.upcoming=true" uib-btn-checkbox>
-                                        <span class="glyphicon glyphicon-unchecked" ng-hide="{{filters.upcoming}}"></span>
-                                        <span class="glyphicon glyphicon-check" ng-show="{{filters.upcoming}}"></span>
-                                        Include upcoming cards?</label>
-                                </li>
-                            </ul>-->
-        </div>
-    </div>
-
-    <div class="btn-group">
-        <label class="btn btn-primary btn-sm" ng-model="filters.attribute" ng-click="updateURL()" uib-btn-radio="'all'">All</label>
-        <label class="btn btn-primary btn-sm" ng-model="filters.attribute" ng-click="updateURL()" uib-btn-radio="'smile'">Smile</label>
-        <label class="btn btn-primary btn-sm" ng-model="filters.attribute" ng-click="updateURL()" uib-btn-radio="'pure'">Pure</label>
-        <label class="btn btn-primary btn-sm" ng-model="filters.attribute" ng-click="updateURL()" uib-btn-radio="'cool'">Cool</label>
-    </div>
-
-    <div class="btn-group">
-        <label class="btn btn-primary btn-sm" ng-model="filters.ur" ng-init="filters.ur=true" ng-click="updateURL()" uib-btn-checkbox>UR</label>
-        <label class="btn btn-primary btn-sm" ng-model="filters.ssr" ng-init="filters.ssr=true" ng-click="updateURL()" uib-btn-checkbox>SSR</label>
-        <label class="btn btn-primary btn-sm" ng-model="filters.sr" ng-init="filters.sr=true" ng-click="updateURL()" uib-btn-checkbox>SR</label>
-    </div>
-
-    <label class="btn btn-primary btn-sm" ng-model="filters.idlz" ng-init="filters.idlz=false" uib-btn-checkbox="false">Idolized?</label>
-
-    <div class="btn-group">
-        <label class="btn btn-primary btn-sm" ng-model="filters.premium" ng-init="filters.premium=true" ng-click="updateURL()" uib-btn-checkbox="true">Premium</label>
-        <label class="btn btn-primary btn-sm" ng-model="filters.promo" ng-init="filters.promo=true" ng-click="updateURL()" uib-btn-checkbox="true">Promos</label>
-        <label class="btn btn-primary btn-sm" ng-model="filters.event" ng-init="filters.event=true" ng-click="updateURL()" uib-btn-checkbox="true">Events</label>
-    </div>
-    <div class="btn-group">
-        <label class="btn btn-primary btn-sm" ng-model="filters.skill" uib-btn-radio="'scorer'" ng-click="updateURL()">Scorer</label>
-        <label class="btn btn-primary btn-sm" ng-model="filters.skill" uib-btn-radio="'pl'" ng-click="updateURL()">Perfect Lock</label>
-        <label class="btn btn-primary btn-sm" ng-model="filters.skill" uib-btn-radio="'healer'" ng-click="updateURL()">Healer</label>
-    </div>
-
-    <div class="btn-group">
-        <label class="btn btn-primary btn-sm" ng-model="filters.muse" ng-init="filters.muse=true" ng-click="updateURL()" uib-btn-checkbox="true">μ's</label>
-        <label class="btn btn-primary btn-sm" ng-model="filters.aqours" ng-init="filters.aqours=false" ng-click="updateURL()" uib-btn-checkbox="true">Aqours</label>
-    </div>
-    <table class="table table-bordered table-striped">
+    <table st-table="cards" class="table table-striped">
         <thead>
             <tr>
-                <td ng-click="sortBy('id')">Card
-                    <span ng-show="sort.type == 'id' && !sort.reverse" class="glyphicon glyphicon-chevron-down"></span>
-                    <span ng-show="sort.type == 'id' && sort.reverse" class="glyphicon glyphicon-chevron-up"></span>
-                </td>
-                <td ng-click="sortBy('smile')">Smile
-                    <span ng-show="sort.typeAttr == 'smile' && !sort.reverse" class="glyphicon glyphicon-chevron-down"></span>
-                    <span ng-show="sort.typeAttr == 'smile' && sort.reverse" class="glyphicon glyphicon-chevron-up"></span>
-                </td>
-                <td ng-click="sortBy('pure')">Pure
-                    <span ng-show="sort.typeAttr == 'pure' && !sort.reverse" class="glyphicon glyphicon-chevron-down"></span>
-                    <span ng-show="sort.typeAttr == 'pure' && sort.reverse" class="glyphicon glyphicon-chevron-up"></span>
-                </td>
-                <td ng-click="sortBy('cool')">Cool
-                    <span ng-show="sort.typeAttr == 'cool' && !sort.reverse" class="glyphicon glyphicon-chevron-down"></span>
-                    <span ng-show="sort.typeAttr == 'cool' && sort.reverse" class="glyphicon glyphicon-chevron-up"></span>
-                </td>
-                <td ng-click="sortBy('cScore')">C-Score
-                    <span ng-show="sort.type == 'cScore' && !sort.reverse" class="glyphicon glyphicon-chevron-down"></span>
-                    <span ng-show="sort.type == 'cScore' && sort.reverse" class="glyphicon glyphicon-chevron-up"></span>
-                </td>
-                <td ng-click="sortBy('oScore')">O-Score
-                    <span ng-show="sort.type == 'oScore' && !sort.reverse" class="glyphicon glyphicon-chevron-down"></span>
-                    <span ng-show="sort.type == 'oScore' && sort.reverse" class="glyphicon glyphicon-chevron-up"></span>
-                </td>
-                <td>Skill contr</td>
-                <td ng-show="filters.skill='scorer'">Skill contr w/ __ Charm</td>
+                <th st-skip-natural="true" st-sort="id" st-sort-default="reverse">Card</th>
+                <th st-skip-natural="true" st-sort="filters.idlz ? idolized_maximum_statistics_smile : non_idolized_maximum_statistics_smile">Smile</th>
+                <th st-skip-natural="true" st-sort="filters.idlz ? idolized_maximum_statistics_pure : non_idolized_maximum_statistics_pure">Pure</th>
+                <th st-skip-natural="true" st-sort="filters.idlz ? idolized_maximum_statistics_cool : non_idolized_maximum_statistics_cool">Cool</th>
+                <th st-skip-natural="true" st-sort="cScore">C-Score</th>
+
+                <th st-skip-natural="true" st-sort="oScore">O-Score</th>
+                <th ng-show="filters.sc" st-skip-natural="true" st-sort="cScore">Score Up Skill Contribution</th>
+
             </tr>
         </thead>
-        <tbody bs-loading-overlay>
-            <tr ng-repeat="card in cards | orderBy:typeArr:sort.reverse | filter:searchCards:strict | pagination: page * pageSize | limitTo: pageSize" ng-if="byOrigin(card)">
+        <tbody>
+            <tr ng-repeat="card in cards">
                 <td>
-                    <a href="{{website_url}}"><img src="{{filters.idlz || card.is_promo ? card.round_card_idolized_image : card.round_card_image}}" class="display-image" / pull-left>
-                        {{card.translated_collection}}
-                        {{card.idol.name}}
-                        <span ng-show="card.is_promo" class="glyphicon glyphicon-star"></span>
-                        <span ng-show="card.event" class="glyphicon glyphicon-heart"></span>
-                    </a>
+                    <table>
+                        <td>
+                            <!--<img src="{{filters.idlz || card.is_promo ? card.round_card_idolized_image : card.round_card_image}}" class="display-image">-->
+                        </td>
+                        <td style="padding-left: 5px;font-size: 1.1em">
+                            <a href="{{website_url}}">
+                                <span ng-show="card.event" class="glyphicon glyphicon-star" uib-tooltip="Event card"></span>
+                                <span ng-show="card.is_promo" class="glyphicon glyphicon-piggy-bank" uib-tooltip="Promo card"></span>
+                                <span ng-show="card.skill=='Score Up'" class="glyphicon glyphicon-plus" uib-tooltip="Scorer"></span>
+                                <span ng-show="card.skill=='Healer'" class="glyphicon glyphicon-heart" uib-tooltip="Healer"></span>
+                                <span ng-show="card.skill=='Perfect Lock'" class="glyphicon glyphicon-lock" uib-tooltip="Perfect Locker"></span>
+                                {{card.translated_collection}}
+                                {{card.idol.name}}
+                            </a>
+                        </td>
+
+                    </table>
                 </td>
                 <td>{{filters.idlz || card.is_promo ? card.idolized_maximum_statistics_smile : card.non_idolized_maximum_statistics_smile}}</td>
                 <td>{{filters.idlz || card.is_promo ? card.idolized_maximum_statistics_pure : card.non_idolized_maximum_statistics_pure}}</td>
                 <td>{{filters.idlz || card.is_promo ? card.idolized_maximum_statistics_cool : card.non_idolized_maximum_statistics_cool}}</td>
                 <td>{{cScore(card) | number: 1}}</td>
                 <td>{{oScore(card) | number: 1}}</td>
-                <td>{{skillContr(card, false)|number:2}}</td>
-                <td>{{skillContr(card, true)|number:2}}</td>
+                <td ng-show="filters.sc">
+                    <span ng-show="card.skill=='Healer'">
+                        <small>Base:<br></small>0.00<br>
+                        <small>w/ Heel:<br></small>{{skillContr(card, "sc")|number:2}}</span>
+                    <span ng-show="card.skill=='Perfect Lock'">Base:
+                        <br>0.00</span>
+                    <span ng-show="card.skill=='Score Up'">
+
+                        <small>Base:<br></small>{{skillContr(card,"sc", false)|number:2}}<br>
+                        <small>w/ Charm:<br></small>{{skillContr(card,"sc",true)|number:2}}</span>
+                </td>
+
             </tr>
         </tbody>
+        <tfoot>
+            <tr>
+                <td colspan="7" class="text-center">
+                    <div st-pagination="" st-items-by-page="30"></div>
+                </td>
+            </tr>
+        </tfoot>
     </table>
-    <ul uib-pagination total-items="numberOfPages" ng-model="page" max-size="maxSize" class="pagination-sm" boundary-link-numbers="true" rotate="false"></ul>
+
+    <!--<div class="btn-group">
+        <label class="btn btn-primary btn-sm" ng-model="filters.server" ng-click="updateFilter()" uib-btn-radio="'jp'">JP</label>
+        <div class="btn-group" uib-dropdown>
+            <label id="split-button" class="btn btn-primary btn-sm en-toggle" ng-click="updateFilter()" ng-model="filters.server" uib-btn-radio="'en'">EN</label>
+        </div>
+    </div>-->
+
+    <table>
+        <tr>
+            <td class="btn-group">
+                <label class="btn btn-primary btn-sm" ng-model="filters.server" ng-click="updateFilter()" uib-btn-radio="'jp'">JP</label>
+                <label class="btn btn-primary btn-sm" ng-model="filters.server" ng-click="updateFilter()" uib-btn-radio="'en'">EN</label>
+            </td>
+
+            <td class="btn-group">
+                <label class="btn btn-primary btn-sm" ng-model="filters.attribute" ng-click="updateFilter()" uib-btn-radio="'all'">All</label>
+                <label class="btn btn-primary btn-sm" ng-model="filters.attribute" ng-click="updateFilter()" uib-btn-radio="'smile'">Smile</label>
+                <label class="btn btn-primary btn-sm" ng-model="filters.attribute" ng-click="updateFilter()" uib-btn-radio="'pure'">Pure</label>
+                <label class="btn btn-primary btn-sm" ng-model="filters.attribute" ng-click="updateFilter()" uib-btn-radio="'cool'">Cool</label>
+            </td>
+
+            <td class="btn-group">
+                <label class="btn btn-primary btn-sm" ng-model="filters.ur" ng-init="filters.ur=true" ng-click="updateFilter()" uib-btn-checkbox>UR</label>
+                <label class="btn btn-primary btn-sm" ng-model="filters.ssr" ng-init="filters.ssr=true" ng-click="updateFilter()" uib-btn-checkbox>SSR</label>
+                <label class="btn btn-primary btn-sm" ng-model="filters.sr" ng-init="filters.sr=true" ng-click="updateFilter()" uib-btn-checkbox>SR</label>
+            </td>
+
+            <label class="btn btn-primary btn-sm" ng-model="filters.idlz" ng-init="filters.idlz=false" uib-btn-checkbox="false">Idolized?</label>
+
+            <td class="btn-group">
+                <label class="btn btn-primary btn-sm" ng-model="filters.premium" ng-init="filters.premium=true" ng-click="updateFilter()" uib-btn-checkbox="true">Premium</label>
+                <label class="btn btn-primary btn-sm" ng-model="filters.promo" ng-init="filters.promo=true" ng-click="updateFilter()" uib-btn-checkbox="true">Promos</label>
+                <label class="btn btn-primary btn-sm" ng-model="filters.event" ng-init="filters.event=true" ng-click="updateFilter()" uib-btn-checkbox="true">Events</label>
+            </td>
+
+            <td class="btn-group">
+                <label class="btn btn-primary btn-sm" ng-model="filters.sc" ng-click="updateFilter()" uib-btn-checkbox="true">Score Up</label>
+                <label class="btn btn-primary btn-sm" ng-model="filters.pl" ng-click="updateFilter()" uib-btn-checkbox="true">Perfect Lock</label>
+                <label class="btn btn-primary btn-sm" ng-model="filters.hl" ng-click="updateFilter()" uib-btn-checkbox="true">Healer</label>
+            </td>
+
+            <td class="btn-group">
+                <label class="btn btn-primary btn-sm" ng-model="filters.muse" ng-click="updateFilter()" uib-btn-checkbox="true">μ's</label>
+                <label class="btn btn-primary btn-sm" ng-model="filters.aqours" ng-click="updateFilter()" uib-btn-checkbox="true">Aqours</label>
+            </td>
+
+            <td class="btn-group">
+                <label class="btn btn-primary btn-sm" ng-model="filters.muse" ng-click="updateFilter()" uib-btn-checkbox="true">μ's</label>
+                <label class="btn btn-primary btn-sm" ng-model="filters.aqours" ng-click="updateFilter()" uib-btn-checkbox="true">Aqours</label>
+            </td>
+
+        </tr>
+    </table>
 </div>

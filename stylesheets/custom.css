@@ -1,4 +1,14 @@
 .display-image {
-  width: 75px;
-  height: auto;
+    width: 80px;
+    height: auto;
+    float: left;
+}
+td {
+    vertical-align: middle !important;
+}
+.st-sort-ascent:before {
+    content: '\25B2';
+}
+.st-sort-descent:before {
+    content: '\25BC';
 }
