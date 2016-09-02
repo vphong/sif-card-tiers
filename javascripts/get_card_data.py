@@ -3,7 +3,7 @@ import json
 import math
 
 
-baseURL = "https://schoolido.lu/api/cards/?&page_size=10&ordering=-id&rarity=SR,SSR,UR"
+baseURL = "http://schoolido.lu/api/cards/?ordering=-id&is_special=False&page_size=100&rarity=SR%2CSSR%2CUR"
 
 keysNeeded = ["skill_details", "attribute", "japan_only","is_promo","event",
                 "skill","idol","rarity", "idolized_maximum_statistics_cool",
@@ -32,8 +32,13 @@ def skill(card):
     ## given a card, extract:
     # 0. skill type
     skill = {}
+    skillNums = {}
     skill['type'] = card['skill']
-    print(card['skill_details'])
+
+    # TODO: handle promo skills
+    if not skill['type'] == "Perfect Lock" or not skill['type'] == "Healer" or not skill['type'] == "Score Up":
+        return skill
+
 
     numCount = 0;
     skillWords = card['skill_details'].split()
@@ -41,38 +46,77 @@ def skill(card):
 
         if isnumber(word) and numCount < 1:
             # 1. skill activation count
-            skill['activation_count'] = float(word)
+            skillNums['activation_count'] = float(word)
 
             # 2. skill activation type
-            skill['activation_type'] = skillWords[skillWords.index(word)+1]
-            
+            skillNums['activation_type'] = skillWords[skillWords.index(word)+1]
+
             numCount = numCount + 1;
+
         elif isnumber(word) and numCount < 2:
             # 3. skill activation value
-            skill['activation_value'] = float(word)
+            skillNums['activation_value'] = float(word)
 
         if "%" in word:
             # 4. skill activation percentage
-            skill['activation_percent'] = float(word.strip("%")) / 100
+            skillNums['activation_percent'] = float(word.strip("%")) / 100
 
 
 
 
 
-        ## and calculate
-        # 4. score up value w/ and w/o Charm or Heel
+    ## TODO: and calculate
+    # 4. score up value w/ and w/o Charm or Heel
 
-        # 5. perfect lock value
+    #### theoretical 550 note, 125 second song with 85% greats
+    notesActivation = (550 / skillNums['activation_value']) * skillNums['activation_percent'];
 
-        # 6. heal value
-    print(skill)
+    if skill['type'] == "Score Up":
+
+        if skillNums['activation_type'] == "perfects":
+            skill['su'] = notesActivation * .85 * skillNums['activation_value']
+        elif skillNums['activation_type'] == "time":
+            skill['su'] = (125 / skillNums['activation_num']) * skillNums['activation_percent'] * skillNums['activation_value']
+        else: # notes or combo string
+            skill['su'] = notesActivation * skillNums['activation_value']
+
+        skill['su_charm'] = skill['su'] * 2.5;
+        skill['su_heel'] = 0
+        skill['pl'] = 0
+        skill['pl_trick'] = 0
+        skill['pl_trick_idlz'] = 0
+        skill['hl'] = 0
+
+    elif skill['type'] == "Perfect Lock":
+        skill['su'] = 0
+        skill['su_charm'] = 0
+        skill['su_heel'] = 0
+        skill['pl'] = notesActivation * skillNums['activation_value']
+        skill['pl_trick'] = stat_to_mod(card,False) * .25 * notesActivation
+        skill['pl_trick_idlz'] = stat_to_mod(card,True) * .25 * notesActivation
+        skill['hl'] = 0
+
+    elif skill['type'] == "Healer":
+        skill['su'] = 0
+        skill['su_charm'] = 0
+        skill['pl'] = 0
+        skill['pl_trick'] = 0
+        skill['pl_trick_idlz'] = 0
+        skill['hl'] = notesActivation * skillNums['activation_value']
+        skill['su_heel'] = skill['hl'] * 270
+
+
+
+    # 5. perfect lock value
+
+    # 6. heal value
+    # print(skill)
     return skill
 
 
-# TODO: cScore, oScore, stat to mod
 
 # calculate stat base cScore and oScore off of
-# input: dict card, bool idlz
+# input: dict card, bool idlz, bool trick
 def stat_to_mod(card, idlz):
 
     if card['attribute'] == "Pure" and idlz:
@@ -136,11 +180,13 @@ def cleanCard(d, keys):
 
     # skill
     ret['skill'] = skill(ret)
+    ret.pop('skill_details',None)
 
     return ret
 
 
 def getJSON(url):
+    print("getJSON(): currURL %s" % url)
     response = urllib.request.urlopen(url)
     data = response.read()
     data = "".join(map(chr, data))
@@ -148,14 +194,6 @@ def getJSON(url):
     # for (key,value) in data.items():
     #     print(key)
     return data
-
-
-def setData(data,nextURL,cards):
-    data = getJSON(nextURL)
-    nextURL = data['next']
-
-    for card in data['results']:
-        cards.append(cleanCard(card,keysNeeded))
 
 
 
@@ -166,16 +204,20 @@ nextURL = data['next']
 cards = [];
 for card in data['results']:
     cards.append(cleanCard(card,keysNeeded))
-i = 0
-# while i < 2:
-#     setData(data,nextURL,cards)
-#     print("i = %d" % i)
-#     i = i + 1
+while nextURL:
 
-# with open('cards.js', 'w') as f:
-#     f.write("app.constant('CardData',\n")
-#     json.dump(cards,f,sort_keys=True)
-#     f.write("\n);")
+    data = getJSON(nextURL)
+    nextURL = data['next']
+    for card in data['results']:
+        cards.append(cleanCard(card,keysNeeded))
+
+    print("len(cards) = %d" % len(cards))
+    print("total cards = %d" % data['count'])
+
+with open('cards.js', 'w') as f:
+    f.write("app.constant('CardData',\n")
+    json.dump(cards,f,sort_keys=True)
+    f.write("\n);")
 
 
 
