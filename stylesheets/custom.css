@@ -16,3 +16,27 @@ td {
   display: flex;
   justify-content: space-between;
 }
+.custom-grid {
+  width:100%;
+  height: 400px
+}
+.ui-grid-break-word {
+  word-wrap: break-word;
+}
+.ui-grid-header {
+  padding: 0px
+}
+.ui-grid-header-cell {
+  vertical-align: bottom;
+  border: 0px;
+  border-bottom: 2px solid #dfd7ca;
+}
+.ui-grid-header-cell:hover {
+  border-right: 0px
+}
+.ui-grid-row:nth-child(odd) .ui-grid-cell {
+  background-color: #f8f5f0;
+}
+.ui-grid-row:nth-child(even) .ui-grid-cell {
+  background-color: #ffffff;
+}
