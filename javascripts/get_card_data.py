@@ -1,9 +1,8 @@
 import urllib.request
 import json
-import math
 
 
-baseURL = "http://schoolido.lu/api/cards/?ordering=-id&is_special=False&page_size=100&rarity=SR%2CSSR%2CUR"
+# baseURL = "http://schoolido.lu/api/cards/?ordering=-id&is_special=False&page_size=100&rarity=SR%2CSSR%2CUR"
 
 keysNeeded = ["skill_details", "attribute", "japan_only","is_promo","event",
                 "skill","idol","rarity", "idolized_maximum_statistics_cool",
@@ -184,6 +183,20 @@ def cleanCard(d, keys):
 
     return ret
 
+def addFullName(card):
+    ret = card
+    ret['full_name'] = card['rarity']
+    if card['is_promo']:
+        ret['full_name'] = ret['full_name'] + " Promo"
+    else:
+        if card['translated_collection']:
+            ret['full_name'] = ret['full_name'] + " " + card['translated_collection']
+        else:
+            ret['full_name'] = ret['full_name'] + " Unnamed"
+
+    ret['full_name'] = ret['full_name'] + " " + card['name']
+
+    return ret
 
 def getJSON(url):
     print("getJSON(): currURL %s" % url)
@@ -199,20 +212,28 @@ def getJSON(url):
 
 ###########
 
-data = getJSON(baseURL)
-nextURL = data['next']
-cards = [];
-for card in data['results']:
-    cards.append(cleanCard(card,keysNeeded))
-while nextURL:
+with open('cards - Copy.js','r') as infile:
+    data = json.loads(infile.read())
 
-    data = getJSON(nextURL)
-    nextURL = data['next']
-    for card in data['results']:
-        cards.append(cleanCard(card,keysNeeded))
+cards = []
 
-    print("len(cards) = %d" % len(cards))
-    print("total cards = %d" % data['count'])
+for card in data:
+    cards.append(addFullName(card))
+
+# print(cards)
+# nextURL = data['next']
+# cards = [];
+# for card in data['results']:
+#     cards.append(cleanCard(card,keysNeeded))
+# while nextURL:
+#
+#     data = getJSON(nextURL)
+#     nextURL = data['next']
+#     for card in data['results']:
+#         cards.append(cleanCard(card,keysNeeded))
+#
+#     print("len(cards) = %d" % len(cards))
+#     print("total cards = %d" % data['count'])
 
 with open('cards.js', 'w') as f:
     f.write("app.constant('CardData',\n")

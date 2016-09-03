@@ -1,0 +1,19 @@
+<div class="pagination" ng-if="pages.length >= 2">
+    <ul class="pagination">
+        <li ng-if="1!==pages[0]">
+            <a ng-click="selectPage(1)"> &#171;</a>
+        </li>
+        <li ng-if="1!==currentPage">
+          <a ng-click="selectPage(currentPage-1)">&#8249;</a>
+        </li>
+        <li ng-repeat="page in pages" ng-class="{active: page==currentPage}">
+            <a ng-click="selectPage(page)">{{page}}</a>
+        </li>
+        <li ng-if="currentPage < numPages">
+          <a ng-click="selectPage(currentPage+1)">&#8250;</a>
+        </li>
+        <li ng-if="numPages!==pages[pages.length - 1]">
+            <a ng-click="selectPage(numPages)">&#187;</a>
+        </li>
+    </ul>
+</div>

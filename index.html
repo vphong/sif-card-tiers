@@ -11,12 +11,13 @@
         <script src="https://rawgit.com/bsalex/angular-loading-overlay/master/dist/angular-loading-overlay.js"></script>
         <script src="https://rawgit.com/bsalex/angular-loading-overlay-http-interceptor/master/dist/angular-loading-overlay-http-interceptor.js"></script>
         <script src="https://angular-ui.github.io/ui-router/release/angular-ui-router.min.js"></script>
-        <link rel="stylesheet" href="https://bootswatch.com/yeti/bootstrap.min.css">
-        <link rel="stylesheet" href="stylesheets/custom.css">
-
-<script src="javascripts/app.js"></script>
+        <link rel="stylesheet" href="http://bootswatch.com/sandstone/bootstrap.min.css">
+        <link rel="stylesheet" href="stylesheets/ui-grid.css">
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-grid/3.2.6/ui-grid.min.js"></script>
+        <script src="https://rawgit.com/grevory/angular-local-storage/master/dist/angular-local-storage.min.js"></script>
+        <script src="javascripts/app.js"></script>
         <script src="javascripts/cards.js"></script>
-
+        <link rel="stylesheet" href="stylesheets/custom.css">
         <meta name="viewport" content="width=device-width">
         <!--[if lt IE 9]> <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script> <![endif]-->
     </head>
@@ -31,7 +32,7 @@
             </header>
             <section>
 
-                <div ui-view></div>
+                <div ui-view bs-loading-overlay></div>
 
             </section>
             <footer>

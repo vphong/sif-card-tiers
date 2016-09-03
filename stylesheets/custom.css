@@ -1,4 +1,37 @@
 .display-image {
-  width: 75px;
-  height: auto;
+    width: 80px;
+    height: auto;
+    float: left;
+}
+td {
+    vertical-align: middle !important;
+}
+.list-inline {
+  display: flex;
+  justify-content: space-between;
+}
+.custom-grid {
+  width:100%;
+  height: 56*25
+}
+.ui-grid-header {
+  padding: 0px
+}
+.ui-grid-header-cell {
+  vertical-align: bottom;
+  border: 0px;
+  border-bottom: 2px solid #dfd7ca;
+}
+.ui-grid-header-cell:hover {
+  border-right: 0px
+}
+.ui-grid-row:nth-child(odd) .ui-grid-cell {
+  background-color: #f8f5f0;
+}
+.ui-grid-row:nth-child(even) .ui-grid-cell {
+  background-color: #ffffff;
+}
+.ui-grid-cell .ui-grid-cell-contents {
+  height: 55;
+  vertical-align: middle;
 }

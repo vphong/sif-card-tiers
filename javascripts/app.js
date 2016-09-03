@@ -1,4 +1,7 @@
-var app = angular.module('tierList', ['ui.bootstrap', 'bsLoadingOverlay', 'bsLoadingOverlayHttpInterceptor', 'ui.router']);
+var app = angular.module('tierList', ['ui.bootstrap',
+    'bsLoadingOverlay', 'bsLoadingOverlayHttpInterceptor',
+    'ui.router', 'ui.grid', 'ui.grid.pagination', 'LocalStorageModule'
+]);
 
 app.factory('allHttpInterceptor', function(bsLoadingOverlayHttpInterceptorFactoryFactory) {
     return bsLoadingOverlayHttpInterceptorFactoryFactory();
@@ -61,239 +64,175 @@ app.run(function(bsLoadingOverlayService) {
     });
 });
 
-app.factory('Cards', function($http) {
-
-    var ret = {};
-
-    ret.getUrl = function(url) {
-        return $http.get(url);
-    }
-
-    ret.cleanCards = function(cards) {
-        var len = cards.length;
-        var statToMod;
-        for (var i = 0; i < len; i++) {
-            cards[i].premium = (!cards[i].event) && (!cards[i].is_promo);
-            var skill_details_array = cards[i].skill_details.replace(/[,\/#!$%\^&\*;:{}=\-_`~()]/g, "").split(" ");
-
-            var len = skill_details_array.length;
-            var curr;
-            var numCount = 0;
-            for (var j = 0; j < len; j++) {
-              curr = skill_details_array[j];
-              if (!isNaN(curr) && numCount == 0) {
-                cards[i].skill_activation_num = curr;
-                cards[i].skill_activation_type = skill_details_array[j+1];
-                numCount++;
-              }
-              else if (!isNaN(curr) && numCount == 1) {
-                cards[i].skill_activation_percent = curr/100;
-                numCount++;
-              }
-              else if (!isNaN(curr) && numCount == 2) {
-                cards[i].skill_activation = curr;
-                numCount++;
-              }
-            }
-
-        }
-        return cards;
-    }
-
-    return ret;
-});
-
-app.filter('pagination', function() {
-    return function(input, start) {
-        start = +start;
-        return input.slice(start);
-    };
-});
-
-app.controller('TierCtrl', function($scope, $filter, Cards) {
+app.controller('TierCtrl', function($scope, CardData, uiGridConstants) {
     $scope.filters = {
-        attribute: 'all',
         server: 'jp',
-        skill: 'scorer'
-    }
-
-    $scope.cards = {};
-
-    var count = 0;
-    $scope.next = "";
-    $scope.prev = "";
-    $scope.page = 0;
-    $scope.pageSize = 10;
-
-    var getCardsSuccess = function(data, status) {
-        count = data.count;
-        $scope.next = data.next;
-        $scope.prev = data.previous;
-        $scope.cards = data.results;
-        $scope.cards = Cards.cleanCards($scope.cards);
-
-    }
-    $scope.numberOfPages = Math.ceil($scope.cards.length / $scope.pageSize);
-
-
-    $scope.url = "https://crossorigin.me/https://schoolido.lu/api/cards/?&page_size=25&ordering=-id&rarity=SR,SSR,UR&japan-only=False&skill=score up&idol_main_unit=μ's";
-    var base = "https://crossorigin.me/http://schoolido.lu/api/cards/?&page_size=25&ordering=-id";
-
-    var getCards = function() {
-        Cards.getUrl($scope.url).success(getCardsSuccess);
+        attribute: 'all',
+        sr: true,
+        ssr: true,
+        ur: true,
+        premium: true,
+        event: true,
+        promo: true,
+        sc: true,
+        pl: true,
+        hl: true,
+        muse: true,
+        aqours: false,
+        idlz: false
     };
-    $scope.updateURL = function() {
-        $scope.url = base;
+
+    $scope.cards = CardData;
+
+    $scope.toggleBool = function(bool) {
+        return !bool
+    }
+
+    var getIdlz = function() {
+        return $scope.filters.idlz
+    }
+
+    $scope.filterCards = function() {
         var filters = $scope.filters;
+        var cards = CardData;
+        var card;
+        var newCards = [];
+        var len = $scope.cards.length;
 
-        if (filters.server == "en") $scope.url += "&japan-only=False";
-        else $scope.url += "&japan-only=True";
+        for (var i = 0; i < len; i++) {
+            card = cards[i];
 
-        if (filters.attribute == "smile") $scope.url += "&attribute=Smile";
-        else if (filters.attribute == "pure") $scope.url += "&attribute=Pure";
-        else if (filters.attribute == "cool") $scope.url += "&attribute=Cool";
 
-        // FIXME
+            if ((filters.server == 'en' && !card.japan_only ||
+                    filters.server == 'jp') &&
 
-        if (filters.ur && filters.ssr && filters.sr) $scope.url += "&rarity=UR,SSR,SR";
-        else if (filers.ur && filters.ssr && !filters.sr) $scope.url += "&rarity=UR,SSR";
-        else if (filters.ur && !filters.ssr && filters.sr) $scope.url += "&rarity=UR,SR";
-        else if (filters.ur && !filters.ssr && !filters.sr) $scope.url += "&rarity=URR";
-        else if (!filters.ur && filters.ssr && filters.sr) $scope.url += "%rarity=SR,SSR";
-        else if (!filters.ur && filters.ssr && !filters.sr) $scope.url += "%rarity=SSR";
-        else if (!filters.ur && !filters.ssr && filters.sr) $scope.url += "%rarity=SR";
+                (filters.sr && card.rarity == "SR" ||
+                    filters.ssr && card.rarity == "SSR" ||
+                    filters.ur && card.rarity == "UR") &&
 
-        /*if (filters.premium && !filters.promo && !filters.event)
-            $scope.url += "&is_promo=false&is_event=false";
-        else if (filters.premium && filters.promo && !filters.event)
-            $scope.url += "&is_event=false";
-        else if (filters.premium && !filters.promo && filters.event)
-            $scope.url += "&is_event=false";*/
-console.log(filters.skill)
-        if (filters.skill == "scorer") $scope.url += "&skill=score%20up";
-        else if (filters.skill == "pl") $scope.url += "&skill=perfect%20lock";
-        else if (filters.skill == "healer") $scope.url += "&skill=healer";
+                (filters.attribute == 'all' && card.attribute ||
+                    filters.attribute == 'smile' && card.attribute == "Smile" ||
+                    filters.attribute == 'pure' && card.attribute == "Pure" ||
+                    filters.attribute == 'cool' && card.attribute == "Cool") &&
 
-        if (filters.muse && !filters.aqours) $scope.url += "&idol_main_unit=μ's";
-        else if (!filters.muse && filters.aqours) $scope.url += "&idol_main_unit=Aqours";
-        else if (filters.muse && filters.aqours) $scope.url += "&idol_main_unit=Aqours,μ's"
-        getCards();
+                ((filters.premium && !card.event && !card.is_promo) ||
+                    filters.event && card.event || filters.promo && card.is_promo)
+                // &&
+                //
+                // (filters.muse && card.main_unit == "Muse" ||
+                //  filters.aqours && card.main_unit == "Aqours")
+            )
+                newCards.push(card);
+        }
+        console.log(newCards[0])
+        $scope.uiGrid.data = newCards;
+
     }
 
-    getCards();
 
-    $scope.sort = {
-        reverse: false,
-        type: 'cScore',
-        typeAttr: ''
-    };
-    $scope.sortBy = function(type) {
-        $scope.sort.reverse = ($scope.sort.type == type) || ($scope.sort.typeAttr == type) ? !$scope.sort.reverse : true;
-        $scope.sort.typeAttr = type;
+    $scope.uiGrid = {
+        enableVerticalScrollbar: uiGridConstants.scrollbars.WHEN_NEEDED,
+        enableHorizontalScrollbar: uiGridConstants.scrollbars.NEVER,
+        enableSorting: true,
+        enableColumnMenus: false,
+        enablePaginationControls: false,
+        enableFiltering: false,
+        paginationPageSize: 25,
+        rowHeight: 55,
+        columnDefs: [{
+                displayName: 'ID',
+                width: 40,
+                field: 'id',
 
-        if (type == 'smile' && $scope.filters.idlz)
-            $scope.sort.type = "idolized_maximum_statistics_smile";
-        else if (type == 'smile' && !$scope.filters.idlz)
-            $scope.sort.type = "non_idolized_maximum_statistics_smile";
-        else if (type == 'pure' && $scope.filters.idlz)
-            $scope.sort.type = "idolized_maximum_statistics_pure";
-        else if (type == 'pure' && !$scope.filters.idlz)
-            $scope.sort.type = "non_idolized_maximum_statistics_pure";
-        else if (type == 'cool' && $scope.filters.idlz)
-            $scope.sort.type = "idolized_maximum_statistics_cool";
-        else if (type == 'cool' && !$scope.filters.idlz)
-            $scope.sort.type = "non_idolized_maximum_statistics_cool";
-        else $scope.sort.type = type;
+            }, {
+                field: 'full_name',
+                minWidth: 150,
+                enableFiltering: true,
+                displayName: 'Card Name',
+            }, {
+                field: 'translated_collection',
+                visible: false,
 
-    };
+            }, {
+                field: 'attribute',
+                width: 0,
+            }, {
+                field: 'rarity',
+                width: 0
+            }, {
+                displayName: 'Skill',
+                field: 'skill.type',
+                width: 0,
+            }, {
+                field: 'cScore',
+                visible: !getIdlz(),
+                minWidth: 80,
+                displayName: 'C-Score'
+            }, {
+                field: 'cScore_idlz',
+                visible: getIdlz(),
+                minWidth: 80,
+                displayName: 'C-Score'
 
+            }, {
+                field: 'oScore',
+                visible: !getIdlz(),
+                minWidth: 80,
+                displayName: 'O-Score'
 
+            }, {
+                field: 'oScore_idlz',
+                visible: getIdlz(),
+                minWidth: 80,
+                displayName: 'O-Score'
 
-    // TODO: filter by server
-    // TODO: filter by attribute
-    // TODO: filter by rarity
-    // TODO: filter by origin
-    $scope.byOrigin = function(card) {
-        /*var ret = ($scope.filters.premium == card.premium) ||
-        ($scope.filters.promo == card.is_promo) ||
-        ($scope.filters.event == card.event);
-        console.log(ret);*/
-        var filterPremium = ($scope.filters.premium == card.premium);
-        var filterPromo = ($scope.filters.promo == card.is_promo);
-        var filterEvent = ($scope.filters.evnt == (card.event == null));
-        var showIf = filterPremium && filterPromo && filterEvent;
-        return filterPremium;
-    };
-    // TODO: filter by group
-    // TODO: filter by skill
+            }, {
+                displayName: 'Smile',
+                field: 'non_idolized_maximum_statistics_smile',
+                visible: !getIdlz(),
 
+            }, {
+                displayName: 'Pure',
+                field: 'non_idolized_maximum_statistics_pure',
+                visible: !getIdlz(),
 
-    var stat_to_mod = function(card) {
-        if ($scope.filters.idlz && (card.attribute == "Pure"))
-            stat = card.idolized_maximum_statistics_pure;
-        else if (!$scope.filters.idlz && (card.attribute == "Pure"))
-            stat = card.non_idolized_maximum_statistics_pure;
-        else if ($scope.filters.idlz && (card.attribute == "Smile"))
-            stat = card.idolized_maximum_statistics_smile;
-        else if (!$scope.filters.idlz && (card.attribute == "Smile"))
-            stat = card.non_idolized_maximum_statistics_smile;
-        else if ($scope.filters.idlz && (card.attribute == "Cool"))
-            stat = card.idolized_maximum_statistics_cool;
-        else if (!$scope.filters.idlz && (card.attribute == "Cool"))
-            stat = card.non_idolized_maximum_statistics_cool;
+            }, {
+                displayName: 'Cool',
+                field: 'non_idolized_maximum_statistics_cool',
+                visible: !getIdlz(),
 
-        // bond bonus
-        if ($scope.filters.idlz && card.rarity == "UR")
-            stat += 1000;
-        else if ((!$scope.filters.idlz && card.rarity == "UR") || ($scope.filters.idlz && card.rarity == "SR"))
-            stat += 500;
-        else if (!$scope.filters.idlz && card.rarity == "SR")
-            stat += 250;
-        return stat;
-    };
-    $scope.cScore = function(card) {
-        var statToMod = stat_to_mod(card);
-        card.cScore = statToMod + (statToMod * (.09 + .03)) * 2;;
-        return card.cScore;
+            }, {
+                displayName: 'Smile',
+                field: 'idolized_maximum_statistics_smile',
+                visible: getIdlz(),
 
-    }
-    $scope.oScore = function(card) {
-            var statToMod = stat_to_mod(card);
-            card.oScore = statToMod + (statToMod * (.09 + .06)) * 2;;
-            return card.oScore;
+            }, {
+                displayName: 'Pure',
+                field: 'idolized_maximum_statistics_pure',
+                visible: getIdlz(),
+            }, {
+                displayName: 'Cool',
+                field: 'idolized_maximum_statistics_cool',
+                visible: getIdlz(),
+            },
 
-        }
-        // ****** calculate skill contribution
-    $scope.skillContr = function(card, equippedSkill) {
-        card.skill_contr = 0;
-        var baseNotesActivation = (550 / card.skill_activation_num) * card.skill_activation_percent * card.skill_activation;
-        var charm_multiplier = 1;
-        var heel_multiplier = 1;
-
-        if (equippedSkill) {
-            charm_multiplier = 2.5;
-            heel_multipler = 270;
-        }
-
-        if (card.skill == "Score Up") {
-            // activation types: notes, time, combo string, perfects
-            if (card.skill_activation_type == "perfects") {
-                card.skill_contr = baseNotesActivation * .85 * charm_multiplier;
-            } else if (card.skill_activation_type == "time") {
-                card.skill_contr = (125 / card.skill_activation_num) * card.skill_activation_percent * card.skill_activation * charm_multiplier;
-            } else { // notes or combo string
-                card.skill_contr = baseNotesActivation * charm_multiplier;
-            }
-        } else if (card.skill == "Perfect Lock") {
-            card.skill_contr = baseNotesActivation;
-        } else if (card.skill == "Healer") {
-            card.skill_contr = baseNotesActivation * heel_multiplier;
-        }
-        return card.skill_contr
+            {
+                field: 'oScore'
+            },
+        ],
+        onRegisterApi: function(gridApi) {
+            $scope.gridApi = gridApi;
+        },
+        data: $scope.cards
     }
 
-    var stat = 0;
-    // TODO: pagination
+    for (index in $scope.uiGrid.columnDefs) {
+      var col = $scope.uiGrid.columnDefs[index];
+      col.headerCellTemplate = 'column-header-template.html';
+      col.sortDirectionCycle = [uiGridConstants.ASC, uiGridConstants.DESC];
+    }
+
+
 
 });
 
@@ -302,7 +241,7 @@ app.controller('UserCtrl', function($scope, $filter, Cards) {
     $scope.sit.user = "dreamsicl";
     var accUrlBase = "https://schoolido.lu/api/accounts/?owner__username=";
     $scope.updateUser = function() {
-        $scope.sit.accountsUrl =  accUrlBase + $scope.sit.user;
+        $scope.sit.accountsUrl = accUrlBase + $scope.sit.user;
     }
     $scope.updateUser();
 
