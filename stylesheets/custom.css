@@ -6,22 +6,13 @@
 td {
     vertical-align: middle !important;
 }
-.st-sort-ascent:before {
-    content: '\25B2';
-}
-.st-sort-descent:before {
-    content: '\25BC';
-}
 .list-inline {
   display: flex;
   justify-content: space-between;
 }
 .custom-grid {
   width:100%;
-  height: 400px
-}
-.ui-grid-break-word {
-  word-wrap: break-word;
+  height: 56*25
 }
 .ui-grid-header {
   padding: 0px
@@ -39,4 +30,8 @@ td {
 }
 .ui-grid-row:nth-child(even) .ui-grid-cell {
   background-color: #ffffff;
+}
+.ui-grid-cell .ui-grid-cell-contents {
+  height: 55;
+  vertical-align: middle;
 }

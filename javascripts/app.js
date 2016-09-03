@@ -64,162 +64,173 @@ app.run(function(bsLoadingOverlayService) {
     });
 });
 
-
-app.controller('TierCtrl', function($scope, $filter, CardData) {
+app.controller('TierCtrl', function($scope, CardData, uiGridConstants) {
     $scope.filters = {
         server: 'jp',
         attribute: 'all',
+        sr: true,
+        ssr: true,
+        ur: true,
+        premium: true,
+        event: true,
+        promo: true,
         sc: true,
         pl: true,
         hl: true,
         muse: true,
-        aqours: true,
+        aqours: false,
         idlz: false
     };
 
     $scope.cards = CardData;
 
-
-
-    var getIdlz = function() {
-      return $scope.filters.idlz
+    $scope.toggleBool = function(bool) {
+        return !bool
     }
 
-    $scope.uiGrid = {
-        enableSorting: true,
-        enableFiltering: true,
-        enablePaginationControls: false,
-        paginationPageSize: 25,
-        columnDefs: [
-          {displayName: 'ID', field: 'id'},
-          {field: 'full_name', minWidth: 200, displayName: 'Card Name',},
-          {field: 'translated_collection', visible: false},
-          {field: 'attribute'},
-          {displayName: 'Skill', field: 'skill.type'},
-          {field: 'cScore', visible: !getIdlz()},
-          {field: 'cScore_idlz', visible: getIdlz()},
-          {field: 'oScore', visible: !getIdlz()},
-          {field: 'oScore_idlz', visible: getIdlz()},
-          {displayName: 'Smile', field: 'non_idolized_maximum_statistics_smile', visible: !getIdlz()},
-          {displayName: 'Pure', field: 'non_idolized_maximum_statistics_pure', visible: !getIdlz()},
-          {displayName: 'Cool', field: 'non_idolized_maximum_statistics_cool', visible: !getIdlz()},
-          {displayName: 'Smile', field: 'idolized_maximum_statistics_smile', visible: getIdlz()},
-          {displayName: 'Pure', field: 'idolized_maximum_statistics_pure', visible: getIdlz()},
-          {displayName: 'Cool', field: 'idolized_maximum_statistics_cool', visible: getIdlz()},
+    var getIdlz = function() {
+        return $scope.filters.idlz
+    }
 
-          {field: 'oScore'},
+    $scope.filterCards = function() {
+        var filters = $scope.filters;
+        var cards = CardData;
+        var card;
+        var newCards = [];
+        var len = $scope.cards.length;
+
+        for (var i = 0; i < len; i++) {
+            card = cards[i];
+
+
+            if ((filters.server == 'en' && !card.japan_only ||
+                    filters.server == 'jp') &&
+
+                (filters.sr && card.rarity == "SR" ||
+                    filters.ssr && card.rarity == "SSR" ||
+                    filters.ur && card.rarity == "UR") &&
+
+                (filters.attribute == 'all' && card.attribute ||
+                    filters.attribute == 'smile' && card.attribute == "Smile" ||
+                    filters.attribute == 'pure' && card.attribute == "Pure" ||
+                    filters.attribute == 'cool' && card.attribute == "Cool") &&
+
+                ((filters.premium && !card.event && !card.is_promo) ||
+                    filters.event && card.event || filters.promo && card.is_promo)
+                // &&
+                //
+                // (filters.muse && card.main_unit == "Muse" ||
+                //  filters.aqours && card.main_unit == "Aqours")
+            )
+                newCards.push(card);
+        }
+        console.log(newCards[0])
+        $scope.uiGrid.data = newCards;
+
+    }
+
+
+    $scope.uiGrid = {
+        enableVerticalScrollbar: uiGridConstants.scrollbars.WHEN_NEEDED,
+        enableHorizontalScrollbar: uiGridConstants.scrollbars.NEVER,
+        enableSorting: true,
+        enableColumnMenus: false,
+        enablePaginationControls: false,
+        enableFiltering: false,
+        paginationPageSize: 25,
+        rowHeight: 55,
+        columnDefs: [{
+                displayName: 'ID',
+                width: 40,
+                field: 'id',
+
+            }, {
+                field: 'full_name',
+                minWidth: 150,
+                enableFiltering: true,
+                displayName: 'Card Name',
+            }, {
+                field: 'translated_collection',
+                visible: false,
+
+            }, {
+                field: 'attribute',
+                width: 0,
+            }, {
+                field: 'rarity',
+                width: 0
+            }, {
+                displayName: 'Skill',
+                field: 'skill.type',
+                width: 0,
+            }, {
+                field: 'cScore',
+                visible: !getIdlz(),
+                minWidth: 80,
+                displayName: 'C-Score'
+            }, {
+                field: 'cScore_idlz',
+                visible: getIdlz(),
+                minWidth: 80,
+                displayName: 'C-Score'
+
+            }, {
+                field: 'oScore',
+                visible: !getIdlz(),
+                minWidth: 80,
+                displayName: 'O-Score'
+
+            }, {
+                field: 'oScore_idlz',
+                visible: getIdlz(),
+                minWidth: 80,
+                displayName: 'O-Score'
+
+            }, {
+                displayName: 'Smile',
+                field: 'non_idolized_maximum_statistics_smile',
+                visible: !getIdlz(),
+
+            }, {
+                displayName: 'Pure',
+                field: 'non_idolized_maximum_statistics_pure',
+                visible: !getIdlz(),
+
+            }, {
+                displayName: 'Cool',
+                field: 'non_idolized_maximum_statistics_cool',
+                visible: !getIdlz(),
+
+            }, {
+                displayName: 'Smile',
+                field: 'idolized_maximum_statistics_smile',
+                visible: getIdlz(),
+
+            }, {
+                displayName: 'Pure',
+                field: 'idolized_maximum_statistics_pure',
+                visible: getIdlz(),
+            }, {
+                displayName: 'Cool',
+                field: 'idolized_maximum_statistics_cool',
+                visible: getIdlz(),
+            },
+
+            {
+                field: 'oScore'
+            },
         ],
+        onRegisterApi: function(gridApi) {
+            $scope.gridApi = gridApi;
+        },
         data: $scope.cards
     }
 
-  $scope.uiGrid.onRegisterApi = function (gridApi) {
-    $scope.gridApi2 = gridApi;
-  }
-
-
-    // $scope.sort = {
-    //     ascending: true,
-    //     type: 'cScore',
-    //     typeAttr: ''
-    // };
-    // $scope.sortBy = function(type) {
-    //
-    //     $scope.sort.ascending = ($scope.sort.type == type) || ($scope.sort.typeAttr == type) ? !$scope.sort.ascending : true;
-    //     $scope.sort.typeAttr = type;
-    //
-    //     if (type == 'smile' && $scope.filters.idlz)
-    //         $scope.sort.type = "idolized_maximum_statistics_smile";
-    //     else if (type == 'smile' && !$scope.filters.idlz)
-    //         $scope.sort.type = "non_idolized_maximum_statistics_smile";
-    //     else if (type == 'pure' && $scope.filters.idlz)
-    //         $scope.sort.type = "idolized_maximum_statistics_pure";
-    //     else if (type == 'pure' && !$scope.filters.idlz)
-    //         $scope.sort.type = "non_idolized_maximum_statistics_pure";
-    //     else if (type == 'cool' && $scope.filters.idlz)
-    //         $scope.sort.type = "idolized_maximum_statistics_cool";
-    //     else if (type == 'cool' && !$scope.filters.idlz)
-    //         $scope.sort.type = "non_idolized_maximum_statistics_cool";
-    //     else $scope.sort.type = type;
-    //
-    // };
-
-
-
-
-    // var stat_to_mod = function(card) {
-    //     if ($scope.filters.idlz && (card.attribute == "Pure"))
-    //         stat = card.idolized_maximum_statistics_pure;
-    //     else if (!$scope.filters.idlz && (card.attribute == "Pure"))
-    //         stat = card.non_idolized_maximum_statistics_pure;
-    //     else if ($scope.filters.idlz && (card.attribute == "Smile"))
-    //         stat = card.idolized_maximum_statistics_smile;
-    //     else if (!$scope.filters.idlz && (card.attribute == "Smile"))
-    //         stat = card.non_idolized_maximum_statistics_smile;
-    //     else if ($scope.filters.idlz && (card.attribute == "Cool"))
-    //         stat = card.idolized_maximum_statistics_cool;
-    //     else if (!$scope.filters.idlz && (card.attribute == "Cool"))
-    //         stat = card.non_idolized_maximum_statistics_cool;
-    //
-    //     // bond bonus
-    //     if ($scope.filters.idlz && card.rarity == "UR")
-    //         stat += 1000;
-    //     else if ((!$scope.filters.idlz && card.rarity == "UR") || ($scope.filters.idlz && card.rarity == "SR"))
-    //         stat += 500;
-    //     else if (!$scope.filters.idlz && card.rarity == "SR")
-    //         stat += 250;
-    //     return stat;
-    // };
-    // $scope.cScore = function(card) {
-    //     var statToMod = stat_to_mod(card);
-    //     card.cScore = statToMod + (statToMod * (.09 + .03)) * 2;;
-    //     return card.cScore;
-    //
-    // }
-    // $scope.oScore = function(card) {
-    //         var statToMod = stat_to_mod(card);
-    //         card.oScore = statToMod + (statToMod * (.09 + .06)) * 2;;
-    //         return card.oScore;
-    //
-    //     }
-    //     // ****** calculate skill contribution
-    // $scope.skillContr = function(card, skillType, charm) {
-    //     card.skill_contr = 0;
-    //     var baseNotesActivation = (550 / card.skill_activation_num) * card.skill_activation_percent * card.skill_activation;
-    //
-    //     var charm_multiplier = 1;
-    //     if (charm) {
-    //         charm_multiplier = 2.5;
-    //     }
-    //
-    //
-    //     if (card.skill == "Score Up") {
-    //         // activation types: notes, time, combo string, perfects
-    //         if (card.skill_activation_type == "perfects") {
-    //             card.score_contr = baseNotesActivation * .85 * charm_multiplier;
-    //         } else if (card.skill_activation_type == "time") {
-    //             card.score_contr = (125 / card.skill_activation_num) * card.skill_activation_percent * card.skill_activation * charm_multiplier;
-    //         } else { // notes or combo string
-    //             card.score_contr = baseNotesActivation * charm_multiplier;
-    //         }
-    //         card.heal_contr = 0;
-    //         card.pl_contr = 0;
-    //     } else if (card.skill == "Perfect Lock") {
-    //         card.pl_contr = baseNotesActivation;
-    //         card.score_contr = 0;
-    //         card.heal_contr = 0;
-    //     } else if (card.skill == "Healer") {
-    //         card.score_contr = baseNotesActivation * 270;
-    //         card.heal_contr = baseNotesActivation * 1;
-    //         card.pl_contr = 0;
-    //     }
-    //     if (skillType == "sc") return card.score_contr;
-    //     else if (skillType == "pl") return card.pl_contr;
-    //     else return card.heal_contr;
-
-    // TODO: account for R/promo skills
-    //}
-
-    var stat = 0;
+    for (index in $scope.uiGrid.columnDefs) {
+      var col = $scope.uiGrid.columnDefs[index];
+      col.headerCellTemplate = 'column-header-template.html';
+      col.sortDirectionCycle = [uiGridConstants.ASC, uiGridConstants.DESC];
+    }
 
 
 
