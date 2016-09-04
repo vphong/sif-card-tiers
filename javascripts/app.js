@@ -53,10 +53,10 @@ app.controller('TabCtrl', function($rootScope, $scope, $state) {
     });
 });
 
-
 app.config(function($httpProvider) {
     $httpProvider.interceptors.push('allHttpInterceptor');
 });
+
 app.run(function(bsLoadingOverlayService) {
     bsLoadingOverlayService.setGlobalConfig({
         delay: 900, // Minimal delay to hide loading overlay in ms.
@@ -64,7 +64,70 @@ app.run(function(bsLoadingOverlayService) {
     });
 });
 
-app.controller('TierCtrl', function($scope, CardData, uiGridConstants) {
+app.factory('processCards', function() {
+    var ret = function(cards) {
+        var card;
+        var cardsLen = cards.length;
+        var skillType;
+        var numCount = 0;
+        var word;
+        var details_arr;
+        var len;
+
+
+        for (var j = 0; j < cardsLen; i++) {
+            card = cards[j];
+            console.log(card)
+            /// card name
+            card.full_name = card.rarity;
+            if (card.is_promo) {
+                card.full_name += " Promo"
+            } else {
+                if (card.translated_collection) {
+                    card.full_name += " " + card.translated_collection;
+                } else {
+                    card.full_name += " Unnamed"
+                }
+            }
+            card.full_name += " " + card.name;
+
+
+            /// skill details
+            skillType = card.skill;
+            card.skill = {
+                type: skillType
+            }
+
+            details_arr = card.skill_details.split();
+            len = details_arr.length;
+
+            for (var i = 0; i < len; i++) {
+                // 1. skill activation count
+                word = details_arr[i]
+                if (!isNaN(word) && numCount < 1) {
+                    card.skill.activation_count = parseFloat(word)
+                    card.skill.activation_type = details_arr[i + 1]
+                    numCount++;
+                } else if (!isNaN(word) && numCount < 2) {
+                    card.skill.activation_value = parseFloat(word)
+
+                }
+                if (word.includes("%")) {
+                    card.skill.activation_percent = parseFloat(word) / 100.0
+                }
+
+            }
+        }
+    }
+
+
+    return ret;
+
+});
+
+
+
+app.controller('TierCtrl', function($scope, processCards, CardData, uiGridConstants) {
     $scope.filters = {
         server: 'jp',
         attribute: 'all',
@@ -82,7 +145,7 @@ app.controller('TierCtrl', function($scope, CardData, uiGridConstants) {
         idlz: false
     };
 
-    $scope.cards = CardData;
+    $scope.cards = processCards(CardData);
 
     $scope.toggleBool = function(bool) {
         return !bool
@@ -124,7 +187,7 @@ app.controller('TierCtrl', function($scope, CardData, uiGridConstants) {
             )
                 newCards.push(card);
         }
-        console.log(newCards[0])
+        $scope.cards = newCards;
         $scope.uiGrid.data = newCards;
 
     }
@@ -227,9 +290,9 @@ app.controller('TierCtrl', function($scope, CardData, uiGridConstants) {
     }
 
     for (index in $scope.uiGrid.columnDefs) {
-      var col = $scope.uiGrid.columnDefs[index];
-      col.headerCellTemplate = 'column-header-template.html';
-      col.sortDirectionCycle = [uiGridConstants.ASC, uiGridConstants.DESC];
+        var col = $scope.uiGrid.columnDefs[index];
+        col.headerCellTemplate = 'column-header-template.html';
+        col.sortDirectionCycle = [uiGridConstants.ASC, uiGridConstants.DESC];
     }
 
 
