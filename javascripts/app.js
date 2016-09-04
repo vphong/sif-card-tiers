@@ -145,7 +145,7 @@ app.controller('TierCtrl', function($scope, processCards, CardData, uiGridConsta
         idlz: false
     };
 
-    $scope.cards = processCards(CardData);
+    $scope.cards = CardData;
 
     $scope.toggleBool = function(bool) {
         return !bool

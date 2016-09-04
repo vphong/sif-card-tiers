@@ -27,94 +27,116 @@ def isnumber(s):
         return False
 
 #TODO: make dict of card skill specifications
-# def skillDetails(card):
-#     ## given a card, extract:
-#     # 0. skill type
-#     print("skillDetails()")
-#     skill = {}
-#     skillNums = {}
-#     skill['type'] = card['skill']
-#
-#
-#     # TODO: handle promo skills
-#     # if not skill['type'] == "Perfect Lock" or not skill['type'] == "Healer" or not skill['type'] == "Score Up":
-#     #     return skill
-#
-#
-#     numCount = 0;
-#     skillWords = card['skill_details'].split()
-#     for word in skillWords:
-#
-#         if isnumber(word) and numCount < 1:
-#             # 1. skill activation count
-#             skillNums['activation_count'] = float(word)
-#
-#             # 2. skill activation type
-#             skillNums['activation_type'] = skillWords[skillWords.index(word)+1]
-#
-#             numCount = numCount + 1;
-#
-#         elif isnumber(word) and numCount < 2:
-#             # 3. skill activation value
-#             skillNums['activation_value'] = float(word)
-#
-#         if "%" in word:
-#             # 4. skill activation percentage
-#             skillNums['activation_percent'] = float(word.strip("%")) / 100
-#
-#
-#
-#
-#
-#     ## TODO: and calculate
-#     # 4. score up value w/ and w/o Charm or Heel
-#
-#     #### theoretical 550 note, 125 second song with 85% greats
-#     notesActivation = (550 / skillNums['activation_value']) * skillNums['activation_percent'];
-#
-#     if skill['type'] == "Score Up":
-#
-#         if skillNums['activation_type'] == "perfects":
-#             skill['su'] = notesActivation * .85 * skillNums['activation_value']
-#         elif skillNums['activation_type'] == "time":
-#             skill['su'] = (125 / skillNums['activation_num']) * skillNums['activation_percent'] * skillNums['activation_value']
-#         else: # notes or combo string
-#             skill['su'] = notesActivation * skillNums['activation_value']
-#
-#         skill['su_charm'] = skill['su'] * 2.5;
-#         skill['su_heel'] = 0
-#         skill['pl'] = 0
-#         skill['pl_trick'] = 0
-#         skill['pl_trick_idlz'] = 0
-#         skill['hl'] = 0
-#
-#     elif skill['type'] == "Perfect Lock":
-#         skill['su'] = 0
-#         skill['su_charm'] = 0
-#         skill['su_heel'] = 0
-#         skill['pl'] = notesActivation * skillNums['activation_value']
-#         skill['pl_trick'] = stat_to_mod(card,False) * .25 * notesActivation
-#         skill['pl_trick_idlz'] = stat_to_mod(card,True) * .25 * notesActivation
-#         skill['hl'] = 0
-#
-#     elif skill['type'] == "Healer":
-#         skill['su'] = 0
-#         skill['su_charm'] = 0
-#         skill['pl'] = 0
-#         skill['pl_trick'] = 0
-#         skill['pl_trick_idlz'] = 0
-#         skill['hl'] = notesActivation * skillNums['activation_value']
-#         skill['su_heel'] = skill['hl'] * 270
-#
-#
-#
-#
-#     # 5. perfect lock value
-#
-#     # 6. heal value
-#     print(type(skill))
-#     return skill
-#
+def skillDetails(card):
+    ## given a card, extract:
+    # 0. skill type
+
+    skill = {}
+    skillNums = {}
+    skill['type'] = card['skill']
+    skillType = card['skill']
+    card['skill'] = {}
+    card['skill']['type'] = skillType
+
+
+    if "Charm" in card['skill']['type']:
+        card['skill']['type'] = "Score Up"
+    elif "Yell" in card['skill']['type']:
+        card['skill']['type'] = "Healer"
+    elif "Trick" in card['skill']['type']:
+        card['skill']['type'] = "Perfect Lock"
+
+
+    # TODO: handle promo skills
+
+
+    numCount = 0;
+    skillWords = card['skill_details'].split()
+
+
+    for word in skillWords:
+
+        if "star" in card['skill_details']:
+            # star notes per EX song * 85% perfects
+            skillNums['activation_count'] = 65*.85
+            skillNums['activation_type'] = "star"
+            if isnumber(word):
+                # 3. skill activation value
+                skillNums['activation_value'] = float(word)
+
+            if "%" in word:
+                # 4. skill activation percentage
+                skillNums['activation_percent'] = float(word.strip("%")) / 100
+
+        # elif "Trick" in card['skill']['type']:
+            #print(card['skill_details'])
+        else:
+            if isnumber(word) and numCount < 1:
+                # 1. skill activation count
+                skillNums['activation_count'] = float(word)
+
+                # 2. skill activation type
+                skillNums['activation_type'] = skillWords[skillWords.index(word)+1]
+
+                numCount = numCount + 1;
+
+            elif isnumber(word) and numCount < 2:
+                # 3. skill activation value
+                skillNums['activation_value'] = float(word)
+
+            if "%" in word:
+                # 4. skill activation percentage
+                skillNums['activation_percent'] = float(word.strip("%")) / 100
+
+    ## TODO: and calculate
+    # 4. score up value w/ and w/o Charm or Heel
+
+    #### theoretical 550 note, 125 second song with 85% greats
+
+    notesActivation = (550 / skillNums['activation_value']) * skillNums['activation_percent'];
+
+
+    if skill['type'] == "Score Up":
+
+        if skillNums['activation_type'] == "perfects":
+            card['skill']['su'] = notesActivation * .85 * skillNums['activation_value']
+        elif skillNums['activation_type'] == "time":
+            card['skill']['su'] = (125 / skillNums['activation_num']) * skillNums['activation_percent'] * skillNums['activation_value']
+        else: # notes or combo string
+            card['skill']['su'] = notesActivation * skillNums['activation_value']
+
+        card['skill']['su_charm'] = card['skill']['su'] * 2.5;
+        card['skill']['su_heel'] = 0
+        card['skill']['pl'] = 0
+        card['skill']['pl_trick'] = 0
+        card['skill']['pl_trick_idlz'] = 0
+        card['skill']['hl'] = 0
+
+    elif skill['type'] == "Perfect Lock":
+        card['skill']['su'] = 0
+        card['skill']['su_charm'] = 0
+        card['skill']['su_heel'] = 0
+        card['skill']['pl'] = notesActivation * skillNums['activation_value']
+        card['skill']['pl_trick'] = stat_to_mod(card,False) * .25 * notesActivation
+        card['skill']['pl_trick_idlz'] = stat_to_mod(card,True) * .25 * notesActivation
+        card['skill']['hl'] = 0
+
+    elif skill['type'] == "Healer":
+        card['skill']['su'] = 0
+        card['skill']['su_charm'] = 0
+        card['skill']['pl'] = 0
+        card['skill']['pl_trick'] = 0
+        card['skill']['pl_trick_idlz'] = 0
+        card['skill']['hl'] = notesActivation * skillNums['activation_value']
+        card['skill']['su_heel'] = card['skill']['hl'] * 270
+
+
+    # 5. perfect lock value
+
+    # 6. heal value
+
+
+
 
 
 # calculate stat base cScore and oScore off of
@@ -152,7 +174,7 @@ def oScore(stat):
 
 
 def cleanCard(d, keys):
-    ret = {key: d[key] for key in keys}
+    ret = d #{key: d[key] for key in keys}
 
     # origin
     if ret['event']:
@@ -180,15 +202,7 @@ def cleanCard(d, keys):
     ret['oScore'] = oScore(stat_to_mod(ret,False))
     ret['oScore_idlz'] = oScore(stat_to_mod(ret,True))
 
-    # # skill
-    # ret['skill'] = skillDetails(ret)
-    # #print(ret['skill'])
-    # ret.pop('skill_details',None)
-
-    return ret
-
-def addFullName(card):
-    ret = card
+    # full name
     ret['full_name'] = card['rarity']
     if card['is_promo']:
         ret['full_name'] = ret['full_name'] + " Promo"
@@ -200,7 +214,29 @@ def addFullName(card):
 
     ret['full_name'] = ret['full_name'] + " " + card['name']
 
+    # # skill
+    # ret['skill'] = skillDetails(ret)
+    # #print(ret['skill'])
+    # ret.pop('skill_details',None)
+
     return ret
+
+def addFullName(card):
+
+    if card['translated_collection'] and "Maid" in card['translated_collection']:
+        card['translated_collection'] = "Café Maid"
+
+    card['full_name'] = card['rarity']
+    if card['is_promo']:
+        card['full_name'] = card['full_name'] + " Promo"
+    else:
+        if card['translated_collection']:
+            card['full_name'] = card['full_name'] + " " + card['translated_collection']
+        else:
+            card['full_name'] = card['full_name'] + " Unnamed"
+
+    card['full_name'] = card['full_name'] + " " + card['name']
+
 
 def getJSON(url):
     print("getJSON(): currURL %s" % url)
@@ -216,33 +252,34 @@ def getJSON(url):
 
 ###########
 
-# with open('javascripts/cards','r') as infile:
-#     data = json.loads(infile.read())
-#
-# cards = []
-#
-#
-# for card in data:
-#     #print(card)
-#     cards.append(cleanCard(card, keysNeeded))
+with open('cardsJSON.js','r') as infile:
+    data = json.loads(infile.read())
+
+cards = []
+
+
+for card in data:
+    addFullName(card)
+    skillDetails(card)
+    cards.append(card)
 
 # print(cards)
-data = getJSON(baseURL)
-nextURL = data['next']
-cards = [];
-for card in data['results']:
-    cards.append(cleanCard(card,keysNeeded))
-while nextURL:
-
-    data = getJSON(nextURL)
-    nextURL = data['next']
-    for card in data['results']:
-        cards.append(cleanCard(card,keysNeeded))
-
-    print("len(cards) = %d" % len(cards))
-    print("total cards = %d" % data['count'])
-
-with open('javascripts/cards.js', 'w') as f:
+# data = getJSON(baseURL)
+# nextURL = data['next']
+# cards = [];
+# for card in data['results']:
+#     cards.append(cleanCard(card,keysNeeded))
+# while nextURL:
+#
+#     data = getJSON(nextURL)
+#     nextURL = data['next']
+#     for card in data['results']:
+#         cards.append(cleanCard(card,keysNeeded))
+#
+#     print("len(cards) = %d" % len(cards))
+#     print("total cards = %d" % data['count'])
+#
+with open('cards.js', 'w') as f:
     f.write("app.constant('CardData',\n")
     json.dump(cards,f,sort_keys=True)
     f.write("\n);")
