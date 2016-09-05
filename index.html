@@ -24,7 +24,7 @@
     <body ng-app="tierList">
         <div class="wrapper">
             <header ng-controller="TabCtrl">
-                <h1>SIF Card Tiers</h1>
+                <h1 class="page_header">SIF Card Tiers</h1>
                 <uib-tabset>
                     <uib-tab ng-repeat="t in tabs" heading="{{t.heading}}" select="go(t.route)" active="t.active" ng-style="{'margin-left' : (t.heading=='All Cards') ? '25px' : '5px'}"></uib-tab>
                 </uib-tabset>
@@ -46,6 +46,6 @@
                 </p>
             </footer>
         </div>
-        
+
     </body>
 </html>

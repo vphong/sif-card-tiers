@@ -41,7 +41,6 @@
       </div>
 
       <div class="well">
-        Toggle:
         <ul class="list-inline">
             <li>
                 <button type="button" class="btn btn-primary btn-sm" ng-model="filters.idlz" ng-click="toggleIdlz()" uib-btn-checkbox>Idolized?</button>
@@ -51,7 +50,7 @@
                     <label class="btn btn-primary btn-sm" ng-model="compare.type" ng-click="compareType();filterCards()" uib-btn-radio="'sc'">Scorers</label>
                     <label class="btn btn-primary btn-sm" ng-model="compare.type" ng-click="compareType();filterCards()" uib-btn-radio="'pl'">Perfect Locks</label>
                     <label class="btn btn-primary btn-sm" ng-model="compare.type" ng-click="compareType();filterCards()" uib-btn-radio="'hl'">Healers</label>
-                </div>
+                </div><br>
 
                 <span ng-if="compare.type!='hl'">
                     Toggle School Idol Skill:</br>
