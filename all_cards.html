@@ -1,11 +1,10 @@
 <div ng-controller="TierCtrl">
 
     <div class="well">
-        <pre>card[0] details: {{uiGrid.data[0]|json}}</pre>
         Filter by:
         <ul class="list-inline">
             <li>Server:<br>
-                <div class="btn-group">
+                <div class="btn-group-vertical">
                     <label class="btn btn-primary btn-sm" ng-model="filters.server" ng-click="filterCards()" uib-btn-radio="'jp'">Japan</label>
                     <label class="btn btn-primary btn-sm" ng-model="filters.server" ng-click="filterCards()" uib-btn-radio="'en'">Global</label>
                 </div>
@@ -39,6 +38,9 @@
                 </div>
             </li>
         </ul>
+      </div>
+
+      <div class="well">
         Toggle:
         <ul class="list-inline">
             <li>
@@ -72,4 +74,8 @@
 
 <div ui-grid="uiGrid" ui-grid-pagination class="custom-grid"></div>
 
-<ul uib-pagination total-items="uiGrid.totalItems" items-per-page="uiGrid.paginationPageSize" ng-model="uiGrid.paginationCurrentPage" class="pagination-sm" max-size=10 boundary-link-numbers="true" rotate="false"></ul>
+<center>
+<ul uib-pagination total-items="uiGrid.totalItems" items-per-page="uiGrid.paginationPageSize" ng-model="uiGrid.paginationCurrentPage" class="pagination-sm" max-size=7 boundary-link-numbers="true" rotate="true"></ul>
+</center>
+
+        <pre>card[0] details: {{uiGrid.data[0]|json}}</pre>
