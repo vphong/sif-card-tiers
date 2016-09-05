@@ -102,7 +102,7 @@ def skillDetails(card):
     card['skill']['pl_sis_idlz'] = 0
     card['skill']['hl'] = 0
 
-    if skill['type'] == "Score Up":
+    if card['skill']['type'] == "Score Up":
 
         if skillNums['activation_type'] == "perfects":
             card['skill']['su'] = (550 * .85 / skillNums['activation_count']) * skillNums['activation_percent'] * skillNums['activation_value']
@@ -114,7 +114,7 @@ def skillDetails(card):
         card['skill']['su_sis'] = card['skill']['su'] * 2.5;
 
 
-    elif skill['type'] == "Perfect Lock":
+    elif card['skill']['type'] == "Perfect Lock":
 
         if (skillNums['activation_type']) == "seconds":
             card['skill']['pl'] = timeActivation
@@ -127,7 +127,7 @@ def skillDetails(card):
 
 
 
-    elif skill['type'] == "Healer":
+    elif card['skill']['type'] == "Healer":
 
         if (skillNums['activation_type']) == "seconds":
             card['skill']['hl'] = timeActivation
@@ -140,9 +140,11 @@ def skillDetails(card):
 
     # 6. heal value
 
-    print(card['skill'])
-
-    print("=====")
+    if card['is_promo']:
+        print(card['skill_details'])
+        print(card['skill'])
+        print(skillNums)
+        print("=====")
 
 
 
@@ -213,6 +215,10 @@ def cleanCard(d, keys):
     # full name
     ret['full_name'] = card['rarity']
     if card['is_promo']:
+        ret['non_idolized_maximum_statistics_smile'] = card['idolized_maximum_statistics_smile']
+        ret['non_idolized_maximum_statistics_pure'] = card['idolized_maximum_statistics_pure']
+        ret['non_idolized_maximum_statistics_cool'] = card['idolized_maximum_statistics_cool']
+
         ret['full_name'] = ret['full_name'] + " Promo"
     else:
         if card['translated_collection']:
@@ -221,6 +227,7 @@ def cleanCard(d, keys):
             ret['full_name'] = ret['full_name'] + " Unnamed"
 
     ret['full_name'] = ret['full_name'] + " " + card['name']
+
 
     # # skill
     # ret['skill'] = skillDetails(ret)
@@ -236,6 +243,10 @@ def addFullName(card):
 
     card['full_name'] = card['rarity']
     if card['is_promo']:
+        card['non_idolized_maximum_statistics_smile'] = card['idolized_maximum_statistics_smile']
+        card['non_idolized_maximum_statistics_pure'] = card['idolized_maximum_statistics_pure']
+        card['non_idolized_maximum_statistics_cool'] = card['idolized_maximum_statistics_cool']
+
         card['full_name'] = card['full_name'] + " Promo"
     else:
         if card['translated_collection']:
@@ -260,7 +271,7 @@ def getJSON(url):
 
 ###########
 
-with open('cardsJSON.js','r') as infile:
+with open('javascripts/cardsJSON.js','r') as infile:
     data = json.loads(infile.read())
 
 cards = []
@@ -287,7 +298,7 @@ for card in data:
 #     print("len(cards) = %d" % len(cards))
 #     print("total cards = %d" % data['count'])
 #
-with open('cards.js', 'w') as f:
+with open('javascripts/cards.js', 'w') as f:
     f.write("app.constant('CardData',\n")
     json.dump(cards,f,sort_keys=True)
     f.write("\n);")

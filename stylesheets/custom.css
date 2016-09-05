@@ -1,7 +1,8 @@
 .display-image {
-    width: 50px;
+    width: 70px;
     height: auto;
-    float: left;
+
+    vertical-align: middle !important;
 }
 td {
     vertical-align: middle !important;
@@ -10,9 +11,14 @@ td {
   display: flex;
   justify-content: space-between;
 }
+.btn-group-justified>.btn {
+    white-space: normal !important;
+    word-wrap: normal;
+    overflow: hidden;
+}
 .custom-grid {
   width:100%;
-  height: 56*25
+  height: 605px
 }
 .ui-grid-header {
   padding: 0px
@@ -32,6 +38,9 @@ td {
   background-color: #ffffff;
 }
 .ui-grid-cell .ui-grid-cell-contents {
-  height: 80;
+  height: 100%;
   vertical-align: middle;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }

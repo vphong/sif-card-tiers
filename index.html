@@ -23,14 +23,16 @@
     </head>
     <body ng-app="tierList">
         <div class="wrapper">
-            <header ng-controller="TabCtrl">
+            <header class="container-fluid">
                 <h1 class="page_header">SIF Card Tiers</h1>
-                <uib-tabset>
-                    <uib-tab ng-repeat="t in tabs" heading="{{t.heading}}" select="go(t.route)" active="t.active" ng-style="{'margin-left' : (t.heading=='All Cards') ? '25px' : '5px'}"></uib-tab>
-                </uib-tabset>
 
             </header>
-            <section class="container">
+            <div ng-controller="TabCtrl">
+                <uib-tabset style="margin-bottom: 20px">
+                    <uib-tab ng-repeat="t in tabs" heading="{{t.heading}}" select="go(t.route)" active="t.active" ng-style="{'margin-left' : (t.heading=='All Cards') ? '25px' : '5px'}"></uib-tab>
+                </uib-tabset>
+            </div>
+            <section class="container-fluid">
 
                 <div ui-view bs-loading-overlay></div>
 
