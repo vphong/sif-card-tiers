@@ -1,7 +1,7 @@
 <div ng-controller="TierCtrl">
 
     <div class="well">
-        <!-- <pre>{{gridApi|json}}</pre> -->
+        <pre>card[0] details: {{uiGrid.data[0]|json}}</pre>
         Filter by:
         <ul class="list-inline">
             <li>Server:<br>
@@ -23,39 +23,53 @@
                     <label class="btn btn-primary btn-sm" ng-model="filters.attribute" ng-click="filterCards()" uib-btn-radio="'smile'">Smile</label>
                     <label class="btn btn-primary btn-sm" ng-model="filters.attribute" ng-click="filterCards()" uib-btn-radio="'pure'">Pure</label>
                     <label class="btn btn-primary btn-sm" ng-model="filters.attribute" ng-click="filterCards()" uib-btn-radio="'cool'">Cool</label>
-                </div></li>
+                </div>
+            </li>
             <li>Origin<br>
                 <div class="btn-group">
                     <label class="btn btn-primary btn-sm" ng-model="filters.premium" ng-click="toggleBool(filters.premium);filterCards()" uib-btn-checkbox>Premium</label>
                     <label class="btn btn-primary btn-sm" ng-model="filters.event" ng-click="toggleBool(filters.event);filterCards()" uib-btn-checkbox>Event</label>
                     <label class="btn btn-primary btn-sm" ng-model="filters.promo" ng-click="toggleBool(filters.promo);filterCards()" uib-btn-checkbox>Promo</label>
-                </div></li>
+                </div>
+            </li>
             <li>Idol Group<br>
                 <div class="btn-group">
                     <!-- <label class="btn btn-primary btn-sm" ng-model="filters.muse" ng-click="toggleBool(filters.muse);filterCards()" uib-btn-checkbox>Muse</label>
                     <label class="btn btn-primary btn-sm" ng-model="filters.aqours" ng-click="toggleBool(filters.aqours);filterCards()" uib-btn-checkbox>Aqours</label> -->
-                </div></li>
+                </div>
+            </li>
         </ul>
         Toggle:
         <ul class="list-inline">
             <li>
-                <button class="btn btn-primary btn-sm" type="button" ng-click="idlz()">Idolized?</button>
+                <button type="button" class="btn btn-primary btn-sm" ng-model="filters.idlz" ng-click="toggleIdlz()" uib-btn-checkbox>Idolized?</button>
             </li>
-            <li>Rarity<br>
-                <!-- <div class="btn-group">
-                    <label class="btn btn-primary btn-sm" ng-model="filters.sr" ng-click="updateFilter()" uib-btn-checkbox="true">SR</label>
-                    <label class="btn btn-primary btn-sm" ng-model="filters.ssr" ng-click="updateFilter()" uib-btn-checkbox="true">SSR</label>
-                    <label class="btn btn-primary btn-sm" ng-model="filters.ur" ng-click="updateFilter()" uib-btn-checkbox="true">UR</label>
-                </div> -->
-            </li>
-            <li>Attribute</li>
-            <li>Origin</li>
-            <li>Skill</li>
-            <li>Idol Group</li>
-        </ul>
+            <li>Compare:<br>
+                <div class="btn-group">
+                    <label class="btn btn-primary btn-sm" ng-model="compare.type" ng-click="compareType();filterCards()" uib-btn-radio="'sc'">Scorers</label>
+                    <label class="btn btn-primary btn-sm" ng-model="compare.type" ng-click="compareType();filterCards()" uib-btn-radio="'pl'">Perfect Locks</label>
+                    <label class="btn btn-primary btn-sm" ng-model="compare.type" ng-click="compareType();filterCards()" uib-btn-radio="'hl'">Healers</label>
+                </div>
 
-    </div>
+                <span ng-if="compare.type!='hl'">
+                    Toggle School Idol Skill:</br>
+                <div class="btn-group" ng-if="compare.type=='sc'">
+                    <label class="btn btn-primary btn-sm" ng-model="compare.charm" ng-click="compareType();()" uib-btn-checkbox>Charm</label>
+                    <label class="btn btn-primary btn-sm" ng-model="compare.heel" ng-click="compareType();filterCards()" uib-btn-checkbox>Heel</label>
 
-    <div ui-grid="uiGrid" ui-grid-pagination class="custom-grid"></div>
+                </div>
+                <label class="btn btn-primary btn-sm" ng-if="compare.type=='pl'" ng-model="compare.charm" ng-click="compareType();()" uib-btn-checkbox>Trick</label>
+
+            </span>
+        </li>
+        <li>Attribute</li>
+        <li>Origin</li>
+        <li>Skill</li>
+        <li>Idol Group</li>
+    </ul>
+
+</div>
+
+<div ui-grid="uiGrid" ui-grid-pagination class="custom-grid"></div>
 
 <ul uib-pagination total-items="uiGrid.totalItems" items-per-page="uiGrid.paginationPageSize" ng-model="uiGrid.paginationCurrentPage" class="pagination-sm" max-size=10 boundary-link-numbers="true" rotate="false"></ul>
