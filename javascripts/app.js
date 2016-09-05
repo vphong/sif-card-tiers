@@ -158,7 +158,6 @@ app.controller('TierCtrl', function($scope, processCards, CardData, uiGridConsta
         var filters = $scope.filters;
         var cards = CardData;
 
-        console.log(cards.length)
         var card;
         var newCards = [];
         var len = cards.length;
@@ -182,21 +181,19 @@ app.controller('TierCtrl', function($scope, processCards, CardData, uiGridConsta
                 ((filters.premium && !card.event && !card.is_promo) ||
                     filters.event && card.event || filters.promo && card.is_promo) &&
 
-                ($scope.compare.type == "sc" && card.skill.type ||
-                    $scope.compare.type == "pl" && card.skill.type == "Perfect Lock" ||
-                    $scope.compare.type == "hl" && card.skill.type == "Healer")
+                ($scope.filters.compare == "sc" && card.skill.type ||
+                    $scope.filters.compare == "pl" && card.skill.type == "Perfect Lock" ||
+                    $scope.filters.compare == "hl" && card.skill.type == "Healer")
                 // &&
                 //
                 // (filters.muse && card.main_unit == "Muse" ||
                 //  filters.aqours && card.main_unit == "Aqours")
             ) {
-                console.log("pushing " + card.name)
                 newCards.push(card);
             }
         }
 
         $scope.uiGrid.data = newCards;
-        console.log($scope.uiGrid.data.length)
 
     }
 
@@ -209,7 +206,7 @@ app.controller('TierCtrl', function($scope, processCards, CardData, uiGridConsta
         enablePaginationControls: false,
         enableFiltering: false,
         paginationPageSize: 25,
-        rowHeight: 55,
+        rowHeight: 100,
         columnDefs: [{
                 displayName: 'ID',
                 width: 40,
@@ -220,6 +217,7 @@ app.controller('TierCtrl', function($scope, processCards, CardData, uiGridConsta
                 minWidth: 150,
                 enableFiltering: true,
                 displayName: 'Card Name',
+                cellTemplate: 'card-name-cell-template.html'
             }, {
                 field: 'translated_collection',
                 visible: false,
@@ -290,13 +288,34 @@ app.controller('TierCtrl', function($scope, processCards, CardData, uiGridConsta
                 field: 'skill.su',
                 visible: true,
             }, {
+                displayName: 'Score Up w/ SIS',
+                field: 'skill.su_sis',
+                visible: true,
+            }, {
                 displayName: 'PL Time',
                 field: 'skill.pl',
+                visible: false,
+            }, {
+                displayName: 'SIS Trick Bonus',
+                field: 'skill.pl',
+                visible: false,
+            }, {
+                displayName: 'SIS Trick Bonus',
+                field: 'skill.pl_idlz',
                 visible: false,
             }, {
                 displayName: 'Healing',
                 field: 'skill.hl',
                 visible: false,
+            }, {
+              field: 'website_url',
+              width: 0
+            }, {
+              field: 'round_card_image',
+              width: 0
+            }, {
+              field: 'round_card_idolized_image',
+              width: 0
             }
 
         ],
@@ -330,24 +349,25 @@ app.controller('TierCtrl', function($scope, processCards, CardData, uiGridConsta
 
     }
 
-    $scope.compare = {
-        type: "sc"
-    }
+    $scope.filters.compare = "sc"
     $scope.compareType = function() {
-        if ($scope.compare.type == "sc") {
+        if ($scope.filters.compare == "sc") {
             $scope.uiGrid.columnDefs[16].visible = true;
-            $scope.uiGrid.columnDefs[17].visible = false;
-            $scope.uiGrid.columnDefs[18].visible = false;
-
-        } else if ($scope.compare.type == "pl") {
-
-            $scope.uiGrid.columnDefs[16].visible = false;
             $scope.uiGrid.columnDefs[17].visible = true;
             $scope.uiGrid.columnDefs[18].visible = false;
-        } else {
+            $scope.uiGrid.columnDefs[19].visible = false;
+
+        } else if ($scope.filters.compare == "pl") {
+
             $scope.uiGrid.columnDefs[16].visible = false;
             $scope.uiGrid.columnDefs[17].visible = false;
             $scope.uiGrid.columnDefs[18].visible = true;
+            $scope.uiGrid.columnDefs[19].visible = false;
+        } else {
+            $scope.uiGrid.columnDefs[16].visible = false;
+            $scope.uiGrid.columnDefs[17].visible = false;
+            $scope.uiGrid.columnDefs[18].visible = false;
+            $scope.uiGrid.columnDefs[19].visible = true;
 
         }
 

@@ -76,7 +76,7 @@ def skillDetails(card):
                 skillNums['activation_count'] = float(word)
 
                 # 2. skill activation type
-                skillNums['activation_type'] = skillWords[skillWords.index(word)+1]
+                skillNums['activation_type'] = skillWords[skillWords.index(word)+1].strip(',')
 
                 numCount = numCount + 1;
 
@@ -93,48 +93,56 @@ def skillDetails(card):
 
     #### theoretical 550 note, 125 second song with 85% greats
 
-    notesActivation = (550 / skillNums['activation_value']) * skillNums['activation_percent'];
+    timeActivation = (125 / skillNums['activation_count']) * skillNums['activation_percent'] * skillNums['activation_value']
 
+    card['skill']['su'] = 0
+    card['skill']['su_sis'] = 0
+    card['skill']['pl'] = 0
+    card['skill']['pl_sis'] = 0
+    card['skill']['pl_sis_idlz'] = 0
+    card['skill']['hl'] = 0
 
     if skill['type'] == "Score Up":
 
         if skillNums['activation_type'] == "perfects":
-            card['skill']['su'] = notesActivation * .85 * skillNums['activation_value']
-        elif skillNums['activation_type'] == "time":
-            card['skill']['su'] = (125 / skillNums['activation_num']) * skillNums['activation_percent'] * skillNums['activation_value']
+            card['skill']['su'] = (550 * .85 / skillNums['activation_count']) * skillNums['activation_percent'] * skillNums['activation_value']
+        elif skillNums['activation_type'] == "seconds":
+            card['skill']['su'] = timeActivation
         else: # notes or combo string
-            card['skill']['su'] = notesActivation * skillNums['activation_value']
+            card['skill']['su'] = (550 / skillNums['activation_count']) * skillNums['activation_percent'] * skillNums['activation_value']
 
-        card['skill']['su_charm'] = card['skill']['su'] * 2.5;
-        card['skill']['su_heel'] = 0
-        card['skill']['pl'] = 0
-        card['skill']['pl_trick'] = 0
-        card['skill']['pl_trick_idlz'] = 0
-        card['skill']['hl'] = 0
+        card['skill']['su_sis'] = card['skill']['su'] * 2.5;
+
 
     elif skill['type'] == "Perfect Lock":
-        card['skill']['su'] = 0
-        card['skill']['su_charm'] = 0
-        card['skill']['su_heel'] = 0
-        card['skill']['pl'] = notesActivation * skillNums['activation_value']
-        card['skill']['pl_trick'] = stat_to_mod(card,False) * .25 * notesActivation
-        card['skill']['pl_trick_idlz'] = stat_to_mod(card,True) * .25 * notesActivation
-        card['skill']['hl'] = 0
+
+        if (skillNums['activation_type']) == "seconds":
+            card['skill']['pl'] = timeActivation
+            card['skill']['pl_sis'] = stat_to_mod(card,False) * .25 * (125 / skillNums['activation_count']) * skillNums['activation_percent']
+            card['skill']['pl_sis_idlz'] = stat_to_mod(card,True) * .25 * (125 / skillNums['activation_count']) * skillNums['activation_percent']
+        else: # notes or combo
+            card['skill']['pl'] = (550 / skillNums['activation_count']) * skillNums['activation_percent'] * skillNums['activation_value']
+            card['skill']['pl_sis'] = stat_to_mod(card,False) * .25 * (550 / skillNums['activation_count']) * skillNums['activation_percent']
+            card['skill']['pl_sis_idlz'] = stat_to_mod(card,True) * .25 * (550 / skillNums['activation_count']) * skillNums['activation_percent']
+
+
 
     elif skill['type'] == "Healer":
-        card['skill']['su'] = 0
-        card['skill']['su_charm'] = 0
-        card['skill']['pl'] = 0
-        card['skill']['pl_trick'] = 0
-        card['skill']['pl_trick_idlz'] = 0
-        card['skill']['hl'] = notesActivation * skillNums['activation_value']
-        card['skill']['su_heel'] = card['skill']['hl'] * 270
 
+        if (skillNums['activation_type']) == "seconds":
+            card['skill']['hl'] = timeActivation
+        else: # notes or combo
+            card['skill']['hl'] = (550 / skillNums['activation_count']) * skillNums['activation_percent'] * skillNums['activation_value']
+
+        card['skill']['su_sis'] = card['skill']['hl'] * 270
 
     # 5. perfect lock value
 
     # 6. heal value
 
+    print(card['skill'])
+
+    print("=====")
 
 
 

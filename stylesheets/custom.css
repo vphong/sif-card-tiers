@@ -1,5 +1,5 @@
 .display-image {
-    width: 80px;
+    width: 50px;
     height: auto;
     float: left;
 }
@@ -32,6 +32,6 @@ td {
   background-color: #ffffff;
 }
 .ui-grid-cell .ui-grid-cell-contents {
-  height: 55;
+  height: 80;
   vertical-align: middle;
 }
