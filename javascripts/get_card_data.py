@@ -4,20 +4,21 @@ import json
 
 baseURL = "http://schoolido.lu/api/cards/?ordering=-id&is_special=False&page_size=100&rarity=SR%2CSSR%2CUR"
 
-keysNeeded = ["skill_details", "attribute", "japan_only","is_promo","event",
-                "skill","idol","rarity", "idolized_maximum_statistics_cool",
-                "idolized_maximum_statistics_smile","idolized_maximum_statistics_pure",
-                "non_idolized_maximum_statistics_pure", "non_idolized_maximum_statistics_cool",
-                "non_idolized_maximum_statistics_smile","translated_collection","website_url",
-                "round_card_idolized_image","round_card_image","id"]
+keysNeeded = ["skill_details", "attribute", "japan_only", "is_promo", "event",
+              "skill", "idol", "rarity", "idolized_maximum_statistics_cool",
+              "idolized_maximum_statistics_smile", "idolized_maximum_statistics_pure",
+              "non_idolized_maximum_statistics_pure", "non_idolized_maximum_statistics_cool",
+              "non_idolized_maximum_statistics_smile", "translated_collection", "website_url",
+              "round_card_idolized_image", "round_card_image", "id"]
 
 aqours = ["Ohara Mari", "Kurosawa Dia", "Matsuura Kanan",
-            "Takami Chika", "Sakurauchi Riko", "Watanabe You",
-            "Kunikida Hanamaru", "Kurosawa Ruby", "Tsushima Yoshiko"]
+          "Takami Chika", "Sakurauchi Riko", "Watanabe You",
+          "Kunikida Hanamaru", "Kurosawa Ruby", "Tsushima Yoshiko"]
 
 muse = ["Toujou Nozomi", "Ayase Eli", "Yazawa Nico",
-            "Kousaka Honoka", "Minami Kotori", "Sonoda Umi",
-            "Hoshizora Rin", "Nishikino Maki", "Koizumi Hanayo"]
+        "Kousaka Honoka", "Minami Kotori", "Sonoda Umi",
+        "Hoshizora Rin", "Nishikino Maki", "Koizumi Hanayo"]
+
 
 def isnumber(s):
     try:
@@ -26,9 +27,11 @@ def isnumber(s):
     except ValueError:
         return False
 
-#TODO: make dict of card skill specifications
+# TODO: make dict of card skill specifications
+
+
 def skillDetails(card):
-    ## given a card, extract:
+    # given a card, extract:
     # 0. skill type
 
     skill = {}
@@ -38,7 +41,6 @@ def skillDetails(card):
     card['skill'] = {}
     card['skill']['type'] = skillType
 
-
     if "Charm" in card['skill']['type']:
         card['skill']['type'] = "Score Up"
     elif "Yell" in card['skill']['type']:
@@ -46,19 +48,16 @@ def skillDetails(card):
     elif "Trick" in card['skill']['type']:
         card['skill']['type'] = "Perfect Lock"
 
-
     # TODO: handle promo skills
 
-
-    numCount = 0;
+    numCount = 0
     skillWords = card['skill_details'].split()
-
 
     for word in skillWords:
 
         if "star" in card['skill_details']:
             # star notes per EX song * 85% perfects
-            skillNums['activation_count'] = 65*.85
+            skillNums['activation_count'] = 65 * .85
             skillNums['activation_type'] = "star"
             if isnumber(word):
                 # 3. skill activation value
@@ -69,16 +68,17 @@ def skillDetails(card):
                 skillNums['activation_percent'] = float(word.strip("%")) / 100
 
         # elif "Trick" in card['skill']['type']:
-            #print(card['skill_details'])
+            # print(card['skill_details'])
         else:
             if isnumber(word) and numCount < 1:
                 # 1. skill activation count
                 skillNums['activation_count'] = float(word)
 
                 # 2. skill activation type
-                skillNums['activation_type'] = skillWords[skillWords.index(word)+1].strip(',')
+                skillNums['activation_type'] = skillWords[
+                    skillWords.index(word) + 1].strip(',')
 
-                numCount = numCount + 1;
+                numCount = numCount + 1
 
             elif isnumber(word) and numCount < 2:
                 # 3. skill activation value
@@ -88,12 +88,13 @@ def skillDetails(card):
                 # 4. skill activation percentage
                 skillNums['activation_percent'] = float(word.strip("%")) / 100
 
-    ## TODO: and calculate
+    # TODO: and calculate
     # 4. score up value w/ and w/o Charm or Heel
 
-    #### theoretical 550 note, 125 second song with 85% greats
+    # theoretical 550 note, 125 second song with 85% greats
 
-    timeActivation = (125 / skillNums['activation_count']) * skillNums['activation_percent'] * skillNums['activation_value']
+    timeActivation = (125 / skillNums['activation_count']) * skillNums[
+        'activation_percent'] * skillNums['activation_value']
 
     card['skill']['su'] = 0
     card['skill']['su_sis'] = 0
@@ -105,34 +106,39 @@ def skillDetails(card):
     if card['skill']['type'] == "Score Up":
 
         if skillNums['activation_type'] == "perfects":
-            card['skill']['su'] = (550 * .85 / skillNums['activation_count']) * skillNums['activation_percent'] * skillNums['activation_value']
+            card['skill']['su'] = (550 * .85 / skillNums['activation_count']) * skillNums[
+                'activation_percent'] * skillNums['activation_value']
         elif skillNums['activation_type'] == "seconds":
             card['skill']['su'] = timeActivation
-        else: # notes or combo string
-            card['skill']['su'] = (550 / skillNums['activation_count']) * skillNums['activation_percent'] * skillNums['activation_value']
+        else:  # notes or combo string
+            card['skill']['su'] = (550 / skillNums['activation_count']) * \
+                skillNums['activation_percent'] * skillNums['activation_value']
 
-        card['skill']['su_sis'] = card['skill']['su'] * 2.5;
-
+        card['skill']['su_sis'] = card['skill']['su'] * 2.5
 
     elif card['skill']['type'] == "Perfect Lock":
 
         if (skillNums['activation_type']) == "seconds":
             card['skill']['pl'] = timeActivation
-            card['skill']['pl_sis'] = stat_to_mod(card,False) * .25 * (125 / skillNums['activation_count']) * skillNums['activation_percent']
-            card['skill']['pl_sis_idlz'] = stat_to_mod(card,True) * .25 * (125 / skillNums['activation_count']) * skillNums['activation_percent']
-        else: # notes or combo
-            card['skill']['pl'] = (550 / skillNums['activation_count']) * skillNums['activation_percent'] * skillNums['activation_value']
-            card['skill']['pl_sis'] = stat_to_mod(card,False) * .25 * (550 / skillNums['activation_count']) * skillNums['activation_percent']
-            card['skill']['pl_sis_idlz'] = stat_to_mod(card,True) * .25 * (550 / skillNums['activation_count']) * skillNums['activation_percent']
-
-
+            card['skill']['pl_sis'] = stat_to_mod(
+                card, False) * .25 * (125 / skillNums['activation_count']) * skillNums['activation_percent']
+            card['skill']['pl_sis_idlz'] = stat_to_mod(
+                card, True) * .25 * (125 / skillNums['activation_count']) * skillNums['activation_percent']
+        else:  # notes or combo
+            card['skill']['pl'] = (550 / skillNums['activation_count']) * \
+                skillNums['activation_percent'] * skillNums['activation_value']
+            card['skill']['pl_sis'] = stat_to_mod(
+                card, False) * .25 * (550 / skillNums['activation_count']) * skillNums['activation_percent']
+            card['skill']['pl_sis_idlz'] = stat_to_mod(
+                card, True) * .25 * (550 / skillNums['activation_count']) * skillNums['activation_percent']
 
     elif card['skill']['type'] == "Healer":
 
         if (skillNums['activation_type']) == "seconds":
             card['skill']['hl'] = timeActivation
-        else: # notes or combo
-            card['skill']['hl'] = (550 / skillNums['activation_count']) * skillNums['activation_percent'] * skillNums['activation_value']
+        else:  # notes or combo
+            card['skill']['hl'] = (550 / skillNums['activation_count']) * \
+                skillNums['activation_percent'] * skillNums['activation_value']
 
         card['skill']['su_sis'] = card['skill']['hl'] * 270
 
@@ -147,44 +153,43 @@ def skillDetails(card):
         print("=====")
 
 
-
-
 # calculate stat base cScore and oScore off of
 # input: dict card, bool idlz, bool trick
 def stat_to_mod(card, idlz):
 
     if card['attribute'] == "Pure" and idlz:
-        stat = card['idolized_maximum_statistics_pure'];
+        stat = card['idolized_maximum_statistics_pure']
     elif (not idlz) and card['attribute'] == "Pure":
-        stat = card['non_idolized_maximum_statistics_pure'];
+        stat = card['non_idolized_maximum_statistics_pure']
     elif idlz and card['attribute'] == "Smile":
-        stat = card['idolized_maximum_statistics_smile'];
+        stat = card['idolized_maximum_statistics_smile']
     elif (not idlz) and card['attribute'] == "Smile":
-        stat = card['non_idolized_maximum_statistics_smile'];
+        stat = card['non_idolized_maximum_statistics_smile']
     elif idlz and card['attribute'] == "Cool":
-        stat = card['idolized_maximum_statistics_cool'];
+        stat = card['idolized_maximum_statistics_cool']
     elif (not idlz) and card['attribute'] == "Cool":
-        stat = card['non_idolized_maximum_statistics_cool'];
-
+        stat = card['non_idolized_maximum_statistics_cool']
 
     if idlz and card['rarity'] == "UR":
-        stat += 1000;
+        stat += 1000
     elif (not idlz) and (card['rarity'] == "UR" or idlz and card['rarity'] == "SR"):
-        stat += 500;
+        stat += 500
     elif (not idlz) and card['rarity'] == "SR":
-        stat += 250;
+        stat += 250
 
-    return stat;
+    return stat
+
 
 def cScore(stat):
     return stat + (stat * (.09 + .03)) * 2
+
 
 def oScore(stat):
     return stat + (stat * (.09 + .06)) * 2
 
 
 def cleanCard(d, keys):
-    ret = d #{key: d[key] for key in keys}
+    ret = d  # {key: d[key] for key in keys}
 
     # origin
     if ret['event']:
@@ -204,30 +209,33 @@ def cleanCard(d, keys):
     else:
         ret['main_unit'] = "error"
 
-    ret.pop('idol',None)
+    ret.pop('idol', None)
 
     # stats/scores
-    ret['cScore'] = cScore(stat_to_mod(ret,False))
-    ret['cScore_idlz'] = cScore(stat_to_mod(ret,True))
-    ret['oScore'] = oScore(stat_to_mod(ret,False))
-    ret['oScore_idlz'] = oScore(stat_to_mod(ret,True))
+    ret['cScore'] = cScore(stat_to_mod(ret, False))
+    ret['cScore_idlz'] = cScore(stat_to_mod(ret, True))
+    ret['oScore'] = oScore(stat_to_mod(ret, False))
+    ret['oScore_idlz'] = oScore(stat_to_mod(ret, True))
 
     # full name
     ret['full_name'] = card['rarity']
     if card['is_promo']:
-        ret['non_idolized_maximum_statistics_smile'] = card['idolized_maximum_statistics_smile']
-        ret['non_idolized_maximum_statistics_pure'] = card['idolized_maximum_statistics_pure']
-        ret['non_idolized_maximum_statistics_cool'] = card['idolized_maximum_statistics_cool']
+        ret['non_idolized_maximum_statistics_smile'] = card[
+            'idolized_maximum_statistics_smile']
+        ret['non_idolized_maximum_statistics_pure'] = card[
+            'idolized_maximum_statistics_pure']
+        ret['non_idolized_maximum_statistics_cool'] = card[
+            'idolized_maximum_statistics_cool']
 
         ret['full_name'] = ret['full_name'] + " Promo"
     else:
         if card['translated_collection']:
-            ret['full_name'] = ret['full_name'] + " " + card['translated_collection']
+            ret['full_name'] = ret['full_name'] + \
+                " " + card['translated_collection']
         else:
             ret['full_name'] = ret['full_name'] + " Unnamed"
 
     ret['full_name'] = ret['full_name'] + " " + card['name']
-
 
     # # skill
     # ret['skill'] = skillDetails(ret)
@@ -236,6 +244,7 @@ def cleanCard(d, keys):
 
     return ret
 
+
 def addFullName(card):
 
     if card['translated_collection'] and "Maid" in card['translated_collection']:
@@ -243,14 +252,18 @@ def addFullName(card):
 
     card['full_name'] = card['rarity']
     if card['is_promo']:
-        card['non_idolized_maximum_statistics_smile'] = card['idolized_maximum_statistics_smile']
-        card['non_idolized_maximum_statistics_pure'] = card['idolized_maximum_statistics_pure']
-        card['non_idolized_maximum_statistics_cool'] = card['idolized_maximum_statistics_cool']
+        card['non_idolized_maximum_statistics_smile'] = card[
+            'idolized_maximum_statistics_smile']
+        card['non_idolized_maximum_statistics_pure'] = card[
+            'idolized_maximum_statistics_pure']
+        card['non_idolized_maximum_statistics_cool'] = card[
+            'idolized_maximum_statistics_cool']
 
         card['full_name'] = card['full_name'] + " Promo"
     else:
         if card['translated_collection']:
-            card['full_name'] = card['full_name'] + " " + card['translated_collection']
+            card['full_name'] = card['full_name'] + \
+                " " + card['translated_collection']
         else:
             card['full_name'] = card['full_name'] + " Unnamed"
 
@@ -268,10 +281,9 @@ def getJSON(url):
     return data
 
 
-
 ###########
 
-with open('javascripts/cardsJSON.js','r') as infile:
+with open('javascripts/cardsJSON.js', 'r') as infile:
     data = json.loads(infile.read())
 
 cards = []
@@ -300,9 +312,8 @@ for card in data:
 #
 with open('javascripts/cards.js', 'w') as f:
     f.write("app.constant('CardData',\n")
-    json.dump(cards,f,sort_keys=True)
+    json.dump(cards, f, sort_keys=True)
     f.write("\n);")
-
 
 
 # while (nextURL):
