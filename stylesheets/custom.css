@@ -1,15 +1,14 @@
 .display-image {
     width: 70px;
     height: auto;
-
     vertical-align: middle !important;
 }
 td {
     vertical-align: middle !important;
 }
 .list-inline {
-  display: flex;
-  justify-content: space-between;
+    display: flex;
+    justify-content: space-between;
 }
 .btn-group-justified>.btn {
     white-space: normal !important;
@@ -17,30 +16,55 @@ td {
     overflow: hidden;
 }
 .custom-grid {
-  width:100%;
-  height: 605px
+    width: 100%;
+    height: 605px
 }
 .ui-grid-header {
-  padding: 0px
+    padding: 0px
 }
 .ui-grid-header-cell {
-  vertical-align: bottom;
-  border: 0px;
-  border-bottom: 2px solid #dfd7ca;
+    vertical-align: bottom;
+    border: 0px;
+    border-bottom: 2px solid #dfd7ca;
 }
 .ui-grid-header-cell:hover {
-  border-right: 0px
+    border-right: 0px
 }
 .ui-grid-row:nth-child(odd) .ui-grid-cell {
-  background-color: #f8f5f0;
+    background-color: #f8f5f0;
 }
 .ui-grid-row:nth-child(even) .ui-grid-cell {
-  background-color: #ffffff;
+    background-color: #ffffff;
 }
 .ui-grid-cell .ui-grid-cell-contents {
-  height: 100%;
-  vertical-align: middle;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
+    height: 100%;
+    vertical-align: middle;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.ui-grid-filter-container {
+    display: none!important;
+}
+@font-face {
+    font-family: 'Glyphicons Halflings';
+    src: url('../fonts/glyphicons-halflings-regular.eot');
+    src: url('../fonts/glyphicons-halflings-regular.eot?#iefix') format('embedded-opentype'), url('../fonts/glyphicons-halflings-regular.woff2') format('woff2'), url('../fonts/glyphicons-halflings-regular.woff') format('woff'), url('../fonts/glyphicons-halflings-regular.ttf') format('truetype'), url('../fonts/glyphicons-halflings-regular.svg#glyphicons_halflingsregular') format('svg');
+}
+.ui-grid-icon-sort-alt-up, .ui-grid-icon-sort-alt-down {
+    position: relative;
+    top: 1px;
+    display: inline-block;
+    font-family: "Glyphicons Halflings";
+    font-style: normal;
+    font-weight: 400;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+.ui-grid-icon-sort-alt-up:before {
+    content: '\e113';
+}
+.ui-grid-icon-sort-alt-down:before {
+    content: '\e114';
 }

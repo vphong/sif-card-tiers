@@ -121,46 +121,8 @@ app.factory('processCards', function() {
 
 });
 
-app.controller('NavCtrl', function($scope) {
-
-    $scope.tree = [{
-        name: "States",
-        link: "#",
-        subtree: [{
-            name: "state 1",
-            link: "state1"
-        }, {
-            name: "state 2",
-            link: "state2"
-        }]
-    }, {
-        name: "No states",
-        link: "#",
-        subtree: [{
-            name: "no state connected",
-            link: "#"
-        }]
-    }]
-});
-
-app.controller('TierCtrl', function($scope, processCards, CardData, uiGridConstants) {
-    $scope.filters = {
-        server: 'jp',
-        attribute: 'all',
-        sr: true,
-        ssr: true,
-        ur: true,
-        premium: true,
-        event: true,
-        promo: true,
-        sc: true,
-        pl: true,
-        hl: true,
-        muse: true,
-        aqours: false,
-        idlz: false
-    };
-
+app.controller('TierCtrl', function($rootScope, $scope, processCards, uiGridConstants, $filter) {
+    $scope.filters = $rootScope.InitFilters;
 
     $scope.toggleBool = function(bool) {
         return !bool
@@ -172,7 +134,7 @@ app.controller('TierCtrl', function($scope, processCards, CardData, uiGridConsta
 
     $scope.filterCards = function() {
         var filters = $scope.filters;
-        var cards = CardData;
+        var cards = $rootScope.Cards;
 
         var card;
         var newCards = [];
@@ -220,7 +182,7 @@ app.controller('TierCtrl', function($scope, processCards, CardData, uiGridConsta
         enableSorting: true,
         enableColumnMenus: false,
         enablePaginationControls: false,
-        enableFiltering: false,
+        enableFiltering: true,
         paginationPageSize: 25,
         rowHeight: 80,
         columnDefs: [{
@@ -308,7 +270,7 @@ app.controller('TierCtrl', function($scope, processCards, CardData, uiGridConsta
                 width: 80,
                 cellFilter: 'number:2'
             }, {
-                displayName: 'Score Up w/ SIS',
+                displayName: 'SU w/ SIS',
                 field: 'skill.su_sis',
                 visible: true,
                 width: 80,
@@ -320,19 +282,19 @@ app.controller('TierCtrl', function($scope, processCards, CardData, uiGridConsta
                 width: 80,
                 cellFilter: 'number:2'
             }, {
-                displayName: 'SIS Trick Bonus',
+                displayName: 'SIS Stat Bonus',
                 field: 'skill.pl_sis',
                 visible: false,
                 width: 80,
                 cellFilter: 'number:2'
             }, {
-                displayName: 'SIS Trick Bonus',
+                displayName: 'SIS Stat Bonus',
                 field: 'skill.pl_sis_idlz',
                 visible: false,
                 width: 80,
                 cellFilter: 'number:2'
             }, {
-                displayName: 'Healing',
+                displayName: 'Avg Heal',
                 field: 'skill.hl',
                 visible: false,
                 width: 80,
@@ -351,13 +313,14 @@ app.controller('TierCtrl', function($scope, processCards, CardData, uiGridConsta
         ],
         onRegisterApi: function(gridApi) {
             $scope.gridApi = gridApi;
+            $scope.gridApi.grid.registerRowsProcessor($scope.singleFilter, 200);
         },
-        data: CardData
+        data: $rootScope.Cards
     }
 
     for (index in $scope.uiGrid.columnDefs) {
         var col = $scope.uiGrid.columnDefs[index];
-        col.headerCellTemplate = 'column-header-template.html';
+        // col.headerCellTemplate = 'column-header-template.html';
         col.sortDirectionCycle = [uiGridConstants.ASC, uiGridConstants.DESC];
     }
 
@@ -388,7 +351,6 @@ app.controller('TierCtrl', function($scope, processCards, CardData, uiGridConsta
         return $scope.filters.idlz
     }
 
-    $scope.filters.compare = "sc"
     $scope.compareType = function() {
         if ($scope.filters.compare == "sc") {
             $scope.uiGrid.columnDefs[15].visible = true;
@@ -420,6 +382,10 @@ app.controller('TierCtrl', function($scope, processCards, CardData, uiGridConsta
         $scope.gridApi.core.notifyDataChange(uiGridConstants.dataChange.ALL);
 
     }
+    $scope.refreshData = function() {
+
+        $scope.gridApi.grid.refresh();
+    };
 });
 
 app.controller('UserCtrl', function($scope, $filter, Cards) {

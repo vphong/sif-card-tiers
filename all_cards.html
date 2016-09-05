@@ -1,5 +1,5 @@
 <div ng-controller="TierCtrl">
-
+    <pre>todo: filter or search by subunit/year; localstorage; fix trick view; load idlz imgs properly</pre>
     <pre>filters: {{filters}}</pre>
     <div class="panel panel-default">
         <div class="panel-heading" ng-init="collapse=false" ng-click="collapse = !collapse">Filters</div>
@@ -57,10 +57,17 @@
         </div>
     </div>
 
+    <div class="input-group">
+        <span class="input-group-addon">
+            <i class="glyphicon glyphicon-search"></i>
+        </span>
+        <input type="text" class="form-control" ng-model="gridApi.grid.columns[1].filters[0].term" placeholder="search by card name"  uib-typeahead="state for state in Typehead | filter:$viewValue | limitTo:8">
+    </div>
+
     <div ui-grid="uiGrid" ui-grid-pagination class="custom-grid"></div>
 
     <center>
-        <ul uib-pagination total-items="uiGrid.totalItems" items-per-page="uiGrid.paginationPageSize" ng-model="uiGrid.paginationCurrentPage" class="pagination-sm" max-size=7 boundary-link-numbers="true" rotate="true"></ul>
+        <ul uib-pagination total-items="uiGrid.totalItems" items-per-page="uiGrid.paginationPageSize" ng-model="uiGrid.paginationCurrentPage" class="pagination" max-size=3 boundary-link-numbers="true" rotate="true"></ul>
     </center>
 
     <pre>card[0] details: {{uiGrid.data[0]|json}}</pre>
