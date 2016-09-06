@@ -14,6 +14,7 @@ app.config(function($stateProvider, $urlRouterProvider) {
     $stateProvider
         .state("all", {
             url: "/",
+            controller: 'TierCtrl',
             templateUrl: "all_cards.html",
         })
 
@@ -121,36 +122,11 @@ app.factory('processCards', function() {
 
 });
 
-app.controller('TierCtrl', function($rootScope, $scope, processCards, uiGridConstants, $filter) {
+app.controller('TierCtrl', function($rootScope, $scope, localStorageService, processCards, uiGridConstants, $filter) {
     $scope.filters = $rootScope.InitFilters;
     $scope.headers = $rootScope.TableHeaders;
-    $scope.cards = $rootScope.Cards;
-    $scope.pag = {
-        curr: 1,
-        perPage: 20,
-        pageItems: []
-    }
-
-    $scope.groupToPages = function() {
-        $scope.pag.pageItems = [];
-
-        for (var i = 0; i < $scope.cards.length; i++) {
-            if (i % $scope.pag.perPage === 0) {
-                $scope.pag.pageItems[Math.floor(i / $scope.pag.perPage)] = [$scope.cards[i]];
-            } else {
-                $scope.pag.pageItems[Math.floor(i / $scope.pag.perPage)].push($scope.cards[i]);
-            }
-        }
-    };
-    $scope.groupToPages();
-
-    $scope.toggleBool = function(bool) {
-        return !bool
-    }
-
-    var getIdlz = function() {
-        return $scope.filters.idlz
-    }
+    $scope.cards = localStorageService.get('cards');
+    if (!$scope.cards) $scope.cards = $rootScope.Cards;
 
     $scope.filterCards = function() {
         var filters = $scope.filters;
@@ -193,21 +169,50 @@ app.controller('TierCtrl', function($rootScope, $scope, processCards, uiGridCons
         }
 
         $scope.cards = newCards;
-        $scope.groupToPages();
-
+        localStorageService.set('cards', $scope.cards);
     }
 
+    $scope.collapse = localStorageService.get('collapse');
+    $scope.collapsing = function() {
+        $scope.collapse = !$scope.collapse;
+        localStorageService.set('collapse', $scope.collapse)
+    };
 
 
-    $scope.toggleIdlz = function() {}
+    $scope.sort = {
+        type: 'cScore',
+        desc: true,
+    }
+    $scope.sortBy = function(type) {
+        $scope.sort.desc = ($scope.sort.type != type) ? true : !$scope.sort.desc;
+        $scope.sort.type = type;
 
-    $scope.compareType = function() {
-        if ($scope.filters.compare == "sc") {
-
-        } else if ($scope.filters.compare == "pl") {
-
-        } else {}
-
+        if (type == 'smile' && $scope.filters.idlz) {
+            $scope.sort.type = "idolized_maximum_statistics_smile";
+            $scope.sort.gen = "smile";
+            console.log("enter if")
+        } else if (type == 'smile' && !$scope.filters.idlz) {
+            $scope.sort.type = "non_idolized_maximum_statistics_smile";
+            $scope.sort.gen = "smile";
+        } else if (type == 'pure' && $scope.filters.idlz) {
+            $scope.sort.type = "idolized_maximum_statistics_pure"
+            $scope.sort.gen = "pure";
+        } else if (type == 'pure' && !$scope.filters.idlz) {
+            $scope.sort.type = "non_idolized_maximum_statistics_pure"
+            $scope.sort.gen = "pure";
+        } else if (type == 'cool' && $scope.filters.idlz) {
+            $scope.sort.type = "idolized_maximum_statistics_smile"
+            $scope.sort.gen = "cool";
+        } else if (type == 'cool' && !$scope.filters.idlz) {
+            $scope.sort.type = "non_idolized_maximum_statistics_smile"
+            $scope.sort.gen = "cool";
+        } else if (type == 'su')
+{}
+         else {
+            $scope.sort.gen = "";
+            $scope.sort.type = type;
+        }
+        localStorageService.set('sort', $scope.sort)
     }
 
 });

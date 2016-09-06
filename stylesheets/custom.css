@@ -3,6 +3,17 @@
     height: auto;
     vertical-align: middle !important;
 }
+.name-display {
+  min-width: 70px;
+  max-width: 200px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.num-header {
+  max-width: 80px;
+  cursor: pointer
+}
 td {
     vertical-align: middle !important;
 }
