@@ -41,6 +41,9 @@ def skillDetails(card):
     card['skill'] = {}
     card['skill']['type'] = skillType
 
+    if card['full_name'] == "SR Land of Fairies Sonoda Umi":
+        card['skill_details'] = "For every 25 notes, there is a 35% chance stamina gets recovered by 3."
+
     if "Charm" in card['skill']['type']:
         card['skill']['type'] = "Score Up"
     elif "Yell" in card['skill']['type']:
@@ -146,7 +149,7 @@ def skillDetails(card):
 
     # 6. heal value
 
-    if card['is_promo']:
+    if card['full_name'] == "SR Land of Fairies Sonoda Umi":
         print(card['skill_details'])
         print(card['skill'])
         print(skillNums)
@@ -283,7 +286,7 @@ def getJSON(url):
 
 ###########
 
-with open('javascripts/cardsJSON.js', 'r') as infile:
+with open('cardsJSON.js', 'r') as infile:
     data = json.loads(infile.read())
 
 cards = []
@@ -310,7 +313,7 @@ for card in data:
 #     print("len(cards) = %d" % len(cards))
 #     print("total cards = %d" % data['count'])
 #
-with open('javascripts/cards.js', 'w') as f:
+with open('cards.js', 'w') as f:
     f.write("app.constant('CardData',\n")
     json.dump(cards, f, sort_keys=True)
     f.write("\n);")

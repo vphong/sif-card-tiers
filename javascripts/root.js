@@ -13,7 +13,7 @@ app.constant('InitFilters', {
     pl: true,
     hl: true,
     muse: true,
-    aqours: false,
+    aqours: true,
     idlz: false,
     compare: "sc"
 })

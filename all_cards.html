@@ -1,8 +1,8 @@
 <div ng-controller="TierCtrl">
-    <pre>todo: filter or search by subunit/year; localstorage; fix trick view; load idlz imgs properly</pre>
+    <pre>todo: filter or search by subunit/year; localstorage load cards; fix trick view; load idlz imgs properly</pre>
     <pre>filters: {{filters}}</pre>
     <div class="panel panel-default">
-        <div class="panel-heading" ng-init="collapse=false" ng-click="collapse = !collapse">Filters</div>
+        <div class="panel-heading" ng-click="collapsing()">Filters</div>
         <div class="panel-body" uib-collapse="collapse">
             <div class="col-sm-6 col-md-4">Server:<br>
                 <div class="btn-group btn-group-justified">
@@ -61,7 +61,7 @@
         <span class="input-group-addon">
             <i class="glyphicon glyphicon-search"></i>
         </span>
-        <input type="text" class="form-control" ng-model="gridApi.grid.columns[1].filters[0].term" placeholder="search by card name"  uib-typeahead="state for state in Typehead | filter:$viewValue | limitTo:8">
+        <input type="text" class="form-control" ng-model="gridApi.grid.columns[1].filters[0].term" placeholder="search by card name" uib-typeahead="state for state in Typehead | filter:$viewValue | limitTo:8">
     </div>
 
     <div ui-grid="uiGrid" ui-grid-pagination class="custom-grid"></div>

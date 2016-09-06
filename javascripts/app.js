@@ -121,8 +121,11 @@ app.factory('processCards', function() {
 
 });
 
-app.controller('TierCtrl', function($rootScope, $scope, processCards, uiGridConstants, $filter) {
-    $scope.filters = $rootScope.InitFilters;
+app.controller('TierCtrl', function($rootScope, $scope, localStorageService, processCards, uiGridConstants, $filter) {
+    $scope.filters = localStorageService.get('filters');
+    if (!$scope.filters) $scope.filters = $rootScope.Cards;
+
+    $scope.uiGrid = {};
 
     $scope.toggleBool = function(bool) {
         return !bool
@@ -161,16 +164,16 @@ app.controller('TierCtrl', function($rootScope, $scope, processCards, uiGridCons
 
                 ($scope.filters.compare == "sc" && card.skill.type ||
                     $scope.filters.compare == "pl" && card.skill.type == "Perfect Lock" ||
-                    $scope.filters.compare == "hl" && card.skill.type == "Healer")
-                // &&
-                //
-                // (filters.muse && card.main_unit == "Muse" ||
-                //  filters.aqours && card.main_unit == "Aqours")
+                    $scope.filters.compare == "hl" && card.skill.type == "Healer") &&
+
+                ((filters.muse && card.main_unit == "Muse") ||
+                    (filters.aqours && card.main_unit == "Aqours"))
             ) {
                 newCards.push(card);
             }
         }
 
+        localStorageService.set('filters', $scope.filters)
         $scope.uiGrid.data = newCards;
 
     }
@@ -337,14 +340,9 @@ app.controller('TierCtrl', function($rootScope, $scope, processCards, uiGridCons
         $scope.uiGrid.columnDefs[13].visible = !$scope.uiGrid.columnDefs[13].visible;
         $scope.uiGrid.columnDefs[14].visible = !$scope.uiGrid.columnDefs[14].visible; // stats idlz
 
-        if ($scope.filters.idlz) {
-            $scope.uiGrid.columnDefs[18].visible = true;
-            $scope.uiGrid.columnDefs[19].visible = false;
-        } else {
-            $scope.uiGrid.columnDefs[18].visible = false;
-            $scope.uiGrid.columnDefs[19].visible = true;
+        $scope.uiGrid.columnDefs[18].visible = $scope.filters.compare == 'pl' && !$scope.filters.idlz;
+        $scope.uiGrid.columnDefs[19].visible = $scope.filters.compare == 'pl' && $scope.filters.idlz;
 
-        }
         $scope.gridApi.core.notifyDataChange(uiGridConstants.dataChange.ALL);
     }
     $scope.getIdlz = function() {
@@ -366,8 +364,8 @@ app.controller('TierCtrl', function($rootScope, $scope, processCards, uiGridCons
             $scope.uiGrid.columnDefs[16].visible = false;
             $scope.uiGrid.columnDefs[17].visible = true;
 
-            $scope.uiGrid.columnDefs[18].visible = ($scope.filters.compare == "pl") && ($scope.filters.idlz == true);
-            $scope.uiGrid.columnDefs[19].visible = ($scope.filters.compare == "pl") && ($scope.filters.idlz == false);
+            $scope.uiGrid.columnDefs[18].visible = ($scope.filters.compare == "pl") && !$scope.filters.idlz;
+            $scope.uiGrid.columnDefs[19].visible = ($scope.filters.compare == "pl") && $scope.filters.idlz;
             $scope.uiGrid.columnDefs[20].visible = false;
         } else {
             $scope.uiGrid.columnDefs[15].visible = false;
@@ -383,9 +381,15 @@ app.controller('TierCtrl', function($rootScope, $scope, processCards, uiGridCons
 
     }
     $scope.refreshData = function() {
-
         $scope.gridApi.grid.refresh();
     };
+
+    $scope.collapse = localStorageService.get('collapse');
+    $scope.collapsing = function() {
+      $scope.collapse = !$scope.collapse;
+        console.log($scope.collapse)
+      localStorageService.set('collapse', $scope.collapse);
+    }
 });
 
 app.controller('UserCtrl', function($scope, $filter, Cards) {
