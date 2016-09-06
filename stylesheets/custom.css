@@ -26,3 +26,6 @@ td {
     word-wrap: normal;
     overflow: hidden;
 }
+#tbl {
+  background-color: #fff
+}

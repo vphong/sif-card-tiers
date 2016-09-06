@@ -1,5 +1,5 @@
 var app = angular.module('tierList', ['ui.bootstrap',
-    'bsLoadingOverlay', 'bsLoadingOverlayHttpInterceptor',
+    'bsLoadingOverlay', 'bsLoadingOverlayHttpInterceptor','fsm',
     'ui.router', 'ui.grid', 'ui.grid.pagination', 'LocalStorageModule'
 ]);
 
@@ -68,9 +68,6 @@ app.controller('TierCtrl', function($rootScope, $scope, localStorageService, uiG
     $scope.cards = localStorageService.get('cards');
     if (!$scope.cards) $scope.cards = $rootScope.Cards;
 
-    $scope.rank = Array($scope.cards.length).fill().map((_, i) => i);
-
-    console.log($scope.rank)
 
     $scope.filterCards = function() {
         var filters = $scope.filters;
@@ -113,7 +110,6 @@ app.controller('TierCtrl', function($rootScope, $scope, localStorageService, uiG
         }
 
         $scope.cards = newCards;
-        scope.rank = Array($scope.cards.length+1).fill().map((_, i) => i)
         localStorageService.set('filters', $scope.filters);
         localStorageService.set('cards', $scope.cards);
     }

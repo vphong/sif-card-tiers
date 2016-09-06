@@ -64,10 +64,10 @@
     <input type="text" class="form-control" ng-model="search" placeholder="search by card name" uib-typeahead="state for state in Typehead | filter:$viewValue | limitTo:8">
 </div>
 
-<div class="table-responsive">
+<div class="table-responsive" id="tbl">
     <table class="table table-striped">
-        <thead>
-            <tr>
+        <thead fsm-sticky-header scroll-body="#tbl" scroll-stop='0'>
+            <tr style="background-color: #fff;overflow:auto">
               <th>Rank</th>
                 <th ng-click="sortBy('id')">ID
                     <i ng-show="sort.desc && sort.type=='id'" class="glyphicon glyphicon-chevron-down"></i>
