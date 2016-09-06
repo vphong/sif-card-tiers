@@ -14,6 +14,7 @@ app.config(function($stateProvider, $urlRouterProvider) {
     $stateProvider
         .state("all", {
             url: "/",
+            controller: 'TierCtrl',
             templateUrl: "all_cards.html",
         })
 
@@ -122,22 +123,15 @@ app.factory('processCards', function() {
 });
 
 app.controller('TierCtrl', function($rootScope, $scope, localStorageService, processCards, uiGridConstants, $filter) {
-    $scope.filters = localStorageService.get('filters');
-    if (!$scope.filters) $scope.filters = $rootScope.Cards;
-
-    $scope.uiGrid = {};
-
-    $scope.toggleBool = function(bool) {
-        return !bool
-    }
-
-    var getIdlz = function() {
-        return $scope.filters.idlz
-    }
+    $scope.filters = $rootScope.InitFilters;
+    $scope.headers = $rootScope.TableHeaders;
+    $scope.cards = localStorageService.get('cards');
+    if (!$scope.cards) $scope.cards = $rootScope.Cards;
 
     $scope.filterCards = function() {
         var filters = $scope.filters;
         var cards = $rootScope.Cards;
+
 
         var card;
         var newCards = [];
@@ -164,230 +158,63 @@ app.controller('TierCtrl', function($rootScope, $scope, localStorageService, pro
 
                 ($scope.filters.compare == "sc" && card.skill.type ||
                     $scope.filters.compare == "pl" && card.skill.type == "Perfect Lock" ||
-                    $scope.filters.compare == "hl" && card.skill.type == "Healer") &&
-
-                ((filters.muse && card.main_unit == "Muse") ||
-                    (filters.aqours && card.main_unit == "Aqours"))
+                    $scope.filters.compare == "hl" && card.skill.type == "Healer")
+                // &&
+                //
+                // (filters.muse && card.main_unit == "Muse" ||
+                //  filters.aqours && card.main_unit == "Aqours")
             ) {
                 newCards.push(card);
             }
         }
 
-        localStorageService.set('filters', $scope.filters)
-        $scope.uiGrid.data = newCards;
-
+        $scope.cards = newCards;
+        localStorageService.set('cards', $scope.cards);
     }
-
-
-    $scope.uiGrid = {
-        enableVerticalScrollbar: uiGridConstants.scrollbars.WHEN_NEEDED,
-        enableHorizontalScrollbar: uiGridConstants.scrollbars.WHEN_NEEDED,
-        enableSorting: true,
-        enableColumnMenus: false,
-        enablePaginationControls: false,
-        enableFiltering: true,
-        paginationPageSize: 25,
-        rowHeight: 80,
-        columnDefs: [{
-                displayName: 'ID',
-                width: 40,
-                field: 'id',
-
-            }, {
-                field: 'full_name',
-                minWidth: 80,
-                enableFiltering: true,
-                displayName: 'Card',
-                cellTemplate: 'card-name-cell-template.html'
-            }, {
-                field: 'attribute',
-                width: 0,
-            }, {
-                field: 'rarity',
-                width: 0
-            }, {
-                displayName: 'Skill',
-                field: 'skill.type',
-                width: 0,
-            }, {
-                displayName: 'Smile',
-                field: 'non_idolized_maximum_statistics_smile',
-                visible: true,
-                width: 65,
-
-            }, {
-                displayName: 'Pure',
-                field: 'non_idolized_maximum_statistics_pure',
-                visible: true,
-                width: 60,
-
-            }, {
-                displayName: 'Cool',
-                field: 'non_idolized_maximum_statistics_cool',
-                visible: true,
-                width: 60,
-
-            }, {
-                displayName: 'Smile',
-                field: 'idolized_maximum_statistics_smile',
-                visible: false,
-                width: 65,
-
-            }, {
-                displayName: 'Pure',
-                field: 'idolized_maximum_statistics_pure',
-                visible: false,
-                width: 60,
-            }, {
-                displayName: 'Cool',
-                field: 'idolized_maximum_statistics_cool',
-                visible: false,
-                width: 60,
-            }, {
-                field: 'cScore',
-                visible: true,
-                width: 80,
-                displayName: 'C-Score'
-            }, {
-                field: 'cScore_idlz',
-                visible: false,
-                width: 80,
-                displayName: 'C-Score'
-
-            }, {
-                field: 'oScore',
-                visible: true,
-                width: 80,
-                displayName: 'O-Score'
-
-            }, {
-                field: 'oScore_idlz',
-                visible: false,
-                width: 80,
-                displayName: 'O-Score'
-
-            }, {
-                displayName: 'Score Up',
-                field: 'skill.su',
-                visible: true,
-                width: 80,
-                cellFilter: 'number:2'
-            }, {
-                displayName: 'SU w/ SIS',
-                field: 'skill.su_sis',
-                visible: true,
-                width: 80,
-                cellFilter: 'number:2'
-            }, {
-                displayName: 'PL Time',
-                field: 'skill.pl',
-                visible: false,
-                width: 80,
-                cellFilter: 'number:2'
-            }, {
-                displayName: 'SIS Stat Bonus',
-                field: 'skill.pl_sis',
-                visible: false,
-                width: 80,
-                cellFilter: 'number:2'
-            }, {
-                displayName: 'SIS Stat Bonus',
-                field: 'skill.pl_sis_idlz',
-                visible: false,
-                width: 80,
-                cellFilter: 'number:2'
-            }, {
-                displayName: 'Avg Heal',
-                field: 'skill.hl',
-                visible: false,
-                width: 80,
-                cellFilter: 'number:2'
-            }, {
-                field: 'website_url',
-                width: 0
-            }, {
-                field: 'round_card_image',
-                width: 0
-            }, {
-                field: 'round_card_idolized_image',
-                width: 0
-            }
-
-        ],
-        onRegisterApi: function(gridApi) {
-            $scope.gridApi = gridApi;
-            $scope.gridApi.grid.registerRowsProcessor($scope.singleFilter, 200);
-        },
-        data: $rootScope.Cards
-    }
-
-    for (index in $scope.uiGrid.columnDefs) {
-        var col = $scope.uiGrid.columnDefs[index];
-        // col.headerCellTemplate = 'column-header-template.html';
-        col.sortDirectionCycle = [uiGridConstants.ASC, uiGridConstants.DESC];
-    }
-
-
-    $scope.toggleIdlz = function() {
-        $scope.uiGrid.columnDefs[5].visible = !$scope.uiGrid.columnDefs[5].visible;
-        $scope.uiGrid.columnDefs[6].visible = !$scope.uiGrid.columnDefs[6].visible;
-        $scope.uiGrid.columnDefs[7].visible = !$scope.uiGrid.columnDefs[7].visible; // cScore
-        $scope.uiGrid.columnDefs[8].visible = !$scope.uiGrid.columnDefs[8].visible; //cScore idlz
-        $scope.uiGrid.columnDefs[9].visible = !$scope.uiGrid.columnDefs[9].visible; // oScore
-        $scope.uiGrid.columnDefs[10].visible = !$scope.uiGrid.columnDefs[10].visible; // oScore idlz
-        $scope.uiGrid.columnDefs[11].visible = !$scope.uiGrid.columnDefs[11].visible; // stats unidlz
-        $scope.uiGrid.columnDefs[12].visible = !$scope.uiGrid.columnDefs[12].visible;
-        $scope.uiGrid.columnDefs[13].visible = !$scope.uiGrid.columnDefs[13].visible;
-        $scope.uiGrid.columnDefs[14].visible = !$scope.uiGrid.columnDefs[14].visible; // stats idlz
-
-        $scope.uiGrid.columnDefs[18].visible = $scope.filters.compare == 'pl' && !$scope.filters.idlz;
-        $scope.uiGrid.columnDefs[19].visible = $scope.filters.compare == 'pl' && $scope.filters.idlz;
-
-        $scope.gridApi.core.notifyDataChange(uiGridConstants.dataChange.ALL);
-    }
-    $scope.getIdlz = function() {
-        return $scope.filters.idlz
-    }
-
-    $scope.compareType = function() {
-        if ($scope.filters.compare == "sc") {
-            $scope.uiGrid.columnDefs[15].visible = true;
-            $scope.uiGrid.columnDefs[16].visible = true;
-            $scope.uiGrid.columnDefs[17].visible = false;
-            $scope.uiGrid.columnDefs[18].visible = false;
-            $scope.uiGrid.columnDefs[19].visible = false;
-            $scope.uiGrid.columnDefs[20].visible = false;
-
-        } else if ($scope.filters.compare == "pl") {
-
-            $scope.uiGrid.columnDefs[15].visible = false;
-            $scope.uiGrid.columnDefs[16].visible = false;
-            $scope.uiGrid.columnDefs[17].visible = true;
-            $scope.uiGrid.columnDefs[18].visible = ($scope.filters.compare == "pl") && !$scope.filters.idlz;
-            $scope.uiGrid.columnDefs[19].visible = ($scope.filters.compare == "pl") && $scope.filters.idlz;
-            $scope.uiGrid.columnDefs[20].visible = false;
-        } else {
-            $scope.uiGrid.columnDefs[15].visible = false;
-            $scope.uiGrid.columnDefs[16].visible = false;
-            $scope.uiGrid.columnDefs[17].visible = false;
-            $scope.uiGrid.columnDefs[18].visible = false;
-            $scope.uiGrid.columnDefs[19].visible = false;
-            $scope.uiGrid.columnDefs[20].visible = true;
-
-        }
-
-        $scope.gridApi.core.notifyDataChange(uiGridConstants.dataChange.ALL);
-
-    }
-    $scope.refreshData = function() {
-        $scope.gridApi.grid.refresh();
-    };
 
     $scope.collapse = localStorageService.get('collapse');
     $scope.collapsing = function() {
-      $scope.collapse = !$scope.collapse;
-      localStorageService.set('collapse', $scope.collapse);
+        $scope.collapse = !$scope.collapse;
+        localStorageService.set('collapse', $scope.collapse)
+    };
+
+
+    $scope.sort = {
+        type: 'cScore',
+        desc: true,
     }
+    $scope.sortBy = function(type) {
+        $scope.sort.desc = ($scope.sort.type != type) ? true : !$scope.sort.desc;
+        $scope.sort.type = type;
+
+        if (type == 'smile' && $scope.filters.idlz) {
+            $scope.sort.type = "idolized_maximum_statistics_smile";
+            $scope.sort.gen = "smile";
+            console.log("enter if")
+        } else if (type == 'smile' && !$scope.filters.idlz) {
+            $scope.sort.type = "non_idolized_maximum_statistics_smile";
+            $scope.sort.gen = "smile";
+        } else if (type == 'pure' && $scope.filters.idlz) {
+            $scope.sort.type = "idolized_maximum_statistics_pure"
+            $scope.sort.gen = "pure";
+        } else if (type == 'pure' && !$scope.filters.idlz) {
+            $scope.sort.type = "non_idolized_maximum_statistics_pure"
+            $scope.sort.gen = "pure";
+        } else if (type == 'cool' && $scope.filters.idlz) {
+            $scope.sort.type = "idolized_maximum_statistics_smile"
+            $scope.sort.gen = "cool";
+        } else if (type == 'cool' && !$scope.filters.idlz) {
+            $scope.sort.type = "non_idolized_maximum_statistics_smile"
+            $scope.sort.gen = "cool";
+        } else if (type == 'su')
+{}
+         else {
+            $scope.sort.gen = "";
+            $scope.sort.type = type;
+        }
+        localStorageService.set('sort', $scope.sort)
+    }
+
 });
 
 app.controller('UserCtrl', function($scope, $filter, Cards) {

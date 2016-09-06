@@ -3,6 +3,17 @@
     height: auto;
     vertical-align: middle !important;
 }
+.name-display {
+  min-width: 70px;
+  max-width: 200px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.num-header {
+  max-width: 80px;
+  cursor: pointer
+}
 td {
     vertical-align: middle !important;
 }
@@ -17,7 +28,7 @@ td {
 }
 .custom-grid {
     width: 100%;
-    height: 100%;
+    height: 605px
 }
 .ui-grid-header {
     padding: 0px
@@ -38,7 +49,7 @@ td {
 }
 .ui-grid-cell .ui-grid-cell-contents {
     height: 100%;
-line-height: 70px;
+    vertical-align: middle;
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
@@ -46,10 +57,16 @@ line-height: 70px;
 .ui-grid-filter-container {
     display: none!important;
 }
+@font-face {
+    font-family: 'Glyphicons Halflings';
+    src: url('../fonts/glyphicons-halflings-regular.eot');
+    src: url('../fonts/glyphicons-halflings-regular.eot?#iefix') format('embedded-opentype'), url('../fonts/glyphicons-halflings-regular.woff2') format('woff2'), url('../fonts/glyphicons-halflings-regular.woff') format('woff'), url('../fonts/glyphicons-halflings-regular.ttf') format('truetype'), url('../fonts/glyphicons-halflings-regular.svg#glyphicons_halflingsregular') format('svg');
+}
 .ui-grid-icon-sort-alt-up, .ui-grid-icon-sort-alt-down {
     position: relative;
     top: 1px;
     display: inline-block;
+    font-family: "Glyphicons Halflings";
     font-style: normal;
     font-weight: 400;
     line-height: 1;
