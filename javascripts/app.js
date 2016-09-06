@@ -61,70 +61,10 @@ app.run(function(bsLoadingOverlayService) {
     });
 });
 
-app.factory('processCards', function() {
-    var ret = function(cards) {
-        var card;
-        var cardsLen = cards.length;
-        var skillType;
-        var numCount = 0;
-        var word;
-        var details_arr;
-        var len;
+app.controller('TierCtrl', function($rootScope, $scope, localStorageService, uiGridConstants, $filter) {
+    $scope.filters = localStorageService.get('filters');
+    if (!$scope.filters) $scope.filters = $rootScope.InitFilters;
 
-
-        for (var j = 0; j < cardsLen; i++) {
-            card = cards[j];
-            console.log(card)
-                /// card name
-            card.full_name = card.rarity;
-            if (card.is_promo) {
-                card.full_name += " Promo"
-            } else {
-                if (card.translated_collection) {
-                    card.full_name += " " + card.translated_collection;
-                } else {
-                    card.full_name += " Unnamed"
-                }
-            }
-            card.full_name += " " + card.name;
-
-
-            /// skill details
-            skillType = card.skill;
-            card.skill = {
-                type: skillType
-            }
-
-            details_arr = card.skill_details.split();
-            len = details_arr.length;
-
-            for (var i = 0; i < len; i++) {
-                // 1. skill activation count
-                word = details_arr[i]
-                if (!isNaN(word) && numCount < 1) {
-                    card.skill.activation_count = parseFloat(word)
-                    card.skill.activation_type = details_arr[i + 1]
-                    numCount++;
-                } else if (!isNaN(word) && numCount < 2) {
-                    card.skill.activation_value = parseFloat(word)
-
-                }
-                if (word.includes("%")) {
-                    card.skill.activation_percent = parseFloat(word) / 100.0
-                }
-
-            }
-        }
-    }
-
-
-    return ret;
-
-});
-
-app.controller('TierCtrl', function($rootScope, $scope, localStorageService, processCards, uiGridConstants, $filter) {
-    $scope.filters = $rootScope.InitFilters;
-    $scope.headers = $rootScope.TableHeaders;
     $scope.cards = localStorageService.get('cards');
     if (!$scope.cards) $scope.cards = $rootScope.Cards;
 
@@ -169,8 +109,16 @@ app.controller('TierCtrl', function($rootScope, $scope, localStorageService, pro
         }
 
         $scope.cards = newCards;
+        localStorageService.set('filters', $scope.filters);
         localStorageService.set('cards', $scope.cards);
     }
+
+    $scope.$watch('filters.compare', function(n, o) {
+        if (n != o) {
+            $scope.sort.type = 'cScore';
+            localStorageService.set('sort', $scope.sort)
+        }
+    })
 
     $scope.collapse = localStorageService.get('collapse');
     $scope.collapsing = function() {
@@ -179,9 +127,12 @@ app.controller('TierCtrl', function($rootScope, $scope, localStorageService, pro
     };
 
 
-    $scope.sort = {
-        type: 'cScore',
-        desc: true,
+    $scope.sort = localStorageService.get('sort');
+    if (!$scope.sort) {
+        $scope.sort = {
+            type: 'cScore',
+            desc: true,
+        }
     }
     $scope.sortBy = function(type) {
         $scope.sort.desc = ($scope.sort.type != type) ? true : !$scope.sort.desc;
@@ -205,9 +156,7 @@ app.controller('TierCtrl', function($rootScope, $scope, localStorageService, pro
         } else if (type == 'cool' && !$scope.filters.idlz) {
             $scope.sort.type = "non_idolized_maximum_statistics_cool"
             $scope.sort.gen = "cool";
-        } else if (type == 'su')
-{}
-         else {
+        } else if (type == 'su') {} else {
             $scope.sort.gen = "";
             $scope.sort.type = type;
         }

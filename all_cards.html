@@ -1,5 +1,6 @@
-<pre>todo: filter or search by subunit/year; localstorage; fix trick view; load idlz imgs properly</pre>
+<pre>todo: filter or search by subunit/year; tier organization</pre>
 <pre>sort: {{sort|json}}</pre>
+<pre>filters.compare: {{filters.compare}}</pre>
 <div class="panel panel-default" bs-loading-overlay>
     <div class="panel-heading" style="cursor: pointer" ng-click="collapsing()">Filters</div>
     <div class="panel-body" uib-collapse="collapse">
@@ -63,117 +64,120 @@
     <input type="text" class="form-control" ng-model="search" placeholder="search by card name" uib-typeahead="state for state in Typehead | filter:$viewValue | limitTo:8">
 </div>
 
-<table class="table table-striped">
-    <thead>
-        <tr>
-            <th ng-click="sortBy('id')">ID
-                <i ng-show="sort.desc && sort.type=='id'" class="glyphicon glyphicon-chevron-down"></i>
-                <i ng-show="!sort.desc && sort.type=='id'" class="glyphicon glyphicon-chevron-up"></i>
-            </th>
-            <th>Card Name</th>
-            <th class="num-header" ng-click="sortBy('smile')">Smile
-                <i ng-show="sort.desc && sort.gen=='smile'" class="glyphicon glyphicon-chevron-down"></i>
-                <i ng-show="!sort.desc && sort.gen=='smile'" class="glyphicon glyphicon-chevron-up"></i>
-            </th>
-            <th class="num-header" ng-click="sortBy('pure')">Pure
-                <i ng-show="sort.desc && sort.gen=='pure'" class="glyphicon glyphicon-chevron-down"></i>
-                <i ng-show="!sort.desc && sort.gen=='pure'" class="glyphicon glyphicon-chevron-up"></i>
-            </th>
-            <th class="num-header" ng-click="sortBy('cool')">Cool
-                <i ng-show="sort.desc && sort.gen=='cool'" class="glyphicon glyphicon-chevron-down"></i>
-                <i ng-show="!sort.desc && sort.gen=='cool'" class="glyphicon glyphicon-chevron-up"></i>
-            </th>
-            <th class="num-header" ng-click="sortBy('cScore')">C-Score
-                <i ng-show="sort.desc && sort.type=='cScore'" class="glyphicon glyphicon-chevron-down"></i>
-                <i ng-show="!sort.desc && sort.type=='cScore'" class="glyphicon glyphicon-chevron-up"></i>
-            </th>
-            <th class="num-header" ng-click="sortBy('oScore')">O-Score
-                <i ng-show="sort.desc && sort.type=='oScore'" class="glyphicon glyphicon-chevron-down"></i>
-                <i ng-show="!sort.desc && sort.type=='oScore'" class="glyphicon glyphicon-chevron-up"></i>
-            </th>
-            <th class="num-header" ng-click="sortBy('skill.su')" ng-show="filters.compare=='sc'">Score Up
-                <i ng-show="sort.desc && sort.type=='skill.su'" class="glyphicon glyphicon-chevron-down"></i>
-                <i ng-show="!sort.desc && sort.type=='skill.su'" class="glyphicon glyphicon-chevron-up"></i>
-            </th>
-            <th class="num-header" ng-click="sortBy('skill.su_sis')" ng-show="filters.compare=='sc'">SU w/ SIS
-                <i ng-show="sort.desc && sort.type=='skill.su_sis'" class="glyphicon glyphicon-chevron-down"></i>
-                <i ng-show="!sort.desc && sort.type=='skill.su_sis'" class="glyphicon glyphicon-chevron-up"></i>
-            </th>
-            <th class="num-header" ng-click="sortBy('skill.pl')" ng-show="filters.compare=='pl'">PL Time
-                <i ng-show="sort.desc && sort.type=='skill.pl'" class="glyphicon glyphicon-chevron-down"></i>
-                <i ng-show="!sort.desc && sort.type=='skill.pl'" class="glyphicon glyphicon-chevron-up"></i>
-            </th>
-            <th class="num-header" ng-click="sortBy('skill.pl_sis')" ng-show="filters.compare=='pl'">SIS Bonus
-                <i ng-show="sort.desc && sort.type=='skill.pl_sis'" class="glyphicon glyphicon-chevron-down"></i>
-                <i ng-show="!sort.desc && sort.type=='skill.pl_sis'" class="glyphicon glyphicon-chevron-up"></i>
-            </th>
-            <th class="num-header" ng-click="sortBy('skill.hl')" ng-show="filters.compare=='hl'">Avg. Heal
-                <i ng-show="sort.desc && sort.type=='skill.hl'" class="glyphicon glyphicon-chevron-down"></i>
-                <i ng-show="!sort.desc && sort.type=='skill.hl'" class="glyphicon glyphicon-chevron-up"></i>
-            </th>
-        </tr>
-    </thead>
+<div class="table-responsive">
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th ng-click="sortBy('id')">ID
+                    <i ng-show="sort.desc && sort.type=='id'" class="glyphicon glyphicon-chevron-down"></i>
+                    <i ng-show="!sort.desc && sort.type=='id'" class="glyphicon glyphicon-chevron-up"></i>
+                </th>
+                <th>Card Name</th>
+                <th class="num-header" ng-click="sortBy('smile')">Smile
+                    <i ng-show="sort.desc && sort.gen=='smile'" class="glyphicon glyphicon-chevron-down"></i>
+                    <i ng-show="!sort.desc && sort.gen=='smile'" class="glyphicon glyphicon-chevron-up"></i>
+                </th>
+                <th class="num-header" ng-click="sortBy('pure')">Pure
+                    <i ng-show="sort.desc && sort.gen=='pure'" class="glyphicon glyphicon-chevron-down"></i>
+                    <i ng-show="!sort.desc && sort.gen=='pure'" class="glyphicon glyphicon-chevron-up"></i>
+                </th>
+                <th class="num-header" ng-click="sortBy('cool')">Cool
+                    <i ng-show="sort.desc && sort.gen=='cool'" class="glyphicon glyphicon-chevron-down"></i>
+                    <i ng-show="!sort.desc && sort.gen=='cool'" class="glyphicon glyphicon-chevron-up"></i>
+                </th>
+                <th class="num-header" ng-click="sortBy('cScore')">C-Score
+                    <i ng-show="sort.desc && sort.type=='cScore'" class="glyphicon glyphicon-chevron-down"></i>
+                    <i ng-show="!sort.desc && sort.type=='cScore'" class="glyphicon glyphicon-chevron-up"></i>
+                </th>
+                <th class="num-header" ng-click="sortBy('oScore')">O-Score
+                    <i ng-show="sort.desc && sort.type=='oScore'" class="glyphicon glyphicon-chevron-down"></i>
+                    <i ng-show="!sort.desc && sort.type=='oScore'" class="glyphicon glyphicon-chevron-up"></i>
+                </th>
+                <th class="num-header" ng-click="sortBy('skill.su')" ng-show="filters.compare=='sc'">Score Up
+                    <i ng-show="sort.desc && sort.type=='skill.su'" class="glyphicon glyphicon-chevron-down"></i>
+                    <i ng-show="!sort.desc && sort.type=='skill.su'" class="glyphicon glyphicon-chevron-up"></i>
+                </th>
+                <th class="num-header" ng-click="sortBy('skill.pl')" ng-show="filters.compare=='pl'">PL Time
+                    <i ng-show="sort.desc && sort.type=='skill.pl'" class="glyphicon glyphicon-chevron-down"></i>
+                    <i ng-show="!sort.desc && sort.type=='skill.pl'" class="glyphicon glyphicon-chevron-up"></i>
+                </th>
+                <th class="num-header" ng-click="sortBy('skill.pl_sis')" ng-show="filters.compare=='pl'">SIS Bonus
+                    <i ng-show="sort.desc && sort.type=='skill.pl_sis'" class="glyphicon glyphicon-chevron-down"></i>
+                    <i ng-show="!sort.desc && sort.type=='skill.pl_sis'" class="glyphicon glyphicon-chevron-up"></i>
+                </th>
+                <th class="num-header" ng-click="sortBy('skill.hl')" ng-show="filters.compare=='hl'">Avg. Heal
+                    <i ng-show="sort.desc && sort.type=='skill.hl'" class="glyphicon glyphicon-chevron-down"></i>
+                    <i ng-show="!sort.desc && sort.type=='skill.hl'" class="glyphicon glyphicon-chevron-up"></i>
+                </th>
+                <th class="num-header" ng-click="sortBy('skill.su_sis')" ng-show="filters.compare=='sc'||filters.compare=='hl'">SU w/ SIS
+                    <i ng-show="sort.desc && sort.type=='skill.su_sis'" class="glyphicon glyphicon-chevron-down"></i>
+                    <i ng-show="!sort.desc && sort.type=='skill.su_sis'" class="glyphicon glyphicon-chevron-up"></i>
+                </th>
+            </tr>
+        </thead>
 
-    <tbody>
-        <tr ng-repeat="card in cards| filter:search | orderBy:sort.type:sort.desc">
-            <td>{{card.id}}</td>
-            <td class="name-display"><img ng-src="{{filters.idlz || card.is_promo ? card.round_card_idolized_image : card.round_card_image}}" class="display-image">
-                <a href="{{card.website_url}}">
-                    <i ng-if="card.skill.type=='Score Up'" class="glyphicon glyphicon-arrow-up" uib-tooltip="Score Up"></i>
-                    <i ng-if="card.skill.type=='Healer'" class="glyphicon glyphicon-plus" uib-tooltip="Healer"></i>
-                    <i ng-if="card.skill.type=='Perfect Lock'" class="glyphicon glyphicon-lock" uib-tooltip="Perfect Lock"></i>
-                    {{card.full_name}}</a>
-            </td>
-            <td ng-show="filters.idlz">
-                {{card.idolized_maximum_statistics_smile}}
-            </td>
-            <td ng-show="!filters.idlz">
-                {{card.non_idolized_maximum_statistics_smile}}
-            </td>
-            <td ng-show="filters.idlz">
-                {{card.idolized_maximum_statistics_pure}}
-            </td>
-            <td ng-show="!filters.idlz">
-                {{card.non_idolized_maximum_statistics_pure}}
-            </td>
-            <td ng-show="filters.idlz">
-                {{card.idolized_maximum_statistics_cool}}
-            </td>
-            <td ng-show="!filters.idlz">
-                {{card.non_idolized_maximum_statistics_cool}}
-            </td>
-            <td ng-show="filters.idlz">
-                {{card.cScore_idlz}}
-            </td>
-            <td ng-show="!filters.idlz">
-                {{card.cScore}}
-            </td>
-            <td ng-show="filters.idlz">
-                {{card.oScore_idlz}}
-            </td>
-            <td ng-show="!filters.idlz">
-                {{card.oScore}}
-            </td>
-            <td ng-show="filters.compare=='sc'">
-                {{card.skill.su |number:2}}
-            </td>
-            <td ng-show="filters.compare=='sc'">
-                {{card.skill.su_sis |number:2}}
-            </td>
-            <td ng-show="filters.compare=='pl'">
-                {{card.skill.pl |number:2}}
-            </td>
-            <td ng-show="filters.compare=='pl' && filters.idlz">
-                {{card.skill.pl_sis_idlz |number:2}}
-            </td>
-            <td ng-show="filters.compare=='pl' && !filters.idlz">
-                {{card.skill.pl_sis |number:2}}
-            </td>
-            <td ng-show="filters.compare=='hl'">
-                {{card.skill.hl | number:2}}
-            </td>
-        </tr>
-    </tbody>
-</table>
+        <tbody>
+            <tr ng-repeat="card in cards| filter:search | orderBy:sort.type:sort.desc">
+                <td>{{card.id}}</td>
+                <td class="name-display"><img ng-src="{{filters.idlz || card.is_promo ? card.round_card_idolized_image : card.round_card_image}}" class="display-image">
+                    <a href="{{card.website_url}}">
+                        <i ng-if="card.skill.type=='Score Up'" class="fa fa-level-up" uib-tooltip="Score Up"></i>
+                        <i ng-if="card.skill.type=='Healer'" class="fa fa-heart" uib-tooltip="Healer"></i>
+                        <i ng-if="card.skill.type=='Perfect Lock'" class="fa fa-lock" uib-tooltip="Perfect Lock"></i>
+                        <i ng-if="card.event" class="fa fa-star" uib-tooltip="Event Only"></i>
+                        {{card.full_name}}</a>
+                </td>
+                <td ng-show="filters.idlz">
+                    {{card.idolized_maximum_statistics_smile}}
+                </td>
+                <td ng-show="!filters.idlz">
+                    {{card.non_idolized_maximum_statistics_smile}}
+                </td>
+                <td ng-show="filters.idlz">
+                    {{card.idolized_maximum_statistics_pure}}
+                </td>
+                <td ng-show="!filters.idlz">
+                    {{card.non_idolized_maximum_statistics_pure}}
+                </td>
+                <td ng-show="filters.idlz">
+                    {{card.idolized_maximum_statistics_cool}}
+                </td>
+                <td ng-show="!filters.idlz">
+                    {{card.non_idolized_maximum_statistics_cool}}
+                </td>
+                <td ng-show="filters.idlz">
+                    {{card.cScore_idlz}}
+                </td>
+                <td ng-show="!filters.idlz">
+                    {{card.cScore}}
+                </td>
+                <td ng-show="filters.idlz">
+                    {{card.oScore_idlz}}
+                </td>
+                <td ng-show="!filters.idlz">
+                    {{card.oScore}}
+                </td>
+                <td ng-show="filters.compare=='sc'">
+                    {{card.skill.su |number:2}}
+                </td>
+                <td ng-show="filters.compare=='pl'">
+                    {{card.skill.pl |number:2}}
+                </td>
+                <td ng-show="filters.compare=='pl' && filters.idlz">
+                    {{card.skill.pl_sis_idlz |number:2}}
+                </td>
+                <td ng-show="filters.compare=='pl' && !filters.idlz">
+                    {{card.skill.pl_sis |number:2}}
+                </td>
+                <td ng-show="filters.compare=='hl'">
+                    {{card.skill.hl | number:2}}
+                </td>
+                <td ng-show="filters.compare=='sc'||filters.compare=='hl'">
+                    {{card.skill.su_sis |number:2}}
+                </td>
+            </tr>
+        </tbody>
+    </table>
+  </div>
 
-<pre>card[0] details: {{cards[0]|json}}</pre>
+    <pre>card[0] details: {{cards[0]|json}}</pre>

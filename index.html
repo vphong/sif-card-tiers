@@ -19,17 +19,14 @@
         <script src="javascripts/cards.js"></script>
         <script src="javascripts/root.js"></script>
         <link rel="stylesheet" href="stylesheets/custom.css">
+        <link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
         <meta name="viewport" content="width=device-width">
 
-        <script src="text/javascript">
-        $('[ui-grid-header-cell]').find('i').removeClass('ui-grid-icon-up-dir').addClass('glyphicon glyphicon-chevron-up');
-        $('[ui-grid-header-cell]').find('i').removeClass('ui-grid-icon-down-dir').addClass('glyphicon glyphicon-chevron-down');
-        </script>
         <!--[if lt IE 9]> <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script> <![endif]-->
     </head>
     <body ng-app="tierList">
         <div class="wrapper">
-            <header class="container-fluid">
+            <header class="container">
                 <h1 class="page_header">SIF Card Tiers</h1>
 
             </header>
@@ -38,7 +35,7 @@
                     <uib-tab ng-repeat="t in tabs" heading="{{t.heading}}" select="go(t.route)" active="t.active" ng-style="{'margin-left' : (t.heading=='All Cards') ? '25px' : '5px'}"></uib-tab>
                 </uib-tabset>
             </div>
-            <section class="container-fluid">
+            <section class="container">
 
                 <div ui-view bs-loading-overlay></div>
 
