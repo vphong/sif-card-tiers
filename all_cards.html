@@ -1,7 +1,7 @@
 <div ng-controller="TierCtrl">
     <pre>todo: filter or search by subunit/year; localstorage; fix trick view; load idlz imgs properly</pre>
-    <pre>filters: {{filters}}</pre>
-    <div class="panel panel-default">
+    <pre>pag: {{pag.pageItems[0].length|json}}</pre>
+    <div class="panel panel-default" bs-loading-overlay>
         <div class="panel-heading" ng-init="collapse=false" ng-click="collapse = !collapse">Filters</div>
         <div class="panel-body" uib-collapse="collapse">
             <div class="col-sm-6 col-md-4">Server:<br>
@@ -61,13 +61,84 @@
         <span class="input-group-addon">
             <i class="glyphicon glyphicon-search"></i>
         </span>
-        <input type="text" class="form-control" ng-model="gridApi.grid.columns[1].filters[0].term" placeholder="search by card name"  uib-typeahead="state for state in Typehead | filter:$viewValue | limitTo:8">
+        <input type="text" class="form-control" ng-model="search" placeholder="search by card name" uib-typeahead="state for state in Typehead | filter:$viewValue | limitTo:8">
     </div>
 
-    <div ui-grid="uiGrid" ui-grid-pagination class="custom-grid"></div>
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th ng-click="sortBy('ID')">ID</th>
+                <th>Card Name</th>
+                <th ng-click="sortBy('ID')">Smile</th>
+                <th ng-click="sortBy('ID')">Pure</th>
+                <th ng-click="sortBy('ID')">Cool</th>
+                <th ng-click="sortBy('ID')">C-Score</th>
+                <th ng-click="sortBy('ID')">O-Score</th>
+                <th ng-click="sortBy('ID')"ng-show="filters.compare=='sc'">Score Up</th>
+                <th ng-click="sortBy('ID')" ng-show="filters.compare=='sc'">SU w/ SIS</th>
+                <th ng-click="sortBy('ID')" ng-show="filters.compare=='pl'">PL Time</th>
+                <th ng-click="sortBy('ID')" ng-show="filters.compare=='pl'">SIS Bonus</th>
+                <th ng-click="sortBy('ID')" ng-show="filters.compare=='hl'">Avg. Heal</th>
+            </tr>
+        </thead>
 
+        <tbody>
+            <tr ng-repeat="card in pag.pageItems[pag.curr] | filter:search">
+                <td>{{card.id}}</td>
+                <td>{{card.full_name}}</td>
+                <td ng-show="filters.idlz">
+                  {{card.idolized_maximum_statistics_smile}}
+                </td>
+                <td ng-show="!filters.idlz">
+                  {{card.non_idolized_maximum_statistics_smile}}
+                </td>
+                <td ng-show="filters.idlz">
+                  {{card.idolized_maximum_statistics_pure}}
+                </td>
+                <td ng-show="!filters.idlz">
+                  {{card.non_idolized_maximum_statistics_pure}}
+                </td>
+                <td ng-show="filters.idlz">
+                  {{card.idolized_maximum_statistics_cool}}
+                </td>
+                <td ng-show="!filters.idlz">
+                  {{card.non_idolized_maximum_statistics_cool}}
+                </td>
+                <td ng-show="filters.idlz">
+                  {{card.cScore_idlz}}
+                </td>
+                <td ng-show="!filters.idlz">
+                  {{card.cScore}}
+                </td>
+                <td ng-show="filters.idlz">
+                  {{card.oScore_idlz}}
+                </td>
+                <td ng-show="!filters.idlz">
+                  {{card.oScore}}
+                </td>
+                <td ng-show="filters.compare=='sc'">
+                  {{card.skill.su |number:2}}
+                </td>
+                <td ng-show="filters.compare=='sc'">
+                  {{card.skill.su_sis |number:2}}
+                </td>
+                <td ng-show="filters.compare=='pl'">
+                    {{card.skill.pl |number:2}}
+                </td>
+                <td ng-show="filters.compare=='pl' && filters.idlz">
+                    {{card.skill.pl_sis_idlz |number:2}}
+                </td>
+                <td ng-show="filters.compare=='pl' && !filters.idlz">
+                    {{card.skill.pl_sis |number:2}}
+                </td>
+                <td ng-show="filters.compare=='hl'">
+                  {{card.skill.hl | number:2}}
+                </td>
+            </tr>
+        </tbody>
+    </table>
     <center>
-        <ul uib-pagination total-items="uiGrid.totalItems" items-per-page="uiGrid.paginationPageSize" ng-model="uiGrid.paginationCurrentPage" class="pagination" max-size=3 boundary-link-numbers="true" rotate="true"></ul>
+        <ul uib-pagination total-items="cards.length" items-per-page="pag.perPage" ng-model="pag.curr" class="pagination" max-size=3 boundary-link-numbers="true" rotate="true"></ul>
     </center>
 
-    <pre>card[0] details: {{uiGrid.data[0]|json}}</pre>
+    <pre>card[0] details: {{cards[0]|json}}</pre>
