@@ -119,7 +119,7 @@
 
         <tbody>
             <tr ng-repeat="card in cards| filter:search | orderBy:sort.type:sort.desc">
-              <td>{{$index+1}}</td>
+              <td>{{sort.desc ? $index+1 : cards.length - $index}}</td>
                 <td>{{card.id}}</td>
                 <td class="name-display"><img ng-src="{{filters.idlz || card.is_promo ? card.round_card_idolized_image : card.round_card_image}}" class="display-image">
                     <a href="{{card.website_url}}">
