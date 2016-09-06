@@ -190,7 +190,6 @@ app.controller('TierCtrl', function($rootScope, $scope, localStorageService, pro
         if (type == 'smile' && $scope.filters.idlz) {
             $scope.sort.type = "idolized_maximum_statistics_smile";
             $scope.sort.gen = "smile";
-            console.log("enter if")
         } else if (type == 'smile' && !$scope.filters.idlz) {
             $scope.sort.type = "non_idolized_maximum_statistics_smile";
             $scope.sort.gen = "smile";
@@ -201,10 +200,10 @@ app.controller('TierCtrl', function($rootScope, $scope, localStorageService, pro
             $scope.sort.type = "non_idolized_maximum_statistics_pure"
             $scope.sort.gen = "pure";
         } else if (type == 'cool' && $scope.filters.idlz) {
-            $scope.sort.type = "idolized_maximum_statistics_smile"
+            $scope.sort.type = "idolized_maximum_statistics_cool"
             $scope.sort.gen = "cool";
         } else if (type == 'cool' && !$scope.filters.idlz) {
-            $scope.sort.type = "non_idolized_maximum_statistics_smile"
+            $scope.sort.type = "non_idolized_maximum_statistics_cool"
             $scope.sort.gen = "cool";
         } else if (type == 'su')
 {}
