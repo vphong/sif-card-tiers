@@ -135,7 +135,11 @@ app.controller('TierCtrl', function($rootScope, $scope, localStorageService, uiG
         }
     }
     $scope.sortBy = function(type) {
-        $scope.sort.desc = ($scope.sort.type != type) ? true : !$scope.sort.desc;
+        $scope.sort.desc = ($scope.sort.type == type || $scope.sort.gen == type) ? !$scope.sort.desc : true;
+        console.log("($scope.sort.type != type) = " + ($scope.sort.type != type))
+        console.log("scope.sort.desc = " + $scope.sort.desc)
+        console.log("scope.sort.type = " + $scope.sort.type)
+        console.log("type = " + type)
         $scope.sort.type = type;
 
         if (type == 'smile' && $scope.filters.idlz) {
