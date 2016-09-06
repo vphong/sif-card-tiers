@@ -363,7 +363,6 @@ app.controller('TierCtrl', function($rootScope, $scope, localStorageService, pro
             $scope.uiGrid.columnDefs[15].visible = false;
             $scope.uiGrid.columnDefs[16].visible = false;
             $scope.uiGrid.columnDefs[17].visible = true;
-
             $scope.uiGrid.columnDefs[18].visible = ($scope.filters.compare == "pl") && !$scope.filters.idlz;
             $scope.uiGrid.columnDefs[19].visible = ($scope.filters.compare == "pl") && $scope.filters.idlz;
             $scope.uiGrid.columnDefs[20].visible = false;
@@ -387,7 +386,6 @@ app.controller('TierCtrl', function($rootScope, $scope, localStorageService, pro
     $scope.collapse = localStorageService.get('collapse');
     $scope.collapsing = function() {
       $scope.collapse = !$scope.collapse;
-        console.log($scope.collapse)
       localStorageService.set('collapse', $scope.collapse);
     }
 });
