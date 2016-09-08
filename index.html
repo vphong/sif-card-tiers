@@ -28,22 +28,22 @@
         <!--[if lt IE 9]> <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script> <![endif]-->
     </head>
     <body ng-app="tierList">
-        <div class="wrapper">
-            <header class="container">
+        <div>
+            <header>
                 <h1 class="page_header">SIF Card Tiers</h1>
 
+                <div ng-controller="TabCtrl">
+                    <uib-tabset style="margin-bottom: 20px">
+                        <uib-tab ng-repeat="t in tabs" heading="{{t.heading}}" select="go(t.route)" active="t.active" ng-style="{'margin-left' : (t.heading=='All Cards') ? '25px' : '5px'}"></uib-tab>
+                    </uib-tabset>
+                </div>
             </header>
-            <div ng-controller="TabCtrl">
-                <uib-tabset style="margin-bottom: 20px">
-                    <uib-tab ng-repeat="t in tabs" heading="{{t.heading}}" select="go(t.route)" active="t.active" ng-style="{'margin-left' : (t.heading=='All Cards') ? '25px' : '5px'}"></uib-tab>
-                </uib-tabset>
-            </div>
-            <section class="container">
+            <section>
 
-                <div ui-view></div>
+                <div class="data-container" ui-view></div>
 
             </section>
-            <footer>
+            <!-- <footer>
                 <p>This project is maintained by
                     <a href="https://github.com/dreamsicl">dreamsicl</a>
                 </p>
@@ -52,7 +52,7 @@
                         <a href="https://github.com/orderedlist">orderedlist</a>
                     </small>
                 </p>
-            </footer>
+            </footer> -->
         </div>
 
     </body>

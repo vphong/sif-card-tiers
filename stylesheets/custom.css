@@ -30,3 +30,32 @@ td {
 table {
   font-size: 13px
 }
+.filter-container {
+    display: block;
+    height: 100%;
+    width: 250px;
+    float: left;
+    position: fixed;
+    padding: 0px 3px;
+}
+.tbl-cnt {
+  overflow: auto;
+  width: 100%;
+  height: calc(100% - 100px);
+}
+.table-container {
+    position: absolute;
+    left: 260px;
+    overflow: hidden;
+    width: calc(100vw - 260px);
+      height: calc(100vh - 126px);
+
+}
+.data-container {
+  height: calc(100vh - 130px);
+  position: relative;
+  /*overflow: hidden;*/
+}
+.well, .table {
+  margin-bottom: 0px
+}
