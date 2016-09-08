@@ -33,8 +33,9 @@ td {
     background-color: #fff
 }
 
-table {
-    font-size: 13px
+.table {
+    font-size: 13px;
+    margin: 0px;
 }
 
 .filter-header {
@@ -65,4 +66,14 @@ table {
 
 .btn-group>.btn:last-child:not(:first-child), .btn-group>.dropdown-toggle:not(:first-child) {
     border-top-right-radius: 0;
+}
+footer.well {
+  border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 0px;
+  margin-top: 20px;
+  margin-bottom: 0px
+}
+.table-responsive {
+  border: 1px solid #dfd7ca;
+  border-radius: 3px;
 }

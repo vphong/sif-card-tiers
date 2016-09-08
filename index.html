@@ -12,7 +12,6 @@
         <script src="https://rawgit.com/bsalex/angular-loading-overlay-http-interceptor/master/dist/angular-loading-overlay-http-interceptor.js"></script>
         <script src="https://angular-ui.github.io/ui-router/release/angular-ui-router.min.js"></script>
         <link rel="stylesheet" href="https://bootswatch.com/sandstone/bootstrap.min.css">
-        <link rel="stylesheet" href="stylesheets/ui-grid.css">
         <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-grid/3.2.6/ui-grid.min.js"></script>
         <script src="https://rawgit.com/grevory/angular-local-storage/master/dist/angular-local-storage.min.js"></script>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
@@ -27,33 +26,24 @@
 
         <!--[if lt IE 9]> <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script> <![endif]-->
     </head>
-    <body ng-app="tierList">
-        <div class="wrapper">
-            <header class="container">
+    <body ng-app="tierList" class="container">
+            <header ng-controller="TabCtrl">
                 <h1 class="page_header">SIF Card Tiers</h1>
 
+                    <uib-tabset style="margin-bottom: 20px">
+                        <uib-tab ng-repeat="t in tabs" heading="{{t.heading}}" select="go(t.route)" active="t.active" ng-style="{'margin-left' : (t.heading=='All Cards') ? '25px' : '5px'}"></uib-tab>
+                    </uib-tabset>
+
             </header>
-            <div ng-controller="TabCtrl">
-                <uib-tabset style="margin-bottom: 20px">
-                    <uib-tab ng-repeat="t in tabs" heading="{{t.heading}}" select="go(t.route)" active="t.active" ng-style="{'margin-left' : (t.heading=='All Cards') ? '25px' : '5px'}"></uib-tab>
-                </uib-tabset>
-            </div>
-            <section class="container">
+
+            <section>
 
                 <div ui-view></div>
 
             </section>
-            <footer>
-                <p>This project is maintained by
-                    <a href="https://github.com/dreamsicl">dreamsicl</a>
-                </p>
-                <p>
-                    <small>Hosted on GitHub Pages &mdash; Theme by
-                        <a href="https://github.com/orderedlist">orderedlist</a>
-                    </small>
-                </p>
+            <footer class="well">
+                <p>Changelog. Resources used.</p>
             </footer>
-        </div>
 
     </body>
 </html>

@@ -102,7 +102,7 @@
                     <i ng-show="sort.desc && sort.type=='skill.pl'" class="glyphicon glyphicon-chevron-down"></i>
                     <i ng-show="!sort.desc && sort.type=='skill.pl'" class="glyphicon glyphicon-chevron-up"></i>
                 </th>
-                <th class="num-header" ng-click="sortBy('skill.pl_sis')" ng-show="filters.compare=='pl'">SIS Bonus
+                <th class="num-header" ng-click="sortBy('skill.pl_sis')" ng-show="filters.compare=='pl'"><abbr title="School Idol Skill">SIS</abbr> Bonus
                     <i ng-show="sort.desc && sort.type=='skill.pl_sis'" class="glyphicon glyphicon-chevron-down"></i>
                     <i ng-show="!sort.desc && sort.type=='skill.pl_sis'" class="glyphicon glyphicon-chevron-up"></i>
                 </th>
@@ -110,7 +110,7 @@
                     <i ng-show="sort.desc && sort.type=='skill.hl'" class="glyphicon glyphicon-chevron-down"></i>
                     <i ng-show="!sort.desc && sort.type=='skill.hl'" class="glyphicon glyphicon-chevron-up"></i>
                 </th>
-                <th class="num-header" ng-click="sortBy('skill.su_sis')" ng-show="filters.compare=='sc'||filters.compare=='hl'">SU w/ SIS
+                <th class="num-header" ng-click="sortBy('skill.su_sis')" ng-show="filters.compare=='sc'||filters.compare=='hl'"><abbr title="Score Up">SU</abbr> w/ <abbr title="School Idol Skill">SIS</abbr>
                     <i ng-show="sort.desc && sort.type=='skill.su_sis'" class="glyphicon glyphicon-chevron-down"></i>
                     <i ng-show="!sort.desc && sort.type=='skill.su_sis'" class="glyphicon glyphicon-chevron-up"></i>
                 </th>
@@ -181,5 +181,3 @@
         </tbody>
     </table>
   </div>
-
-    <pre>card[0] details: {{cards[0]|json}}</pre>
