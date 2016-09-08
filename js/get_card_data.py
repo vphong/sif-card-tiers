@@ -176,12 +176,12 @@ def stat_to_mod(card, idlz):
 
 
 def cScore(stat):
-    logging.info("cScore(): Calculating cScore..")
+    # logging.info("cScore(): Calculating cScore..")
     return stat + (stat * (.09 + .03)) * 2
 
 
 def oScore(stat):
-    logging.info("oScore(): Calculating oScore..")
+    # logging.info("oScore(): Calculating oScore..")
     return stat + (stat * (.09 + .06)) * 2
 
 
@@ -195,9 +195,10 @@ def cleanCard(d, keys):
     else:
         ret['premium'] = False
 
-    # idol mini object
+    # idol mini object cleaning
     ret['name'] = ret['idol']['name']
     ret['sub_unit'] = ret['idol']['sub_unit']
+    ret['year'] = ret['idol']['year']
 
     if ret['name'] in aqours:
         ret['main_unit'] = "Aqours"
