@@ -1,7 +1,11 @@
 import urllib.request
 import json
+import os
+import logging
 
+logging.basicConfig(level=logging.INFO)
 
+## initalization
 baseURL = "http://schoolido.lu/api/cards/?ordering=-id&is_special=False&page_size=100&rarity=SR%2CSSR%2CUR"
 
 keysNeeded = ["skill_details", "attribute", "japan_only", "is_promo", "event",
@@ -19,7 +23,7 @@ muse = ["Toujou Nozomi", "Ayase Eli", "Yazawa Nico",
         "Kousaka Honoka", "Minami Kotori", "Sonoda Umi",
         "Hoshizora Rin", "Nishikino Maki", "Koizumi Hanayo"]
 
-
+# function: helper to determine if a string is a number
 def isnumber(s):
     try:
         float(s)
@@ -27,13 +31,10 @@ def isnumber(s):
     except ValueError:
         return False
 
-# TODO: make dict of card skill specifications
-
-
+# function: extract a card's skill details and write averages to card
 def skillDetails(card):
-    # given a card, extract:
-    # 0. skill type
-
+    logging.info("skillDetails(): initalization")
+    # initalization
     skill = {}
     skillNums = {}
     skill['type'] = card['skill']
@@ -41,9 +42,11 @@ def skillDetails(card):
     card['skill'] = {}
     card['skill']['type'] = skillType
 
+    # API bug: Fairyland Umi has incorrect skill value in API database
     if card['full_name'] == "SR Land of Fairies Sonoda Umi":
         card['skill_details'] = "For every 25 notes, there is a 35% chance stamina gets recovered by 3."
 
+    # promo skills
     if "Charm" in card['skill']['type']:
         card['skill']['type'] = "Score Up"
     elif "Yell" in card['skill']['type']:
@@ -51,11 +54,11 @@ def skillDetails(card):
     elif "Trick" in card['skill']['type']:
         card['skill']['type'] = "Perfect Lock"
 
-    # TODO: handle promo skills
 
+    # extract raw skill data from skill_details string
+    logging.info("skillDetails(): Processing skill_details...")
     numCount = 0
     skillWords = card['skill_details'].split()
-
     for word in skillWords:
 
         if "star" in card['skill_details']:
@@ -91,11 +94,7 @@ def skillDetails(card):
                 # 4. skill activation percentage
                 skillNums['activation_percent'] = float(word.strip("%")) / 100
 
-    # TODO: and calculate
-    # 4. score up value w/ and w/o Charm or Heel
-
-    # theoretical 550 note, 125 second song with 85% greats
-
+    # theoretical 550 note, 125 second song with 85% greats and 65 star notes
     timeActivation = (125 / skillNums['activation_count']) * skillNums[
         'activation_percent'] * skillNums['activation_value']
 
@@ -106,6 +105,7 @@ def skillDetails(card):
     card['skill']['pl_sis_idlz'] = 0
     card['skill']['hl'] = 0
 
+    logging.info("skillDetails(): Calculating average skill contribution...")
     if card['skill']['type'] == "Score Up":
 
         if skillNums['activation_type'] == "perfects":
@@ -145,15 +145,7 @@ def skillDetails(card):
 
         card['skill']['su_sis'] = card['skill']['hl'] * 270
 
-    # 5. perfect lock value
-
-    # 6. heal value
-
-    if card['full_name'] == "SR Land of Fairies Sonoda Umi":
-        print(card['skill_details'])
-        print(card['skill'])
-        print(skillNums)
-        print("=====")
+    logging.info("skillDetails(): done")
 
 
 # calculate stat base cScore and oScore off of
@@ -184,16 +176,17 @@ def stat_to_mod(card, idlz):
 
 
 def cScore(stat):
+    logging.info("cScore(): Calculating cScore..")
     return stat + (stat * (.09 + .03)) * 2
 
 
 def oScore(stat):
+    logging.info("oScore(): Calculating oScore..")
     return stat + (stat * (.09 + .06)) * 2
 
 
 def cleanCard(d, keys):
-    ret = d  # {key: d[key] for key in keys}
-
+    ret = {key: d[key] for key in keys}
     # origin
     if ret['event']:
         ret['event'] = True
@@ -204,6 +197,7 @@ def cleanCard(d, keys):
 
     # idol mini object
     ret['name'] = ret['idol']['name']
+    ret['sub_unit'] = ret['idol']['sub_unit']
 
     if ret['name'] in aqours:
         ret['main_unit'] = "Aqours"
@@ -221,60 +215,57 @@ def cleanCard(d, keys):
     ret['oScore_idlz'] = oScore(stat_to_mod(ret, True))
 
     # full name
-    ret['full_name'] = card['rarity']
-    if card['is_promo']:
-        ret['non_idolized_maximum_statistics_smile'] = card[
+    ret['full_name'] = ret['rarity']
+    if ret['is_promo']:
+        ret['non_idolized_maximum_statistics_smile'] = ret[
             'idolized_maximum_statistics_smile']
-        ret['non_idolized_maximum_statistics_pure'] = card[
+        ret['non_idolized_maximum_statistics_pure'] = ret[
             'idolized_maximum_statistics_pure']
-        ret['non_idolized_maximum_statistics_cool'] = card[
+        ret['non_idolized_maximum_statistics_cool'] = ret[
             'idolized_maximum_statistics_cool']
 
         ret['full_name'] = ret['full_name'] + " Promo"
     else:
-        if card['translated_collection']:
+        if ret['translated_collection']:
             ret['full_name'] = ret['full_name'] + \
-                " " + card['translated_collection']
+                " " + ret['translated_collection']
         else:
             ret['full_name'] = ret['full_name'] + " Unnamed"
 
-    ret['full_name'] = ret['full_name'] + " " + card['name']
+    ret['full_name'] = ret['full_name'] + " " + ret['name']
 
     # # skill
     # ret['skill'] = skillDetails(ret)
     # #print(ret['skill'])
     # ret.pop('skill_details',None)
 
+    if ret['translated_collection'] and "Maid" in ret['translated_collection']:
+        ret['translated_collection'] = "Café Maid"
+
+    ret['full_name'] = ret['rarity']
+    if ret['is_promo']:
+        ret['non_idolized_maximum_statistics_smile'] = ret[
+            'idolized_maximum_statistics_smile']
+        ret['non_idolized_maximum_statistics_pure'] = ret[
+            'idolized_maximum_statistics_pure']
+        ret['non_idolized_maximum_statistics_cool'] = ret[
+            'idolized_maximum_statistics_cool']
+
+        ret['full_name'] = ret['full_name'] + " Promo"
+    else:
+        if ret['translated_collection']:
+            ret['full_name'] = ret['full_name'] + \
+                " " + ret['translated_collection']
+        else:
+            ret['full_name'] = ret['full_name'] + " Unnamed"
+
+    ret['full_name'] = ret['full_name'] + " " + ret['name']
+
     return ret
 
 
-def addFullName(card):
-
-    if card['translated_collection'] and "Maid" in card['translated_collection']:
-        card['translated_collection'] = "Café Maid"
-
-    card['full_name'] = card['rarity']
-    if card['is_promo']:
-        card['non_idolized_maximum_statistics_smile'] = card[
-            'idolized_maximum_statistics_smile']
-        card['non_idolized_maximum_statistics_pure'] = card[
-            'idolized_maximum_statistics_pure']
-        card['non_idolized_maximum_statistics_cool'] = card[
-            'idolized_maximum_statistics_cool']
-
-        card['full_name'] = card['full_name'] + " Promo"
-    else:
-        if card['translated_collection']:
-            card['full_name'] = card['full_name'] + \
-                " " + card['translated_collection']
-        else:
-            card['full_name'] = card['full_name'] + " Unnamed"
-
-    card['full_name'] = card['full_name'] + " " + card['name']
-
-
 def getJSON(url):
-    print("getJSON(): currURL %s" % url)
+    logging.info("getJSON(): currURL %s" % url)
     response = urllib.request.urlopen(url)
     data = response.read()
     data = "".join(map(chr, data))
@@ -286,38 +277,53 @@ def getJSON(url):
 
 ###########
 
-with open('cardsJSON.js', 'r') as infile:
-    data = json.loads(infile.read())
+# function: get raw card data from schoolido.lu API
+def getRawCards():
+    ## initalization
+    logging.info("getRawCards(): begin")
+    data = getJSON(baseURL)
+    nextURL = data['next']
+    cards = data['results']
 
-cards = []
-
-
-for card in data:
-    addFullName(card)
-    skillDetails(card)
-    cards.append(card)
-
-# print(cards)
-# data = getJSON(baseURL)
-# nextURL = data['next']
-# cards = [];
-# for card in data['results']:
-#     cards.append(cleanCard(card,keysNeeded))
-# while nextURL:
-#
-#     data = getJSON(nextURL)
-#     nextURL = data['next']
-#     for card in data['results']:
-#         cards.append(cleanCard(card,keysNeeded))
-#
-#     print("len(cards) = %d" % len(cards))
-#     print("total cards = %d" % data['count'])
-#
-with open('cards.js', 'w') as f:
-    f.write("app.constant('CardData',\n")
-    json.dump(cards, f, sort_keys=True)
-    f.write("\n);")
+    ## iterate through API's paginated data
+    while nextURL:
+        data = getJSON(nextURL)
+        nextURL = data['next']
+        for card in data['results']:
+            cards.append(card)
 
 
-# while (nextURL):
-#     setData(data,nextURL, nextURL, cards);
+    ## write raw data to file
+    with open('js/cardsJSON.js', 'w') as f:
+        print("getRawCards(): Writing to js/cardsJSON.js...")
+        json.dump(cards, f, sort_keys=True)
+
+    logging.info("getRawCards(): done")
+
+
+# function: grab info needed for use in web app
+def processCards():
+    logging.info("processCards: begin")
+    # initalization
+    logging.info("processCards(): loading card data...")
+    with open('js/cardsJSON.js', 'r') as infile:
+        data = json.loads(infile.read())
+
+    cards = []
+    logging.info("processCards(): cleaning cards...")
+    for card in data:
+        card = cleanCard(card,keysNeeded)
+        # addFullName(card)
+        skillDetails(card)
+        cards.append(card)
+
+    # write to file with use for angular
+    logging.info("processCards(): done cleaning. writing to file...")
+    with open('js/cards.js', 'w') as f:
+        f.write("app.constant('CardData',\n")
+        json.dump(cards, f, sort_keys=True)
+        f.write("\n);")
+
+    logging.info("processCards(): done")
+
+processCards()
