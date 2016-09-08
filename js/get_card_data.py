@@ -5,7 +5,7 @@ import logging
 
 logging.basicConfig(level=logging.INFO)
 
-## initalization
+# initalization
 baseURL = "http://schoolido.lu/api/cards/?ordering=-id&is_special=False&page_size=100&rarity=SR%2CSSR%2CUR"
 
 keysNeeded = ["skill_details", "attribute", "japan_only", "is_promo", "event",
@@ -23,7 +23,18 @@ muse = ["Toujou Nozomi", "Ayase Eli", "Yazawa Nico",
         "Kousaka Honoka", "Minami Kotori", "Sonoda Umi",
         "Hoshizora Rin", "Nishikino Maki", "Koizumi Hanayo"]
 
+first = ["Hoshizora Rin", "Nishikino Maki", "Koizumi Hanayo",
+         "Kunikida Hanamaru", "Kurosawa Ruby", "Tsushima Yoshiko"]
+
+second = ["Takami Chika", "Sakurauchi Riko", "Watanabe You",
+          "Kousaka Honoka", "Minami Kotori", "Sonoda Umi", ]
+
+third = ["Toujou Nozomi", "Ayase Eli", "Yazawa Nico", "Ohara Mari",
+         "Kurosawa Dia", "Matsuura Kanan", ]
+
 # function: helper to determine if a string is a number
+
+
 def isnumber(s):
     try:
         float(s)
@@ -32,6 +43,8 @@ def isnumber(s):
         return False
 
 # function: extract a card's skill details and write averages to card
+
+
 def skillDetails(card):
     logging.info("skillDetails(): initalization")
     # initalization
@@ -53,7 +66,6 @@ def skillDetails(card):
         card['skill']['type'] = "Healer"
     elif "Trick" in card['skill']['type']:
         card['skill']['type'] = "Perfect Lock"
-
 
     # extract raw skill data from skill_details string
     logging.info("skillDetails(): Processing skill_details...")
@@ -198,14 +210,23 @@ def cleanCard(d, keys):
     # idol mini object cleaning
     ret['name'] = ret['idol']['name']
     ret['sub_unit'] = ret['idol']['sub_unit']
-    ret['year'] = ret['idol']['year']
 
+    ## main unit
     if ret['name'] in aqours:
         ret['main_unit'] = "Aqours"
     elif ret['name'] in muse:
         ret['main_unit'] = "Muse"
     else:
         ret['main_unit'] = "error"
+
+    ## year
+    if ret['name'] in first:
+        ret['year'] = "first"
+    elif ret['name'] in second:
+        ret['year'] = "second"
+    elif ret['name'] in third:
+        ret['year'] = "third"
+    print(ret['year'])
 
     ret.pop('idol', None)
 
@@ -280,21 +301,20 @@ def getJSON(url):
 
 # function: get raw card data from schoolido.lu API
 def getRawCards():
-    ## initalization
+    # initalization
     logging.info("getRawCards(): begin")
     data = getJSON(baseURL)
     nextURL = data['next']
     cards = data['results']
 
-    ## iterate through API's paginated data
+    # iterate through API's paginated data
     while nextURL:
         data = getJSON(nextURL)
         nextURL = data['next']
         for card in data['results']:
             cards.append(card)
 
-
-    ## write raw data to file
+    # write raw data to file
     with open('js/cardsJSON.js', 'w') as f:
         print("getRawCards(): Writing to js/cardsJSON.js...")
         json.dump(cards, f, sort_keys=True)
@@ -313,7 +333,7 @@ def processCards():
     cards = []
     logging.info("processCards(): cleaning cards...")
     for card in data:
-        card = cleanCard(card,keysNeeded)
+        card = cleanCard(card, keysNeeded)
         # addFullName(card)
         skillDetails(card)
         cards.append(card)
