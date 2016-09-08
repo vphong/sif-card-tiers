@@ -1,5 +1,5 @@
 var app = angular.module('tierList', ['ui.bootstrap',
-    'bsLoadingOverlay', 'bsLoadingOverlayHttpInterceptor','fsm',
+    'bsLoadingOverlay', 'bsLoadingOverlayHttpInterceptor', 'fsm',
     'ui.router', 'ui.grid', 'ui.grid.pagination', 'LocalStorageModule'
 ]);
 
@@ -19,9 +19,13 @@ app.config(function($stateProvider, $urlRouterProvider) {
         })
 
     .state("user", {
-        url: "/user",
-        templateUrl: "user_cards.html",
-    })
+            url: "/user",
+            templateUrl: "user_cards.html",
+        })
+        .state("info", {
+            url: "/info",
+            templateUrl: "user_cards.html",
+        })
 });
 
 app.controller('TabCtrl', function($rootScope, $scope, $state) {
@@ -32,6 +36,10 @@ app.controller('TabCtrl', function($rootScope, $scope, $state) {
     }, {
         heading: "User Cards",
         route: "user",
+        active: true
+    }, {
+        heading: "Info",
+        route: "info",
         active: true
     }, ];
 
@@ -61,19 +69,11 @@ app.run(function(bsLoadingOverlayService) {
     });
 });
 
-app.controller('TierCtrl', function($rootScope, $scope, localStorageService, uiGridConstants, $filter) {
-    $scope.filters = localStorageService.get('filters');
-    if (!$scope.filters) $scope.filters = $rootScope.InitFilters;
+app.factory('Cards', function($rootScope) {
+    var ret = {};
 
-    $scope.cards = localStorageService.get('cards');
-    if (!$scope.cards) $scope.cards = $rootScope.Cards;
-
-
-    $scope.filterCards = function() {
-        var filters = $scope.filters;
+    ret.filterCards = function(filters) {
         var cards = $rootScope.Cards;
-
-
         var card;
         var newCards = [];
         var len = cards.length;
@@ -97,19 +97,34 @@ app.controller('TierCtrl', function($rootScope, $scope, localStorageService, uiG
                 ((filters.premium && !card.event && !card.is_promo) ||
                     filters.event && card.event || filters.promo && card.is_promo) &&
 
-                ($scope.filters.compare == "sc" && card.skill.type ||
-                    $scope.filters.compare == "pl" && card.skill.type == "Perfect Lock" ||
-                    $scope.filters.compare == "hl" && card.skill.type == "Healer")
-                // &&
-                //
-                // (filters.muse && card.main_unit == "Muse" ||
-                //  filters.aqours && card.main_unit == "Aqours")
+                (filters.compare == "sc" && card.skill.type == "Score Up" ||
+                    filters.compare == "sc" && card.skill.type == "Healer" ||
+                    filters.compare == "pl" && card.skill.type == "Perfect Lock" ||
+                    filters.compare == "hl" && card.skill.type == "Healer") &&
+
+                (filters.muse && card.main_unit == "Muse" ||
+                    filters.aqours && card.main_unit == "Aqours")
             ) {
                 newCards.push(card);
             }
         }
+        return newCards;
+    }
 
-        $scope.cards = newCards;
+
+    return ret;
+})
+
+app.controller('TierCtrl', function($rootScope, $scope, Cards, localStorageService, uiGridConstants, $filter) {
+    $scope.filters = localStorageService.get('filters');
+    if (!$scope.filters) $scope.filters = $rootScope.InitFilters;
+
+    $scope.cards = localStorageService.get('cards');
+    if (!$scope.cards) $scope.cards = $rootScope.Cards;
+
+
+    $scope.filterCards = function() {
+        $scope.cards = Cards.filterCards($scope.filters);
         localStorageService.set('filters', $scope.filters);
         localStorageService.set('cards', $scope.cards);
     }
@@ -128,6 +143,11 @@ app.controller('TierCtrl', function($rootScope, $scope, localStorageService, uiG
         localStorageService.set('collapse', $scope.collapse)
     };
 
+    $scope.resetFilters = function() {
+        $scope.filters = $rootScope.InitFilters;
+        localStorageService.set('filters', $scope.filters);
+        $scope.filterCards()
+    }
 
     $scope.sort = localStorageService.get('sort');
     if (!$scope.sort) {
@@ -138,10 +158,7 @@ app.controller('TierCtrl', function($rootScope, $scope, localStorageService, uiG
     }
     $scope.sortBy = function(type) {
         $scope.sort.desc = ($scope.sort.type == type || $scope.sort.gen == type) ? !$scope.sort.desc : true;
-        console.log("($scope.sort.type != type) = " + ($scope.sort.type != type))
-        console.log("scope.sort.desc = " + $scope.sort.desc)
-        console.log("scope.sort.type = " + $scope.sort.type)
-        console.log("type = " + type)
+
         $scope.sort.type = type;
 
         if (type == 'smile' && $scope.filters.idlz) {
