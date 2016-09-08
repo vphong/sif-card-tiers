@@ -9,17 +9,15 @@
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
+  text-align: left
 }
 .num-header {
   max-width: 120px;
   cursor: pointer
 }
 td {
+    text-align: center;
     vertical-align: middle !important;
-}
-.list-inline {
-    display: flex;
-    justify-content: space-between;
 }
 .btn-group-justified>.btn {
     white-space: normal !important;
@@ -28,4 +26,7 @@ td {
 }
 #tbl {
   background-color: #fff
+}
+table {
+  font-size: 13px
 }

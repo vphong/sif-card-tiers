@@ -1,5 +1,5 @@
-<pre>todo: search by year, tier organization</pre>
-<div class="panel panel-default" bs-loading-overlay>
+<pre>todo: search by year, typeahead, tier organization, info page, functioning tabs</pre>
+<div class="panel panel-default">
     <div class="panel-heading" style="cursor: pointer" ng-click="collapsing()">Filters</div>
     <div class="panel-body" uib-collapse="collapse">
         <div class="col-sm-6 col-md-4">Server:<br>
@@ -59,8 +59,9 @@
     <span class="input-group-addon">
         <i class="glyphicon glyphicon-search"></i>
     </span>
-    <input type="text" class="form-control" ng-model="search" placeholder="search by card name" uib-typeahead="state for state in Typehead | filter:$viewValue | limitTo:8">
+    <input type="text" class="form-control" ng-model="search" placeholder="search by card" uib-typeahead="type for type in $root.Typeahead | filter:$viewValue | limitTo:8">
 </div>
+<pre>{{$root.Typeahead}}</pre>
 <div class="well well-sm"><small class="text-muted"><b>About searching:</b> Case insensitive. Supported: girl ("kotori", "Kurosawa Dia"), set name (from <a href="https://schoolido.lu">schoolido.lu</a>), year (), skill type, card attribute, main unit, subunit </small></div>
 
 
