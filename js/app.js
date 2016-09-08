@@ -20,6 +20,7 @@ app.config(function($stateProvider, $urlRouterProvider) {
 
     .state("user", {
             url: "/user",
+            controller: 'UserCtrl',
             templateUrl: "user_cards.html",
         })
         .state("info", {
@@ -69,8 +70,12 @@ app.run(function(bsLoadingOverlayService) {
     });
 });
 
-app.factory('Cards', function($rootScope) {
+app.factory('Cards', function($rootScope, $http) {
     var ret = {};
+
+    ret.getUrl = function(url) {
+        return $http.get(url)
+    }
 
     ret.filterCards = function(filters) {
         var cards = $rootScope.Cards;
@@ -116,11 +121,25 @@ app.factory('Cards', function($rootScope) {
 })
 
 app.controller('TierCtrl', function($rootScope, $scope, Cards, localStorageService, uiGridConstants, $filter) {
-    $scope.filters = localStorageService.get('filters');
-    if (!$scope.filters) $scope.filters = $rootScope.InitFilters;
 
-    $scope.cards = localStorageService.get('cards');
-    if (!$scope.cards) $scope.cards = $rootScope.Cards;
+    var init = function() {
+        $scope.filters = localStorageService.get('filters');
+        if (!$scope.filters) $scope.filters = $rootScope.InitFilters;
+
+        $scope.cards = localStorageService.get('cards');
+        if (!$scope.cards) $scope.cards = $rootScope.Cards;
+        $scope.sort = localStorageService.get('sort');
+        if (!$scope.sort) {
+            $scope.sort = {
+                type: 'cScore',
+                desc: true,
+                gen: ""
+            }
+        }
+
+        $scope.collapse = localStorageService.get('collapse');
+    }
+    init();
 
 
     $scope.filterCards = function() {
@@ -137,7 +156,6 @@ app.controller('TierCtrl', function($rootScope, $scope, Cards, localStorageServi
         }
     })
 
-    $scope.collapse = localStorageService.get('collapse');
     $scope.collapsing = function() {
         $scope.collapse = !$scope.collapse;
         localStorageService.set('collapse', $scope.collapse)
@@ -149,13 +167,6 @@ app.controller('TierCtrl', function($rootScope, $scope, Cards, localStorageServi
         $scope.filterCards()
     }
 
-    $scope.sort = localStorageService.get('sort');
-    if (!$scope.sort) {
-        $scope.sort = {
-            type: 'cScore',
-            desc: true,
-        }
-    }
     $scope.sortBy = function(type) {
         $scope.sort.desc = ($scope.sort.type == type || $scope.sort.gen == type) ? !$scope.sort.desc : true;
 
@@ -188,7 +199,27 @@ app.controller('TierCtrl', function($rootScope, $scope, Cards, localStorageServi
 
 });
 
-app.controller('UserCtrl', function($scope, $filter, Cards) {
+app.controller('UserCtrl',function($rootScope, $scope, Cards, localStorageService, uiGridConstants, $filter) {
+
+    var init = function() {
+        $scope.filters = localStorageService.get('filters');
+        if (!$scope.filters) $scope.filters = $rootScope.InitFilters;
+
+        $scope.cards = localStorageService.get('cards');
+        if (!$scope.cards) $scope.cards = $rootScope.Cards;
+        $scope.sort = localStorageService.get('sort');
+        if (!$scope.sort) {
+            $scope.sort = {
+                type: 'cScore',
+                desc: true,
+                gen: ""
+            }
+        }
+
+        $scope.collapse = localStorageService.get('collapse');
+    }
+    init();
+    
     $scope.sit = {};
     $scope.sit.user = "dreamsicl";
     var accUrlBase = "https://schoolido.lu/api/accounts/?owner__username=";
@@ -242,58 +273,5 @@ app.controller('UserCtrl', function($scope, $filter, Cards) {
         Cards.getUrl($scope.sit.ownedCardsUrl).success(getCardsSuccess);
     };
 
-    var stat_to_mod = function(card) {
-        if ($scope.filters.idlz && (card.attribute == "Pure"))
-            stat = card.idolized_maximum_statistics_pure;
-        else if (!$scope.filters.idlz && (card.attribute == "Pure"))
-            stat = card.non_idolized_maximum_statistics_pure;
-        else if ($scope.filters.idlz && (card.attribute == "Smile"))
-            stat = card.idolized_maximum_statistics_smile;
-        else if (!$scope.filters.idlz && (card.attribute == "Smile"))
-            stat = card.non_idolized_maximum_statistics_smile;
-        else if ($scope.filters.idlz && (card.attribute == "Cool"))
-            stat = card.idolized_maximum_statistics_cool;
-        else if (!$scope.filters.idlz && (card.attribute == "Cool"))
-            stat = card.non_idolized_maximum_statistics_cool;
-
-        // bond bonus
-        if ($scope.filters.idlz && card.rarity == "UR")
-            stat += 1000;
-        else if ((!$scope.filters.idlz && card.rarity == "UR") || ($scope.filters.idlz && card.rarity == "SR"))
-            stat += 500;
-        else if (!$scope.filters.idlz && card.rarity == "SR")
-            stat += 250;
-        return stat;
-    };
-    $scope.cScore = function(card) {
-        var statToMod = stat_to_mod(card);
-        card.cScore = statToMod + (statToMod * (.09 + .03)) * 2;;
-        return card.cScore;
-
-    }
-    $scope.oScore = function(card) {
-            var statToMod = stat_to_mod(card);
-            card.oScore = statToMod + (statToMod * (.09 + .06)) * 2;;
-            return card.oScore;
-
-        }
-        // ****** calculate skill contribution
-    $scope.skillContr = function(card) {
-        card.skill_contr = 0;
-        var notesActivation = (550 / card.skill_activation_num) * card.skill_activation_percent;
-        if (card.skill == "Score Up") {
-            // activation types: notes, time, combo string, perfects
-            if (card.skill_activation_type == "perfects") {
-                card.skill_contr = notesActivation * .85 * card.skill_activation;
-            } else if (card.skill_activation_type == "time") {
-                card.skill_contr = (125 / card.skill_activation_num) * card.skill_activation_percent * card.skill_activation;
-            } else { // notes or combo string
-                card.skill_contr = notesActivation * card.skill_activation;
-            }
-        } else if (card.skill == "Perfect Lock" || card.skill == "Healer") {
-            card.skill_contr = notesActivation * card.skill_activation;
-        }
-        return card.skill_contr
-    }
 
 });
