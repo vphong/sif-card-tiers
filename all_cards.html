@@ -61,8 +61,7 @@
     </span>
     <input type="text" class="form-control" ng-model="search" placeholder="search by card" uib-typeahead="type for type in $root.Typeahead | filter:$viewValue | limitTo:8">
 </div>
-<pre>{{$root.Typeahead}}</pre>
-<div class="well well-sm"><small class="text-muted"><b>About searching:</b> Case insensitive. Supported: girl ("kotori", "Kurosawa Dia"), set name (from <a href="https://schoolido.lu">schoolido.lu</a>), year (), skill type, card attribute, main unit, subunit </small></div>
+<div class="well well-sm"><small class="text-muted"><b>About searching:</b> Terms include: girl, attribute, skill type, main unit, subunit. Also supported: English <a href="https://schoolido.lu">schoolido.lu</a>) set name</small></div>
 
 
 <div class="table-responsive" id="tbl">
