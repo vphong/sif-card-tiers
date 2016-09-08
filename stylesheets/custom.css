@@ -3,30 +3,66 @@
     height: auto;
     vertical-align: middle !important;
 }
+
 .name-display {
-  min-width: 70px;
-  max-width: 200px;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  text-align: left
+    min-width: 70px;
+    max-width: 200px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    text-align: left
 }
+
 .num-header {
-  max-width: 120px;
-  cursor: pointer
+    max-width: 120px;
+    cursor: pointer
 }
+
 td {
     text-align: center;
     vertical-align: middle !important;
 }
+
 .btn-group-justified>.btn {
     white-space: normal !important;
     word-wrap: normal;
     overflow: hidden;
 }
+
 #tbl {
-  background-color: #fff
+    background-color: #fff
 }
+
 table {
-  font-size: 13px
+    font-size: 13px
+}
+
+.filter-header {
+    border-top-right-radius: 3px;
+    border-top-left-radius: 3px;
+    border: 1px solid #dfd7ca;
+    margin: 0px;
+    text-align: center;
+    background-color: #f8f5f0;
+    color: #98978b;
+    padding: 5px 0px;
+    font-size: 11px;
+    line-height: 22px;
+    font-weight: 500;
+    text-transform: uppercase;
+}
+
+.btn-group-justified {
+    margin-bottom: 10px;
+    border-radius: 0;
+    border-bottom-right-radius: 3px;
+    border-bottom-left-radius: 3px;
+}
+
+.btn-group>.btn:first-child:not(:last-child):not(.dropdown-toggle) {
+    border-top-left-radius: 0;
+}
+
+.btn-group>.btn:last-child:not(:first-child), .btn-group>.dropdown-toggle:not(:first-child) {
+    border-top-right-radius: 0;
 }
