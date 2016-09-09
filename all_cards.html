@@ -12,37 +12,42 @@
         <a href="https://schoolido.lu">schoolido.lu</a>
         set name.</small>
 </div>
-
 <div class="container-fluid">
 
     <div class="row">
 
         <div class="filter-group col-sm-12" uib-tooltip="Compare by Skill Type">
             <div class="btn-group btn-group-justified">
-                <label class="btn btn-success btn-sm" ng-model="filters.compare" ng-click="filterCards()" uib-btn-radio="'all'">All</label>
 
-                <label class="btn btn-success btn-sm" ng-model="filters.compare" ng-click="filterCards()" uib-btn-radio="'sc'">Score Up</label>
-                <label class="btn btn-success btn-sm" ng-model="filters.compare" ng-click="filterCards()" uib-btn-radio="'pl'">Perfect Lock</label>
-                <label class="btn btn-success btn-sm" ng-model="filters.compare" ng-click="filterCards()" uib-btn-radio="'hl'">Healer</label>
+                <label class="btn btn-success btn-sm" ng-model="filters.compare" ng-click="filterCards()" uib-btn-radio="'scorers'">Score Up</label>
+                <label class="btn btn-success btn-sm" ng-model="filters.compare" ng-click="filterCards()" uib-btn-radio="'perfect locks'">Perfect Lock</label>
+                <label class="btn btn-success btn-sm" ng-model="filters.compare" ng-click="filterCards()" uib-btn-radio="'healers'">Healer</label>
             </div>
         </div>
     </div>
+
     <div class="row">
 
-        <div class="filter-group col-sm-4" uib-tooltip="Idolized?">
+        <div class="filter-group col-sm-3">
+            <div class="btn-group btn-group-justified">
+                <label class="btn btn-danger btn-sm" ng-click="resetFilters()">Reset Filters</label>
+            </div>
+        </div>
+
+        <div class="filter-group col-sm-3" uib-tooltip="Idolized?">
             <div class="btn-group btn-group-justified">
                 <label class="btn btn-info btn-sm" ng-model="filters.idlz" ng-click="toggleIdlz()" uib-btn-radio="false">Unidolized</label>
                 <label class="btn btn-info btn-sm" ng-model="filters.idlz" ng-click="toggleIdlz()" uib-btn-radio="true">Idolized</label>
             </div>
         </div>
 
-        <div class="filter-group col-sm-4" uib-tooltip="Server">
+        <div class="filter-group col-sm-3" uib-tooltip="Server">
             <div class="btn-group btn-group-justified">
                 <label class="btn btn-info btn-sm" ng-model="filters.server" ng-click="filterCards()" uib-btn-radio="'jp'">Japan</label>
                 <label class="btn btn-info btn-sm" ng-model="filters.server" ng-click="filterCards()" uib-btn-radio="'en'">Global</label>
             </div>
         </div>
-        <div class="filter-group col-sm-4" uib-tooltip="Rarity">
+        <div class="filter-group col-sm-3" uib-tooltip="Rarity">
             <div class="btn-group btn-group-justified">
                 <label class="btn btn-info btn-sm" ng-model="filters.sr" ng-click="toggleBool(filters.sr);filterCards()" uib-btn-checkbox ng-required="filters.sr || filters.ssr || filters.ur">SR</label>
                 <label class="btn btn-info btn-sm" ng-model="filters.ssr" ng-click="toggleBool(filters.ssr);filterCards()" uib-btn-checkbox ng-required="filters.sr || filters.ssr || filters.ur">SSR</label>
@@ -140,84 +145,91 @@
 
         <tbody style="position: relative" bs-loading-overlay bs-loading-overlay-reference-id="table">
             <tr ng-if="cards.length==0">
-                <td colspan=10><span class="text-danger">No cards found.</span>
+                <td colspan=10>
+                    <span class="text-danger">No cards found.</span>
                     <span ng-show="err.rarity || err.main || err.origin">Please select a(n):
                         <span ng-show="err.rarity">
                             <b>rarity</b>
-                            (SR, SSR, UR)<span ng-show="err.rarity && (err.main || err.origin)">, </span><span ng-hide="err.rarity && (err.main || err.origin)">.</span>
+                            (SR, SSR, UR)<span ng-show="err.rarity && (err.main || err.origin)">,
+                            </span>
+                            <span ng-hide="err.rarity && (err.main || err.origin)">.</span>
                         </span>
-                        <span ng-show="err.main"><b>main unit</b>
-                            (μ's, Aqours)<span ng-show="err.main && err.origin">, </span><span ng-hide="err.main && err.origin">.</span>
+                        <span ng-show="err.main">
+                            <b>main unit</b>
+                            (μ's, Aqours)<span ng-show="err.main && err.origin">,
+                            </span>
+                            <span ng-hide="err.main && err.origin">.</span>
                         </span>
 
-                        <span ng-show="err.origin"><b>origin</b>
+                        <span ng-show="err.origin">
+                            <b>origin</b>
                             (Premium, Event, Promo).</span>
-                        </span>
                     </span>
-                    <span ng-hide="err.rarity || err.main || err.origin">Please check your search string and filters.</span>
-                    <a ng-click="resetFilters()">Reset filters?</a>
-                </td>
-            </tr>
-            <tr ng-repeat="card in cards| filter:search | orderBy:sort.type:sort.desc">
-                <td>{{sort.desc ? $index+1 : cards.length - $index}}</td>
-                <td>{{card.id}}</td>
-                <td class="name-display"><img ng-src="{{filters.idlz || card.is_promo ? card.round_card_idolized_image : card.round_card_image}}" class="display-image">
-                    <a href="{{card.website_url}}">
-                        <i ng-if="card.skill.type=='Score Up'" class="fa fa-level-up" uib-tooltip="Score Up"></i>
-                        <i ng-if="card.skill.type=='Healer'" class="fa fa-heart" uib-tooltip="Healer"></i>
-                        <i ng-if="card.skill.type=='Perfect Lock'" class="fa fa-lock" uib-tooltip="Perfect Lock"></i>
-                        <i ng-if="card.event" class="fa fa-star" uib-tooltip="Event Only"></i>
-                        {{card.full_name}}</a>
-                </td>
-                <td ng-show="filters.idlz">
-                    {{card.idolized_maximum_statistics_smile}}
-                </td>
-                <td ng-show="!filters.idlz">
-                    {{card.non_idolized_maximum_statistics_smile}}
-                </td>
-                <td ng-show="filters.idlz">
-                    {{card.idolized_maximum_statistics_pure}}
-                </td>
-                <td ng-show="!filters.idlz">
-                    {{card.non_idolized_maximum_statistics_pure}}
-                </td>
-                <td ng-show="filters.idlz">
-                    {{card.idolized_maximum_statistics_cool}}
-                </td>
-                <td ng-show="!filters.idlz">
-                    {{card.non_idolized_maximum_statistics_cool}}
-                </td>
-                <td ng-show="filters.idlz">
-                    {{card.cScore_idlz}}
-                </td>
-                <td ng-show="!filters.idlz">
-                    {{card.cScore}}
-                </td>
-                <td ng-show="filters.idlz">
-                    {{card.oScore_idlz}}
-                </td>
-                <td ng-show="!filters.idlz">
-                    {{card.oScore}}
-                </td>
-                <td ng-show="filters.compare=='sc'">
-                    {{card.skill.su |number:2}}
-                </td>
-                <td ng-show="filters.compare=='pl'">
-                    {{card.skill.pl |number:2}}
-                </td>
-                <td ng-show="filters.compare=='pl' && filters.idlz">
-                    {{card.skill.pl_sis_idlz |number:2}}
-                </td>
-                <td ng-show="filters.compare=='pl' && !filters.idlz">
-                    {{card.skill.pl_sis |number:2}}
-                </td>
-                <td ng-show="filters.compare=='hl'">
-                    {{card.skill.hl | number:2}}
-                </td>
-                <td ng-show="filters.compare=='sc'||filters.compare=='hl'">
-                    {{card.skill.su_sis |number:2}}
-                </td>
-            </tr>
-        </tbody>
-    </table>
+                </span>
+                <span ng-hide="err.rarity || err.main || err.origin">Please check your search string and filters.</span>
+                <a ng-click="resetFilters()">Reset filters?</a>
+            </td>
+        </tr>
+        <tr ng-repeat="card in cards| filter:search | orderBy:sort.type:sort.desc">
+            <td>{{sort.desc ? $index+1 : cards.length - $index}}</td>
+            <td>{{card.id}}</td>
+            <td class="name-display"><img ng-src="{{filters.idlz || card.is_promo ? card.round_card_idolized_image : card.round_card_image}}" class="display-image">
+                <a href="{{card.website_url}}">
+                    <i ng-if="card.skill.type=='Score Up'" class="fa fa-level-up" uib-tooltip="Score Up"></i>
+                    <i ng-if="card.skill.type=='Healer'" class="fa fa-heart" uib-tooltip="Healer"></i>
+                    <i ng-if="card.skill.type=='Perfect Lock'" class="fa fa-lock" uib-tooltip="Perfect Lock"></i>
+                    <i ng-if="card.event" class="fa fa-star" uib-tooltip="Event Only"></i>
+                    {{card.full_name}}</a>
+            </td>
+            <td ng-show="filters.idlz">
+                {{card.idolized_maximum_statistics_smile}}
+            </td>
+            <td ng-show="!filters.idlz">
+                {{card.non_idolized_maximum_statistics_smile}}
+            </td>
+            <td ng-show="filters.idlz">
+                {{card.idolized_maximum_statistics_pure}}
+            </td>
+            <td ng-show="!filters.idlz">
+                {{card.non_idolized_maximum_statistics_pure}}
+            </td>
+            <td ng-show="filters.idlz">
+                {{card.idolized_maximum_statistics_cool}}
+            </td>
+            <td ng-show="!filters.idlz">
+                {{card.non_idolized_maximum_statistics_cool}}
+            </td>
+            <td ng-show="filters.idlz">
+                {{card.cScore_idlz}}
+            </td>
+            <td ng-show="!filters.idlz">
+                {{card.cScore}}
+            </td>
+            <td ng-show="filters.idlz">
+                {{card.oScore_idlz}}
+            </td>
+            <td ng-show="!filters.idlz">
+                {{card.oScore}}
+            </td>
+            <td ng-show="filters.compare=='sc'">
+                {{card.skill.su |number:2}}
+            </td>
+            <td ng-show="filters.compare=='pl'">
+                {{card.skill.pl |number:2}}
+            </td>
+            <td ng-show="filters.compare=='pl' && filters.idlz">
+                {{card.skill.pl_sis_idlz |number:2}}
+            </td>
+            <td ng-show="filters.compare=='pl' && !filters.idlz">
+                {{card.skill.pl_sis |number:2}}
+            </td>
+            <td ng-show="filters.compare=='hl'">
+                {{card.skill.hl | number:2}}
+            </td>
+            <td ng-show="filters.compare=='sc'||filters.compare=='hl'">
+                {{card.skill.su_sis |number:2}}
+            </td>
+        </tr>
+    </tbody>
+</table>
 </div>

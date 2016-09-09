@@ -32,27 +32,52 @@
 </div>
 
 <div class="container-fluid">
-
+    <!-- skill type -->
     <div class="row">
 
         <div class="filter-group col-sm-12" uib-tooltip="Compare by Skill Type">
             <div class="btn-group btn-group-justified">
-                <label class="btn btn-success btn-sm" ng-model="filters.compare" ng-click="filterCards()" uib-btn-radio="'all'">All</label>
-
-                <label class="btn btn-success btn-sm" ng-model="filters.compare" ng-click="filterCards()" uib-btn-radio="'sc'">Score Up</label>
-                <label class="btn btn-success btn-sm" ng-model="filters.compare" ng-click="filterCards()" uib-btn-radio="'pl'">Perfect Locks</label>
-                <label class="btn btn-success btn-sm" ng-model="filters.compare" ng-click="filterCards()" uib-btn-radio="'hl'">Healers</label>
+                <label class="btn btn-success btn-sm" ng-model="filters.compare" ng-click="filterCards()" uib-btn-radio="'scorers'">Score Up</label>
+                <label class="btn btn-success btn-sm" ng-model="filters.compare" ng-click="filterCards()" uib-btn-radio="'perfect locks'">Perfect Locks</label>
+                <label class="btn btn-success btn-sm" ng-model="filters.compare" ng-click="filterCards()" uib-btn-radio="'healers'">Healers</label>
             </div>
         </div>
     </div>
+    <!-- attribute/origin/main unit -->
     <div class="row">
 
-        <div class="filter-group col-sm-6" uib-tooltip="Idolized?">
-            <div class="btn-group btn-group-justified">
-                <label class="btn btn-info btn-sm" ng-model="filters.idlz" ng-click="toggleIdlz()" uib-btn-radio="false">Unidolized</label>
-                <label class="btn btn-info btn-sm" ng-model="filters.idlz" ng-click="toggleIdlz()" uib-btn-radio="true">Idolized</label>
-            </div>
+      <div class="filter-group col-sm-5" uib-tooltip="Attribute">
+        <div class="btn-group btn-group-justified">
+          <label class="btn btn-danger btn-sm" ng-click="resetFilters()">Reset Filters</label>
         </div>
+      </div>
+            <div class="filter-group col-sm-5" uib-tooltip="Attribute">
+              <div class="btn-group btn-group-justified">
+                <label class="btn btn-info btn-sm" ng-model="filters.attribute" ng-click="filterCards()" uib-btn-radio="'all'">All</label>
+                <label class="btn btn-info btn-sm" ng-model="filters.attribute" ng-click="filterCards()" uib-btn-radio="'smile'">Smile</label>
+                <label class="btn btn-info btn-sm" ng-model="filters.attribute" ng-click="filterCards()" uib-btn-radio="'pure'">Pure</label>
+                <label class="btn btn-info btn-sm" ng-model="filters.attribute" ng-click="filterCards()" uib-btn-radio="'cool'">Cool</label>
+              </div>
+            </div>
+
+      <div class="filter-group col-sm-4" uib-tooltip="Origin">
+        <div class="btn-group btn-group-justified">
+          <label class="btn btn-info btn-sm" ng-model="filters.premium" ng-click="toggleBool(filters.premium);filterCards()" uib-btn-checkbox>Premium</label>
+          <label class="btn btn-info btn-sm" ng-model="filters.event" ng-click="toggleBool(filters.event);filterCards()" uib-btn-checkbox>Event</label>
+          <label class="btn btn-info btn-sm" ng-model="filters.promo" ng-click="toggleBool(filters.promo);filterCards()" uib-btn-checkbox>Promo</label>
+        </div>
+      </div>
+
+      <div class="filter-group col-sm-3" uib-tooltip="Main Unit">
+        <div class="btn-group btn-group-justified">
+          <label class="btn btn-info btn-sm" ng-model="filters.muse" ng-click="toggleBool(filters.muse);filterCards()" uib-btn-checkbox>Muse</label>
+          <label class="btn btn-info btn-sm" ng-model="filters.aqours" ng-click="toggleBool(filters.aqours);filterCards()" uib-btn-checkbox>Aqours</label>
+        </div>
+      </div>
+    </div>
+
+    <!-- idlz/rarity -->
+    <div class="row">
 
         <div class="filter-group col-sm-6" uib-tooltip="Rarity">
             <div class="btn-group btn-group-justified">
@@ -61,34 +86,16 @@
                 <label class="btn btn-info btn-sm" ng-model="filters.ur" ng-click="toggleBool(filters.ur);filterCards()" uib-btn-checkbox ng-required="filters.sr || filters.ssr || filters.ur">UR</label>
             </div>
         </div>
+
+        <div class="filter-group col-sm-6" uib-tooltip="Idolized?">
+            <div class="btn-group btn-group-justified">
+                <label class="btn btn-info btn-sm" ng-model="filters.idlz" ng-click="toggleIdlz()" uib-btn-radio="false">Unidolized</label>
+                <label class="btn btn-info btn-sm" ng-model="filters.idlz" ng-click="toggleIdlz()" uib-btn-radio="true">Idolized</label>
+            </div>
+        </div>
+
     </div>
 
-    <div class="row">
-
-        <div class="filter-group col-sm-5" uib-tooltip="Attribute">
-            <div class="btn-group btn-group-justified">
-                <label class="btn btn-info btn-sm" ng-model="filters.attribute" ng-click="filterCards()" uib-btn-radio="'all'">All</label>
-                <label class="btn btn-info btn-sm" ng-model="filters.attribute" ng-click="filterCards()" uib-btn-radio="'smile'">Smile</label>
-                <label class="btn btn-info btn-sm" ng-model="filters.attribute" ng-click="filterCards()" uib-btn-radio="'pure'">Pure</label>
-                <label class="btn btn-info btn-sm" ng-model="filters.attribute" ng-click="filterCards()" uib-btn-radio="'cool'">Cool</label>
-            </div>
-        </div>
-
-        <div class="filter-group col-sm-4" uib-tooltip="Origin">
-            <div class="btn-group btn-group-justified">
-                <label class="btn btn-info btn-sm" ng-model="filters.premium" ng-click="toggleBool(filters.premium);filterCards()" uib-btn-checkbox>Premium</label>
-                <label class="btn btn-info btn-sm" ng-model="filters.event" ng-click="toggleBool(filters.event);filterCards()" uib-btn-checkbox>Event</label>
-                <label class="btn btn-info btn-sm" ng-model="filters.promo" ng-click="toggleBool(filters.promo);filterCards()" uib-btn-checkbox>Promo</label>
-            </div>
-        </div>
-
-        <div class="filter-group col-sm-3" uib-tooltip="Main Unit">
-            <div class="btn-group btn-group-justified">
-                <label class="btn btn-info btn-sm" ng-model="filters.muse" ng-click="toggleBool(filters.muse);filterCards()" uib-btn-checkbox>Muse</label>
-                <label class="btn btn-info btn-sm" ng-model="filters.aqours" ng-click="toggleBool(filters.aqours);filterCards()" uib-btn-checkbox>Aqours</label>
-            </div>
-        </div>
-    </div>
 
 </div>
 
@@ -151,6 +158,17 @@
         </thead>
 
         <tbody style="position: relative" bs-loading-overlay bs-loading-overlay-reference-id="table">
+            <tr>
+                <td colspan=10 style="white-space: normal; text-align: justify"><b>Searching for:</b>
+                    skill - {{filters.compare}};
+
+                    attribute - {{filters.attribute}};
+                    from {{filters.originStr}};
+                    in <span ng-show="filters.muse">μ's</span><span ng-show="filters.muse && filters.aqours"> and </span><span ng-show="filters.aqours">Aqours</span>;
+                    rarity - {{filters.rarityStr}};
+                    {{filters.idlz ? "idolized" : "unidolized"}}
+                </span>
+            </tr>
             <tr ng-if="userCards.length==0">
                 <td colspan=10>
                     <span class="text-danger">No cards found.</span>

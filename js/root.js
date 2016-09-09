@@ -26,7 +26,7 @@ app.constant('InitFilters', {
     muse: true,
     aqours: true,
     idlz: false,
-    compare: "sc"
+    compare: "scorers"
 })
 
 app.run(function($rootScope, Typeahead, InitFilters, CardData) {

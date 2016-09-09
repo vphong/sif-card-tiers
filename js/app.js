@@ -5,7 +5,7 @@ var app = angular.module('tierList', ['ui.bootstrap', 'ui.router.tabs',
 
 app.factory('allHttpInterceptor', function(bsLoadingOverlayHttpInterceptorFactoryFactory) {
     return bsLoadingOverlayHttpInterceptorFactoryFactory({
-      referenceId: 'table'
+        referenceId: 'table'
     });
 });
 
@@ -103,10 +103,9 @@ app.factory('Cards', function($rootScope, $http) {
                 ((filters.premium && !card.event && !card.is_promo) ||
                     filters.event && card.event || filters.promo && card.is_promo) &&
 
-                (filters.compare == "all" && card.skill.type ||
-                    filters.compare == "sc" && (card.skill.type == "Score Up" || card.skill.type == "Healer") ||
-                    filters.compare == "pl" && card.skill.type == "Perfect Lock" ||
-                    filters.compare == "hl" && card.skill.type == "Healer") &&
+                (filters.compare == "scorers" && card.skill.type == "Score Up" ||
+                    filters.compare == "perfect locks" && card.skill.type == "Perfect Lock" ||
+                    filters.compare == "healers" && card.skill.type == "Healer") &&
 
                 (filters.muse && card.main_unit == "Muse" ||
                     filters.aqours && card.main_unit == "Aqours")
@@ -126,7 +125,7 @@ app.controller('TierCtrl', function($rootScope, $scope, Cards, localStorageServi
         if (!$scope.filters) $scope.filters = $rootScope.InitFilters;
 
         $scope.cards = localStorageService.get('cards');
-        if (!$scope.cards) $scope.cards = $rootScope.Cards;
+        if ($scope.cards.length==0) $scope.cards = $rootScope.Cards;
         $scope.sort = localStorageService.get('sort');
         if (!$scope.sort) {
             $scope.sort = {
@@ -146,12 +145,36 @@ app.controller('TierCtrl', function($rootScope, $scope, Cards, localStorageServi
     $scope.err.main = !$scope.filters.muse && !$scope.filters.aqours;
     $scope.filterCards = function() {
         $scope.cards = Cards.filterCards($scope.filters, $rootScope.Cards);
-        localStorageService.set('filters', $scope.filters);
         localStorageService.set('cards', $scope.cards);
 
         $scope.err.rarity = !$scope.filters.sr && !$scope.filters.ssr && !$scope.filters.ur;
         $scope.err.origin = !$scope.filters.premium && !$scope.filters.event && !$scope.filters.promo;
         $scope.err.main = !$scope.filters.muse && !$scope.filters.aqours;
+
+        $scope.filters.originStr = "";
+        if ($scope.filters.premium && $scope.filters.event && $scope.filters.promo)
+            $scope.filters.originStr = "premium scouting, events, promos";
+        else if ($scope.filters.premium && $scope.filters.event && !$scope.filters.promo)
+            $scope.filters.originStr = "premium scouting and events";
+        else if ($scope.filters.premium && !$scope.filters.event && $scope.filters.promo)
+            $scope.filters.originStr = "premium scouting and promos";
+        else if (!$scope.filters.premium && $scope.filters.event && $scope.filters.promo)
+            $scope.filters.originStr = "events and promos";
+        else if ($scope.filters.premium && !$scope.filters.event && !$scope.filters.promo)
+            $scope.filters.originStr = "premium scouting";
+        else if (!$scope.filters.premium && $scope.filters.event && !$scope.filters.promo)
+            $scope.filters.originStr = "events";
+        else if (!$scope.filters.premium && !$scope.filters.event && $scope.filters.promo)
+            $scope.filters.originStr = "promos";
+        localStorageService.set('filters', $scope.filters);
+
+    }
+
+    $scope.resetFilters = function() {
+        $scope.filters = $rootScope.InitFilters;
+        console.log($scope.filters)
+        console.log($rootScope.InitFilters)
+        $scope.filterCards();
     }
 
     $scope.$watch('filters.compare', function(n, o) {
@@ -318,6 +341,39 @@ app.controller('UserCtrl', function($rootScope, $scope, Cards, localStorageServi
         $scope.err.rarity = !$scope.filters.sr && !$scope.filters.ssr && !$scope.filters.ur;
         $scope.err.origin = !$scope.filters.premium && !$scope.filters.event && !$scope.filters.promo;
         $scope.err.main = !$scope.filters.muse && !$scope.filters.aqours;
+
+        $scope.filters.originStr = "";
+        if ($scope.filters.premium && $scope.filters.event && $scope.filters.promo)
+            $scope.filters.originStr = "premium scouting, events, and promos";
+        else if ($scope.filters.premium && $scope.filters.event && !$scope.filters.promo)
+            $scope.filters.originStr = "premium scouting and events";
+        else if ($scope.filters.premium && !$scope.filters.event && $scope.filters.promo)
+            $scope.filters.originStr = "premium scouting and promos";
+        else if (!$scope.filters.premium && $scope.filters.event && $scope.filters.promo)
+            $scope.filters.originStr = "events and promos";
+        else if ($scope.filters.premium && !$scope.filters.event && !$scope.filters.promo)
+            $scope.filters.originStr = "premium scouting";
+        else if (!$scope.filters.premium && $scope.filters.event && !$scope.filters.promo)
+            $scope.filters.originStr = "events";
+        else if (!$scope.filters.premium && !$scope.filters.event && $scope.filters.promo)
+            $scope.filters.originStr = "promos";
+
+        $scope.filters.rarityStr = "";
+        if ($scope.filters.sr && $scope.filters.ssr && $scope.filters.ur)
+            $scope.filters.rarityStr = "SRs, SSRs, and URs";
+        else if ($scope.filters.sr && !$scope.filters.ssr && $scope.filters.ur)
+            $scope.filters.rarityStr = "SRs and URs";
+        else if ($scope.filters.sr && $scope.filters.ssr && !$scope.filters.ur)
+            $scope.filters.rarityStr = "SRs and SSRs";
+        else if (!$scope.filters.sr && $scope.filters.ssr && $scope.filters.ur)
+            $scope.filters.rarityStr = "SSRs and URs";
+        else if ($scope.filters.sr && !$scope.filters.ssr && !$scope.filters.ur)
+            $scope.filters.rarityStr = "SRs";
+        else if (!$scope.filters.sr && $scope.filters.ssr && !$scope.filters.ur)
+            $scope.filters.rarityStr = "SSRs";
+        else if (!$scope.filters.sr && !$scope.filters.ssr && $scope.filters.ur)
+            $scope.filters.rarityStr = "URs";
+
 
     }
     $scope.$watch('filters.compare', function(n, o) {
