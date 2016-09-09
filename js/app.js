@@ -210,7 +210,7 @@ app.controller('UserCtrl', function($rootScope, $scope, Cards, localStorageServi
         if (!$scope.filters) $scope.filters = $rootScope.InitFilters;
 
         $scope.userCards = localStorageService.get('userCards');
-        if ($scope.userCards) $scope.userCards = [];
+        if (!$scope.userCards) $scope.userCards = [];
         $scope.sort = localStorageService.get('sort');
         if (!$scope.sort) {
             $scope.sort = {
@@ -222,7 +222,7 @@ app.controller('UserCtrl', function($rootScope, $scope, Cards, localStorageServi
 
         $scope.collapse = localStorageService.get('collapse');
         $scope.sit = localStorageService.get('sit');
-        if ($scope.sit) $scope.sit = {};
+        if (!$scope.sit) $scope.sit = {};
 
     }
     init();
@@ -242,7 +242,6 @@ app.controller('UserCtrl', function($rootScope, $scope, Cards, localStorageServi
     var oCardUrlBase = "https://schoolido.lu/api/ownedcards/?card__rarity=SR,SSR,UR&stored=deck&card__is_special=False&page_size=200&owner_account=";
     var getAccountsSuccess = function(data, status) {
         var accounts = data.results;
-          console.log(data)
         var len = accounts.length
         $scope.sit.accounts = [];
         var acc = {};
@@ -264,15 +263,18 @@ app.controller('UserCtrl', function($rootScope, $scope, Cards, localStorageServi
 
     $scope.chooseAccount = function() {
         $scope.sit.ownedCardsUrl = oCardUrlBase + $scope.sit.chosenAccount.id;
+        localStorageService.set('sit', $scope.sit)
+
     }
+    $scope.rawUserCards = {};
     var baseUserCards = [];
     var getCardsSuccess = function(data, status) {
-        var userCards = data.results;
+        $scope.rawUserCards = data.results;
         baseUserCards = [];
         var cardIDs = [];
-        var len = userCards.length
+        var len = $scope.rawUserCards.length
         for (var i = 0; i < len; i++) {
-            cardIDs.push(userCards[i].card)
+            cardIDs.push($scope.rawUserCards[i].card)
         }
         angular.forEach(cardIDs, function(id) {
             angular.forEach($rootScope.Cards, function(card) {
@@ -281,9 +283,22 @@ app.controller('UserCtrl', function($rootScope, $scope, Cards, localStorageServi
                 }
             });
         });
-        console.log(baseUserCards)
-        $scope.userCards = baseUserCards;
+        $scope.userCards = Cards.filterCards($scope.filters, baseUserCards);
         localStorageService.set('userCards', $scope.userCards)
+
+    };
+    // TODO: recalculate o-score/c-score from idolized/max bond status
+    // TODO: take away idlz toggle and show img only if user has idolized card
+
+    $scope.isIdlz = function() {
+        angular.forEach($scope.rawUserCards, function(rawUser) {
+            angular.forEach($scope.userCards, function(user) {
+                if (rawUser.idolized) {
+                    // $scope.userCards
+                }
+            });
+        });
+
     }
     $scope.getCards = function() {
         Cards.getUrl($scope.sit.ownedCardsUrl).success(getCardsSuccess);
@@ -296,16 +311,21 @@ app.controller('UserCtrl', function($rootScope, $scope, Cards, localStorageServi
 
     $scope.filterCards = function() {
         $scope.userCards = Cards.filterCards($scope.filters, baseUserCards);
-        console.log("baseUserCards.length = " + baseUserCards.length)
-        console.log("$scope.userCards.length = " + $scope.userCards.length)
         localStorageService.set('filters', $scope.filters);
-        localStorageService.set('cards', $scope.cards);
+        localStorageService.set('userCards', $scope.userCards);
 
         $scope.err.rarity = !$scope.filters.sr && !$scope.filters.ssr && !$scope.filters.ur;
         $scope.err.origin = !$scope.filters.premium && !$scope.filters.event && !$scope.filters.promo;
         $scope.err.main = !$scope.filters.muse && !$scope.filters.aqours;
 
     }
+    $scope.$watch('filters.compare', function(n, o) {
+        if (n != o) {
+            $scope.sort.type = 'cScore';
+            $scope.sort.gen = "";
+            localStorageService.set('sort', $scope.sort)
+        }
+    })
 
     $scope.sortBy = function(type) {
         $scope.sort.desc = ($scope.sort.type == type || $scope.sort.gen == type) ? !$scope.sort.desc : true;

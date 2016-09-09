@@ -172,8 +172,9 @@
                         <b>origin</b>
                         (Premium, Event, Promo).</span>
                 </span>
+
+                <span ng-hide="err.rarity || err.main || err.origin">Please check your search term and filters.</span>
             </span>
-            <span ng-hide="err.rarity || err.main || err.origin">Please check your search term and filters.</span>
             <a ng-click="resetFilters()">Reset filters?</a>
         </td>
     </tr>
