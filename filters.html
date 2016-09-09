@@ -4,59 +4,78 @@
     </span>
     <input type="text" class="form-control" ng-model="search" placeholder="search by card" uib-typeahead="type for type in $root.Typeahead | filter:$viewValue | limitTo:8">
 </div>
-<div class="well well-sm" style="margin-bottom: 5px"><small class="text-muted"><b>About searching:</b> Terms include: girl, attribute, skill type, main unit, subunit. Also supported: English <a href="https://schoolido.lu">schoolido.lu</a> set name.</small></div>
+<div class="well well-sm" style="margin-bottom: 5px">
+    <small class="text-muted">
+        <b>About searching:</b>
+        Terms include: girl, attribute, skill type, main unit, subunit. Also supported: English
+        <a href="https://schoolido.lu">schoolido.lu</a>
+        set name.</small>
+</div>
 
-<div class="panel panel-default">
-    <div class="panel-heading" style="cursor: pointer" ng-click="collapsing()">Filters</div>
-    <div class="panel-body container" uib-collapse="collapse">
-        <div class="col-sm-6 col-md-4"><h4 class="filter-header">Server</h4>
-            <div class="btn-group btn-group-justified">
-                <label class="btn btn-info btn-xs" ng-model="filters.server" ng-click="filterCards()" uib-btn-radio="'jp'">Japan</label>
-                <label class="btn btn-info btn-xs" ng-model="filters.server" ng-click="filterCards()" uib-btn-radio="'en'">Global</label>
-            </div>
-        </div>
-        <div class="col-sm-6 col-md-4"><h4 class="filter-header">Rarity</h4>
-            <div class="btn-group btn-group-justified">
-                <label class="btn btn-info btn-xs" ng-model="filters.sr" ng-click="toggleBool(filters.sr);filterCards()" uib-btn-checkbox>SR</label>
-                <label class="btn btn-info btn-xs" ng-model="filters.ssr" ng-click="toggleBool(filters.ssr);filterCards()" uib-btn-checkbox>SSR</label>
-                <label class="btn btn-info btn-xs" ng-model="filters.ur" ng-click="toggleBool(filters.ur);filterCards()" uib-btn-checkbox>UR</label>
-            </div>
-        </div>
-        <div class="col-sm-6 col-md-4"><h4 class="filter-header">Attribute</h4>
-            <div class="btn-group btn-group-justified">
-                <label class="btn btn-info btn-xs" ng-model="filters.attribute" ng-click="filterCards()" uib-btn-radio="'all'">All</label>
-                <label class="btn btn-info btn-xs" ng-model="filters.attribute" ng-click="filterCards()" uib-btn-radio="'smile'">Smile</label>
-                <label class="btn btn-info btn-xs" ng-model="filters.attribute" ng-click="filterCards()" uib-btn-radio="'pure'">Pure</label>
-                <label class="btn btn-info btn-xs" ng-model="filters.attribute" ng-click="filterCards()" uib-btn-radio="'cool'">Cool</label>
-            </div>
-        </div>
+<div class="container-fluid">
 
-        <div class="col-sm-6 col-md-4"><h4 class="filter-header">Origin</h4>
-            <div class="btn-group btn-group-justified">
-                <label class="btn btn-info btn-xs" ng-model="filters.premium" ng-click="toggleBool(filters.premium);filterCards()" uib-btn-checkbox>Premium</label>
-                <label class="btn btn-info btn-xs" ng-model="filters.event" ng-click="toggleBool(filters.event);filterCards()" uib-btn-checkbox>Event</label>
-                <label class="btn btn-info btn-xs" ng-model="filters.promo" ng-click="toggleBool(filters.promo);filterCards()" uib-btn-checkbox>Promo</label>
-            </div>
-        </div>
-        <div class="col-sm-6 col-md-4"><h4 class="filter-header">Idol Group</h4>
-            <div class="btn-group btn-group-justified">
-                <label class="btn btn-info btn-xs" ng-model="filters.muse" ng-click="toggleBool(filters.muse);filterCards()"uib-btn-checkbox>Muse</label>
-                <label class="btn btn-info btn-xs" ng-model="filters.aqours" ng-click="toggleBool(filters.aqours);filterCards()" uib-btn-checkbox>Aqours</label>
-            </div>
-        </div>
-        <div class="col-sm-6 col-md-4"><h4 class="filter-header">Skill</h4>
-            <div class="btn-group btn-group-justified">
-                <label class="btn btn-info btn-xs" ng-model="filters.compare" ng-click="compareType();filterCards()" uib-btn-radio="'sc'">Score Up</label>
-                <label class="btn btn-info btn-xs" ng-model="filters.compare" ng-click="compareType();filterCards()" uib-btn-radio="'pl'">Perfect Locks</label>
-                <label class="btn btn-info btn-xs" ng-model="filters.compare" ng-click="compareType();filterCards()" uib-btn-radio="'hl'">Healers</label>
-            </div>
-        </div>
+    <div class="row">
 
-        <div class="col-sm-6 col-md-4"><h4 class="filter-header">Idolized?</h4>
+        <div class="filter-group col-sm-12" uib-tooltip="Compare by Skill Type">
             <div class="btn-group btn-group-justified">
-                <label class="btn btn-info btn-xs" ng-model="filters.idlz" ng-click="toggleIdlz()" uib-btn-radio="false">Unidolized</label>
-                <label class="btn btn-info btn-xs" ng-model="filters.idlz" ng-click="toggleIdlz()" uib-btn-radio="true">Idolized</label>
+                <label class="btn btn-success btn-sm" ng-model="filters.compare" ng-click="filterCards()" uib-btn-radio="'all'">All</label>
+
+                <label class="btn btn-success btn-sm" ng-model="filters.compare" ng-click="filterCards()" uib-btn-radio="'sc'">Score Up</label>
+                <label class="btn btn-success btn-sm" ng-model="filters.compare" ng-click="filterCards()" uib-btn-radio="'pl'">Perfect Locks</label>
+                <label class="btn btn-success btn-sm" ng-model="filters.compare" ng-click="filterCards()" uib-btn-radio="'hl'">Healers</label>
             </div>
         </div>
     </div>
+    <div class="row">
+
+        <div class="filter-group col-sm-4" uib-tooltip="Idolized?">
+            <div class="btn-group btn-group-justified">
+                <label class="btn btn-info btn-sm" ng-model="filters.idlz" ng-click="toggleIdlz()" uib-btn-radio="false">Unidolized</label>
+                <label class="btn btn-info btn-sm" ng-model="filters.idlz" ng-click="toggleIdlz()" uib-btn-radio="true">Idolized</label>
+            </div>
+        </div>
+
+        <div class="filter-group col-sm-4" uib-tooltip="Server">
+            <div class="btn-group btn-group-justified">
+                <label class="btn btn-info btn-sm" ng-model="filters.server" ng-click="filterCards()" uib-btn-radio="'jp'">Japan</label>
+                <label class="btn btn-info btn-sm" ng-model="filters.server" ng-click="filterCards()" uib-btn-radio="'en'">Global</label>
+            </div>
+        </div>
+        <div class="filter-group col-sm-4" uib-tooltip="Rarity">
+            <div class="btn-group btn-group-justified">
+                <label class="btn btn-info btn-sm" ng-model="filters.sr" ng-click="toggleBool(filters.sr);filterCards()" uib-btn-checkbox ng-required="filters.sr || filters.ssr || filters.ur">SR</label>
+                <label class="btn btn-info btn-sm" ng-model="filters.ssr" ng-click="toggleBool(filters.ssr);filterCards()" uib-btn-checkbox ng-required="filters.sr || filters.ssr || filters.ur">SSR</label>
+                <label class="btn btn-info btn-sm" ng-model="filters.ur" ng-click="toggleBool(filters.ur);filterCards()" uib-btn-checkbox ng-required="filters.sr || filters.ssr || filters.ur">UR</label>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+
+        <div class="filter-group col-sm-5" uib-tooltip="Attribute">
+            <div class="btn-group btn-group-justified">
+                <label class="btn btn-info btn-sm" ng-model="filters.attribute" ng-click="filterCards()" uib-btn-radio="'all'">All</label>
+                <label class="btn btn-info btn-sm" ng-model="filters.attribute" ng-click="filterCards()" uib-btn-radio="'smile'">Smile</label>
+                <label class="btn btn-info btn-sm" ng-model="filters.attribute" ng-click="filterCards()" uib-btn-radio="'pure'">Pure</label>
+                <label class="btn btn-info btn-sm" ng-model="filters.attribute" ng-click="filterCards()" uib-btn-radio="'cool'">Cool</label>
+            </div>
+        </div>
+
+        <div class="filter-group col-sm-4" uib-tooltip="Origin">
+            <div class="btn-group btn-group-justified">
+                <label class="btn btn-info btn-sm" ng-model="filters.premium" ng-click="toggleBool(filters.premium);filterCards()" uib-btn-checkbox>Premium</label>
+                <label class="btn btn-info btn-sm" ng-model="filters.event" ng-click="toggleBool(filters.event);filterCards()" uib-btn-checkbox>Event</label>
+                <label class="btn btn-info btn-sm" ng-model="filters.promo" ng-click="toggleBool(filters.promo);filterCards()" uib-btn-checkbox>Promo</label>
+            </div>
+        </div>
+
+        <div class="filter-group col-sm-3" uib-tooltip="Main Unit">
+            <div class="btn-group btn-group-justified">
+                <label class="btn btn-info btn-sm" ng-model="filters.muse" ng-click="toggleBool(filters.muse);filterCards()" uib-btn-checkbox>Muse</label>
+                <label class="btn btn-info btn-sm" ng-model="filters.aqours" ng-click="toggleBool(filters.aqours);filterCards()" uib-btn-checkbox>Aqours</label>
+            </div>
+        </div>
+    </div>
+
+</div>
 </div>

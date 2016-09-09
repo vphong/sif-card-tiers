@@ -3,7 +3,7 @@
         <thead fsm-sticky-header scroll-body="#tbl" scroll-stop='0'>
             <tr style="background-color: #fff;overflow:auto">
                 <th>Rank</th>
-                <th ng-click="sortBy('id')">ID
+                <th class="num-header" ng-click="sortBy('id')">ID
                     <i ng-show="sort.desc && sort.type=='id'" class="glyphicon glyphicon-chevron-down"></i>
                     <i ng-show="!sort.desc && sort.type=='id'" class="glyphicon glyphicon-chevron-up"></i>
                 </th>
@@ -58,8 +58,22 @@
 
         <tbody>
             <tr ng-if="cards.length==0">
-                <td colspan=10>No cards returned. Check your search term and filters.
-                    <a href="#" ng-click="resetFilters()">Reset filters?</a>
+                <td colspan=10><span class="text-danger">No cards found.</span>
+                    <span ng-show="err.rarity || err.main || err.origin">Please select a(n):
+                        <span ng-show="err.rarity">
+                            <b>rarity</b>
+                            (SR, SSR, UR)<span ng-show="err.rarity && (err.main || err.origin)">, </span><span ng-hide="err.rarity && (err.main || err.origin)">.</span>
+                        </span>
+                        <span ng-show="err.main"><b>main unit</b>
+                            (μ's, Aqours)<span ng-show="err.main && err.origin">, </span><span ng-hide="err.main && err.origin">.</span>
+                        </span>
+
+                        <span ng-show="err.origin"><b>origin</b>
+                            (Premium, Event, Promo).</span>
+                        </span>
+                    </span>
+                    <span ng-hide="err.rarity || err.main || err.origin">Please check your search string and filters.</span>
+                    <a ng-click="resetFilters()">Reset filters?</a>
                 </td>
             </tr>
             <tr ng-repeat="card in cards| filter:search | orderBy:sort.type:sort.desc">

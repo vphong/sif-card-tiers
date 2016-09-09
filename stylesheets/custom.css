@@ -55,18 +55,8 @@ td {
 
 .btn-group-justified {
     margin-bottom: 10px;
-    border-radius: 0;
-    border-bottom-right-radius: 3px;
-    border-bottom-left-radius: 3px;
 }
 
-.btn-group>.btn:first-child:not(:last-child):not(.dropdown-toggle) {
-    border-top-left-radius: 0;
-}
-
-.btn-group>.btn:last-child:not(:first-child), .btn-group>.dropdown-toggle:not(:first-child) {
-    border-top-right-radius: 0;
-}
 footer.well {
   border-bottom-left-radius: 0px;
     border-bottom-right-radius: 0px;
@@ -76,4 +66,14 @@ footer.well {
 .table-responsive {
   border: 1px solid #dfd7ca;
   border-radius: 3px;
+}
+.tab-container {
+  margin-bottom: 10px;
+}
+.input-group select {
+  height: 100%;
+  width: 100%
+}
+.filter-group {
+  padding: 0px 5px !important;
 }

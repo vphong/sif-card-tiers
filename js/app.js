@@ -1,4 +1,4 @@
-var app = angular.module('tierList', ['ui.bootstrap',
+var app = angular.module('tierList', ['ui.bootstrap', 'ui.router.tabs',
     'bsLoadingOverlay', 'bsLoadingOverlayHttpInterceptor', 'fsm',
     'ui.router', 'ui.grid', 'ui.grid.pagination', 'LocalStorageModule'
 ]);
@@ -77,8 +77,7 @@ app.factory('Cards', function($rootScope, $http) {
         return $http.get(url)
     }
 
-    ret.filterCards = function(filters) {
-        var cards = $rootScope.Cards;
+    ret.filterCards = function(filters, cards) {
         var card;
         var newCards = [];
         var len = cards.length;
@@ -102,8 +101,8 @@ app.factory('Cards', function($rootScope, $http) {
                 ((filters.premium && !card.event && !card.is_promo) ||
                     filters.event && card.event || filters.promo && card.is_promo) &&
 
-                (filters.compare == "sc" && card.skill.type == "Score Up" ||
-                    filters.compare == "sc" && card.skill.type == "Healer" ||
+                (filters.compare == "all" && card.skill.type ||
+                    filters.compare == "sc" && (card.skill.type == "Score Up" || card.skill.type == "Healer") ||
                     filters.compare == "pl" && card.skill.type == "Perfect Lock" ||
                     filters.compare == "hl" && card.skill.type == "Healer") &&
 
@@ -141,11 +140,18 @@ app.controller('TierCtrl', function($rootScope, $scope, Cards, localStorageServi
     }
     init();
 
-
+    $scope.err = {};
+    $scope.err.rarity = !$scope.filters.sr && !$scope.filters.ssr && !$scope.filters.ur;
+    $scope.err.origin = !$scope.filters.premium && !$scope.filters.event && !$scope.filters.promo;
+    $scope.err.main = !$scope.filters.muse && !$scope.filters.aqours;
     $scope.filterCards = function() {
-        $scope.cards = Cards.filterCards($scope.filters);
+        $scope.cards = Cards.filterCards($scope.filters, $rootScope.Cards);
         localStorageService.set('filters', $scope.filters);
         localStorageService.set('cards', $scope.cards);
+
+        $scope.err.rarity = !$scope.filters.sr && !$scope.filters.ssr && !$scope.filters.ur;
+        $scope.err.origin = !$scope.filters.premium && !$scope.filters.event && !$scope.filters.promo;
+        $scope.err.main = !$scope.filters.muse && !$scope.filters.aqours;
     }
 
     $scope.$watch('filters.compare', function(n, o) {
@@ -199,14 +205,14 @@ app.controller('TierCtrl', function($rootScope, $scope, Cards, localStorageServi
 
 });
 
-app.controller('UserCtrl',function($rootScope, $scope, Cards, localStorageService, uiGridConstants, $filter) {
+app.controller('UserCtrl', function($rootScope, $scope, Cards, localStorageService, uiGridConstants, $filter) {
 
     var init = function() {
         $scope.filters = localStorageService.get('filters');
         if (!$scope.filters) $scope.filters = $rootScope.InitFilters;
 
-        $scope.cards = localStorageService.get('cards');
-        if (!$scope.cards) $scope.cards = $rootScope.Cards;
+        $scope.userCards = localStorageService.get('userCards');
+        if (!$scope.userCards) $scope.userCards = [];
         $scope.sort = localStorageService.get('sort');
         if (!$scope.sort) {
             $scope.sort = {
@@ -217,61 +223,123 @@ app.controller('UserCtrl',function($rootScope, $scope, Cards, localStorageServic
         }
 
         $scope.collapse = localStorageService.get('collapse');
+        $scope.sit = localStorageService.get('sit');
+        if (!$scope.sit) $scope.sit = {};
+
     }
     init();
-    
-    $scope.sit = {};
-    $scope.sit.user = "dreamsicl";
+
+    $scope.collapsing = function() {
+        $scope.collapse = !$scope.collapse;
+        localStorageService.set('collapse', $scope.collapse)
+    };
+
     var accUrlBase = "https://schoolido.lu/api/accounts/?owner__username=";
     $scope.updateUser = function() {
         $scope.sit.accountsUrl = accUrlBase + $scope.sit.user;
+        localStorageService.set('sit', $scope.sit)
     }
     $scope.updateUser();
 
-    var oCardUrlBase = "https://schoolido.lu/api/ownedcards/?expand_card&card__rarity=SR,SSR,UR&stored=deck&owner_account=";
+    var oCardUrlBase = "https://schoolido.lu/api/ownedcards/?card__rarity=SR,SSR,UR&stored=deck&card__is_special=False&page_size=200&owner_account=";
     var getAccountsSuccess = function(data, status) {
         var accounts = data.results;
         var len = accounts.length
-        $scope.sit.accountIDs = [];
-        $scope.sit.accountNames = [];
+        $scope.sit.accounts = [];
+        var acc = {};
         for (var i = 0; i < len; i++) {
-            $scope.sit.accountIDs.push(accounts[i].id);
-            $scope.sit.accountNames.push(accounts[i].nickname + " " + accounts[i].language);
+            acc = {
+                "name": accounts[i].nickname + " " + accounts[i].language,
+                "id": accounts[i].id,
+            }
+            console.log(acc)
+            $scope.sit.accounts.push(acc);
         }
-        $scope.sit.chosenAccountName = $scope.sit.accountNames[0];
-        $scope.sit.chosenAccountID = $scope.sit.accountIDs[0];
-        $scope.sit.ownedCardsUrl = oCardUrlBase + $scope.sit.chosenAccountID;
+        $scope.sit.chosenAccount = $scope.sit.accounts[0];
+        $scope.sit.ownedCardsUrl = oCardUrlBase + $scope.sit.chosenAccount.id;
+        localStorageService.set('sit', $scope.sit)
+
     }
-    var getAccounts = function() {
+    $scope.getAccounts = function() {
         Cards.getUrl($scope.sit.accountsUrl).success(getAccountsSuccess);
     };
-    getAccounts();
 
     $scope.chooseAccount = function() {
-        var i = 0;
-        var len = $scope.sit.accountNames.length;
-        while (i < len) {
-            if ($scope.sit.accountNames[i] == $scope.sit.chosenAccountName) {
-                $scope.sit.chosenAccountID = $scope.sit.accountIDs[i]
-                break;
-            } else i++;
-        }
-        $scope.sit.ownedCardsUrl = oCardUrlBase + $scope.sit.chosenAccountID;
+        $scope.sit.ownedCardsUrl = oCardUrlBase + $scope.sit.chosenAccount.id;
     }
 
-    $scope.cards = [];
+    var baseUserCards = [];
     var getCardsSuccess = function(data, status) {
         var userCards = data.results;
-        var len = userCards.length;
+        var cardIDs = [];
+        var len = userCards.length
         for (var i = 0; i < len; i++) {
-            $scope.cards.push(userCards[i].card);
+            cardIDs.push(userCards[i].card)
         }
-        $scope.cards = Card.cleanCards($scope.cards);
+        angular.forEach(cardIDs, function(id) {
+            angular.forEach($rootScope.Cards, function(card) {
+                if (id === card.id) {
+                    baseUserCards.push(card)
+                }
+            });
+        });
 
+        $scope.userCards = baseUserCards;
+        console.log("baseUserCards.length = " + baseUserCards.length)
+        console.log("$scope.userCards.length = " + $scope.userCards.length)
+
+        localStorageService.set('userCards', $scope.userCards)
     }
     $scope.getCards = function() {
         Cards.getUrl($scope.sit.ownedCardsUrl).success(getCardsSuccess);
     };
 
+    $scope.err = {};
+    $scope.err.rarity = !$scope.filters.sr && !$scope.filters.ssr && !$scope.filters.ur;
+    $scope.err.origin = !$scope.filters.premium && !$scope.filters.event && !$scope.filters.promo;
+    $scope.err.main = !$scope.filters.muse && !$scope.filters.aqours;
+
+    $scope.filterCards = function() {
+        $scope.userCards = Cards.filterCards($scope.filters, baseUserCards);
+        console.log("baseUserCards.length = " + baseUserCards.length)
+        console.log("$scope.userCards.length = " + $scope.userCards.length)
+        localStorageService.set('filters', $scope.filters);
+        localStorageService.set('cards', $scope.cards);
+
+        $scope.err.rarity = !$scope.filters.sr && !$scope.filters.ssr && !$scope.filters.ur;
+        $scope.err.origin = !$scope.filters.premium && !$scope.filters.event && !$scope.filters.promo;
+        $scope.err.main = !$scope.filters.muse && !$scope.filters.aqours;
+
+    }
+
+    $scope.sortBy = function(type) {
+        $scope.sort.desc = ($scope.sort.type == type || $scope.sort.gen == type) ? !$scope.sort.desc : true;
+
+        $scope.sort.type = type;
+
+        if (type == 'smile' && $scope.filters.idlz) {
+            $scope.sort.type = "idolized_maximum_statistics_smile";
+            $scope.sort.gen = "smile";
+        } else if (type == 'smile' && !$scope.filters.idlz) {
+            $scope.sort.type = "non_idolized_maximum_statistics_smile";
+            $scope.sort.gen = "smile";
+        } else if (type == 'pure' && $scope.filters.idlz) {
+            $scope.sort.type = "idolized_maximum_statistics_pure"
+            $scope.sort.gen = "pure";
+        } else if (type == 'pure' && !$scope.filters.idlz) {
+            $scope.sort.type = "non_idolized_maximum_statistics_pure"
+            $scope.sort.gen = "pure";
+        } else if (type == 'cool' && $scope.filters.idlz) {
+            $scope.sort.type = "idolized_maximum_statistics_cool"
+            $scope.sort.gen = "cool";
+        } else if (type == 'cool' && !$scope.filters.idlz) {
+            $scope.sort.type = "non_idolized_maximum_statistics_cool"
+            $scope.sort.gen = "cool";
+        } else if (type == 'su') {} else {
+            $scope.sort.gen = "";
+            $scope.sort.type = type;
+        }
+        localStorageService.set('sort', $scope.sort)
+    }
 
 });
