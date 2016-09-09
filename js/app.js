@@ -3,33 +3,15 @@ var app = angular.module('tierList', ['ui.bootstrap', 'ui.router.tabs',
     'ui.router', 'LocalStorageModule'
 ]);
 
-// bs loading overlay
-app.factory('viewInterceptor', function(bsLoadingOverlayHttpInterceptorFactoryFactory) {
+app.factory('allHttpInterceptor', function(bsLoadingOverlayHttpInterceptorFactoryFactory) {
     return bsLoadingOverlayHttpInterceptorFactoryFactory({
-      referenceId: 'view'
+      referenceId: 'table'
     });
 });
 
-app.factory('sitInterceptor', function(bsLoadingOverlayHttpInterceptorFactoryFactory) {
-	return bsLoadingOverlayHttpInterceptorFactoryFactory({
-		referenceId: 'sit',
-		requestsMatcher: function (requestConfig) {
-			return requestConfig.url.indexOf('schoolido') !== -1;
-		}
-	});
-});
-
 app.config(function($httpProvider) {
-	$httpProvider.interceptors.push('viewInterceptor');
-	$httpProvider.interceptors.push('sitInterceptor');
-})
-
-app.run(function(bsLoadingOverlayService) {
-	bsLoadingOverlayService.setGlobalConfig({
-		templateUrl: 'loading-overlay-template.html'
-	});
+    $httpProvider.interceptors.push('allHttpInterceptor');
 });
-
 
 app.run(function(bsLoadingOverlayService) {
     bsLoadingOverlayService.setGlobalConfig({
@@ -88,9 +70,7 @@ app.controller('TabCtrl', function($rootScope, $scope, $state) {
             tab.active = $scope.active(tab.route);
         });
     });
-
 });
-
 
 app.factory('Cards', function($rootScope, $http) {
     var ret = {};
