@@ -1,6 +1,6 @@
-<div class="col-xs-6">
+<div class="col-xs-8">
     <div class="input-group">
-        <input type="text" class="form-control" ng-model="sit.user" placeholder="schoolido.lu username" aria-label="...">
+        <input type="text" class="form-control" ng-model="sit.user" placeholder="schoolido.lu username" ng-change="updateUser()">
         <div class="input-group-btn">
             <button type="button" class="btn" uib-dropdown-toggle ng-click="getAccounts()">
                 Get accounts
@@ -8,9 +8,9 @@
         </div>
     </div>
 </div>
-<div class="col-xs-6">
+<div class="col-xs-4">
     <div class="input-group">
-        <select class="form-control" ng-model="sit.chosenAccount" ng-options="acc.name for acc in sit.accounts track by acc.id"></select>
+        <select class="form-control" ng-model="sit.chosenAccount" ng-change="chooseAccount()" ng-options="acc.name for acc in sit.accounts track by acc.id"></select>
         <div class="input-group-btn">
             <button type="button" class="btn" ng-click="getCards()">Get cards</button>
         </div>
@@ -37,11 +37,11 @@
 
         <div class="filter-group col-sm-12" uib-tooltip="Compare by Skill Type">
             <div class="btn-group btn-group-justified">
-                              <label class="btn btn-success btn-sm" ng-model="filters.compare" ng-click="compareType();filterCards()" uib-btn-radio="'sc'">Score Up</label>
+                <label class="btn btn-success btn-sm" ng-model="filters.compare" ng-click="filterCards()" uib-btn-radio="'all'">All</label>
 
-                <label class="btn btn-success btn-sm" ng-model="filters.compare" ng-click="compareType();filterCards()" uib-btn-radio="'sc'">Score Up</label>
-                <label class="btn btn-success btn-sm" ng-model="filters.compare" ng-click="compareType();filterCards()" uib-btn-radio="'pl'">Perfect Locks</label>
-                <label class="btn btn-success btn-sm" ng-model="filters.compare" ng-click="compareType();filterCards()" uib-btn-radio="'hl'">Healers</label>
+                <label class="btn btn-success btn-sm" ng-model="filters.compare" ng-click="filterCards()" uib-btn-radio="'sc'">Score Up</label>
+                <label class="btn btn-success btn-sm" ng-model="filters.compare" ng-click="filterCards()" uib-btn-radio="'pl'">Perfect Locks</label>
+                <label class="btn btn-success btn-sm" ng-model="filters.compare" ng-click="filterCards()" uib-btn-radio="'hl'">Healers</label>
             </div>
         </div>
     </div>
@@ -53,6 +53,7 @@
                 <label class="btn btn-info btn-sm" ng-model="filters.idlz" ng-click="toggleIdlz()" uib-btn-radio="true">Idolized</label>
             </div>
         </div>
+
         <div class="filter-group col-sm-6" uib-tooltip="Rarity">
             <div class="btn-group btn-group-justified">
                 <label class="btn btn-info btn-sm" ng-model="filters.sr" ng-click="toggleBool(filters.sr);filterCards()" uib-btn-checkbox ng-required="filters.sr || filters.ssr || filters.ur">SR</label>

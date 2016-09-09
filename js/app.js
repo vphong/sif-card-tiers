@@ -114,8 +114,6 @@ app.factory('Cards', function($rootScope, $http) {
         }
         return newCards;
     }
-
-
     return ret;
 })
 
@@ -212,7 +210,7 @@ app.controller('UserCtrl', function($rootScope, $scope, Cards, localStorageServi
         if (!$scope.filters) $scope.filters = $rootScope.InitFilters;
 
         $scope.userCards = localStorageService.get('userCards');
-        if (!$scope.userCards) $scope.userCards = [];
+        if ($scope.userCards) $scope.userCards = [];
         $scope.sort = localStorageService.get('sort');
         if (!$scope.sort) {
             $scope.sort = {
@@ -224,7 +222,7 @@ app.controller('UserCtrl', function($rootScope, $scope, Cards, localStorageServi
 
         $scope.collapse = localStorageService.get('collapse');
         $scope.sit = localStorageService.get('sit');
-        if (!$scope.sit) $scope.sit = {};
+        if ($scope.sit) $scope.sit = {};
 
     }
     init();
@@ -244,6 +242,7 @@ app.controller('UserCtrl', function($rootScope, $scope, Cards, localStorageServi
     var oCardUrlBase = "https://schoolido.lu/api/ownedcards/?card__rarity=SR,SSR,UR&stored=deck&card__is_special=False&page_size=200&owner_account=";
     var getAccountsSuccess = function(data, status) {
         var accounts = data.results;
+          console.log(data)
         var len = accounts.length
         $scope.sit.accounts = [];
         var acc = {};
@@ -252,7 +251,6 @@ app.controller('UserCtrl', function($rootScope, $scope, Cards, localStorageServi
                 "name": accounts[i].nickname + " " + accounts[i].language,
                 "id": accounts[i].id,
             }
-            console.log(acc)
             $scope.sit.accounts.push(acc);
         }
         $scope.sit.chosenAccount = $scope.sit.accounts[0];
@@ -267,10 +265,10 @@ app.controller('UserCtrl', function($rootScope, $scope, Cards, localStorageServi
     $scope.chooseAccount = function() {
         $scope.sit.ownedCardsUrl = oCardUrlBase + $scope.sit.chosenAccount.id;
     }
-
     var baseUserCards = [];
     var getCardsSuccess = function(data, status) {
         var userCards = data.results;
+        baseUserCards = [];
         var cardIDs = [];
         var len = userCards.length
         for (var i = 0; i < len; i++) {
@@ -283,11 +281,8 @@ app.controller('UserCtrl', function($rootScope, $scope, Cards, localStorageServi
                 }
             });
         });
-
+        console.log(baseUserCards)
         $scope.userCards = baseUserCards;
-        console.log("baseUserCards.length = " + baseUserCards.length)
-        console.log("$scope.userCards.length = " + $scope.userCards.length)
-
         localStorageService.set('userCards', $scope.userCards)
     }
     $scope.getCards = function() {
