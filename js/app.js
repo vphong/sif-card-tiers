@@ -1,10 +1,41 @@
 var app = angular.module('tierList', ['ui.bootstrap', 'ui.router.tabs',
     'bsLoadingOverlay', 'bsLoadingOverlayHttpInterceptor', 'fsm',
-    'ui.router', 'ui.grid', 'ui.grid.pagination', 'LocalStorageModule'
+    'ui.router', 'LocalStorageModule'
 ]);
 
-app.factory('allHttpInterceptor', function(bsLoadingOverlayHttpInterceptorFactoryFactory) {
-    return bsLoadingOverlayHttpInterceptorFactoryFactory();
+// bs loading overlay
+app.factory('viewInterceptor', function(bsLoadingOverlayHttpInterceptorFactoryFactory) {
+    return bsLoadingOverlayHttpInterceptorFactoryFactory({
+      referenceId: 'view'
+    });
+});
+
+app.factory('sitInterceptor', function(bsLoadingOverlayHttpInterceptorFactoryFactory) {
+	return bsLoadingOverlayHttpInterceptorFactoryFactory({
+		referenceId: 'sit',
+		requestsMatcher: function (requestConfig) {
+			return requestConfig.url.indexOf('schoolido') !== -1;
+		}
+	});
+});
+
+app.config(function($httpProvider) {
+	$httpProvider.interceptors.push('viewInterceptor');
+	$httpProvider.interceptors.push('sitInterceptor');
+})
+
+app.run(function(bsLoadingOverlayService) {
+	bsLoadingOverlayService.setGlobalConfig({
+		templateUrl: 'loading-overlay-template.html'
+	});
+});
+
+
+app.run(function(bsLoadingOverlayService) {
+    bsLoadingOverlayService.setGlobalConfig({
+        delay: 900, // Minimal delay to hide loading overlay in ms.
+        templateUrl: 'loading-overlay.html' // Template url for overlay element. If not specified - no overlay element is created.
+    });
 });
 
 app.config(function($stateProvider, $urlRouterProvider) {
@@ -57,18 +88,9 @@ app.controller('TabCtrl', function($rootScope, $scope, $state) {
             tab.active = $scope.active(tab.route);
         });
     });
+
 });
 
-app.config(function($httpProvider) {
-    $httpProvider.interceptors.push('allHttpInterceptor');
-});
-
-app.run(function(bsLoadingOverlayService) {
-    bsLoadingOverlayService.setGlobalConfig({
-        delay: 900, // Minimal delay to hide loading overlay in ms.
-        templateUrl: 'loading-overlay.html' // Template url for overlay element. If not specified - no overlay element is created.
-    });
-});
 
 app.factory('Cards', function($rootScope, $http) {
     var ret = {};
@@ -117,7 +139,7 @@ app.factory('Cards', function($rootScope, $http) {
     return ret;
 })
 
-app.controller('TierCtrl', function($rootScope, $scope, Cards, localStorageService, uiGridConstants, $filter) {
+app.controller('TierCtrl', function($rootScope, $scope, Cards, localStorageService, $filter) {
 
     var init = function() {
         $scope.filters = localStorageService.get('filters');
@@ -203,7 +225,7 @@ app.controller('TierCtrl', function($rootScope, $scope, Cards, localStorageServi
 
 });
 
-app.controller('UserCtrl', function($rootScope, $scope, Cards, localStorageService, uiGridConstants, $filter) {
+app.controller('UserCtrl', function($rootScope, $scope, Cards, localStorageService, $filter) {
 
     var init = function() {
         $scope.filters = localStorageService.get('filters');
@@ -288,8 +310,7 @@ app.controller('UserCtrl', function($rootScope, $scope, Cards, localStorageServi
 
     };
     // TODO: recalculate o-score/c-score from idolized/max bond status
-    // TODO: take away idlz toggle and show img only if user has idolized card
-
+    // TODO: take away idlz toggle and show img only if user has idolized cards
     $scope.isIdlz = function() {
         angular.forEach($scope.rawUserCards, function(rawUser) {
             angular.forEach($scope.userCards, function(user) {
