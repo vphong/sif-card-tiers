@@ -138,7 +138,7 @@
             </tr>
         </thead>
 
-        <tbody>
+        <tbody style="position: relative" bs-loading-overlay bs-loading-overlay-reference-id="table">
             <tr ng-if="cards.length==0">
                 <td colspan=10><span class="text-danger">No cards found.</span>
                     <span ng-show="err.rarity || err.main || err.origin">Please select a(n):
