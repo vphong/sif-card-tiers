@@ -115,6 +115,70 @@ app.factory('Cards', function($rootScope, $http) {
         }
         return newCards;
     }
+    var stat_to_mod = function(card, idlz) {
+        var stat = 0;
+
+        // grab base stat
+        if (card.attribute == "Smile" && idlz) {
+            stat = card.idolized_maximum_statistics_smile;
+        } else if (card.attribute == "Smile" && !idlz) {
+            stat = card.non_idolized_maximum_statistics_smile;
+        } else if (card.attribute == "Pure" && idlz) {
+            stat = card.idolized_maximum_statistics_pure;
+        } else if (card.attribute == "Pure" && !idlz) {
+            stat = card.non_idolized_maximum_statistics_pure;
+        } else if (card.attribute == "Cool" && idlz) {
+            stat = card.idolized_maximum_statistics_cool;
+        } else if (card.attribute == "Cool" && !idlz) {
+            stat = card.non_idolized_maximum_statistics_cool;
+        }
+
+        // add in bond
+        if (idlz && card.rarity == "UR") stat += 1000;
+        else if ((!idlz && card.rarity == "UR") || (idlz && card.rarity == "SR"))
+            stat += 500;
+        else if (!idlz && card.rarity == "SSR") stat += 375;
+        else if (idlz && card.rarity == "SSR") stat += 750;
+        else if (!idlz && card.rarity == "SR") stat += 250;
+
+        return stat;
+
+    }
+    ret.calcScores = function(cards, teamStrength) {
+        var len = cards.length
+        var card;
+        var unidlz_stat;
+        var idlz_stat;
+
+        for (var i = 0; i < len; i++) {
+            card = cards[i];
+            unidlz_stat = stat_to_mod(card, false);
+            idlz_stat = stat_to_mod(card, true);
+
+            // skill bonus
+            if (card.rarity == "SR") {
+                // unidlz: 2 slots
+                if (unidlz_stat < 4500) {
+                  // perfume x2
+                  unidlz_2 = unidlz_stat + 450*2
+                }
+                else {
+                  // ring x2
+                  unidlz_2 = unidlz_stat + (unidlz_stat * .1) * 2
+
+                }
+
+
+            }
+            else if (card.rarity == "SSR") {
+
+            }
+            else if (card.rarity == "UR") {
+
+            }
+        }
+
+    }
     return ret;
 })
 
@@ -125,7 +189,7 @@ app.controller('TierCtrl', function($rootScope, $scope, Cards, localStorageServi
         if (!$scope.filters) $scope.filters = $rootScope.InitFilters;
 
         $scope.cards = localStorageService.get('cards');
-        if ($scope.cards.length==0) $scope.cards = $rootScope.Cards;
+        if ($scope.cards.length == 0) $scope.cards = $rootScope.Cards;
         $scope.sort = localStorageService.get('sort');
         if (!$scope.sort) {
             $scope.sort = {
