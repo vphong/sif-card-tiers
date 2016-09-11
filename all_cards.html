@@ -200,16 +200,16 @@
                 {{card.non_idolized_maximum_statistics_cool}}
             </td>
             <td ng-show="filters.idlz">
-                {{card.cScore_idlz}}
+                {{card.cScore_idlz | number:2}}
             </td>
             <td ng-show="!filters.idlz">
-                {{card.cScore}}
+                {{card.cScore | number:2}}
             </td>
             <td ng-show="filters.idlz">
-                {{card.oScore_idlz}}
+                {{card.oScore_idlz | number:2}}
             </td>
             <td ng-show="!filters.idlz">
-                {{card.oScore}}
+                {{card.oScore | number:2}}
             </td>
             <td ng-show="filters.compare=='sc'">
                 {{card.skill.su |number:2}}

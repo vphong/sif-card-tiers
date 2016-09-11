@@ -127,7 +127,6 @@ def skillDetails(card):
             card['skill']['su'] = (550 / skillNums['activation_count']) * \
                 skillNums['activation_percent'] * skillNums['activation_value']
 
-
     elif card['skill']['type'] == "Perfect Lock":
 
         if (skillNums['activation_type']) == "seconds":
@@ -172,7 +171,7 @@ def stat_to_mod(card, idlz):
         stat += 500
     elif (not idlz) and card['rarity'] == "SR":
         stat += 250
-    elif !idlz and card['rarity'] == "SSR":
+    elif (not idlz) and card['rarity'] == "SSR":
         stat += 375
     elif idlz and card['rarity'] == "SSR":
         stat += 700
@@ -183,39 +182,46 @@ def stat_to_mod(card, idlz):
 def cScore(card):
     unidlz_stat = stat_to_mod(card, False)
     idlz_stat = stat_to_mod(card, True)
+    card['cScore_heel'] = 0
+    card['cScore_heel_idlz'] = 0
 
     # unidlz: 2/3/4
     # idlz: 3/4/5
 
     if card['rarity'] == "SR":
-        ##### unidolized SR: 2 skill slots
+        # unidolized SR: 2 skill slots
         # http://i.imgur.com/nsKMdvY.png
-        if unidlz_stat < 4500: # perfume
+        if unidlz_stat < 4500:  # perfume
 
             unidlz_stat += 450
-        else: # ring
+        else:  # ring
             unidlz_stat += unidlz_stat * 1.1
 
-
-        ##### idolzed SR: 3 skill slots
+        # idolzed SR: 3 skill slots
         # http://i.imgur.com/YQyqNhs.png
-        if idlz_stat < 4100: # kiss + perfume
+        if card['skill']['type'] == "Healer":
+            card['cScore_heel_idlz'] = idlz_stat + idlz_stat * \
+                (.09 + .03) * 2 + card['skill']['hl_heel']
+        if idlz_stat < 4100:  # kiss + perfume
             idlz_stat += idlz_stat * 1.1 + 450
 
-        else: # cross
+        else:  # cross
             idlz_stat += idlz_stat * 1.16
 
     elif card['rarity'] == "SSR":
-        ##### unidolzed SSR: 3 skill slots
+        # unidolzed SSR: 3 skill slots
         # http://i.imgur.com/YQyqNhs.png
-        if unidlz_stat < 4100: # kiss + perfume
+        if unidlz_stat < 4100:  # kiss + perfume
             unidlz_stat += unidlz_stat * 1.1 + 450
 
         else:  # cross
             unidlz_stat += unidlz_stat * 1.16
 
-
-        ##### idolized SSR: 4 skill slots
+        # idolized SSR: 4 skill slots
+        # calc heel (4 slots) cScore before modding stat
+        if card['skill']['type'] == "Healer":
+            card['cScore_heel_idlz'] = idlz_stat + idlz_stat * \
+                (.09 + .03) * 2 + card['skill']['hl_heel']
         if idlz_stat < 2000:
             # kiss + perfume
             idlz_stat += 200 + 450
@@ -227,10 +233,12 @@ def cScore(card):
             # kiss + cross
             idlz_stat += idlz_stat * 1.16 + 200
 
-
-
     elif card['rarity'] == "UR":
-        ##### unidolized UR: 4 skill slots
+        # unidolized UR: 4 skill slots
+        # calc heel (4 slots) cScore before modding stat
+        if card['skill']['type'] == "Healer":
+            card['cScore_heel'] = unidlz_stat + unidlz_stat * \
+                (.09 + .03) * 2 + card['skill']['hl_heel']
         if unidlz_stat < 2000:
             # kiss + perfume
             unidlz_stat += 200 + 450
@@ -242,8 +250,12 @@ def cScore(card):
             # kiss + cross
             unidlz_stat += unidlz_stat * 1.16 + 200
 
-
-        ##### idolized UR: 5 skill slots
+        # idolized UR: 5 skill slots
+        # calc heel cScore before modding stat
+        # heel (4) + kiss (1)
+        if card['skill']['type'] == "Healer":
+            card['cScore_heel_idlz'] = idlz_stat + \
+                (idlz_stat + 200) * (.09 + .03) * 2 + card['skill']['hl_heel']
         if idlz_stat < 3400:
             # kiss + perfume + ring
             idlz_stat += 200 + 450 + idlz_stat * 1.1
@@ -255,55 +267,60 @@ def cScore(card):
             # ring + cross
             idlz_stat += idlz_stat * 1.26
 
-    # add Score Up from card skill
-
-
     # account for team leader multipliers
     # on-attribute boost (9%), general main unit boost (3%), twice for player + guest
-    card['cScore'] = unidlz_stat + unidlz_stat * (.09 + .03) * 2
-    card['cScore_idlz'] = idlz_stat + idlz_stat * (.09 + .03) * 2
+    # finally, add Score Up from card skill
+    card['cScore'] = unidlz_stat + unidlz_stat * \
+        (.09 + .03) * 2 + card['skill']['su']
+    card['cScore_idlz'] = idlz_stat + idlz_stat * \
+        (.09 + .03) * 2 + card['skill']['su']
 
 
 def oScore(card):
     unidlz_stat = stat_to_mod(card, False)
     idlz_stat = stat_to_mod(card, True)
+    card['oScore_heel'] = 0
+    card['oScore_heel_idlz'] = 0
 
     # unidlz: 2/3/4
     # idlz: 4/4/5
 
     if card['rarity'] == "SR":
-        ##### unidolized SR: 2 skill slots
-        # http://i.imgur.com/nsKMdvY.png
-        if unidlz_stat < 4500: # perfume
+            # unidolized SR: 2 skill slots
+            # http://i.imgur.com/nsKMdvY.png
+        if unidlz_stat < 4500:  # perfume
+
             unidlz_stat += 450
-        else: # ring
+        else:  # ring
             unidlz_stat += unidlz_stat * 1.1
 
-
-        ##### idolzed SR: 4 skill slots
+        # idolzed SR: 3 skill slots
         # http://i.imgur.com/YQyqNhs.png
-        if idlz_stat < 2000:
-            # kiss + perfume
-            idlz_stat += 200 + 450
+        if card['skill']['type'] == "Healer":
+            card['oScore_heel_idlz'] = idlz_stat + idlz_stat * \
+                (.09 + .06) * 2 + card['skill']['hl_heel']
 
-        elif idlz_stat >= 2000 and idlz_stat < 4200:
-            # perfume + ring
-            idlz_stat += + idlz_stat * 1.1 + 450
-        else:
-            # kiss + cross
-            idlz_stat += idlz_stat * 1.16 + 200
+        if idlz_stat < 4100:  # kiss + perfume
+            idlz_stat += idlz_stat * 1.1 + 450
+
+        else:  # cross
+            idlz_stat += idlz_stat * 1.16
 
     elif card['rarity'] == "SSR":
-        ##### unidolzed SSR: 3 skill slots
+        # unidolzed SSR: 3 skill slots
         # http://i.imgur.com/YQyqNhs.png
-        if unidlz_stat < 4100: # kiss + perfume
+        if unidlz_stat < 4100:  # kiss + perfume
             unidlz_stat += unidlz_stat * 1.1 + 450
 
         else:  # cross
             unidlz_stat += unidlz_stat * 1.16
 
+        # idolized SSR: 4 skill slots
+        # calc heel (4 slots) cScore before modding stat
+        if card['skill']['type'] == "Healer":
+            card['oScore_heel_idlz'] = idlz_stat + idlz_stat * \
+                (.09 + .06) * 2 + card['skill']['hl_heel']
 
-        ##### idolized SSR: 4 skill slots
         if idlz_stat < 2000:
             # kiss + perfume
             idlz_stat += 200 + 450
@@ -315,10 +332,12 @@ def oScore(card):
             # kiss + cross
             idlz_stat += idlz_stat * 1.16 + 200
 
-
-
     elif card['rarity'] == "UR":
-        ##### unidolized UR: 4 skill slots
+        # unidolized UR: 4 skill slots
+        # calc heel (4 slots) cScore before modding stat
+        if card['skill']['type'] == "Healer":
+            card['oScore_heel'] = unidlz_stat + unidlz_stat * \
+                (.09 + .06) * 2 + card['skill']['hl_heel']
         if unidlz_stat < 2000:
             # kiss + perfume
             unidlz_stat += 200 + 450
@@ -330,8 +349,12 @@ def oScore(card):
             # kiss + cross
             unidlz_stat += unidlz_stat * 1.16 + 200
 
-
-        ##### idolized UR: 5 skill slots
+        # idolized UR: 5 skill slots
+        # calc heel cScore before modding stat
+        # heel (4) + kiss (1)
+        if card['skill']['type'] == "Healer":
+            card['oScore_heel_idlz'] = idlz_stat + \
+                (idlz_stat + 200) * (.09 + .06) * 2 + card['skill']['hl_heel']
         if idlz_stat < 3400:
             # kiss + perfume + ring
             idlz_stat += 200 + 450 + idlz_stat * 1.1
@@ -345,8 +368,12 @@ def oScore(card):
 
     # account for team leader multipliers
     # on-attribute boost (9%), general main unit boost (3%), twice for player + guest
-    card['cScore'] = unidlz_stat + unidlz_stat * (.09 + .06) * 2
-    card['cScore_idlz'] = idlz_stat + idlz_stat * (.09 + .06) * 2
+    # finally, add Score Up from card skill
+    card['oScore'] = unidlz_stat + unidlz_stat * \
+        (.09 + .06) * 2 + card['skill']['su']
+    card['oScore_idlz'] = idlz_stat + idlz_stat * \
+        (.09 + .06) * 2 + card['skill']['su']
+
 
 def cleanCard(d, keys):
     ret = {key: d[key] for key in keys}
@@ -377,14 +404,8 @@ def cleanCard(d, keys):
         ret['year'] = "second"
     elif ret['name'] in third:
         ret['year'] = "third"
-    print(ret['year'])
 
     ret.pop('idol', None)
-
-    # stats/scores
-    skillDetails(ret)
-    # oScore(ret)
-    # cScore(ret)
 
     # full name
     ret['full_name'] = ret['rarity']
@@ -432,6 +453,11 @@ def cleanCard(d, keys):
             ret['full_name'] = ret['full_name'] + " Unnamed"
 
     ret['full_name'] = ret['full_name'] + " " + ret['name']
+
+    # stats/scores
+    skillDetails(ret)
+    oScore(ret)
+    cScore(ret)
 
     return ret
 
@@ -491,7 +517,7 @@ def processCards():
     logging.info("processCards(): done cleaning. writing to file...")
     with open('js/cards.js', 'w') as f:
         f.write("app.constant('CardData',\n")
-        json.dump(cards, f, sort_keys=True)
+        json.dump(cards, f, indent=2, sort_keys=True)
         f.write("\n);")
 
     logging.info("processCards(): done")

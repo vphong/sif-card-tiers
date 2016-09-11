@@ -144,41 +144,7 @@ app.factory('Cards', function($rootScope, $http) {
         return stat;
 
     }
-    ret.calcScores = function(cards, teamStrength) {
-        var len = cards.length
-        var card;
-        var unidlz_stat;
-        var idlz_stat;
 
-        for (var i = 0; i < len; i++) {
-            card = cards[i];
-            unidlz_stat = stat_to_mod(card, false);
-            idlz_stat = stat_to_mod(card, true);
-
-            // skill bonus
-            if (card.rarity == "SR") {
-                // unidlz: 2 slots
-                if (unidlz_stat < 4500) {
-                  // perfume x2
-                  unidlz_2 = unidlz_stat + 450*2
-                }
-                else {
-                  // ring x2
-                  unidlz_2 = unidlz_stat + (unidlz_stat * .1) * 2
-
-                }
-
-
-            }
-            else if (card.rarity == "SSR") {
-
-            }
-            else if (card.rarity == "UR") {
-
-            }
-        }
-
-    }
     return ret;
 })
 
