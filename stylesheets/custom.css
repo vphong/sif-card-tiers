@@ -110,11 +110,11 @@ footer.well {
     margin-left: 0px;
 }
 
-.col-md-2>div.btn-group.btn-group-justified, .col-md-2>div.btn-group-vertical {
+.col-md-2>.container-fluid>div.btn-group.btn-group-justified, .col-md-2>.container-fluid>div.btn-group-vertical {
     margin-bottom: 10px;
 }
 
-.col-md-2>.filter-group>.btn>.btn-success {
+.col-md-2>.container-fluid>.filter-group>.btn>.btn-success {
     padding-left: 0px;
     padding-right: 0px;
 }
@@ -125,7 +125,7 @@ footer.well {
     padding-right: 0px;
 }
 
-.btn-group-vertical, .col-md-2>.btn-group-justified, .btn-group>.btn, .btn-group-vertical>.btn {
+.btn-group-vertical, .col-md-2>.container-fluid>.btn-group-justified, .btn-group>.btn, .btn-group-vertical>.btn {
     padding-left: 0px;
     padding-right: 0px;
 }
