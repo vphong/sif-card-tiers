@@ -15,7 +15,8 @@
 
 .num-header {
     max-width: 120px;
-    cursor: pointer
+    cursor: pointer;
+    text-align: center;
 }
 
 td {

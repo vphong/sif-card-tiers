@@ -155,13 +155,13 @@ app.controller('TierCtrl', function($rootScope, $scope, Cards, localStorageServi
         if (!$scope.filters) $scope.filters = $rootScope.InitFilters;
 
         $scope.cards = localStorageService.get('cards');
-        if ($scope.cards.length == 0) $scope.cards = $rootScope.Cards;
+        if (!$scope.cards) $scope.cards = $rootScope.Cards;
         $scope.sort = localStorageService.get('sort');
         if (!$scope.sort) {
             $scope.sort = {
                 type: 'cScore',
-                desc: true,
-                gen: ""
+                desc: false,
+                gen: "cScore"
             }
         }
 
@@ -200,17 +200,10 @@ app.controller('TierCtrl', function($rootScope, $scope, Cards, localStorageServi
 
     }
 
-    $scope.resetFilters = function() {
-        $scope.filters = $rootScope.InitFilters;
-        console.log($scope.filters)
-        console.log($rootScope.InitFilters)
-        $scope.filterCards();
-    }
-
     $scope.$watch('filters.compare', function(n, o) {
         if (n != o) {
             $scope.sort.type = 'cScore';
-            $scope.sort.gen = "";
+            $scope.sort.gen = "cScore";
             localStorageService.set('sort', $scope.sort)
         }
     })
@@ -223,7 +216,15 @@ app.controller('TierCtrl', function($rootScope, $scope, Cards, localStorageServi
     $scope.resetFilters = function() {
         $scope.filters = $rootScope.InitFilters;
         localStorageService.set('filters', $scope.filters);
+
+        $scope.sort = {
+            type: 'cScore',
+            desc: false,
+            gen: "cScore"
+        }
+
         $scope.filterCards()
+        $scope.sortBy('cScore');
     }
 
     $scope.sortBy = function(type) {
@@ -249,9 +250,21 @@ app.controller('TierCtrl', function($rootScope, $scope, Cards, localStorageServi
         } else if (type == 'cool' && !$scope.filters.idlz) {
             $scope.sort.type = "non_idolized_maximum_statistics_cool"
             $scope.sort.gen = "cool";
-        } else if (type == 'su') {} else {
+        } else {
+
             $scope.sort.gen = "";
             $scope.sort.type = type;
+
+            if (type == 'cScore') {
+                $scope.sort.gen = "cScore"
+                if ($scope.filters.idlz) $scope.sort.type = "cScore_idlz";
+                else $scope.sort.type = "cScore";
+            } else if (type == 'oScore') {
+                $scope.sort.gen = "oScore"
+                if ($scope.filters.idlz) $scope.sort.type = "oScore_idlz";
+                else $scope.sort.type = "oScore";
+
+            }
         }
         localStorageService.set('sort', $scope.sort)
     }
