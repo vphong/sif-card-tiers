@@ -164,10 +164,10 @@ app.controller('TierCtrl', function($rootScope, $scope, Cards, localStorageServi
 
     var init = function() {
         $scope.filters = localStorageService.get('filters');
-        if (!$scope.filters) $scope.filters = $rootScope.InitFilters;
+        if (!$scope.filters) $scope.filters = angular.copy($rootScope.InitFilters);
 
         $scope.cards = localStorageService.get('cards');
-        if (!$scope.cards) $scope.cards = $rootScope.Cards;
+        if (!$scope.cards) $scope.cards = angular.copy($rootScope.Cards);
         $scope.sort = localStorageService.get('sort');
         if (!$scope.sort) {
             $scope.sort = {
@@ -226,7 +226,7 @@ app.controller('TierCtrl', function($rootScope, $scope, Cards, localStorageServi
     };
 
     $scope.resetFilters = function() {
-        $scope.filters = $rootScope.InitFilters;
+        $scope.filters = angular.copy(InitFilters);
         localStorageService.set('filters', $scope.filters);
 
         $scope.sort = {
@@ -234,7 +234,6 @@ app.controller('TierCtrl', function($rootScope, $scope, Cards, localStorageServi
             desc: false,
             gen: "cScore"
         }
-
         $scope.filterCards()
         $scope.sortBy('cScore');
     }
@@ -250,7 +249,7 @@ app.controller('UserCtrl', function($rootScope, $scope, Cards, localStorageServi
 
     var init = function() {
         $scope.filters = localStorageService.get('filters');
-        if (!$scope.filters) $scope.filters = $rootScope.InitFilters;
+        if (!$scope.filters) $scope.filters = angular.copy($rootScope.InitFilters);
 
         $scope.userCards = localStorageService.get('userCards');
         if (!$scope.userCards) $scope.userCards = [];
@@ -401,6 +400,20 @@ app.controller('UserCtrl', function($rootScope, $scope, Cards, localStorageServi
             localStorageService.set('sort', $scope.sort)
         }
     })
+
+
+    $scope.resetFilters = function() {
+        $scope.filters = angular.copy(InitFilters);
+        localStorageService.set('filters', $scope.filters);
+
+        $scope.sort = {
+            type: 'cScore',
+            desc: false,
+            gen: "cScore"
+        }
+        $scope.filterCards()
+        $scope.sortBy('cScore');
+    }
 
     $scope.sortBy = function(type) {
         Cards.sortBy($scope.sort, $scope.filters.idlz, type)
