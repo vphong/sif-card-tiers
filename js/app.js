@@ -1,6 +1,6 @@
 var app = angular.module('tierList', ['ui.bootstrap', 'ui.router.tabs',
     'bsLoadingOverlay', 'bsLoadingOverlayHttpInterceptor', 'fsm',
-    'ui.router', 'LocalStorageModule', 'mgcrea.ngStrap' 
+    'ui.router', 'LocalStorageModule', 'mgcrea.ngStrap'
 ]);
 
 app.factory('allHttpInterceptor', function(bsLoadingOverlayHttpInterceptorFactoryFactory) {
@@ -268,6 +268,11 @@ app.controller('UserCtrl', function($rootScope, $scope, Cards, localStorageServi
 
     }
     init();
+
+    $scope.toggleIdlz = function() {
+      console.log($scope.filters.idlz)
+      localStorageService.set('filters', $scope.filters)
+    }
 
     $scope.collapsing = function() {
         $scope.collapse = !$scope.collapse;

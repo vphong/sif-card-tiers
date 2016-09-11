@@ -116,6 +116,12 @@ footer.well {
     padding-left: 0px;
     padding-right: 0px;
 }
+.square>.btn {
+  width: 50%
+}
+.square>.btn:first-child {
+  border-bottom-left-radius: 0px;
+}
 #search_table {
   z-index: -999;
   position:absolute;
