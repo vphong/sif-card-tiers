@@ -1,6 +1,6 @@
 var app = angular.module('tierList', ['ui.bootstrap', 'ui.router.tabs',
     'bsLoadingOverlay', 'bsLoadingOverlayHttpInterceptor', 'fsm',
-    'ui.router', 'LocalStorageModule', 
+    'ui.router', 'LocalStorageModule', 'mgcrea.ngStrap' 
 ]);
 
 app.factory('allHttpInterceptor', function(bsLoadingOverlayHttpInterceptorFactoryFactory) {

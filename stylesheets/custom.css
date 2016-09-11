@@ -95,7 +95,7 @@ footer.well {
 }
 
 @media(min-width:992px) {
-    .col-md-10 {
+    #search_table {
         left: 16.66666667%;
     }
 }
@@ -115,4 +115,8 @@ footer.well {
     border-radius: 0;
     padding-left: 0px;
     padding-right: 0px;
+}
+#search_table {
+  z-index: -999;
+  position:absolute;
 }
