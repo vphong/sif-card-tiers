@@ -115,35 +115,47 @@ app.factory('Cards', function($rootScope, $http) {
         }
         return newCards;
     }
-    var stat_to_mod = function(card, idlz) {
-        var stat = 0;
+    ret.sortBy = function(sort, idlz, type) {
+        sort.desc = (sort.type == type || sort.gen == type) ? !sort.desc : true;
 
-        // grab base stat
-        if (card.attribute == "Smile" && idlz) {
-            stat = card.idolized_maximum_statistics_smile;
-        } else if (card.attribute == "Smile" && !idlz) {
-            stat = card.non_idolized_maximum_statistics_smile;
-        } else if (card.attribute == "Pure" && idlz) {
-            stat = card.idolized_maximum_statistics_pure;
-        } else if (card.attribute == "Pure" && !idlz) {
-            stat = card.non_idolized_maximum_statistics_pure;
-        } else if (card.attribute == "Cool" && idlz) {
-            stat = card.idolized_maximum_statistics_cool;
-        } else if (card.attribute == "Cool" && !idlz) {
-            stat = card.non_idolized_maximum_statistics_cool;
+        sort.type = type;
+
+        if (type == 'smile' && idlz) {
+            sort.type = "idolized_maximum_statistics_smile";
+            sort.gen = "smile";
+        } else if (type == 'smile' && !idlz) {
+            sort.type = "non_idolized_maximum_statistics_smile";
+            sort.gen = "smile";
+        } else if (type == 'pure' && idlz) {
+            sort.type = "idolized_maximum_statistics_pure"
+            sort.gen = "pure";
+        } else if (type == 'pure' && !idlz) {
+            sort.type = "non_idolized_maximum_statistics_pure"
+            sort.gen = "pure";
+        } else if (type == 'cool' && idlz) {
+            sort.type = "idolized_maximum_statistics_cool"
+            sort.gen = "cool";
+        } else if (type == 'cool' && !idlz) {
+            sort.type = "non_idolized_maximum_statistics_cool"
+            sort.gen = "cool";
+        } else {
+
+            sort.gen = "";
+            sort.type = type;
+
+            if (type == 'cScore') {
+                sort.gen = "cScore"
+                if (idlz) sort.type = "cScore_idlz";
+                else sort.type = "cScore";
+            } else if (type == 'oScore') {
+                sort.gen = "oScore"
+                if (idlz) sort.type = "oScore_idlz";
+                else sort.type = "oScore";
+
+            }
         }
-
-        // add in bond
-        if (idlz && card.rarity == "UR") stat += 1000;
-        else if ((!idlz && card.rarity == "UR") || (idlz && card.rarity == "SR"))
-            stat += 500;
-        else if (!idlz && card.rarity == "SSR") stat += 375;
-        else if (idlz && card.rarity == "SSR") stat += 750;
-        else if (!idlz && card.rarity == "SR") stat += 250;
-
-        return stat;
-
     }
+
 
     return ret;
 })
@@ -228,44 +240,7 @@ app.controller('TierCtrl', function($rootScope, $scope, Cards, localStorageServi
     }
 
     $scope.sortBy = function(type) {
-        $scope.sort.desc = ($scope.sort.type == type || $scope.sort.gen == type) ? !$scope.sort.desc : true;
-
-        $scope.sort.type = type;
-
-        if (type == 'smile' && $scope.filters.idlz) {
-            $scope.sort.type = "idolized_maximum_statistics_smile";
-            $scope.sort.gen = "smile";
-        } else if (type == 'smile' && !$scope.filters.idlz) {
-            $scope.sort.type = "non_idolized_maximum_statistics_smile";
-            $scope.sort.gen = "smile";
-        } else if (type == 'pure' && $scope.filters.idlz) {
-            $scope.sort.type = "idolized_maximum_statistics_pure"
-            $scope.sort.gen = "pure";
-        } else if (type == 'pure' && !$scope.filters.idlz) {
-            $scope.sort.type = "non_idolized_maximum_statistics_pure"
-            $scope.sort.gen = "pure";
-        } else if (type == 'cool' && $scope.filters.idlz) {
-            $scope.sort.type = "idolized_maximum_statistics_cool"
-            $scope.sort.gen = "cool";
-        } else if (type == 'cool' && !$scope.filters.idlz) {
-            $scope.sort.type = "non_idolized_maximum_statistics_cool"
-            $scope.sort.gen = "cool";
-        } else {
-
-            $scope.sort.gen = "";
-            $scope.sort.type = type;
-
-            if (type == 'cScore') {
-                $scope.sort.gen = "cScore"
-                if ($scope.filters.idlz) $scope.sort.type = "cScore_idlz";
-                else $scope.sort.type = "cScore";
-            } else if (type == 'oScore') {
-                $scope.sort.gen = "oScore"
-                if ($scope.filters.idlz) $scope.sort.type = "oScore_idlz";
-                else $scope.sort.type = "oScore";
-
-            }
-        }
+        Cards.sortBy($scope.sort, $scope.filters.idlz, type)
         localStorageService.set('sort', $scope.sort)
     }
 
@@ -284,7 +259,7 @@ app.controller('UserCtrl', function($rootScope, $scope, Cards, localStorageServi
             $scope.sort = {
                 type: 'cScore',
                 desc: true,
-                gen: ""
+                gen: "cScore"
             }
         }
 
@@ -428,32 +403,7 @@ app.controller('UserCtrl', function($rootScope, $scope, Cards, localStorageServi
     })
 
     $scope.sortBy = function(type) {
-        $scope.sort.desc = ($scope.sort.type == type || $scope.sort.gen == type) ? !$scope.sort.desc : true;
-
-        $scope.sort.type = type;
-
-        if (type == 'smile' && $scope.filters.idlz) {
-            $scope.sort.type = "idolized_maximum_statistics_smile";
-            $scope.sort.gen = "smile";
-        } else if (type == 'smile' && !$scope.filters.idlz) {
-            $scope.sort.type = "non_idolized_maximum_statistics_smile";
-            $scope.sort.gen = "smile";
-        } else if (type == 'pure' && $scope.filters.idlz) {
-            $scope.sort.type = "idolized_maximum_statistics_pure"
-            $scope.sort.gen = "pure";
-        } else if (type == 'pure' && !$scope.filters.idlz) {
-            $scope.sort.type = "non_idolized_maximum_statistics_pure"
-            $scope.sort.gen = "pure";
-        } else if (type == 'cool' && $scope.filters.idlz) {
-            $scope.sort.type = "idolized_maximum_statistics_cool"
-            $scope.sort.gen = "cool";
-        } else if (type == 'cool' && !$scope.filters.idlz) {
-            $scope.sort.type = "non_idolized_maximum_statistics_cool"
-            $scope.sort.gen = "cool";
-        } else if (type == 'su') {} else {
-            $scope.sort.gen = "";
-            $scope.sort.type = type;
-        }
+        Cards.sortBy($scope.sort, $scope.filters.idlz, type)
         localStorageService.set('sort', $scope.sort)
     }
 
