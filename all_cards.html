@@ -1,5 +1,5 @@
 <!-- TODO: search by year, tier organization, info page, functioning tabs -->
-
+<pre>{{sort}}</pre>
 <div class="container-fluid row">
     <div class="hidden-md hidden-lg col-sm-12" id="filters-sm-screens">
 
@@ -182,17 +182,26 @@
                         </th>
                         <th class="num-header" ng-click="sortBy('skill.hl_heel')" ng-show="filters.compare=='healers'">
                             <abbr title="Score Up">SU</abbr>
-                            w/
-                            <abbr title="School Idol Skill">SIS</abbr>
+                            w/ Heel
                             <i ng-show="sort.desc && sort.type=='skill.hl_heel'" class="glyphicon glyphicon-chevron-down"></i>
                             <i ng-show="!sort.desc && sort.type=='skill.hl_heel'" class="glyphicon glyphicon-chevron-up"></i>
+                        </th>
+                        <th class="num-header" ng-click="sortBy('cScore_heel')" ng-show="filters.compare=='healers'">
+                            C-Score w/ Heel
+                            <i ng-show="sort.desc && sort.gen=='cScore_heel'" class="glyphicon glyphicon-chevron-down"></i>
+                            <i ng-show="!sort.desc && sort.gen=='cScore_heel'" class="glyphicon glyphicon-chevron-up"></i>
+                        </th>
+                        <th class="num-header" ng-click="sortBy('oScore_heel')" ng-show="filters.compare=='healers'">
+                            O-Score w/ Heel
+                            <i ng-show="sort.desc && sort.gen=='oScore_heel'" class="glyphicon glyphicon-chevron-down"></i>
+                            <i ng-show="!sort.desc && sort.gen=='oScore_heel'" class="glyphicon glyphicon-chevron-up"></i>
                         </th>
                     </tr>
                 </thead>
 
                 <tbody>
                     <tr ng-if="cards.length==0">
-                        <td colspan=10 style="word-wrap: normal">
+                        <td colspan=15 style="word-wrap: normal">
                             <span class="text-danger">No cards found.</span>
                             <span ng-if="filters.event && filters.compare=='healers'">There are no Healer Event cards.</span>
                             <span ng-show="err.rarity || err.main || err.origin">Please select a(n):
@@ -227,7 +236,6 @@
                                 popover-trigger="'mouseenter'"
                                 popover-enable="card.full_name=='SR Animal Yazawa Nico'||card.full_name=='SR Health Committee Minami Kotori'||card.full_name=='SR Animal Kousaka Honoka'">
                                 <span ng-if="card.full_name=='SR Animal Yazawa Nico'||card.full_name=='SR Health Committee Minami Kotori'||card.full_name=='SR Animal Kousaka Honoka'">
-
                                     <i class="fa fa-info-circle"></i>
                                 </span>
                                 <a href="{{card.website_url}}">
@@ -247,9 +255,20 @@
                         <td ng-show="filters.compare=='perfect locks'">{{card.skill.pl |number:2}}</td>
                         <td ng-show="filters.compare=='healers'">{{card.skill.hl | number:2}}</td>
                         <td ng-show="filters.compare=='healers'">{{card.skill.hl_heel |number:2}}</td>
-                    </tr>
-                </tbody>
-            </table>
+                        <td ng-show="filters.compare=='healers'">
+                          <span uib-popover="Cannot equip Heel to an unidolized SR or SSR. Turn on Idolized." popover-trigger="'mouseenter'" popover-enable="!filters.idlz && card.cScore_heel==0">
+                                    <i ng-if="!filters.idlz && card.cScore_heel==0" class="fa fa-warning text-danger"></i>
+                                {{filters.idlz ? card.cScore_heel_idlz : card.cScore_heel | number:2}}
+                              </span>
+                              </td>
+                            <td ng-show="filters.compare=='healers'">
+                          <span uib-popover="Cannot equip Heel to an unidolized SR or SSR. Turn on Idolized." popover-trigger="'mouseenter'" popover-enable="!filters.idlz && card.cScore_heel==0">
+                                    <i ng-if="!filters.idlz && card.cScore_heel==0" class="fa fa-warning text-danger"></i>
+                                {{filters.idlz ? card.oScore_heel_idlz : card.oScore_heel | number:2}}</td>
+                              </span>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
         </div>
     </div>
-</div>

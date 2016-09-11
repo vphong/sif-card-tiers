@@ -152,6 +152,15 @@ app.factory('Cards', function($rootScope, $http) {
                 if (idlz) sort.type = "oScore_idlz";
                 else sort.type = "oScore";
 
+            } else if (type == 'cScore_heel') {
+                sort.gen = "cScore_heel"
+                if (idlz) sort.type = "cScore_heel_idlz";
+                else sort.type = "cScore_heel";
+            } else if (type == 'oScore_heel') {
+                sort.gen = "oScore_heel"
+                if (idlz) sort.type = "oScore_heel_idlz";
+                else sort.type = "oScore_heel";
+
             }
         }
     }
@@ -270,8 +279,8 @@ app.controller('UserCtrl', function($rootScope, $scope, Cards, localStorageServi
     init();
 
     $scope.toggleIdlz = function() {
-      console.log($scope.filters.idlz)
-      localStorageService.set('filters', $scope.filters)
+        console.log($scope.filters.idlz)
+        localStorageService.set('filters', $scope.filters)
     }
 
     $scope.collapsing = function() {
