@@ -93,3 +93,26 @@ footer.well {
     background-color: rgba(0, 0, 0, 0.3);
     border-radius: 3px;
 }
+
+@media(min-width:992px) {
+    .col-md-10 {
+        left: 16.66666667%;
+    }
+}
+/*.col-md-2 {
+  height: calc(100vh - 120px);
+  overflow-y: auto;
+  overflow-x: hidden;
+  background-color: #f8f8f8
+}*/
+.col-md-2>.col-sm-12>.btn-group-justified,.col-md-2>.btn-group {
+  margin-bottom: 0px !important
+}
+.col-md-2>.filter-group {
+  margin-bottom: 10px;
+}
+.btn-group>.btn:not(:first-child):not(:last-child):not(.dropdown-toggle) {
+    border-radius: 0;
+    padding-left: 0px;
+    padding-right: 0px;
+}
