@@ -5,14 +5,14 @@
     </span>
     <input type="text" class="form-control" ng-model="search" placeholder="search by card" uib-typeahead="type for type in $root.Typeahead | filter:$viewValue | limitTo:8">
 </div>
-<div class="well well-sm" style="margin-bottom: 5px">
+<div class="well well-sm" style="margin-bottom: 20px">
     <small class="text-muted">
         <b>About searching:</b>
         Terms include: girl, attribute, skill type, main unit, subunit. Also supported: English
         <a href="https://schoolido.lu">schoolido.lu</a>
         set name.</small>
 </div>
-<div class="container-fluid">
+<div class="container-fluid" style="margin-bottom: 10px">
 
     <div class="row">
 
@@ -162,7 +162,7 @@
                     </span>
                 </span>
                 <span ng-hide="err.rarity || err.main || err.origin">Please check your search string and filters.</span>
-                <a ng-click="resetFilters()">Reset filters?</a>
+                <a style="cursor: pointer" ng-click="resetFilters()">Reset filters?</label>
             </td>
         </tr>
         <tr ng-repeat="card in cards| filter:search | orderBy:sort.type:sort.desc">

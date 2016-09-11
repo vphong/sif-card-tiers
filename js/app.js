@@ -226,7 +226,7 @@ app.controller('TierCtrl', function($rootScope, $scope, Cards, localStorageServi
     };
 
     $scope.resetFilters = function() {
-        $scope.filters = angular.copy(InitFilters);
+        $scope.filters = angular.copy($rootScope.InitFilters);
         localStorageService.set('filters', $scope.filters);
 
         $scope.sort = {
@@ -403,7 +403,7 @@ app.controller('UserCtrl', function($rootScope, $scope, Cards, localStorageServi
 
 
     $scope.resetFilters = function() {
-        $scope.filters = angular.copy(InitFilters);
+        $scope.filters = angular.copy($rootScope.InitFilters);
         localStorageService.set('filters', $scope.filters);
 
         $scope.sort = {
