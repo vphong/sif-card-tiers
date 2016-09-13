@@ -127,7 +127,7 @@
         <div id="search">
             <div class="input-group input-group-sm">
                 <span class="input-group-addon">
-                    <i class="glyphicon glyphicon-search"></i>
+                    <i class="fa fa-search"></i>
                 </span>
                 <input type="text" class="form-control" ng-model="search" placeholder="search by card" uib-typeahead="type for type in $root.Typeahead | filter:$viewValue | limitTo:8">
             </div>
@@ -148,59 +148,59 @@
                 <thead fix-head>
                     <tr>
                         <!-- <tr style="background-color: #fff;overflow:auto"> -->
-                        <th>Rank</th>
-                        <th>Card Name</th>
+                        <th style="position:absolute;width:30px;">Rank</th>
+                        <th style="position:absolute;width:200px;left:30px">Card Name</th>
                         <th class="num-header" ng-click="sortBy('id')">ID
-                            <i ng-show="sort.desc && sort.type=='id'" class="glyphicon glyphicon-chevron-down"></i>
-                            <i ng-show="!sort.desc && sort.type=='id'" class="glyphicon glyphicon-chevron-up"></i>
+                            <i ng-show="sort.desc && sort.type=='id'" class="fa fa-chevron-down"></i>
+                            <i ng-show="!sort.desc && sort.type=='id'" class="fa fa-chevron-up"></i>
                         </th>
                         <th class="num-header" ng-click="sortBy('smile')">Smile
-                            <i ng-show="sort.desc && sort.gen=='smile'" class="glyphicon glyphicon-chevron-down"></i>
-                            <i ng-show="!sort.desc && sort.gen=='smile'" class="glyphicon glyphicon-chevron-up"></i>
+                            <i ng-show="sort.desc && sort.gen=='smile'" class="fa fa-chevron-down"></i>
+                            <i ng-show="!sort.desc && sort.gen=='smile'" class="fa fa-chevron-up"></i>
                         </th>
                         <th class="num-header" ng-click="sortBy('pure')">Pure
-                            <i ng-show="sort.desc && sort.gen=='pure'" class="glyphicon glyphicon-chevron-down"></i>
-                            <i ng-show="!sort.desc && sort.gen=='pure'" class="glyphicon glyphicon-chevron-up"></i>
+                            <i ng-show="sort.desc && sort.gen=='pure'" class="fa fa-chevron-down"></i>
+                            <i ng-show="!sort.desc && sort.gen=='pure'" class="fa fa-chevron-up"></i>
                         </th>
                         <th class="num-header" ng-click="sortBy('cool')">Cool
-                            <i ng-show="sort.desc && sort.gen=='cool'" class="glyphicon glyphicon-chevron-down"></i>
-                            <i ng-show="!sort.desc && sort.gen=='cool'" class="glyphicon glyphicon-chevron-up"></i>
+                            <i ng-show="sort.desc && sort.gen=='cool'" class="fa fa-chevron-down"></i>
+                            <i ng-show="!sort.desc && sort.gen=='cool'" class="fa fa-chevron-up"></i>
                         </th>
                         <th class="num-header" style="min-width:80px" ng-click="sortBy('cScore')">C-Score
-                            <i ng-show="sort.desc && sort.gen=='cScore'" class="glyphicon glyphicon-chevron-down"></i>
-                            <i ng-show="!sort.desc && sort.gen=='cScore'" class="glyphicon glyphicon-chevron-up"></i>
+                            <i ng-show="sort.desc && sort.gen=='cScore'" class="fa fa-chevron-down"></i>
+                            <i ng-show="!sort.desc && sort.gen=='cScore'" class="fa fa-chevron-up"></i>
                         </th>
                         <th class="num-header" style="min-width:90px" ng-click="sortBy('oScore')">O-Score
-                            <i ng-show="sort.desc && sort.gen=='oScore'" class="glyphicon glyphicon-chevron-down"></i>
-                            <i ng-show="!sort.desc && sort.gen=='oScore'" class="glyphicon glyphicon-chevron-up"></i>
+                            <i ng-show="sort.desc && sort.gen=='oScore'" class="fa fa-chevron-down"></i>
+                            <i ng-show="!sort.desc && sort.gen=='oScore'" class="fa fa-chevron-up"></i>
                         </th>
                         <th class="num-header" style="min-width:90px" ng-click="sortBy('skill.su')" ng-show="filters.compare=='scorers'">Score Up
-                            <i ng-show="sort.desc && sort.type=='skill.su'" class="glyphicon glyphicon-chevron-down"></i>
-                            <i ng-show="!sort.desc && sort.type=='skill.su'" class="glyphicon glyphicon-chevron-up"></i>
+                            <i ng-show="sort.desc && sort.type=='skill.su'" class="fa fa-chevron-down"></i>
+                            <i ng-show="!sort.desc && sort.type=='skill.su'" class="fa fa-chevron-up"></i>
                         </th>
                         <th class="num-header" style="min-width:90px" ng-click="sortBy('skill.pl')" ng-show="filters.compare=='perfect locks'">PL Time
-                            <i ng-show="sort.desc && sort.type=='skill.pl'" class="glyphicon glyphicon-chevron-down"></i>
-                            <i ng-show="!sort.desc && sort.type=='skill.pl'" class="glyphicon glyphicon-chevron-up"></i>
+                            <i ng-show="sort.desc && sort.type=='skill.pl'" class="fa fa-chevron-down"></i>
+                            <i ng-show="!sort.desc && sort.type=='skill.pl'" class="fa fa-chevron-up"></i>
                         </th>
                         <th class="num-header" style="min-width:90px" ng-click="sortBy('skill.hl')" ng-show="filters.compare=='healers'">Avg. Heal
-                            <i ng-show="sort.desc && sort.type=='skill.hl'" class="glyphicon glyphicon-chevron-down"></i>
-                            <i ng-show="!sort.desc && sort.type=='skill.hl'" class="glyphicon glyphicon-chevron-up"></i>
+                            <i ng-show="sort.desc && sort.type=='skill.hl'" class="fa fa-chevron-down"></i>
+                            <i ng-show="!sort.desc && sort.type=='skill.hl'" class="fa fa-chevron-up"></i>
                         </th>
                         <th class="num-header" style="min-width:100px" ng-click="sortBy('skill.hl_heel')" ng-show="filters.compare=='healers'">
                             <abbr title="Score Up">SU</abbr>
                             w/ Heel
-                            <i ng-show="sort.desc && sort.type=='skill.hl_heel'" class="glyphicon glyphicon-chevron-down"></i>
-                            <i ng-show="!sort.desc && sort.type=='skill.hl_heel'" class="glyphicon glyphicon-chevron-up"></i>
+                            <i ng-show="sort.desc && sort.type=='skill.hl_heel'" class="fa fa-chevron-down"></i>
+                            <i ng-show="!sort.desc && sort.type=='skill.hl_heel'" class="fa fa-chevron-up"></i>
                         </th>
                         <th class="num-header" style="min-width:130px" ng-click="sortBy('cScore_heel')" ng-show="filters.compare=='healers'">
                             C-Score w/ Heel
-                            <i ng-show="sort.desc && sort.gen=='cScore_heel'" class="glyphicon glyphicon-chevron-down"></i>
-                            <i ng-show="!sort.desc && sort.gen=='cScore_heel'" class="glyphicon glyphicon-chevron-up"></i>
+                            <i ng-show="sort.desc && sort.gen=='cScore_heel'" class="fa fa-chevron-down"></i>
+                            <i ng-show="!sort.desc && sort.gen=='cScore_heel'" class="fa fa-chevron-up"></i>
                         </th>
                         <th class="num-header score-header" style="min-width:130px" ng-click="sortBy('oScore_heel')" ng-show="filters.compare=='healers'">
                             O-Score w/ Heel
-                            <i ng-show="sort.desc && sort.gen=='oScore_heel'" class="glyphicon glyphicon-chevron-down"></i>
-                            <i ng-show="!sort.desc && sort.gen=='oScore_heel'" class="glyphicon glyphicon-chevron-up"></i>
+                            <i ng-show="sort.desc && sort.gen=='oScore_heel'" class="fa fa-chevron-down"></i>
+                            <i ng-show="!sort.desc && sort.gen=='oScore_heel'" class="fa fa-chevron-up"></i>
                         </th>
                     </tr>
                 </thead>
