@@ -148,8 +148,8 @@
                 <thead fix-head>
                     <tr>
                         <!-- <tr style="background-color: #fff;overflow:auto"> -->
-                        <th style="position:absolute;width:30px;">Rank</th>
-                        <th style="position:absolute;width:200px;left:30px">Card Name</th>
+                        <th>Rank</th>
+                        <th>Card Name</th>
                         <th class="num-header" ng-click="sortBy('id')">ID
                             <i ng-show="sort.desc && sort.type=='id'" class="fa fa-chevron-down"></i>
                             <i ng-show="!sort.desc && sort.type=='id'" class="fa fa-chevron-up"></i>
@@ -233,7 +233,7 @@
                         </td>
                     </tr>
                     <tr ng-repeat="card in cards| filter:search | orderBy:sort.type:sort.desc">
-                        <td>{{sort.desc ? $index+1 : cards.length - $index}}</td>
+                        <td class="">{{sort.desc ? $index+1 : cards.length - $index}}</td>
                         <td class="name-display">
                          <div class="media">
                           <div class="media-left"><img ng-src="{{filters.idlz || card.is_promo ? card.round_card_idolized_image : card.round_card_image}}" class="display-image media-image">

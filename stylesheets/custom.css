@@ -140,3 +140,12 @@ footer.well {
 .clone {
   table-layout: fixed;
 }
+.fixed-first-col {
+  position: absolute;
+  width: 70px;
+}
+.fixed-second-col {
+  position: absolute;
+  width: 200px;
+  left: 70px;
+}
