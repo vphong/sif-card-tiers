@@ -102,7 +102,7 @@ footer.well {
 }
 @media(min-width:992px) {
     #search_table {
-        left: 16.66666667%;
+        left: 20%;
         position: absolute;
     }
 }
@@ -148,4 +148,12 @@ footer.well {
   position: absolute;
   width: 200px;
   left: 70px;
+}
+.table-container {
+  display: flex;
+  display: -webkit-flex;
+  flex-direction: column;
+  -webkit-flex-direction: column;
+  max-height: 400px;
+  overflow-x: auto; width: 100%
 }

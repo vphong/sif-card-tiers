@@ -25,25 +25,29 @@ app.config(function($stateProvider, $urlRouterProvider) {
     $urlRouterProvider.otherwise("/all");
 
     $stateProvider
-        .state("all", {
+
+        .state("home", {
             url: "/",
+            templateUrl: "info.html",
+        })
+        .state("all", {
+            url: "/all",
             controller: 'TierCtrl',
             templateUrl: "all_cards.html",
         })
-
-    .state("user", {
+        .state("user", {
             url: "/user",
             controller: 'UserCtrl',
-            templateUrl: "user_cards.html",
-        })
-        .state("info", {
-            url: "/info",
             templateUrl: "user_cards.html",
         })
 });
 
 app.controller('TabCtrl', function($rootScope, $scope, $state) {
     $scope.tabs = [{
+        heading: "Home",
+        route: "home",
+        active: true
+    }, {
         heading: "All Cards",
         route: "all",
         active: false
@@ -51,11 +55,7 @@ app.controller('TabCtrl', function($rootScope, $scope, $state) {
         heading: "User Cards",
         route: "user",
         active: true
-    }, {
-        heading: "Info",
-        route: "info",
-        active: true
-    }, ];
+    }];
 
     $scope.go = function(route) {
         $state.go(route);

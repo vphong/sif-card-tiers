@@ -1,5 +1,5 @@
-<!-- TODO: search by year, tier organization, info page, functioning tabs -->
-<div class="container-fluid">
+<!-- TODO: search by year, tier organization -->
+<div class="container-fluid no-padding">
     <div class="hidden-md hidden-lg col-sm-12" id="filters-sm-screens">
 
         <div class="row">
@@ -121,8 +121,8 @@
             </div>
         </div>
     </div>
-    <!-- TODO: affix header -->
-    <div id="search_table" class="col-sm-12 col-md-10">
+
+    <div id="search_table" class="col-sm-12 col-md-9">
 
         <div id="search">
             <div class="input-group input-group-sm">
@@ -141,13 +141,11 @@
         </div>
 
         <div style="border: 1px solid #dfd7ca;border-radius: 3px">
-        <div style="max-height: 400px; overflow: auto">
+        <div class="table-container">
 
             <table class="table table-striped" id="tbl">
-                <!-- <thead fsm-sticky-header scroll-body="#tbl" scroll-stop='0'> -->
                 <thead fix-head>
                     <tr>
-                        <!-- <tr style="background-color: #fff;overflow:auto"> -->
                         <th>Rank</th>
                         <th>Card Name</th>
                         <th class="num-header" ng-click="sortBy('id')">ID
@@ -233,11 +231,11 @@
                         </td>
                     </tr>
                     <tr ng-repeat="card in cards| filter:search | orderBy:sort.type:sort.desc">
-                        <td class="">{{sort.desc ? $index+1 : cards.length - $index}}</td>
+                        <td>{{sort.desc ? $index+1 : cards.length - $index}}</td>
                         <td class="name-display">
                          <div class="media">
-                          <div class="media-left"><img ng-src="{{filters.idlz || card.is_promo ? card.round_card_idolized_image : card.round_card_image}}" class="display-image media-image">
-                          </div>
+                          <!-- <div class="media-left"><img ng-src="{{filters.idlz || card.is_promo ? card.round_card_idolized_image : card.round_card_image}}" class="display-image media-image">
+                          </div> -->
                           <div class="media-body media-middle">
                             <span
                                 uib-popover="This card's skill is dependent on team strength. C-Score, O-Score, and Score Up value may be innaccuate. See Info page for more detailed explanation."
