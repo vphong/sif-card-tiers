@@ -1,0 +1,33 @@
+{
+  "name": "sif-card-tiers",
+  "homepage": "https://github.com/dreamsicl/sif-card-tiers",
+  "description": "Love Live! School Idol Festival card tier list",
+  "main": "index.html",
+  "keywords": [
+    "llsif",
+    "sif",
+    "love",
+    "live",
+    "muse",
+    "aqours"
+  ],
+  "authors": [
+    "dreamsicl"
+  ],
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular-loading-overlay": "^1.1.1",
+    "angular-fixed-table-header": "^0.2.1",
+    "angular-loading-overlay-http-interceptor": "^1.1.0",
+    "angular-local-storage": "^0.5.0",
+    "angular-bootstrap": "^2.1.3"
+  }
+}

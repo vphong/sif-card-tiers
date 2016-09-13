@@ -1,0 +1,26 @@
+{
+  "name": "angular-loading-overlay-http-interceptor",
+  "homepage": "https://github.com/bsalex/angular-loading-overlay-http-interceptor",
+  "authors": [
+    "Alexander Beshchuk <bs.alex.mail@gmail.com>"
+  ],
+  "description": "Directive to manipulate overlays on async operations.",
+  "main": "dist/angular-loading-overlay-spin.js",
+  "keywords": [
+    "angular",
+    "loading",
+    "overlay",
+    "spinner",
+    "http",
+    "ajax",
+    "interceptor"
+  ],
+  "license": "Apache-2.0",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
