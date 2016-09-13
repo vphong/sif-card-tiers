@@ -5,11 +5,11 @@
 }
 
 .name-display {
-    min-width: 70px;
-    max-width: 200px;
-    white-space: nowrap;
+    min-width: 200px;
+    max-width: 300px;
+    /*white-space: nowrap;
     overflow: hidden;
-    text-overflow: ellipsis;
+    text-overflow: ellipsis;*/
     text-align: left
 }
 
@@ -136,16 +136,7 @@ footer.well {
     padding: 0px;
     margin: 0px;
 }
-table.floatThead-table {
-    border-top: none;
-    border-bottom: none;
-    background-color: #FFF;
-}
+
 .clone {
-  table-layout: fixed
-}
-.clone,.clone>tr,.clone>th {
-  width: inherit;
-  display: block;
-  overflow: hidden !important;
+  table-layout: fixed;
 }
