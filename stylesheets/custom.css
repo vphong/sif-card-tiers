@@ -179,3 +179,10 @@ footer.well {
 .info-subtitle {
   margin-top: 20px;
 }
+.skill-config-left-col {
+  max-width: 60px;
+}
+.skill-config-left-col {
+  width: 140px;
+  text-align: right
+}

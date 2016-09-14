@@ -1,10 +1,11 @@
 <div class="container-fluid">
-    <h2 class="info-title">Intro
-        <small>hello world</small>
-    </h2>
-    <p>Based off of
-        <a href="http://sif.artonico.com/index.php">artonico's tier list</a>. Huge thank you to artonico for giving me guidance!</p>
-    <p>
+    <div id="intro">
+        <h2 class="info-title">Intro
+            <small>hello world</small>
+        </h2>
+        <p>Based off of
+            <a href="http://sif.artonico.com/index.php">artonico's tier list</a>. Huge thank you to artonico for giving me guidance!
+        </p>
         <ul class="list-unstyled">
             <li>
                 <b>What's the difference between that website and this one?</b>
@@ -18,18 +19,22 @@
                         database</li>
                     <li>can link to your
                         <a href="https://schoolido.lu">schoolido.lu</a>
-                        account and run calculations on your deck</li>
+                        account and run calculations on your own deck</li>
                 </ul>
             </li>
         </ul>
+    </div>
 
+    <div id="usage">
         <h2 class="info-title">Usage
             <small>what do</small>
         </h2>
         <h3>Examples</h3>
         <h4>event only</h4>
         <p>lorem ipsum</p>
+    </div>
 
+    <div id="math">
         <h2 class="info-title">The Math
             <small>the best part!</small>
         </h2>
@@ -144,7 +149,7 @@
                         to idolize a card with one copy and add one slot.</li>
                     <li>It is
                         <i>optimal</i>
-                        and viable to idolize an SR twice (for f2p players, by ranking in Tier 1 during an event). However, it is unlikely to idolize an SSR or UR multiple times, so the number of slots for C- and O-Score are the same for SSRs and URs.
+                        and viable to idolize an SR twice (for f2p players, by ranking in Tier 1 during an event). However, it is unlikely to idolize an SSR or UR multiple times, so the number of slots for C- and O-Score are the same for idolized SSRs and URs.
                     </li>
                 </ul>
             </li>
@@ -163,12 +168,12 @@
                     </thead>
                     <tbody>
                         <tr>
-                            <th class="text-right"># of Skill Slots</th>
+                            <th class="skill-config-left-col"># of Skill Slots</th>
                             <td>1</td>
                             <td>2</td>
                         </tr>
                         <tr>
-                            <th class="text-right">Skill(s), < 4500
+                            <th class="skill-config-left-col">Skill(s), < 4500
                                 <abbr title="Raw Stat">RS</abbr>
                             </th>
                             <td colspan=2>
@@ -179,7 +184,7 @@
                         </tr>
 
                         <tr>
-                            <th class="text-right">Skill(s), &ge; 4500
+                            <th class="skill-config-left-col">Skill(s), &ge; 4500
                                 <abbr title="Raw Stat">RS</abbr>
                             </th>
                             <td colspan=2>
@@ -192,7 +197,7 @@
                 </table>
             </div>
 
-            <div class="visible-xs-block" style="height:20px"></div>
+            <div class="visible-xs-block col-xs-12" style="height:20px"></div>
 
             <div class="col-xs-12 col-sm-7">
                 <table class="table table-bordered">
@@ -203,14 +208,14 @@
                     </thead>
                     <tbody>
                         <tr>
-                            <th class="text-right"># of Skill Slots</th>
+                            <th class="skill-config-left-col"># of Skill Slots</th>
                             <td>1</td>
                             <td>2</td>
                             <td>3</td>
                             <td>4</td>
                         </tr>
                         <tr>
-                            <th class="text-right">Skill(s), < 4200
+                            <th class="skill-config-left-col">Skill(s), < 4200
                                 <abbr title="Raw Stat">RS</abbr>
                             </th>
                             <td colspan="2">
@@ -225,24 +230,27 @@
                             </td>
                         </tr>
                         <tr>
-                            <th class="text-right">Skill(s), &ge; 4200
+                            <th class="skill-config-left-col">Skill(s), &ge; 4200
                                 <abbr title="Raw Stat">RS</abbr>
                             </th>
-                            <td><span uib-tooltip="+200 to stat">Kiss
-                                <i class="fa fa-info-circle"></i>
-                              </span>
+                            <td colspan=3>
+                                <span uib-tooltip="+116% to stat">Cross
+                                    <i class="fa fa-info-circle"></i>
+                                </span>
                             </td>
-                            <td colspan=3><span uib-tooltip="+116% to stat">Cross
-                                <i class="fa fa-info-circle"></i>
-                              </span>
+                            <td>
+                                <span uib-tooltip="+200 to stat">Kiss
+                                    <i class="fa fa-info-circle"></i>
+                                </span>
                             </td>
                         </tr>
                         <tr>
-                            <th class="text-right">With Heel
+                            <th class="skill-config-left-col">With Heel
                             </th>
-                            <td colspan=4><span uib-popover="score up by 270*(HP recovered by Healer skill) when Healer skill activates" popover-trigger="'mouseenter'">Heel
-                                <i class="fa fa-info-circle"></i>
-                              </span>
+                            <td colspan=4>
+                                <span uib-popover="score up by 270*(HP recovered by Healer skill) when Healer skill activates" popover-trigger="'mouseenter'">Heel
+                                    <i class="fa fa-info-circle"></i>
+                                </span>
                             </td>
                         </tr>
                     </tbody>
@@ -250,7 +258,6 @@
             </div>
 
         </div>
-
 
         <h3 class="info-subtitle">Summary
             <small>tl;dr</small>
@@ -277,6 +284,9 @@
                 </div>
             </div>
         </div>
+    </div>
+
+    <div id="resources">
         <h2 class="info-title">Resources Used
             <small>credit where credit is due</small>
         </h2>
@@ -301,5 +311,5 @@
             </dt>
             <dd>by /u/Flightopath on reddit</dd>
         </dl>
-
     </div>
+</div>
