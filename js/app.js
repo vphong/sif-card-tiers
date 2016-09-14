@@ -278,8 +278,7 @@ app.controller('UserCtrl', function($rootScope, $scope, Cards, localStorageServi
     }
     init();
 
-    $scope.toggleIdlz = function() {
-        console.log($scope.filters.idlz)
+    $scope.setLocalStorageFilters = function() {
         localStorageService.set('filters', $scope.filters)
     }
 

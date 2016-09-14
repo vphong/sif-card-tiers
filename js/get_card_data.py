@@ -5,9 +5,11 @@ import logging
 
 logging.basicConfig(level=logging.INFO)
 
-# initalization
+## initalization
+# original card endpoint
 baseURL = "http://schoolido.lu/api/cards/?ordering=-id&is_special=False&page_size=100&rarity=SR%2CSSR%2CUR"
 
+# keys to grab from json
 keysNeeded = ["skill_details", "attribute", "japan_only", "is_promo", "event",
               "skill", "idol", "rarity", "idolized_maximum_statistics_cool",
               "idolized_maximum_statistics_smile", "idolized_maximum_statistics_pure",
@@ -15,6 +17,7 @@ keysNeeded = ["skill_details", "attribute", "japan_only", "is_promo", "event",
               "non_idolized_maximum_statistics_smile", "translated_collection", "website_url",
               "round_card_idolized_image", "round_card_image", "id"]
 
+# constants
 aqours = ["Ohara Mari", "Kurosawa Dia", "Matsuura Kanan",
           "Takami Chika", "Sakurauchi Riko", "Watanabe You",
           "Kunikida Hanamaru", "Kurosawa Ruby", "Tsushima Yoshiko"]
@@ -32,9 +35,8 @@ second = ["Takami Chika", "Sakurauchi Riko", "Watanabe You",
 third = ["Toujou Nozomi", "Ayase Eli", "Yazawa Nico", "Ohara Mari",
          "Kurosawa Dia", "Matsuura Kanan", ]
 
+
 # function: helper to determine if a string is a number
-
-
 def isnumber(s):
     try:
         float(s)
@@ -43,10 +45,9 @@ def isnumber(s):
         return False
 
 # function: extract a card's skill details and write averages to card
-
-
+# input: dict card
 def skillDetails(card):
-    logging.info("skillDetails(): initalization")
+    logging.info("skillDetails(): init")
     # initalization
     skill = {}
     skillNums = {}
@@ -68,31 +69,35 @@ def skillDetails(card):
         card['skill']['type'] = "Perfect Lock"
 
     # extract raw skill data from skill_details string
-    logging.info("skillDetails(): Processing skill_details...")
+    logging.info("skillDetails(): processing skill_details...")
     numCount = 0
     skillWords = card['skill_details'].split()
     for word in skillWords:
 
+        # corner case: star note activated skills
         if "star" in card['skill_details']:
             # star notes per EX song * 85% perfects
             skillNums['activation_count'] = 65 * .85
             skillNums['activation_type'] = "star"
             if isnumber(word):
                 # 3. skill activation value
+                #   ("by ___ points/seconds/stamina")
                 skillNums['activation_value'] = float(word)
 
             if "%" in word:
                 # 4. skill activation percentage
+                #   ("there is a __% chance")
                 skillNums['activation_percent'] = float(word.strip("%")) / 100
 
-        # elif "Trick" in card['skill']['type']:
-            # print(card['skill_details'])
+
         else:
             if isnumber(word) and numCount < 1:
                 # 1. skill activation count
+                #   ("for every ## notes/seconds/hit combo/perfects...")
                 skillNums['activation_count'] = float(word)
 
                 # 2. skill activation type
+                #   ("for every ## notes/seconds/hit combo/perfects...")
                 skillNums['activation_type'] = skillWords[
                     skillWords.index(word) + 1].strip(',')
 
@@ -100,10 +105,13 @@ def skillDetails(card):
 
             elif isnumber(word) and numCount < 2:
                 # 3. skill activation value
+                #   ("...by ___ points/seconds/stamina")
+
                 skillNums['activation_value'] = float(word)
 
             if "%" in word:
                 # 4. skill activation percentage
+                #   ("...there is a ##% chance of...")
                 skillNums['activation_percent'] = float(word.strip("%")) / 100
 
     # theoretical 550 note, 125 second song with 85% greats and 65 star notes
@@ -115,7 +123,7 @@ def skillDetails(card):
     card['skill']['hl'] = 0
     card['skill']['hl_heel'] = 0
 
-    logging.info("skillDetails(): Calculating average skill contribution...")
+    logging.info("skillDetails(): calculating skill contribution...")
     if card['skill']['type'] == "Score Up":
 
         if skillNums['activation_type'] == "perfects":
@@ -148,7 +156,7 @@ def skillDetails(card):
     logging.info("skillDetails(): done")
 
 
-# calculate stat base cScore and oScore off of
+# grab on-attribute stat + bond bonus for c/o-score
 # input: dict card, bool idlz
 def stat_to_mod(card, idlz):
 
@@ -178,8 +186,10 @@ def stat_to_mod(card, idlz):
 
     return stat
 
-
+# function: calculate cScore
+# input: dict card
 def cScore(card):
+    # init
     unidlz_stat = stat_to_mod(card, False)
     idlz_stat = stat_to_mod(card, True)
     card['cScore_heel'] = 0
@@ -275,8 +285,14 @@ def cScore(card):
     card['cScore_idlz'] = idlz_stat + idlz_stat * \
         (.09 + .03) * 2 + card['skill']['su']
 
-
+# function: calculate Optimal-Score (O-Score) of a card
+# "optimal:"
+#       - reasonably optimal number of skill slots
+#       - optimal skills equipped
+#       - center skills: +9% attribute boost, +6% subunit/year boost - x2 for team/guest
+#       -
 def oScore(card):
+    # init
     unidlz_stat = stat_to_mod(card, False)
     idlz_stat = stat_to_mod(card, True)
     card['oScore_heel'] = 0
@@ -367,7 +383,6 @@ def oScore(card):
             idlz_stat += idlz_stat * 1.26
 
     # account for team leader multipliers
-    # on-attribute boost (9%), general main unit boost (3%), twice for player + guest
     # finally, add Score Up from card skill
     card['oScore'] = unidlz_stat + unidlz_stat * \
         (.09 + .06) * 2 + card['skill']['su']
@@ -377,7 +392,7 @@ def oScore(card):
 
 def cleanCard(d, keys):
     ret = {key: d[key] for key in keys}
-    # origin
+    ### origin: set premium bool
     if ret['event']:
         ret['event'] = True
     if not ret['event'] and not ret['is_promo']:
@@ -385,11 +400,11 @@ def cleanCard(d, keys):
     else:
         ret['premium'] = False
 
-    # idol mini object cleaning
+    ### idol mini object cleaning
     ret['name'] = ret['idol']['name']
     ret['sub_unit'] = ret['idol']['sub_unit']
 
-    # main unit
+    ## main unit
     if ret['name'] in aqours:
         ret['main_unit'] = "Aqours"
     elif ret['name'] in muse:
@@ -397,7 +412,7 @@ def cleanCard(d, keys):
     else:
         ret['main_unit'] = "error"
 
-    # year
+    ## year
     if ret['name'] in first:
         ret['year'] = "first"
     elif ret['name'] in second:
@@ -407,7 +422,7 @@ def cleanCard(d, keys):
 
     ret.pop('idol', None)
 
-    # full name
+    ## full name
     ret['full_name'] = ret['rarity']
     if ret['is_promo']:
         ret['non_idolized_maximum_statistics_smile'] = ret[
@@ -427,11 +442,7 @@ def cleanCard(d, keys):
 
     ret['full_name'] = ret['full_name'] + " " + ret['name']
 
-    # # skill
-    # ret['skill'] = skillDetails(ret)
-    # #print(ret['skill'])
-    # ret.pop('skill_details',None)
-
+    # handle unicode error output for "é"
     if ret['translated_collection'] and "Maid" in ret['translated_collection']:
         ret['translated_collection'] = "Café Maid"
 
@@ -454,7 +465,7 @@ def cleanCard(d, keys):
 
     ret['full_name'] = ret['full_name'] + " " + ret['name']
 
-    # stats/scores
+    ## stats/scores
     skillDetails(ret)
     oScore(ret)
     cScore(ret)
@@ -462,14 +473,13 @@ def cleanCard(d, keys):
     return ret
 
 
+# function: get card JSON from schoolido.lu
 def getJSON(url):
     logging.info("getJSON(): currURL %s" % url)
     response = urllib.request.urlopen(url)
     data = response.read()
     data = "".join(map(chr, data))
     data = json.loads(data)
-    # for (key,value) in data.items():
-    #     print(key)
     return data
 
 
@@ -491,8 +501,8 @@ def getRawCards():
             cards.append(card)
 
     # write raw data to file
-    with open('js/cardsJSON.js', 'w') as f:
-        print("getRawCards(): Writing to js/cardsJSON.js...")
+    with open('js/cards.json', 'w') as f:
+        logging.info("getRawCards(): writing to file...")
         json.dump(cards, f, sort_keys=True)
 
     logging.info("getRawCards(): done")

@@ -150,10 +150,25 @@ footer.well {
   left: 70px;
 }
 .table-container {
-  display: flex;
+  /*display: flex;
   display: -webkit-flex;
   flex-direction: column;
-  -webkit-flex-direction: column;
+  -webkit-flex-direction: column;*/
   max-height: 400px;
   overflow-x: auto; width: 100%
+}
+.text-smile {
+  color: #cd0063 !important;
+}
+.text-pure{
+  color:#1c9649 !important
+}
+.text-cool {
+  color: #0088d2 !important
+}
+#table {
+  border: 1px solid #dfd7ca;
+  border-radius: 3px;
+  display: flex;
+  flex-direction: column;
 }
