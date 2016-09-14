@@ -209,9 +209,6 @@ def cScore(card):
 
         # idolzed SR: 3 skill slots
         # http://i.imgur.com/YQyqNhs.png
-        if card['skill']['type'] == "Healer":
-            card['cScore_heel_idlz'] = idlz_stat + idlz_stat * \
-                (.09 + .03) * 2 + card['skill']['hl_heel']
         if idlz_stat < 4100:  # kiss + perfume
             idlz_stat += idlz_stat * 1.1 + 450
 

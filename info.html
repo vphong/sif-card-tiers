@@ -12,7 +12,7 @@
             <li>This website:
                 <ul>
                     <li>is based off of 4.0 and accounts for School Idol Skills and new Center Bonuses</li>
-                    <li>is more interactive, with searching and filtering</li>
+                    <li>is more interactive, with built-in searching and filtering</li>
                     <li>is semi-automated, so it will stay up to date with the
                         <a href="https://schoolido.lu">schoolido.lu</a>
                         database</li>
@@ -42,49 +42,98 @@
             is the premise of using a card under an optimal setting - relatively harder to access boosts.</p>
 
         <p>The raw formula for both Scores is:
-              <code>score = raw_stat + ((raw_stat)*(1 + SIS_percent boost) + SIS_static_boost) * (1 + center_boost)*2 + score_up_boost</code>
+            <code>score = raw_stat + ((raw_stat)*(1 + SIS_percent boost) + SIS_static_boost)*(1 + center_boost)*2 + score_up_boost</code>.
         </p>
-        <p>What boosts? Well..</p>
+        <p>What do these variables mean? Well..</p>
 
         <h3 class="info-subtitle">Raw Stat</h3>
-        <p>lorem ipsum</p>
+        <div class="row">
+            <div class="col-xs-5 col-lg-8">
+                <p>This is the card's on-attribute stat + maximum bond for that card's rarity and idolization status.</p>
+                <p>
+                    <b>Example:</b>
+                    For an unidolized
+                    <span class="text-pure">Pure</span>
+                    SR, we take the unidolized maximum
+                    <span class="text-pure">Pure</span>
+                    stat (at level 60) and add 375 bond points.
+                </p>
+            </div>
+
+            <div class="col-xs-7 col-lg-4">
+                <table class="table table-bordered">
+                    <thead>
+                        <tr>
+                            <th colspan=3 class="text-center">
+                                Bond Points by Rarity and Idolization
+                            </th>
+                        </tr>
+                        <tr>
+                            <th></th>
+                            <th class="text-center">Unidolized</th>
+                            <th class="text-center">Idolized</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th class="text-right">SR</th>
+                            <td>250</td>
+                            <td>500</td>
+                        </tr>
+                        <tr>
+                            <th class="text-right">SSR</th>
+                            <td>375</td>
+                            <td>700</td>
+                        </tr>
+                        <tr>
+                            <th class="text-right">UR</th>
+                            <td>500</td>
+                            <td>1000</td>
+                        </tr>
+                    </tbody>
+
+                </table>
+            </div>
+        </div>
+
         <h3 class="info-subtitle">Card Skill Quality</h3>
         <p>
-            <p>
-                <b>Skill quality</b>
-                is the average amount of points/perfect lock time/stamina healed a card's skill can contribute over the course of a song.<br>
-                The calculation based off of a 125 second, 550 note long song with 65 star notes, assuming 85% Perfect Notes/15% Great Notes and Full Combo.
-            </p>
-            <p>The closest in-game variants to this theoretical song are EX
-                <span class="text-smile">Music Start</span>
-                (551 notes/124 seconds),
-                <span class="text-pure">Junai Lens</span>
-                (550 notes/125 seconds), and
-                <span class="text-cool">Loveless World</span>
-                (550/126 seconds).</p>
-            <p>
-                <small class="text-muted">
-                    <strong>Why?</strong>
-                    Skills are mainly activated by seconds, perfects, and notes/combo string.</small>
-            </p>
+            <b>Skill quality</b>
+            is the average amount of points/perfect lock time/stamina healed a card's skill can contribute over the course of a song.<br>
+            The calculation based off of a 125 second, 550 note long song with 65 star notes, assuming 85% Perfect Notes/15% Great Notes and Full Combo.
+        </p>
+        <p>The closest in-game variants to this theoretical song are EX
+            <span class="text-smile">Music Start</span>
+            (551 notes/124 seconds),
+            <span class="text-pure">Junai Lens</span>
+            (550 notes/125 seconds), and
+            <span class="text-cool">Loveless World</span>
+            (550/126 seconds).</p>
+
+        <a name="skill-disclaimer"></a>
+        <p>
+            <small>
+                <strong>Note:</strong>
+                Skills are mainly activated by seconds, perfects, and notes/combo string.</small>
 
         </p>
-
         <h3 class="info-subtitle">School Idol Skills</h3>
+        <p>I will go into this section assuming you understand what School Idol Skills (<abbr title="School Idol Skills">SIS</abbr>) are and how to use them. If you don't, I recommend looking at
+            <a href="http://kachagain.com/llsif/sis.php">kachagain.com's
+                <abbr title="School Idol Skills">SIS</abbr>
+                page</a>
+            or looking up other guides about them.
+        </p>
+
         <h4>Number of School Idol Skill Slots</h4>
         <dl class="dl-horizontal">
             <dt>C- &amp; O-Score, unidolized</dt>
-            <dd>
-                2 per SR | 3 per SSR | 4 per UR</dd>
+            <dd>2 per SR | 3 per SSR | 4 per UR</dd>
             <dt>C-Score, idolized</dt>
-            <dd>
-                3 per SR | 4 per SSR | 5 per UR</dd>
+            <dd>3 per SR | 4 per SSR | 5 per UR</dd>
             <dt>O-Score, idolized</dt>
-            <dd>
-                4 per SR | 4 per SSR | 5 per UR</dd>
+            <dd>4 per SR | 4 per SSR | 5 per UR</dd>
         </dl>
-    </p>
-    <p>
         <ul class="list-unstyled">
             <li>
                 <strong>Why?</strong>
@@ -95,12 +144,117 @@
                         to idolize a card with one copy and add one slot.</li>
                     <li>It is
                         <i>optimal</i>
-                        and viable to idolize an SR twice (via ranking in Tier 1 during an event). However, it is unlikely to idolize an SSR or UR multiple times, so the number of slots for C- and O-Score are the same.
+                        and viable to idolize an SR twice (for f2p players, by ranking in Tier 1 during an event). However, it is unlikely to idolize an SSR or UR multiple times, so the number of slots for C- and O-Score are the same for SSRs and URs.
                     </li>
                 </ul>
             </li>
         </ul>
-        <h3 class="info-subtitle">Center Skills</h3>
+
+        <h4>Equipped School Idol Skills</h4>
+
+        <h4>Example School Idol Skill Configurations</h4>
+        <div class="row">
+            <div class="col-xs-12 col-sm-5">
+                <table class="table table-bordered">
+                    <thead>
+                        <tr>
+                            <th colspan=3 class="text-center">C-Score, Unidolized SR</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th class="text-right"># of Skill Slots</th>
+                            <td>1</td>
+                            <td>2</td>
+                        </tr>
+                        <tr>
+                            <th class="text-right">Skill(s), < 4500
+                                <abbr title="Raw Stat">RS</abbr>
+                            </th>
+                            <td colspan=2>
+                                <span uib-tooltip="+450 to stat">Perfume
+                                    <i class="fa fa-info-circle"></i>
+                                </span>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <th class="text-right">Skill(s), &ge; 4500
+                                <abbr title="Raw Stat">RS</abbr>
+                            </th>
+                            <td colspan=2>
+                                <span uib-tooltip="+101% to stat">Ring
+                                    <i class="fa fa-info-circle"></i>
+                                </span>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="visible-xs-block" style="height:20px"></div>
+
+            <div class="col-xs-12 col-sm-7">
+                <table class="table table-bordered">
+                    <thead>
+                        <tr>
+                            <th colspan=5 class="text-center">C-Score, Unidolized UR || O-Score, Idolized SR</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th class="text-right"># of Skill Slots</th>
+                            <td>1</td>
+                            <td>2</td>
+                            <td>3</td>
+                            <td>4</td>
+                        </tr>
+                        <tr>
+                            <th class="text-right">Skill(s), < 4200
+                                <abbr title="Raw Stat">RS</abbr>
+                            </th>
+                            <td colspan="2">
+                                <span uib-tooltip="+101% to stat">Ring
+                                    <i class="fa fa-info-circle"></i>
+                                </span>
+                            </td>
+                            <td colspan=2>
+                                <span uib-tooltip="+450 to stat">Perfume
+                                    <i class="fa fa-info-circle" uib-tooltip="t"></i>
+                                </span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th class="text-right">Skill(s), &ge; 4200
+                                <abbr title="Raw Stat">RS</abbr>
+                            </th>
+                            <td><span uib-tooltip="+200 to stat">Kiss
+                                <i class="fa fa-info-circle"></i>
+                              </span>
+                            </td>
+                            <td colspan=3><span uib-tooltip="+116% to stat">Cross
+                                <i class="fa fa-info-circle"></i>
+                              </span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th class="text-right">With Heel
+                            </th>
+                            <td colspan=4><span uib-popover="score up by 270*(HP recovered by Healer skill) when Healer skill activates" popover-trigger="'mouseenter'">Heel
+                                <i class="fa fa-info-circle"></i>
+                              </span>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+        </div>
+
+
+        <h3 class="info-subtitle">Summary
+            <small>tl;dr</small>
+        </h3>
 
         <div class="col-xs-6">
             <div class="panel panel-default">
