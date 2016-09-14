@@ -172,3 +172,10 @@ footer.well {
   display: flex;
   flex-direction: column;
 }
+.info-title {
+  padding-bottom: 10px;
+  border-bottom: 2px solid #dfd7ca;
+}
+.info-subtitle {
+  margin-top: 20px;
+}
