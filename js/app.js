@@ -1,5 +1,5 @@
 var app = angular.module('tierList', ['ui.bootstrap', 'ui.router.tabs',
-    'bsLoadingOverlay', 'bsLoadingOverlayHttpInterceptor',
+    'bsLoadingOverlay', 'bsLoadingOverlayHttpInterceptor', 'mgcrea.ngStrap',
     'ui.router', 'LocalStorageModule', 'fixed.table.header'
 ]);
 
