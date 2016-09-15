@@ -22,7 +22,7 @@ app.run(function(bsLoadingOverlayService) {
 
 app.config(function($stateProvider, $urlRouterProvider) {
 
-    $urlRouterProvider.otherwise("/all");
+    $urlRouterProvider.otherwise("/");
 
     $stateProvider
 
