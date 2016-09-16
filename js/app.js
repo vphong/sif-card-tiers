@@ -185,10 +185,16 @@ app.controller('TierCtrl', function($rootScope, $scope, Cards, localStorageServi
                 gen: "cScore"
             }
         }
+        $scope.userSearch = localStorageService.get('userSearch');
+        if (!$scope.search) $scope.userSearch = "";
 
         $scope.collapse = localStorageService.get('collapse');
     }
     init();
+
+    $scope.updateSearch = function() {
+        localStorageService.set('userSearch', $scope.userSearch);
+    }
 
     $scope.err = {};
     $scope.err.rarity = !$scope.filters.sr && !$scope.filters.ssr && !$scope.filters.ur;
@@ -278,8 +284,16 @@ app.controller('UserCtrl', function($rootScope, $scope, Cards, localStorageServi
         $scope.sit = localStorageService.get('sit');
         if (!$scope.sit) $scope.sit = {};
 
+        $scope.search = localStorageService.get('search');
+        if (!$scope.search) $scope.search = "";
+
     }
     init();
+
+    $scope.updateSearch = function() {
+        localStorageService.set('search', $scope.search);
+    }
+
 
     // get accounts from sit username
     var accUrlBase = "https://schoolido.lu/api/accounts/?owner__username=";

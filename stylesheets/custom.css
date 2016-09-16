@@ -90,12 +90,12 @@ footer.well {
     padding: 0px 5px !important;
 }
 .btn-group-justified, .input-group {
-    margin-bottom: 5px;
+    margin-bottom: 10px;
 }
 .filter-group>button {
     padding-left: 0px;
     padding-right: 0px;
-    margin-bottom: 5px;
+    margin-bottom: 10px;
 }
 
 .loading-overlay {

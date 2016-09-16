@@ -52,9 +52,13 @@
                 <label class="btn btn-info btn-sm" ng-model="filters.aqours" ng-click="toggleBool(filters.aqours);filterCards()" uib-btn-checkbox>Aqours</label>
             </div>
 
-                        <small class="col-xs-12">
-                          Showing <b>{{cards.length}}</b> of <b>{{$root.Cards.length}}</b> total cards.
-                        </small>
+            <small class="col-xs-12">
+                Showing
+                <b>{{filtered.length}}</b>
+                of
+                <b>{{$root.Cards.length}}</b>
+                total cards.
+            </small>
         </div>
     </div>
 
@@ -65,9 +69,9 @@
                 <span class="input-group-addon">
                     <i class="fa fa-search"></i>
                 </span>
-                <input type="text" class="form-control" ng-model="search" placeholder="search by card" uib-typeahead="type for type in $root.Typeahead | filter:$viewValue | limitTo:8">
-                <span class="input-group-addon" style="cursor: pointer" uib-popover="Terms include: girl, attribute, skill type, main unit, subunit, and English schoolido.lu set name.">
-                  <i class="fa fa-info"></i>
+                <input type="text" class="form-control" ng-model="search" ng-change="updateSearch()" placeholder="search by card" uib-typeahead="type for type in $root.Typeahead | filter:$viewValue | limitTo:8">
+                <span class="input-group-addon" style="cursor: pointer" popover-append-to-body="true" popover-placement="top-right" uib-popover="Terms include: girl, attribute, skill type, main unit, subunit, and English schoolido.lu set name.">
+                    <i class="fa fa-info"></i>
                 </span>
 
             </div>
@@ -137,7 +141,7 @@
                     </thead>
 
                     <tbody>
-                        <tr ng-if="cards.length==0">
+                        <tr ng-if="filtered.length==0">
                             <td colspan=15 style="word-wrap: normal">
                                 <span class="text-danger">No cards found.</span>
                                 <span ng-if="filters.event && filters.compare=='healers'">There are no Healer Event cards.</span>
@@ -163,7 +167,7 @@
                                 <a style="cursor: pointer" ng-click="resetFilters()">Reset filters?</a>
                             </td>
                         </tr>
-                        <tr ng-repeat="card in cards| filter:search | orderBy:sort.type:sort.desc">
+                        <tr ng-repeat="card in filtered = (cards | filter:search) | orderBy:sort.type:sort.desc">
                             <td>{{sort.desc ? $index+1 : cards.length - $index}}</td>
                             <td class="name-display">
                                 <div class="media">

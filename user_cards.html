@@ -44,7 +44,7 @@
             </div>
 
             <small class="col-xs-12">
-              Showing <b>{{userCards.length}}</b> of <b>{{rawUserCardsData.length}}</b> total cards.
+              Showing <b>{{filtered.length}}</b> of <b>{{rawUserCardsData.length}}</b> total cards.
             </small>
         </div>
     </div>
@@ -81,8 +81,8 @@
                     <span class="input-group-addon">
                         <i class="fa fa-search"></i>
                     </span>
-                    <input type="text" class="form-control" ng-model="search" placeholder="search by card" uib-typeahead="type for type in $root.Typeahead | filter:$viewValue | limitTo:8">
-                    <span class="input-group-addon" style="cursor: pointer" uib-popover="Terms include: girl, attribute, skill type, main unit, subunit, and English schoolido.lu set name.">
+                    <input type="text" class="form-control" ng-model="userSearch" ng-change="updateSearch()" placeholder="search by card" uib-typeahead="type for type in $root.Typeahead | filter:$viewValue | limitTo:8">
+                    <span class="input-group-addon" style="cursor: pointer" popover-append-to-body="true" popover-placement="top-right" uib-popover="Terms include: girl, attribute, skill type, main unit, subunit, and English schoolido.lu set name.">
                         <i class="fa fa-info"></i>
                     </span>
 
@@ -156,10 +156,10 @@
                     <tbody>
                         <!-- <tr><td colspan=20 class="text-left"><pre>{{rawUserCardsData[0]|json}}</pre></td></tr> -->
                         <tr ng-if=""></tr>
-                        <tr ng-if="userCards.length==0">
+                        <tr ng-if="filtered.length==0">
                             <td colspan=15 style="word-wrap: normal">
                                 <span class="text-danger">No cards found.</span>
-                                <span ng-if="userFilters.event && userFilters.compare=='healers'">There are no Healer Event cards.</span>
+                                <!-- <span ng-if="userFilters.event && userFilters.compare=='healers'">There are no Healer Event cards.</span> -->
                                 <span ng-show="err.rarity || err.main || err.origin">Please select a(n):
                                     <span ng-show="err.rarity">
                                         <b>rarity</b>
@@ -182,7 +182,7 @@
                                 <a style="cursor: pointer" ng-click="resetFilters()">Reset filters?</a>
                             </td>
                         </tr>
-                        <tr ng-repeat="card in userCards| filter:search | orderBy:sort.type:sort.desc">
+                        <tr ng-repeat="card in filtered = (userCards | filter:userSearch) | orderBy:sort.type:sort.desc">
                             <td>{{sort.desc ? $index+1 : cards.length - $index}}</td>
                             <td class="name-display">
                                 <div class="media">
