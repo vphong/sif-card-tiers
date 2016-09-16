@@ -246,8 +246,8 @@ app.controller('TierCtrl', function($rootScope, $scope, Cards, localStorageServi
         $scope.filterCards()
         $scope.sortBy('cScore');
     }
-    $scope.setLocalStorageFilters = function () {
-      localStorageService.set('filters', $scope.filters);
+    $scope.setLocalStorageFilters = function() {
+        localStorageService.set('filters', $scope.filters);
     }
 
     $scope.sortBy = function(type) {
@@ -281,15 +281,7 @@ app.controller('UserCtrl', function($rootScope, $scope, Cards, localStorageServi
     }
     init();
 
-    $scope.setLocalStorageFilters = function() {
-        localStorageService.set('filters', $scope.filters)
-    }
-
-    $scope.collapsing = function() {
-        $scope.collapse = !$scope.collapse;
-        localStorageService.set('collapse', $scope.collapse)
-    };
-
+    // get accounts from sit username
     var accUrlBase = "https://schoolido.lu/api/accounts/?owner__username=";
     $scope.updateUser = function() {
         $scope.sit.accountsUrl = accUrlBase + $scope.sit.user;
@@ -301,7 +293,10 @@ app.controller('UserCtrl', function($rootScope, $scope, Cards, localStorageServi
     var getAccountsSuccess = function(data, status) {
         var accounts = data.results;
         var len = accounts.length
-        $scope.sit.accounts = [];
+        $scope.sit.accounts = [{
+            "name": "Select an account",
+            "id": ""
+        }];
         var acc = {};
         for (var i = 0; i < len; i++) {
             acc = {
@@ -319,29 +314,75 @@ app.controller('UserCtrl', function($rootScope, $scope, Cards, localStorageServi
         Cards.getUrl($scope.sit.accountsUrl).success(getAccountsSuccess);
     };
 
-    $scope.chooseAccount = function() {
-        $scope.sit.ownedCardsUrl = oCardUrlBase + $scope.sit.chosenAccount.id;
-        localStorageService.set('sit', $scope.sit)
-
-    }
-    $scope.rawUserCards = {};
-    var baseUserCards = [];
+    // get cards from sit account
+    $scope.chooseAccount = function() { // from select
+            $scope.sit.ownedCardsUrl = oCardUrlBase + $scope.sit.chosenAccount.id;
+            localStorageService.set('sit', $scope.sit)
+        }
+        // storage for http result of account grabbing
+    $scope.rawUserCards = localStorageService.get('rawUserCards');
+    // storage for card data of rawUserCards
+    $scope.rawUserCardsData = localStorageService.get('rawUserCardsData');
+    if (!$scope.rawUserCardsData);
     var getCardsSuccess = function(data, status) {
         $scope.rawUserCards = data.results;
-        baseUserCards = [];
+        localStorageService.set('rawUserCards', $scope.rawUserCards);
+
+        // grab owned card ids
         var cardIDs = [];
         var len = $scope.rawUserCards.length
         for (var i = 0; i < len; i++) {
             cardIDs.push($scope.rawUserCards[i].card)
         }
-        angular.forEach(cardIDs, function(id) {
+
+        // populate rawUserCardsData with cards owned from root cards
+        $scope.rawUserCardsData = [];
+        angular.forEach(cardIDs, function(ownedID) {
             angular.forEach($rootScope.Cards, function(card) {
-                if (id === card.id) {
-                    baseUserCards.push(card)
+                if (ownedID === card.id) {
+                    $scope.rawUserCardsData.push(card)
                 }
             });
         });
-        $scope.userCards = Cards.filterCards($scope.filters, baseUserCards);
+
+        // grab rawUserCard idolized status
+        angular.forEach($scope.rawUserCards, function(rawCard) {
+            angular.forEach($scope.rawUserCardsData, function(rawCardData) {
+                if (rawCardData.id == rawCard.card) {
+                    rawCardData.user_idlz = rawCard.idolized;
+                    if (rawCardData.user_idlz) {
+                        // set smile, pure, cool stats to idolized stats
+                        rawCardData.max_smile = rawCardData.idolized_maximum_statistics_smile;
+                        rawCardData.max_pure = rawCardData.idolized_maximum_statistics_pure;
+                        rawCardData.max_cool = rawCardData.idolized_maximum_statistics_cool;
+
+                        // set c/o score to idlz score
+                        rawCardData.cScore = rawCardData.cScore_idlz;
+                        rawCardData.cScore_heel = rawCardData.cScore_heel_idlz;
+                        rawCardData.oScore = rawCardData.oScore_idlz;
+                        rawCardData.oScore_heel = rawCardData.oScore_heel_idlz;
+
+                    } else {
+                        // set smile, pure, cool stats to idolized stats
+                        rawCardData.max_smile = rawCardData.non_idolized_maximum_statistics_smile;
+                        rawCardData.max_pure = rawCardData.non_idolized_maximum_statistics_pure;
+                        rawCardData.max_cool = rawCardData.non_idolized_maximum_statistics_cool;
+
+                        // set c/o score to idlz score
+                        rawCardData.cScore = rawCardData.cScore;
+                        rawCardData.cScore_heel = rawCardData.cScore_heel;
+                        rawCardData.oScore = rawCardData.oScore;
+                        rawCardData.oScore_heel = rawCardData.oScore_heel;
+                    }
+                }
+            });
+        });
+
+        localStorageService.set('rawUserCardsData', $scope.rawUserCardsData);
+
+        // filter for display
+        $scope.userCards = Cards.filterCards($scope.filters, $scope.rawUserCardsData);
+
         localStorageService.set('userCards', $scope.userCards)
 
     };
@@ -367,7 +408,12 @@ app.controller('UserCtrl', function($rootScope, $scope, Cards, localStorageServi
     $scope.err.main = !$scope.filters.muse && !$scope.filters.aqours;
 
     $scope.filterCards = function() {
-        $scope.userCards = Cards.filterCards($scope.filters, baseUserCards);
+        console.log($scope.userCards.length)
+        console.log($scope.rawUserCardsData.length)
+        $scope.userCards = Cards.filterCards($scope.filters, angular.copy($scope.rawUserCardsData));
+
+        console.log($scope.userCards.length)
+        console.log($scope.rawUserCardsData.length)
         localStorageService.set('filters', $scope.filters);
         localStorageService.set('userCards', $scope.userCards);
 
@@ -412,11 +458,19 @@ app.controller('UserCtrl', function($rootScope, $scope, Cards, localStorageServi
     $scope.$watch('filters.compare', function(n, o) {
         if (n != o) {
             $scope.sort.type = 'cScore';
-            $scope.sort.gen = "";
+            $scope.sort.gen = "cScore";
             localStorageService.set('sort', $scope.sort)
         }
     })
 
+    $scope.setLocalStorageFilters = function() {
+        localStorageService.set('filters', $scope.filters)
+    }
+
+    $scope.collapsing = function() {
+        $scope.collapse = !$scope.collapse;
+        localStorageService.set('collapse', $scope.collapse)
+    };
 
     $scope.resetFilters = function() {
         $scope.filters = angular.copy($rootScope.InitFilters);

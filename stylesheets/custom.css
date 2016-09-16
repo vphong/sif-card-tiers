@@ -80,16 +80,23 @@ footer.well {
 
 .input-group select {
     height: 100%;
-    width: 100%
+    width: 100%;
+    padding-right: 0px;
+    overflow: hidden;
+    white-space: nowrap;
+    -ms-text-overflow: ellipsis;
+    -o-text-overflow: ellipsis;
+    text-overflow: ellipsis;
 }
 
 .filter-group {
     padding: 0px 5px !important;
 }
+
 .filter-group>button {
-  padding-left: 0px;
-  padding-right: 0px;
-  margin-bottom: 10px;
+    padding-left: 0px;
+    padding-right: 0px;
+    margin-bottom: 10px;
 }
 
 .loading-overlay {
@@ -102,15 +109,19 @@ footer.well {
     background-color: rgba(0, 0, 0, 0.3);
     border-radius: 3px;
 }
+
+
 /*#filters-md-screens {
   padding-right: 3%;
 }*/
+
 @media(min-width:992px) {
     #search_table {
         /*left: 20%;
         position: absolute;*/
     }
 }
+
 
 /*.col-xs-2 {
     padding: 0px 10px;
@@ -136,13 +147,17 @@ footer.well {
     padding-left: 0px;
     padding-right: 0px;
 }
+
 .no-padding {
     padding: 0px;
     margin: 0px;
 }
+
 .clone {
-  table-layout: fixed;
+    table-layout: fixed;
 }
+
+
 /*.fixed-first-col {
   position: absolute;
   width: 70px;
@@ -152,37 +167,45 @@ footer.well {
   width: 200px;
   left: 70px;
 }*/
+
 .table-container {
-  height: calc(100vh - 262px);
-  overflow-x: auto;
-  width: 100%;
+    height: calc(100vh - 262px);
+    overflow-x: auto;
+    width: 100%;
 }
+
 .text-smile {
-  color: #cd0063 !important;
+    color: #cd0063 !important;
 }
-.text-pure{
-  color:#93c54b !important
+
+.text-pure {
+    color: #93c54b !important
 }
+
 .text-cool {
-  color: #0088d2 !important
+    color: #0088d2 !important
 }
+
 #table {
-  border: 1px solid #dfd7ca;
-  border-radius: 3px;
-  display: flex;
-  flex-direction: column;
+    border: 1px solid #dfd7ca;
+    border-radius: 3px;
+    display: flex;
+    flex-direction: column;
 }
+
 .info-title {
-  padding-bottom: 10px;
-  border-bottom: 3px solid #dfd7ca;
+    padding-bottom: 10px;
+    border-bottom: 3px solid #dfd7ca;
 }
+
 .info-subtitle {
-  margin-top: 20px;
-  padding-bottom: 5px;
-  /*padding-left: 10px;*/
-  border-bottom: 2px solid #dfd7ca;
+    margin-top: 20px;
+    padding-bottom: 5px;
+    /*padding-left: 10px;*/
+    border-bottom: 2px solid #dfd7ca;
 }
+
 .skill-config-left-col {
-  width: 160px;
-  text-align: right
+    width: 160px;
+    text-align: right
 }

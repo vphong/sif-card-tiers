@@ -1,5 +1,3 @@
-<div></div>
-
 <div class="container-fluid row">
     <div class="col-xs-2" id="filters-md-screens">
         <div class="row">
@@ -14,15 +12,6 @@
             </div>
             <div class="btn-group-vertical col-xs-12">
                 <label class="btn btn-info btn-sm" ng-model="filters.displayImg" ng-click="setLocalStorageFilters()" uib-btn-checkbox>Display images?</label>
-            </div>
-
-            <div class="btn-group-vertical col-xs-12">
-                <label class="btn btn-info btn-sm" ng-model="filters.idlz" ng-click="setLocalStorageFilters()" uib-btn-checkbox>Idolized?</label>
-            </div>
-
-            <div class="btn-group btn-group-justified" uib-tooltip="Server" tooltip-placement="top">
-                <label class="btn btn-info btn-sm" ng-model="filters.server" ng-click="filterCards()" uib-btn-radio="'jp'">JP</label>
-                <label class="btn btn-info btn-sm" ng-model="filters.server" ng-click="filterCards()" uib-btn-radio="'en'">EN</label>
             </div>
 
             <div uib-tooltip="Attribute" tooltip-placement="top">
@@ -59,17 +48,18 @@
     <div id="search_table" class="col-xs-10">
 
         <div id="search" class="row">
-
             <div class="col-xs-12 no-padding">
                 <div class="col-xs-7">
-                    <div class="input-group input-group-sm">
-                        <input type="text" class="form-control" ng-model="sit.user" placeholder="schoolido.lu username" ng-change="updateUser()">
-                        <div class="input-group-btn">
-                            <button type="button" class="btn" uib-dropdown-toggle ng-click="getAccounts()">
-                                Get accounts
-                            </button>
+                    <form>
+                        <div class="input-group input-group-sm">
+                            <input type="text" class="form-control" ng-model="sit.user" placeholder="schoolido.lu username" ng-change="updateUser()">
+                            <div class="input-group-btn">
+                                <button type="submit" class="btn" uib-dropdown-toggle ng-click="getAccounts()">
+                                    Get accounts
+                                </button>
+                            </div>
                         </div>
-                    </div>
+                    </form>
                 </div>
                 <div class="col-xs-5">
                     <div class="input-group input-group-sm">
@@ -82,8 +72,8 @@
 
             </div>
 
-            <div class=" col-xs-12">
-                <div class="input-group">
+            <div class="col-xs-12">
+                <div class="input-group input-group-sm">
                     <span class="input-group-addon">
                         <i class="fa fa-search"></i>
                     </span>
@@ -108,17 +98,17 @@
                                 <i ng-show="sort.desc && sort.type=='id'" class="fa fa-chevron-down"></i>
                                 <i ng-show="!sort.desc && sort.type=='id'" class="fa fa-chevron-up"></i>
                             </th>
-                            <th class="num-header" ng-click="sortBy('smile')">Smile
-                                <i ng-show="sort.desc && sort.gen=='smile'" class="fa fa-chevron-down"></i>
-                                <i ng-show="!sort.desc && sort.gen=='smile'" class="fa fa-chevron-up"></i>
+                            <th class="num-header" ng-click="sortBy('max_smile')">Smile
+                                <i ng-show="sort.desc && sort.type=='max_smile'" class="fa fa-chevron-down"></i>
+                                <i ng-show="!sort.desc && sort.type=='max_smile'" class="fa fa-chevron-up"></i>
                             </th>
-                            <th class="num-header" ng-click="sortBy('pure')">Pure
-                                <i ng-show="sort.desc && sort.gen=='pure'" class="fa fa-chevron-down"></i>
-                                <i ng-show="!sort.desc && sort.gen=='pure'" class="fa fa-chevron-up"></i>
+                            <th class="num-header" ng-click="sortBy('max_pure')">Pure
+                                <i ng-show="sort.desc && sort.type=='max_pure'" class="fa fa-chevron-down"></i>
+                                <i ng-show="!sort.desc && sort.type=='max_pure'" class="fa fa-chevron-up"></i>
                             </th>
-                            <th class="num-header" ng-click="sortBy('cool')">Cool
-                                <i ng-show="sort.desc && sort.gen=='cool'" class="fa fa-chevron-down"></i>
-                                <i ng-show="!sort.desc && sort.gen=='cool'" class="fa fa-chevron-up"></i>
+                            <th class="num-header" ng-click="sortBy('max_cool')">Cool
+                                <i ng-show="sort.desc && sort.type=='max_cool'" class="fa fa-chevron-down"></i>
+                                <i ng-show="!sort.desc && sort.type=='max_cool'" class="fa fa-chevron-up"></i>
                             </th>
                             <th class="num-header" style="min-width:80px" ng-click="sortBy('cScore')">C-Score
                                 <i ng-show="sort.desc && sort.gen=='cScore'" class="fa fa-chevron-down"></i>
@@ -160,7 +150,9 @@
                     </thead>
 
                     <tbody>
-                        <tr ng-if="cards.length==0">
+                        <!-- <tr><td colspan=20 class="text-left"><pre>{{rawUserCardsData[0]|json}}</pre></td></tr> -->
+                        <tr ng-if=""></tr>
+                        <tr ng-if="userCards.length==0">
                             <td colspan=15 style="word-wrap: normal">
                                 <span class="text-danger">No cards found.</span>
                                 <span ng-if="filters.event && filters.compare=='healers'">There are no Healer Event cards.</span>
@@ -190,7 +182,7 @@
                             <td>{{sort.desc ? $index+1 : cards.length - $index}}</td>
                             <td class="name-display">
                                 <div class="media">
-                                    <div class="media-left"><img ng-if="filters.displayImg" ng-src="{{filters.idlz || card.is_promo ? card.round_card_idolized_image : card.round_card_image}}" class="display-image media-image">
+                                    <div class="media-left"><img ng-if="filters.displayImg" ng-src="{{card.user_idlz || card.is_promo ? card.round_card_idolized_image : card.round_card_image}}" class="display-image media-image">
                                     </div>
                                     <div class="media-body media-middle">
                                         <span
@@ -212,25 +204,25 @@
                                 </div>
                             </td>
                             <td>{{card.id}}</td>
-                            <td>{{filters.idlz ? card.idolized_maximum_statistics_smile : card.non_idolized_maximum_statistics_smile}}</td>
-                            <td>{{filters.idlz ? card.idolized_maximum_statistics_pure : card.non_idolized_maximum_statistics_pure}}</td>
-                            <td>{{filters.idlz ? card.idolized_maximum_statistics_cool : card.non_idolized_maximum_statistics_cool}}</td>
-                            <td>{{filters.idlz ? card.cScore_idlz : card.cScore | number:2}}</td>
-                            <td>{{filters.idlz ? card.oScore_idlz : card.oScore | number:2}}</td>
+                            <td>{{card.max_smile}}</td>
+                            <td>{{card.max_pure}}</td>
+                            <td>{{card.max_cool}}</td>
+                            <td>{{card.cScore | number:2}}</td>
+                            <td>{{card.oScore | number:2}}</td>
                             <td ng-show="filters.compare=='scorers'">{{card.skill.su |number:2}}</td>
                             <td ng-show="filters.compare=='perfect locks'">{{card.skill.pl |number:2}}</td>
                             <td ng-show="filters.compare=='healers'">{{card.skill.hl | number:2}}</td>
                             <td ng-show="filters.compare=='healers'">{{card.skill.hl_heel |number:2}}</td>
                             <td ng-show="filters.compare=='healers'">
                                 <span uib-popover="Cannot equip Heel to an unidolized SR or SSR. Turn on Idolized." popover-trigger="'mouseenter'" popover-enable="!filters.idlz && card.cScore_heel==0">
-                                    <i ng-if="!filters.idlz && card.cScore_heel==0" class="fa fa-warning text-danger"></i>
-                                    {{filters.idlz ? card.cScore_heel_idlz : card.cScore_heel | number:2}}
+                                    <i ng-if="card.cScore_heel==0" class="fa fa-warning text-danger"></i>
+                                    {{card.cScore_heel | number:2}}
                                 </span>
                             </td>
                             <td ng-show="filters.compare=='healers'">
                                 <span uib-popover="Cannot equip Heel to an unidolized SR or SSR. Turn on Idolized." popover-trigger="'mouseenter'" popover-enable="!filters.idlz && card.cScore_heel==0">
-                                    <i ng-if="!filters.idlz && card.cScore_heel==0" class="fa fa-warning text-danger"></i>
-                                    {{filters.idlz ? card.oScore_heel_idlz : card.oScore_heel | number:2}}</td>
+                                    <i ng-if="card.oScore_heel==0" class="fa fa-warning text-danger"></i>
+                                    {{card.oScore_heel | number:2}}</td>
                             </span>
                         </tr>
                     </tbody>
