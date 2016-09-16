@@ -260,8 +260,8 @@ app.controller('TierCtrl', function($rootScope, $scope, Cards, localStorageServi
 app.controller('UserCtrl', function($rootScope, $scope, Cards, localStorageService, $filter) {
 
     var init = function() {
-        $scope.filters = localStorageService.get('filters');
-        if (!$scope.filters) $scope.filters = angular.copy($rootScope.InitFilters);
+        $scope.userFilters = localStorageService.get('userFilters');
+        if (!$scope.userFilters) $scope.userFilters = angular.copy($rootScope.InitFilters);
 
         $scope.userCards = localStorageService.get('userCards');
         if (!$scope.userCards) $scope.userCards = [];
@@ -381,7 +381,7 @@ app.controller('UserCtrl', function($rootScope, $scope, Cards, localStorageServi
         localStorageService.set('rawUserCardsData', $scope.rawUserCardsData);
 
         // filter for display
-        $scope.userCards = Cards.filterCards($scope.filters, $scope.rawUserCardsData);
+        $scope.userCards = Cards.filterCards($scope.userFilters, $scope.rawUserCardsData);
 
         localStorageService.set('userCards', $scope.userCards)
 
@@ -403,59 +403,59 @@ app.controller('UserCtrl', function($rootScope, $scope, Cards, localStorageServi
     };
 
     $scope.err = {};
-    $scope.err.rarity = !$scope.filters.sr && !$scope.filters.ssr && !$scope.filters.ur;
-    $scope.err.origin = !$scope.filters.premium && !$scope.filters.event && !$scope.filters.promo;
-    $scope.err.main = !$scope.filters.muse && !$scope.filters.aqours;
+    $scope.err.rarity = !$scope.userFilters.sr && !$scope.userFilters.ssr && !$scope.filters.ur;
+    $scope.err.origin = !$scope.userFilters.premium && !$scope.userFilters.event && !$scope.filters.promo;
+    $scope.err.main = !$scope.userFilters.muse && !$scope.userFilters.aqours;
 
     $scope.filterCards = function() {
         console.log($scope.userCards.length)
         console.log($scope.rawUserCardsData.length)
-        $scope.userCards = Cards.filterCards($scope.filters, angular.copy($scope.rawUserCardsData));
+        $scope.userCards = Cards.filterCards($scope.userFilters, angular.copy($scope.rawUserCardsData));
 
         console.log($scope.userCards.length)
         console.log($scope.rawUserCardsData.length)
-        localStorageService.set('filters', $scope.filters);
+        localStorageService.set('userFilters', $scope.userFilters);
         localStorageService.set('userCards', $scope.userCards);
 
-        $scope.err.rarity = !$scope.filters.sr && !$scope.filters.ssr && !$scope.filters.ur;
-        $scope.err.origin = !$scope.filters.premium && !$scope.filters.event && !$scope.filters.promo;
-        $scope.err.main = !$scope.filters.muse && !$scope.filters.aqours;
+        $scope.err.rarity = !$scope.userFilters.sr && !$scope.userFilters.ssr && !$scope.userFilters.ur;
+        $scope.err.origin = !$scope.userFilters.premium && !$scope.userFilters.event && !$scope.userFilters.promo;
+        $scope.err.main = !$scope.userFilters.muse && !$scope.userFilters.aqours;
 
-        $scope.filters.originStr = "";
-        if ($scope.filters.premium && $scope.filters.event && $scope.filters.promo)
-            $scope.filters.originStr = "premium scouting, events, and promos";
-        else if ($scope.filters.premium && $scope.filters.event && !$scope.filters.promo)
-            $scope.filters.originStr = "premium scouting and events";
-        else if ($scope.filters.premium && !$scope.filters.event && $scope.filters.promo)
-            $scope.filters.originStr = "premium scouting and promos";
-        else if (!$scope.filters.premium && $scope.filters.event && $scope.filters.promo)
-            $scope.filters.originStr = "events and promos";
-        else if ($scope.filters.premium && !$scope.filters.event && !$scope.filters.promo)
-            $scope.filters.originStr = "premium scouting";
-        else if (!$scope.filters.premium && $scope.filters.event && !$scope.filters.promo)
-            $scope.filters.originStr = "events";
-        else if (!$scope.filters.premium && !$scope.filters.event && $scope.filters.promo)
-            $scope.filters.originStr = "promos";
+        $scope.userFilters.originStr = "";
+        if ($scope.userFilters.premium && $scope.userFilters.event && $scope.userFilters.promo)
+            $scope.userFilters.originStr = "premium scouting, events, and promos";
+        else if ($scope.userFilters.premium && $scope.userFilters.event && !$scope.userFilters.promo)
+            $scope.userFilters.originStr = "premium scouting and events";
+        else if ($scope.userFilters.premium && !$scope.userFilters.event && $scope.userFilters.promo)
+            $scope.userFilters.originStr = "premium scouting and promos";
+        else if (!$scope.userFilters.premium && $scope.userFilters.event && $scope.userFilters.promo)
+            $scope.userFilters.originStr = "events and promos";
+        else if ($scope.userFilters.premium && !$scope.userFilters.event && !$scope.userFilters.promo)
+            $scope.userFilters.originStr = "premium scouting";
+        else if (!$scope.userFilters.premium && $scope.userFilters.event && !$scope.userFilters.promo)
+            $scope.userFilters.originStr = "events";
+        else if (!$scope.userFilters.premium && !$scope.userFilters.event && $scope.userFilters.promo)
+            $scope.userFilters.originStr = "promos";
 
-        $scope.filters.rarityStr = "";
-        if ($scope.filters.sr && $scope.filters.ssr && $scope.filters.ur)
-            $scope.filters.rarityStr = "SRs, SSRs, and URs";
-        else if ($scope.filters.sr && !$scope.filters.ssr && $scope.filters.ur)
-            $scope.filters.rarityStr = "SRs and URs";
-        else if ($scope.filters.sr && $scope.filters.ssr && !$scope.filters.ur)
-            $scope.filters.rarityStr = "SRs and SSRs";
-        else if (!$scope.filters.sr && $scope.filters.ssr && $scope.filters.ur)
-            $scope.filters.rarityStr = "SSRs and URs";
-        else if ($scope.filters.sr && !$scope.filters.ssr && !$scope.filters.ur)
-            $scope.filters.rarityStr = "SRs";
-        else if (!$scope.filters.sr && $scope.filters.ssr && !$scope.filters.ur)
-            $scope.filters.rarityStr = "SSRs";
-        else if (!$scope.filters.sr && !$scope.filters.ssr && $scope.filters.ur)
-            $scope.filters.rarityStr = "URs";
+        $scope.userFilters.rarityStr = "";
+        if ($scope.userFilters.sr && $scope.userFilters.ssr && $scope.userFilters.ur)
+            $scope.userFilters.rarityStr = "SRs, SSRs, and URs";
+        else if ($scope.userFilters.sr && !$scope.userFilters.ssr && $scope.userFilters.ur)
+            $scope.userFilters.rarityStr = "SRs and URs";
+        else if ($scope.userFilters.sr && $scope.userFilters.ssr && !$scope.userFilters.ur)
+            $scope.userFilters.rarityStr = "SRs and SSRs";
+        else if (!$scope.userFilters.sr && $scope.userFilters.ssr && $scope.userFilters.ur)
+            $scope.userFilters.rarityStr = "SSRs and URs";
+        else if ($scope.userFilters.sr && !$scope.userFilters.ssr && !$scope.userFilters.ur)
+            $scope.userFilters.rarityStr = "SRs";
+        else if (!$scope.userFilters.sr && $scope.userFilters.ssr && !$scope.userFilters.ur)
+            $scope.userFilters.rarityStr = "SSRs";
+        else if (!$scope.userFilters.sr && !$scope.userFilters.ssr && $scope.userFilters.ur)
+            $scope.userFilters.rarityStr = "URs";
 
 
     }
-    $scope.$watch('filters.compare', function(n, o) {
+    $scope.$watch('userFilters.compare', function(n, o) {
         if (n != o) {
             $scope.sort.type = 'cScore';
             $scope.sort.gen = "cScore";
@@ -464,7 +464,7 @@ app.controller('UserCtrl', function($rootScope, $scope, Cards, localStorageServi
     })
 
     $scope.setLocalStorageFilters = function() {
-        localStorageService.set('filters', $scope.filters)
+        localStorageService.set('userFilters', $scope.userFilters)
     }
 
     $scope.collapsing = function() {
@@ -473,8 +473,8 @@ app.controller('UserCtrl', function($rootScope, $scope, Cards, localStorageServi
     };
 
     $scope.resetFilters = function() {
-        $scope.filters = angular.copy($rootScope.InitFilters);
-        localStorageService.set('filters', $scope.filters);
+        $scope.userFilters = angular.copy($rootScope.InitFilters);
+        localStorageService.set('userFilters', $scope.userFilters);
 
         $scope.sort = {
             type: 'cScore',
@@ -486,7 +486,7 @@ app.controller('UserCtrl', function($rootScope, $scope, Cards, localStorageServi
     }
 
     $scope.sortBy = function(type) {
-        Cards.sortBy($scope.sort, $scope.filters.idlz, type)
+        Cards.sortBy($scope.sort, $scope.userFilters.idlz, type)
         localStorageService.set('sort', $scope.sort)
     }
 

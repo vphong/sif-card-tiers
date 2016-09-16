@@ -58,9 +58,6 @@ td {
     text-transform: uppercase;
 }
 
-.btn-group-justified, .input-group {
-    margin-bottom: 10px;
-}
 
 footer.well {
     border-bottom-left-radius: 0px;
@@ -92,11 +89,13 @@ footer.well {
 .filter-group {
     padding: 0px 5px !important;
 }
-
+.btn-group-justified, .input-group {
+    margin-bottom: 5px;
+}
 .filter-group>button {
     padding-left: 0px;
     padding-right: 0px;
-    margin-bottom: 10px;
+    margin-bottom: 5px;
 }
 
 .loading-overlay {
@@ -173,6 +172,9 @@ footer.well {
     overflow-x: auto;
     width: 100%;
 }
+.user-table {
+      height: calc(100vh - 284px);
+}
 
 .text-smile {
     color: #cd0063 !important;
@@ -189,8 +191,6 @@ footer.well {
 #table {
     border: 1px solid #dfd7ca;
     border-radius: 3px;
-    display: flex;
-    flex-direction: column;
 }
 
 .info-title {

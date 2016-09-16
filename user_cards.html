@@ -2,46 +2,50 @@
     <div class="col-xs-2" id="filters-md-screens">
         <div class="row">
             <div class="btn-group-vertical col-xs-12" uib-tooltip="Compare by skill" tooltip-placement="top">
-                <label class="btn btn-success btn-sm" ng-model="filters.compare" ng-click="filterCards()" uib-btn-radio="'scorers'">Score Up</label>
-                <label class="btn btn-success btn-sm" ng-model="filters.compare" ng-click="filterCards()" uib-btn-radio="'perfect locks'">Perfect Lock</label>
-                <label class="btn btn-success btn-sm" ng-model="filters.compare" ng-click="filterCards()" uib-btn-radio="'healers'">Healer</label>
+                <label class="btn btn-success btn-sm" ng-model="userFilters.compare" ng-click="filterCards()" uib-btn-radio="'scorers'">Score Up</label>
+                <label class="btn btn-success btn-sm" ng-model="userFilters.compare" ng-click="filterCards()" uib-btn-radio="'perfect locks'">Perfect Lock</label>
+                <label class="btn btn-success btn-sm" ng-model="userFilters.compare" ng-click="filterCards()" uib-btn-radio="'healers'">Healer</label>
             </div>
 
             <div class="btn-group btn-group-justified">
                 <label class="btn btn-danger btn-sm" ng-click="resetFilters()">Reset Filters</label>
             </div>
             <div class="btn-group-vertical col-xs-12">
-                <label class="btn btn-info btn-sm" ng-model="filters.displayImg" ng-click="setLocalStorageFilters()" uib-btn-checkbox>Display images?</label>
+                <label class="btn btn-info btn-sm" ng-model="userFilters.displayImg" ng-click="setLocalStorageFilters()" uib-btn-checkbox>Display images?</label>
             </div>
 
             <div uib-tooltip="Attribute" tooltip-placement="top">
                 <div class="btn-group btn-group-justified col-xs-12 no-padding" style="margin-bottom:0px">
-                    <label class="btn btn-info btn-sm" style="border-bottom-left-radius:0" ng-model="filters.attribute" ng-click="filterCards()" uib-btn-radio="'all'">All</label>
-                    <label class="btn btn-info btn-sm" style="border-bottom-right-radius:0" ng-model="filters.attribute" ng-click="filterCards()" uib-btn-radio="'smile'">Smile</label>
+                    <label class="btn btn-info btn-sm" style="border-bottom-left-radius:0" ng-model="userFilters.attribute" ng-click="filterCards()" uib-btn-radio="'all'">All</label>
+                    <label class="btn btn-info btn-sm" style="border-bottom-right-radius:0" ng-model="userFilters.attribute" ng-click="filterCards()" uib-btn-radio="'smile'">Smile</label>
                 </div>
 
                 <div class="btn-group btn-group-justified col-xs-12 no-padding">
-                    <label class="btn btn-info btn-sm" style="border-top-left-radius:0" ng-model="filters.attribute" ng-click="filterCards()" uib-btn-radio="'pure'">Pure</label>
-                    <label class="btn btn-info btn-sm" style="border-top-right-radius:0" ng-model="filters.attribute" ng-click="filterCards()" uib-btn-radio="'cool'">Cool</label>
+                    <label class="btn btn-info btn-sm" style="border-top-left-radius:0" ng-model="userFilters.attribute" ng-click="filterCards()" uib-btn-radio="'pure'">Pure</label>
+                    <label class="btn btn-info btn-sm" style="border-top-right-radius:0" ng-model="userFilters.attribute" ng-click="filterCards()" uib-btn-radio="'cool'">Cool</label>
                 </div>
             </div>
 
             <div class="btn-group btn-group-justified col-xs-12" uib-tooltip="Rarity" tooltip-placement="top">
-                <label class="btn btn-info btn-sm" ng-model="filters.sr" ng-click="toggleBool(filters.sr);filterCards()" uib-btn-checkbox>SR</label>
-                <label class="btn btn-info btn-sm" ng-model="filters.ssr" ng-click="toggleBool(filters.ssr);filterCards()" uib-btn-checkbox>SSR</label>
-                <label class="btn btn-info btn-sm" ng-model="filters.ur" ng-click="toggleBool(filters.ur);filterCards()" uib-btn-checkbox>UR</label>
+                <label class="btn btn-info btn-sm" ng-model="userFilters.sr" ng-click="toggleBool(userFilters.sr);filterCards()" uib-btn-checkbox>SR</label>
+                <label class="btn btn-info btn-sm" ng-model="userFilters.ssr" ng-click="toggleBool(userFilters.ssr);filterCards()" uib-btn-checkbox>SSR</label>
+                <label class="btn btn-info btn-sm" ng-model="userFilters.ur" ng-click="toggleBool(userFilters.ur);filterCards()" uib-btn-checkbox>UR</label>
             </div>
 
             <div class="btn-group-vertical col-xs-12" uib-tooltip="Origin" tooltip-placement="top">
-                <label class="btn btn-info btn-sm" ng-model="filters.premium" ng-click="toggleBool(filters.premium);filterCards()" uib-btn-checkbox>Premium</label>
-                <label class="btn btn-info btn-sm" ng-model="filters.event" ng-click="toggleBool(filters.event);filterCards()" uib-btn-checkbox>Event</label>
-                <label class="btn btn-info btn-sm" ng-model="filters.promo" ng-click="toggleBool(filters.promo);filterCards()" uib-btn-checkbox>Promo</label>
+                <label class="btn btn-info btn-sm" ng-model="userFilters.premium" ng-click="toggleBool(userFilters.premium);filterCards()" uib-btn-checkbox>Premium</label>
+                <label class="btn btn-info btn-sm" ng-model="userFilters.event" ng-click="toggleBool(userFilters.event);filterCards()" uib-btn-checkbox>Event</label>
+                <label class="btn btn-info btn-sm" ng-model="userFilters.promo" ng-click="toggleBool(userFilters.promo);filterCards()" uib-btn-checkbox>Promo</label>
             </div>
 
             <div class="btn-group-vertical col-xs-12" uib-tooltip="Main unit" tooltip-placement="top">
-                <label class="btn btn-info btn-sm" ng-model="filters.muse" ng-click="toggleBool(filters.muse);filterCards()" uib-btn-checkbox>Muse</label>
-                <label class="btn btn-info btn-sm" ng-model="filters.aqours" ng-click="toggleBool(filters.aqours);filterCards()" uib-btn-checkbox>Aqours</label>
+                <label class="btn btn-info btn-sm" ng-model="userFilters.muse" ng-click="toggleBool(userFilters.muse);filterCards()" uib-btn-checkbox>Muse</label>
+                <label class="btn btn-info btn-sm" ng-model="userFilters.aqours" ng-click="toggleBool(userFilters.aqours);filterCards()" uib-btn-checkbox>Aqours</label>
             </div>
+
+            <small class="col-xs-12">
+              Showing <b>{{userCards.length}}</b> of <b>{{rawUserCardsData.length}}</b> total cards.
+            </small>
         </div>
     </div>
 
@@ -87,7 +91,7 @@
         </div>
 
         <div style="border: 1px solid #dfd7ca;border-radius: 3px">
-            <div class="table-container">
+            <div class="table-container user-table">
 
                 <table class="table table-striped" id="tbl">
                     <thead fix-head>
@@ -118,30 +122,30 @@
                                 <i ng-show="sort.desc && sort.gen=='oScore'" class="fa fa-chevron-down"></i>
                                 <i ng-show="!sort.desc && sort.gen=='oScore'" class="fa fa-chevron-up"></i>
                             </th>
-                            <th class="num-header" style="min-width:90px" ng-click="sortBy('skill.su')" ng-show="filters.compare=='scorers'">Score Up
+                            <th class="num-header" style="min-width:90px" ng-click="sortBy('skill.su')" ng-show="userFilters.compare=='scorers'">Score Up
                                 <i ng-show="sort.desc && sort.type=='skill.su'" class="fa fa-chevron-down"></i>
                                 <i ng-show="!sort.desc && sort.type=='skill.su'" class="fa fa-chevron-up"></i>
                             </th>
-                            <th class="num-header" style="min-width:90px" ng-click="sortBy('skill.pl')" ng-show="filters.compare=='perfect locks'">PL Time
+                            <th class="num-header" style="min-width:90px" ng-click="sortBy('skill.pl')" ng-show="userFilters.compare=='perfect locks'">PL Time
                                 <i ng-show="sort.desc && sort.type=='skill.pl'" class="fa fa-chevron-down"></i>
                                 <i ng-show="!sort.desc && sort.type=='skill.pl'" class="fa fa-chevron-up"></i>
                             </th>
-                            <th class="num-header" style="min-width:90px" ng-click="sortBy('skill.hl')" ng-show="filters.compare=='healers'">Avg. Heal
+                            <th class="num-header" style="min-width:90px" ng-click="sortBy('skill.hl')" ng-show="userFilters.compare=='healers'">Avg. Heal
                                 <i ng-show="sort.desc && sort.type=='skill.hl'" class="fa fa-chevron-down"></i>
                                 <i ng-show="!sort.desc && sort.type=='skill.hl'" class="fa fa-chevron-up"></i>
                             </th>
-                            <th class="num-header" style="min-width:100px" ng-click="sortBy('skill.hl_heel')" ng-show="filters.compare=='healers'">
+                            <th class="num-header" style="min-width:100px" ng-click="sortBy('skill.hl_heel')" ng-show="userFilters.compare=='healers'">
                                 <abbr title="Score Up">SU</abbr>
                                 w/ Heel
                                 <i ng-show="sort.desc && sort.type=='skill.hl_heel'" class="fa fa-chevron-down"></i>
                                 <i ng-show="!sort.desc && sort.type=='skill.hl_heel'" class="fa fa-chevron-up"></i>
                             </th>
-                            <th class="num-header" style="min-width:130px" ng-click="sortBy('cScore_heel')" ng-show="filters.compare=='healers'">
+                            <th class="num-header" style="min-width:130px" ng-click="sortBy('cScore_heel')" ng-show="userFilters.compare=='healers'">
                                 C-Score w/ Heel
                                 <i ng-show="sort.desc && sort.gen=='cScore_heel'" class="fa fa-chevron-down"></i>
                                 <i ng-show="!sort.desc && sort.gen=='cScore_heel'" class="fa fa-chevron-up"></i>
                             </th>
-                            <th class="num-header score-header" style="min-width:130px" ng-click="sortBy('oScore_heel')" ng-show="filters.compare=='healers'">
+                            <th class="num-header score-header" style="min-width:130px" ng-click="sortBy('oScore_heel')" ng-show="userFilters.compare=='healers'">
                                 O-Score w/ Heel
                                 <i ng-show="sort.desc && sort.gen=='oScore_heel'" class="fa fa-chevron-down"></i>
                                 <i ng-show="!sort.desc && sort.gen=='oScore_heel'" class="fa fa-chevron-up"></i>
@@ -155,7 +159,7 @@
                         <tr ng-if="userCards.length==0">
                             <td colspan=15 style="word-wrap: normal">
                                 <span class="text-danger">No cards found.</span>
-                                <span ng-if="filters.event && filters.compare=='healers'">There are no Healer Event cards.</span>
+                                <span ng-if="userFilters.event && userFilters.compare=='healers'">There are no Healer Event cards.</span>
                                 <span ng-show="err.rarity || err.main || err.origin">Please select a(n):
                                     <span ng-show="err.rarity">
                                         <b>rarity</b>
@@ -182,7 +186,7 @@
                             <td>{{sort.desc ? $index+1 : cards.length - $index}}</td>
                             <td class="name-display">
                                 <div class="media">
-                                    <div class="media-left"><img ng-if="filters.displayImg" ng-src="{{card.user_idlz || card.is_promo ? card.round_card_idolized_image : card.round_card_image}}" class="display-image media-image">
+                                    <div class="media-left"><img ng-if="userFilters.displayImg" ng-src="{{card.user_idlz || card.is_promo ? card.round_card_idolized_image : card.round_card_image}}" class="display-image media-image">
                                     </div>
                                     <div class="media-body media-middle">
                                         <span
@@ -209,18 +213,18 @@
                             <td>{{card.max_cool}}</td>
                             <td>{{card.cScore | number:2}}</td>
                             <td>{{card.oScore | number:2}}</td>
-                            <td ng-show="filters.compare=='scorers'">{{card.skill.su |number:2}}</td>
-                            <td ng-show="filters.compare=='perfect locks'">{{card.skill.pl |number:2}}</td>
-                            <td ng-show="filters.compare=='healers'">{{card.skill.hl | number:2}}</td>
-                            <td ng-show="filters.compare=='healers'">{{card.skill.hl_heel |number:2}}</td>
-                            <td ng-show="filters.compare=='healers'">
-                                <span uib-popover="Cannot equip Heel to an unidolized SR or SSR. Turn on Idolized." popover-trigger="'mouseenter'" popover-enable="!filters.idlz && card.cScore_heel==0">
+                            <td ng-show="userFilters.compare=='scorers'">{{card.skill.su |number:2}}</td>
+                            <td ng-show="userFilters.compare=='perfect locks'">{{card.skill.pl |number:2}}</td>
+                            <td ng-show="userFilters.compare=='healers'">{{card.skill.hl | number:2}}</td>
+                            <td ng-show="userFilters.compare=='healers'">{{card.skill.hl_heel |number:2}}</td>
+                            <td ng-show="userFilters.compare=='healers'">
+                                <span uib-popover="Cannot equip Heel to an unidolized SR or SSR. Turn on Idolized." popover-trigger="'mouseenter'" popover-enable="card.cScore_heel==0">
                                     <i ng-if="card.cScore_heel==0" class="fa fa-warning text-danger"></i>
                                     {{card.cScore_heel | number:2}}
                                 </span>
                             </td>
-                            <td ng-show="filters.compare=='healers'">
-                                <span uib-popover="Cannot equip Heel to an unidolized SR or SSR. Turn on Idolized." popover-trigger="'mouseenter'" popover-enable="!filters.idlz && card.cScore_heel==0">
+                            <td ng-show="userFilters.compare=='healers'">
+                                <span uib-popover="Cannot equip Heel to an unidolized SR or SSR. Turn on Idolized." popover-trigger="'mouseenter'" popover-enable="card.oScore_heel==0">
                                     <i ng-if="card.oScore_heel==0" class="fa fa-warning text-danger"></i>
                                     {{card.oScore_heel | number:2}}</td>
                             </span>
