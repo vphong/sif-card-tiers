@@ -167,7 +167,7 @@
                                 <a style="cursor: pointer" ng-click="resetFilters()">Reset filters?</a>
                             </td>
                         </tr>
-                        <tr ng-repeat="card in filtered = (cards | filter:search) | orderBy:sort.type:sort.desc">
+                        <tr ng-repeat="card in filtered = (cards | filter:search) track by $index| orderBy:sort.type:sort.desc">
                             <td>{{sort.desc ? $index+1 : cards.length - $index}}</td>
                             <td class="name-display">
                                 <div class="media">

@@ -19,6 +19,15 @@ app.run(function(bsLoadingOverlayService) {
         templateUrl: 'loading-overlay.html' // Template url for overlay element. If not specified - no overlay element is created.
     });
 });
+app.filter('toArray', function() {
+    return function(obj) {
+      const result = [];
+      angular.forEach(obj, function(val) {
+        result.push(val);
+      });
+     return result;
+   }
+ });
 
 app.config(function($stateProvider, $urlRouterProvider) {
 
@@ -395,8 +404,9 @@ app.controller('UserCtrl', function($rootScope, $scope, Cards, localStorageServi
         localStorageService.set('rawUserCardsData', $scope.rawUserCardsData);
 
         // filter for display
-        $scope.userCards = Cards.filterCards($scope.userFilters, $scope.rawUserCardsData);
-
+        var filtered = '';
+        $scope.userCards =Cards.filterCards($scope.userFilters, $scope.rawUserCardsData); 
+        console.log(Array.isArray($scope.userCards))
         localStorageService.set('userCards', $scope.userCards)
 
     };
@@ -422,12 +432,8 @@ app.controller('UserCtrl', function($rootScope, $scope, Cards, localStorageServi
     $scope.err.main = !$scope.userFilters.muse && !$scope.userFilters.aqours;
 
     $scope.filterCards = function() {
-        console.log($scope.userCards.length)
-        console.log($scope.rawUserCardsData.length)
         $scope.userCards = Cards.filterCards($scope.userFilters, angular.copy($scope.rawUserCardsData));
 
-        console.log($scope.userCards.length)
-        console.log($scope.rawUserCardsData.length)
         localStorageService.set('userFilters', $scope.userFilters);
         localStorageService.set('userCards', $scope.userCards);
 
@@ -503,6 +509,7 @@ app.controller('UserCtrl', function($rootScope, $scope, Cards, localStorageServi
         Cards.sortBy($scope.sort, $scope.userFilters.idlz, type)
         localStorageService.set('sort', $scope.sort)
     }
+
 
 });
 var modalController = function($scope, $uibModalInstance) {
