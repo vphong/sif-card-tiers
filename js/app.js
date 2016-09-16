@@ -437,3 +437,22 @@ app.controller('UserCtrl', function($rootScope, $scope, Cards, localStorageServi
     }
 
 });
+var modalController = function($scope, $uibModalInstance) {
+    $scope.close = function() {
+        $uibModalInstance.close();
+    };
+};
+
+modalController.$inject = ['$scope', '$uibModalInstance'];
+
+app.controller('ChangelogCtrl', function($scope, $uibModal) {
+    $scope.open = function(size) {
+        var modalInstance = $uibModal.open({
+            animation: true,
+            templateUrl: 'changelog.html',
+            controller: modalController,
+            size: size,
+            resolve: {}
+        });
+    };
+})
