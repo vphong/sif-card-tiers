@@ -1,6 +1,5 @@
 <!-- TODO: search by year, tier organization -->
-<div class="container-fluid no-padding">
-    <div class="hidden-md hidden-lg col-sm-12" id="filters-sm-screens">
+    <!-- <div class="hidden-md hidden-lg col-sm-12" id="filters-sm-screens">
 
         <div class="filter-group col-xs-12 btn-group btn-group-justified" uib-tooltip="Compare by Skill Type">
 
@@ -9,24 +8,24 @@
             <label class="btn btn-success btn-sm" ng-model="filters.compare" ng-click="filterCards()" uib-btn-radio="'healers'">Healer</label>
         </div>
 
-        <div class="filter-group col-xs-4 col-sm-2">
+        <div class="filter-group col-xs-3 col-sm-2">
             <button type="button" class="btn btn-block btn-danger btn-sm" ng-click="resetFilters()">Reset Filters</button>
         </div>
-        <div class="filter-group col-xs-4 col-sm-2">
+        <div class="filter-group col-xs-3 col-sm-2">
             <button class="btn btn-block btn-info btn-sm" ng-model="filters.displayImg" ng-click="setLocalStorageFilters()" uib-btn-checkbox>Display images?</label>
         </div>
-        <div class="filter-group col-xs-4 col-sm-2">
+        <div class="filter-group col-xs-3 col-sm-2">
             <button class="btn btn-block btn-info btn-sm" ng-model="filters.idlz" ng-click="setLocalStorageFilters()" uib-btn-checkbox>Idolized?</label>
         </div>
 
-        <div class="filter-group col-xs-12 col-sm-3">
+        <div class="filter-group col-xs-3 col-sm-3">
             <div class="btn-group btn-group-justified" uib-tooltip="Server">
                 <label class="btn btn-info btn-sm" ng-model="filters.server" ng-click="filterCards()" uib-btn-radio="'jp'">Japan</label>
                 <label class="btn btn-info btn-sm" ng-model="filters.server" ng-click="filterCards()" uib-btn-radio="'en'">Global</label>
             </div>
         </div>
 
-        <div class="filter-group col-xs-12 col-sm-3" uib-tooltip="Rarity">
+        <div class="filter-group col-xs-4 col-sm-3" uib-tooltip="Rarity">
             <div class="btn-group btn-group-justified">
                 <label class="btn btn-info btn-sm col-xs-4" ng-model="filters.sr" ng-click="toggleBool(filters.sr);filterCards()" uib-btn-checkbox>SR</label>
                 <label class="btn btn-info btn-sm col-xs-4" ng-model="filters.ssr" ng-click="toggleBool(filters.ssr);filterCards()" uib-btn-checkbox>SSR</label>
@@ -34,7 +33,7 @@
             </div>
         </div>
 
-        <div class="filter-group col-xs-12 col-sm-5" uib-tooltip="Attribute">
+        <div class="filter-group col-xs-8 col-sm-5" uib-tooltip="Attribute">
             <div class="btn-group btn-group-justified">
                 <label class="btn btn-info btn-sm" ng-model="filters.attribute" ng-click="filterCards()" uib-btn-radio="'all'">All</label>
                 <label class="btn btn-info btn-sm" ng-model="filters.attribute" ng-click="filterCards()" uib-btn-radio="'smile'">Smile</label>
@@ -58,10 +57,11 @@
             </div>
         </div>
     </div>
-
-    <div class="hidden-xs hidden-sm col-md-2" id="filters-md-screens" bs-affix data-offset-top="140">
-        <div class="container-fluid row">
-            <div class="btn-group-vertical col-md-12">
+ -->
+ <div class="container-fluid row">
+    <div class="col-xs-2" id="filters-md-screens">
+        <div class="row">
+            <div class="btn-group-vertical col-xs-12">
                 <label class="btn btn-success btn-sm" ng-model="filters.compare" ng-click="filterCards()" uib-btn-radio="'scorers'">Score Up</label>
                 <label class="btn btn-success btn-sm" ng-model="filters.compare" ng-click="filterCards()" uib-btn-radio="'perfect locks'">Perfect Lock</label>
                 <label class="btn btn-success btn-sm" ng-model="filters.compare" ng-click="filterCards()" uib-btn-radio="'healers'">Healer</label>
@@ -70,45 +70,49 @@
             <div class="btn-group btn-group-justified">
                 <label class="btn btn-danger btn-sm" ng-click="resetFilters()">Reset Filters</label>
             </div>
+            <div class="btn-group-vertical col-xs-12">
+                <label class="btn btn-info btn-sm" ng-model="filters.displayImg" ng-click="setLocalStorageFilters()" uib-btn-checkbox>Display images?</label>
+            </div>
+
+            <div class="btn-group-vertical col-xs-12">
+                <label class="btn btn-info btn-sm" ng-model="filters.idlz" ng-click="setLocalStorageFilters()" uib-btn-checkbox>Idolized?</label>
+            </div>
 
             <div class="btn-group btn-group-justified">
                 <label class="btn btn-info btn-sm" ng-model="filters.server" ng-click="filterCards()" uib-btn-radio="'jp'">JP</label>
                 <label class="btn btn-info btn-sm" ng-model="filters.server" ng-click="filterCards()" uib-btn-radio="'en'">EN</label>
             </div>
 
-            <div class="btn-group btn-group-justified col-md-12 no-padding" style="margin-bottom:0px">
+            <div class="btn-group btn-group-justified col-xs-12 no-padding" style="margin-bottom:0px">
                 <label class="btn btn-info btn-sm" style="border-bottom-left-radius:0" ng-model="filters.attribute" ng-click="filterCards()" uib-btn-radio="'all'">All</label>
                 <label class="btn btn-info btn-sm" style="border-bottom-right-radius:0" ng-model="filters.attribute" ng-click="filterCards()" uib-btn-radio="'smile'">Smile</label>
             </div>
-            <div class="btn-group btn-group-justified col-md-12 no-padding">
+
+            <div class="btn-group btn-group-justified col-xs-12 no-padding">
                 <label class="btn btn-info btn-sm" style="border-top-left-radius:0" ng-model="filters.attribute" ng-click="filterCards()" uib-btn-radio="'pure'">Pure</label>
                 <label class="btn btn-info btn-sm" style="border-top-right-radius:0" ng-model="filters.attribute" ng-click="filterCards()" uib-btn-radio="'cool'">Cool</label>
             </div>
 
-            <div class="btn-group-vertical col-md-12">
-                <label class="btn btn-info btn-sm" ng-model="filters.idlz" ng-click="localStorageService.set('filters',filters.idlz)" uib-btn-checkbox>Idolized?</label>
-            </div>
-
-            <div class="btn-group btn-group-justified col-md-12">
+            <div class="btn-group btn-group-justified col-xs-12">
                 <label class="btn btn-info btn-sm" ng-model="filters.sr" ng-click="toggleBool(filters.sr);filterCards()" uib-btn-checkbox>SR</label>
                 <label class="btn btn-info btn-sm" ng-model="filters.ssr" ng-click="toggleBool(filters.ssr);filterCards()" uib-btn-checkbox>SSR</label>
                 <label class="btn btn-info btn-sm" ng-model="filters.ur" ng-click="toggleBool(filters.ur);filterCards()" uib-btn-checkbox>UR</label>
             </div>
 
-            <div class="btn-group-vertical col-md-12">
+            <div class="btn-group-vertical col-xs-12">
                 <label class="btn btn-info btn-sm" ng-model="filters.premium" ng-click="toggleBool(filters.premium);filterCards()" uib-btn-checkbox>Premium</label>
                 <label class="btn btn-info btn-sm" ng-model="filters.event" ng-click="toggleBool(filters.event);filterCards()" uib-btn-checkbox>Event</label>
                 <label class="btn btn-info btn-sm" ng-model="filters.promo" ng-click="toggleBool(filters.promo);filterCards()" uib-btn-checkbox>Promo</label>
             </div>
 
-            <div class="btn-group-vertical col-md-12">
+            <div class="btn-group-vertical col-xs-12">
                 <label class="btn btn-info btn-sm" ng-model="filters.muse" ng-click="toggleBool(filters.muse);filterCards()" uib-btn-checkbox>Muse</label>
                 <label class="btn btn-info btn-sm" ng-model="filters.aqours" ng-click="toggleBool(filters.aqours);filterCards()" uib-btn-checkbox>Aqours</label>
             </div>
         </div>
     </div>
 
-    <div id="search_table" class="col-sm-12 col-md-9">
+    <div id="search_table" class="col-xs-10">
 
         <div id="search">
             <div class="input-group input-group-sm">
@@ -268,5 +272,4 @@
 
             </div>
         </div>
-    </div>
-</div>
+</div></div>
