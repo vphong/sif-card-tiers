@@ -246,6 +246,9 @@ app.controller('TierCtrl', function($rootScope, $scope, Cards, localStorageServi
         $scope.filterCards()
         $scope.sortBy('cScore');
     }
+    $scope.setLocalStorageFilters = function () {
+      localStorageService.set('filters', $scope.filters);
+    }
 
     $scope.sortBy = function(type) {
         Cards.sortBy($scope.sort, $scope.filters.idlz, type)

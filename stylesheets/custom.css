@@ -86,6 +86,11 @@ footer.well {
 .filter-group {
     padding: 0px 5px !important;
 }
+.filter-group>button {
+  padding-left: 0px;
+  padding-right: 0px;
+  margin-bottom: 10px;
+}
 
 .loading-overlay {
     z-index: 100;
