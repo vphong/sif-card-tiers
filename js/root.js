@@ -24,11 +24,10 @@ app.constant('InitFilters', {
     pl: true,
     hl: true,
     muse: true,
-    aqours: true,
+    aqours: false,
     idlz: false,
     compare: "scorers"
 })
-
 app.run(function($rootScope, Typeahead, InitFilters, CardData) {
     $rootScope.Typeahead = Typeahead;
     $rootScope.InitFilters = InitFilters;

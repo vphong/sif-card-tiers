@@ -5,7 +5,7 @@ import logging
 
 logging.basicConfig(level=logging.INFO)
 
-## initalization
+# initalization
 # original card endpoint
 baseURL = "http://schoolido.lu/api/cards/?ordering=-id&is_special=False&page_size=100&rarity=SR%2CSSR%2CUR"
 
@@ -46,6 +46,8 @@ def isnumber(s):
 
 # function: extract a card's skill details and write averages to card
 # input: dict card
+
+
 def skillDetails(card):
     logging.info("skillDetails(): init")
     # initalization
@@ -88,7 +90,6 @@ def skillDetails(card):
                 # 4. skill activation percentage
                 #   ("there is a __% chance")
                 skillNums['activation_percent'] = float(word.strip("%")) / 100
-
 
         else:
             if isnumber(word) and numCount < 1:
@@ -188,6 +189,8 @@ def stat_to_mod(card, idlz):
 
 # function: calculate cScore
 # input: dict card
+
+
 def cScore(card):
     # init
     unidlz_stat = stat_to_mod(card, False)
@@ -288,6 +291,8 @@ def cScore(card):
 #       - optimal skills equipped
 #       - center skills: +9% attribute boost, +6% subunit/year boost - x2 for team/guest
 #       -
+
+
 def oScore(card):
     # init
     unidlz_stat = stat_to_mod(card, False)
@@ -389,7 +394,7 @@ def oScore(card):
 
 def cleanCard(d, keys):
     ret = {key: d[key] for key in keys}
-    ### origin: set premium bool
+    # origin: set premium bool
     if ret['event']:
         ret['event'] = True
     if not ret['event'] and not ret['is_promo']:
@@ -397,11 +402,11 @@ def cleanCard(d, keys):
     else:
         ret['premium'] = False
 
-    ### idol mini object cleaning
+    # idol mini object cleaning
     ret['name'] = ret['idol']['name']
     ret['sub_unit'] = ret['idol']['sub_unit']
 
-    ## main unit
+    # main unit
     if ret['name'] in aqours:
         ret['main_unit'] = "Aqours"
     elif ret['name'] in muse:
@@ -409,7 +414,7 @@ def cleanCard(d, keys):
     else:
         ret['main_unit'] = "error"
 
-    ## year
+    # year
     if ret['name'] in first:
         ret['year'] = "first"
     elif ret['name'] in second:
@@ -419,7 +424,7 @@ def cleanCard(d, keys):
 
     ret.pop('idol', None)
 
-    ## full name
+    # full name
     ret['full_name'] = ret['rarity']
     if ret['is_promo']:
         ret['non_idolized_maximum_statistics_smile'] = ret[
@@ -462,7 +467,7 @@ def cleanCard(d, keys):
 
     ret['full_name'] = ret['full_name'] + " " + ret['name']
 
-    ## stats/scores
+    # stats/scores
     skillDetails(ret)
     oScore(ret)
     cScore(ret)
@@ -510,7 +515,7 @@ def processCards():
     logging.info("processCards: begin")
     # initalization
     logging.info("processCards(): loading card data...")
-    with open('js/cardsJSON.js', 'r') as infile:
+    with open('js/cards.json', 'r') as infile:
         data = json.loads(infile.read())
 
     cards = []
@@ -529,4 +534,5 @@ def processCards():
 
     logging.info("processCards(): done")
 
+getRawCards()
 processCards()

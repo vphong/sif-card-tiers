@@ -213,7 +213,7 @@ app.controller('TierCtrl', function($rootScope, $scope, Cards, localStorageServi
         if (!$scope.sort) {
             $scope.sort = {
                 type: 'cScore',
-                desc: false,
+                desc: true,
                 gen: "cScore"
             }
         }
@@ -223,7 +223,7 @@ app.controller('TierCtrl', function($rootScope, $scope, Cards, localStorageServi
         $scope.collapse = localStorageService.get('collapse');
     }
     init();
-
+    localStorageService.clearAll()
 
     $scope.updateSearch = function() {
         localStorageService.set('search', $scope.userSearch);
