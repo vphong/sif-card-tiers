@@ -21,7 +21,14 @@ app.factory('accountInterceptor', function(bsLoadingOverlayHttpInterceptorFactor
     });
 });
 
+app.factory('allCardsInterceptor', function(bsLoadingOverlayHttpInterceptorFactoryFactory) {
+    return bsLoadingOverlayHttpInterceptorFactoryFactory({
+        referenceId: 'all'
+    });
+});
+
 app.config(function($httpProvider) {
+    $httpProvider.interceptors.push('allCardsInterceptor');
     $httpProvider.interceptors.push('cardInterceptor');
     $httpProvider.interceptors.push('accountInterceptor');
 });
@@ -198,7 +205,7 @@ app.controller('TierCtrl', function($rootScope, $scope, Cards, localStorageServi
         if (!$scope.filters) $scope.filters = angular.copy($rootScope.InitFilters);
 
         $scope.cards = localStorageService.get('cards');
-        if (!$scope.cards) $scope.cards = angular.copy($rootScope.Cards);
+        if (!$scope.cards) $scope.cards = Cards.filterCards($scope.filters,angular.copy($rootScope.Cards));
         $scope.sort = localStorageService.get('sort');
         if (!$scope.sort) {
             $scope.sort = {
@@ -213,6 +220,7 @@ app.controller('TierCtrl', function($rootScope, $scope, Cards, localStorageServi
         $scope.collapse = localStorageService.get('collapse');
     }
     init();
+    
 
     $scope.updateSearch = function() {
         localStorageService.set('search', $scope.userSearch);
@@ -318,8 +326,6 @@ app.controller('UserCtrl', function($rootScope, $scope, Cards, localStorageServi
         // storage for card data of rawUserCards
         $scope.rawUserCardsData = localStorageService.get('rawUserCardsData');
 
-
-        localStorageService.clearAll()
     }
     init();
 
