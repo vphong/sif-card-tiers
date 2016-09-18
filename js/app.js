@@ -23,7 +23,10 @@ app.factory('accountInterceptor', function(bsLoadingOverlayHttpInterceptorFactor
 
 app.factory('allCardsInterceptor', function(bsLoadingOverlayHttpInterceptorFactoryFactory) {
     return bsLoadingOverlayHttpInterceptorFactoryFactory({
-        referenceId: 'all'
+        referenceId: 'all',
+        // requestsMatcher: function(requestConfig) {
+        //     return requestConfig.url.indexOf('cards') !== -1;
+        // }
     });
 });
 
@@ -220,7 +223,7 @@ app.controller('TierCtrl', function($rootScope, $scope, Cards, localStorageServi
         $scope.collapse = localStorageService.get('collapse');
     }
     init();
-    
+
 
     $scope.updateSearch = function() {
         localStorageService.set('search', $scope.userSearch);
