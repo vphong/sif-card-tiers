@@ -1,7 +1,7 @@
 <div class="container-fluid row">
     <div class="col-xs-2" id="filters-md-screens">
         <div class="row">
-            <div class="btn-group-vertical col-xs-12" uib-tooltip="Compare by skill" tooltip-placement="top">
+            <div class="btn-group-vertical col-xs-12" uib-tooltip="Skill" tooltip-placement="top">
                 <label class="btn btn-success btn-sm" ng-model="userFilters.compare" ng-click="filterCards()" uib-btn-radio="'scorers'">Score Up</label>
                 <label class="btn btn-success btn-sm" ng-model="userFilters.compare" ng-click="filterCards()" uib-btn-radio="'perfect locks'">Perfect Lock</label>
                 <label class="btn btn-success btn-sm" ng-model="userFilters.compare" ng-click="filterCards()" uib-btn-radio="'healers'">Healer</label>
@@ -44,7 +44,11 @@
             </div>
 
             <small class="col-xs-12">
-              Showing <b>{{filtered.length}}</b> of <b>{{rawUserCardsData.length}}</b> total cards.
+                Showing
+                <b>{{filtered.length}}</b>
+                of
+                <b>{{rawUserCardsData.length}}</b>
+                total cards.
             </small>
         </div>
     </div>
@@ -54,9 +58,9 @@
         <div id="search" class="row">
             <div class="col-xs-12 no-padding">
                 <div class="col-xs-7">
-                    <form>
-                        <div class="input-group input-group-sm">
-                            <input type="text" class="form-control" ng-model="sit.user" placeholder="schoolido.lu username" ng-change="updateUser()">
+                    <form name="username">
+                        <div class="form-group input-group input-group-sm" ng-class="{'has-error': (username.un.$touched && username.un.$error.required) || sit.accErr}">
+                            <input type="text" class="form-control" ng-model="sit.user" name="un" placeholder="schoolido.lu username" ng-change="updateUser()" required>
                             <div class="input-group-btn">
                                 <button type="submit" class="btn" uib-dropdown-toggle ng-click="getAccounts()">
                                     Get accounts
@@ -66,10 +70,10 @@
                     </form>
                 </div>
                 <div class="col-xs-5">
-                    <div class="input-group input-group-sm">
-                        <select class="form-control" ng-model="sit.chosenAccount" ng-change="chooseAccount()" ng-options="acc.name for acc in sit.accounts track by acc.id"></select>
+                    <div class="input-group input-group-sm" ng-class="{'has-error': sit.accErr}" >
+                        <select class="form-control" ng-model="sit.chosenAccount"ng-blur="chooseAccount()" ng-options="acc.name for acc in sit.accounts track by acc.id"></select>
                         <div class="input-group-btn">
-                            <button type="button" class="btn" ng-click="getCards()">Get cards</button>
+                            <button type="button" class="btn" ng-click="getCards()" ng-disabled="sit.accErr || sit.accounts.length<=1">Get cards</button>
                         </div>
                     </div>
                 </div>
@@ -95,9 +99,9 @@
 
                 <table class="table table-striped" id="tbl">
                     <thead fix-head>
-                        <tr>
+                        <tr ng-show="filtered.length!=0">
                             <th>Rank</th>
-                            <th>Card Name</th>
+                            <th class="name-display">Card Name</th>
                             <th class="num-header" ng-click="sortBy('id')">ID
                                 <i ng-show="sort.desc && sort.type=='id'" class="fa fa-chevron-down"></i>
                                 <i ng-show="!sort.desc && sort.type=='id'" class="fa fa-chevron-up"></i>
@@ -154,9 +158,8 @@
                     </thead>
 
                     <tbody>
-                        <!-- <tr><td colspan=20 class="text-left"><pre>{{rawUserCardsData[0]|json}}</pre></td></tr> -->
-                        <tr ng-if=""></tr>
-                        <tr ng-if="filtered.length==0">
+                        <tr ng-if="sit.accounts.length <= 1"><td><b class="text-danger"><pre class="text-left">{{sit|json}}</pre>Error getting accounts.</b> Check whether or not <a href="http://schoolido.lu">schoolido.lu</a> is online and that your username is correct.</td></tr>
+                        <tr ng-if="filtered.length==0 && sit.accounts.length > 1">
                             <td colspan=15 style="word-wrap: normal">
                                 <span class="text-danger">No cards found.</span>
                                 <!-- <span ng-if="userFilters.event && userFilters.compare=='healers'">There are no Healer Event cards.</span> -->

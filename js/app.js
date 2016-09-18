@@ -21,13 +21,13 @@ app.run(function(bsLoadingOverlayService) {
 });
 app.filter('toArray', function() {
     return function(obj) {
-      const result = [];
-      angular.forEach(obj, function(val) {
-        result.push(val);
-      });
-     return result;
-   }
- });
+        const result = [];
+        angular.forEach(obj, function(val) {
+            result.push(val);
+        });
+        return result;
+    }
+});
 
 app.config(function($stateProvider, $urlRouterProvider) {
 
@@ -296,6 +296,12 @@ app.controller('UserCtrl', function($rootScope, $scope, Cards, localStorageServi
         $scope.search = localStorageService.get('search');
         if (!$scope.search) $scope.search = "";
 
+        // storage for http result of account grabbing
+        $scope.rawUserCards = localStorageService.get('rawUserCards');
+        // storage for card data of rawUserCards
+        $scope.rawUserCardsData = localStorageService.get('rawUserCardsData');
+
+
     }
     init();
 
@@ -308,47 +314,71 @@ app.controller('UserCtrl', function($rootScope, $scope, Cards, localStorageServi
     var accUrlBase = "https://schoolido.lu/api/accounts/?owner__username=";
     $scope.updateUser = function() {
         $scope.sit.accountsUrl = accUrlBase + $scope.sit.user;
-        localStorageService.set('sit', $scope.sit)
+        localStorageService.set('sit', $scope.sit);
+        $scope.sit.accErr = false;
+        $scope.userCards = [];
+        $scope.rawUserCards = [];
+        localStorageService.set('userCards', $scope.userCards)
+
+        localStorageService.set('rawUserCards', $scope.rawUserCards)
+
+
     }
     $scope.updateUser();
 
     var oCardUrlBase = "https://schoolido.lu/api/ownedcards/?card__rarity=SR,SSR,UR&stored=deck&card__is_special=False&page_size=200&owner_account=";
-    var getAccountsSuccess = function(data, status) {
-        var accounts = data.results;
-        var len = accounts.length
-        $scope.sit.accounts = [{
-            "name": "Select an account",
-            "id": ""
-        }];
-        var acc = {};
-        for (var i = 0; i < len; i++) {
-            acc = {
-                "name": accounts[i].nickname + " " + accounts[i].language,
-                "id": accounts[i].id,
-            }
-            $scope.sit.accounts.push(acc);
-        }
-        $scope.sit.chosenAccount = $scope.sit.accounts[0];
-        $scope.sit.ownedCardsUrl = oCardUrlBase + $scope.sit.chosenAccount.id;
-        localStorageService.set('sit', $scope.sit)
+    var getAccountsSuccess = function(response) {
+        var accounts = response.data.results;
 
-    }
+        if (accounts && accounts.length > 0) {
+            $scope.sit.accounts = [{
+                "name": "Select an account",
+                "id": ""
+            }];
+            $scope.sit.accErr = false;
+            var acc = {};
+            for (var i = 0; i < accounts.length; i++) {
+                acc = {
+                    "name": accounts[i].nickname + " " + accounts[i].language,
+                    "id": accounts[i].id,
+                }
+                $scope.sit.accounts.push(acc);
+            }
+            $scope.sit.chosenAccount = $scope.sit.accounts[0];
+            $scope.sit.ownedCardsUrl = oCardUrlBase + $scope.sit.chosenAccount.id;
+
+
+        } else {
+            $scope.sit.accounts = [{
+                "name": "No accounts found",
+                "id": ""
+            }];
+            $scope.sit.accErr = true;
+            $scope.rawUserCards = [];
+            $scope.rawUserCardsData = [];
+            $scope.userCards = [];
+            localStorageService.set('sit', $scope.sit);
+            localStorageService.set('userCards', $scope.userCards);
+            localStorageService.set('rawUserCards', $scope.rawUserCards);
+            localStorageService.set('rawUserCardsData', $scope.rawUserCardsData);
+
+        };
+        localStorageService.set('sit', $scope.sit)
+    };
+
     $scope.getAccounts = function() {
-        Cards.getUrl($scope.sit.accountsUrl).success(getAccountsSuccess);
+        Cards.getUrl($scope.sit.accountsUrl).then(getAccountsSuccess);
     };
 
     // get cards from sit account
     $scope.chooseAccount = function() { // from select
-            $scope.sit.ownedCardsUrl = oCardUrlBase + $scope.sit.chosenAccount.id;
-            localStorageService.set('sit', $scope.sit)
-        }
-        // storage for http result of account grabbing
-    $scope.rawUserCards = localStorageService.get('rawUserCards');
-    // storage for card data of rawUserCards
-    $scope.rawUserCardsData = localStorageService.get('rawUserCardsData');
-    if (!$scope.rawUserCardsData);
-    var getCardsSuccess = function(data, status) {
-        $scope.rawUserCards = data.results;
+        $scope.sit.ownedCardsUrl = oCardUrlBase + $scope.sit.chosenAccount.id;
+        localStorageService.set('sit', $scope.sit)
+    };
+
+    var getCardsSuccess = function(response) {
+        $scope.rawUserCards = response.data.results;
+        console.log($scope.rawUserCards)
         localStorageService.set('rawUserCards', $scope.rawUserCards);
 
         // grab owned card ids
@@ -405,25 +435,16 @@ app.controller('UserCtrl', function($rootScope, $scope, Cards, localStorageServi
 
         // filter for display
         var filtered = '';
-        $scope.userCards =Cards.filterCards($scope.userFilters, $scope.rawUserCardsData); 
-        console.log(Array.isArray($scope.userCards))
+        $scope.userCards = Cards.filterCards($scope.userFilters, $scope.rawUserCardsData);
         localStorageService.set('userCards', $scope.userCards)
 
     };
-    // TODO: recalculate o-score/c-score from idolized/max bond status
-    // TODO: take away idlz toggle and show img only if user has idolized cards
-    $scope.isIdlz = function() {
-        angular.forEach($scope.rawUserCards, function(rawUser) {
-            angular.forEach($scope.userCards, function(user) {
-                if (rawUser.idolized) {
-                    // $scope.userCards
-                }
-            });
-        });
+
+    var getCardsError = function(response) {
 
     }
     $scope.getCards = function() {
-        Cards.getUrl($scope.sit.ownedCardsUrl).success(getCardsSuccess);
+        Cards.getUrl($scope.sit.ownedCardsUrl).then(getCardsSuccess);
     };
 
     $scope.err = {};
