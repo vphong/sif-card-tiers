@@ -207,15 +207,15 @@ app.controller('TierCtrl', function($rootScope, $scope, Cards, localStorageServi
                 gen: "cScore"
             }
         }
-        $scope.userSearch = localStorageService.get('userSearch');
-        if (!$scope.search) $scope.userSearch = "";
+        $scope.search = localStorageService.get('search');
+        if (!$scope.search) $scope.search = "";
 
         $scope.collapse = localStorageService.get('collapse');
     }
     init();
 
     $scope.updateSearch = function() {
-        localStorageService.set('userSearch', $scope.userSearch);
+        localStorageService.set('search', $scope.userSearch);
     }
 
     $scope.err = {};
@@ -310,8 +310,8 @@ app.controller('UserCtrl', function($rootScope, $scope, Cards, localStorageServi
         $scope.userCards = localStorageService.get('userCards');
         if (!$scope.userCards) $scope.userCards = [];
 
-        $scope.search = localStorageService.get('search');
-        if (!$scope.search) $scope.search = "";
+        $scope.userSearch = localStorageService.get('userSearch');
+        if (!$scope.userSearch) $scope.userSearch = "";
 
         // storage for http result of account grabbing
         $scope.rawUserCards = localStorageService.get('rawUserCards');
@@ -324,7 +324,7 @@ app.controller('UserCtrl', function($rootScope, $scope, Cards, localStorageServi
     init();
 
     $scope.updateSearch = function() {
-        localStorageService.set('search', $scope.search);
+        localStorageService.set('userSearch', $scope.userSearch);
     }
 
     // get accounts from sit username
