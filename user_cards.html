@@ -47,22 +47,23 @@
                 Showing
                 <b>{{filtered.length}}</b>
                 of
-                <b>{{rawUserCardsData.length}}</b>
+                <b>{{rawUserCards ? rawUserCards.length : 0}}</b>
                 total cards.
             </small>
         </div>
     </div>
 
-    <div id="search_table" class="col-xs-10">
+    <div id="search_table" class="col-xs-10" bs-loading-overlay bs-loading-overlay-reference-id="accounts">
 
         <div id="search" class="row">
+
             <div class="col-xs-12 no-padding">
                 <div class="col-xs-7">
                     <form name="username">
-                        <div class="form-group input-group input-group-sm" ng-class="{'has-error': (username.un.$touched && username.un.$error.required) || sit.accErr}">
+                        <div class="form-group input-group input-group-sm" ng-class="{'has-error': (username.un.$touched && username.un.$error.required)}">
                             <input type="text" class="form-control" ng-model="sit.user" name="un" placeholder="schoolido.lu username" ng-change="updateUser()" required>
                             <div class="input-group-btn">
-                                <button type="submit" class="btn" uib-dropdown-toggle ng-click="getAccounts()">
+                                <button type="submit" class="btn" uib-dropdown-toggle ng-disabled="username.un.$error.required || sit.user==''" ng-click="getAccounts()">
                                     Get accounts
                                 </button>
                             </div>
@@ -70,15 +71,15 @@
                     </form>
                 </div>
                 <div class="col-xs-5">
-                    <div class="input-group input-group-sm" ng-class="{'has-error': sit.accErr}" >
-                        <select class="form-control" ng-model="sit.chosenAccount"ng-blur="chooseAccount()" ng-options="acc.name for acc in sit.accounts track by acc.id"></select>
+                    <div class="input-group input-group-sm">
+                        <select class="form-control" ng-model="sit.chosenAccount" ng-blur="chooseAccount()" ng-options="acc.name for acc in sit.accounts track by acc.id"></select>
                         <div class="input-group-btn">
-                            <button type="button" class="btn" ng-click="getCards()" ng-disabled="sit.accErr || sit.accounts.length<=1">Get cards</button>
+                            <button type="button" class="btn" ng-click="getCards()" ng-disabled="sit.accErr || sit.accounts.length<=1 || sit.chosenAccount.id == ''">Get cards</button>
                         </div>
                     </div>
                 </div>
 
-            </div>
+            </div></div>
 
             <div class="col-xs-12">
                 <div class="input-group input-group-sm">
@@ -91,10 +92,9 @@
                     </span>
 
                 </div>
-            </div>
         </div>
 
-        <div style="border: 1px solid #dfd7ca;border-radius: 3px">
+        <div style="border: 1px solid #dfd7ca;border-radius: 3px;position:relative" bs-loading-overlay bs-loading-overlay-reference-id="table">
             <div class="table-container user-table">
 
                 <table class="table table-striped" id="tbl">
@@ -158,8 +158,24 @@
                     </thead>
 
                     <tbody>
-                        <tr ng-if="sit.accounts.length <= 1"><td><b class="text-danger"><pre class="text-left">{{sit|json}}</pre>Error getting accounts.</b> Check whether or not <a href="http://schoolido.lu">schoolido.lu</a> is online and that your username is correct.</td></tr>
-                        <tr ng-if="filtered.length==0 && sit.accounts.length > 1">
+                        <!-- <tr><td class="text-left"><pre>{{userCards|json}}</pre></td></tr> -->
+                        <tr ng-if="">
+                            <td>
+                                <b class="text-danger">Error getting accounts.</b>
+                                Check that
+                                <a href="http://schoolido.lu">schoolido.lu</a>
+                                is online, your username is correct, and the account you've selected has SR+ cards.</td>
+                        </tr>
+                        <tr ng-if="userCards.length==0">
+                            <td>Enter your
+                                <a href="http://schoolido.lu">schoolido.lu</a>
+                                username and press
+                                <b>Get Accounts</b>. Choose an account and press
+                                <b>Get Cards</b>.
+                              </td>
+                        </tr>
+
+                        <tr ng-if="!userCards || filtered.length==0 && sit.chosenAccount.id != '' && grabbedCards">
                             <td colspan=15 style="word-wrap: normal">
                                 <span class="text-danger">No cards found.</span>
                                 <!-- <span ng-if="userFilters.event && userFilters.compare=='healers'">There are no Healer Event cards.</span> -->

@@ -3,14 +3,27 @@ var app = angular.module('tierList', ['ui.bootstrap', 'ui.router.tabs',
     'ui.router', 'LocalStorageModule', 'fixed.table.header'
 ]);
 
-app.factory('allHttpInterceptor', function(bsLoadingOverlayHttpInterceptorFactoryFactory) {
+app.factory('cardInterceptor', function(bsLoadingOverlayHttpInterceptorFactoryFactory) {
     return bsLoadingOverlayHttpInterceptorFactoryFactory({
-        referenceId: 'table'
+        referenceId: 'table',
+        requestsMatcher: function(requestConfig) {
+            return requestConfig.url.indexOf('ownedcards') !== -1;
+        }
+    });
+});
+
+app.factory('accountInterceptor', function(bsLoadingOverlayHttpInterceptorFactoryFactory) {
+    return bsLoadingOverlayHttpInterceptorFactoryFactory({
+        referenceId: 'accounts',
+        requestsMatcher: function(requestConfig) {
+            return requestConfig.url.indexOf('owner__username') !== -1;
+        }
     });
 });
 
 app.config(function($httpProvider) {
-    $httpProvider.interceptors.push('allHttpInterceptor');
+    $httpProvider.interceptors.push('cardInterceptor');
+    $httpProvider.interceptors.push('accountInterceptor');
 });
 
 app.run(function(bsLoadingOverlayService) {
@@ -278,8 +291,6 @@ app.controller('UserCtrl', function($rootScope, $scope, Cards, localStorageServi
         $scope.userFilters = localStorageService.get('userFilters');
         if (!$scope.userFilters) $scope.userFilters = angular.copy($rootScope.InitFilters);
 
-        $scope.userCards = localStorageService.get('userCards');
-        if (!$scope.userCards) $scope.userCards = [];
         $scope.sort = localStorageService.get('sort');
         if (!$scope.sort) {
             $scope.sort = {
@@ -291,7 +302,13 @@ app.controller('UserCtrl', function($rootScope, $scope, Cards, localStorageServi
 
         $scope.collapse = localStorageService.get('collapse');
         $scope.sit = localStorageService.get('sit');
-        if (!$scope.sit) $scope.sit = {};
+        if (!$scope.sit) {
+            $scope.sit = {};
+        } else {
+            $scope.userCards = [];
+        }
+        $scope.userCards = localStorageService.get('userCards');
+        if (!$scope.userCards) $scope.userCards = [];
 
         $scope.search = localStorageService.get('search');
         if (!$scope.search) $scope.search = "";
@@ -302,6 +319,7 @@ app.controller('UserCtrl', function($rootScope, $scope, Cards, localStorageServi
         $scope.rawUserCardsData = localStorageService.get('rawUserCardsData');
 
 
+        localStorageService.clearAll()
     }
     init();
 
@@ -309,18 +327,23 @@ app.controller('UserCtrl', function($rootScope, $scope, Cards, localStorageServi
         localStorageService.set('search', $scope.search);
     }
 
-
     // get accounts from sit username
     var accUrlBase = "https://schoolido.lu/api/accounts/?owner__username=";
     $scope.updateUser = function() {
         $scope.sit.accountsUrl = accUrlBase + $scope.sit.user;
         localStorageService.set('sit', $scope.sit);
         $scope.sit.accErr = false;
-        $scope.userCards = [];
-        $scope.rawUserCards = [];
-        localStorageService.set('userCards', $scope.userCards)
-
-        localStorageService.set('rawUserCards', $scope.rawUserCards)
+        // if ($scope.sit.user == '') {
+        // $scope.sit.accounts =
+        $scope.sit.accounts = [{
+            "name": "No accounts found",
+            "id": ""
+        }];
+        // }
+        // $scope.userCards = [];
+        // $scope.rawUserCards = [];
+        // localStorageService.set('userCards', $scope.userCards)
+        // localStorageService.set('rawUserCards', $scope.rawUserCards)
 
 
     }
@@ -367,19 +390,21 @@ app.controller('UserCtrl', function($rootScope, $scope, Cards, localStorageServi
     };
 
     $scope.getAccounts = function() {
+        $scope.grabbedAccounts = true;
         Cards.getUrl($scope.sit.accountsUrl).then(getAccountsSuccess);
     };
 
-    // get cards from sit account
-    $scope.chooseAccount = function() { // from select
+    ////// get cards from sit account
+    $scope.chooseAccount = function() { // get api url from select
+        // $scope.grabbedCards = false;
         $scope.sit.ownedCardsUrl = oCardUrlBase + $scope.sit.chosenAccount.id;
         localStorageService.set('sit', $scope.sit)
     };
 
     var getCardsSuccess = function(response) {
         $scope.rawUserCards = response.data.results;
-        console.log($scope.rawUserCards)
         localStorageService.set('rawUserCards', $scope.rawUserCards);
+
 
         // grab owned card ids
         var cardIDs = [];
@@ -444,6 +469,7 @@ app.controller('UserCtrl', function($rootScope, $scope, Cards, localStorageServi
 
     }
     $scope.getCards = function() {
+        $scope.grabbedCards = true;
         Cards.getUrl($scope.sit.ownedCardsUrl).then(getCardsSuccess);
     };
 

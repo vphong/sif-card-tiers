@@ -209,3 +209,7 @@ footer.well {
     width: 160px;
     text-align: right
 }
+#accounts {
+  width: 100%;
+  position: relative;
+}
