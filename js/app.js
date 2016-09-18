@@ -400,6 +400,10 @@ app.controller('UserCtrl', function($rootScope, $scope, Cards, localStorageServi
 
     $scope.getAccounts = function() {
         $scope.grabbedAccounts = true;
+        $scope.rawUserCards = [];
+        $scope.userCards = [];
+        $scope.rawUserCardsData = [];
+
         Cards.getUrl($scope.sit.accountsUrl).then(getAccountsSuccess);
     };
 
@@ -477,7 +481,8 @@ app.controller('UserCtrl', function($rootScope, $scope, Cards, localStorageServi
 
     }
     $scope.getCards = function() {
-          $scope.rawUserCardsData = [];
+      $scope.rawUserCardsData = [];
+      $scope.userCards = [];
         Cards.getUrl($scope.sit.ownedCardsUrl).then(getCardsSuccess);
     };
 
