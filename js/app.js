@@ -344,10 +344,10 @@ app.controller('UserCtrl', function($rootScope, $scope, Cards, localStorageServi
         $scope.sit.accErr = false;
         // if ($scope.sit.user == '') {
         // $scope.sit.accounts =
-        $scope.sit.accounts = [{
-            "name": "No accounts found",
-            "id": ""
-        }];
+        // $scope.sit.accounts = [{
+        //     "name": "No accounts found",
+        //     "id": ""
+        // }];
         // }
         // $scope.userCards = [];
         // $scope.rawUserCards = [];
@@ -380,6 +380,7 @@ app.controller('UserCtrl', function($rootScope, $scope, Cards, localStorageServi
 
 
         } else {
+          console.log("no accounts found")
             $scope.sit.accounts = [{
                 "name": "No accounts found",
                 "id": ""
@@ -409,10 +410,8 @@ app.controller('UserCtrl', function($rootScope, $scope, Cards, localStorageServi
         localStorageService.set('sit', $scope.sit)
     };
 
-    $scope.rawUserCardsData = [];
     var getCardsSuccess = function(response) {
         var nextUrl = response.data.next;
-        console.log(response)
         $scope.rawUserCards = response.data.results;
         localStorageService.set('rawUserCards', $scope.rawUserCards);
 
@@ -468,20 +467,17 @@ app.controller('UserCtrl', function($rootScope, $scope, Cards, localStorageServi
 
         if (nextUrl) Cards.getUrl(nextUrl).then(getCardsSuccess);
         localStorageService.set('rawUserCardsData', $scope.rawUserCardsData);
+
         // filter for display
-        var filtered = '';
         $scope.userCards = Cards.filterCards($scope.userFilters, $scope.rawUserCardsData);
         localStorageService.set('userCards', $scope.userCards)
-        console.log($scope.rawUserCardsData)
-
-
     };
 
     var getCardsError = function(response) {
 
     }
     $scope.getCards = function() {
-        $scope.grabbedCards = true;
+          $scope.rawUserCardsData = [];
         Cards.getUrl($scope.sit.ownedCardsUrl).then(getCardsSuccess);
     };
 
