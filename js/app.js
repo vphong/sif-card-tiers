@@ -361,7 +361,6 @@ app.controller('UserCtrl', function($rootScope, $scope, Cards, localStorageServi
     var oCardUrlBase = "https://schoolido.lu/api/ownedcards/?card__rarity=SR,SSR,UR&stored=deck&card__is_special=False&page_size=1000&owner_account=";
     var getAccountsSuccess = function(response) {
         var accounts = response.data.results;
-
         if (accounts && accounts.length > 0) {
             $scope.sit.accounts = [{
                 "name": "Select an account",
@@ -410,7 +409,10 @@ app.controller('UserCtrl', function($rootScope, $scope, Cards, localStorageServi
         localStorageService.set('sit', $scope.sit)
     };
 
+    $scope.rawUserCardsData = [];
     var getCardsSuccess = function(response) {
+        var nextUrl = response.data.next;
+        console.log(response)
         $scope.rawUserCards = response.data.results;
         localStorageService.set('rawUserCards', $scope.rawUserCards);
 
@@ -423,7 +425,6 @@ app.controller('UserCtrl', function($rootScope, $scope, Cards, localStorageServi
         }
 
         // populate rawUserCardsData with cards owned from root cards
-        $scope.rawUserCardsData = [];
         angular.forEach(cardIDs, function(ownedID) {
             angular.forEach($rootScope.Cards, function(card) {
                 if (ownedID === card.id) {
@@ -465,12 +466,14 @@ app.controller('UserCtrl', function($rootScope, $scope, Cards, localStorageServi
             });
         });
 
+        if (nextUrl) Cards.getUrl(nextUrl).then(getCardsSuccess);
         localStorageService.set('rawUserCardsData', $scope.rawUserCardsData);
-
         // filter for display
         var filtered = '';
         $scope.userCards = Cards.filterCards($scope.userFilters, $scope.rawUserCardsData);
         localStorageService.set('userCards', $scope.userCards)
+        console.log($scope.rawUserCardsData)
+
 
     };
 
