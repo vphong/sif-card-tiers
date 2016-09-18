@@ -358,7 +358,7 @@ app.controller('UserCtrl', function($rootScope, $scope, Cards, localStorageServi
     }
     $scope.updateUser();
 
-    var oCardUrlBase = "https://schoolido.lu/api/ownedcards/?card__rarity=SR,SSR,UR&stored=deck&card__is_special=False&page_size=200&owner_account=";
+    var oCardUrlBase = "https://schoolido.lu/api/ownedcards/?card__rarity=SR,SSR,UR&stored=deck&card__is_special=False&page_size=1000&owner_account=";
     var getAccountsSuccess = function(response) {
         var accounts = response.data.results;
 
