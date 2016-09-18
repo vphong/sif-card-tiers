@@ -208,7 +208,7 @@ app.controller('TierCtrl', function($rootScope, $scope, Cards, localStorageServi
         if (!$scope.filters) $scope.filters = angular.copy($rootScope.InitFilters);
 
         $scope.cards = localStorageService.get('cards');
-        if (!$scope.cards) $scope.cards = Cards.filterCards($scope.filters,angular.copy($rootScope.Cards));
+        if (!$scope.cards) $scope.cards = Cards.filterCards($scope.filters, angular.copy($rootScope.Cards));
         $scope.sort = localStorageService.get('sort');
         if (!$scope.sort) {
             $scope.sort = {
@@ -220,13 +220,11 @@ app.controller('TierCtrl', function($rootScope, $scope, Cards, localStorageServi
         $scope.search = localStorageService.get('search');
         if (!$scope.search) $scope.search = "";
 
-        $scope.collapse = localStorageService.get('collapse');
     }
     init();
-    localStorageService.clearAll()
 
     $scope.updateSearch = function() {
-        localStorageService.set('search', $scope.userSearch);
+        localStorageService.set('search', $scope.search);
     }
 
     $scope.err = {};
@@ -268,10 +266,6 @@ app.controller('TierCtrl', function($rootScope, $scope, Cards, localStorageServi
         }
     })
 
-    $scope.collapsing = function() {
-        $scope.collapse = !$scope.collapse;
-        localStorageService.set('collapse', $scope.collapse)
-    };
 
     $scope.resetFilters = function() {
         $scope.filters = angular.copy($rootScope.InitFilters);
@@ -300,7 +294,10 @@ app.controller('UserCtrl', function($rootScope, $scope, Cards, localStorageServi
 
     var init = function() {
         $scope.userFilters = localStorageService.get('userFilters');
-        if (!$scope.userFilters) $scope.userFilters = angular.copy($rootScope.InitFilters);
+        if (!$scope.userFilters) {
+            $scope.userFilters = angular.copy($rootScope.InitFilters);
+            $scope.userFilters.displayImg = true;
+        }
 
         $scope.sort = localStorageService.get('sort');
         if (!$scope.sort) {
@@ -309,9 +306,9 @@ app.controller('UserCtrl', function($rootScope, $scope, Cards, localStorageServi
                 desc: true,
                 gen: "cScore"
             }
+            localStorageService.set('sort', $scope.filters);
         }
 
-        $scope.collapse = localStorageService.get('collapse');
         $scope.sit = localStorageService.get('sit');
         if (!$scope.sit) {
             $scope.sit = {};
@@ -380,7 +377,7 @@ app.controller('UserCtrl', function($rootScope, $scope, Cards, localStorageServi
 
 
         } else {
-          console.log("no accounts found")
+            console.log("no accounts found")
             $scope.sit.accounts = [{
                 "name": "No accounts found",
                 "id": ""
@@ -478,11 +475,11 @@ app.controller('UserCtrl', function($rootScope, $scope, Cards, localStorageServi
     };
 
     var getCardsError = function(response) {
-
+        // TODO
     }
     $scope.getCards = function() {
-      $scope.rawUserCardsData = [];
-      $scope.userCards = [];
+        $scope.rawUserCardsData = [];
+        $scope.userCards = [];
         Cards.getUrl($scope.sit.ownedCardsUrl).then(getCardsSuccess);
     };
 
@@ -547,10 +544,6 @@ app.controller('UserCtrl', function($rootScope, $scope, Cards, localStorageServi
         localStorageService.set('userFilters', $scope.userFilters)
     }
 
-    $scope.collapsing = function() {
-        $scope.collapse = !$scope.collapse;
-        localStorageService.set('collapse', $scope.collapse)
-    };
 
     $scope.resetFilters = function() {
         $scope.userFilters = angular.copy($rootScope.InitFilters);
@@ -577,6 +570,7 @@ var modalController = function($scope, $uibModalInstance) {
         $uibModalInstance.close();
     };
 };
+// localStorageService.clearAll()
 
 modalController.$inject = ['$scope', '$uibModalInstance'];
 
