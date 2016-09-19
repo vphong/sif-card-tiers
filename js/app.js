@@ -421,52 +421,74 @@ app.controller('UserCtrl', function($rootScope, $scope, Cards, localStorageServi
                     // if userCard game id == database id and SIT ids are different
                     // then card is found, push card data and idlz status
                     card.user_idlz = userCard.idolized;
-                    // console.log(card.user_idlz);
+
+                                if (card.user_idlz) {
+                                    // set smile, pure, cool stats to idolized stats
+                                    card.max_smile = card.idolized_maximum_statistics_smile;
+                                    card.max_pure = card.idolized_maximum_statistics_pure;
+                                    card.max_cool = card.idolized_maximum_statistics_cool;
+
+                                    // set c/o score to idlz score
+                                    card.cScore = card.cScore_idlz;
+                                    card.cScore_heel = card.cScore_heel_idlz;
+                                    card.oScore = card.oScore_idlz;
+                                    card.oScore_heel = card.oScore_heel_idlz;
+
+                                } else {
+                                    // set smile, pure, cool stats to idolized stats
+                                    card.max_smile = card.non_idolized_maximum_statistics_smile;
+                                    card.max_pure = card.non_idolized_maximum_statistics_pure;
+                                    card.max_cool = card.non_idolized_maximum_statistics_cool;
+
+                                    // set c/o score to idlz score
+                                    card.cScore = card.cScore;
+                                    card.cScore_heel = card.cScore_heel;
+                                    card.oScore = card.oScore;
+                                    card.oScore_heel = card.oScore_heel;
+                                }
+
                     $scope.rawUserCardsData.push(angular.copy(card));
                 }
             })
         }
 
-        // grab rawUserCard idolized status
-        angular.forEach($scope.rawUserCardsData, function(rawCardData) {
-
-            if (rawCardData.user_idlz) {
-                // set smile, pure, cool stats to idolized stats
-                rawCardData.max_smile = rawCardData.idolized_maximum_statistics_smile;
-                rawCardData.max_pure = rawCardData.idolized_maximum_statistics_pure;
-                rawCardData.max_cool = rawCardData.idolized_maximum_statistics_cool;
-
-                // set c/o score to idlz score
-                rawCardData.cScore = rawCardData.cScore_idlz;
-                rawCardData.cScore_heel = rawCardData.cScore_heel_idlz;
-                rawCardData.oScore = rawCardData.oScore_idlz;
-                rawCardData.oScore_heel = rawCardData.oScore_heel_idlz;
-
-            } else {
-                // set smile, pure, cool stats to idolized stats
-                rawCardData.max_smile = rawCardData.non_idolized_maximum_statistics_smile;
-                rawCardData.max_pure = rawCardData.non_idolized_maximum_statistics_pure;
-                rawCardData.max_cool = rawCardData.non_idolized_maximum_statistics_cool;
-
-                // set c/o score to idlz score
-                rawCardData.cScore = rawCardData.cScore;
-                rawCardData.cScore_heel = rawCardData.cScore_heel;
-                rawCardData.oScore = rawCardData.oScore;
-                rawCardData.oScore_heel = rawCardData.oScore_heel;
-            }
-
-        });
+        // // grab rawUserCard idolized status
+        // angular.forEach($scope.rawUserCardsData, function(rawCardData) {
+        //
+        //     if (rawCardData.user_idlz) {
+        //         // set smile, pure, cool stats to idolized stats
+        //         rawCardData.max_smile = rawCardData.idolized_maximum_statistics_smile;
+        //         rawCardData.max_pure = rawCardData.idolized_maximum_statistics_pure;
+        //         rawCardData.max_cool = rawCardData.idolized_maximum_statistics_cool;
+        //
+        //         // set c/o score to idlz score
+        //         rawCardData.cScore = rawCardData.cScore_idlz;
+        //         rawCardData.cScore_heel = rawCardData.cScore_heel_idlz;
+        //         rawCardData.oScore = rawCardData.oScore_idlz;
+        //         rawCardData.oScore_heel = rawCardData.oScore_heel_idlz;
+        //
+        //     } else {
+        //         // set smile, pure, cool stats to idolized stats
+        //         rawCardData.max_smile = rawCardData.non_idolized_maximum_statistics_smile;
+        //         rawCardData.max_pure = rawCardData.non_idolized_maximum_statistics_pure;
+        //         rawCardData.max_cool = rawCardData.non_idolized_maximum_statistics_cool;
+        //
+        //         // set c/o score to idlz score
+        //         rawCardData.cScore = rawCardData.cScore;
+        //         rawCardData.cScore_heel = rawCardData.cScore_heel;
+        //         rawCardData.oScore = rawCardData.oScore;
+        //         rawCardData.oScore_heel = rawCardData.oScore_heel;
+        //     }
+        //
+        // });
 
         if (nextUrl) Cards.getUrl(nextUrl).then(getCardsSuccess);
         localStorageService.set('rawUserCardsData', $scope.rawUserCardsData);
 
         // filter for display
-        $scope.userCards = Cards.filterCards($scope.userFilters, $scope.rawUserCardsData);
+        $scope.userCards = angular.copy(Cards.filterCards($scope.userFilters, $scope.rawUserCardsData));
         localStorageService.set('userCards', $scope.userCards)
-        angular.forEach($scope.userCards, function(userCards) {
-          if (userCards.full_name.includes("Swimsuit Yazawa")) console.log(userCards)
 
-        })
     };
     var getCardsError = function(response) {
         // TODO
