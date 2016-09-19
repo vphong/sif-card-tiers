@@ -3,7 +3,7 @@ import json
 import os
 import logging
 
-logging.basicConfig(level=logging.CRITICAL)
+logging.basicConfig(level=logging.INFO)
 
 # initalization
 # original card endpoint
@@ -198,9 +198,6 @@ def cScore(card):
     card['cScore_heel'] = 0
     card['cScore_heel_idlz'] = 0
 
-
-    if "Christmas Ayase" in card['full_name']:
-        logging.critical("raw unidlz = %d", unidlz_stat)
         # logging.critical("raw idlz = %d", idlz_stat)
     # unidlz: 2/3/4
     # idlz: 3/4/5
@@ -291,15 +288,11 @@ def cScore(card):
     card['cScore'] = unidlz_stat + sis_unidlz_stat * \
         (1 + .09 + .03) * 2 + card['skill']['su']
 
-    if "Christmas Ayase" in card['full_name']:
-        logging.critical("%d + %d*1.12*2 + %d = %d", unidlz_stat, sis_unidlz_stat, card['skill']['su'], card['cScore'])
 
     card['cScore_idlz'] = idlz_stat + sis_idlz_stat * \
         (1 + .09 + .03) * 2 + card['skill']['su']
 
 
-    if "Christmas Ayase" in card['full_name']:
-        logging.critical("cs_idlz = %d", card['cScore_idlz'])
 # function: calculate Optimal-Score (O-Score) of a card
 # "optimal:"
 #       - reasonably optimal number of skill slots
@@ -408,7 +401,7 @@ def oScore(card):
 
 
 def cleanCard(d, keys):
-    ret = {key: d[key] for key in keys}``
+    ret = {key: d[key] for key in keys}
     # origin: set premium bool
     if ret['event']:
         ret['event'] = True
@@ -487,6 +480,11 @@ def cleanCard(d, keys):
     oScore(ret)
     cScore(ret)
 
+    # load links over https
+    ret['website_url'] = "https" + ret['website_url'][4:]
+    ret['round_card_image'] = "https" + repr(ret['round_card_image'])[5:]
+    ret['round_card_idolized_image'] = "https" + repr(ret['round_card_idolized_image'])[5:]
+
     return ret
 
 
@@ -539,7 +537,7 @@ def processCards():
         card = cleanCard(card, keysNeeded)
         # addFullName(card)
         cards.append(card)
-
+    logging.info(cards[0])
     # write to file with use for angular
     logging.info("processCards(): done cleaning. writing to file...")
     with open('js/cards.js', 'w') as f:
