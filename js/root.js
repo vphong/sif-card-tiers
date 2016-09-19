@@ -28,8 +28,9 @@ app.constant('InitFilters', {
     idlz: false,
     compare: "scorers"
 })
-app.run(function($rootScope, Typeahead, InitFilters, CardData) {
+app.run(function($rootScope, Typeahead, InitFilters, CardData, SongData) {
     $rootScope.Typeahead = Typeahead;
     $rootScope.InitFilters = InitFilters;
     $rootScope.Cards = CardData;
+    $rootScope.Songs = SongData
 });
