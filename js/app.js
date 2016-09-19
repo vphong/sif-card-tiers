@@ -404,7 +404,7 @@ app.controller('UserCtrl', function($rootScope, $scope, Cards, localStorageServi
     var getCardsSuccess = function(response) {
         if (response.data.next) nextUrl = "https" + response.data.next.substring(4);
         else nextUrl = null;
-        
+
         var rawUserCards = response.data.results;
         // localStorageService.set('rawUserCards', $scope.rawUserCards);
 
@@ -584,7 +584,8 @@ app.controller('UserCtrl', function($rootScope, $scope, Cards, localStorageServi
 
 
 });
-
+$rootScope = $rootScope.$new(true);
+$scope = $scope.$new(true);
 var modalController = function($scope, $uibModalInstance) {
     $scope.close = function() {
         $uibModalInstance.close();
