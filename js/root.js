@@ -29,8 +29,8 @@ app.constant('InitFilters', {
     compare: "scorers"
 })
 app.run(function($rootScope, Typeahead, InitFilters, CardData, SongData) {
-    $rootScope.Typeahead = Typeahead;
-    $rootScope.InitFilters = InitFilters;
-    $rootScope.Cards = CardData;
-    $rootScope.Songs = SongData
+    $rootScope.Typeahead = angular.copy(Typeahead);
+    $rootScope.InitFilters = angular.copy(InitFilters);
+    $rootScope.Cards = angular.copy(CardData);
+    $rootScope.Songs = angular.copy(SongData);
 });
