@@ -54,7 +54,7 @@ app.filter('toArray', function() {
 
 app.config(function($stateProvider, $urlRouterProvider) {
 
-    $urlRouterProvider.otherwise("/all");
+    $urlRouterProvider.otherwise("/");
 
     $stateProvider
 
@@ -565,13 +565,12 @@ app.controller('UserCtrl', function($rootScope, $scope, Cards, localStorageServi
 
 
 });
+
 var modalController = function($scope, $uibModalInstance) {
     $scope.close = function() {
         $uibModalInstance.close();
     };
 };
-// localStorageService.clearAll()
-
 modalController.$inject = ['$scope', '$uibModalInstance'];
 
 app.controller('ChangelogCtrl', function($scope, $uibModal) {
