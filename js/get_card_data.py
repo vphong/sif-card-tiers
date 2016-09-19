@@ -183,7 +183,7 @@ def stat_to_mod(card, idlz):
     elif (not idlz) and card['rarity'] == "SSR":
         stat += 375
     elif idlz and card['rarity'] == "SSR":
-        stat += 700
+        stat += 750
 
     return stat
 
@@ -534,5 +534,5 @@ def processCards():
 
     logging.info("processCards(): done")
 
-getRawCards()
+# getRawCards()
 processCards()
