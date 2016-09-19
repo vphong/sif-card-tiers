@@ -422,30 +422,30 @@ app.controller('UserCtrl', function($rootScope, $scope, Cards, localStorageServi
                     // then card is found, push card data and idlz status
                     card.user_idlz = userCard.idolized;
 
-                                if (card.user_idlz) {
-                                    // set smile, pure, cool stats to idolized stats
-                                    card.max_smile = card.idolized_maximum_statistics_smile;
-                                    card.max_pure = card.idolized_maximum_statistics_pure;
-                                    card.max_cool = card.idolized_maximum_statistics_cool;
+                    if (card.user_idlz) {
+                        // set smile, pure, cool stats to idolized stats
+                        card.max_smile = card.idolized_maximum_statistics_smile;
+                        card.max_pure = card.idolized_maximum_statistics_pure;
+                        card.max_cool = card.idolized_maximum_statistics_cool;
 
-                                    // set c/o score to idlz score
-                                    card.cScore = card.cScore_idlz;
-                                    card.cScore_heel = card.cScore_heel_idlz;
-                                    card.oScore = card.oScore_idlz;
-                                    card.oScore_heel = card.oScore_heel_idlz;
+                        // set c/o score to idlz score
+                        card.cScore = card.cScore_idlz;
+                        card.cScore_heel = card.cScore_heel_idlz;
+                        card.oScore = card.oScore_idlz;
+                        card.oScore_heel = card.oScore_heel_idlz;
 
-                                } else {
-                                    // set smile, pure, cool stats to idolized stats
-                                    card.max_smile = card.non_idolized_maximum_statistics_smile;
-                                    card.max_pure = card.non_idolized_maximum_statistics_pure;
-                                    card.max_cool = card.non_idolized_maximum_statistics_cool;
+                    } else {
+                        // set smile, pure, cool stats to idolized stats
+                        card.max_smile = card.non_idolized_maximum_statistics_smile;
+                        card.max_pure = card.non_idolized_maximum_statistics_pure;
+                        card.max_cool = card.non_idolized_maximum_statistics_cool;
 
-                                    // set c/o score to idlz score
-                                    card.cScore = card.cScore;
-                                    card.cScore_heel = card.cScore_heel;
-                                    card.oScore = card.oScore;
-                                    card.oScore_heel = card.oScore_heel;
-                                }
+                        // set c/o score to idlz score
+                        card.cScore = card.cScore;
+                        card.cScore_heel = card.cScore_heel;
+                        card.oScore = card.oScore;
+                        card.oScore_heel = card.oScore_heel;
+                    }
 
                     $scope.rawUserCardsData.push(angular.copy(card));
                 }
