@@ -42,22 +42,12 @@ app.run(function(bsLoadingOverlayService) {
         templateUrl: 'loading-overlay.html' // Template url for overlay element. If not specified - no overlay element is created.
     });
 });
-app.filter('toArray', function() {
-    return function(obj) {
-        const result = [];
-        angular.forEach(obj, function(val) {
-            result.push(val);
-        });
-        return result;
-    }
-});
 
 app.config(function($stateProvider, $urlRouterProvider) {
 
     $urlRouterProvider.otherwise("/");
 
     $stateProvider
-
         .state("home", {
             url: "/",
             templateUrl: "info.html",
@@ -313,7 +303,7 @@ app.controller('UserCtrl', function($rootScope, $scope, Cards, localStorageServi
         if (!$scope.sit) {
             $scope.sit = {};
         } else {
-            $scope.userCards = [];
+            // $scope.userCards = [];
         }
         $scope.userCards = localStorageService.get('userCards');
         if (!$scope.userCards) $scope.userCards = [];
@@ -377,7 +367,6 @@ app.controller('UserCtrl', function($rootScope, $scope, Cards, localStorageServi
 
 
         } else {
-            console.log("no accounts found")
             $scope.sit.accounts = [{
                 "name": "No accounts found",
                 "id": ""
