@@ -299,7 +299,7 @@ def cScore(card):
 
 
     if "Christmas Ayase" in card['full_name']:
-        logging.critical("cs = %d", card['cScore_idlz'])
+        logging.critical("cs_idlz = %d", card['cScore_idlz'])
 # function: calculate Optimal-Score (O-Score) of a card
 # "optimal:"
 #       - reasonably optimal number of skill slots
@@ -356,11 +356,11 @@ def oScore(card):
 
         if idlz_stat < 2000:
             # kiss + perfume
-            idlz_stat += 200 + 450
+            sis_idlz_stat = idlz_stat + 200 + 450
 
         elif idlz_stat >= 2000 and idlz_stat < 4200:
             # perfume + ring
-            idlz_stat += + idlz_stat * 1.1 + 450
+            sis_idlz_stat = idlz_stat * 1.1 + 450
         else:
             # kiss + cross
             sis_idlz_stat = idlz_stat * 1.16 + 200
@@ -390,20 +390,20 @@ def oScore(card):
                 (idlz_stat + 200) * (.09 + .06) * 2 + card['skill']['hl_heel']
         if idlz_stat < 3400:
             # kiss + perfume + ring
-            idlz_stat += 200 + 450 + idlz_stat * 1.1
+            sis_idlz_stat = 200 + 450 + idlz_stat * 1.1
 
         elif idlz_stat >= 3400 and idlz_stat < 4500:
             # perfume + cross
-            idlz_stat += 450 + idlz_stat * 1.16
+            sis_idlz_stat = 450 + idlz_stat * 1.16
         else:
             # ring + cross
             sis_idlz_stat = idlz_stat * 1.26
 
     # account for team leader multipliers
     # finally, add Score Up from card skill
-    card['oScore'] = unidlz_stat + unidlz_stat * \
+    card['oScore'] = unidlz_stat + sis_unidlz_stat * \
         (.09 + .06) * 2 + card['skill']['su']
-    card['oScore_idlz'] = idlz_stat + idlz_stat * \
+    card['oScore_idlz'] = idlz_stat + sis_idlz_stat * \
         (.09 + .06) * 2 + card['skill']['su']
 
 
