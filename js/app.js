@@ -584,8 +584,7 @@ app.controller('UserCtrl', function($rootScope, $scope, Cards, localStorageServi
 
 
 });
-$rootScope = $rootScope.$new(true);
-$scope = $scope.$new(true);
+
 var modalController = function($scope, $uibModalInstance) {
     $scope.close = function() {
         $uibModalInstance.close();
