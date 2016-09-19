@@ -402,57 +402,59 @@ app.controller('UserCtrl', function($rootScope, $scope, Cards, localStorageServi
 
     var getCardsSuccess = function(response) {
         var nextUrl = response.data.next;
-        $scope.rawUserCards = response.data.results;
-        localStorageService.set('rawUserCards', $scope.rawUserCards);
+        var rawUserCards = response.data.results;
+        // localStorageService.set('rawUserCards', $scope.rawUserCards);
 
 
         // grab owned card ids
-        var cardIDs = [];
-        var len = $scope.rawUserCards.length
-        for (var i = 0; i < len; i++) {
-            cardIDs.push($scope.rawUserCards[i].card)
+        // populate rawUserCardsData with cards owned from root cards
+        // angular.forEach($scope.rawUserCards, function(userCard) {
+        var userCard;
+        for (var i = 0; i < rawUserCards.length; i++) {
+            // for each user card
+            if (rawUserCards[i - 1]) prevUserCard = rawUserCards[i - 1];
+            else prevUserCard = "";
+            userCard = rawUserCards[i];
+            angular.forEach($rootScope.Cards, function(card) {
+                // search card database
+                if (userCard.card == card.id) {
+                    // if userCard game id == database id and SIT ids are different
+                    // then card is found, push card data and idlz status
+                    card.user_idlz = userCard.idolized;
+                    // console.log(card.user_idlz);
+                    $scope.rawUserCardsData.push(angular.copy(card));
+                }
+            })
         }
 
-        // populate rawUserCardsData with cards owned from root cards
-        angular.forEach(cardIDs, function(ownedID) {
-            angular.forEach($rootScope.Cards, function(card) {
-                if (ownedID === card.id) {
-                    $scope.rawUserCardsData.push(card)
-                }
-            });
-        });
-
         // grab rawUserCard idolized status
-        angular.forEach($scope.rawUserCards, function(rawCard) {
-            angular.forEach($scope.rawUserCardsData, function(rawCardData) {
-                if (rawCardData.id == rawCard.card) {
-                    rawCardData.user_idlz = rawCard.idolized;
-                    if (rawCardData.user_idlz) {
-                        // set smile, pure, cool stats to idolized stats
-                        rawCardData.max_smile = rawCardData.idolized_maximum_statistics_smile;
-                        rawCardData.max_pure = rawCardData.idolized_maximum_statistics_pure;
-                        rawCardData.max_cool = rawCardData.idolized_maximum_statistics_cool;
+        angular.forEach($scope.rawUserCardsData, function(rawCardData) {
 
-                        // set c/o score to idlz score
-                        rawCardData.cScore = rawCardData.cScore_idlz;
-                        rawCardData.cScore_heel = rawCardData.cScore_heel_idlz;
-                        rawCardData.oScore = rawCardData.oScore_idlz;
-                        rawCardData.oScore_heel = rawCardData.oScore_heel_idlz;
+            if (rawCardData.user_idlz) {
+                // set smile, pure, cool stats to idolized stats
+                rawCardData.max_smile = rawCardData.idolized_maximum_statistics_smile;
+                rawCardData.max_pure = rawCardData.idolized_maximum_statistics_pure;
+                rawCardData.max_cool = rawCardData.idolized_maximum_statistics_cool;
 
-                    } else {
-                        // set smile, pure, cool stats to idolized stats
-                        rawCardData.max_smile = rawCardData.non_idolized_maximum_statistics_smile;
-                        rawCardData.max_pure = rawCardData.non_idolized_maximum_statistics_pure;
-                        rawCardData.max_cool = rawCardData.non_idolized_maximum_statistics_cool;
+                // set c/o score to idlz score
+                rawCardData.cScore = rawCardData.cScore_idlz;
+                rawCardData.cScore_heel = rawCardData.cScore_heel_idlz;
+                rawCardData.oScore = rawCardData.oScore_idlz;
+                rawCardData.oScore_heel = rawCardData.oScore_heel_idlz;
 
-                        // set c/o score to idlz score
-                        rawCardData.cScore = rawCardData.cScore;
-                        rawCardData.cScore_heel = rawCardData.cScore_heel;
-                        rawCardData.oScore = rawCardData.oScore;
-                        rawCardData.oScore_heel = rawCardData.oScore_heel;
-                    }
-                }
-            });
+            } else {
+                // set smile, pure, cool stats to idolized stats
+                rawCardData.max_smile = rawCardData.non_idolized_maximum_statistics_smile;
+                rawCardData.max_pure = rawCardData.non_idolized_maximum_statistics_pure;
+                rawCardData.max_cool = rawCardData.non_idolized_maximum_statistics_cool;
+
+                // set c/o score to idlz score
+                rawCardData.cScore = rawCardData.cScore;
+                rawCardData.cScore_heel = rawCardData.cScore_heel;
+                rawCardData.oScore = rawCardData.oScore;
+                rawCardData.oScore_heel = rawCardData.oScore_heel;
+            }
+
         });
 
         if (nextUrl) Cards.getUrl(nextUrl).then(getCardsSuccess);
@@ -461,8 +463,11 @@ app.controller('UserCtrl', function($rootScope, $scope, Cards, localStorageServi
         // filter for display
         $scope.userCards = Cards.filterCards($scope.userFilters, $scope.rawUserCardsData);
         localStorageService.set('userCards', $scope.userCards)
-    };
+        angular.forEach($scope.userCards, function(userCards) {
+          if (userCards.full_name.includes("Swimsuit Yazawa")) console.log(userCards)
 
+        })
+    };
     var getCardsError = function(response) {
         // TODO
     }
