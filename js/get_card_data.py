@@ -408,7 +408,7 @@ def oScore(card):
 
 
 def cleanCard(d, keys):
-    ret = {key: d[key] for key in keys}
+    ret = {key: d[key] for key in keys}``
     # origin: set premium bool
     if ret['event']:
         ret['event'] = True

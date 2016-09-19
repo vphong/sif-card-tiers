@@ -2,6 +2,7 @@ import urllib.request
 import json
 import os
 import logging
+import io
 
 logging.basicConfig(level=logging.INFO)
 
@@ -12,13 +13,42 @@ baseURL = "http://schoolido.lu/api/songs/"
 keysNeeded = ["name", "romaji_name", "translated_name", "attribute", "time", "main_unit",
               "easy_notes", "normal_notes", "hard_notes", "expert_notes", "master_notes"]
 
+
 songs = []
+
+songTitleKeys = ["name", "romaji_name", "translated_name"]
+
+def byteify(input):
+    if isinstance(input, dict):
+        return {byteify(key): byteify(value)
+                for key, value in input.items()}
+    elif isinstance(input, list):
+        return [byteify(element) for element in input]
+    elif isinstance(input, str):
+        return input.encode('utf-8')
+    else:
+        return input
 
 #################
 
 def cleanSong(song, keys):
+    logging.info(song)
     ret = {key: song[key] for key in keys};
+    # ret['name'] = ret['name'].encode('utf-8').decode('utf-8')
+    # logging.info(ret['name'])
+    # logging.info(type(ret['name']))
     return ret
+
+def getAllSongTitles(songs):
+    logging.info("getAllSongTitles(): begin")
+    songTitles = [];
+    for song in songs:
+        songTitle = {key: song[key] for key in songTitleKeys}
+        songTitles.append(songTitle)
+
+    logging.info("getAllSongTitles(): done ")
+    return songTitles;
+
 
 #################
 
@@ -58,7 +88,7 @@ def getRawSongs():
 
 # function: grab info needed for use in web app
 def processSongs():
-    logging.info("processSongs: begin")
+    logging.info("processSongs(): begin")
     # initalization
     logging.info("processSongs(): loading card data...")
     with open('js/songs.json', 'r') as infile:
@@ -67,15 +97,21 @@ def processSongs():
     songs = []
     logging.info("processSongs(): cleaning songs...")
     for song in data:
+        logging.info(song['name'])
         song = cleanSong(song, keysNeeded)
         # addFullName(card)
         songs.append(song)
 
+    songTitles = getAllSongTitles(songs)
+
     # write to file with use for angular
-    logging.info("processSongs(): done cleaning. writing to file...")
-    with open('js/songs.js', 'w') as f:
+    logging.info("processSongs(): writing to file...")
+    with io.open('js/songs.js', 'w',encoding='utf8') as f:
         f.write("app.constant('SongData',\n")
-        json.dump(songs, f, indent=2, sort_keys=True)
+        json.dump(songs, f, indent=2, sort_keys=True, ensure_ascii=False)
+        f.write("\n\n);")
+        f.write("app.constant('SongTitles',\n")
+        json.dump(songs, f, indent=2, sort_keys=True, ensure_ascii=False)
         f.write("\n);")
 
     logging.info("processSongs(): done")
