@@ -400,8 +400,11 @@ app.controller('UserCtrl', function($rootScope, $scope, Cards, localStorageServi
         localStorageService.set('sit', $scope.sit)
     };
 
+    var nextUrl;
     var getCardsSuccess = function(response) {
-        var nextUrl = response.data.next;
+        if (response.data.next) nextUrl = "https" + response.data.next.substring(4);
+        else nextUrl = null;
+        
         var rawUserCards = response.data.results;
         // localStorageService.set('rawUserCards', $scope.rawUserCards);
 
