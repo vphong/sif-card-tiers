@@ -235,7 +235,7 @@ def cScore(card):
         # calc heel (4 slots) cScore before modding stat
         if card['skill']['type'] == "Healer":
             card['cScore_heel_idlz'] = idlz_stat + idlz_stat * \
-                (.09 + .03) * 2 + card['skill']['hl_heel']
+                (1 + .09 + .03) * 2 + card['skill']['hl_heel']
         if idlz_stat < 2000:
             # kiss + perfume
             sis_idlz_stat = idlz_stat + 200 + 450
@@ -252,7 +252,7 @@ def cScore(card):
         # calc heel (4 slots) cScore before modding stat
         if card['skill']['type'] == "Healer":
             card['cScore_heel'] = unidlz_stat + unidlz_stat * \
-                (.09 + .03) * 2 + card['skill']['hl_heel']
+                (1 + .09 + .03) * 2 + card['skill']['hl_heel']
         if unidlz_stat < 2000:
             # kiss + perfume
             sis_unidlz_stat = unidlz_stat + 200 + 450
@@ -273,7 +273,7 @@ def cScore(card):
         # heel (4) + kiss (1)
         if card['skill']['type'] == "Healer":
             card['cScore_heel_idlz'] = idlz_stat + \
-                (idlz_stat + 200) * (.09 + .03) * 2 + card['skill']['hl_heel']
+                (idlz_stat + 200) * (1 + .09 + .03) * 2 + card['skill']['hl_heel']
         if idlz_stat < 3400:
             # kiss + perfume + ring
             sis_idlz_stat = idlz_stat * 1.1 + 200 + 450
@@ -331,7 +331,7 @@ def oScore(card):
         # http://i.imgur.com/YQyqNhs.png
         if card['skill']['type'] == "Healer":
             card['oScore_heel_idlz'] = idlz_stat + idlz_stat * \
-                (.09 + .06) * 2 + card['skill']['hl_heel']
+                (1 + .09 + .06) * 2 + card['skill']['hl_heel']
 
         if idlz_stat < 4100:  # kiss + perfume
             sis_idlz_stat = idlz_stat * 1.1 + 450
@@ -352,7 +352,7 @@ def oScore(card):
         # calc heel (4 slots) cScore before modding stat
         if card['skill']['type'] == "Healer":
             card['oScore_heel_idlz'] = idlz_stat + idlz_stat * \
-                (.09 + .06) * 2 + card['skill']['hl_heel']
+                (1 + .09 + .06) * 2 + card['skill']['hl_heel']
 
         if idlz_stat < 2000:
             # kiss + perfume
@@ -370,7 +370,7 @@ def oScore(card):
         # calc heel (4 slots) cScore before modding stat
         if card['skill']['type'] == "Healer":
             card['oScore_heel'] = unidlz_stat + unidlz_stat * \
-                (.09 + .06) * 2 + card['skill']['hl_heel']
+                (1 + .09 + .06) * 2 + card['skill']['hl_heel']
         if unidlz_stat < 2000:
             # kiss + perfume
             sis_unidlz_stat = unidlz_stat + 200 + 450
@@ -387,7 +387,7 @@ def oScore(card):
         # heel (4) + kiss (1)
         if card['skill']['type'] == "Healer":
             card['oScore_heel_idlz'] = idlz_stat + \
-                (idlz_stat + 200) * (.09 + .06) * 2 + card['skill']['hl_heel']
+                (idlz_stat + 200) * (1 + .09 + .06) * 2 + card['skill']['hl_heel']
         if idlz_stat < 3400:
             # kiss + perfume + ring
             sis_idlz_stat = 200 + 450 + idlz_stat * 1.1
@@ -402,9 +402,9 @@ def oScore(card):
     # account for team leader multipliers
     # finally, add Score Up from card skill
     card['oScore'] = unidlz_stat + sis_unidlz_stat * \
-        (.09 + .06) * 2 + card['skill']['su']
+        (1 + .09 + .06) * 2 + card['skill']['su']
     card['oScore_idlz'] = idlz_stat + sis_idlz_stat * \
-        (.09 + .06) * 2 + card['skill']['su']
+        (1 + .09 + .06) * 2 + card['skill']['su']
 
 
 def cleanCard(d, keys):
