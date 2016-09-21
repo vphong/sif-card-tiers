@@ -222,27 +222,23 @@ def cScore(card):
     elif card['rarity'] == "SSR":
         # unidolzed SSR: 3 skill slots
         # http://i.imgur.com/YQyqNhs.png
-        if unidlz_stat < 4100:  # kiss + perfume
+        if unidlz_stat < 4100:
+             # kiss + perfume
             sis_unidlz_stat = unidlz_stat * 1.1 + 450
 
         else:  # cross
             sis_unidlz_stat = unidlz_stat * 1.16
 
-        # idolized SSR: 4 skill slots
+        # idolized SSR: 3 skill slots
         # calc heel (4 slots) cScore before modding stat
         if card['skill']['type'] == "Healer":
             card['cScore_heel_idlz'] = idlz_stat + idlz_stat * \
                 (1 + .09 + .03) * 2 + card['skill']['hl_heel']
-        if idlz_stat < 2000:
+        if idlz_stat < 4100:
             # kiss + perfume
-            sis_idlz_stat = idlz_stat + 200 + 450
-
-        elif idlz_stat >= 2000 and idlz_stat < 4200:
-            # perfume + ring
             sis_idlz_stat = idlz_stat * 1.1 + 450
-        else:
-            # kiss + cross
-            sis_idlz_stat = idlz_stat * 1.16 + 200
+        else: # cross
+            sis_idlz_stat = idlz_stat * 1.16
 
     elif card['rarity'] == "UR":
         # unidolized UR: 4 skill slots
@@ -261,26 +257,23 @@ def cScore(card):
             # kiss + cross
             sis_unidlz_stat = unidlz_stat * 1.16 + 200
 
-        if "Christmas Ayase" in card['full_name']:
-            logging.critical("after skill equip = %d", sis_unidlz_stat)
-
-        # idolized UR: 5 skill slots
+        # idolized UR: 4 skill slots
         # calc heel cScore before modding stat
         # heel (4) + kiss (1)
         if card['skill']['type'] == "Healer":
             card['cScore_heel_idlz'] = idlz_stat + \
                 (idlz_stat + 200) * (1 + .09 + .03) * \
                 2 + card['skill']['hl_heel']
-        if idlz_stat < 3400:
-            # kiss + perfume + ring
-            sis_idlz_stat = idlz_stat * 1.1 + 200 + 450
+        if idlz_stat < 2000:
+            # kiss + perfume
+            sis_idlz_stat = idlz_stat + 200 + 450
 
-        elif idlz_stat >= 3400 and idlz_stat < 4500:
-            # perfume + cross
-            sis_idlz_stat = idlz_stat * 1.16 + 450
+        elif idlz_stat >= 2000 and idlz_stat < 4200:
+            # perfume + ring
+            sis_idlz_stat = idlz_stat * 1.1 + 450
         else:
-            # ring + cross
-            sis_idlz_stat = idlz_stat * 1.26
+            # kiss + cross
+            sis_idlz_stat = idlz_stat * 1.16 + 200
 
     # account for team leader multipliers
     # on-attribute boost (9%), general main unit boost (3%), twice for player + guest
