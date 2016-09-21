@@ -28,9 +28,10 @@ app.constant('InitFilters', {
     idlz: false,
     compare: "scorers"
 })
-app.run(function($rootScope, Typeahead, InitFilters, CardData, SongData) {
+app.run(function($rootScope, Typeahead, InitFilters, CardData, SongData, SongTitles) {
     $rootScope.Typeahead = angular.copy(Typeahead);
     $rootScope.InitFilters = angular.copy(InitFilters);
     $rootScope.Cards = angular.copy(CardData);
     $rootScope.Songs = angular.copy(SongData);
+    $rootScope.SongTitles = angular.copy(SongTitles);
 });
