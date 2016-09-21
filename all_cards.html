@@ -192,8 +192,8 @@
                                             uib-popover="This card's skill is dependent on team strength. C-Score, O-Score, and Score Up value may be innaccuate. See Info page for more detailed explanation."
                                             popover-title="Disclaimer"
                                             popover-trigger="'mouseenter'"
-                                            popover-enable="card.full_name=='SR Animal Yazawa Nico'||card.full_name=='SR Health Committee Minami Kotori'||card.full_name=='SR Animal Kousaka Honoka'">
-                                            <span ng-if="card.full_name=='SR Animal Yazawa Nico'||card.full_name=='SR Health Committee Minami Kotori'||card.full_name=='SR Animal Kousaka Honoka'">
+                                            popover-enable="card.full_name=='SR Animal Yazawa Nico'||card.full_name=='SR Health Committee Minami Kotori'||card.full_name=='SR Animal Kousaka Honoka'||card.full_name=='SR October Sonoda Umi'">
+                                            <span ng-if="card.full_name=='SR Animal Yazawa Nico'||card.full_name=='SR Health Committee Minami Kotori'||card.full_name=='SR Animal Kousaka Honoka'||card.full_name=='SR October Sonoda Umi'">
                                                 <i class="fa fa-info-circle"></i>
                                             </span>
                                             <a href="{{card.website_url}}" ng-class="{'text-smile': card.attribute=='Smile', 'text-pure': card.attribute=='Pure', 'text-cool': card.attribute=='Cool'}">
@@ -223,7 +223,7 @@
                                 </span>
                             </td>
                             <td ng-show="filters.compare=='healers'">
-                                <span uib-popover="Cannot equip Heel to an unidolized SR or SSR. Turn on Idolized." popover-trigger="'mouseenter'" popover-enable="!filters.idlz && card.cScore_heel==0">
+                                <span uib-popover="Cannot equip Heel to an unidolized SR or SSR. Turn on Idolized." popover-trigger="'mouseenter'" popover-enable="!filters.idlz && card.oScore_heel==0">
                                     <i ng-if="!filters.idlz && card.cScore_heel==0" class="fa fa-warning text-danger"></i>
                                     {{filters.idlz ? card.oScore_heel_idlz : card.oScore_heel | number:2}}</td>
                             </span>
