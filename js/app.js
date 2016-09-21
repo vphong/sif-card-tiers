@@ -210,6 +210,9 @@ app.controller('TierCtrl', function($rootScope, $scope, Cards, localStorageServi
         $scope.search = localStorageService.get('search');
         if (!$scope.search) $scope.search = "";
 
+        $scope.song = localStorageService.get('song');
+        if (!$scope.song) $scope.song = angular.copy($rootScope.Song);
+
     }
     init();
 

@@ -64,40 +64,31 @@
 
     <div id="search_table" class="col-xs-10">
 
-        <div id="search">
+        <div id="search" class="row">
 
             <div class="col-xs-6">
                 <div class="input-group">
-                    <span class="input-group-addon">
+                    <span class="input-group-addon" style="cursor: pointer" popover-append-to-body="true" popover-placement="top-left" uib-popover="Terms include: girl, attribute, skill type, main unit, subunit, and English schoolido.lu set name.">
                         <i class="fa fa-search"></i>
                     </span>
                     <input type="text" class="form-control" ng-model="search" ng-change="updateSearch()" placeholder="search by card" uib-typeahead="type for type in $root.Typeahead | filter:$viewValue | limitTo:8">
-                    <span class="input-group-addon" style="cursor: pointer" popover-append-to-body="true" popover-placement="top-right" uib-popover="Terms include: girl, attribute, skill type, main unit, subunit, and English schoolido.lu set name.">
-                        <i class="fa fa-info"></i>
-                    </span>
                 </div>
             </div>
 
             <div class="col-xs-3">
                 <div class="input-group">
-                    <span class="input-group-addon">
-                        <i class="fa fa-search"></i>
+                    <span class="input-group-addon" style="cursor: pointer" popover-append-to-body="true" popover-placement="top" uib-popover="Number of notes in song for skill evaluation">
+                        <i class="fa fa-music"></i>
                     </span>
-                    <input type="text" class="form-control" ng-model="song.notes" ng-change="updateSearch()" placeholder="search by card" uib-typeahead="type for type in $root.Typeahead | filter:$viewValue | limitTo:8">
-                    <span class="input-group-addon" style="cursor: pointer" popover-append-to-body="true" popover-placement="top-right" uib-popover="Terms include: girl, attribute, skill type, main unit, subunit, and English schoolido.lu set name.">
-                        <i class="fa fa-info"></i>
-                    </span>
+                    <input type="number" class="form-control" ng-model="song.notes" ng-change="updateSearch()" placeholder="length of song (notes)">
                 </div>
             </div>
             <div class="col-xs-3">
                 <div class="input-group">
-                    <span class="input-group-addon">
-                        <i class="fa fa-search"></i>
+                    <span class="input-group-addon" style="cursor: pointer" popover-append-to-body="true" popover-placement="top-right" uib-popover="Number of seconds in song for skill evaluation">
+                        <i class="fa fa-clock-o"></i>
                     </span>
-                    <input type="text" class="form-control" ng-model="song.time" ng-change="updateSearch()" placeholder="search by card" uib-typeahead="type for type in $root.Typeahead | filter:$viewValue | limitTo:8">
-                    <span class="input-group-addon" style="cursor: pointer" popover-append-to-body="true" popover-placement="top-right" uib-popover="Terms include: girl, attribute, skill type, main unit, subunit, and English schoolido.lu set name.">
-                        <i class="fa fa-info"></i>
-                    </span>
+                    <input type="number" class="form-control" ng-model="song.seconds" ng-change="updateSearch()" placeholder="length of song (seconds)" uib-typeahead="type for type in $root.Typeahead | filter:$viewValue | limitTo:8">
                 </div>
             </div>
         </div>
