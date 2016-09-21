@@ -30,7 +30,8 @@ app.constant('InitFilters', {
 })
 app.constant('InitSong', {
   notes: 550,
-  seconds: 125
+  seconds: 125,
+  perfects: .85
 })
 app.run(function($rootScope, Typeahead, InitFilters, InitSong, CardData, SongData) {
     $rootScope.Typeahead = angular.copy(Typeahead);

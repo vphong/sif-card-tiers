@@ -213,3 +213,6 @@ footer.well {
   width: 100%;
   position: relative;
 }
+.row>.div {
+  margin: 0
+}

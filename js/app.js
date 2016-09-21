@@ -106,10 +106,7 @@ app.factory('Cards', function($rootScope, $http) {
         var newCards = [];
         var len = cards.length;
 
-        for (var i = 0; i < len; i++) {
-            card = cards[i];
-
-
+        angular.forEach(cards, function(card) {
             if ((filters.server == 'en' && !card.japan_only ||
                     filters.server == 'jp') &&
 
@@ -134,9 +131,42 @@ app.factory('Cards', function($rootScope, $http) {
             ) {
                 newCards.push(card);
             }
-        }
+        })
         return newCards;
     }
+
+    var skill;
+    var activations = 0;
+    ret.calcSkill = function(cards, song) {
+        angular.forEach(cards, function(card) {
+            skill = card.skill;
+            // for each ~act_count~ ~act_type~, ~act_percent~ chance of ~act_val~
+            // skill value = (# of activation times) * (chance of activation) * (activation value)
+            if (skill.activation_type == "perfects") {
+                activations = Math.floor(song.notes * song.perfects / skill.activation_count)
+            } else if (skill.activation_type == "seconds") {
+                activations = Math.floor(song.seconds / skill.activation_count)
+            } else { // notes or combo string
+                activations = Math.floor(song.notes / skill.activation_count)
+            }
+            card.skill.avg = activations * skill.activation_percent * skill.activation_value
+            card.skill.best = activations * skill.activation_value
+
+            if (skill.type == "Score Up") {
+                card.cScore += card.skill.avg;
+                card.oScore += card.skill.avg;
+            }
+
+            if (skill.type == "Healer") {
+                card.skill.avgHeel = card.skill.avg * 270;
+                card.skill.bestHeel = card.skill.best * 270;
+
+                card.cScore += card.skill.avgHeel;
+                card.oScore += card.skill.avgHeel;
+            }
+        });
+    }
+
     ret.sortBy = function(sort, idlz, type) {
         sort.desc = (sort.type == type || sort.gen == type) ? !sort.desc : true;
 
@@ -198,7 +228,8 @@ app.controller('TierCtrl', function($rootScope, $scope, Cards, localStorageServi
         if (!$scope.filters) $scope.filters = angular.copy($rootScope.InitFilters);
 
         /*$scope.cards = localStorageService.get('cards');
-        if (!$scope.cards)*/ $scope.cards = Cards.filterCards($scope.filters, angular.copy($rootScope.Cards));
+        if (!$scope.cards)*/
+        $scope.cards = Cards.filterCards($scope.filters, angular.copy($rootScope.Cards));
         $scope.sort = localStorageService.get('sort');
         if (!$scope.sort) {
             $scope.sort = {
@@ -212,6 +243,8 @@ app.controller('TierCtrl', function($rootScope, $scope, Cards, localStorageServi
 
         $scope.song = localStorageService.get('song');
         if (!$scope.song) $scope.song = angular.copy($rootScope.Song);
+        Cards.calcSkill($scope.cards, $scope.song);
+
 
     }
     init();
@@ -220,13 +253,19 @@ app.controller('TierCtrl', function($rootScope, $scope, Cards, localStorageServi
         localStorageService.set('search', $scope.search);
     }
 
+    $scope.updateSong = function() {
+        localStorageService.set('song', $scope.song);
+        Cards.calcSkill($scope.cards, $scope.song)
+    }
+
     $scope.err = {};
     $scope.err.rarity = !$scope.filters.sr && !$scope.filters.ssr && !$scope.filters.ur;
     $scope.err.origin = !$scope.filters.premium && !$scope.filters.event && !$scope.filters.promo;
     $scope.err.main = !$scope.filters.muse && !$scope.filters.aqours;
     $scope.filterCards = function() {
         $scope.cards = Cards.filterCards($scope.filters, $rootScope.Cards);
-        // localStorageService.set('cards', $scope.cards);
+        Cards.calcSkill($scope.cards, $scope.song)
+            // localStorageService.set('cards', $scope.cards);
 
         $scope.err.rarity = !$scope.filters.sr && !$scope.filters.ssr && !$scope.filters.ur;
         $scope.err.origin = !$scope.filters.premium && !$scope.filters.event && !$scope.filters.promo;
@@ -277,6 +316,7 @@ app.controller('TierCtrl', function($rootScope, $scope, Cards, localStorageServi
     }
 
     $scope.sortBy = function(type) {
+        if ($scope.filters.heel) type = type + "Heel";
         Cards.sortBy($scope.sort, $scope.filters.idlz, type)
         localStorageService.set('sort', $scope.sort)
     }

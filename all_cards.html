@@ -10,6 +10,11 @@
             <div class="btn-group btn-group-justified">
                 <label class="btn btn-danger btn-sm" ng-click="resetFilters()">Reset Filters</label>
             </div>
+
+            <div class="btn-group btn-group-justified" ng-if="filters.compare=='healers'" >
+                <label class="btn btn-default btn-sm" ng-model="filters.heel" ng-click="toggleHeel()" uib-btn-checkbox>Heel?</label>
+            </div>
+
             <div class="btn-group-vertical col-xs-12">
                 <label class="btn btn-default btn-sm" ng-model="filters.displayImg" ng-click="setLocalStorageFilters()" uib-btn-checkbox>Display imgs?</label>
             </div>
@@ -62,12 +67,12 @@
         </div>
     </div>
 
-    <div id="search_table" class="col-xs-10">
+    <div id="search_table" class="container-fluid col-xs-10">
 
         <div id="search" class="row">
 
-            <div class="col-xs-6">
-                <div class="input-group">
+            <div class="col-xs-6 no-padding">
+                <div class="input-group input-group-sm">
                     <span class="input-group-addon" style="cursor: pointer" popover-append-to-body="true" popover-placement="top-left" uib-popover="Terms include: girl, attribute, skill type, main unit, subunit, and English schoolido.lu set name.">
                         <i class="fa fa-search"></i>
                     </span>
@@ -75,25 +80,33 @@
                 </div>
             </div>
 
-            <div class="col-xs-3">
-                <div class="input-group">
+            <div class="col-xs-2 no-padding">
+                <div class="input-group input-group-sm">
                     <span class="input-group-addon" style="cursor: pointer" popover-append-to-body="true" popover-placement="top" uib-popover="Number of notes in song for skill evaluation">
                         <i class="fa fa-music"></i>
                     </span>
                     <input type="number" class="form-control" ng-model="song.notes" ng-change="updateSearch()" placeholder="length of song (notes)">
                 </div>
             </div>
-            <div class="col-xs-3">
-                <div class="input-group">
+            <div class="col-xs-2 no-padding">
+                <div class="input-group input-group-sm">
                     <span class="input-group-addon" style="cursor: pointer" popover-append-to-body="true" popover-placement="top-right" uib-popover="Number of seconds in song for skill evaluation">
                         <i class="fa fa-clock-o"></i>
                     </span>
-                    <input type="number" class="form-control" ng-model="song.seconds" ng-change="updateSearch()" placeholder="length of song (seconds)" uib-typeahead="type for type in $root.Typeahead | filter:$viewValue | limitTo:8">
+                    <input type="number" class="form-control" ng-model="song.seconds" ng-change="updateSearch()" placeholder="length of song (seconds)">
+                </div>
+            </div>
+            <div class="col-xs-2 no-padding">
+                <div class="input-group input-group-sm">
+                    <span class="input-group-addon" style="cursor: pointer" popover-append-to-body="true" popover-placement="top-right" uib-popover="Percent of perfects per song for skill evaluation">
+                        <i class="fa fa-clock-o"></i>
+                    </span>
+                    <input type="number" class="form-control" ng-model="song.perfects" ng-change="updateSearch()" placeholder="percentage of perfects">
                 </div>
             </div>
         </div>
 
-        <div style="border: 1px solid #dfd7ca;border-radius: 3px; position: relative" bs-loading-overlay bs-loading-overlay-reference-id="all">
+        <div style="border: 1px solid #dfd7ca;border-radius: 3px; position: relative" class="row" bs-loading-overlay bs-loading-overlay-reference-id="all">
             <div class="table-container">
 
                 <table class="table table-striped" id="tbl">
@@ -125,17 +138,13 @@
                                 <i ng-show="sort.desc && sort.gen=='oScore'" class="fa fa-chevron-down"></i>
                                 <i ng-show="!sort.desc && sort.gen=='oScore'" class="fa fa-chevron-up"></i>
                             </th>
-                            <th class="num-header" style="min-width:90px" ng-click="sortBy('skill.su')" ng-show="filters.compare=='scorers'">Score Up
-                                <i ng-show="sort.desc && sort.type=='skill.su'" class="fa fa-chevron-down"></i>
-                                <i ng-show="!sort.desc && sort.type=='skill.su'" class="fa fa-chevron-up"></i>
+                            <th class="num-header" style="min-width:100px" ng-click="sortBy('skill.avg')">Skill (Avg)
+                                <i ng-show="sort.desc && sort.type.includes('skill.avg')" class="fa fa-chevron-down"></i>
+                                <i ng-show="!sort.desc && sort.type.includes('skill.avg')" class="fa fa-chevron-up"></i>
                             </th>
-                            <th class="num-header" style="min-width:90px" ng-click="sortBy('skill.pl')" ng-show="filters.compare=='perfect locks'">PL Time
-                                <i ng-show="sort.desc && sort.type=='skill.pl'" class="fa fa-chevron-down"></i>
-                                <i ng-show="!sort.desc && sort.type=='skill.pl'" class="fa fa-chevron-up"></i>
-                            </th>
-                            <th class="num-header" style="min-width:90px" ng-click="sortBy('skill.hl')" ng-show="filters.compare=='healers'">Avg. Heal
-                                <i ng-show="sort.desc && sort.type=='skill.hl'" class="fa fa-chevron-down"></i>
-                                <i ng-show="!sort.desc && sort.type=='skill.hl'" class="fa fa-chevron-up"></i>
+                            <th class="num-header" style="min-width:100px" ng-click="sortBy('skill.best')">Skill (Best)
+                                <i ng-show="sort.desc && sort.type=='skill.best'" class="fa fa-chevron-down"></i>
+                                <i ng-show="!sort.desc && sort.type=='skill.best'" class="fa fa-chevron-up"></i>
                             </th>
                             <th class="num-header" style="min-width:100px" ng-click="sortBy('skill.hl_heel')" ng-show="filters.compare=='healers'">
                                 <abbr title="Score Up">SU</abbr>
@@ -214,10 +223,8 @@
                             <td>{{filters.idlz ? card.idolized_maximum_statistics_cool : card.non_idolized_maximum_statistics_cool}}</td>
                             <td>{{filters.idlz ? card.cScore_idlz : card.cScore | number:2}}</td>
                             <td>{{filters.idlz ? card.oScore_idlz : card.oScore | number:2}}</td>
-                            <td ng-show="filters.compare=='scorers'">{{card.skill.su |number:2}}</td>
-                            <td ng-show="filters.compare=='perfect locks'">{{card.skill.pl |number:2}}</td>
-                            <td ng-show="filters.compare=='healers'">{{card.skill.hl | number:2}}</td>
-                            <td ng-show="filters.compare=='healers'">{{card.skill.hl_heel |number:2}}</td>
+                            <td>{{filters.heel ? card.skill.avgHeel : card.skill.avg |number:2}}</td>
+                            <td>{{filters.heel ? card.skill.bestHeel : card.skill.best |number:2}}</td>
                             <td ng-show="filters.compare=='healers'">
                                 <span uib-popover="Cannot equip Heel to an unidolized SR or SSR. Turn on Idolized." popover-trigger="'mouseenter'" popover-enable="!filters.idlz && card.cScore_heel==0">
                                     <i ng-if="!filters.idlz && card.cScore_heel==0" class="fa fa-warning text-danger"></i>
