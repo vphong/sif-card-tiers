@@ -197,8 +197,8 @@ app.controller('TierCtrl', function($rootScope, $scope, Cards, localStorageServi
         $scope.filters = localStorageService.get('filters');
         if (!$scope.filters) $scope.filters = angular.copy($rootScope.InitFilters);
 
-        $scope.cards = localStorageService.get('cards');
-        if (!$scope.cards) $scope.cards = Cards.filterCards($scope.filters, angular.copy($rootScope.Cards));
+        /*$scope.cards = localStorageService.get('cards');
+        if (!$scope.cards)*/ $scope.cards = Cards.filterCards($scope.filters, angular.copy($rootScope.Cards));
         $scope.sort = localStorageService.get('sort');
         if (!$scope.sort) {
             $scope.sort = {
@@ -226,7 +226,7 @@ app.controller('TierCtrl', function($rootScope, $scope, Cards, localStorageServi
     $scope.err.main = !$scope.filters.muse && !$scope.filters.aqours;
     $scope.filterCards = function() {
         $scope.cards = Cards.filterCards($scope.filters, $rootScope.Cards);
-        localStorageService.set('cards', $scope.cards);
+        // localStorageService.set('cards', $scope.cards);
 
         $scope.err.rarity = !$scope.filters.sr && !$scope.filters.ssr && !$scope.filters.ur;
         $scope.err.origin = !$scope.filters.premium && !$scope.filters.event && !$scope.filters.promo;
