@@ -141,20 +141,20 @@ app.factory('Cards', function($rootScope, $http) {
         if (card.attribute == "Smile" && idlz) {
             stat = card.idolized_maximum_statistics_smile;
         } else if (card.attribute == "Smile" && !idlz) {
-          stat = card.non_idolized_maximum_statistics_smile;
+            stat = card.non_idolized_maximum_statistics_smile;
         } else if (card.attribute == "Pure" && idlz) {
-          stat = card.idolized_maximum_statistics_pure;
+            stat = card.idolized_maximum_statistics_pure;
         } else if (card.attribute == "Pure" && !idlz) {
-          stat = card.non_idolized_maximum_statistics_pure;
+            stat = card.non_idolized_maximum_statistics_pure;
         } else if (card.attribute == "Cool" && idlz) {
-          stat = card.idolized_maximum_statistics_cool;
+            stat = card.idolized_maximum_statistics_cool;
         } else if (card.attribute == "Cool" && !idlz) {
-          stat = card.non_idolized_maximum_statistics_cool;
+            stat = card.non_idolized_maximum_statistics_cool;
         }
 
         if (idlz && card.rarity == "UR") return stat + 1000;
-        else if ((!idlz && card.rarity == "UR") ||(idlz && card.rarity == "SR"))
-          return stat + 500;
+        else if ((!idlz && card.rarity == "UR") || (idlz && card.rarity == "SR"))
+            return stat + 500;
         else if (!idlz && card.rarity == "SR") return stat + 250;
         else if (idlz && card.rarity == "SSR") return stat + 750;
         else if (!idlz && card.rarity == "SSR") return stat + 375;
@@ -165,6 +165,7 @@ app.factory('Cards', function($rootScope, $http) {
         var skill;
         var activations = 0;
         var score_up = 0;
+        var stat = 0;
         angular.forEach(cards, function(card) {
             // for each ~act_count~ ~act_type~, ~act_percent~ chance of ~act_val~
             // skill value = (# of activation times) * (chance of activation) * (activation value)
@@ -185,20 +186,31 @@ app.factory('Cards', function($rootScope, $http) {
                 card.oScore_idlz += card.skill.avg;
             } else if (card.skill.type == "Healer" && heel) {
                 // recalculate cScore and oScore
-                if (card.rarity == "SR") {
+                card.cScore_heel = card.cScore;
+                card.cScore_idlz_heel = card.cScore_idlz;
+                card.oScore_heel = card.oScore;
+                card.oScore_idlz_heel = card.oScore_idlz;
+
+                if (card.rarity == "SR" || card.rarity == "SSR") {
                     // c/oScore unidlz: 2 slots; cScore idlz: 3 slots
                     // can't equip heel: error
-                    card.cScore_heel = 0;
-                    card.cScore_idlz_heel = 0;
-                    card.oScore_heel = 0;
 
                     // oScore idlz: 4 slots
-                    card.oScore = card;
-
-                } else if (card.rarity == "SSR") {
+                    stat = stat_to_mod(card, true);
+                    card.oScore_idlz_heel = stat + stat * (1 + .09 + .06) + card.skill.avg * 270;
 
                 } else { // card.rarity == "UR"
+                    // unidlz
+                    stat = stat_to_mod(card, false)
+                    card.cScore_heel = stat + stat * (1 + .09 + .03) + card.skill.avg * 270
+                    // console.log(card.full_name + "'s cScore_heel = " + card.cScore_heel + " = " + stat + " + " + stat + " * (1 + .09 + .03) + " + card.skill.avg + "*270")
+                    card.oScore_heel = stat + stat * (1 + .09 + .06) + card.skill.avg * 270
+                    // console.log(card.full_name + "'s oScore_heel = " + card.oScore_heel + " = " + stat + " + " + stat + " * (1 + .09 + .06) + " + card.skill.avg + "*270")
 
+                    // idlz
+                    stat = stat_to_mod(card, true)
+                    card.cScore_idlz_heel = stat + stat * (1 + .09 + .03) + card.skill.avg * 270
+                    card.oScore_idlz_heel = stat + (stat + 200) * (1 + .09 + .06) + card.skill.avg * 270
                 }
 
             }
@@ -213,43 +225,32 @@ app.factory('Cards', function($rootScope, $http) {
 
         if (type == 'smile' && idlz) {
             sort.type = "idolized_maximum_statistics_smile";
-            sort.gen = "smile";
         } else if (type == 'smile' && !idlz) {
             sort.type = "non_idolized_maximum_statistics_smile";
-            sort.gen = "smile";
         } else if (type == 'pure' && idlz) {
             sort.type = "idolized_maximum_statistics_pure"
-            sort.gen = "pure";
         } else if (type == 'pure' && !idlz) {
             sort.type = "non_idolized_maximum_statistics_pure"
-            sort.gen = "pure";
         } else if (type == 'cool' && idlz) {
             sort.type = "idolized_maximum_statistics_cool"
-            sort.gen = "cool";
         } else if (type == 'cool' && !idlz) {
             sort.type = "non_idolized_maximum_statistics_cool"
-            sort.gen = "cool";
         } else {
 
-            sort.gen = "";
             sort.type = type;
 
             if (type == 'cScore') {
-                sort.gen = "cScore"
                 if (idlz) sort.type = "cScore_idlz";
                 else sort.type = "cScore";
             } else if (type == 'oScore') {
-                sort.gen = "oScore"
                 if (idlz) sort.type = "oScore_idlz";
                 else sort.type = "oScore";
 
             } else if (type == 'cScore_heel') {
-                sort.gen = "cScore_heel"
-                if (idlz) sort.type = "cScore_heel_idlz";
+                if (idlz) sort.type = "cScore_idlz_heel";
                 else sort.type = "cScore_heel";
             } else if (type == 'oScore_heel') {
-                sort.gen = "oScore_heel"
-                if (idlz) sort.type = "oScore_heel_idlz";
+                if (idlz) sort.type = "oScore_idlz_heel";
                 else sort.type = "oScore_heel";
 
             }
@@ -273,8 +274,7 @@ app.controller('TierCtrl', function($rootScope, $scope, Cards, localStorageServi
         if (!$scope.sort) {
             $scope.sort = {
                 type: 'cScore',
-                desc: true,
-                gen: "cScore"
+                desc: true
             }
         }
         $scope.search = localStorageService.get('search');
@@ -350,8 +350,7 @@ app.controller('TierCtrl', function($rootScope, $scope, Cards, localStorageServi
 
         $scope.sort = {
             type: 'cScore',
-            desc: false,
-            gen: "cScore"
+            desc: false
         }
         $scope.filterCards()
         $scope.sortBy('cScore');
@@ -361,31 +360,39 @@ app.controller('TierCtrl', function($rootScope, $scope, Cards, localStorageServi
     }
 
     $scope.sortBy = function(type) {
-        if ($scope.filters.heel && type.includes("skill")) {
-            type = type + "Heel";
-        }
+        if ($scope.filters.heel && type.includes("Score")) {
+            type = type + "_heel";
+        }        console.log($scope.sort)
+
         Cards.sortBy($scope.sort, $scope.filters.idlz, type)
+        console.log($scope.sort)
         localStorageService.set('sort', $scope.sort)
     }
 
     $scope.displayCScore = function(card) {
+        if (!$scope.filters.idlz) $scope.cScoreErr = card.cScore == card.cScore_heel;
+        else $scope.cScoreErr = card.cScore_idlz == card.cScore.heel;
+
         if ($scope.filters.idlz && $scope.filters.heel) {
-            return card.cScore_idlz_heel ? card.cScore_idlz_heel : 0;
+            return card.cScore_idlz_heel
         } else if ($scope.filters.idlz && !$scope.filters.heel) {
             return card.cScore_idlz
         } else if (!$scope.filters.idlz && $scope.filters.heel) {
-            return card.cScore_heel ? card.cScore_heel : 0;
+            return card.cScore_heel
         } else {
             return card.cScore
         }
     }
     $scope.displayOScore = function(card) {
+        if (!$scope.filters.idlz) $scope.oScoreErr = card.oScore == card.oScore_heel;
+        else $scope.oScoreErr = card.oScore_idlz == card.oScore.heel;
+
         if ($scope.filters.idlz && $scope.filters.heel) {
-            return card.oScore_idlz_heel ? card.oScore_idlz_heel : 0;
+            return card.oScore_idlz_heel
         } else if ($scope.filters.idlz && !$scope.filters.heel) {
             return card.oScore_idlz
         } else if (!$scope.filters.idlz && $scope.filters.heel) {
-            return card.oScore_heel ? card.oScore_heel : 0;
+            return card.oScore_heel
         } else {
             return card.oScore
         }

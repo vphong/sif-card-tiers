@@ -11,7 +11,7 @@
                 <label class="btn btn-danger btn-sm" ng-click="resetFilters()">Reset Filters</label>
             </div>
 
-            <div class="btn-group btn-group-justified" ng-if="filters.compare=='healers'" >
+            <div class="btn-group btn-group-justified" ng-if="filters.compare=='healers'">
                 <label class="btn btn-default btn-sm" ng-model="filters.heel" ng-click="toggleHeel()" uib-btn-checkbox>Heel?</label>
             </div>
 
@@ -119,48 +119,32 @@
                                 <i ng-show="!sort.desc && sort.type=='id'" class="fa fa-chevron-up"></i>
                             </th>
                             <th class="num-header" ng-click="sortBy('smile')">Smile
-                                <i ng-show="sort.desc && sort.gen=='smile'" class="fa fa-chevron-down"></i>
-                                <i ng-show="!sort.desc && sort.gen=='smile'" class="fa fa-chevron-up"></i>
+                                <i ng-show="sort.desc && sort.type.includes('smile')" class="fa fa-chevron-down"></i>
+                                <i ng-show="!sort.desc && sort.type.includes('smile')" class="fa fa-chevron-up"></i>
                             </th>
                             <th class="num-header" ng-click="sortBy('pure')">Pure
-                                <i ng-show="sort.desc && sort.gen=='pure'" class="fa fa-chevron-down"></i>
-                                <i ng-show="!sort.desc && sort.gen=='pure'" class="fa fa-chevron-up"></i>
+                                <i ng-show="sort.desc && sort.type.includes('pure')" class="fa fa-chevron-down"></i>
+                                <i ng-show="!sort.desc && sort.type.includes('pure')" class="fa fa-chevron-up"></i>
                             </th>
                             <th class="num-header" ng-click="sortBy('cool')">Cool
-                                <i ng-show="sort.desc && sort.gen=='cool'" class="fa fa-chevron-down"></i>
-                                <i ng-show="!sort.desc && sort.gen=='cool'" class="fa fa-chevron-up"></i>
+                                <i ng-show="sort.desc && sort.type.includes('cool')" class="fa fa-chevron-down"></i>
+                                <i ng-show="!sort.desc && sort.type.includes('cool')" class="fa fa-chevron-up"></i>
                             </th>
-                            <th class="num-header" style="min-width:80px" ng-click="sortBy('cScore')">C-Score
-                                <i ng-show="sort.desc && sort.gen=='cScore'" class="fa fa-chevron-down"></i>
-                                <i ng-show="!sort.desc && sort.gen=='cScore'" class="fa fa-chevron-up"></i>
+                            <th class="num-header" style="min-width:90px" ng-click="sortBy('cScore')">C-Score
+                                <i ng-show="sort.desc && sort.type.includes('cScore')" class="fa fa-chevron-down"></i>
+                                <i ng-show="!sort.desc && sort.type.includes('cScore')" class="fa fa-chevron-up"></i>
                             </th>
                             <th class="num-header" style="min-width:90px" ng-click="sortBy('oScore')">O-Score
-                                <i ng-show="sort.desc && sort.gen=='oScore'" class="fa fa-chevron-down"></i>
-                                <i ng-show="!sort.desc && sort.gen=='oScore'" class="fa fa-chevron-up"></i>
+                                <i ng-show="sort.desc && sort.type.includes('oScore')" class="fa fa-chevron-down"></i>
+                                <i ng-show="!sort.desc && sort.type.includes('oScore')" class="fa fa-chevron-up"></i>
                             </th>
                             <th class="num-header" style="min-width:100px" ng-click="sortBy('skill.avg')">Skill (Avg)
-                                <i ng-show="sort.desc && sort.type.includes('skill.avg')" class="fa fa-chevron-down"></i>
-                                <i ng-show="!sort.desc && sort.type.includes('skill.avg')" class="fa fa-chevron-up"></i>
+                                <i ng-show="sort.desc && sort.type=='skill.avg'" class="fa fa-chevron-down"></i>
+                                <i ng-show="!sort.desc && sort.type=='skill.avg'" class="fa fa-chevron-up"></i>
                             </th>
                             <th class="num-header" style="min-width:100px" ng-click="sortBy('skill.best')">Skill (Best)
                                 <i ng-show="sort.desc && sort.type=='skill.best'" class="fa fa-chevron-down"></i>
                                 <i ng-show="!sort.desc && sort.type=='skill.best'" class="fa fa-chevron-up"></i>
-                            </th>
-                            <th class="num-header" style="min-width:100px" ng-click="sortBy('skill.hl_heel')" ng-show="filters.compare=='healers'">
-                                <abbr title="Score Up">SU</abbr>
-                                w/ Heel
-                                <i ng-show="sort.desc && sort.type=='skill.hl_heel'" class="fa fa-chevron-down"></i>
-                                <i ng-show="!sort.desc && sort.type=='skill.hl_heel'" class="fa fa-chevron-up"></i>
-                            </th>
-                            <th class="num-header" style="min-width:130px" ng-click="sortBy('cScore_heel')" ng-show="filters.compare=='healers'">
-                                C-Score w/ Heel
-                                <i ng-show="sort.desc && sort.gen=='cScore_heel'" class="fa fa-chevron-down"></i>
-                                <i ng-show="!sort.desc && sort.gen=='cScore_heel'" class="fa fa-chevron-up"></i>
-                            </th>
-                            <th class="num-header score-header" style="min-width:130px" ng-click="sortBy('oScore_heel')" ng-show="filters.compare=='healers'">
-                                O-Score w/ Heel
-                                <i ng-show="sort.desc && sort.gen=='oScore_heel'" class="fa fa-chevron-down"></i>
-                                <i ng-show="!sort.desc && sort.gen=='oScore_heel'" class="fa fa-chevron-up"></i>
                             </th>
                         </tr>
                     </thead>
@@ -221,8 +205,16 @@
                             <td>{{filters.idlz ? card.idolized_maximum_statistics_smile : card.non_idolized_maximum_statistics_smile}}</td>
                             <td>{{filters.idlz ? card.idolized_maximum_statistics_pure : card.non_idolized_maximum_statistics_pure}}</td>
                             <td>{{filters.idlz ? card.idolized_maximum_statistics_cool : card.non_idolized_maximum_statistics_cool}}</td>
-                            <td>{{displayCScore(card) | number:2}}</td>
-                            <td>{{displayOScore(card) | number:2}}</td>
+                            <td>
+                                <span uib-popover="Cannot equip Heel to a card with >4 SIS Slots. Displaying C-Score w/ default optimized SIS." popover-trigger="'mouseenter'" popover-enable="filters.heel && cScoreErr">
+                                    <i ng-if="filters.heel && cScoreErr" class="fa fa-warning text-danger"></i>
+                                    {{displayCScore(card) | number:2}}</span>
+                            </td>
+                            <td>
+                                <span uib-popover="Cannot equip Heel to a card with >4 SIS Slots. Displaying O-Score w/ default optimized SIS." popover-trigger="'mouseenter'" popover-enable="filters.heel && oScoreErr">
+                                    <i ng-if="filters.heel && oScoreErr" class="fa fa-warning text-danger"></i>
+                                    {{displayOScore(card) | number:2}}</span>
+                            </td>
                             <td>{{filters.heel ? (card.skill.avg * 270) : card.skill.avg |number:2}}</td>
                             <td>{{filters.heel ? (card.skill.best * 270) : card.skill.best |number:2}}</td>
                             <td ng-show="filters.compare=='healers'">
