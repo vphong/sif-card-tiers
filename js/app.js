@@ -137,33 +137,31 @@ app.factory('Cards', function($rootScope, $http) {
 
     var skill;
     var activations = 0;
-    ret.calcSkill = function(cards, song) {
+    var score_up = 0;
+    ret.calcSkill = function(cards, song, heel) {
         angular.forEach(cards, function(card) {
-            skill = card.skill;
             // for each ~act_count~ ~act_type~, ~act_percent~ chance of ~act_val~
             // skill value = (# of activation times) * (chance of activation) * (activation value)
-            if (skill.activation_type == "perfects") {
-                activations = Math.floor(song.notes * song.perfects / skill.activation_count)
-            } else if (skill.activation_type == "seconds") {
-                activations = Math.floor(song.seconds / skill.activation_count)
+            if (card.skill.activation_type == "perfects") {
+                activations = Math.floor(song.notes * song.perfects / card.skill.activation_count)
+            } else if (card.skill.activation_type == "seconds") {
+                activations = Math.floor(song.seconds / card.skill.activation_count)
             } else { // notes or combo string
-                activations = Math.floor(song.notes / skill.activation_count)
+                activations = Math.floor(song.notes / card.skill.activation_count)
             }
-            card.skill.avg = activations * skill.activation_percent * skill.activation_value
-            card.skill.best = activations * skill.activation_value
+            card.skill.avg = activations * card.skill.activation_percent * card.skill.activation_value
+            card.skill.best = activations * card.skill.activation_value
 
-            if (skill.type == "Score Up") {
-                card.cScore += card.skill.avg;
-                card.oScore += card.skill.avg;
+            if (card.skill.type == "Score Up") {
+                score_up = card.skill.avg;
+            } else if (card.skill.type == "Healer" && heel) {
+                score_up = card.skill.avg * 270;
             }
 
-            if (skill.type == "Healer") {
-                card.skill.avgHeel = card.skill.avg * 270;
-                card.skill.bestHeel = card.skill.best * 270;
-
-                card.cScore += card.skill.avgHeel;
-                card.oScore += card.skill.avgHeel;
-            }
+            card.cScore += score_up;
+            card.cScore_idlz += score_up;
+            card.oScore += score_up;
+            card.oScore_idlz += score_up;
         });
     }
 
@@ -243,11 +241,16 @@ app.controller('TierCtrl', function($rootScope, $scope, Cards, localStorageServi
 
         $scope.song = localStorageService.get('song');
         if (!$scope.song) $scope.song = angular.copy($rootScope.Song);
-        Cards.calcSkill($scope.cards, $scope.song);
+        Cards.calcSkill($scope.cards, $scope.song, $scope.filters.heel);
 
 
     }
     init();
+
+    $scope.toggleHeel = function() {
+        Cards.calcSkill($scope.cards, $scope.song, $scope.filters.heel)
+
+    }
 
     $scope.updateSearch = function() {
         localStorageService.set('search', $scope.search);
@@ -255,7 +258,7 @@ app.controller('TierCtrl', function($rootScope, $scope, Cards, localStorageServi
 
     $scope.updateSong = function() {
         localStorageService.set('song', $scope.song);
-        Cards.calcSkill($scope.cards, $scope.song)
+        Cards.calcSkill($scope.cards, $scope.song, $scope.filters.heel)
     }
 
     $scope.err = {};
@@ -264,7 +267,7 @@ app.controller('TierCtrl', function($rootScope, $scope, Cards, localStorageServi
     $scope.err.main = !$scope.filters.muse && !$scope.filters.aqours;
     $scope.filterCards = function() {
         $scope.cards = Cards.filterCards($scope.filters, $rootScope.Cards);
-        Cards.calcSkill($scope.cards, $scope.song)
+        Cards.calcSkill($scope.cards, $scope.song, $scope.filters.heel)
             // localStorageService.set('cards', $scope.cards);
 
         $scope.err.rarity = !$scope.filters.sr && !$scope.filters.ssr && !$scope.filters.ur;
@@ -292,6 +295,7 @@ app.controller('TierCtrl', function($rootScope, $scope, Cards, localStorageServi
 
     $scope.$watch('filters.compare', function(n, o) {
         if (n != o) {
+            if ($scope.filters.compare != "healers") $scope.filters.heel = false;
             $scope.sort.type = 'cScore';
             $scope.sort.gen = "cScore";
             localStorageService.set('sort', $scope.sort)
@@ -316,7 +320,9 @@ app.controller('TierCtrl', function($rootScope, $scope, Cards, localStorageServi
     }
 
     $scope.sortBy = function(type) {
-        if ($scope.filters.heel) type = type + "Heel";
+        if ($scope.filters.heel && type.includes("skill")) {
+            type = type + "Heel";
+        }
         Cards.sortBy($scope.sort, $scope.filters.idlz, type)
         localStorageService.set('sort', $scope.sort)
     }
