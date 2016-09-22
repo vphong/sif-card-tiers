@@ -135,10 +135,36 @@ app.factory('Cards', function($rootScope, $http) {
         return newCards;
     }
 
-    var skill;
-    var activations = 0;
-    var score_up = 0;
+
+    var stat_to_mod = function(card, idlz) {
+        var stat = 0;
+        if (card.attribute == "Smile" && idlz) {
+            stat = card.idolized_maximum_statistics_smile;
+        } else if (card.attribute == "Smile" && !idlz) {
+          stat = card.non_idolized_maximum_statistics_smile;
+        } else if (card.attribute == "Pure" && idlz) {
+          stat = card.idolized_maximum_statistics_pure;
+        } else if (card.attribute == "Pure" && !idlz) {
+          stat = card.non_idolized_maximum_statistics_pure;
+        } else if (card.attribute == "Cool" && idlz) {
+          stat = card.idolized_maximum_statistics_cool;
+        } else if (card.attribute == "Cool" && !idlz) {
+          stat = card.non_idolized_maximum_statistics_cool;
+        }
+
+        if (idlz && card.rarity == "UR") return stat + 1000;
+        else if ((!idlz && card.rarity == "UR") ||(idlz && card.rarity == "SR"))
+          return stat + 500;
+        else if (!idlz && card.rarity == "SR") return stat + 250;
+        else if (idlz && card.rarity == "SSR") return stat + 750;
+        else if (!idlz && card.rarity == "SSR") return stat + 375;
+        else return 0;
+
+    }
     ret.calcSkill = function(cards, song, heel) {
+        var skill;
+        var activations = 0;
+        var score_up = 0;
         angular.forEach(cards, function(card) {
             // for each ~act_count~ ~act_type~, ~act_percent~ chance of ~act_val~
             // skill value = (# of activation times) * (chance of activation) * (activation value)
@@ -153,15 +179,30 @@ app.factory('Cards', function($rootScope, $http) {
             card.skill.best = activations * card.skill.activation_value
 
             if (card.skill.type == "Score Up") {
-                score_up = card.skill.avg;
+                card.cScore += card.skill.avg;
+                card.cScore_idlz += card.skill.avg;
+                card.oScore += card.skill.avg;
+                card.oScore_idlz += card.skill.avg;
             } else if (card.skill.type == "Healer" && heel) {
-                score_up = card.skill.avg * 270;
+                // recalculate cScore and oScore
+                if (card.rarity == "SR") {
+                    // c/oScore unidlz: 2 slots; cScore idlz: 3 slots
+                    // can't equip heel: error
+                    card.cScore_heel = 0;
+                    card.cScore_idlz_heel = 0;
+                    card.oScore_heel = 0;
+
+                    // oScore idlz: 4 slots
+                    card.oScore = card;
+
+                } else if (card.rarity == "SSR") {
+
+                } else { // card.rarity == "UR"
+
+                }
+
             }
 
-            card.cScore += score_up;
-            card.cScore_idlz += score_up;
-            card.oScore += score_up;
-            card.oScore_idlz += score_up;
         });
     }
 
@@ -325,6 +366,29 @@ app.controller('TierCtrl', function($rootScope, $scope, Cards, localStorageServi
         }
         Cards.sortBy($scope.sort, $scope.filters.idlz, type)
         localStorageService.set('sort', $scope.sort)
+    }
+
+    $scope.displayCScore = function(card) {
+        if ($scope.filters.idlz && $scope.filters.heel) {
+            return card.cScore_idlz_heel ? card.cScore_idlz_heel : 0;
+        } else if ($scope.filters.idlz && !$scope.filters.heel) {
+            return card.cScore_idlz
+        } else if (!$scope.filters.idlz && $scope.filters.heel) {
+            return card.cScore_heel ? card.cScore_heel : 0;
+        } else {
+            return card.cScore
+        }
+    }
+    $scope.displayOScore = function(card) {
+        if ($scope.filters.idlz && $scope.filters.heel) {
+            return card.oScore_idlz_heel ? card.oScore_idlz_heel : 0;
+        } else if ($scope.filters.idlz && !$scope.filters.heel) {
+            return card.oScore_idlz
+        } else if (!$scope.filters.idlz && $scope.filters.heel) {
+            return card.oScore_heel ? card.oScore_heel : 0;
+        } else {
+            return card.oScore
+        }
     }
 
 });

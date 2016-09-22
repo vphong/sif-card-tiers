@@ -12,7 +12,7 @@
             </div>
 
             <div class="btn-group btn-group-justified" ng-if="filters.compare=='healers'" >
-                <label class="btn btn-default btn-sm" ng-model="filters.heel" ng-click="setLocalStorageFilters()" uib-btn-checkbox>Heel?</label>
+                <label class="btn btn-default btn-sm" ng-model="filters.heel" ng-click="toggleHeel()" uib-btn-checkbox>Heel?</label>
             </div>
 
             <div class="btn-group-vertical col-xs-12">
@@ -221,8 +221,8 @@
                             <td>{{filters.idlz ? card.idolized_maximum_statistics_smile : card.non_idolized_maximum_statistics_smile}}</td>
                             <td>{{filters.idlz ? card.idolized_maximum_statistics_pure : card.non_idolized_maximum_statistics_pure}}</td>
                             <td>{{filters.idlz ? card.idolized_maximum_statistics_cool : card.non_idolized_maximum_statistics_cool}}</td>
-                            <td>{{filters.idlz ? card.cScore_idlz : card.cScore | number:2}}</td>
-                            <td>{{filters.idlz ? card.oScore_idlz : card.oScore | number:2}}</td>
+                            <td>{{displayCScore(card) | number:2}}</td>
+                            <td>{{displayOScore(card) | number:2}}</td>
                             <td>{{filters.heel ? (card.skill.avg * 270) : card.skill.avg |number:2}}</td>
                             <td>{{filters.heel ? (card.skill.best * 270) : card.skill.best |number:2}}</td>
                             <td ng-show="filters.compare=='healers'">
