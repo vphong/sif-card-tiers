@@ -122,9 +122,9 @@ app.factory('Cards', function($rootScope, $http) {
                 ((filters.premium && !card.event && !card.is_promo) ||
                     filters.event && card.event || filters.promo && card.is_promo) &&
 
-                (filters.compare == "scorers" && card.skill.type == "Score Up" ||
-                    filters.compare == "perfect locks" && card.skill.type == "Perfect Lock" ||
-                    filters.compare == "healers" && card.skill.type == "Healer") &&
+                (filters.su && card.skill.type == "Score Up" ||
+                    filters.pl && card.skill.type == "Perfect Lock" ||
+                    filters.hl && card.skill.type == "Healer") &&
 
                 (filters.muse && card.main_unit == "Muse" ||
                     filters.aqours && card.main_unit == "Aqours")

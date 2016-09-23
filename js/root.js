@@ -8,7 +8,8 @@ app.constant('Typeahead', [
     "lily white", "Printemps", "BiBi",
     "AZALEA", "CYaRon!", "Guilty Kiss",
     "Pure", "Cool", "Smile", "Muse", "Aqours",
-    "Score Up", "Perfect Lock", "Healer"
+    "Score Up", "Perfect Lock", "Healer",
+    // "First year", "Second year", "Third year"
 ]);
 
 app.constant('InitFilters', {
@@ -24,9 +25,11 @@ app.constant('InitFilters', {
     pl: true,
     hl: true,
     muse: true,
-    aqours: false,
+    aqours: true,
     idlz: false,
-    compare: "scorers"
+    su: true,
+    pl: true,
+    hl: true,
 })
 app.constant('InitSong', {
   notes: 550,
