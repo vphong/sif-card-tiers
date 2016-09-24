@@ -8,7 +8,8 @@ app.constant('Typeahead', [
     "lily white", "Printemps", "BiBi",
     "AZALEA", "CYaRon!", "Guilty Kiss",
     "Pure", "Cool", "Smile", "Muse", "Aqours",
-    "Score Up", "Perfect Lock", "Healer"
+    "Score Up", "Perfect Lock", "Healer",
+    // "First year", "Second year", "Third year"
 ]);
 
 app.constant('InitFilters', {
@@ -24,13 +25,22 @@ app.constant('InitFilters', {
     pl: true,
     hl: true,
     muse: true,
-    aqours: false,
+    aqours: true,
     idlz: false,
-    compare: "scorers"
+    su: true,
+    pl: true,
+    hl: true,
 })
-app.run(function($rootScope, Typeahead, InitFilters, CardData, SongData) {
+app.constant('InitSong', {
+  notes: 550,
+  seconds: 125,
+  perfects: .85
+})
+app.run(function($rootScope, Typeahead, InitFilters, InitSong, CardData, SongData) {
     $rootScope.Typeahead = angular.copy(Typeahead);
     $rootScope.InitFilters = angular.copy(InitFilters);
     $rootScope.Cards = angular.copy(CardData);
-    $rootScope.Songs = angular.copy(SongData);
+    $rootScope.Song = angular.copy(InitSong);
+
+
 });

@@ -2,6 +2,7 @@ import urllib.request
 import json
 import os
 import logging
+import math
 
 logging.basicConfig(level=logging.INFO)
 
@@ -115,44 +116,46 @@ def skillDetails(card):
                 #   ("...there is a ##% chance of...")
                 skillNums['activation_percent'] = float(word.strip("%")) / 100
 
+    card['skill'].update(skillNums)
+    # static skill contribution calculation
     # theoretical 550 note, 125 second song with 85% greats and 65 star notes
-    timeActivation = (125 / skillNums['activation_count']) * skillNums[
-        'activation_percent'] * skillNums['activation_value']
-
-    card['skill']['su'] = 0
-    card['skill']['pl'] = 0
-    card['skill']['hl'] = 0
-    card['skill']['hl_heel'] = 0
-
-    logging.info("skillDetails(): calculating skill contribution...")
-    if card['skill']['type'] == "Score Up":
-
-        if skillNums['activation_type'] == "perfects":
-            card['skill']['su'] = (550 * .85 / skillNums['activation_count']) * skillNums[
-                'activation_percent'] * skillNums['activation_value']
-        elif skillNums['activation_type'] == "seconds":
-            card['skill']['su'] = timeActivation
-        else:  # notes or combo string
-            card['skill']['su'] = (550 / skillNums['activation_count']) * \
-                skillNums['activation_percent'] * skillNums['activation_value']
-
-    elif card['skill']['type'] == "Perfect Lock":
-
-        if (skillNums['activation_type']) == "seconds":
-            card['skill']['pl'] = timeActivation
-        else:  # notes or combo
-            card['skill']['pl'] = (550 / skillNums['activation_count']) * \
-                skillNums['activation_percent'] * skillNums['activation_value']
-
-    elif card['skill']['type'] == "Healer":
-
-        if (skillNums['activation_type']) == "seconds":
-            card['skill']['hl'] = timeActivation
-        else:  # notes or combo
-            card['skill']['hl'] = (550 / skillNums['activation_count']) * \
-                skillNums['activation_percent'] * skillNums['activation_value']
-
-        card['skill']['hl_heel'] = card['skill']['hl'] * 270
+    # timeActivation = (125 / skillNums['activation_count']) * skillNums[
+    #     'activation_percent'] * skillNums['activation_value']
+    #
+    # card['skill']['su'] = 0
+    # card['skill']['pl'] = 0
+    # card['skill']['hl'] = 0
+    # card['skill']['hl_heel'] = 0
+    #
+    # logging.info("skillDetails(): calculating skill contribution...")
+    # if card['skill']['type'] == "Score Up":
+    #
+    #     if skillNums['activation_type'] == "perfects":
+    #         card['skill']['su'] = (550 * .85 / skillNums['activation_count']) * skillNums[
+    #             'activation_percent'] * skillNums['activation_value']
+    #     elif skillNums['activation_type'] == "seconds":
+    #         card['skill']['su'] = timeActivation
+    #     else:  # notes or combo string
+    #         card['skill']['su'] = (550 / skillNums['activation_count']) * \
+    #             skillNums['activation_percent'] * skillNums['activation_value']
+    #
+    # elif card['skill']['type'] == "Perfect Lock":
+    #
+    #     if (skillNums['activation_type']) == "seconds":
+    #         card['skill']['pl'] = timeActivation
+    #     else:  # notes or combo
+    #         card['skill']['pl'] = (550 / skillNums['activation_count']) * \
+    #             skillNums['activation_percent'] * skillNums['activation_value']
+    #
+    # elif card['skill']['type'] == "Healer":
+    #
+    #     if (skillNums['activation_type']) == "seconds":
+    #         card['skill']['hl'] = timeActivation
+    #     else:  # notes or combo
+    #         card['skill']['hl'] = (550 / skillNums['activation_count']) * \
+    #             skillNums['activation_percent'] * skillNums['activation_value']
+    #
+    #     card['skill']['hl_heel'] = card['skill']['hl'] * 270
 
     logging.info("skillDetails(): done")
 
@@ -187,222 +190,257 @@ def stat_to_mod(card, idlz):
 
     return stat
 
-# function: calculate cScore
-# input: dict card
+def rawScoringFormula(stat,kiss,ring,perfume,cross):
+    return (stat + kiss*200 + perfume*450 + math.ceil(stat*ring*0.1) + math.ceil(stat*cross*0.16))
 
-
-def cScore(card):
-    # init
+def score(card,scoreType):
+    ## init
     unidlz_stat = stat_to_mod(card, False)
     idlz_stat = stat_to_mod(card, True)
-    card['cScore_heel'] = 0
-    card['cScore_heel_idlz'] = 0
 
-    # logging.critical("raw idlz = %d", idlz_stat)
-    # unidlz: 2/3/4
-    # idlz: 3/4/5
+    # sis
+    kiss = 0 # +200
+    perfume = 0 # 450
+    ring = 0 # x0.10
+    cross = 0 # x0.16
 
-    if card['rarity'] == "SR":
-        # unidolized SR: 2 skill slots
-        # http://i.imgur.com/nsKMdvY.png
-        if unidlz_stat < 4500:  # perfume
+    # leader bonuses
+    cLead = (1.0+.09+.03)*(1.0+.09+.03)
+    oLead = (1.0+.09+.06)*(1.0+.09+.06)
 
-            sis_unidlz_stat = unidlz_stat + 450
-        else:  # ring
-            sis_unidlz_stat = unidlz_stat * 1.1
+    if card['is_promo']:
 
-        # idolzed SR: 3 skill slots
-        # http://i.imgur.com/YQyqNhs.png
-        if idlz_stat < 4100:  # kiss + perfume
-            sis_idlz_stat = idlz_stat * 1.1 + 450
+        if card['rarity'] == "SR":
+            # 1 slot
+            card['cScore'] = card['cScore_heel'] = card['cScore_heel_idlz'] = card['cScore_idlz'] = (idlz_stat + kiss)*cLead
 
-        else:  # cross
-            sis_idlz_stat = idlz_stat * 1.16
+            card['oScore'] = card['oScore_heel'] = card['oScore_heel_idlz'] = card['oScore_idlz'] = (idlz_stat + kiss)*oLead
 
-    elif card['rarity'] == "SSR":
-        # unidolzed SSR: 3 skill slots
-        # http://i.imgur.com/YQyqNhs.png
-        if unidlz_stat < 4100:
-             # kiss + perfume
-            sis_unidlz_stat = unidlz_stat * 1.1 + 450
+        elif card['rarity'] == "UR":
+            # 2 slots
+            if idlz_stat < 4500:
+                card['cScore'] = card['cScore_heel'] = card['cScore_heel_idlz'] = card['cScore_idlz'] = (idlz_stat + perfume)*cLead
 
-        else:  # cross
-            sis_unidlz_stat = unidlz_stat * 1.16
+                card['oScore'] = card['oScore_heel'] = card['oScore_heel_idlz'] =  card['oScore_idlz'] = (idlz_stat + perfume)*oLead
 
-        # idolized SSR: 3 skill slots
-        # calc heel (4 slots) cScore before modding stat
-        if card['skill']['type'] == "Healer":
-            card['cScore_heel_idlz'] = idlz_stat + idlz_stat * \
-                (1 + .09 + .03) * 2 + card['skill']['hl_heel']
-        if idlz_stat < 4100:
-            # kiss + perfume
-            sis_idlz_stat = idlz_stat * 1.1 + 450
-        else: # cross
-            sis_idlz_stat = idlz_stat * 1.16
+            else:
+                card['cScore'] = card['cScore_heel'] = card['cScore_heel_idlz'] = card['cScore_idlz'] = (idlz_stat + math.ceil(idlz_stat*ring))*cLead
 
-    elif card['rarity'] == "UR":
-        # unidolized UR: 4 skill slots
-        # calc heel (4 slots) cScore before modding stat
-        if card['skill']['type'] == "Healer":
-            card['cScore_heel'] = unidlz_stat + unidlz_stat * \
-                (1 + .09 + .03) * 2 + card['skill']['hl_heel']
-        if unidlz_stat < 2000:
-            # kiss + perfume
-            sis_unidlz_stat = unidlz_stat + 200 + 450
-
-        elif unidlz_stat >= 2000 and unidlz_stat < 4200:
-            # perfume + ring
-            sis_unidlz_stat = unidlz_stat * 1.1 + 450
-        else:
-            # kiss + cross
-            sis_unidlz_stat = unidlz_stat * 1.16 + 200
-
-        # idolized UR: 4 skill slots
-        # calc heel cScore before modding stat
-        # heel (4) + kiss (1)
-        if card['skill']['type'] == "Healer":
-            card['cScore_heel_idlz'] = idlz_stat + \
-                (idlz_stat + 200) * (1 + .09 + .03) * \
-                2 + card['skill']['hl_heel']
-        if idlz_stat < 2000:
-            # kiss + perfume
-            sis_idlz_stat = idlz_stat + 200 + 450
-
-        elif idlz_stat >= 2000 and idlz_stat < 4200:
-            # perfume + ring
-            sis_idlz_stat = idlz_stat * 1.1 + 450
-        else:
-            # kiss + cross
-            sis_idlz_stat = idlz_stat * 1.16 + 200
-
-    # account for team leader multipliers
-    # on-attribute boost (9%), general main unit boost (3%), twice for player + guest
-    # finally, add Score Up from card skill
-    card['cScore'] = unidlz_stat + sis_unidlz_stat * \
-        (1 + .09 + .03) * 2 + card['skill']['su']
-
-    card['cScore_idlz'] = idlz_stat + sis_idlz_stat * \
-        (1 + .09 + .03) * 2 + card['skill']['su']
+                card['oScore'] = card['oScore_heel'] = card['oScore_heel_idlz'] = card['oScore_idlz'] = (idlz_stat + math.ceil(idlz_stat*ring))*oLead
 
 
-# function: calculate Optimal-Score (O-Score) of a card
-# "optimal:"
-#       - reasonably optimal number of skill slots
-#       - optimal skills equipped
-#       - center skills: +9% attribute boost, +6% subunit/year boost - x2 for team/guest
-#       -
+    else:
+        if scoreType == "c":
+            # unidlz: 2/3/4 slots
+            # idlz: 3/3/4 slots
+            if card['rarity'] == "SR":
+                # unidlz: 2 slots
+                if unidlz_stat < 4500:
+                    kiss = 0
+                    perfume = 1
+                    ring = 0
+                    cross = 0
+                else:
+                    kiss = 0
+                    perfume = 0
+                    ring = 1
+                    cross = 0
+
+                # idlz: 3 slots
+                if idlz_stat < 4100:
+                    kiss = 1
+                    perfume = 1
+                    ring = 0
+                    cross = 0
+                else:
+                    kiss = 0
+                    perfume = 0
+                    ring = 0
+                    cross = 1
+                card['cScore'] = card['cScore_heel'] = rawScoringFormula(unidlz_stat,kiss,perfume,ring,cross)*cLead
+                card['cScore_idlz'] = card['cScore_idlz_heel'] = rawScoringFormula(idlz_stat,kiss,perfume,ring,cross)*cLead
+
+            elif card['rarity'] == "SSR":
+                # unidlz: 3 slots
+                if unidlz_stat < 4100:
+                    kiss = 1
+                    perfume = 1
+                    ring = 0
+                    cross = 0
+                else:
+                    kiss = 0
+                    perfume = 0
+                    ring = 0
+                    cross = 1
+
+                # idlz: 3 slots
+                if idlz_stat < 4100:
+                    kiss = 1
+                    perfume = 1
+                    ring = 0
+                    cross = 0
+                else:
+                    kiss = 0
+                    perfume = 0
+                    ring = 0
+                    cross = 1
+                card['cScore'] = card['cScore_heel'] = rawScoringFormula(unidlz_stat,kiss,perfume,ring,cross)*cLead
+                card['cScore_idlz'] = card['cScore_idlz_heel'] = rawScoringFormula(idlz_stat,kiss,perfume,ring,cross)*cLead
+
+            else: # UR
+                # unidlz: 4 slots
+                if unidlz_stat < 2000:
+                    kiss = 2
+                    perfume = 1
+                    ring = 0
+                    cross = 0
+                elif unidlz_stat >= 2000 and unidlz_stat < 4200:
+                    kiss = 0
+                    perfume = 1
+                    ring = 1
+                    cross = 0
+                else:
+                    kiss = 1
+                    perfume = 0
+                    ring = 0
+                    cross = 1
+
+                # idlz: 4 slots
+                if idlz_stat < 2000:
+                    kiss = 2
+                    perfume = 1
+                    ring = 0
+                    cross = 0
+                elif idlz_stat >= 2000 and idlz_stat < 4200:
+                    kiss = 0
+                    perfume = 1
+                    ring = 1
+                    cross = 0
+                else:
+                    kiss = 1
+                    perfume = 0
+                    ring = 0
+                    cross = 1
+                card['cScore'] = rawScoringFormula(unidlz_stat,kiss,perfume,ring,cross)*cLead
+                card['cScore_idlz'] = rawScoringFormula(idlz_stat,kiss,perfume,ring,cross)*cLead
+
+                card['cScore_heel'] = rawScoringFormula(unidlz_stat,0,0,0,0)*cLead
+                card['cScore_idlz_heel'] = rawScoringFormula(idlz_stat,0,0,0,0)*cLead
 
 
-def oScore(card):
-    # init
-    unidlz_stat = stat_to_mod(card, False)
-    idlz_stat = stat_to_mod(card, True)
-    card['oScore_heel'] = 0
-    card['oScore_heel_idlz'] = 0
+        elif scoreType == "o":
+            # unidlz: 2/3/4 slots
+            # idlz: 4/4/5 slots
 
-    # unidlz: 2/3/4
-    # idlz: 4/4/5
+            if card['rarity'] == "SR":
+                # unidlz: 2 slots
+                if unidlz_stat < 4500:
+                    kiss = 0
+                    perfume = 1
+                    ring = 0
+                    cross = 0
+                else:
+                    kiss = 0
+                    perfume = 0
+                    ring = 1
+                    cross = 0
 
-    if card['rarity'] == "SR":
-            # unidolized SR: 2 skill slots
-            # http://i.imgur.com/nsKMdvY.png
-        if unidlz_stat < 4500:  # perfume
+                # idlz: 4 slots
+                if idlz_stat < 2000:
+                    kiss = 2
+                    perfume = 1
+                    ring = 0
+                    cross = 0
+                elif idlz_stat >= 2000 and idlz_stat < 4200:
+                    kiss = 0
+                    perfume = 1
+                    ring = 1
+                    cross = 0
+                else:
+                    kiss = 1
+                    perfume = 0
+                    ring = 0
+                    cross = 1
+                card['oScore'] = card['oScore_heel'] = rawScoringFormula(unidlz_stat,kiss,perfume,ring,cross)*oLead
+                card['oScore_idlz'] = rawScoringFormula(idlz_stat,kiss,perfume,ring,cross)*oLead
 
-            sis_unidlz_stat = unidlz_stat + 450
-        else:  # ring
-            sis_unidlz_stat = unidlz_stat * 1.1
+                card['oScore_idlz_heel'] = rawScoringFormula(idlz_stat,0,0,0,0)*oLead
 
-        # idolzed SR: 4 skill slots
-        # http://i.imgur.com/YQyqNhs.png
-        if card['skill']['type'] == "Healer":
-            card['oScore_heel_idlz'] = idlz_stat + idlz_stat * \
-                (1 + .09 + .06) * 2 + card['skill']['hl_heel']
+            elif card['rarity'] == "SSR":
+                # unidlz: 3 slots
+                if unidlz_stat < 4100:
+                    kiss = 1
+                    perfume = 1
+                    ring = 0
+                    cross = 0
+                else:
+                    kiss = 0
+                    perfume = 0
+                    ring = 0
+                    cross = 1
 
-        if idlz_stat < 4100:  # kiss + perfume
-            sis_idlz_stat = idlz_stat * 1.1 + 450
+                # idlz: 4 slots
+                if idlz_stat < 2000:
+                    kiss = 2
+                    perfume = 1
+                    ring = 0
+                    cross = 0
+                elif idlz_stat >= 2000 and idlz_stat < 4200:
+                    kiss = 0
+                    perfume = 1
+                    ring = 1
+                    cross = 0
+                else:
+                    kiss = 1
+                    perfume = 0
+                    ring = 0
+                    cross = 1
+                card['oScore'] = rawScoringFormula(unidlz_stat,kiss,perfume,ring,cross)*oLead
+                card['oScore_idlz'] = rawScoringFormula(idlz_stat,kiss,perfume,ring,cross)*oLead
+                card['oScore'] = card['oScore_heel'] = rawScoringFormula(unidlz_stat,kiss,perfume,ring,cross)*oLead
+                card['oScore_idlz'] = rawScoringFormula(idlz_stat,kiss,perfume,ring,cross)*oLead
 
-        else:  # cross
-            sis_idlz_stat = idlz_stat * 1.16
+                card['oScore_idlz_heel'] = rawScoringFormula(idlz_stat,0,0,0,0)*oLead
 
-        if card['is_promo']:
-            # 1 slot, kiss
-            sis_unidlz_stat = unidlz_stat + 200
-            sis_idlz_stat = idlz_stat + 200
+            else: # UR
+                # unidlz: 4 slots
+                if unidlz_stat < 2000:
+                    kiss = 2
+                    perfume = 1
+                    ring = 0
+                    cross = 0
+                elif unidlz_stat >= 2000 and unidlz_stat < 4200:
+                    kiss = 0
+                    perfume = 1
+                    ring = 1
+                    cross = 0
+                else:
+                    kiss = 1
+                    perfume = 0
+                    ring = 0
+                    cross = 1
 
-    elif card['rarity'] == "SSR":
-        # unidolzed SSR: 3 skill slots
-        # http://i.imgur.com/YQyqNhs.png
-        if unidlz_stat < 4100:  # kiss + perfume
-            sis_unidlz_stat = unidlz_stat * 1.1 + 450
+                # idlz: 5 slots
+                if idlz_stat < 3300:
+                    kiss = 1
+                    perfume = 1
+                    ring = 1
+                    cross = 0
+                elif idlz_stat >= 3300 and idlz_stat < 4500:
+                    kiss = 0
+                    perfume = 1
+                    ring = 0
+                    cross = 1
+                else:
+                    kiss = 0
+                    perfume = 0
+                    ring = 1
+                    cross = 1
+                card['oScore'] = rawScoringFormula(unidlz_stat,kiss,perfume,ring,cross)*oLead
+                card['oScore_idlz'] = rawScoringFormula(idlz_stat,kiss,perfume,ring,cross)*oLead
 
-        else:  # cross
-            sis_unidlz_stat = unidlz_stat * 1.16
-
-        # idolized SSR: 4 skill slots
-        # calc heel (4 slots) cScore before modding stat
-        if card['skill']['type'] == "Healer":
-            card['oScore_heel_idlz'] = idlz_stat + idlz_stat * \
-                (1 + .09 + .06) * 2 + card['skill']['hl_heel']
-
-        if idlz_stat < 2000:
-            # kiss + perfume
-            sis_idlz_stat = idlz_stat + 200 + 450
-
-        elif idlz_stat >= 2000 and idlz_stat < 4200:
-            # perfume + ring
-            sis_idlz_stat = idlz_stat * 1.1 + 450
-        else:
-            # kiss + cross
-            sis_idlz_stat = idlz_stat * 1.16 + 200
-
-    elif card['rarity'] == "UR":
-        # unidolized UR: 4 skill slots
-        # calc heel (4 slots) cScore before modding stat
-        if card['skill']['type'] == "Healer":
-            card['oScore_heel'] = unidlz_stat + unidlz_stat * \
-                (1 + .09 + .06) * 2 + card['skill']['hl_heel']
-        if unidlz_stat < 2000:
-            # kiss + perfume
-            sis_unidlz_stat = unidlz_stat + 200 + 450
-
-        elif unidlz_stat >= 2000 and unidlz_stat < 4200:
-            # perfume + ring
-            sis_unidlz_stat = unidlz_stat + unidlz_stat * 1.1 + 450
-        else:
-            # kiss + cross
-            sis_unidlz_stat = unidlz_stat * 1.16 + 200
-
-        # idolized UR: 5 skill slots
-        # calc heel cScore before modding stat
-        # heel (4) + kiss (1)
-        if card['skill']['type'] == "Healer":
-            card['oScore_heel_idlz'] = idlz_stat + \
-                (idlz_stat + 200) * (1 + .09 + .06) * \
-                2 + card['skill']['hl_heel']
-        if idlz_stat < 3400:
-            # kiss + perfume + ring
-            sis_idlz_stat = 200 + 450 + idlz_stat * 1.1
-
-        elif idlz_stat >= 3400 and idlz_stat < 4500:
-            # perfume + cross
-            sis_idlz_stat = 450 + idlz_stat * 1.16
-        else:
-            # ring + cross
-            sis_idlz_stat = idlz_stat * 1.26
-
-        # promo UR, 2 slots:
-        if card['is_promo']:
-            if unidlz_stat < 4500:  # perfume
-                sis_unidlz_stat = unidlz_stat + 450
-            else:  # ring
-                sis_unidlz_stat = unidlz_stat * 1.1
-
-    # account for team leader multipliers
-    # finally, add Score Up from card skill
-    card['oScore'] = unidlz_stat + sis_unidlz_stat * \
-        (1 + .09 + .06) * 2 + card['skill']['su']
-    card['oScore_idlz'] = idlz_stat + sis_idlz_stat * \
-        (1 + .09 + .06) * 2 + card['skill']['su']
+                card['oScore_heel'] = rawScoringFormula(unidlz_stat,0,0,0,0)*cLead
+                card['oScore_idlz_heel'] = rawScoringFormula(idlz_stat,1,0,0,0)*cLead
 
 
 def cleanCard(d, keys):
@@ -482,8 +520,8 @@ def cleanCard(d, keys):
 
     # stats/scores
     skillDetails(ret)
-    oScore(ret)
-    cScore(ret)
+    score(ret,"c")
+    score(ret,"o")
 
     # load links over https
     # ret['website_url'] = "https" + ret['website_url'][4:]

@@ -110,22 +110,10 @@ footer.well {
 }
 
 
-/*#filters-md-screens {
+#filters-md-screens {
   padding-right: 3%;
-}*/
-
-@media(min-width:992px) {
-    #search_table {
-        /*left: 20%;
-        position: absolute;*/
-    }
 }
 
-
-/*.col-xs-2 {
-    padding: 0px 10px;
-    margin-left: 0px;
-}*/
 
 .col-xs-2>.row>div.btn-group.btn-group-justified, .col-xs-2>.row>div>div.btn-group.btn-group-justified, .col-xs-2>.row>div.btn-group-vertical {
     margin-bottom: 10px;
@@ -212,4 +200,7 @@ footer.well {
 #accounts {
   width: 100%;
   position: relative;
+}
+.row>.div {
+  margin: 0
 }
