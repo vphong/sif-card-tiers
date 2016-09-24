@@ -324,7 +324,6 @@ app.controller('UserCtrl', function($rootScope, $scope, Cards, localStorageServi
             $scope.sort = {
                 type: 'cScore',
                 desc: true,
-                gen: "cScore"
             }
             localStorageService.set('sort', $scope.filters);
         }
@@ -335,6 +334,11 @@ app.controller('UserCtrl', function($rootScope, $scope, Cards, localStorageServi
         } else {
             // $scope.userCards = [];
         }
+
+
+        $scope.userSong = localStorageService.get('userSong');
+        if (!$scope.userSong) $scope.userSong = angular.copy($rootScope.Song);
+
         $scope.userCards = localStorageService.get('userCards');
         if (!$scope.userCards) $scope.userCards = [];
 
@@ -353,25 +357,16 @@ app.controller('UserCtrl', function($rootScope, $scope, Cards, localStorageServi
         localStorageService.set('userSearch', $scope.userSearch);
     }
 
+    $scope.updateSong = function() {
+      localStorageService.set('userSong', $scope.userSong);
+    }
+
     // get accounts from sit username
     var accUrlBase = "https://schoolido.lu/api/accounts/?owner__username=";
     $scope.updateUser = function() {
         $scope.sit.accountsUrl = accUrlBase + $scope.sit.user;
         localStorageService.set('sit', $scope.sit);
         $scope.sit.accErr = false;
-        // if ($scope.sit.user == '') {
-        // $scope.sit.accounts =
-        // $scope.sit.accounts = [{
-        //     "name": "No accounts found",
-        //     "id": ""
-        // }];
-        // }
-        // $scope.userCards = [];
-        // $scope.rawUserCards = [];
-        // localStorageService.set('userCards', $scope.userCards)
-        // localStorageService.set('rawUserCards', $scope.rawUserCards)
-
-
     }
     $scope.updateUser();
 
@@ -485,36 +480,6 @@ app.controller('UserCtrl', function($rootScope, $scope, Cards, localStorageServi
             })
         }
 
-        // // grab rawUserCard idolized status
-        // angular.forEach($scope.rawUserCardsData, function(rawCardData) {
-        //
-        //     if (rawCardData.user_idlz) {
-        //         // set smile, pure, cool stats to idolized stats
-        //         rawCardData.max_smile = rawCardData.idolized_maximum_statistics_smile;
-        //         rawCardData.max_pure = rawCardData.idolized_maximum_statistics_pure;
-        //         rawCardData.max_cool = rawCardData.idolized_maximum_statistics_cool;
-        //
-        //         // set c/o score to idlz score
-        //         rawCardData.cScore = rawCardData.cScore_idlz;
-        //         rawCardData.cScore_heel = rawCardData.cScore_heel_idlz;
-        //         rawCardData.oScore = rawCardData.oScore_idlz;
-        //         rawCardData.oScore_heel = rawCardData.oScore_heel_idlz;
-        //
-        //     } else {
-        //         // set smile, pure, cool stats to idolized stats
-        //         rawCardData.max_smile = rawCardData.non_idolized_maximum_statistics_smile;
-        //         rawCardData.max_pure = rawCardData.non_idolized_maximum_statistics_pure;
-        //         rawCardData.max_cool = rawCardData.non_idolized_maximum_statistics_cool;
-        //
-        //         // set c/o score to idlz score
-        //         rawCardData.cScore = rawCardData.cScore;
-        //         rawCardData.cScore_heel = rawCardData.cScore_heel;
-        //         rawCardData.oScore = rawCardData.oScore;
-        //         rawCardData.oScore_heel = rawCardData.oScore_heel;
-        //     }
-        //
-        // });
-
         if (nextUrl) Cards.getUrl(nextUrl).then(getCardsSuccess);
         localStorageService.set('rawUserCardsData', $scope.rawUserCardsData);
 
@@ -584,7 +549,6 @@ app.controller('UserCtrl', function($rootScope, $scope, Cards, localStorageServi
     $scope.$watch('userFilters.compare', function(n, o) {
         if (n != o) {
             $scope.sort.type = 'cScore';
-            $scope.sort.gen = "cScore";
             localStorageService.set('sort', $scope.sort)
         }
     })

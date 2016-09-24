@@ -85,7 +85,7 @@
                     <span class="input-group-addon" style="cursor: pointer" popover-append-to-body="true" popover-placement="top" uib-popover="Number of notes in song for skill evaluation">
                         <i class="fa fa-music"></i>
                     </span>
-                    <input type="number" class="form-control" ng-model="song.notes" ng-change="updateSearch()" placeholder="length of song (notes)">
+                    <input type="number" class="form-control" ng-model="song.notes" ng-change="updateSong()" placeholder="length of song (notes)">
                 </div>
             </div>
             <div class="col-xs-2 no-padding" style="padding-left: 3px">
@@ -93,7 +93,7 @@
                     <span class="input-group-addon" style="cursor: pointer" popover-append-to-body="true" popover-placement="top-right" uib-popover="Number of seconds in song for skill evaluation">
                         <i class="fa fa-clock-o"></i>
                     </span>
-                    <input type="number" class="form-control" ng-model="song.seconds" ng-change="updateSearch()" placeholder="length of song (seconds)">
+                    <input type="number" class="form-control" ng-model="song.seconds" ng-change="updateSong()" placeholder="length of song (seconds)">
                 </div>
             </div>
             <div class="col-xs-2 no-padding" style="padding-left: 3px">
@@ -101,7 +101,7 @@
                     <span class="input-group-addon" style="cursor: pointer" popover-append-to-body="true" popover-placement="top-right" uib-popover="Percent of perfects per song for skill evaluation">
                         <i class="fa fa-clock-o"></i>
                     </span>
-                    <input type="number" class="form-control" ng-model="song.perfects" ng-change="updateSearch()" placeholder="percentage of perfects">
+                    <input type="number" class="form-control" ng-model="song.perfects" ng-change="updateSong()" placeholder="percentage of perfects">
                 </div>
             </div>
         </div>

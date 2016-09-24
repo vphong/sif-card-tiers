@@ -2,9 +2,9 @@
     <div class="col-xs-2" id="filters-md-screens">
         <div class="row">
             <div class="btn-group-vertical col-xs-12" uib-tooltip="Skill" tooltip-placement="top">
-                <label class="btn btn-success btn-sm" ng-model="userFilters.compare" ng-click="filterCards()" uib-btn-radio="'scorers'">Score Up</label>
-                <label class="btn btn-success btn-sm" ng-model="userFilters.compare" ng-click="filterCards()" uib-btn-radio="'perfect locks'">Perfect Lock</label>
-                <label class="btn btn-success btn-sm" ng-model="userFilters.compare" ng-click="filterCards()" uib-btn-radio="'healers'">Healer</label>
+                <label class="btn btn-success btn-sm" ng-model="filters.su" ng-click="filterCards()" uib-btn-checkbox>Score Up</label>
+                <label class="btn btn-success btn-sm" ng-model="filters.pl" ng-click="filterCards()" uib-btn-checkbox>Perfect Lock</label>
+                <label class="btn btn-success btn-sm" ng-model="filters.hl" ng-click="filterCards()" uib-btn-checkbox>Healer</label>
             </div>
 
             <div class="btn-group btn-group-justified">
@@ -81,16 +81,44 @@
             </div>
 
             <div class="col-xs-12">
+        <div id="search" class="row">
+
+            <div class="col-xs-6 no-padding">
                 <div class="input-group input-group-sm">
-                    <span class="input-group-addon">
+                    <span class="input-group-addon" style="cursor: pointer" popover-append-to-body="true" popover-placement="top-left" uib-popover="Terms include: girl, attribute, skill type, main unit, subunit, and English schoolido.lu set name.">
                         <i class="fa fa-search"></i>
                     </span>
-                    <input type="text" class="form-control" ng-model="userSearch" ng-change="updateSearch()" placeholder="search by card" uib-typeahead="type for type in $root.Typeahead | filter:$viewValue | limitTo:8">
-                    <span class="input-group-addon" style="cursor: pointer" popover-append-to-body="true" popover-placement="top-right" uib-popover="Terms include: girl, attribute, skill type, main unit, subunit, and English schoolido.lu set name.">
-                        <i class="fa fa-info"></i>
-                    </span>
-
+                    <input type="text" class="form-control" ng-model="search" ng-change="updateSearch()" placeholder="search by card" uib-typeahead="type for type in $root.Typeahead | filter:$viewValue | limitTo:8">
                 </div>
+            </div>
+
+            <div class="col-xs-2 no-padding" style="padding-left: 3px">
+                <div class="input-group input-group-sm">
+                    <span class="input-group-addon" style="cursor: pointer" popover-append-to-body="true" popover-placement="top" uib-popover="Number of notes in song for skill evaluation">
+                        <i class="fa fa-music"></i>
+                    </span>
+                    <input type="number" class="form-control" ng-model="userSong.notes" placeholder="length of song (notes)">
+                </div>
+            </div>
+            <div class="col-xs-2 no-padding" style="padding-left: 3px">
+                <div class="input-group input-group-sm">
+                    <span class="input-group-addon" style="cursor: pointer" popover-append-to-body="true" popover-placement="top-right" uib-popover="Number of seconds in song for skill evaluation">
+                        <i class="fa fa-clock-o"></i>
+                    </span>
+                    <input type="number" class="form-control" ng-model="userSong.seconds" placeholder="length of song (seconds)">
+                </div>
+            </div>
+            <div class="col-xs-2 no-padding" style="padding-left: 3px">
+                <div class="input-group input-group-sm">
+                    <span class="input-group-addon" style="cursor: pointer" popover-append-to-body="true" popover-placement="top-right" uib-popover="Percent of perfects per song for skill evaluation">
+                        <i class="fa fa-clock-o"></i>
+                    </span>
+                    <input type="number" class="form-control" ng-model="userSong.perfects" placeholder="percentage of perfects">
+                </div>
+            </div>
+        </div>
+
+
               </div>
         </div>
 
