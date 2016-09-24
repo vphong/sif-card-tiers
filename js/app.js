@@ -530,19 +530,21 @@ app.controller('UserCtrl', function($rootScope, $scope, Cards, localStorageServi
         if ($scope.userFilters.heel && type.includes("Score")) {
             type = type + "_heel";
         }
-        Cards.sortBy($scope.sort, $scope.userFilters.idlz, type)
+        Cards.sortBy($scope.sort, false, type)
         localStorageService.set('sort', $scope.sort)
     }
     $scope.displayScore = function(card, scoreType) {
         if (scoreType == "c") {
-            if (card.idolized && $scope.userFilters.heel) return card.cScore_idlz_heel;
-            else if (card.idolized && !$scope.userFilters.heel) return card.cScore_idlz;
-            else if (!card.idolized && $scope.userFilters.heel) return card.cScore_heel;
+            if (card.is_promo) return card.cScore_idlz;
+            if (card.user_idlz && $scope.userFilters.heel) return card.cScore_idlz_heel;
+            else if (card.user_idlz && !$scope.userFilters.heel) return card.cScore_idlz;
+            else if (!card.user_idlz && $scope.userFilters.heel) return card.cScore_heel;
             else return card.cScore
         } else if (scoreType == "o") {
-            if (card.idolized && $scope.userFilters.heel) return card.oScore_idlz_heel;
-            else if (card.idolized && !$scope.userFilters.heel) return card.oScore_idlz;
-            else if (!card.idolized && $scope.userFilters.heel) return card.oScore_heel;
+            if (card.is_promo) return card.oScore_idlz
+            if (card.user_idlz && $scope.userFilters.heel) return card.oScore_idlz_heel;
+            else if (card.user_idlz && !$scope.userFilters.heel) return card.oScore_idlz;
+            else if (!card.user_idlz && $scope.userFilters.heel) return card.oScore_heel;
             else return card.oScore
         } else return 0;
     }

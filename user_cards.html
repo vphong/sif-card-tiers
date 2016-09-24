@@ -2,9 +2,9 @@
     <div class="col-xs-2" id="filters-md-screens">
         <div class="row">
             <div class="btn-group-vertical col-xs-12" uib-tooltip="Skill" tooltip-placement="top">
-                <label class="btn btn-success btn-sm" ng-model="filters.su" ng-click="filterCards()" uib-btn-checkbox>Score Up</label>
-                <label class="btn btn-success btn-sm" ng-model="filters.pl" ng-click="filterCards()" uib-btn-checkbox>Perfect Lock</label>
-                <label class="btn btn-success btn-sm" ng-model="filters.hl" ng-click="filterCards()" uib-btn-checkbox>Healer</label>
+                <label class="btn btn-success btn-sm" ng-model="userFilters.su" ng-click="filterCards()" uib-btn-checkbox>Score Up</label>
+                <label class="btn btn-success btn-sm" ng-model="userFilters.pl" ng-click="filterCards()" uib-btn-checkbox>Perfect Lock</label>
+                <label class="btn btn-success btn-sm" ng-model="userFilters.hl" ng-click="filterCards()" uib-btn-checkbox>Healer</label>
             </div>
 
             <div class="btn-group btn-group-justified">
@@ -12,7 +12,7 @@
             </div>
 
             <div class="btn-group btn-group-justified">
-                <label class="btn btn-default btn-sm" ng-model="filters.heel" ng-click="toggleHeel()" uib-btn-checkbox>Heel?</label>
+                <label class="btn btn-default btn-sm" ng-model="userFilters.heel" ng-click="toggleHeel()" uib-btn-checkbox>Heel?</label>
             </div>
 
             <div class="btn-group-vertical col-xs-12">
@@ -32,20 +32,20 @@
             </div>
 
             <div class="btn-group btn-group-justified col-xs-12" uib-tooltip="Rarity" tooltip-placement="top">
-                <label class="btn btn-info btn-sm" ng-model="userFilters.sr" ng-click="toggleBool(userFilters.sr);filterCards()" uib-btn-checkbox>SR</label>
-                <label class="btn btn-info btn-sm" ng-model="userFilters.ssr" ng-click="toggleBool(userFilters.ssr);filterCards()" uib-btn-checkbox>SSR</label>
-                <label class="btn btn-info btn-sm" ng-model="userFilters.ur" ng-click="toggleBool(userFilters.ur);filterCards()" uib-btn-checkbox>UR</label>
+                <label class="btn btn-info btn-sm" ng-model="userFilters.sr" ng-click="filterCards()" uib-btn-checkbox>SR</label>
+                <label class="btn btn-info btn-sm" ng-model="userFilters.ssr" ng-click="filterCards()" uib-btn-checkbox>SSR</label>
+                <label class="btn btn-info btn-sm" ng-model="userFilters.ur" ng-click="filterCards()" uib-btn-checkbox>UR</label>
             </div>
 
             <div class="btn-group-vertical col-xs-12" uib-tooltip="Origin" tooltip-placement="top">
-                <label class="btn btn-info btn-sm" ng-model="userFilters.premium" ng-click="toggleBool(userFilters.premium);filterCards()" uib-btn-checkbox>Premium</label>
-                <label class="btn btn-info btn-sm" ng-model="userFilters.event" ng-click="toggleBool(userFilters.event);filterCards()" uib-btn-checkbox>Event</label>
-                <label class="btn btn-info btn-sm" ng-model="userFilters.promo" ng-click="toggleBool(userFilters.promo);filterCards()" uib-btn-checkbox>Promo</label>
+                <label class="btn btn-info btn-sm" ng-model="userFilters.premium" ng-click="filterCards()" uib-btn-checkbox>Premium</label>
+                <label class="btn btn-info btn-sm" ng-model="userFilters.event" ng-click="filterCards()" uib-btn-checkbox>Event</label>
+                <label class="btn btn-info btn-sm" ng-model="userFilters.promo" ng-click="filterCards()" uib-btn-checkbox>Promo</label>
             </div>
 
             <div class="btn-group btn-group-justified col-xs-12" uib-tooltip="Main unit" tooltip-placement="top">
-                <label class="btn btn-info btn-sm" ng-model="userFilters.muse" ng-click="toggleBool(userFilters.muse);filterCards()" uib-btn-checkbox>Muse</label>
-                <label class="btn btn-info btn-sm" ng-model="userFilters.aqours" ng-click="toggleBool(userFilters.aqours);filterCards()" uib-btn-checkbox>Aqours</label>
+                <label class="btn btn-info btn-sm" ng-model="userFilters.muse" ng-click="filterCards()" uib-btn-checkbox>Muse</label>
+                <label class="btn btn-info btn-sm" ng-model="userFilters.aqours" ng-click="filterCards()" uib-btn-checkbox>Aqours</label>
             </div>
 
             <small class="col-xs-12">
@@ -186,27 +186,7 @@
 
                         <tr ng-if="!userCards || filtered.length==0 && sit.chosenAccount.id != '' && grabbedCards">
                             <td colspan=15 style="word-wrap: normal">
-                                <span class="text-danger">No cards found.</span>
-                                <!-- <span ng-if="userFilters.event && userFilters.compare=='healers'">There are no Healer Event cards.</span> -->
-                                <span ng-show="err.rarity || err.main || err.origin">Please select a(n):
-                                    <span ng-show="err.rarity">
-                                        <b>rarity</b>
-                                        (SR, SSR, UR)<span ng-show="err.rarity && (err.main || err.origin)">,
-                                        </span>
-                                        <span ng-hide="err.rarity && (err.main || err.origin)">.</span>
-                                    </span>
-                                    <span ng-show="err.main">
-                                        <b>main unit</b>
-                                        (μ's, Aqours)<span ng-show="err.main && err.origin">,
-                                        </span>
-                                        <span ng-hide="err.main && err.origin">.</span>
-                                    </span>
-
-                                    <span ng-show="err.origin">
-                                        <b>origin</b>
-                                        (Premium, Event, Promo).</span>
-                                </span>
-                                <span ng-hide="err.rarity || err.main || err.origin">Please check your search string and filters.</span>
+                                <span class="text-danger">No cards found.</span> Please check your search string and filters.
                                 <a style="cursor: pointer" ng-click="resetFilters()">Reset filters?</a>
                             </td>
                         </tr>
@@ -221,8 +201,8 @@
                                             uib-popover="This card's skill is dependent on team strength. C-Score, O-Score, and Score Up value may be innaccuate. See Info page for more detailed explanation."
                                             popover-title="Disclaimer"
                                             popover-trigger="'mouseenter'"
-                                            popover-enable="card.full_name=='SR Animal Yazawa Nico'||card.full_name=='SR Health Committee Minami Kotori'||card.full_name=='SR Animal Kousaka Honoka'">
-                                            <span ng-if="card.full_name=='SR Animal Yazawa Nico'||card.full_name=='SR Health Committee Minami Kotori'||card.full_name=='SR Animal Kousaka Honoka'">
+                                            popover-enable="card.full_name=='SR Animal Yazawa Nico'||card.full_name=='SR Health Committee Minami Kotori'||card.full_name=='SR Animal Kousaka Honoka'||card.full_name=='SR October Sonoda Umi'">
+                                            <span ng-if="card.full_name=='SR Animal Yazawa Nico'||card.full_name=='SR Health Committee Minami Kotori'||card.full_name=='SR Animal Kousaka Honoka'||card.full_name=='SR October Sonoda Umi'">
                                                 <i class="fa fa-info-circle"></i>
                                             </span>
                                             <a href="{{card.website_url}}" ng-class="{'text-smile': card.attribute=='Smile', 'text-pure': card.attribute=='Pure', 'text-cool': card.attribute=='Cool'}">
@@ -245,22 +225,20 @@
                                     {{displayScore(card, "c") | number:2}}</span>
                             </td>
                             <td>
-                                <span uib-popover="Cannot equip Heel to a card with >4 SIS Slots. Displaying O-Score w/ default optimized SIS." popover-trigger="'mouseenter'" popover-enable="userFilters.heel && card.skill.type=='Healer' && card.rarity!='UR' || card.is_promo)">
-                                    <i ng-if="userFilters.heel && card.skill.type=='Healer'&& card.rarity!='UR' || card.is_promo)" class="fa fa-warning text-danger"></i>
+                                <span uib-popover="Cannot equip Heel to a card with >4 SIS Slots. Displaying O-Score w/ default optimized SIS." popover-trigger="'mouseenter'" popover-enable="userFilters.heel && card.skill.type=='Healer' && ((!card.user_idlz && card.rarity!='UR') || card.is_promo)">
+                                    <i ng-if="userFilters.heel && card.skill.type=='Healer' && ((!card.user_idlz && card.rarity!='UR') || card.is_promo)" class="fa fa-warning text-danger"></i>
                                     {{displayScore(card, "o") | number:2}}</span>
                             </td>
                             <td>
                                 {{userFilters.heel && card.skill.type=="Healer" && !card.is_promo ? calcSkill(card,"avg") * 270 : calcSkill(card,"avg") |number:2}}
-                                <i ng-if="card.skill.type=='Score Up'" class="fa fa-level-up" uib-tooltip="Score Up"></i>
-                                <i ng-if="card.skill.type=='Healer'" class="fa fa-heart" uib-tooltip="Healer"></i>
+                                <i ng-if="card.skill.type=='Score Up' || (card.skill.type=='Healer' && userFilters.heel)" class="fa fa-level-up" uib-tooltip="Score Up"></i>
+                                <i ng-if="card.skill.type=='Healer' && !userFilters.heel" class="fa fa-heart" uib-tooltip="Healer"></i>
                                 <i ng-if="card.skill.type=='Perfect Lock'" class="fa fa-lock" uib-tooltip="Perfect Lock"></i>
-                                <i ng-if="card.event" class="fa fa-star" uib-tooltip="Event Only"></i>
                             </td>
                             <td>{{userFilters.heel && card.skill.type=="Healer" && !card.is_promo ? calcSkill(card,"avg") * 270 : calcSkill(card,"best") |number:2}}
-                                <i ng-if="card.skill.type=='Score Up'" class="fa fa-level-up" uib-tooltip="Score Up"></i>
-                                <i ng-if="card.skill.type=='Healer'" class="fa fa-heart" uib-tooltip="Healer"></i>
+                                <i ng-if="card.skill.type=='Score Up' || (card.skill.type=='Healer' && userFilters.heel)" class="fa fa-level-up" uib-tooltip="Score Up"></i>
+                                <i ng-if="card.skill.type=='Healer' && !userFilters.heel" class="fa fa-heart" uib-tooltip="Healer"></i>
                                 <i ng-if="card.skill.type=='Perfect Lock'" class="fa fa-lock" uib-tooltip="Perfect Lock"></i>
-                                <i ng-if="card.event" class="fa fa-star" uib-tooltip="Event Only"></i>
                             </td>
                         </tr>
                     </tbody>

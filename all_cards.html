@@ -201,16 +201,14 @@
                             </td>
                             <td>
                                 {{filters.heel && card.skill.type=="Healer" && !card.is_promo ? calcSkill(card,"avg") * 270 : calcSkill(card,"avg") |number:2}}
-                                <i ng-if="card.skill.type=='Score Up'" class="fa fa-level-up" uib-tooltip="Score Up"></i>
-                                <i ng-if="card.skill.type=='Healer'" class="fa fa-heart" uib-tooltip="Healer"></i>
+                                <i ng-if="card.skill.type=='Score Up' || (card.skill.type=='Healer' && userFilters.heel)" class="fa fa-level-up" uib-tooltip="Score Up"></i>
+                                <i ng-if="card.skill.type=='Healer' && !userFilters.heel" class="fa fa-heart" uib-tooltip="Healer"></i>
                                 <i ng-if="card.skill.type=='Perfect Lock'" class="fa fa-lock" uib-tooltip="Perfect Lock"></i>
-                                <i ng-if="card.event" class="fa fa-star" uib-tooltip="Event Only"></i>
                             </td>
                             <td>{{filters.heel && card.skill.type=="Healer" && !card.is_promo ? calcSkill(card,"avg") * 270 : calcSkill(card,"best") |number:2}}
-                                <i ng-if="card.skill.type=='Score Up'" class="fa fa-level-up" uib-tooltip="Score Up"></i>
-                                <i ng-if="card.skill.type=='Healer'" class="fa fa-heart" uib-tooltip="Healer"></i>
+                                <i ng-if="card.skill.type=='Score Up' || (card.skill.type=='Healer' && userFilters.heel)" class="fa fa-level-up" uib-tooltip="Score Up"></i>
+                                <i ng-if="card.skill.type=='Healer' && !userFilters.heel" class="fa fa-heart" uib-tooltip="Healer"></i>
                                 <i ng-if="card.skill.type=='Perfect Lock'" class="fa fa-lock" uib-tooltip="Perfect Lock"></i>
-                                <i ng-if="card.event" class="fa fa-star" uib-tooltip="Event Only"></i>
                             </td>
                         </tr>
                     </tbody>
