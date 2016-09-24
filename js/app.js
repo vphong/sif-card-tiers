@@ -180,41 +180,6 @@ app.factory('Cards', function($rootScope, $http) {
             card.skill.avg = activations * card.skill.activation_percent * card.skill.activation_value
             card.skill.best = activations * card.skill.activation_value
 
-            if (card.skill.type == "Score Up") {
-                card.cScore += card.skill.avg;
-                card.cScore_idlz += card.skill.avg;
-                card.oScore += card.skill.avg;
-                card.oScore_idlz += card.skill.avg;
-            } else if (card.skill.type == "Healer") {
-                // recalculate cScore and oScore
-                card.cScore_heel = card.cScore;
-                card.cScore_idlz_heel = card.cScore_idlz;
-                card.oScore_heel = card.oScore;
-                card.oScore_idlz_heel = card.oScore_idlz;
-
-                if (card.rarity == "SR" || card.rarity == "SSR") {
-                    // c/oScore unidlz: 2 slots; cScore idlz: 3 slots
-                    // can't equip heel: error
-
-                    // oScore idlz: 4 slots
-                    stat = stat_to_mod(card, true);
-                    card.oScore_idlz_heel = stat + stat * (1 + .09 + .06) + card.skill.avg * 270;
-
-                } else { // card.rarity == "UR"
-                    // unidlz
-                    stat = stat_to_mod(card, false)
-                    card.cScore_heel = stat + stat * (1 + .09 + .03) + card.skill.avg * 270
-                        // console.log(card.full_name + "'s cScore_heel = " + card.cScore_heel + " = " + stat + " + " + stat + " * (1 + .09 + .03) + " + card.skill.avg + "*270")
-                    card.oScore_heel = stat + stat * (1 + .09 + .06) + card.skill.avg * 270
-                        // console.log(card.full_name + "'s oScore_heel = " + card.oScore_heel + " = " + stat + " + " + stat + " * (1 + .09 + .06) + " + card.skill.avg + "*270")
-
-                    // idlz
-                    stat = stat_to_mod(card, true)
-                    card.cScore_idlz_heel = stat + stat * (1 + .09 + .03) + card.skill.avg * 270
-                    card.oScore_idlz_heel = stat + (stat + 200) * (1 + .09 + .06) + card.skill.avg * 270
-                }
-
-            }
         });
     }
 

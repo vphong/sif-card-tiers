@@ -190,6 +190,8 @@ def stat_to_mod(card, idlz):
 
     return stat
 
+def rawScoringFormula(stat,kiss,ring,perfume,cross):
+    return (stat + kiss*200 + perfume*450 + math.ceil(stat*ring*0.1) + math.ceil(stat*cross*0.16))
 
 def score(card,scoreType):
     ## init
@@ -197,10 +199,10 @@ def score(card,scoreType):
     idlz_stat = stat_to_mod(card, True)
 
     # sis
-    kiss = 200
-    perfume = 450
-    ring = .1
-    cross = .16
+    kiss = 0 # +200
+    perfume = 0 # 450
+    ring = 0 # x0.10
+    cross = 0 # x0.16
 
     # leader bonuses
     cLead = (1.0+.09+.03)*(1.0+.09+.03)
@@ -210,21 +212,22 @@ def score(card,scoreType):
 
         if card['rarity'] == "SR":
             # 1 slot
-            card['cScore'] = card['cScore_idlz'] = (idlz_stat + kiss)*cLead
+            card['cScore'] = card['cScore_heel'] = card['cScore_heel_idlz'] = card['cScore_idlz'] = (idlz_stat + kiss)*cLead
 
-            card['oScore'] = card['oScore_idlz'] = (idlz_stat + kiss)*oLead
+            card['oScore'] = card['oScore_heel'] = card['oScore_heel_idlz'] = card['oScore_idlz'] = (idlz_stat + kiss)*oLead
 
         elif card['rarity'] == "UR":
             # 2 slots
             if idlz_stat < 4500:
-                card['cScore'] = card['cScore_idlz'] = (idlz_stat + perfume)*cLead
+                card['cScore'] = card['cScore_heel'] = card['cScore_heel_idlz'] = card['cScore_idlz'] = (idlz_stat + perfume)*cLead
 
-                card['oScore'] = card['oScore_idlz'] = (idlz_stat + perfume)*oLead
+                card['oScore'] = card['oScore_heel'] = card['oScore_heel_idlz'] =  card['oScore_idlz'] = (idlz_stat + perfume)*oLead
 
             else:
-                card['cScore'] = card['cScore_idlz'] = (idlz_stat + math.ceil(idlz_stat*ring))*cLead
+                card['cScore'] = card['cScore_heel'] = card['cScore_heel_idlz'] = card['cScore_idlz'] = (idlz_stat + math.ceil(idlz_stat*ring))*cLead
 
-                card['oScore'] = card['oScore_idlz'] = (idlz_stat + math.ceil(idlz_stat*ring))*oLead
+                card['oScore'] = card['oScore_heel'] = card['oScore_heel_idlz'] = card['oScore_idlz'] = (idlz_stat + math.ceil(idlz_stat*ring))*oLead
+
 
     else:
         if scoreType == "c":
@@ -233,90 +236,97 @@ def score(card,scoreType):
             if card['rarity'] == "SR":
                 # unidlz: 2 slots
                 if unidlz_stat < 4500:
-                    kiss *= 0
-                    perfume *= 1
-                    ring *= 0
-                    cross *= 0
+                    kiss = 0
+                    perfume = 1
+                    ring = 0
+                    cross = 0
                 else:
-                    kiss *= 0
-                    perfume *= 0
-                    ring *= 1
-                    cross *= 0
+                    kiss = 0
+                    perfume = 0
+                    ring = 1
+                    cross = 0
 
                 # idlz: 3 slots
                 if idlz_stat < 4100:
-                    kiss *= 1
-                    perfume *= 1
-                    ring *= 0
-                    cross *= 0
+                    kiss = 1
+                    perfume = 1
+                    ring = 0
+                    cross = 0
                 else:
-                    kiss *= 0
-                    perfume *= 0
-                    ring *= 0
-                    cross *= 1
+                    kiss = 0
+                    perfume = 0
+                    ring = 0
+                    cross = 1
+                card['cScore'] = card['cScore_heel'] = rawScoringFormula(unidlz_stat,kiss,perfume,ring,cross)*cLead
+                card['cScore_idlz'] = card['cScore_idlz_heel'] = rawScoringFormula(idlz_stat,kiss,perfume,ring,cross)*cLead
 
             elif card['rarity'] == "SSR":
                 # unidlz: 3 slots
                 if unidlz_stat < 4100:
-                    kiss *= 1
-                    perfume *= 1
-                    ring *= 0
-                    cross *= 0
+                    kiss = 1
+                    perfume = 1
+                    ring = 0
+                    cross = 0
                 else:
-                    kiss *= 0
-                    perfume *= 0
-                    ring *= 0
-                    cross *= 1
+                    kiss = 0
+                    perfume = 0
+                    ring = 0
+                    cross = 1
 
                 # idlz: 3 slots
                 if idlz_stat < 4100:
-                    kiss *= 1
-                    perfume *= 1
-                    ring *= 0
-                    cross *= 0
+                    kiss = 1
+                    perfume = 1
+                    ring = 0
+                    cross = 0
                 else:
-                    kiss *= 0
-                    perfume *= 0
-                    ring *= 0
-                    cross *= 1
+                    kiss = 0
+                    perfume = 0
+                    ring = 0
+                    cross = 1
+                card['cScore'] = card['cScore_heel'] = rawScoringFormula(unidlz_stat,kiss,perfume,ring,cross)*cLead
+                card['cScore_idlz'] = card['cScore_idlz_heel'] = rawScoringFormula(idlz_stat,kiss,perfume,ring,cross)*cLead
 
             else: # UR
                 # unidlz: 4 slots
                 if unidlz_stat < 2000:
-                    kiss *= 2
-                    perfume *= 1
-                    ring *= 0
-                    cross *= 0
+                    kiss = 2
+                    perfume = 1
+                    ring = 0
+                    cross = 0
                 elif unidlz_stat >= 2000 and unidlz_stat < 4200:
-                    kiss *= 0
-                    perfume *= 1
-                    ring *= 1
-                    cross *= 0
+                    kiss = 0
+                    perfume = 1
+                    ring = 1
+                    cross = 0
                 else:
-                    kiss *= 1
-                    perfume *= 0
-                    ring *= 0
-                    cross *= 1
+                    kiss = 1
+                    perfume = 0
+                    ring = 0
+                    cross = 1
 
                 # idlz: 4 slots
                 if idlz_stat < 2000:
-                    kiss *= 2
-                    perfume *= 1
-                    ring *= 0
-                    cross *= 0
+                    kiss = 2
+                    perfume = 1
+                    ring = 0
+                    cross = 0
                 elif idlz_stat >= 2000 and idlz_stat < 4200:
-                    kiss *= 0
-                    perfume *= 1
-                    ring *= 1
-                    cross *= 0
+                    kiss = 0
+                    perfume = 1
+                    ring = 1
+                    cross = 0
                 else:
-                    kiss *= 1
-                    perfume *= 0
-                    ring *= 0
-                    cross *= 1
+                    kiss = 1
+                    perfume = 0
+                    ring = 0
+                    cross = 1
+                card['cScore'] = rawScoringFormula(unidlz_stat,kiss,perfume,ring,cross)*cLead
+                card['cScore_idlz'] = rawScoringFormula(idlz_stat,kiss,perfume,ring,cross)*cLead
 
-            card['cScore'] = (unidlz_stat + kiss + perfume + math.ceil(unidlz_stat*ring) + math.ceil(unidlz_stat*ring))*oLead
-            card['cScore_idlz'] = (idlz_stat + kiss + perfume + math.ceil(idlz_stat*ring) + math.ceil(idlz_stat*ring))*oLead
+                card['cScore_heel'] = rawScoringFormula(unidlz_stat,0,0,0,0)*cLead
+                card['cScore_idlz_heel'] = rawScoringFormula(idlz_stat,0,0,0,0)*cLead
+
 
         elif scoreType == "o":
             # unidlz: 2/3/4 slots
@@ -325,100 +335,113 @@ def score(card,scoreType):
             if card['rarity'] == "SR":
                 # unidlz: 2 slots
                 if unidlz_stat < 4500:
-                    kiss *= 0
-                    perfume *= 1
-                    ring *= 0
-                    cross *= 0
+                    kiss = 0
+                    perfume = 1
+                    ring = 0
+                    cross = 0
                 else:
-                    kiss *= 0
-                    perfume *= 0
-                    ring *= 1
-                    cross *= 0
+                    kiss = 0
+                    perfume = 0
+                    ring = 1
+                    cross = 0
 
                 # idlz: 4 slots
                 if idlz_stat < 2000:
-                    kiss *= 2
-                    perfume *= 1
-                    ring *= 0
-                    cross *= 0
+                    kiss = 2
+                    perfume = 1
+                    ring = 0
+                    cross = 0
                 elif idlz_stat >= 2000 and idlz_stat < 4200:
-                    kiss *= 0
-                    perfume *= 1
-                    ring *= 1
-                    cross *= 0
+                    kiss = 0
+                    perfume = 1
+                    ring = 1
+                    cross = 0
                 else:
-                    kiss *= 1
-                    perfume *= 0
-                    ring *= 0
-                    cross *= 1
+                    kiss = 1
+                    perfume = 0
+                    ring = 0
+                    cross = 1
+                card['oScore'] = card['oScore_heel'] = rawScoringFormula(unidlz_stat,kiss,perfume,ring,cross)*oLead
+                card['oScore_idlz'] = rawScoringFormula(idlz_stat,kiss,perfume,ring,cross)*oLead
+
+                card['oScore_idlz_heel'] = rawScoringFormula(idlz_stat,0,0,0,0)*oLead
 
             elif card['rarity'] == "SSR":
                 # unidlz: 3 slots
                 if unidlz_stat < 4100:
-                    kiss *= 1
-                    perfume *= 1
-                    ring *= 0
-                    cross *= 0
+                    kiss = 1
+                    perfume = 1
+                    ring = 0
+                    cross = 0
                 else:
-                    kiss *= 0
-                    perfume *= 0
-                    ring *= 0
-                    cross *= 1
+                    kiss = 0
+                    perfume = 0
+                    ring = 0
+                    cross = 1
 
                 # idlz: 4 slots
                 if idlz_stat < 2000:
-                    kiss *= 2
-                    perfume *= 1
-                    ring *= 0
-                    cross *= 0
+                    kiss = 2
+                    perfume = 1
+                    ring = 0
+                    cross = 0
                 elif idlz_stat >= 2000 and idlz_stat < 4200:
-                    kiss *= 0
-                    perfume *= 1
-                    ring *= 1
-                    cross *= 0
+                    kiss = 0
+                    perfume = 1
+                    ring = 1
+                    cross = 0
                 else:
-                    kiss *= 1
-                    perfume *= 0
-                    ring *= 0
-                    cross *= 1
+                    kiss = 1
+                    perfume = 0
+                    ring = 0
+                    cross = 1
+                card['oScore'] = rawScoringFormula(unidlz_stat,kiss,perfume,ring,cross)*oLead
+                card['oScore_idlz'] = rawScoringFormula(idlz_stat,kiss,perfume,ring,cross)*oLead
+                card['oScore'] = card['oScore_heel'] = rawScoringFormula(unidlz_stat,kiss,perfume,ring,cross)*oLead
+                card['oScore_idlz'] = rawScoringFormula(idlz_stat,kiss,perfume,ring,cross)*oLead
+
+                card['oScore_idlz_heel'] = rawScoringFormula(idlz_stat,0,0,0,0)*oLead
 
             else: # UR
                 # unidlz: 4 slots
                 if unidlz_stat < 2000:
-                    kiss *= 2
-                    perfume *= 1
-                    ring *= 0
-                    cross *= 0
+                    kiss = 2
+                    perfume = 1
+                    ring = 0
+                    cross = 0
                 elif unidlz_stat >= 2000 and unidlz_stat < 4200:
-                    kiss *= 0
-                    perfume *= 1
-                    ring *= 1
-                    cross *= 0
+                    kiss = 0
+                    perfume = 1
+                    ring = 1
+                    cross = 0
                 else:
-                    kiss *= 1
-                    perfume *= 0
-                    ring *= 0
-                    cross *= 1
+                    kiss = 1
+                    perfume = 0
+                    ring = 0
+                    cross = 1
 
                 # idlz: 5 slots
                 if idlz_stat < 3300:
-                    kiss *= 1
-                    perfume *= 1
-                    ring *= 1
-                    cross *= 0
+                    kiss = 1
+                    perfume = 1
+                    ring = 1
+                    cross = 0
                 elif idlz_stat >= 3300 and idlz_stat < 4500:
-                    kiss *= 0
-                    perfume *= 1
-                    ring *= 0
-                    cross *= 1
+                    kiss = 0
+                    perfume = 1
+                    ring = 0
+                    cross = 1
                 else:
-                    kiss *= 0
-                    perfume *= 0
-                    ring *= 1
-                    cross *= 1
+                    kiss = 0
+                    perfume = 0
+                    ring = 1
+                    cross = 1
+                card['oScore'] = rawScoringFormula(unidlz_stat,kiss,perfume,ring,cross)*oLead
+                card['oScore_idlz'] = rawScoringFormula(idlz_stat,kiss,perfume,ring,cross)*oLead
 
-            card['oScore'] = (unidlz_stat + kiss + perfume + math.ceil(unidlz_stat*ring) + math.ceil(unidlz_stat*ring))*oLead
-            card['oScore_idlz'] = (idlz_stat + kiss + perfume + math.ceil(idlz_stat*ring) + math.ceil(idlz_stat*ring))*oLead
+                card['oScore_heel'] = rawScoringFormula(unidlz_stat,0,0,0,0)*cLead
+                card['oScore_idlz_heel'] = rawScoringFormula(idlz_stat,1,0,0,0)*cLead
+
 
 def cleanCard(d, keys):
     ret = {key: d[key] for key in keys}
