@@ -189,9 +189,7 @@
                             <td>
                                 <span uib-popover="Cannot equip Heel to a card with >4 SIS Slots. Displaying C-Score w/ default optimized SIS." popover-trigger="'mouseenter'" popover-enable="filters.heel && card.skill.type=='Healer' && (card.rarity!='UR' || card.is_promo)">
                                     <i ng-if="filters.heel && card.skill.type=='Healer' && (card.rarity!='UR' || card.is_promo)" class="fa fa-warning text-danger"></i>
-                                    {{displayScore(card, "c") | number:2}}</span>
-                                {{card.cScoreErr}}
-                            </td>
+                                    {{displayScore(card, "c") | number:2}}</span>                            </td>
                             <td>
                                 <span
                                     uib-popover="Cannot equip Heel to a card with >4 SIS Slots. Displaying O-Score w/ default optimized SIS."
