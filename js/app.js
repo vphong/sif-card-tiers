@@ -294,9 +294,6 @@ app.controller('TierCtrl', function($rootScope, $scope, Cards, localStorageServi
     }
     init();
 
-    $scope.toggleHeel = function() {
-        // Cards.calcSkill($scope.cards, $scope.song, $scope.filters.heel)
-    }
 
     $scope.updateSearch = function() {
         localStorageService.set('search', $scope.search);
@@ -312,29 +309,24 @@ app.controller('TierCtrl', function($rootScope, $scope, Cards, localStorageServi
         }
         Cards.sortBy($scope.sort, $scope.filters.idlz, type)
         localStorageService.set('sort', $scope.sort)
+        console.log($scope.sort)
     }
+        $scope.toggleHeel = function() {
+          if ($scope.filters.heel) $scope.sortBy("cScore_heel");
+          else $scope.sortBy("cScore")
+        }
 
     $scope.displayScore = function(card, scoreType) {
         if (scoreType == "c") {
-            if (card.skill.type == "Score Up" || card.skill.type == "Perfect Lock") {
-                if ($scope.filters.idlz) return card.cScore_idlz;
-                else return card.cScore;
-            } else { // healer
                 if ($scope.filters.idlz && $scope.filters.heel) return card.cScore_idlz_heel;
                 else if ($scope.filters.idlz && !$scope.filters.heel) return card.cScore_idlz;
                 else if (!$scope.filters.idlz && $scope.filters.heel) return card.cScore_heel;
                 else return card.cScore
-            }
         } else if (scoreType == "o") {
-            if (card.skill.type == "Score Up" || card.skill.type == "Perfect Lock") {
-                if ($scope.filters.idlz) return card.oScore_idlz;
-                else return card.oScore;
-            } else { // healer
                 if ($scope.filters.idlz && $scope.filters.heel) return card.oScore_idlz_heel;
                 else if ($scope.filters.idlz && !$scope.filters.heel) return card.oScore_idlz;
                 else if (!$scope.filters.idlz && $scope.filters.heel) return card.oScore_heel;
                 else return card.oScore
-            }
         } else return 0;
     }
 
