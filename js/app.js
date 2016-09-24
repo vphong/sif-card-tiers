@@ -151,11 +151,11 @@ app.factory('Cards', function($rootScope, $http) {
         } else { // notes or combo string
             activations = Math.floor(song.notes / card.skill.activation_count)
         }
-        card.skill.avg =  activations * card.skill.activation_percent * card.skill.activation_value
+        card.skill.avg = activations * card.skill.activation_percent * card.skill.activation_value
         card.skill.best = activations * card.skill.activation_value
 
-        if (type=="avg") return card.skill.avg
-        else if (type=="best") return card.skill.best
+        if (type == "avg") return card.skill.avg
+        else if (type == "best") return card.skill.best
         else return 0;
 
     }
@@ -250,7 +250,6 @@ app.controller('TierCtrl', function($rootScope, $scope, Cards, localStorageServi
         }
         Cards.sortBy($scope.sort, $scope.filters.idlz, type)
         localStorageService.set('sort', $scope.sort)
-        console.log($scope.sort)
     }
 
     $scope.toggleHeel = function() {
@@ -273,7 +272,7 @@ app.controller('TierCtrl', function($rootScope, $scope, Cards, localStorageServi
     }
 
     $scope.calcSkill = function(card, type) {
-      return Cards.calcSkill(card,$scope.song,type)
+        return Cards.calcSkill(card, $scope.song, type)
     }
 
 
@@ -339,8 +338,6 @@ app.controller('UserCtrl', function($rootScope, $scope, Cards, localStorageServi
         $scope.userSong = localStorageService.get('userSong');
         if (!$scope.userSong) $scope.userSong = angular.copy($rootScope.Song);
 
-        $scope.userCards = localStorageService.get('userCards');
-        if (!$scope.userCards) $scope.userCards = [];
 
         $scope.userSearch = localStorageService.get('userSearch');
         if (!$scope.userSearch) $scope.userSearch = "";
@@ -350,6 +347,8 @@ app.controller('UserCtrl', function($rootScope, $scope, Cards, localStorageServi
         // storage for card data of rawUserCards
         $scope.rawUserCardsData = localStorageService.get('rawUserCardsData');
 
+        if ($scope.rawUserCardsData) $scope.userCards = angular.copy(Cards.filterCards($scope.userFilters, $scope.rawUserCardsData))
+        else $scope.userCards = [];
     }
     init();
 
@@ -358,7 +357,7 @@ app.controller('UserCtrl', function($rootScope, $scope, Cards, localStorageServi
     }
 
     $scope.updateSong = function() {
-      localStorageService.set('userSong', $scope.userSong);
+        localStorageService.set('userSong', $scope.userSong);
     }
 
     // get accounts from sit username
@@ -497,55 +496,12 @@ app.controller('UserCtrl', function($rootScope, $scope, Cards, localStorageServi
         Cards.getUrl($scope.sit.ownedCardsUrl).then(getCardsSuccess);
     };
 
-    $scope.err = {};
-    $scope.err.rarity = !$scope.userFilters.sr && !$scope.userFilters.ssr && !$scope.filters.ur;
-    $scope.err.origin = !$scope.userFilters.premium && !$scope.userFilters.event && !$scope.filters.promo;
-    $scope.err.main = !$scope.userFilters.muse && !$scope.userFilters.aqours;
 
     $scope.filterCards = function() {
         $scope.userCards = Cards.filterCards($scope.userFilters, angular.copy($scope.rawUserCardsData));
-
         localStorageService.set('userFilters', $scope.userFilters);
-        localStorageService.set('userCards', $scope.userCards);
-
-        $scope.err.rarity = !$scope.userFilters.sr && !$scope.userFilters.ssr && !$scope.userFilters.ur;
-        $scope.err.origin = !$scope.userFilters.premium && !$scope.userFilters.event && !$scope.userFilters.promo;
-        $scope.err.main = !$scope.userFilters.muse && !$scope.userFilters.aqours;
-
-        $scope.userFilters.originStr = "";
-        if ($scope.userFilters.premium && $scope.userFilters.event && $scope.userFilters.promo)
-            $scope.userFilters.originStr = "premium scouting, events, and promos";
-        else if ($scope.userFilters.premium && $scope.userFilters.event && !$scope.userFilters.promo)
-            $scope.userFilters.originStr = "premium scouting and events";
-        else if ($scope.userFilters.premium && !$scope.userFilters.event && $scope.userFilters.promo)
-            $scope.userFilters.originStr = "premium scouting and promos";
-        else if (!$scope.userFilters.premium && $scope.userFilters.event && $scope.userFilters.promo)
-            $scope.userFilters.originStr = "events and promos";
-        else if ($scope.userFilters.premium && !$scope.userFilters.event && !$scope.userFilters.promo)
-            $scope.userFilters.originStr = "premium scouting";
-        else if (!$scope.userFilters.premium && $scope.userFilters.event && !$scope.userFilters.promo)
-            $scope.userFilters.originStr = "events";
-        else if (!$scope.userFilters.premium && !$scope.userFilters.event && $scope.userFilters.promo)
-            $scope.userFilters.originStr = "promos";
-
-        $scope.userFilters.rarityStr = "";
-        if ($scope.userFilters.sr && $scope.userFilters.ssr && $scope.userFilters.ur)
-            $scope.userFilters.rarityStr = "SRs, SSRs, and URs";
-        else if ($scope.userFilters.sr && !$scope.userFilters.ssr && $scope.userFilters.ur)
-            $scope.userFilters.rarityStr = "SRs and URs";
-        else if ($scope.userFilters.sr && $scope.userFilters.ssr && !$scope.userFilters.ur)
-            $scope.userFilters.rarityStr = "SRs and SSRs";
-        else if (!$scope.userFilters.sr && $scope.userFilters.ssr && $scope.userFilters.ur)
-            $scope.userFilters.rarityStr = "SSRs and URs";
-        else if ($scope.userFilters.sr && !$scope.userFilters.ssr && !$scope.userFilters.ur)
-            $scope.userFilters.rarityStr = "SRs";
-        else if (!$scope.userFilters.sr && $scope.userFilters.ssr && !$scope.userFilters.ur)
-            $scope.userFilters.rarityStr = "SSRs";
-        else if (!$scope.userFilters.sr && !$scope.userFilters.ssr && $scope.userFilters.ur)
-            $scope.userFilters.rarityStr = "URs";
-
-
     }
+
     $scope.$watch('userFilters.compare', function(n, o) {
         if (n != o) {
             $scope.sort.type = 'cScore';
@@ -556,7 +512,6 @@ app.controller('UserCtrl', function($rootScope, $scope, Cards, localStorageServi
     $scope.setLocalStorageFilters = function() {
         localStorageService.set('userFilters', $scope.userFilters)
     }
-
 
     $scope.resetFilters = function() {
         $scope.userFilters = angular.copy($rootScope.InitFilters);
@@ -572,10 +527,28 @@ app.controller('UserCtrl', function($rootScope, $scope, Cards, localStorageServi
     }
 
     $scope.sortBy = function(type) {
+        if ($scope.userFilters.heel && type.includes("Score")) {
+            type = type + "_heel";
+        }
         Cards.sortBy($scope.sort, $scope.userFilters.idlz, type)
         localStorageService.set('sort', $scope.sort)
     }
-
+    $scope.displayScore = function(card, scoreType) {
+        if (scoreType == "c") {
+            if (card.idolized && $scope.userFilters.heel) return card.cScore_idlz_heel;
+            else if (card.idolized && !$scope.userFilters.heel) return card.cScore_idlz;
+            else if (!card.idolized && $scope.userFilters.heel) return card.cScore_heel;
+            else return card.cScore
+        } else if (scoreType == "o") {
+            if (card.idolized && $scope.userFilters.heel) return card.oScore_idlz_heel;
+            else if (card.idolized && !$scope.userFilters.heel) return card.oScore_idlz;
+            else if (!card.idolized && $scope.userFilters.heel) return card.oScore_heel;
+            else return card.oScore
+        } else return 0;
+    }
+    $scope.calcSkill = function(card, type) {
+        return Cards.calcSkill(card, $scope.userSong, type)
+    }
 
 });
 
