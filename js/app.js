@@ -131,6 +131,7 @@ app.factory('Cards', function($rootScope, $http) {
             ) {
                 newCards.push(card);
             }
+
         })
         return newCards;
     }
@@ -161,7 +162,7 @@ app.factory('Cards', function($rootScope, $http) {
         else return 0;
 
     }
-    ret.calcSkill = function(cards, song, heel) {
+    ret.calcSkill = function(cards, song) {
         var skill;
         var activations = 0;
         var score_up = 0;
@@ -184,7 +185,7 @@ app.factory('Cards', function($rootScope, $http) {
                 card.cScore_idlz += card.skill.avg;
                 card.oScore += card.skill.avg;
                 card.oScore_idlz += card.skill.avg;
-            } else if (card.skill.type == "Healer" && heel) {
+            } else if (card.skill.type == "Healer") {
                 // recalculate cScore and oScore
                 card.cScore_heel = card.cScore;
                 card.cScore_idlz_heel = card.cScore_idlz;
@@ -203,9 +204,9 @@ app.factory('Cards', function($rootScope, $http) {
                     // unidlz
                     stat = stat_to_mod(card, false)
                     card.cScore_heel = stat + stat * (1 + .09 + .03) + card.skill.avg * 270
-                    // console.log(card.full_name + "'s cScore_heel = " + card.cScore_heel + " = " + stat + " + " + stat + " * (1 + .09 + .03) + " + card.skill.avg + "*270")
+                        // console.log(card.full_name + "'s cScore_heel = " + card.cScore_heel + " = " + stat + " + " + stat + " * (1 + .09 + .03) + " + card.skill.avg + "*270")
                     card.oScore_heel = stat + stat * (1 + .09 + .06) + card.skill.avg * 270
-                    // console.log(card.full_name + "'s oScore_heel = " + card.oScore_heel + " = " + stat + " + " + stat + " * (1 + .09 + .06) + " + card.skill.avg + "*270")
+                        // console.log(card.full_name + "'s oScore_heel = " + card.oScore_heel + " = " + stat + " + " + stat + " * (1 + .09 + .06) + " + card.skill.avg + "*270")
 
                     // idlz
                     stat = stat_to_mod(card, true)
@@ -214,9 +215,9 @@ app.factory('Cards', function($rootScope, $http) {
                 }
 
             }
-
         });
     }
+
 
     ret.sortBy = function(sort, idlz, type) {
         sort.desc = (sort.type == type || sort.gen == type) ? !sort.desc : true;
@@ -262,14 +263,23 @@ app.factory('Cards', function($rootScope, $http) {
 })
 
 app.controller('TierCtrl', function($rootScope, $scope, Cards, localStorageService, $filter) {
-
+    //
+    // $rootScope = $rootScope.new(true)
+    // $scope = $scope.new(true)
     var init = function() {
+
         $scope.filters = localStorageService.get('filters');
         if (!$scope.filters) $scope.filters = angular.copy($rootScope.InitFilters);
 
         /*$scope.cards = localStorageService.get('cards');
         if (!$scope.cards)*/
-        $scope.cards = Cards.filterCards($scope.filters, angular.copy($rootScope.Cards));
+
+        $scope.song = localStorageService.get('song');
+        if (!$scope.song) $scope.song = angular.copy($rootScope.Song);
+
+        $scope.cards = angular.copy(Cards.filterCards($scope.filters, $rootScope.Cards));
+        Cards.calcSkill($scope.cards, $scope.song);
+
         $scope.sort = localStorageService.get('sort');
         if (!$scope.sort) {
             $scope.sort = {
@@ -280,17 +290,12 @@ app.controller('TierCtrl', function($rootScope, $scope, Cards, localStorageServi
         $scope.search = localStorageService.get('search');
         if (!$scope.search) $scope.search = "";
 
-        $scope.song = localStorageService.get('song');
-        if (!$scope.song) $scope.song = angular.copy($rootScope.Song);
-        Cards.calcSkill($scope.cards, $scope.song, $scope.filters.heel);
-
 
     }
     init();
 
     $scope.toggleHeel = function() {
-        Cards.calcSkill($scope.cards, $scope.song, $scope.filters.heel)
-
+        // Cards.calcSkill($scope.cards, $scope.song, $scope.filters.heel)
     }
 
     $scope.updateSearch = function() {
@@ -299,46 +304,52 @@ app.controller('TierCtrl', function($rootScope, $scope, Cards, localStorageServi
 
     $scope.updateSong = function() {
         localStorageService.set('song', $scope.song);
-        Cards.calcSkill($scope.cards, $scope.song, $scope.filters.heel)
+        // Cards.calcSkill($scope.cards, $scope.song, $scope.filters.heel)
+    }
+    $scope.sortBy = function(type) {
+        if ($scope.filters.heel && type.includes("Score")) {
+            type = type + "_heel";
+        }
+        Cards.sortBy($scope.sort, $scope.filters.idlz, type)
+        localStorageService.set('sort', $scope.sort)
     }
 
-    $scope.err = {};
-    $scope.err.rarity = !$scope.filters.sr && !$scope.filters.ssr && !$scope.filters.ur;
-    $scope.err.origin = !$scope.filters.premium && !$scope.filters.event && !$scope.filters.promo;
-    $scope.err.main = !$scope.filters.muse && !$scope.filters.aqours;
+    $scope.displayScore = function(card, scoreType) {
+        if (scoreType == "c") {
+            if (card.skill.type == "Score Up" || card.skill.type == "Perfect Lock") {
+                if ($scope.filters.idlz) return card.cScore_idlz;
+                else return card.cScore;
+            } else { // healer
+                if ($scope.filters.idlz && $scope.filters.heel) return card.cScore_idlz_heel;
+                else if ($scope.filters.idlz && !$scope.filters.heel) return card.cScore_idlz;
+                else if (!$scope.filters.idlz && $scope.filters.heel) return card.cScore_heel;
+                else return card.cScore
+            }
+        } else if (scoreType == "o") {
+            if (card.skill.type == "Score Up" || card.skill.type == "Perfect Lock") {
+                if ($scope.filters.idlz) return card.oScore_idlz;
+                else return card.oScore;
+            } else { // healer
+                if ($scope.filters.idlz && $scope.filters.heel) return card.oScore_idlz_heel;
+                else if ($scope.filters.idlz && !$scope.filters.heel) return card.oScore_idlz;
+                else if (!$scope.filters.idlz && $scope.filters.heel) return card.oScore_heel;
+                else return card.oScore
+            }
+        } else return 0;
+    }
+
+
     $scope.filterCards = function() {
-        $scope.cards = Cards.filterCards($scope.filters, $rootScope.Cards);
-        Cards.calcSkill($scope.cards, $scope.song, $scope.filters.heel)
-            // localStorageService.set('cards', $scope.cards);
+        $scope.cards = Cards.filterCards($scope.filters, angular.copy($rootScope.Cards));
+        Cards.calcSkill($scope.cards, $scope.song);
 
-        $scope.err.rarity = !$scope.filters.sr && !$scope.filters.ssr && !$scope.filters.ur;
-        $scope.err.origin = !$scope.filters.premium && !$scope.filters.event && !$scope.filters.promo;
-        $scope.err.main = !$scope.filters.muse && !$scope.filters.aqours;
-
-        $scope.filters.originStr = "";
-        if ($scope.filters.premium && $scope.filters.event && $scope.filters.promo)
-            $scope.filters.originStr = "premium scouting, events, promos";
-        else if ($scope.filters.premium && $scope.filters.event && !$scope.filters.promo)
-            $scope.filters.originStr = "premium scouting and events";
-        else if ($scope.filters.premium && !$scope.filters.event && $scope.filters.promo)
-            $scope.filters.originStr = "premium scouting and promos";
-        else if (!$scope.filters.premium && $scope.filters.event && $scope.filters.promo)
-            $scope.filters.originStr = "events and promos";
-        else if ($scope.filters.premium && !$scope.filters.event && !$scope.filters.promo)
-            $scope.filters.originStr = "premium scouting";
-        else if (!$scope.filters.premium && $scope.filters.event && !$scope.filters.promo)
-            $scope.filters.originStr = "events";
-        else if (!$scope.filters.premium && !$scope.filters.event && $scope.filters.promo)
-            $scope.filters.originStr = "promos";
         localStorageService.set('filters', $scope.filters);
 
     }
 
     $scope.$watch('filters.compare', function(n, o) {
         if (n != o) {
-            if ($scope.filters.compare != "healers") $scope.filters.heel = false;
             $scope.sort.type = 'cScore';
-            $scope.sort.gen = "cScore";
             localStorageService.set('sort', $scope.sort)
         }
     })
@@ -359,45 +370,12 @@ app.controller('TierCtrl', function($rootScope, $scope, Cards, localStorageServi
         localStorageService.set('filters', $scope.filters);
     }
 
-    $scope.sortBy = function(type) {
-        if ($scope.filters.heel && type.includes("Score")) {
-            type = type + "_heel";
-        }        console.log($scope.sort)
 
-        Cards.sortBy($scope.sort, $scope.filters.idlz, type)
-        console.log($scope.sort)
-        localStorageService.set('sort', $scope.sort)
+
+    $scope.toggleHeel = function() {
+        // re-sort scores since heel modifies the order
+        // $scope.sortBy($scope.sort.type);
     }
-
-    $scope.displayCScore = function(card) {
-        if (!$scope.filters.idlz) $scope.cScoreErr = card.cScore == card.cScore_heel;
-        else $scope.cScoreErr = card.cScore_idlz == card.cScore.heel;
-
-        if ($scope.filters.idlz && $scope.filters.heel) {
-            return card.cScore_idlz_heel
-        } else if ($scope.filters.idlz && !$scope.filters.heel) {
-            return card.cScore_idlz
-        } else if (!$scope.filters.idlz && $scope.filters.heel) {
-            return card.cScore_heel
-        } else {
-            return card.cScore
-        }
-    }
-    $scope.displayOScore = function(card) {
-        if (!$scope.filters.idlz) $scope.oScoreErr = card.oScore == card.oScore_heel;
-        else $scope.oScoreErr = card.oScore_idlz == card.oScore.heel;
-
-        if ($scope.filters.idlz && $scope.filters.heel) {
-            return card.oScore_idlz_heel
-        } else if ($scope.filters.idlz && !$scope.filters.heel) {
-            return card.oScore_idlz
-        } else if (!$scope.filters.idlz && $scope.filters.heel) {
-            return card.oScore_heel
-        } else {
-            return card.oScore
-        }
-    }
-
 });
 
 app.controller('UserCtrl', function($rootScope, $scope, Cards, localStorageService, $filter) {

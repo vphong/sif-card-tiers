@@ -116,7 +116,7 @@ def skillDetails(card):
                 skillNums['activation_percent'] = float(word.strip("%")) / 100
 
     card['skill'].update(skillNums)
-    #### static skill contribution calculation
+    # static skill contribution calculation
     # theoretical 550 note, 125 second song with 85% greats and 65 star notes
     # timeActivation = (125 / skillNums['activation_count']) * skillNums[
     #     'activation_percent'] * skillNums['activation_value']
@@ -218,6 +218,11 @@ def cScore(card):
         else:  # cross
             sis_idlz_stat = idlz_stat * 1.16
 
+        if card['is_promo']:
+            # 1 slot, kiss
+            sis_unidlz_stat = unidlz_stat + 200
+            sis_idlz_stat = idlz_stat + 200
+
     elif card['rarity'] == "SSR":
         # unidolzed SSR: 3 skill slots
         # http://i.imgur.com/YQyqNhs.png
@@ -236,7 +241,7 @@ def cScore(card):
         if idlz_stat < 4100:
             # kiss + perfume
             sis_idlz_stat = idlz_stat * 1.1 + 450
-        else: # cross
+        else:  # cross
             sis_idlz_stat = idlz_stat * 1.16
 
     elif card['rarity'] == "UR":
@@ -274,15 +279,27 @@ def cScore(card):
             # kiss + cross
             sis_idlz_stat = idlz_stat * 1.16 + 200
 
+
+        # promo UR, 2 slots:
+        if card['is_promo']:
+            if unidlz_stat < 4500:  # perfume
+                sis_unidlz_stat = unidlz_stat + 450
+            else:  # ring
+                sis_unidlz_stat = unidlz_stat * 1.1
+
+
     # account for team leader multipliers
     # on-attribute boost (9%), general main unit boost (3%), twice for player + guest
     # finally, add Score Up from card skill
-    card['cScore'] = unidlz_stat + sis_unidlz_stat * \
-        (1 + .09 + .03) * 2 #+ card['skill']['su']
+    card['cScore'] = unidlz_stat + sis_unidlz_stat * (1 + .09 + .03) * 2
+    card['cScore_idlz'] = idlz_stat + sis_idlz_stat * (1 + .09 + .03) * 2
 
-    card['cScore_idlz'] = idlz_stat + sis_idlz_stat * \
-        (1 + .09 + .03) * 2 #+ card['skill']['su']
-
+    if card['skill']['type'] == "Healer" and not card['is_promo']:
+        card['cScore_heel'] = unidlz_stat + unidlz_stat * (1 + .09 + .03) * 2
+        card['cScore_idlz_heel'] = idlz_stat + idlz_stat * (1 + .09 + .03) * 2
+    else:
+        card['cScore_heel'] = card['cScore']
+        card['cScore_idlz_heel'] = card['cScore_idlz']
 
 # function: calculate Optimal-Score (O-Score) of a card
 # "optimal:"
@@ -290,6 +307,8 @@ def cScore(card):
 #       - optimal skills equipped
 #       - center skills: +9% attribute boost, +6% subunit/year boost - x2 for team/guest
 #       -
+
+
 def oScore(card):
     # init
     unidlz_stat = stat_to_mod(card, False)
@@ -394,10 +413,15 @@ def oScore(card):
 
     # account for team leader multipliers
     # finally, add Score Up from card skill
-    card['oScore'] = unidlz_stat + sis_unidlz_stat * \
-        (1 + .09 + .06) * 2 # + card['skill']['su']
-    card['oScore_idlz'] = idlz_stat + sis_idlz_stat * \
-        (1 + .09 + .06) * 2 # + card['skill']['su']
+    card['oScore'] = unidlz_stat + sis_unidlz_stat * (1 + .09 + .06) * 2
+    card['oScore_idlz'] = idlz_stat + sis_idlz_stat * (1 + .09 + .06) * 2
+
+    if not card['is_promo'] and card['skill']['type'] == "Healer" :
+        card['oScore_heel'] = unidlz_stat + unidlz_stat * (1 + .09 + .06) * 2
+        card['oScore_idlz_heel'] = idlz_stat + idlz_stat * (1 + .09 + .06) * 2
+    else:
+        card['oScore_heel'] = card['oScore']
+        card['oScore_idlz_heel'] = card['oScore_idlz']
 
 
 def cleanCard(d, keys):

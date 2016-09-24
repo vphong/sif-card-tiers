@@ -11,7 +11,7 @@
                 <label class="btn btn-danger btn-sm" ng-click="resetFilters()">Reset Filters</label>
             </div>
 
-            <div class="btn-group btn-group-justified" ng-if="filters.compare=='healers'">
+            <div class="btn-group btn-group-justified">
                 <label class="btn btn-default btn-sm" ng-model="filters.heel" ng-click="toggleHeel()" uib-btn-checkbox>Heel?</label>
             </div>
 
@@ -152,27 +152,7 @@
                     <tbody>
                         <tr ng-if="filtered.length==0">
                             <td colspan=15 style="word-wrap: normal">
-                                <span class="text-danger">No cards found.</span>
-                                <span ng-if="filters.event && filters.compare=='healers'">There are no Healer Event cards.</span>
-                                <span ng-show="err.rarity || err.main || err.origin">Please select a(n):
-                                    <span ng-show="err.rarity">
-                                        <b>rarity</b>
-                                        (SR, SSR, UR)<span ng-show="err.rarity && (err.main || err.origin)">,
-                                        </span>
-                                        <span ng-hide="err.rarity && (err.main || err.origin)">.</span>
-                                    </span>
-                                    <span ng-show="err.main">
-                                        <b>main unit</b>
-                                        (μ's, Aqours)<span ng-show="err.main && err.origin">,
-                                        </span>
-                                        <span ng-hide="err.main && err.origin">.</span>
-                                    </span>
-
-                                    <span ng-show="err.origin">
-                                        <b>origin</b>
-                                        (Premium, Event, Promo).</span>
-                                </span>
-                                <span ng-hide="err.rarity || err.main || err.origin">Please check your search string and filters.</span>
+                                <span class="text-danger">No cards found.</span> Please check your search string and filters.
                                 <a style="cursor: pointer" ng-click="resetFilters()">Reset filters?</a>
                             </td>
                         </tr>
@@ -206,28 +186,18 @@
                             <td>{{filters.idlz ? card.idolized_maximum_statistics_pure : card.non_idolized_maximum_statistics_pure}}</td>
                             <td>{{filters.idlz ? card.idolized_maximum_statistics_cool : card.non_idolized_maximum_statistics_cool}}</td>
                             <td>
-                                <span uib-popover="Cannot equip Heel to a card with >4 SIS Slots. Displaying C-Score w/ default optimized SIS." popover-trigger="'mouseenter'" popover-enable="filters.heel && cScoreErr">
-                                    <i ng-if="filters.heel && cScoreErr" class="fa fa-warning text-danger"></i>
-                                    {{displayCScore(card) | number:2}}</span>
+                                <span uib-popover="Cannot equip Heel to a card with >4 SIS Slots. Displaying C-Score w/ default optimized SIS." popover-trigger="'mouseenter'" popover-enable="filters.heel && card.rarity!='UR'">
+                                    <i ng-if="filters.heel && card.rarity!='UR'" class="fa fa-warning text-danger"></i>
+                                    {{displayScore(card, "c") | number:2}}</span>
+                                    {{card.cScoreErr}}
                             </td>
                             <td>
-                                <span uib-popover="Cannot equip Heel to a card with >4 SIS Slots. Displaying O-Score w/ default optimized SIS." popover-trigger="'mouseenter'" popover-enable="filters.heel && oScoreErr">
-                                    <i ng-if="filters.heel && oScoreErr" class="fa fa-warning text-danger"></i>
-                                    {{displayOScore(card) | number:2}}</span>
+                                <span uib-popover="Cannot equip Heel to a card with >4 SIS Slots. Displaying O-Score w/ default optimized SIS." popover-trigger="'mouseenter'" popover-enable="card.oScoreErr">
+                                    <i ng-if="filters.heel && !filters.idlz && card.rarity!='UR' || card.is_promo" class="fa fa-warning text-danger"></i>
+                                    {{displayScore(card, "o") | number:2}}</span>
                             </td>
-                            <td>{{filters.heel ? (card.skill.avg * 270) : card.skill.avg |number:2}}</td>
-                            <td>{{filters.heel ? (card.skill.best * 270) : card.skill.best |number:2}}</td>
-                            <td ng-show="filters.compare=='healers'">
-                                <span uib-popover="Cannot equip Heel to an unidolized SR or SSR. Turn on Idolized." popover-trigger="'mouseenter'" popover-enable="!filters.idlz && card.cScore_heel==0">
-                                    <i ng-if="!filters.idlz && card.cScore_heel==0" class="fa fa-warning text-danger"></i>
-                                    {{filters.idlz ? card.cScore_heel_idlz : card.cScore_heel | number:2}}
-                                </span>
-                            </td>
-                            <td ng-show="filters.compare=='healers'">
-                                <span uib-popover="Cannot equip Heel to an unidolized SR or SSR. Turn on Idolized." popover-trigger="'mouseenter'" popover-enable="!filters.idlz && card.oScore_heel==0">
-                                    <i ng-if="!filters.idlz && card.cScore_heel==0" class="fa fa-warning text-danger"></i>
-                                    {{filters.idlz ? card.oScore_heel_idlz : card.oScore_heel | number:2}}</td>
-                            </span>
+                            <td>{{filters.heel && card.skill.type=="Healer" ? card.skill.avg * 270 : card.skill.avg |number:2}}</td>
+                            <td>{{filters.heel && card.skill.type=="Healer" ? card.skill.best * 270 : card.skill.best |number:2}}</td>
                         </tr>
                     </tbody>
                 </table>
