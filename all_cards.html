@@ -189,7 +189,8 @@
                             <td>
                                 <span uib-popover="Cannot equip Heel to a card with >4 SIS Slots. Displaying C-Score w/ default optimized SIS." popover-trigger="'mouseenter'" popover-enable="filters.heel && card.skill.type=='Healer' && (card.rarity!='UR' || card.is_promo)">
                                     <i ng-if="filters.heel && card.skill.type=='Healer' && (card.rarity!='UR' || card.is_promo)" class="fa fa-warning text-danger"></i>
-                                    {{displayScore(card, "c") | number:2}}</span>                            </td>
+                                    {{displayScore(card, "c") | number:2}}</span>
+                            </td>
                             <td>
                                 <span
                                     uib-popover="Cannot equip Heel to a card with >4 SIS Slots. Displaying O-Score w/ default optimized SIS."
@@ -199,8 +200,18 @@
                                     {{displayScore(card, "o") | number:2}}</span>
                             </td>
                             <td>
-                                {{filters.heel && card.skill.type=="Healer" && !card.is_promo ? card.skill.avg * 270 : card.skill.avg |number:2}}</td>
-                            <td>{{filters.heel && card.skill.type=="Healer" && !card.is_promo ? card.skill.best * 270 : card.skill.best |number:2}}</td>
+                                {{filters.heel && card.skill.type=="Healer" && !card.is_promo ? calcSkill(card,"avg") * 270 : calcSkill(card,"avg") |number:2}}
+                                <i ng-if="card.skill.type=='Score Up'" class="fa fa-level-up" uib-tooltip="Score Up"></i>
+                                <i ng-if="card.skill.type=='Healer'" class="fa fa-heart" uib-tooltip="Healer"></i>
+                                <i ng-if="card.skill.type=='Perfect Lock'" class="fa fa-lock" uib-tooltip="Perfect Lock"></i>
+                                <i ng-if="card.event" class="fa fa-star" uib-tooltip="Event Only"></i>
+                            </td>
+                            <td>{{filters.heel && card.skill.type=="Healer" && !card.is_promo ? calcSkill(card,"avg") * 270 : calcSkill(card,"best") |number:2}}
+                                <i ng-if="card.skill.type=='Score Up'" class="fa fa-level-up" uib-tooltip="Score Up"></i>
+                                <i ng-if="card.skill.type=='Healer'" class="fa fa-heart" uib-tooltip="Healer"></i>
+                                <i ng-if="card.skill.type=='Perfect Lock'" class="fa fa-lock" uib-tooltip="Perfect Lock"></i>
+                                <i ng-if="card.event" class="fa fa-star" uib-tooltip="Event Only"></i>
+                            </td>
                         </tr>
                     </tbody>
                 </table>

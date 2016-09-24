@@ -162,25 +162,28 @@ app.factory('Cards', function($rootScope, $http) {
         else return 0;
 
     }
-    ret.calcSkill = function(cards, song) {
+    ret.calcSkill = function(card, song, type) {
         var skill;
         var activations = 0;
         var score_up = 0;
         var stat = 0;
-        angular.forEach(cards, function(card) {
-            // for each ~act_count~ ~act_type~, ~act_percent~ chance of ~act_val~
-            // skill value = (# of activation times) * (chance of activation) * (activation value)
-            if (card.skill.activation_type == "perfects") {
-                activations = Math.floor(song.notes * song.perfects / card.skill.activation_count)
-            } else if (card.skill.activation_type == "seconds") {
-                activations = Math.floor(song.seconds / card.skill.activation_count)
-            } else { // notes or combo string
-                activations = Math.floor(song.notes / card.skill.activation_count)
-            }
-            card.skill.avg = activations * card.skill.activation_percent * card.skill.activation_value
-            card.skill.best = activations * card.skill.activation_value
 
-        });
+        // for each ~act_count~ ~act_type~, ~act_percent~ chance of ~act_val~
+        // skill value = (# of activation times) * (chance of activation) * (activation value)
+        if (card.skill.activation_type == "perfects") {
+            activations = Math.floor(song.notes * song.perfects / card.skill.activation_count)
+        } else if (card.skill.activation_type == "seconds") {
+            activations = Math.floor(song.seconds / card.skill.activation_count)
+        } else { // notes or combo string
+            activations = Math.floor(song.notes / card.skill.activation_count)
+        }
+        card.skill.avg =  activations * card.skill.activation_percent * card.skill.activation_value
+        card.skill.best = activations * card.skill.activation_value
+        
+        if (type=="avg") return card.skill.avg
+        else if (type=="best") return card.skill.best
+        else return 0;
+
     }
 
 
@@ -243,7 +246,6 @@ app.controller('TierCtrl', function($rootScope, $scope, Cards, localStorageServi
         if (!$scope.song) $scope.song = angular.copy($rootScope.Song);
 
         $scope.cards = angular.copy(Cards.filterCards($scope.filters, $rootScope.Cards));
-        Cards.calcSkill($scope.cards, $scope.song);
 
         $scope.sort = localStorageService.get('sort');
         if (!$scope.sort) {
@@ -266,8 +268,8 @@ app.controller('TierCtrl', function($rootScope, $scope, Cards, localStorageServi
 
     $scope.updateSong = function() {
         localStorageService.set('song', $scope.song);
-        // Cards.calcSkill($scope.cards, $scope.song, $scope.filters.heel)
     }
+
     $scope.sortBy = function(type) {
         if ($scope.filters.heel && type.includes("Score")) {
             type = type + "_heel";
@@ -276,29 +278,33 @@ app.controller('TierCtrl', function($rootScope, $scope, Cards, localStorageServi
         localStorageService.set('sort', $scope.sort)
         console.log($scope.sort)
     }
-        $scope.toggleHeel = function() {
-          if ($scope.filters.heel) $scope.sortBy("cScore_heel");
-          else $scope.sortBy("cScore")
-        }
+
+    $scope.toggleHeel = function() {
+        if ($scope.filters.heel) $scope.sortBy("cScore_heel");
+        else $scope.sortBy("cScore")
+    }
 
     $scope.displayScore = function(card, scoreType) {
         if (scoreType == "c") {
-                if ($scope.filters.idlz && $scope.filters.heel) return card.cScore_idlz_heel;
-                else if ($scope.filters.idlz && !$scope.filters.heel) return card.cScore_idlz;
-                else if (!$scope.filters.idlz && $scope.filters.heel) return card.cScore_heel;
-                else return card.cScore
+            if ($scope.filters.idlz && $scope.filters.heel) return card.cScore_idlz_heel;
+            else if ($scope.filters.idlz && !$scope.filters.heel) return card.cScore_idlz;
+            else if (!$scope.filters.idlz && $scope.filters.heel) return card.cScore_heel;
+            else return card.cScore
         } else if (scoreType == "o") {
-                if ($scope.filters.idlz && $scope.filters.heel) return card.oScore_idlz_heel;
-                else if ($scope.filters.idlz && !$scope.filters.heel) return card.oScore_idlz;
-                else if (!$scope.filters.idlz && $scope.filters.heel) return card.oScore_heel;
-                else return card.oScore
+            if ($scope.filters.idlz && $scope.filters.heel) return card.oScore_idlz_heel;
+            else if ($scope.filters.idlz && !$scope.filters.heel) return card.oScore_idlz;
+            else if (!$scope.filters.idlz && $scope.filters.heel) return card.oScore_heel;
+            else return card.oScore
         } else return 0;
+    }
+
+    $scope.calcSkill = function(card, type) {
+      return Cards.calcSkill(card,$scope.song,type)
     }
 
 
     $scope.filterCards = function() {
         $scope.cards = Cards.filterCards($scope.filters, angular.copy($rootScope.Cards));
-        Cards.calcSkill($scope.cards, $scope.song);
 
         localStorageService.set('filters', $scope.filters);
 
@@ -323,16 +329,11 @@ app.controller('TierCtrl', function($rootScope, $scope, Cards, localStorageServi
         $scope.filterCards()
         $scope.sortBy('cScore');
     }
+
     $scope.setLocalStorageFilters = function() {
         localStorageService.set('filters', $scope.filters);
     }
 
-
-
-    $scope.toggleHeel = function() {
-        // re-sort scores since heel modifies the order
-        // $scope.sortBy($scope.sort.type);
-    }
 });
 
 app.controller('UserCtrl', function($rootScope, $scope, Cards, localStorageService, $filter) {
