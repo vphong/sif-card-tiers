@@ -4,7 +4,9 @@
         <h2 class="info-title">Intro
             <small>hello world</small>
         </h2>
-        <p>Evaluating <a href="http://www.school-fes.klabgames.net/">Love Live! School Idol Festival</a> card strength with some mathy stuff.</p>
+        <p>Evaluating
+            <a href="http://www.school-fes.klabgames.net/">Love Live! School Idol Festival</a>
+            card strength with some mathy stuff.</p>
         <p>Based off of
             <a href="http://sif.artonico.com/index.php">artonico's tier list</a>. Huge thank you to artonico for giving me guidance!
         </p>
@@ -39,8 +41,8 @@
             <b>O-Score</b>
             is the premise of using a card under an optimal setting - relatively harder to access boosts.</p>
 
-        <p>The raw formula for both Scores is:
-            <code>score = raw_stat + ((raw_stat)*(1 + SIS_percent_boost) + SIS_static_boost)*(1 + center_skill_boost)*2 + score_up_boost</code>.
+        <p>The raw formula (based on the <a href="http://www59.atwiki.jp/lovelive-sif/pages/30.html">formula found here</a>) for both Scores is:
+            <code>score = (raw_stat + SIS_static_boost) * ceiling(raw_stat * SIS_ring) * ceiling(raw_stat * SIS_cross) * center_skill_boost^2</code>.
         </p>
         <p>What do these variables mean? Well..</p>
 
@@ -142,7 +144,8 @@
         </p>
         <small class="text-muted">
             <mark>* Keep in mind that a card's skill may be greatly improved by skill level ups.</mark>
-            Card data comes from <a href="http://schoolido.lu">schoolido.lu</a>, which only offers information on skill level 1.
+            Card data comes from
+            <a href="http://schoolido.lu">schoolido.lu</a>, which only offers information on skill level 1.
         </small>
 
         <h4>Example School Idol Skill Configurations</h4>
@@ -244,35 +247,6 @@
 
         </div>
 
-        <h3 class="info-subtitle" id="skill">Card Skill Quality</h3>
-        <p>
-            <b>Skill quality</b>
-            is the average amount of
-            <b>score up</b>/perfect lock time/stamina healed a card's skill
-            <mark>at skill level 1*</mark>
-            can contribute over the course of a song.</p>
-        <p>
-            Skill quality calculation is based off of a 125 second, 550 note long song with 65 star notes, assuming 85% Perfect Notes/15% Great Notes and Full Combo. The closest in-game variants to this theoretical song are EX
-            <span class="text-smile">Music Start</span>
-            (551 notes/124 seconds),
-            <span class="text-pure">Junai Lens</span>
-            (550 notes/125 seconds), and
-            <span class="text-cool">Loveless World</span>
-            (550/126 seconds).</p>
-
-        <p>
-            Score Up is directly added to C- and O-Score because it directly affects card strength, unlike perfect lock time and healing.
-        </p>
-        <p id="skill-disclaimer">
-            <strong>Note:</strong>
-            Skills are mainly activated by seconds, perfects, and notes/combo string.
-        </p>
-
-        <small class="text-muted">
-            <mark>* Again, keep in mind that a card's skill can be greatly improved by skill level ups.</mark>
-            Card data comes from <a href="http://schoolido.lu">schoolido.lu</a>, which only offers information on skill level 1.
-        </small>
-
         <h3 class="info-subtitle" id="center">Center Skill Boosts</h3>
         <p>I will go into this section assuming that you understand what Center Skills are. If not, I recommend looking at
             <a href="http://kachagain.com/llsif/urskills.php">kachagain.com's UR center skills page</a>
@@ -327,6 +301,33 @@
                 </tr>
             </tbody>
         </table>
+
+        <h2 class="info-subtitle" id="skill">On Card Skill Quality</h2>
+        <p>
+            <b>Skill quality</b>
+            is the amount of score up/perfect lock time/stamina healed a card's skill
+            <mark>at skill level 1*</mark>
+            can contribute over the course of a song.</p>
+        <p>
+            The
+            <b>average</b>
+            case takes into account the percent chance of activation. The
+            <b>best</b>
+            case assumes the skill activates every single chance it gets.
+        </p>
+
+        <p>For example, take a skill that can activate 20 times with a 50% chance during a song. The average case assumes it activates 10 times. The best case assumes it activates 20 times.
+        </p>
+
+        <!-- <p>
+            Score Up is directly added to C- and O-Score because it directly affects card strength, unlike perfect lock time and healing.
+        </p> -->
+
+        <small class="text-muted">
+            <mark>* Again, keep in mind that a card's skill can be greatly improved by skill level ups.</mark>
+            Card data comes from
+            <a href="http://schoolido.lu">schoolido.lu</a>, which only offers information on skill level 1.
+        </small>
     </div>
 
     <div id="resources">
@@ -342,12 +343,16 @@
             <dt>
                 <a href="http://schoolido.lu">schoolido.lu</a>
             </dt>
-            <dd>aka <a href="http://twitter.com/schoolidolu">@schoolidolu</a> - for all of the card data and image hosting</dd>
+            <dd>aka
+                <a href="http://twitter.com/schoolidolu">@schoolidolu</a>
+                - for all of the card data and image hosting</dd>
 
             <dt>
                 <a href="http://kachagain.com/">kach again</a>
             </dt>
-            <dd>aka <a href="http://twitter.com/kachagain">@kachagain</a> - for school idol skill info, UR center skills info, and tons more</dd>
+            <dd>aka
+                <a href="http://twitter.com/kachagain">@kachagain</a>
+                - for school idol skill info, UR center skills info, and tons more</dd>
 
             <dt>
                 <a href="https://www.reddit.com/r/SchoolIdolFestival/comments/4sm8cf/information_optimal_skill_slot_configurations/">optimal skill slot configurations</a>

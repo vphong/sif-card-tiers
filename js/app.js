@@ -136,32 +136,6 @@ app.factory('Cards', function($rootScope, $http) {
         return newCards;
     }
 
-
-    var stat_to_mod = function(card, idlz) {
-        var stat = 0;
-        if (card.attribute == "Smile" && idlz) {
-            stat = card.idolized_maximum_statistics_smile;
-        } else if (card.attribute == "Smile" && !idlz) {
-            stat = card.non_idolized_maximum_statistics_smile;
-        } else if (card.attribute == "Pure" && idlz) {
-            stat = card.idolized_maximum_statistics_pure;
-        } else if (card.attribute == "Pure" && !idlz) {
-            stat = card.non_idolized_maximum_statistics_pure;
-        } else if (card.attribute == "Cool" && idlz) {
-            stat = card.idolized_maximum_statistics_cool;
-        } else if (card.attribute == "Cool" && !idlz) {
-            stat = card.non_idolized_maximum_statistics_cool;
-        }
-
-        if (idlz && card.rarity == "UR") return stat + 1000;
-        else if ((!idlz && card.rarity == "UR") || (idlz && card.rarity == "SR"))
-            return stat + 500;
-        else if (!idlz && card.rarity == "SR") return stat + 250;
-        else if (idlz && card.rarity == "SSR") return stat + 750;
-        else if (!idlz && card.rarity == "SSR") return stat + 375;
-        else return 0;
-
-    }
     ret.calcSkill = function(card, song, type) {
         var skill;
         var activations = 0;
@@ -179,7 +153,7 @@ app.factory('Cards', function($rootScope, $http) {
         }
         card.skill.avg =  activations * card.skill.activation_percent * card.skill.activation_value
         card.skill.best = activations * card.skill.activation_value
-        
+
         if (type=="avg") return card.skill.avg
         else if (type=="best") return card.skill.best
         else return 0;
