@@ -152,7 +152,8 @@
                     <tbody>
                         <tr ng-if="filtered.length==0">
                             <td colspan=15 style="word-wrap: normal">
-                                <span class="text-danger">No cards found.</span> Please check your search string and filters.
+                                <span class="text-danger">No cards found.</span>
+                                Please check your search string and filters.
                                 <a style="cursor: pointer" ng-click="resetFilters()">Reset filters?</a>
                             </td>
                         </tr>
@@ -186,18 +187,22 @@
                             <td>{{filters.idlz ? card.idolized_maximum_statistics_pure : card.non_idolized_maximum_statistics_pure}}</td>
                             <td>{{filters.idlz ? card.idolized_maximum_statistics_cool : card.non_idolized_maximum_statistics_cool}}</td>
                             <td>
-                                <span uib-popover="Cannot equip Heel to a card with >4 SIS Slots. Displaying C-Score w/ default optimized SIS." popover-trigger="'mouseenter'" popover-enable="filters.heel && card.rarity!='UR'">
-                                    <i ng-if="filters.heel && card.rarity!='UR'" class="fa fa-warning text-danger"></i>
+                                <span uib-popover="Cannot equip Heel to a card with >4 SIS Slots. Displaying C-Score w/ default optimized SIS." popover-trigger="'mouseenter'" popover-enable="filters.heel && card.skill.type=='Healer' && (card.rarity!='UR' || card.is_promo)">
+                                    <i ng-if="filters.heel && card.skill.type=='Healer' && (card.rarity!='UR' || card.is_promo)" class="fa fa-warning text-danger"></i>
                                     {{displayScore(card, "c") | number:2}}</span>
-                                    {{card.cScoreErr}}
+                                {{card.cScoreErr}}
                             </td>
                             <td>
-                                <span uib-popover="Cannot equip Heel to a card with >4 SIS Slots. Displaying O-Score w/ default optimized SIS." popover-trigger="'mouseenter'" popover-enable="card.oScoreErr">
-                                    <i ng-if="filters.heel && !filters.idlz && card.rarity!='UR' || card.is_promo" class="fa fa-warning text-danger"></i>
+                                <span
+                                    uib-popover="Cannot equip Heel to a card with >4 SIS Slots. Displaying O-Score w/ default optimized SIS."
+                                    popover-trigger="'mouseenter'"
+                                    popover-enable="filters.heel && card.skill.type=='Healer' && ((!filters.idlz && card.rarity!='UR') || card.is_promo)">
+                                    <i ng-if="filters.heel && card.skill.type=='Healer' && ((!filters.idlz && card.rarity!='UR') || card.is_promo)" class="fa fa-warning text-danger"></i>
                                     {{displayScore(card, "o") | number:2}}</span>
                             </td>
-                            <td>{{filters.heel && card.skill.type=="Healer" ? card.skill.avg * 270 : card.skill.avg |number:2}}</td>
-                            <td>{{filters.heel && card.skill.type=="Healer" ? card.skill.best * 270 : card.skill.best |number:2}}</td>
+                            <td>
+                                {{filters.heel && card.skill.type=="Healer" && !card.is_promo ? card.skill.avg * 270 : card.skill.avg |number:2}}</td>
+                            <td>{{filters.heel && card.skill.type=="Healer" && !card.is_promo ? card.skill.best * 270 : card.skill.best |number:2}}</td>
                         </tr>
                     </tbody>
                 </table>
