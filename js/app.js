@@ -163,8 +163,16 @@ app.factory('Cards', function($rootScope, $http) {
             // convert score up to stat
             if (card.is_promo) score_up_mod = 0
             else if (card.skill.type == 'Score Up' || (heel && card.skill.type == "Healer")) {
-                score_up_mod = Math.floor((card.skill.avg / song.notes) / (0.0125 * (.88 * song.perfects) * Math.floor(song.notes/2) * 1 * 1.1 * 1.1));
+                score_up_mod = Math.floor((card.skill.avg / song.notes) / (0.0125 * (.88 * song.perfects) * Math.floor(song.notes / 2) * 1 * 1.1 * 1.1))*song.notes;
                 if (isNaN(score_up_mod)) score_up_mod = 0;
+            }
+            else score_up_mod = 0
+
+            if (card.full_name == "UR Animal Nishikino Maki") {
+
+                console.log(card.full_name)
+                console.log(card.cScore)
+                console.log(score_up_mod)
             }
 
             if (card.skill.type == "Score Up") {
@@ -180,6 +188,9 @@ app.factory('Cards', function($rootScope, $http) {
 
                 card.oScore_heel += score_up_mod
                 card.oScore_idlz_heel += score_up_mod
+            }
+            if (card.full_name == "UR Animal Nishikino Maki") {
+                console.log(card.cScore)
             }
         })
 
@@ -302,6 +313,8 @@ app.controller('TierCtrl', function($rootScope, $scope, Cards, localStorageServi
     }
 
     $scope.toggleHeel = function() {
+        Cards.calcSkill($scope.cards, $scope.song, $scope.filters.heel);
+
         if ($scope.filters.heel) $scope.sortBy("cScore_heel");
         else $scope.sortBy("cScore")
     }
