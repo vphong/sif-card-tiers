@@ -167,15 +167,20 @@ app.factory('Cards', function($rootScope, $http) {
                 if (isNaN(score_up_mod)) score_up_mod = 0;
             }
 
-            card.cScore += score_up_mod
-            card.cScore_heel += score_up_mod
-            card.cScore_idlz += score_up_mod
-            card.cScore_idlz_heel += score_up_mod
+            if (card.skill.type == "Score Up") {
+                card.cScore += score_up_mod
+                card.cScore_idlz += score_up_mod
 
-            card.oScore += score_up_mod
-            card.oScore_heel += score_up_mod
-            card.oScore_idlz += score_up_mod
-            card.oScore_idlz_heel += score_up_mod
+                card.oScore += score_up_mod
+                card.oScore_idlz += score_up_mod
+            }
+            if (heel && card.skill.type == "Healer") {
+                card.cScore_heel += score_up_mod
+                card.cScore_idlz_heel += score_up_mod
+                
+                card.oScore_heel += score_up_mod
+                card.oScore_idlz_heel += score_up_mod
+            }
         })
 
     }
