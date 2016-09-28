@@ -214,22 +214,31 @@ def score(card,scoreType):
 
         if card['rarity'] == "SR":
             # 1 slot
-            card['cScore'] = card['cScore_heel'] = card['cScore_heel_idlz'] = card['cScore_idlz'] = (idlz_stat + kiss)*cLead
+            card['cScore'] = card['cScore_heel'] = card['cScore_idlz_heel'] = card['cScore_idlz'] = (idlz_stat + kiss)*cLead
 
-            card['oScore'] = card['oScore_heel'] = card['oScore_heel_idlz'] = card['oScore_idlz'] = (idlz_stat + kiss)*oLead
+            card['oScore'] = card['oScore_heel'] = card['oScore_idlz_heel'] = card['oScore_idlz'] = (idlz_stat + kiss)*oLead
 
         elif card['rarity'] == "UR":
             # 2 slots
             if idlz_stat < 4500:
-                card['cScore'] = card['cScore_heel'] = card['cScore_heel_idlz'] = card['cScore_idlz'] = (idlz_stat + perfume)*cLead
+                card['cScore'] = card['cScore_heel'] = card['cScore_idlz_heel'] = card['cScore_idlz'] = (idlz_stat + perfume)*cLead
 
-                card['oScore'] = card['oScore_heel'] = card['oScore_heel_idlz'] =  card['oScore_idlz'] = (idlz_stat + perfume)*oLead
+                card['oScore'] = card['oScore_heel'] = card['oScore_idlz_heel'] =  card['oScore_idlz'] = (idlz_stat + perfume)*oLead
 
             else:
-                card['cScore'] = card['cScore_heel'] = card['cScore_heel_idlz'] = card['cScore_idlz'] = (idlz_stat + math.ceil(idlz_stat*ring))*cLead
+                card['cScore'] = card['cScore_heel'] = card['cScore_idlz_heel'] = card['cScore_idlz'] = (idlz_stat + math.ceil(idlz_stat*ring))*cLead
 
-                card['oScore'] = card['oScore_heel'] = card['oScore_heel_idlz'] = card['oScore_idlz'] = (idlz_stat + math.ceil(idlz_stat*ring))*oLead
+                card['oScore'] = card['oScore_heel'] = card['oScore_idlz_heel'] = card['oScore_idlz'] = (idlz_stat + math.ceil(idlz_stat*ring))*oLead
 
+        card['cScore_modded'] = card['cScore']
+        card['cScore_modded_idlz'] = card['cScore_idlz']
+        card['cScore_modded_heel'] = card['cScore_heel']
+        card['cScore_modded_idlz_heel'] = card['cScore_idlz_heel']
+
+        card['oScore_modded'] = card['oScore']
+        card['oScore_modded_idlz'] = card['oScore_idlz']
+        card['oScore_modded_heel'] = card['oScore_heel']
+        card['oScore_modded_idlz_heel'] = card['oScore_idlz_heel']
 
     else:
         if scoreType == "c":
@@ -329,6 +338,10 @@ def score(card,scoreType):
                 card['cScore_heel'] = rawScoringFormula(unidlz_stat,0,0,0,0)*cLead
                 card['cScore_idlz_heel'] = rawScoringFormula(idlz_stat,0,0,0,0)*cLead
 
+            card['cScore_modded'] = card['cScore']
+            card['cScore_modded_idlz'] = card['cScore_idlz']
+            card['cScore_modded_heel'] = card['cScore_heel']
+            card['cScore_modded_idlz_heel'] = card['cScore_idlz_heel']
 
         elif scoreType == "o":
             # unidlz: 2/3/4 slots
@@ -443,6 +456,11 @@ def score(card,scoreType):
 
                 card['oScore_heel'] = rawScoringFormula(unidlz_stat,0,0,0,0)*cLead
                 card['oScore_idlz_heel'] = rawScoringFormula(idlz_stat,1,0,0,0)*cLead
+
+            card['oScore_modded'] = card['oScore']
+            card['oScore_modded_idlz'] = card['oScore_idlz']
+            card['oScore_modded_heel'] = card['oScore_heel']
+            card['oScore_modded_idlz_heel'] = card['oScore_idlz_heel']
 
 
 def cleanCard(d, keys):
@@ -593,5 +611,5 @@ def processCards():
 
     logging.info("processCards(): done")
 
-getRawCards()
+# getRawCards()
 processCards()

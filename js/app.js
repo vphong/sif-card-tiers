@@ -168,57 +168,51 @@ app.factory('Cards', function($rootScope, $http) {
             }
             else score_up_mod = 0
 
-            if (card.full_name == "UR Animal Nishikino Maki") {
-
-                console.log(card.full_name)
-                console.log(card.cScore)
-                console.log(score_up_mod)
-            }
-
             if (card.skill.type == "Score Up") {
-                card.cScore += score_up_mod
-                card.cScore_idlz += score_up_mod
+                card.cScore_modded = card.cScore + score_up_mod
+                card.cScore_modded_idlz = card.cScore_idlz + score_up_mod
 
-                card.oScore += score_up_mod
-                card.oScore_idlz += score_up_mod
-            }
-            if (heel && card.skill.type == "Healer") {
-                card.cScore_heel += score_up_mod
-                card.cScore_idlz_heel += score_up_mod
+                card.oScore_modded = card.oScore + score_up_mod
+                card.oScore_modded_idlz = card.oScore_idlz + score_up_mod
+            // }
+            // if (heel && card.skill.type == "Healer") {
+                card.cScore_modded_heel = card.cScore_heel + score_up_mod
+                card.cScore_modded_idlz_heel = card.cScore_idlz_heel + score_up_mod
 
-                card.oScore_heel += score_up_mod
-                card.oScore_idlz_heel += score_up_mod
-            }
-            if (card.full_name == "UR Animal Nishikino Maki") {
-                console.log(card.cScore)
+                card.oScore_modded_heel = card.oScore_heel + score_up_mod
+                card.oScore_modded_idlz_heel = card.oScore_idlz_heel + score_up_mod
             }
         })
+
+        console.log(cards[0])
 
     }
 
     ret.displayScore = function(card, scoreType, filters) {
+      console.log(card.cScore_modded)
         if (scoreType == "c") {
-            if (card.is_promo && filters.idlz) return card.cScore_idlz;
-            else if (card.is_promo && filters.idlz) return card.cScore;
+            if (card.is_promo && filters.idlz) return card.cScore_modded_idlz;
+            else if (card.is_promo && filters.idlz) return card.cScore_modded;
 
-            if (filters.idlz && filters.heel) return card.cScore_idlz_heel;
-            else if (filters.idlz && filters.heel) return card.cScore_idlz;
-            else if (filters.idlz && filters.heel) return card.cScore_heel;
-            else return card.cScore
+            if (filters.idlz && filters.heel) return card.cScore_modded_idlz_heel;
+            else if (filters.idlz && filters.heel) return card.cScore_modded_idlz;
+            else if (filters.idlz && filters.heel) return card.cScore_modded_heel;
+            else return card.cScore_modded
 
         } else if (scoreType == "o") {
-            if (card.is_promo && filters.idlz) return card.oScore_idlz;
-            else if (card.is_promo && filters.idlz) return card.oScore;
+            if (card.is_promo && filters.idlz) return card.oScore_modded_idlz;
+            else if (card.is_promo && filters.idlz) return card.oScore_modded;
 
-            if (filters.idlz && filters.heel) return card.oScore_idlz_heel
-            else if (filters.idlz && filters.heel) return card.oScore_idlz
-            else if (filters.idlz && filters.heel) return card.oScore_heel
-            else return card.oScore
+            if (filters.idlz && filters.heel) return card.oScore_modded_idlz_heel
+            else if (filters.idlz && filters.heel) return card.oScore_modded_idlz
+            else if (filters.idlz && filters.heel) return card.oScore_modded_heel
+            else return card.oScore_modded
         } else return 0;
     }
 
 
     ret.sortBy = function(sort, idlz, type) {
+      console.log(sort)
         sort.desc = (sort.type == type || sort.gen == type) ? !sort.desc : true;
 
         sort.type = type;
@@ -240,18 +234,18 @@ app.factory('Cards', function($rootScope, $http) {
             sort.type = type;
 
             if (type == 'cScore') {
-                if (idlz) sort.type = "cScore_idlz";
-                else sort.type = "cScore";
+                if (idlz) sort.type = "cScore_modded_idlz";
+                else sort.type = "cScore_modded";
             } else if (type == 'oScore') {
-                if (idlz) sort.type = "oScore_idlz";
-                else sort.type = "oScore";
+                if (idlz) sort.type = "oScore_modded_idlz";
+                else sort.type = "oScore_modded";
 
             } else if (type == 'cScore_heel') {
-                if (idlz) sort.type = "cScore_idlz_heel";
-                else sort.type = "cScore_heel";
-            } else if (type == 'oScore_heel') {
-                if (idlz) sort.type = "oScore_idlz_heel";
-                else sort.type = "oScore_heel";
+                if (idlz) sort.type = "cScore_modded_idlz_heel";
+                else sort.type = "cScore_modded_heel";
+            } else if (type == 'oScore_modded_heel') {
+                if (idlz) sort.type = "oScore_modded_idlz_heel";
+                else sort.type = "oScore_modded_heel";
 
             }
         }
