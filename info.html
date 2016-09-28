@@ -271,13 +271,13 @@
         <p>The denominator, <code>(0.0125  * A * C * T * M * G)</code>, is simply the right hand side of the original formula without the Stat multiplier, and with constants figured in, where: </p>
         <ul class="list">
           <li>A = accuracy = 0.88 * input_%_greats</li>
-          <li>C = combo position = average position = input_notes / 2</li>
+          <li>C = combo position = average position = floor(input_notes / 2)</li>
           <li>T = type of note = normal note = 1</li>
           <li>M = attribute of team member the note hits = matching = 1.10</li>
           <li>G = main unit of team member based on song = matching = 1.10</li>
         </ul>
 
-        <p>In final, the Score Up to Stat formula looks like <code>floor((card_skill_avg / input_notes) / (0.0125  * (0.88*input_%_greats) * (input_notes/2) * 1 * 1.1 * 1.1)</code>. These constants may be adjusted in the future.</p>
+        <p>In final, the Score Up to Stat formula looks like <code>floor((card_skill_avg / input_notes) / (0.0125  * (0.88*input_%_greats) * floor(input_notes/2) * 1 * 1.1 * 1.1)</code>. These constants may be adjusted in the future.</p>
 
 
         <h3 class="info-subtitle" id="tldr">Summary: C-Score vs. O-Score
