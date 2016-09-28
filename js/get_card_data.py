@@ -197,6 +197,8 @@ def score(card,scoreType):
     ## init
     unidlz_stat = stat_to_mod(card, False)
     idlz_stat = stat_to_mod(card, True)
+    card['on_attr'] = unidlz_stat
+    card['on_attr_idlz'] = idlz_stat
 
     # sis
     kiss = 0 # +200
@@ -591,5 +593,5 @@ def processCards():
 
     logging.info("processCards(): done")
 
-getRawCards()
+# getRawCards()
 processCards()

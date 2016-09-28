@@ -199,14 +199,14 @@
                                     {{displayScore(card, "o") | number:2}}</span>
                             </td>
                             <td>
-                                {{filters.heel && card.skill.type=="Healer" && !card.is_promo ? calcSkill(card,"avg") * 270 : calcSkill(card,"avg") |number:2}}
-                                <i ng-if="card.skill.type=='Score Up' || (card.skill.type=='Healer' && userFilters.heel)" class="fa fa-level-up" uib-tooltip="Score Up"></i>
-                                <i ng-if="card.skill.type=='Healer' && !userFilters.heel" class="fa fa-heart" uib-tooltip="Healer"></i>
+                                {{card.skill.avg |number:2}}
+                                <i ng-if="card.skill.type=='Score Up' || (card.skill.type=='Healer' && filters.heel)" class="fa fa-level-up" uib-tooltip="Score Up"></i>
+                                <i ng-if="card.skill.type=='Healer' && !filters.heel" class="fa fa-heart" uib-tooltip="Healer"></i>
                                 <i ng-if="card.skill.type=='Perfect Lock'" class="fa fa-lock" uib-tooltip="Perfect Lock"></i>
                             </td>
-                            <td>{{filters.heel && card.skill.type=="Healer" && !card.is_promo ? calcSkill(card,"avg") * 270 : calcSkill(card,"best") |number:2}}
-                                <i ng-if="card.skill.type=='Score Up' || (card.skill.type=='Healer' && userFilters.heel)" class="fa fa-level-up" uib-tooltip="Score Up"></i>
-                                <i ng-if="card.skill.type=='Healer' && !userFilters.heel" class="fa fa-heart" uib-tooltip="Healer"></i>
+                            <td>{{card.skill.best |number:2}}
+                                <i ng-if="card.skill.type=='Score Up' || (card.skill.type=='Healer' && filters.heel)" class="fa fa-level-up" uib-tooltip="Score Up"></i>
+                                <i ng-if="card.skill.type=='Healer' && !filters.heel" class="fa fa-heart" uib-tooltip="Healer"></i>
                                 <i ng-if="card.skill.type=='Perfect Lock'" class="fa fa-lock" uib-tooltip="Perfect Lock"></i>
                             </td>
                         </tr>
