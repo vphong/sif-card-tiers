@@ -259,7 +259,7 @@ app.controller('TierCtrl', function($rootScope, $scope, Cards, localStorageServi
     //
     // $rootScope = $rootScope.new(true)
     // $scope = $scope.new(true)
-    var init = function() {
+    $scope.init = function() {
 
         $scope.filters = localStorageService.get('filters');
         if (!$scope.filters) $scope.filters = angular.copy($rootScope.InitFilters);
@@ -286,7 +286,7 @@ app.controller('TierCtrl', function($rootScope, $scope, Cards, localStorageServi
 
 
     }
-    init();
+    $scope.init();
 
 
     $scope.updateSearch = function() {
@@ -314,6 +314,7 @@ app.controller('TierCtrl', function($rootScope, $scope, Cards, localStorageServi
     }
 
     $scope.displayScore = function(card, scoreType) {
+      console.log(card)
         return Cards.displayScore(card, scoreType, $scope.filters)
     }
 
@@ -324,13 +325,6 @@ app.controller('TierCtrl', function($rootScope, $scope, Cards, localStorageServi
         localStorageService.set('filters', $scope.filters);
 
     }
-
-    $scope.$watch('filters.compare', function(n, o) {
-        if (n != o) {
-            $scope.sort.type = 'cScore';
-            localStorageService.set('sort', $scope.sort)
-        }
-    })
 
 
     $scope.resetFilters = function() {
