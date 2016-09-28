@@ -27,6 +27,8 @@
                 </ul>
             </li>
         </ul>
+
+        <div class="well"><b>Disclaimer:</b> This page is under beta. It may be laggy, buggy, and completely broken on any given visit. Formulas may be revised at any time.</div>
     </div>
 
     <div id="math">
@@ -42,7 +44,7 @@
             is the premise of using a card under an optimal setting - relatively harder to access boosts.</p>
 
         <p>The raw formula (based on the <a href="http://www59.atwiki.jp/lovelive-sif/pages/30.html">formula found here</a>) for both Scores is:
-            <code>score = (raw_stat + SIS_static_boost) * ceiling(raw_stat * SIS_ring) * ceiling(raw_stat * SIS_cross) * center_skill_boost^2</code>.
+            <code>score = (raw_stat + SIS_static_boost) * ceiling(raw_stat * SIS_ring) * ceiling(raw_stat * SIS_cross) * center_skill_boost^2 + score_up_to_stat</code>.
         </p>
         <p>What do these variables mean? Well..</p>
 
@@ -259,6 +261,24 @@
             <abbr title="Muse or Aqours">main unit</abbr>
             (+3%) and
             <abbr title="1st year, 2nd year, or 3rd year">class year</abbr>/subunit (+6%). For each card, C-Score assumes a main unit boost and O-Score assumes a class/subunit boost.</p>
+
+        <h3 class="info-subtitle" id="scoring">Converting Score Up To Stat</h3>
+        <p>Following the <a href="http://decaf.kouhi.me/lovelive/index.php?title=Scoring#Calculating_the_Score">score calculation formula on the decaf.kouhi.me wiki</a>, we can convert a raw stat into the Score that shows up when you tap a note during gameplay.
+        </p>
+        <p>To manipulate that formula and convert Score Up (from a card's skill activating) into raw stat, we take:</p>
+        <p><code>raw_stat = floor((card_skill_avg / input_notes) / (0.0125  * A * C * T * M * G))</code></p>
+        <p>The numerator, <code>card_skill_avg / input_%_greats</code> is derived from the fact that the original formula is based on one note at a time, while the Skill Average on this website is based on the entirety of the song. This is calculating the average Score Up per note a skill contributes.</p>
+        <p>The denominator, <code>(0.0125  * A * C * T * M * G)</code>, is simply the right hand side of the original formula without the Stat multiplier, and with constants figured in, where: </p>
+        <ul class="list">
+          <li>A = accuracy = 0.88 * input_%_greats</li>
+          <li>C = combo position = average position = input_notes / 2</li>
+          <li>T = type of note = normal note = 1</li>
+          <li>M = attribute of team member the note hits = matching = 1.10</li>
+          <li>G = Main unit of team member based on song = matching = 1.10</li>
+        </ul>
+
+        <p>These constants may be adjusted in the future.</p>
+
 
         <h3 class="info-subtitle" id="tldr">Summary: C-Score vs. O-Score
             <small>tl;dr</small>
