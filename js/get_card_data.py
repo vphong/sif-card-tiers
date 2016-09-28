@@ -593,5 +593,5 @@ def processCards():
 
     logging.info("processCards(): done")
 
-# getRawCards()
+getRawCards()
 processCards()
