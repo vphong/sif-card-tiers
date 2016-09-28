@@ -267,7 +267,7 @@
         </p>
         <p>To manipulate that formula and convert Score Up (from a card's skill activating) into raw stat, we take:</p>
         <p><code>raw_stat = floor((card_skill_avg / input_notes) / (0.0125  * A * C * T * M * G))</code></p>
-        <p>The numerator, <code>card_skill_avg / input_%_greats</code> is derived from the fact that the original formula is based on one note at a time, while the Skill Average on this website is based on the entirety of the song. This is calculating the average Score Up per note a skill contributes.</p>
+        <p>The numerator, <code>card_skill_avg / input_notes</code> is derived from the fact that the original formula is based on one note at a time, while the Skill Average on this website is based on the entirety of the song. In other words, this is the average Score Up per note a skill contributes.</p>
         <p>The denominator, <code>(0.0125  * A * C * T * M * G)</code>, is simply the right hand side of the original formula without the Stat multiplier, and with constants figured in, where: </p>
         <ul class="list">
           <li>A = accuracy = 0.88 * input_%_greats</li>
