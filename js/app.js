@@ -184,12 +184,10 @@ app.factory('Cards', function($rootScope, $http) {
             }
         })
 
-        console.log(cards[0])
 
     }
 
     ret.displayScore = function(card, scoreType, filters) {
-      console.log(card.cScore_modded)
         if (scoreType == "c") {
             if (card.is_promo && filters.idlz) return card.cScore_modded_idlz;
             else if (card.is_promo && filters.idlz) return card.cScore_modded;
@@ -213,6 +211,7 @@ app.factory('Cards', function($rootScope, $http) {
 
     ret.sortBy = function(sort, idlz, type) {
       console.log(sort)
+      console.log(type)
         sort.desc = (sort.type == type || sort.gen == type) ? !sort.desc : true;
 
         sort.type = type;
@@ -233,22 +232,23 @@ app.factory('Cards', function($rootScope, $http) {
 
             sort.type = type;
 
-            if (type == 'cScore') {
+            if (type == 'cScore_modded') {
                 if (idlz) sort.type = "cScore_modded_idlz";
                 else sort.type = "cScore_modded";
-            } else if (type == 'oScore') {
+            } else if (type == 'oScore_modded') {
                 if (idlz) sort.type = "oScore_modded_idlz";
                 else sort.type = "oScore_modded";
 
-            } else if (type == 'cScore_heel') {
+            } else if (type == 'cScore_modded_heel') {
                 if (idlz) sort.type = "cScore_modded_idlz_heel";
                 else sort.type = "cScore_modded_heel";
-            } else if (type == 'oScore_modded_heel') {
+            } else if (type == 'oScore_modded_modded_heel') {
                 if (idlz) sort.type = "oScore_modded_idlz_heel";
                 else sort.type = "oScore_modded_heel";
 
             }
         }
+        console.log(sort)
     }
 
 
@@ -275,7 +275,7 @@ app.controller('TierCtrl', function($rootScope, $scope, Cards, localStorageServi
         $scope.sort = localStorageService.get('sort');
         if (!$scope.sort) {
             $scope.sort = {
-                type: 'cScore',
+                type: 'cScore_modded',
                 desc: true
             }
         }
@@ -309,12 +309,11 @@ app.controller('TierCtrl', function($rootScope, $scope, Cards, localStorageServi
     $scope.toggleHeel = function() {
         Cards.calcSkill($scope.cards, $scope.song, $scope.filters.heel);
 
-        if ($scope.filters.heel) $scope.sortBy("cScore_heel");
-        else $scope.sortBy("cScore")
+        if ($scope.filters.heel) $scope.sortBy("cScore_modded_heel");
+        else $scope.sortBy("cScore_modded")
     }
 
     $scope.displayScore = function(card, scoreType) {
-      console.log(card)
         return Cards.displayScore(card, scoreType, $scope.filters)
     }
 
@@ -332,11 +331,11 @@ app.controller('TierCtrl', function($rootScope, $scope, Cards, localStorageServi
         localStorageService.set('filters', $scope.filters);
 
         $scope.sort = {
-            type: 'cScore',
+            type: 'cScore_modded',
             desc: false
         }
         $scope.filterCards()
-        $scope.sortBy('cScore');
+        $scope.sortBy('cScore_modded');
     }
 
     $scope.setLocalStorageFilters = function() {
