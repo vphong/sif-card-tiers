@@ -30,6 +30,8 @@ app.constant('InitFilters', {
     su: true,
     pl: true,
     hl: true,
+    subunit: "all",
+    year: "all"
 })
 app.constant('InitSong', {
   notes: 550,
