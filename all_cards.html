@@ -53,52 +53,60 @@
             </div>
 
             <div class="btn-group btn-group-justified col-xs-12" uib-tooltip="Main unit" tooltip-placement="top">
-                <label class="btn btn-info btn-sm" ng-model="filters.muse" ng-click="toggleBool(filters.muse);filterCards()" uib-btn-checkbox>Muse</label>
-                <label class="btn btn-info btn-sm" ng-model="filters.aqours" ng-click="toggleBool(filters.aqours);filterCards()" uib-btn-checkbox>Aqours</label>
+                <label class="btn btn-info btn-sm" ng-model="filters.muse" ng-click="filterCards()" uib-btn-checkbox>Muse</label>
+                <label class="btn btn-info btn-sm" ng-model="filters.aqours" ng-click="filterCards()" uib-btn-checkbox>Aqours</label>
             </div>
 
-            <div class="btn-group" uib-dropdown>
-                <button type="button" class="btn btn-sm btn-info">Subunit</button>
-                <button type="button" class="btn btn-sm btn-info" uib-dropdown-toggle>
+            <div class="btn-group btn-group-dropdown dropup col-xs-12 no-padding" style="margin-bottom: 10px;" uib-dropdown>
+                <button type="button" class="btn btn-sm btn-info name">Subunit</button>
+                <button type="button" class="btn btn-sm btn-info drop" uib-dropdown-toggle>
                     <span class="caret"></span>
                 </button>
                 <ul class="dropdown-menu" uib-dropdown-menu role="menu" aria-labelledby="split-button">
                     <li role="menuitem">
-                        <a href="#">lily white</a>
-                    </li>
-                    <li role="menuitem">
-                        <a href="#">Printemps</a>
-                    </li>
-                    <li role="menuitem">
-                        <a href="#">BiBi</a>
+                        <a ng-model="filters.subunit" ng-click="filterCards()" uib-btn-radio="'all'">All</a>
                     </li>
                     <li class="divider"></li>
                     <li role="menuitem">
-                        <a href="#">AZALEA</a>
+                        <a ng-model="filters.subunit" ng-click="filterCards()" uib-btn-radio="'lily white'">lily white</a>
                     </li>
                     <li role="menuitem">
-                        <a href="#">CYaRon</a>
+                        <a ng-model="filters.subunit" ng-click="filterCards()" uib-btn-radio="'Printemps'">Printemps</a>
                     </li>
                     <li role="menuitem">
-                        <a href="#">Guilty Kiss</a>
+                        <a ng-model="filters.subunit" ng-click="filterCards()" uib-btn-radio="'BiBi'">BiBi</a>
+                    </li>
+                    <li class="divider"></li>
+                    <li role="menuitem">
+                        <a ng-model="filters.subunit" ng-click="filterCards()" uib-btn-radio="'AZALEA'">AZALEA</a>
+                    </li>
+                    <li role="menuitem">
+                        <a ng-model="filters.subunit" ng-click="filterCards()" uib-btn-radio="'CYaRon'">CYaRon</a>
+                    </li>
+                    <li role="menuitem">
+                        <a ng-model="filters.subunit" ng-click="filterCards()" uib-btn-radio="'Guilty Kiss'">Guilty Kiss</a>
                     </li>
                 </ul>
             </div>
 
-            <div class="btn-group" uib-dropdown>
-                <button type="button" class="btn btn-sm btn-info">Class Year</button>
-                <button type="button" class="btn btn-sm btn-info" uib-dropdown-toggle>
+            <div class="btn-group btn-group-dropdown dropup col-xs-12 no-padding" uib-dropdown>
+                <button type="button" class="btn btn-sm btn-info name">Year</button>
+                <button type="button" class="btn btn-sm btn-info drop" uib-dropdown-toggle>
                     <span class="caret"></span>
                 </button>
                 <ul class="dropdown-menu" uib-dropdown-menu role="menu" aria-labelledby="split-button">
                     <li role="menuitem">
-                        <a href="#">first</a>
+                        <a ng-model="filters.year" ng-click="filterCards()" uib-btn-radio="'all'">All</a>
+                    </li>
+                    <li class="divider"></li>
+                    <li role="menuitem">
+                        <a ng-model="filters.year" ng-click="filterCards()" uib-btn-radio="'1'">First</a>
                     </li>
                     <li role="menuitem">
-                        <a href="#">second</a>
+                        <a ng-model="filters.year" ng-click="filterCards()" uib-btn-radio="'2'">Second</a>
                     </li>
                     <li role="menuitem">
-                        <a href="#">third</a>
+                        <a ng-model="filters.year" ng-click="filterCards()" uib-btn-radio="'3'">Third</a>
                     </li>
                 </ul>
             </div>

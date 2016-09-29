@@ -115,7 +115,7 @@ footer.well {
 }
 
 
-.col-xs-2>.row>div.btn-group.btn-group-justified, .col-xs-2>.row>div>div.btn-group.btn-group-justified, .col-xs-2>.row>div.btn-group-vertical {
+.col-xs-2>.row>div.btn-group.btn-group-justified, .btn-group-dropdown, .col-xs-2>.row>div>div.btn-group.btn-group-justified, .col-xs-2>.row>div.btn-group-vertical {
     margin-bottom: 10px;
 }
 
@@ -203,4 +203,16 @@ footer.well {
 }
 .row>.div {
   margin: 0
+}
+.btn-group-dropdown > .name {
+  width: calc(100% - 24px);
+}
+.btn-group-dropdown > .drop {
+  height: 32px;
+}
+.dropdown-menu > li {
+  cursor: pointer
+}
+.dropdown-menu > li > .active {
+  background-color: #f8f5f0
 }

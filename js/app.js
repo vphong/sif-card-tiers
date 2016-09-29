@@ -105,6 +105,7 @@ app.factory('Cards', function($rootScope, $http) {
         var card;
         var newCards = [];
         var len = cards.length;
+        console.log(filters.subunit)
 
         angular.forEach(cards, function(card) {
             if ((filters.server == 'en' && !card.japan_only ||
@@ -127,7 +128,20 @@ app.factory('Cards', function($rootScope, $http) {
                     filters.hl && card.skill.type == "Healer") &&
 
                 (filters.muse && card.main_unit == "Muse" ||
-                    filters.aqours && card.main_unit == "Aqours")
+                    filters.aqours && card.main_unit == "Aqours") &&
+
+                (filters.subunit == "all" && card.sub_unit ||
+                    filters.subunit == "BiBi" && card.sub_unit == "Bibi" ||
+                    filters.subunit == "Printemps" && card.sub_unit == "Printemps" ||
+                    filters.subunit == "lily white" && card.sub_unit == "Lily White" ||
+                    filters.subunit == "AZALEA" && card.sub_unit == "AZALEA" ||
+                    filters.subunit == "CYaRon" && card.sub_unit == "CYaRon!" ||
+                    filters.subunit == "Guilty Kiss" && card.sub_unit == "Guilty Kiss") &&
+
+                (filters.year == "all" && card.year ||
+                    filters.year == "1" && card.year == "first" ||
+                    filters.year == "2" && card.year == "second" ||
+                    filters.year == "3" && card.year == "third")
             ) {
                 newCards.push(card);
             }
@@ -173,8 +187,7 @@ app.factory('Cards', function($rootScope, $http) {
 
                 card.oScore_modded = card.oScore + score_up_mod
                 card.oScore_modded_idlz = card.oScore_idlz + score_up_mod
-            }
-            else if (heel && card.skill.type == "Healer") {
+            } else if (heel && card.skill.type == "Healer") {
                 card.cScore_modded_heel = card.cScore_heel + score_up_mod
                 card.cScore_modded_idlz_heel = card.cScore_idlz_heel + score_up_mod
 
