@@ -163,10 +163,9 @@ app.factory('Cards', function($rootScope, $http) {
             // convert score up to stat
             if (card.is_promo) score_up_mod = 0
             else if (card.skill.type == 'Score Up' || (heel && card.skill.type == "Healer")) {
-                score_up_mod = Math.floor((card.skill.avg / song.notes) / (0.0125 * (.88 * song.perfects) * Math.floor(song.notes / 2) * 1 * 1.1 * 1.1))*song.notes;
+                score_up_mod = Math.floor((card.skill.avg / song.notes) / (0.0125 * (.88 * song.perfects) * Math.floor(song.notes / 2) * 1 * 1.1 * 1.1)) * song.notes;
                 if (isNaN(score_up_mod)) score_up_mod = 0;
-            }
-            else score_up_mod = 0
+            } else score_up_mod = 0
 
             if (card.skill.type == "Score Up") {
                 card.cScore_modded = card.cScore + score_up_mod
@@ -174,14 +173,17 @@ app.factory('Cards', function($rootScope, $http) {
 
                 card.oScore_modded = card.oScore + score_up_mod
                 card.oScore_modded_idlz = card.oScore_idlz + score_up_mod
-            // }
-            // if (heel && card.skill.type == "Healer") {
+            }
+            else if (heel && card.skill.type == "Healer") {
                 card.cScore_modded_heel = card.cScore_heel + score_up_mod
                 card.cScore_modded_idlz_heel = card.cScore_idlz_heel + score_up_mod
 
                 card.oScore_modded_heel = card.oScore_heel + score_up_mod
                 card.oScore_modded_idlz_heel = card.oScore_idlz_heel + score_up_mod
             }
+
+            if (card.full_name.includes("Swimsuit Tsushima")) console.log(card)
+
         })
 
 
@@ -210,8 +212,8 @@ app.factory('Cards', function($rootScope, $http) {
 
 
     ret.sortBy = function(sort, idlz, type) {
-      console.log(sort)
-      console.log(type)
+        console.log(sort)
+        console.log(type)
         sort.desc = (sort.type == type || sort.gen == type) ? !sort.desc : true;
 
         sort.type = type;
@@ -256,9 +258,9 @@ app.factory('Cards', function($rootScope, $http) {
 })
 
 app.controller('TierCtrl', function($rootScope, $scope, Cards, localStorageService, $filter) {
-    //
-    // $rootScope = $rootScope.new(true)
-    // $scope = $scope.new(true)
+
+    // $rootScope = $rootScope.$new(true)
+    // $scope = $scope.$new(true)
     $scope.init = function() {
 
         $scope.filters = localStorageService.get('filters');
@@ -320,9 +322,7 @@ app.controller('TierCtrl', function($rootScope, $scope, Cards, localStorageServi
     $scope.filterCards = function() {
         $scope.cards = Cards.filterCards($scope.filters, angular.copy($rootScope.Cards));
         Cards.calcSkill($scope.cards, $scope.song, $scope.filters.heel);
-
         localStorageService.set('filters', $scope.filters);
-
     }
 
 

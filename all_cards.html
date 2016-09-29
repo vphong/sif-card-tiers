@@ -57,13 +57,51 @@
                 <label class="btn btn-info btn-sm" ng-model="filters.aqours" ng-click="toggleBool(filters.aqours);filterCards()" uib-btn-checkbox>Aqours</label>
             </div>
 
-            <small class="col-xs-12">
-                Showing
-                <b>{{filtered.length}}</b>
-                of
-                <b>{{$root.Cards.length}}</b>
-                total cards.
-            </small>
+            <div class="btn-group" uib-dropdown>
+                <button type="button" class="btn btn-sm btn-info">Subunit</button>
+                <button type="button" class="btn btn-sm btn-info" uib-dropdown-toggle>
+                    <span class="caret"></span>
+                </button>
+                <ul class="dropdown-menu" uib-dropdown-menu role="menu" aria-labelledby="split-button">
+                    <li role="menuitem">
+                        <a href="#">lily white</a>
+                    </li>
+                    <li role="menuitem">
+                        <a href="#">Printemps</a>
+                    </li>
+                    <li role="menuitem">
+                        <a href="#">BiBi</a>
+                    </li>
+                    <li class="divider"></li>
+                    <li role="menuitem">
+                        <a href="#">AZALEA</a>
+                    </li>
+                    <li role="menuitem">
+                        <a href="#">CYaRon</a>
+                    </li>
+                    <li role="menuitem">
+                        <a href="#">Guilty Kiss</a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="btn-group" uib-dropdown>
+                <button type="button" class="btn btn-sm btn-info">Class Year</button>
+                <button type="button" class="btn btn-sm btn-info" uib-dropdown-toggle>
+                    <span class="caret"></span>
+                </button>
+                <ul class="dropdown-menu" uib-dropdown-menu role="menu" aria-labelledby="split-button">
+                    <li role="menuitem">
+                        <a href="#">first</a>
+                    </li>
+                    <li role="menuitem">
+                        <a href="#">second</a>
+                    </li>
+                    <li role="menuitem">
+                        <a href="#">third</a>
+                    </li>
+                </ul>
+            </div>
         </div>
     </div>
 
