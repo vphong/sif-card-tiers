@@ -174,6 +174,8 @@ app.factory('Cards', function($rootScope, $http) {
                 card.skill.best *= 270;
             }
 
+            card.cScore_modded = [card.cScore]
+            card.oScore_modded = [card.oScore]
 
             // convert score up to stat
             if (card.is_promo) score_up_mod = 0
@@ -182,21 +184,29 @@ app.factory('Cards', function($rootScope, $http) {
                 if (isNaN(score_up_mod)) score_up_mod = 0;
             } else score_up_mod = 0
 
+
             if (card.skill.type == "Score Up") {
-                card.cScore_modded = card.cScore + score_up_mod
-                card.cScore_modded_idlz = card.cScore_idlz + score_up_mod
+                card.cScore_modded[0].base += score_up_mod
+                card.cScore_modded[0].idlz += score_up_mod
 
-                card.oScore_modded = card.oScore + score_up_mod
-                card.oScore_modded_idlz = card.oScore_idlz + score_up_mod
+                card.oScore_modded[0].base += score_up_mod
+                card.oScore_modded[0].idlz += score_up_mod
             } else if (heel && card.skill.type == "Healer") {
-                card.cScore_modded_heel = card.cScore_heel + score_up_mod
-                card.cScore_modded_idlz_heel = card.cScore_idlz_heel + score_up_mod
+                card.cScore_modded[0].heel += score_up_mod
+                card.cScore_modded[0].idlz_heel += score_up_mod
 
-                card.oScore_modded_heel = card.oScore_heel + score_up_mod
-                card.oScore_modded_idlz_heel = card.oScore_idlz_heel + score_up_mod
+                card.oScore_modded[0].heel += score_up_mod
+                card.oScore_modded[0].idlz_heel += score_up_mod
             }
 
-            if (card.full_name.includes("Swimsuit Tsushima")) console.log(card)
+            if (card.full_name.includes("Initial Minami")) {
+                console.log(card)
+                console.log(score_up_mod)
+                console.log(card.cScore)
+                console.log(card.cScore_modded[0])
+                console.log(card.oScore)
+                console.log(card.oScore_modded[0])
+            }
 
         })
 
@@ -205,22 +215,22 @@ app.factory('Cards', function($rootScope, $http) {
 
     ret.displayScore = function(card, scoreType, filters) {
         if (scoreType == "c") {
-            if (card.is_promo && filters.idlz) return card.cScore_modded_idlz;
-            else if (card.is_promo && filters.idlz) return card.cScore_modded;
+            if (card.is_promo && filters.idlz) return card.cScore_modded[0].idlz;
+            else if (card.is_promo && filters.idlz) return card.cScore_modded[0].base;
 
-            if (filters.idlz && filters.heel) return card.cScore_modded_idlz_heel;
-            else if (filters.idlz && filters.heel) return card.cScore_modded_idlz;
-            else if (filters.idlz && filters.heel) return card.cScore_modded_heel;
-            else return card.cScore_modded
+            if (filters.idlz && filters.heel) return card.cScore_modded[0].idlz_heel;
+            else if (filters.idlz && filters.heel) return card.cScore_modded[0].idlz;
+            else if (filters.idlz && filters.heel) return card.cScore_modded[0].heel;
+            else return card.cScore_modded[0].base
 
         } else if (scoreType == "o") {
-            if (card.is_promo && filters.idlz) return card.oScore_modded_idlz;
-            else if (card.is_promo && filters.idlz) return card.oScore_modded;
+            if (card.is_promo && filters.idlz) return card.oScore_modded[0].idlz;
+            else if (card.is_promo && filters.idlz) return card.oScore_modded[0].base;
 
-            if (filters.idlz && filters.heel) return card.oScore_modded_idlz_heel
-            else if (filters.idlz && filters.heel) return card.oScore_modded_idlz
-            else if (filters.idlz && filters.heel) return card.oScore_modded_heel
-            else return card.oScore_modded
+            if (filters.idlz && filters.heel) return card.oScore_modded[0].idlz_heel
+            else if (filters.idlz && filters.heel) return card.oScore_modded[0].idlz
+            else if (filters.idlz && filters.heel) return card.oScore_modded[0].heel
+            else return card.oScore_modded[0].base
         } else return 0;
     }
 
@@ -248,19 +258,19 @@ app.factory('Cards', function($rootScope, $http) {
 
             sort.type = type;
 
-            if (type == 'cScore_modded') {
-                if (idlz) sort.type = "cScore_modded_idlz";
-                else sort.type = "cScore_modded";
-            } else if (type == 'oScore_modded') {
-                if (idlz) sort.type = "oScore_modded_idlz";
-                else sort.type = "oScore_modded";
+            if (type == 'cScore') {
+                if (idlz) sort.type = "cScore_modded[0].idlz";
+                else sort.type = "cScore_modded[0].base";
+            } else if (type == 'oScore') {
+                if (idlz) sort.type = "oScore_modded[0].idlz";
+                else sort.type = "oScore_modded[0].base";
 
-            } else if (type == 'cScore_modded_heel') {
-                if (idlz) sort.type = "cScore_modded_idlz_heel";
-                else sort.type = "cScore_modded_heel";
-            } else if (type == 'oScore_modded_modded_heel') {
-                if (idlz) sort.type = "oScore_modded_idlz_heel";
-                else sort.type = "oScore_modded_heel";
+            } else if (type == 'cScore.heel') {
+                if (idlz) sort.type = "cScore_modded[0].idlz_heel";
+                else sort.type = "cScore_modded[0].heel";
+            } else if (type == 'oScore.heel') {
+                if (idlz) sort.type = "oScore_modded[0].idlz_heel";
+                else sort.type = "oScore_modded[0].heel";
 
             }
         }
@@ -289,3 +299,17 @@ app.controller('ChangelogCtrl', function($scope, $uibModal) {
         });
     };
 })
+
+app.filter('orderObjectBy', function() {
+    return function(items, field, reverse) {
+        var filtered = [];
+        angular.forEach(items, function(item) {
+            filtered.push(item);
+        });
+        filtered.sort(function(a, b) {
+            return (a[field] > b[field] ? 1 : -1);
+        });
+        if (reverse) filtered.reverse();
+        return filtered;
+    };
+});

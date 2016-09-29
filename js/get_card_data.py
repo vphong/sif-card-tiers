@@ -525,6 +525,10 @@ def cleanCard(d, keys):
     score(ret,"c")
     score(ret,"o")
 
+    logging.info(ret['rarity'])
+    logging.info(ret['cScore'])
+    logging.info(ret['oScore'])
+
     # load links over https
     # ret['website_url'] = "https" + ret['website_url'][4:]
     # ret['round_card_image'] = "https" + repr(ret['round_card_image'])[5:]
@@ -583,7 +587,8 @@ def processCards():
         card = cleanCard(card, keysNeeded)
         # addFullName(card)
         cards.append(card)
-    logging.info(cards[0])
+    # logging.info(cards[0]['cScore'])
+    # logging.info(cards[0]['oScore'])
     # write to file with use for angular
     logging.info("processCards(): done cleaning. writing to file...")
     with open('js/cards.js', 'w') as f:

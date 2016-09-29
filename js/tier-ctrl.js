@@ -18,7 +18,7 @@ app.controller('TierCtrl', function($rootScope, $scope, Cards, localStorageServi
         $scope.sort = localStorageService.get('sort');
         if (!$scope.sort) {
             $scope.sort = {
-                type: 'cScore_modded',
+                type: 'cScore',
                 desc: true
             }
         }
@@ -42,9 +42,7 @@ app.controller('TierCtrl', function($rootScope, $scope, Cards, localStorageServi
     }
 
     $scope.sortBy = function(type) {
-        if ($scope.filters.heel && type.includes("Score")) {
-            type = type + "_heel";
-        }
+
         Cards.sortBy($scope.sort, $scope.filters.idlz, type)
         localStorageService.set('sort', $scope.sort)
     }
@@ -52,8 +50,8 @@ app.controller('TierCtrl', function($rootScope, $scope, Cards, localStorageServi
     $scope.toggleHeel = function() {
         Cards.calcSkill($scope.cards, $scope.song, $scope.filters.heel);
 
-        if ($scope.filters.heel) $scope.sortBy("cScore_modded_heel");
-        else $scope.sortBy("cScore_modded")
+        if ($scope.filters.heel) $scope.sortBy("cScore.heel");
+        else $scope.sortBy("cScore")
     }
 
     $scope.displayScore = function(card, scoreType) {
@@ -72,11 +70,11 @@ app.controller('TierCtrl', function($rootScope, $scope, Cards, localStorageServi
         localStorageService.set('filters', $scope.filters);
 
         $scope.sort = {
-            type: 'cScore_modded',
+            type: 'cScore',
             desc: false
         }
         $scope.filterCards()
-        $scope.sortBy('cScore_modded');
+        $scope.sortBy($scope.sort.type);
     }
 
     $scope.setLocalStorageFilters = function() {
