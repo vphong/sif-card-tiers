@@ -105,7 +105,6 @@ app.factory('Cards', function($rootScope, $http) {
         var card;
         var newCards = [];
         var len = cards.length;
-        console.log(filters.subunit)
 
         angular.forEach(cards, function(card) {
             if ((filters.server == 'en' && !card.japan_only ||
@@ -162,6 +161,8 @@ app.factory('Cards', function($rootScope, $http) {
                 activations = Math.floor(song.notes * song.perfects / card.skill.activation_count)
             } else if (card.skill.activation_type == "seconds") {
                 activations = Math.floor(song.seconds / card.skill.activation_count)
+            } else if (card.skill.activation_type.includes("star")) {
+                activations = Math.floor(song.stars / card.skill.activation_count)
             } else { // notes or combo string
                 activations = Math.floor(song.notes / card.skill.activation_count)
             }
