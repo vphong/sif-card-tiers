@@ -40,21 +40,33 @@
                 </div>
             </div>
 
+            <div class="btn-group btn-group-justified col-xs-12" uib-tooltip="Main unit" tooltip-placement="top">
+                <label class="btn btn-info btn-sm" ng-model="filters.muse" ng-click="filterCards()" uib-btn-checkbox>Muse</label>
+                <label class="btn btn-info btn-sm" ng-model="filters.aqours" ng-click="filterCards()" uib-btn-checkbox>Aqours</label>
+            </div>
+
             <div class="btn-group btn-group-justified col-xs-12" uib-tooltip="Rarity" tooltip-placement="top">
                 <label class="btn btn-info btn-sm" ng-model="filters.sr" ng-click="toggleBool(filters.sr);filterCards()" uib-btn-checkbox>SR</label>
                 <label class="btn btn-info btn-sm" ng-model="filters.ssr" ng-click="toggleBool(filters.ssr);filterCards()" uib-btn-checkbox>SSR</label>
                 <label class="btn btn-info btn-sm" ng-model="filters.ur" ng-click="toggleBool(filters.ur);filterCards()" uib-btn-checkbox>UR</label>
             </div>
 
-            <div class="btn-group-vertical col-xs-12" uib-tooltip="Origin" tooltip-placement="top">
-                <label class="btn btn-info btn-sm" ng-model="filters.premium" ng-click="toggleBool(filters.premium);filterCards()" uib-btn-checkbox>Premium</label>
-                <label class="btn btn-info btn-sm" ng-model="filters.event" ng-click="toggleBool(filters.event);filterCards()" uib-btn-checkbox>Event</label>
-                <label class="btn btn-info btn-sm" ng-model="filters.promo" ng-click="toggleBool(filters.promo);filterCards()" uib-btn-checkbox>Promo</label>
-            </div>
-
-            <div class="btn-group btn-group-justified col-xs-12" uib-tooltip="Main unit" tooltip-placement="top">
-                <label class="btn btn-info btn-sm" ng-model="filters.muse" ng-click="filterCards()" uib-btn-checkbox>Muse</label>
-                <label class="btn btn-info btn-sm" ng-model="filters.aqours" ng-click="filterCards()" uib-btn-checkbox>Aqours</label>
+            <div class="btn-group btn-group-dropdown dropup col-xs-12 no-padding" style="margin-bottom: 10px;" uib-dropdown>
+                <button type="button" class="btn btn-sm btn-info name">Origin</button>
+                <button type="button" class="btn btn-sm btn-info drop" uib-dropdown-toggle>
+                    <span class="caret"></span>
+                </button>
+                <ul class="dropdown-menu" uib-dropdown-menu role="menu" aria-labelledby="split-button">
+                    <li role="menuitem">
+                        <a ng-model="filters.premium" ng-click="filterCards()" uib-btn-checkbox>Premium</a>
+                    </li>
+                    <li role="menuitem">
+                        <a ng-model="filters.event" ng-click="filterCards()" uib-btn-checkbox>Event</a>
+                    </li>
+                    <li role="menuitem">
+                        <a ng-model="filters.promo" ng-click="filterCards()" uib-btn-checkbox>Promo</a>
+                    </li>
+                </ul>
             </div>
 
             <div class="btn-group btn-group-dropdown dropup col-xs-12 no-padding" style="margin-bottom: 10px;" uib-dropdown>
@@ -89,7 +101,7 @@
                 </ul>
             </div>
 
-            <div class="btn-group btn-group-dropdown dropup col-xs-12 no-padding" uib-dropdown>
+            <div class="btn-group btn-group-dropdown dropup col-xs-12 no-padding" style="margin-bottom: 10px;" uib-dropdown>
                 <button type="button" class="btn btn-sm btn-info name">Year</button>
                 <button type="button" class="btn btn-sm btn-info drop" uib-dropdown-toggle>
                     <span class="caret"></span>
@@ -110,6 +122,14 @@
                     </li>
                 </ul>
             </div>
+
+            <small class="col-xs-12">
+                Showing
+                <b>{{filtered.length}}</b>
+                of
+                <b>{{$root.Cards.length}}</b>
+                total cards.
+            </small>
         </div>
     </div>
 
@@ -119,7 +139,13 @@
 
             <div class="col-xs-4 no-padding">
                 <div class="input-group input-group-sm">
-                    <span class="input-group-addon" style="cursor: help" popover-append-to-body="true" popover-trigger="'mouseenter'" popover-placement="top-left" uib-popover="Terms include: girl, attribute, skill type, main unit, subunit, and English schoolido.lu set name.">
+                    <span
+                        class="input-group-addon"
+                        style="cursor: help"
+                        popover-append-to-body="true"
+                        popover-trigger="'mouseenter'"
+                        popover-placement="top-left"
+                        uib-popover="Terms include: girl, attribute, skill type, main unit, subunit, and English schoolido.lu set name.">
                         <i class="fa fa-search"></i>
                     </span>
                     <input type="text" class="form-control" ng-model="search" ng-change="updateSearch()" placeholder="search by card" uib-typeahead="type for type in $root.Typeahead | filter:$viewValue | limitTo:8">
