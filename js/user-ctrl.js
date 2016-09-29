@@ -1,4 +1,7 @@
 app.controller('UserCtrl', function($rootScope, $scope, Cards, localStorageService, $filter) {
+    // $rootScope = $rootScope.$new(true)
+    // $scope = $scope.$new(true)
+    // localStorageService.clearAll()
 
     var init = function() {
         $scope.userFilters = localStorageService.get('userFilters');
@@ -6,7 +9,6 @@ app.controller('UserCtrl', function($rootScope, $scope, Cards, localStorageServi
             $scope.userFilters = angular.copy($rootScope.InitFilters);
             $scope.userFilters.displayImg = true;
         }
-        console.log($scope.userFilters)
 
         $scope.sort = localStorageService.get('sort');
         if (!$scope.sort) {
@@ -39,13 +41,17 @@ app.controller('UserCtrl', function($rootScope, $scope, Cards, localStorageServi
 
         if ($scope.rawUserCardsData) $scope.userCards = angular.copy(Cards.filterCards($scope.userFilters, $scope.rawUserCardsData))
         else $scope.userCards = [];
-        console.log($scope.rawUserCardsData)
 
         Cards.calcSkill($scope.userCards, $scope.userSong, $scope.userFilters.heel);
 
     }
     init();
+    $scope.toggleHeel = function() {
+        Cards.calcSkill($scope.userCards, $scope.userSong, $scope.userFilters.heel);
 
+        if ($scope.userFilters.heel) $scope.sortBy("cScore_modded_heel");
+        else $scope.sortBy($scope.sort.type)
+    }
     $scope.updateSearch = function() {
         localStorageService.set('userSearch', $scope.userSearch);
     }
