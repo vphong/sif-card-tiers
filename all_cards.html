@@ -280,13 +280,13 @@
                             </td>
                             <td>
                                 {{card.skill.avg |number:2}}
-                                <i ng-if="card.skill.type=='Score Up' || (card.skill.type=='Healer' && filters.heel)" class="fa fa-level-up" uib-tooltip="Score Up"></i>
-                                <i ng-if="card.skill.type=='Healer' && !filters.heel" class="fa fa-heart" uib-tooltip="Healer"></i>
+                                <i ng-if="card.skill.type=='Score Up' || (card.skill.type=='Healer' && filters.heel && !card.is_promo)" class="fa fa-level-up" uib-tooltip="Score Up"></i>
+                                <i ng-if="card.skill.type=='Healer' && (!filters.heel || card.is_promo)" class="fa fa-heart" uib-tooltip="Healer"></i>
                                 <i ng-if="card.skill.type=='Perfect Lock'" class="fa fa-lock" uib-tooltip="Perfect Lock"></i>
                             </td>
                             <td>{{card.skill.best |number:2}}
-                                <i ng-if="card.skill.type=='Score Up' || (card.skill.type=='Healer' && filters.heel)" class="fa fa-level-up" uib-tooltip="Score Up"></i>
-                                <i ng-if="card.skill.type=='Healer' && !filters.heel" class="fa fa-heart" uib-tooltip="Healer"></i>
+                                <i ng-if="card.skill.type=='Score Up' || (card.skill.type=='Healer' && filters.heel && !card.is_promo)" class="fa fa-level-up" uib-tooltip="Score Up"></i>
+                                <i ng-if="card.skill.type=='Healer' && (!filters.heel || card.is_promo)" class="fa fa-heart" uib-tooltip="Healer"></i>
                                 <i ng-if="card.skill.type=='Perfect Lock'" class="fa fa-lock" uib-tooltip="Perfect Lock"></i>
                             </td>
                         </tr>
