@@ -6,14 +6,15 @@ app.controller('UserCtrl', function($rootScope, $scope, Cards, localStorageServi
             $scope.userFilters = angular.copy($rootScope.InitFilters);
             $scope.userFilters.displayImg = true;
         }
+        console.log($scope.userFilters)
 
         $scope.sort = localStorageService.get('sort');
         if (!$scope.sort) {
             $scope.sort = {
-                type: 'cScore',
+                type: 'cScore_modded',
                 desc: true,
             }
-            localStorageService.set('sort', $scope.filters);
+            localStorageService.set('sort', $scope.sort);
         }
 
         $scope.sit = localStorageService.get('sit');
@@ -38,6 +39,7 @@ app.controller('UserCtrl', function($rootScope, $scope, Cards, localStorageServi
 
         if ($scope.rawUserCardsData) $scope.userCards = angular.copy(Cards.filterCards($scope.userFilters, $scope.rawUserCardsData))
         else $scope.userCards = [];
+        console.log($scope.rawUserCardsData)
 
         Cards.calcSkill($scope.userCards, $scope.userSong, $scope.userFilters.heel);
 
