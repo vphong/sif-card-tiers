@@ -49,8 +49,10 @@ app.controller('UserCtrl', function($rootScope, $scope, Cards, localStorageServi
     $scope.toggleHeel = function() {
         Cards.calcSkill($scope.userCards, $scope.userSong, $scope.userFilters.heel);
 
-        if ($scope.userFilters.heel) $scope.sortBy("cScore_modded_heel");
-        else $scope.sortBy($scope.sort.type)
+        if ($scope.userFilters.heel && $scope.userFilters.idlz) $scope.sortBy("cScore_modded_idlz_heel");
+        else if ($scope.userFilters.heel && !$scope.userFilters.idlz) $scope.sortBy("cScore_modded_heel");
+        else if (!$scope.userFilters.heel && $scope.userFilters.idlz) $scope.sortBy("cScore_modded_idlz")
+        else $scope.sortBy("cScore_modded")
     }
     $scope.updateSearch = function() {
         localStorageService.set('userSearch', $scope.userSearch);
