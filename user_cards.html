@@ -37,16 +37,81 @@
                 <label class="btn btn-info btn-sm" ng-model="userFilters.ur" ng-click="filterCards()" uib-btn-checkbox>UR</label>
             </div>
 
-            <div class="btn-group-vertical col-xs-12" uib-tooltip="Origin" tooltip-placement="top">
-                <label class="btn btn-info btn-sm" ng-model="userFilters.premium" ng-click="filterCards()" uib-btn-checkbox>Premium</label>
-                <label class="btn btn-info btn-sm" ng-model="userFilters.event" ng-click="filterCards()" uib-btn-checkbox>Event</label>
-                <label class="btn btn-info btn-sm" ng-model="userFilters.promo" ng-click="filterCards()" uib-btn-checkbox>Promo</label>
-            </div>
-
             <div class="btn-group btn-group-justified col-xs-12" uib-tooltip="Main unit" tooltip-placement="top">
                 <label class="btn btn-info btn-sm" ng-model="userFilters.muse" ng-click="filterCards()" uib-btn-checkbox>Muse</label>
                 <label class="btn btn-info btn-sm" ng-model="userFilters.aqours" ng-click="filterCards()" uib-btn-checkbox>Aqours</label>
             </div>
+                        <div class="btn-group btn-group-dropdown dropup col-xs-12 no-padding" style="margin-bottom: 10px;" uib-dropdown>
+                            <button type="button" class="btn btn-sm btn-info name">Origin</button>
+                            <button type="button" class="btn btn-sm btn-info drop" uib-dropdown-toggle>
+                                <span class="caret"></span>
+                            </button>
+                            <ul class="dropdown-menu" uib-dropdown-menu role="menu" aria-labelledby="split-button">
+                                <li role="menuitem">
+                                    <a ng-model="userFilters.premium" ng-click="filterCards()" uib-btn-checkbox>Premium</a>
+                                </li>
+                                <li role="menuitem">
+                                    <a ng-model="userFilters.event" ng-click="filterCards()" uib-btn-checkbox>Event</a>
+                                </li>
+                                <li role="menuitem">
+                                    <a ng-model="userFilters.promo" ng-click="filterCards()" uib-btn-checkbox>Promo</a>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div class="btn-group btn-group-dropdown dropup col-xs-12 no-padding" style="margin-bottom: 10px;" uib-dropdown>
+                            <button type="button" class="btn btn-sm btn-info name">Subunit</button>
+                            <button type="button" class="btn btn-sm btn-info drop" uib-dropdown-toggle>
+                                <span class="caret"></span>
+                            </button>
+                            <ul class="dropdown-menu" uib-dropdown-menu role="menu" aria-labelledby="split-button">
+                                <li role="menuitem">
+                                    <a ng-model="userFilters.subunit" ng-click="filterCards()" uib-btn-radio="'all'">All</a>
+                                </li>
+                                <li class="divider"></li>
+                                <li role="menuitem">
+                                    <a ng-model="userFilters.subunit" ng-click="filterCards()" uib-btn-radio="'lily white'">lily white</a>
+                                </li>
+                                <li role="menuitem">
+                                    <a ng-model="userFilters.subunit" ng-click="filterCards()" uib-btn-radio="'Printemps'">Printemps</a>
+                                </li>
+                                <li role="menuitem">
+                                    <a ng-model="userFilters.subunit" ng-click="filterCards()" uib-btn-radio="'BiBi'">BiBi</a>
+                                </li>
+                                <li class="divider"></li>
+                                <li role="menuitem">
+                                    <a ng-model="userFilters.subunit" ng-click="filterCards()" uib-btn-radio="'AZALEA'">AZALEA</a>
+                                </li>
+                                <li role="menuitem">
+                                    <a ng-model="userFilters.subunit" ng-click="filterCards()" uib-btn-radio="'CYaRon'">CYaRon</a>
+                                </li>
+                                <li role="menuitem">
+                                    <a ng-model="userFilters.subunit" ng-click="filterCards()" uib-btn-radio="'Guilty Kiss'">Guilty Kiss</a>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div class="btn-group btn-group-dropdown dropup col-xs-12 no-padding" style="margin-bottom: 10px;" uib-dropdown>
+                            <button type="button" class="btn btn-sm btn-info name">Year</button>
+                            <button type="button" class="btn btn-sm btn-info drop" uib-dropdown-toggle>
+                                <span class="caret"></span>
+                            </button>
+                            <ul class="dropdown-menu" uib-dropdown-menu role="menu" aria-labelledby="split-button">
+                                <li role="menuitem">
+                                    <a ng-model="userFilters.year" ng-click="filterCards()" uib-btn-radio="'all'">All</a>
+                                </li>
+                                <li class="divider"></li>
+                                <li role="menuitem">
+                                    <a ng-model="userFilters.year" ng-click="filterCards()" uib-btn-radio="'1'">First</a>
+                                </li>
+                                <li role="menuitem">
+                                    <a ng-model="userFilters.year" ng-click="filterCards()" uib-btn-radio="'2'">Second</a>
+                                </li>
+                                <li role="menuitem">
+                                    <a ng-model="userFilters.year" ng-click="filterCards()" uib-btn-radio="'3'">Third</a>
+                                </li>
+                            </ul>
+                        </div>
 
             <small class="col-xs-12">
                 Showing
@@ -231,13 +296,13 @@
                             </td>
                             <td>
                                 {{card.skill.avg |number:2}}
-                                <i ng-if="card.skill.type=='Score Up' || (card.skill.type=='Healer' && filters.heel)" class="fa fa-level-up" uib-tooltip="Score Up"></i>
-                                <i ng-if="card.skill.type=='Healer' && !filters.heel" class="fa fa-heart" uib-tooltip="Healer"></i>
+                                <i ng-if="card.skill.type=='Score Up' || (card.skill.type=='Healer' && userFilters.heel)" class="fa fa-level-up" uib-tooltip="Score Up"></i>
+                                <i ng-if="card.skill.type=='Healer' && !userFilters.heel" class="fa fa-heart" uib-tooltip="Healer"></i>
                                 <i ng-if="card.skill.type=='Perfect Lock'" class="fa fa-lock" uib-tooltip="Perfect Lock"></i>
                             </td>
                             <td>{{card.skill.best |number:2}}
-                                <i ng-if="card.skill.type=='Score Up' || (card.skill.type=='Healer' && filters.heel)" class="fa fa-level-up" uib-tooltip="Score Up"></i>
-                                <i ng-if="card.skill.type=='Healer' && !filters.heel" class="fa fa-heart" uib-tooltip="Healer"></i>
+                                <i ng-if="card.skill.type=='Score Up' || (card.skill.type=='Healer' && userFilters.heel)" class="fa fa-level-up" uib-tooltip="Score Up"></i>
+                                <i ng-if="card.skill.type=='Healer' && !userFilters.heel" class="fa fa-heart" uib-tooltip="Healer"></i>
                                 <i ng-if="card.skill.type=='Perfect Lock'" class="fa fa-lock" uib-tooltip="Perfect Lock"></i>
                             </td>
                         </tr>
