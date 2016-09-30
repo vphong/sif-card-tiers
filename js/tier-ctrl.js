@@ -50,8 +50,9 @@ app.controller('TierCtrl', function($rootScope, $scope, Cards, localStorageServi
     $scope.toggleHeel = function() {
         Cards.calcSkill($scope.cards, $scope.song, $scope.filters.heel);
 
-        if ($scope.filters.heel) $scope.sortBy("cScore.heel");
-        else $scope.sortBy("cScore")
+        // if ($scope.filters.heel) $scope.sortBy("cScore.heel");
+        // else $scope.sortBy("cScore")
+        	// 6,900.41
     }
 
     $scope.displayScore = function(card, scoreType) {

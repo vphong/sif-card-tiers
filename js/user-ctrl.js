@@ -219,7 +219,7 @@ app.controller('UserCtrl', function($rootScope, $scope, Cards, localStorageServi
             desc: false,
         }
         $scope.filterCards()
-        $scope.sortBy('cScore');
+        $scope.sortBy($scope.sort.type);
     }
 
     $scope.sortBy = function(type) {

@@ -3873,10 +3873,10 @@ app.constant('CardData',
   {
     "attribute": "Smile",
     "cScore": {
-      "base": 7088.600000000001,
-      "heel": 7088.600000000001,
-      "idlz": 7088.600000000001,
-      "idlz_heel": 7088.600000000001
+      "base": 5810.0,
+      "heel": 5810.0,
+      "idlz": 5810.0,
+      "idlz_heel": 5810.0
     },
     "event": null,
     "full_name": "UR Promo Yazawa Nico",
@@ -3892,10 +3892,10 @@ app.constant('CardData',
     "non_idolized_maximum_statistics_pure": 3670,
     "non_idolized_maximum_statistics_smile": 4360,
     "oScore": {
-      "base": 7088.600000000001,
-      "heel": 7088.600000000001,
-      "idlz": 7088.600000000001,
-      "idlz_heel": 7088.600000000001
+      "base": 5810.0,
+      "heel": 5810.0,
+      "idlz": 5810.0,
+      "idlz_heel": 5810.0
     },
     "on_attr": 4860,
     "on_attr_idlz": 5360,
@@ -3918,10 +3918,10 @@ app.constant('CardData',
   {
     "attribute": "Pure",
     "cScore": {
-      "base": 7075.375000000001,
-      "heel": 7075.375000000001,
-      "idlz": 7075.375000000001,
-      "idlz_heel": 7075.375000000001
+      "base": 5800.0,
+      "heel": 5800.0,
+      "idlz": 5800.0,
+      "idlz_heel": 5800.0
     },
     "event": null,
     "full_name": "UR Promo Toujou Nozomi",
@@ -3937,10 +3937,10 @@ app.constant('CardData',
     "non_idolized_maximum_statistics_pure": 4350,
     "non_idolized_maximum_statistics_smile": 2120,
     "oScore": {
-      "base": 7075.375000000001,
-      "heel": 7075.375000000001,
-      "idlz": 7075.375000000001,
-      "idlz_heel": 7075.375000000001
+      "base": 5800.0,
+      "heel": 5800.0,
+      "idlz": 5800.0,
+      "idlz_heel": 5800.0
     },
     "on_attr": 4850,
     "on_attr_idlz": 5350,
@@ -4008,10 +4008,10 @@ app.constant('CardData',
   {
     "attribute": "Cool",
     "cScore": {
-      "base": 7062.1500000000015,
-      "heel": 7062.1500000000015,
-      "idlz": 7062.1500000000015,
-      "idlz_heel": 7062.1500000000015
+      "base": 5790.0,
+      "heel": 5790.0,
+      "idlz": 5790.0,
+      "idlz_heel": 5790.0
     },
     "event": null,
     "full_name": "UR Promo Ayase Eli",
@@ -4027,10 +4027,10 @@ app.constant('CardData',
     "non_idolized_maximum_statistics_pure": 2450,
     "non_idolized_maximum_statistics_smile": 3680,
     "oScore": {
-      "base": 7062.1500000000015,
-      "heel": 7062.1500000000015,
-      "idlz": 7062.1500000000015,
-      "idlz_heel": 7062.1500000000015
+      "base": 5790.0,
+      "heel": 5790.0,
+      "idlz": 5790.0,
+      "idlz_heel": 5790.0
     },
     "on_attr": 4840,
     "on_attr_idlz": 5340,
@@ -4503,10 +4503,10 @@ app.constant('CardData',
   {
     "attribute": "Pure",
     "cScore": {
-      "base": 7062.1500000000015,
-      "heel": 7062.1500000000015,
-      "idlz": 7062.1500000000015,
-      "idlz_heel": 7062.1500000000015
+      "base": 5790.0,
+      "heel": 5790.0,
+      "idlz": 5790.0,
+      "idlz_heel": 5790.0
     },
     "event": null,
     "full_name": "UR Promo Koizumi Hanayo",
@@ -4522,10 +4522,10 @@ app.constant('CardData',
     "non_idolized_maximum_statistics_pure": 4340,
     "non_idolized_maximum_statistics_smile": 2890,
     "oScore": {
-      "base": 7062.1500000000015,
-      "heel": 7062.1500000000015,
-      "idlz": 7062.1500000000015,
-      "idlz_heel": 7062.1500000000015
+      "base": 5790.0,
+      "heel": 5790.0,
+      "idlz": 5790.0,
+      "idlz_heel": 5790.0
     },
     "on_attr": 4840,
     "on_attr_idlz": 5340,
@@ -4548,10 +4548,10 @@ app.constant('CardData',
   {
     "attribute": "Cool",
     "cScore": {
-      "base": 7088.600000000001,
-      "heel": 7088.600000000001,
-      "idlz": 7088.600000000001,
-      "idlz_heel": 7088.600000000001
+      "base": 5810.0,
+      "heel": 5810.0,
+      "idlz": 5810.0,
+      "idlz_heel": 5810.0
     },
     "event": null,
     "full_name": "UR Promo Nishikino Maki",
@@ -4567,10 +4567,10 @@ app.constant('CardData',
     "non_idolized_maximum_statistics_pure": 2970,
     "non_idolized_maximum_statistics_smile": 3140,
     "oScore": {
-      "base": 7088.600000000001,
-      "heel": 7088.600000000001,
-      "idlz": 7088.600000000001,
-      "idlz_heel": 7088.600000000001
+      "base": 5810.0,
+      "heel": 5810.0,
+      "idlz": 5810.0,
+      "idlz_heel": 5810.0
     },
     "on_attr": 4860,
     "on_attr_idlz": 5360,
@@ -4593,10 +4593,10 @@ app.constant('CardData',
   {
     "attribute": "Smile",
     "cScore": {
-      "base": 7075.375000000001,
-      "heel": 7075.375000000001,
-      "idlz": 7075.375000000001,
-      "idlz_heel": 7075.375000000001
+      "base": 5800.0,
+      "heel": 5800.0,
+      "idlz": 5800.0,
+      "idlz_heel": 5800.0
     },
     "event": null,
     "full_name": "UR Promo Hoshizora Rin",
@@ -4612,10 +4612,10 @@ app.constant('CardData',
     "non_idolized_maximum_statistics_pure": 3190,
     "non_idolized_maximum_statistics_smile": 4350,
     "oScore": {
-      "base": 7075.375000000001,
-      "heel": 7075.375000000001,
-      "idlz": 7075.375000000001,
-      "idlz_heel": 7075.375000000001
+      "base": 5800.0,
+      "heel": 5800.0,
+      "idlz": 5800.0,
+      "idlz_heel": 5800.0
     },
     "on_attr": 4850,
     "on_attr_idlz": 5350,
@@ -5178,10 +5178,10 @@ app.constant('CardData',
   {
     "attribute": "Cool",
     "cScore": {
-      "base": 7075.375000000001,
-      "heel": 7075.375000000001,
-      "idlz": 7075.375000000001,
-      "idlz_heel": 7075.375000000001
+      "base": 5800.0,
+      "heel": 5800.0,
+      "idlz": 5800.0,
+      "idlz_heel": 5800.0
     },
     "event": null,
     "full_name": "UR Promo Sonoda Umi",
@@ -5197,10 +5197,10 @@ app.constant('CardData',
     "non_idolized_maximum_statistics_pure": 2930,
     "non_idolized_maximum_statistics_smile": 3190,
     "oScore": {
-      "base": 7075.375000000001,
-      "heel": 7075.375000000001,
-      "idlz": 7075.375000000001,
-      "idlz_heel": 7075.375000000001
+      "base": 5800.0,
+      "heel": 5800.0,
+      "idlz": 5800.0,
+      "idlz_heel": 5800.0
     },
     "on_attr": 4850,
     "on_attr_idlz": 5350,
@@ -5223,10 +5223,10 @@ app.constant('CardData',
   {
     "attribute": "Pure",
     "cScore": {
-      "base": 7088.600000000001,
-      "heel": 7088.600000000001,
-      "idlz": 7088.600000000001,
-      "idlz_heel": 7088.600000000001
+      "base": 5810.0,
+      "heel": 5810.0,
+      "idlz": 5810.0,
+      "idlz_heel": 5810.0
     },
     "event": null,
     "full_name": "UR Promo Minami Kotori",
@@ -5242,10 +5242,10 @@ app.constant('CardData',
     "non_idolized_maximum_statistics_pure": 4360,
     "non_idolized_maximum_statistics_smile": 2970,
     "oScore": {
-      "base": 7088.600000000001,
-      "heel": 7088.600000000001,
-      "idlz": 7088.600000000001,
-      "idlz_heel": 7088.600000000001
+      "base": 5810.0,
+      "heel": 5810.0,
+      "idlz": 5810.0,
+      "idlz_heel": 5810.0
     },
     "on_attr": 4860,
     "on_attr_idlz": 5360,
@@ -5268,10 +5268,10 @@ app.constant('CardData',
   {
     "attribute": "Smile",
     "cScore": {
-      "base": 7062.1500000000015,
-      "heel": 7062.1500000000015,
-      "idlz": 7062.1500000000015,
-      "idlz_heel": 7062.1500000000015
+      "base": 5790.0,
+      "heel": 5790.0,
+      "idlz": 5790.0,
+      "idlz_heel": 5790.0
     },
     "event": null,
     "full_name": "UR Promo Kousaka Honoka",
@@ -5287,10 +5287,10 @@ app.constant('CardData',
     "non_idolized_maximum_statistics_pure": 2890,
     "non_idolized_maximum_statistics_smile": 4340,
     "oScore": {
-      "base": 7062.1500000000015,
-      "heel": 7062.1500000000015,
-      "idlz": 7062.1500000000015,
-      "idlz_heel": 7062.1500000000015
+      "base": 5790.0,
+      "heel": 5790.0,
+      "idlz": 5790.0,
+      "idlz_heel": 5790.0
     },
     "on_attr": 4840,
     "on_attr_idlz": 5340,
@@ -5493,10 +5493,10 @@ app.constant('CardData',
   {
     "attribute": "Smile",
     "cScore": {
-      "base": 7075.375000000001,
-      "heel": 7075.375000000001,
-      "idlz": 7075.375000000001,
-      "idlz_heel": 7075.375000000001
+      "base": 5800.0,
+      "heel": 5800.0,
+      "idlz": 5800.0,
+      "idlz_heel": 5800.0
     },
     "event": null,
     "full_name": "UR Promo Kousaka Honoka",
@@ -5512,10 +5512,10 @@ app.constant('CardData',
     "non_idolized_maximum_statistics_pure": 3950,
     "non_idolized_maximum_statistics_smile": 4350,
     "oScore": {
-      "base": 7075.375000000001,
-      "heel": 7075.375000000001,
-      "idlz": 7075.375000000001,
-      "idlz_heel": 7075.375000000001
+      "base": 5800.0,
+      "heel": 5800.0,
+      "idlz": 5800.0,
+      "idlz_heel": 5800.0
     },
     "on_attr": 4850,
     "on_attr_idlz": 5350,
@@ -5853,10 +5853,10 @@ app.constant('CardData',
   {
     "attribute": "Smile",
     "cScore": {
-      "base": 5660.300000000001,
-      "heel": 5660.300000000001,
-      "idlz": 5660.300000000001,
-      "idlz_heel": 5660.300000000001
+      "base": 4480.0,
+      "heel": 4480.0,
+      "idlz": 4480.0,
+      "idlz_heel": 4480.0
     },
     "event": null,
     "full_name": "SR Promo Yazawa Nico",
@@ -5872,10 +5872,10 @@ app.constant('CardData',
     "non_idolized_maximum_statistics_pure": 2820,
     "non_idolized_maximum_statistics_smile": 4280,
     "oScore": {
-      "base": 5660.300000000001,
-      "heel": 5660.300000000001,
-      "idlz": 5660.300000000001,
-      "idlz_heel": 5660.300000000001
+      "base": 4480.0,
+      "heel": 4480.0,
+      "idlz": 4480.0,
+      "idlz_heel": 4480.0
     },
     "on_attr": 4530,
     "on_attr_idlz": 4280,
@@ -5898,10 +5898,10 @@ app.constant('CardData',
   {
     "attribute": "Pure",
     "cScore": {
-      "base": 5528.050000000001,
-      "heel": 5528.050000000001,
-      "idlz": 5528.050000000001,
-      "idlz_heel": 5528.050000000001
+      "base": 4380.0,
+      "heel": 4380.0,
+      "idlz": 4380.0,
+      "idlz_heel": 4380.0
     },
     "event": null,
     "full_name": "SR Promo Koizumi Hanayo",
@@ -5917,10 +5917,10 @@ app.constant('CardData',
     "non_idolized_maximum_statistics_pure": 4180,
     "non_idolized_maximum_statistics_smile": 2550,
     "oScore": {
-      "base": 5528.050000000001,
-      "heel": 5528.050000000001,
-      "idlz": 5528.050000000001,
-      "idlz_heel": 5528.050000000001
+      "base": 4380.0,
+      "heel": 4380.0,
+      "idlz": 4380.0,
+      "idlz_heel": 4380.0
     },
     "on_attr": 4430,
     "on_attr_idlz": 4180,
@@ -5943,10 +5943,10 @@ app.constant('CardData',
   {
     "attribute": "Pure",
     "cScore": {
-      "base": 5528.050000000001,
-      "heel": 5528.050000000001,
-      "idlz": 5528.050000000001,
-      "idlz_heel": 5528.050000000001
+      "base": 4380.0,
+      "heel": 4380.0,
+      "idlz": 4380.0,
+      "idlz_heel": 4380.0
     },
     "event": null,
     "full_name": "SR Promo Toujou Nozomi",
@@ -5962,10 +5962,10 @@ app.constant('CardData',
     "non_idolized_maximum_statistics_pure": 4180,
     "non_idolized_maximum_statistics_smile": 2910,
     "oScore": {
-      "base": 5528.050000000001,
-      "heel": 5528.050000000001,
-      "idlz": 5528.050000000001,
-      "idlz_heel": 5528.050000000001
+      "base": 4380.0,
+      "heel": 4380.0,
+      "idlz": 4380.0,
+      "idlz_heel": 4380.0
     },
     "on_attr": 4430,
     "on_attr_idlz": 4180,
@@ -6033,10 +6033,10 @@ app.constant('CardData',
   {
     "attribute": "Cool",
     "cScore": {
-      "base": 5594.175000000001,
-      "heel": 5594.175000000001,
-      "idlz": 5594.175000000001,
-      "idlz_heel": 5594.175000000001
+      "base": 4430.0,
+      "heel": 4430.0,
+      "idlz": 4430.0,
+      "idlz_heel": 4430.0
     },
     "event": null,
     "full_name": "SR Promo Nishikino Maki",
@@ -6052,10 +6052,10 @@ app.constant('CardData',
     "non_idolized_maximum_statistics_pure": 2540,
     "non_idolized_maximum_statistics_smile": 2880,
     "oScore": {
-      "base": 5594.175000000001,
-      "heel": 5594.175000000001,
-      "idlz": 5594.175000000001,
-      "idlz_heel": 5594.175000000001
+      "base": 4430.0,
+      "heel": 4430.0,
+      "idlz": 4430.0,
+      "idlz_heel": 4430.0
     },
     "on_attr": 4480,
     "on_attr_idlz": 4230,
@@ -6123,10 +6123,10 @@ app.constant('CardData',
   {
     "attribute": "Smile",
     "cScore": {
-      "base": 5660.300000000001,
-      "heel": 5660.300000000001,
-      "idlz": 5660.300000000001,
-      "idlz_heel": 5660.300000000001
+      "base": 4480.0,
+      "heel": 4480.0,
+      "idlz": 4480.0,
+      "idlz_heel": 4480.0
     },
     "event": null,
     "full_name": "SR Promo Hoshizora Rin",
@@ -6142,10 +6142,10 @@ app.constant('CardData',
     "non_idolized_maximum_statistics_pure": 2540,
     "non_idolized_maximum_statistics_smile": 4280,
     "oScore": {
-      "base": 5660.300000000001,
-      "heel": 5660.300000000001,
-      "idlz": 5660.300000000001,
-      "idlz_heel": 5660.300000000001
+      "base": 4480.0,
+      "heel": 4480.0,
+      "idlz": 4480.0,
+      "idlz_heel": 4480.0
     },
     "on_attr": 4530,
     "on_attr_idlz": 4280,
@@ -6168,10 +6168,10 @@ app.constant('CardData',
   {
     "attribute": "Cool",
     "cScore": {
-      "base": 5594.175000000001,
-      "heel": 5594.175000000001,
-      "idlz": 5594.175000000001,
-      "idlz_heel": 5594.175000000001
+      "base": 4430.0,
+      "heel": 4430.0,
+      "idlz": 4430.0,
+      "idlz_heel": 4430.0
     },
     "event": null,
     "full_name": "SR Promo Sonoda Umi",
@@ -6187,10 +6187,10 @@ app.constant('CardData',
     "non_idolized_maximum_statistics_pure": 2560,
     "non_idolized_maximum_statistics_smile": 2860,
     "oScore": {
-      "base": 5594.175000000001,
-      "heel": 5594.175000000001,
-      "idlz": 5594.175000000001,
-      "idlz_heel": 5594.175000000001
+      "base": 4430.0,
+      "heel": 4430.0,
+      "idlz": 4430.0,
+      "idlz_heel": 4430.0
     },
     "on_attr": 4480,
     "on_attr_idlz": 4230,
@@ -6258,10 +6258,10 @@ app.constant('CardData',
   {
     "attribute": "Pure",
     "cScore": {
-      "base": 5528.050000000001,
-      "heel": 5528.050000000001,
-      "idlz": 5528.050000000001,
-      "idlz_heel": 5528.050000000001
+      "base": 4380.0,
+      "heel": 4380.0,
+      "idlz": 4380.0,
+      "idlz_heel": 4380.0
     },
     "event": null,
     "full_name": "SR Promo Minami Kotori",
@@ -6277,10 +6277,10 @@ app.constant('CardData',
     "non_idolized_maximum_statistics_pure": 4180,
     "non_idolized_maximum_statistics_smile": 2570,
     "oScore": {
-      "base": 5528.050000000001,
-      "heel": 5528.050000000001,
-      "idlz": 5528.050000000001,
-      "idlz_heel": 5528.050000000001
+      "base": 4380.0,
+      "heel": 4380.0,
+      "idlz": 4380.0,
+      "idlz_heel": 4380.0
     },
     "on_attr": 4430,
     "on_attr_idlz": 4180,
@@ -6303,10 +6303,10 @@ app.constant('CardData',
   {
     "attribute": "Cool",
     "cScore": {
-      "base": 5594.175000000001,
-      "heel": 5594.175000000001,
-      "idlz": 5594.175000000001,
-      "idlz_heel": 5594.175000000001
+      "base": 4430.0,
+      "heel": 4430.0,
+      "idlz": 4430.0,
+      "idlz_heel": 4430.0
     },
     "event": null,
     "full_name": "SR Promo Ayase Eli",
@@ -6322,10 +6322,10 @@ app.constant('CardData',
     "non_idolized_maximum_statistics_pure": 2870,
     "non_idolized_maximum_statistics_smile": 2550,
     "oScore": {
-      "base": 5594.175000000001,
-      "heel": 5594.175000000001,
-      "idlz": 5594.175000000001,
-      "idlz_heel": 5594.175000000001
+      "base": 4430.0,
+      "heel": 4430.0,
+      "idlz": 4430.0,
+      "idlz_heel": 4430.0
     },
     "on_attr": 4480,
     "on_attr_idlz": 4230,
@@ -6393,10 +6393,10 @@ app.constant('CardData',
   {
     "attribute": "Smile",
     "cScore": {
-      "base": 5660.300000000001,
-      "heel": 5660.300000000001,
-      "idlz": 5660.300000000001,
-      "idlz_heel": 5660.300000000001
+      "base": 4480.0,
+      "heel": 4480.0,
+      "idlz": 4480.0,
+      "idlz_heel": 4480.0
     },
     "event": null,
     "full_name": "SR Promo Kousaka Honoka",
@@ -6412,10 +6412,10 @@ app.constant('CardData',
     "non_idolized_maximum_statistics_pure": 2560,
     "non_idolized_maximum_statistics_smile": 4280,
     "oScore": {
-      "base": 5660.300000000001,
-      "heel": 5660.300000000001,
-      "idlz": 5660.300000000001,
-      "idlz_heel": 5660.300000000001
+      "base": 4480.0,
+      "heel": 4480.0,
+      "idlz": 4480.0,
+      "idlz_heel": 4480.0
     },
     "on_attr": 4530,
     "on_attr_idlz": 4280,
@@ -6438,10 +6438,10 @@ app.constant('CardData',
   {
     "attribute": "Smile",
     "cScore": {
-      "base": 7088.600000000001,
-      "heel": 7088.600000000001,
-      "idlz": 7088.600000000001,
-      "idlz_heel": 7088.600000000001
+      "base": 5810.0,
+      "heel": 5810.0,
+      "idlz": 5810.0,
+      "idlz_heel": 5810.0
     },
     "event": null,
     "full_name": "UR Promo Kousaka Honoka",
@@ -6457,10 +6457,10 @@ app.constant('CardData',
     "non_idolized_maximum_statistics_pure": 3560,
     "non_idolized_maximum_statistics_smile": 4360,
     "oScore": {
-      "base": 7088.600000000001,
-      "heel": 7088.600000000001,
-      "idlz": 7088.600000000001,
-      "idlz_heel": 7088.600000000001
+      "base": 5810.0,
+      "heel": 5810.0,
+      "idlz": 5810.0,
+      "idlz_heel": 5810.0
     },
     "on_attr": 4860,
     "on_attr_idlz": 5360,
@@ -7068,10 +7068,10 @@ app.constant('CardData',
   {
     "attribute": "Cool",
     "cScore": {
-      "base": 5501.600000000001,
-      "heel": 5501.600000000001,
-      "idlz": 5501.600000000001,
-      "idlz_heel": 5501.600000000001
+      "base": 4360.0,
+      "heel": 4360.0,
+      "idlz": 4360.0,
+      "idlz_heel": 4360.0
     },
     "event": null,
     "full_name": "SR Promo Yazawa Nico",
@@ -7087,10 +7087,10 @@ app.constant('CardData',
     "non_idolized_maximum_statistics_pure": 2650,
     "non_idolized_maximum_statistics_smile": 2980,
     "oScore": {
-      "base": 5501.600000000001,
-      "heel": 5501.600000000001,
-      "idlz": 5501.600000000001,
-      "idlz_heel": 5501.600000000001
+      "base": 4360.0,
+      "heel": 4360.0,
+      "idlz": 4360.0,
+      "idlz_heel": 4360.0
     },
     "on_attr": 4410,
     "on_attr_idlz": 4160,
@@ -7158,10 +7158,10 @@ app.constant('CardData',
   {
     "attribute": "Cool",
     "cScore": {
-      "base": 5501.600000000001,
-      "heel": 5501.600000000001,
-      "idlz": 5501.600000000001,
-      "idlz_heel": 5501.600000000001
+      "base": 4360.0,
+      "heel": 4360.0,
+      "idlz": 4360.0,
+      "idlz_heel": 4360.0
     },
     "event": null,
     "full_name": "SR Promo Nishikino Maki",
@@ -7177,10 +7177,10 @@ app.constant('CardData',
     "non_idolized_maximum_statistics_pure": 2970,
     "non_idolized_maximum_statistics_smile": 2660,
     "oScore": {
-      "base": 5501.600000000001,
-      "heel": 5501.600000000001,
-      "idlz": 5501.600000000001,
-      "idlz_heel": 5501.600000000001
+      "base": 4360.0,
+      "heel": 4360.0,
+      "idlz": 4360.0,
+      "idlz_heel": 4360.0
     },
     "on_attr": 4410,
     "on_attr_idlz": 4160,
@@ -7248,10 +7248,10 @@ app.constant('CardData',
   {
     "attribute": "Cool",
     "cScore": {
-      "base": 5501.600000000001,
-      "heel": 5501.600000000001,
-      "idlz": 5501.600000000001,
-      "idlz_heel": 5501.600000000001
+      "base": 4360.0,
+      "heel": 4360.0,
+      "idlz": 4360.0,
+      "idlz_heel": 4360.0
     },
     "event": null,
     "full_name": "SR Promo Ayase Eli",
@@ -7267,10 +7267,10 @@ app.constant('CardData',
     "non_idolized_maximum_statistics_pure": 2640,
     "non_idolized_maximum_statistics_smile": 2990,
     "oScore": {
-      "base": 5501.600000000001,
-      "heel": 5501.600000000001,
-      "idlz": 5501.600000000001,
-      "idlz_heel": 5501.600000000001
+      "base": 4360.0,
+      "heel": 4360.0,
+      "idlz": 4360.0,
+      "idlz_heel": 4360.0
     },
     "on_attr": 4410,
     "on_attr_idlz": 4160,
@@ -7608,10 +7608,10 @@ app.constant('CardData',
   {
     "attribute": "Pure",
     "cScore": {
-      "base": 5766.100000000001,
-      "heel": 5766.100000000001,
-      "idlz": 5766.100000000001,
-      "idlz_heel": 5766.100000000001
+      "base": 4560.0,
+      "heel": 4560.0,
+      "idlz": 4560.0,
+      "idlz_heel": 4560.0
     },
     "event": null,
     "full_name": "SR Promo Toujou Nozomi",
@@ -7627,10 +7627,10 @@ app.constant('CardData',
     "non_idolized_maximum_statistics_pure": 4360,
     "non_idolized_maximum_statistics_smile": 2550,
     "oScore": {
-      "base": 5766.100000000001,
-      "heel": 5766.100000000001,
-      "idlz": 5766.100000000001,
-      "idlz_heel": 5766.100000000001
+      "base": 4560.0,
+      "heel": 4560.0,
+      "idlz": 4560.0,
+      "idlz_heel": 4560.0
     },
     "on_attr": 4610,
     "on_attr_idlz": 4360,
@@ -7653,10 +7653,10 @@ app.constant('CardData',
   {
     "attribute": "Pure",
     "cScore": {
-      "base": 5766.100000000001,
-      "heel": 5766.100000000001,
-      "idlz": 5766.100000000001,
-      "idlz_heel": 5766.100000000001
+      "base": 4560.0,
+      "heel": 4560.0,
+      "idlz": 4560.0,
+      "idlz_heel": 4560.0
     },
     "event": null,
     "full_name": "SR Promo Hoshizora Rin",
@@ -7672,10 +7672,10 @@ app.constant('CardData',
     "non_idolized_maximum_statistics_pure": 4360,
     "non_idolized_maximum_statistics_smile": 2890,
     "oScore": {
-      "base": 5766.100000000001,
-      "heel": 5766.100000000001,
-      "idlz": 5766.100000000001,
-      "idlz_heel": 5766.100000000001
+      "base": 4560.0,
+      "heel": 4560.0,
+      "idlz": 4560.0,
+      "idlz_heel": 4560.0
     },
     "on_attr": 4610,
     "on_attr_idlz": 4360,
@@ -7743,10 +7743,10 @@ app.constant('CardData',
   {
     "attribute": "Pure",
     "cScore": {
-      "base": 5766.100000000001,
-      "heel": 5766.100000000001,
-      "idlz": 5766.100000000001,
-      "idlz_heel": 5766.100000000001
+      "base": 4560.0,
+      "heel": 4560.0,
+      "idlz": 4560.0,
+      "idlz_heel": 4560.0
     },
     "event": null,
     "full_name": "SR Promo Sonoda Umi",
@@ -7762,10 +7762,10 @@ app.constant('CardData',
     "non_idolized_maximum_statistics_pure": 4360,
     "non_idolized_maximum_statistics_smile": 2560,
     "oScore": {
-      "base": 5766.100000000001,
-      "heel": 5766.100000000001,
-      "idlz": 5766.100000000001,
-      "idlz_heel": 5766.100000000001
+      "base": 4560.0,
+      "heel": 4560.0,
+      "idlz": 4560.0,
+      "idlz_heel": 4560.0
     },
     "on_attr": 4610,
     "on_attr_idlz": 4360,
@@ -7968,10 +7968,10 @@ app.constant('CardData',
   {
     "attribute": "Smile",
     "cScore": {
-      "base": 6916.675000000001,
-      "heel": 6916.675000000001,
-      "idlz": 6916.675000000001,
-      "idlz_heel": 6916.675000000001
+      "base": 5680.0,
+      "heel": 5680.0,
+      "idlz": 5680.0,
+      "idlz_heel": 5680.0
     },
     "event": null,
     "full_name": "UR Promo Kousaka Honoka",
@@ -7987,10 +7987,10 @@ app.constant('CardData',
     "non_idolized_maximum_statistics_pure": 3890,
     "non_idolized_maximum_statistics_smile": 4230,
     "oScore": {
-      "base": 6916.675000000001,
-      "heel": 6916.675000000001,
-      "idlz": 6916.675000000001,
-      "idlz_heel": 6916.675000000001
+      "base": 5680.0,
+      "heel": 5680.0,
+      "idlz": 5680.0,
+      "idlz_heel": 5680.0
     },
     "on_attr": 4730,
     "on_attr_idlz": 5230,
@@ -8283,10 +8283,10 @@ app.constant('CardData',
   {
     "attribute": "Smile",
     "cScore": {
-      "base": 5633.850000000001,
-      "heel": 5633.850000000001,
-      "idlz": 5633.850000000001,
-      "idlz_heel": 5633.850000000001
+      "base": 4460.0,
+      "heel": 4460.0,
+      "idlz": 4460.0,
+      "idlz_heel": 4460.0
     },
     "event": null,
     "full_name": "SR Promo Koizumi Hanayo",
@@ -8302,10 +8302,10 @@ app.constant('CardData',
     "non_idolized_maximum_statistics_pure": 2930,
     "non_idolized_maximum_statistics_smile": 4260,
     "oScore": {
-      "base": 5633.850000000001,
-      "heel": 5633.850000000001,
-      "idlz": 5633.850000000001,
-      "idlz_heel": 5633.850000000001
+      "base": 4460.0,
+      "heel": 4460.0,
+      "idlz": 4460.0,
+      "idlz_heel": 4460.0
     },
     "on_attr": 4510,
     "on_attr_idlz": 4260,
@@ -8373,10 +8373,10 @@ app.constant('CardData',
   {
     "attribute": "Smile",
     "cScore": {
-      "base": 5633.850000000001,
-      "heel": 5633.850000000001,
-      "idlz": 5633.850000000001,
-      "idlz_heel": 5633.850000000001
+      "base": 4460.0,
+      "heel": 4460.0,
+      "idlz": 4460.0,
+      "idlz_heel": 4460.0
     },
     "event": null,
     "full_name": "SR Promo Minami Kotori",
@@ -8392,10 +8392,10 @@ app.constant('CardData',
     "non_idolized_maximum_statistics_pure": 2920,
     "non_idolized_maximum_statistics_smile": 4260,
     "oScore": {
-      "base": 5633.850000000001,
-      "heel": 5633.850000000001,
-      "idlz": 5633.850000000001,
-      "idlz_heel": 5633.850000000001
+      "base": 4460.0,
+      "heel": 4460.0,
+      "idlz": 4460.0,
+      "idlz_heel": 4460.0
     },
     "on_attr": 4510,
     "on_attr_idlz": 4260,
@@ -8418,10 +8418,10 @@ app.constant('CardData',
   {
     "attribute": "Smile",
     "cScore": {
-      "base": 5633.850000000001,
-      "heel": 5633.850000000001,
-      "idlz": 5633.850000000001,
-      "idlz_heel": 5633.850000000001
+      "base": 4460.0,
+      "heel": 4460.0,
+      "idlz": 4460.0,
+      "idlz_heel": 4460.0
     },
     "event": null,
     "full_name": "SR Promo Kousaka Honoka",
@@ -8437,10 +8437,10 @@ app.constant('CardData',
     "non_idolized_maximum_statistics_pure": 2940,
     "non_idolized_maximum_statistics_smile": 4260,
     "oScore": {
-      "base": 5633.850000000001,
-      "heel": 5633.850000000001,
-      "idlz": 5633.850000000001,
-      "idlz_heel": 5633.850000000001
+      "base": 4460.0,
+      "heel": 4460.0,
+      "idlz": 4460.0,
+      "idlz_heel": 4460.0
     },
     "on_attr": 4510,
     "on_attr_idlz": 4260,
@@ -8913,10 +8913,10 @@ app.constant('CardData',
   {
     "attribute": "Smile",
     "cScore": {
-      "base": 6929.9000000000015,
-      "heel": 6929.9000000000015,
-      "idlz": 6929.9000000000015,
-      "idlz_heel": 6929.9000000000015
+      "base": 5690.0,
+      "heel": 5690.0,
+      "idlz": 5690.0,
+      "idlz_heel": 5690.0
     },
     "event": null,
     "full_name": "UR Promo Koizumi Hanayo",
@@ -8932,10 +8932,10 @@ app.constant('CardData',
     "non_idolized_maximum_statistics_pure": 3400,
     "non_idolized_maximum_statistics_smile": 4240,
     "oScore": {
-      "base": 6929.9000000000015,
-      "heel": 6929.9000000000015,
-      "idlz": 6929.9000000000015,
-      "idlz_heel": 6929.9000000000015
+      "base": 5690.0,
+      "heel": 5690.0,
+      "idlz": 5690.0,
+      "idlz_heel": 5690.0
     },
     "on_attr": 4740,
     "on_attr_idlz": 5240,
@@ -8958,10 +8958,10 @@ app.constant('CardData',
   {
     "attribute": "Smile",
     "cScore": {
-      "base": 5528.050000000001,
-      "heel": 5528.050000000001,
-      "idlz": 5528.050000000001,
-      "idlz_heel": 5528.050000000001
+      "base": 4380.0,
+      "heel": 4380.0,
+      "idlz": 4380.0,
+      "idlz_heel": 4380.0
     },
     "event": null,
     "full_name": "SR Promo Yazawa Nico",
@@ -8977,10 +8977,10 @@ app.constant('CardData',
     "non_idolized_maximum_statistics_pure": 2680,
     "non_idolized_maximum_statistics_smile": 4180,
     "oScore": {
-      "base": 5528.050000000001,
-      "heel": 5528.050000000001,
-      "idlz": 5528.050000000001,
-      "idlz_heel": 5528.050000000001
+      "base": 4380.0,
+      "heel": 4380.0,
+      "idlz": 4380.0,
+      "idlz_heel": 4380.0
     },
     "on_attr": 4430,
     "on_attr_idlz": 4180,
@@ -9003,10 +9003,10 @@ app.constant('CardData',
   {
     "attribute": "Pure",
     "cScore": {
-      "base": 5660.300000000001,
-      "heel": 5660.300000000001,
-      "idlz": 5660.300000000001,
-      "idlz_heel": 5660.300000000001
+      "base": 4480.0,
+      "heel": 4480.0,
+      "idlz": 4480.0,
+      "idlz_heel": 4480.0
     },
     "event": null,
     "full_name": "SR Promo Koizumi Hanayo",
@@ -9022,10 +9022,10 @@ app.constant('CardData',
     "non_idolized_maximum_statistics_pure": 4280,
     "non_idolized_maximum_statistics_smile": 2760,
     "oScore": {
-      "base": 5660.300000000001,
-      "heel": 5660.300000000001,
-      "idlz": 5660.300000000001,
-      "idlz_heel": 5660.300000000001
+      "base": 4480.0,
+      "heel": 4480.0,
+      "idlz": 4480.0,
+      "idlz_heel": 4480.0
     },
     "on_attr": 4530,
     "on_attr_idlz": 4280,
@@ -9048,10 +9048,10 @@ app.constant('CardData',
   {
     "attribute": "Pure",
     "cScore": {
-      "base": 5647.075000000001,
-      "heel": 5647.075000000001,
-      "idlz": 5647.075000000001,
-      "idlz_heel": 5647.075000000001
+      "base": 4470.0,
+      "heel": 4470.0,
+      "idlz": 4470.0,
+      "idlz_heel": 4470.0
     },
     "event": null,
     "full_name": "SR Promo Toujou Nozomi",
@@ -9067,10 +9067,10 @@ app.constant('CardData',
     "non_idolized_maximum_statistics_pure": 4270,
     "non_idolized_maximum_statistics_smile": 2720,
     "oScore": {
-      "base": 5647.075000000001,
-      "heel": 5647.075000000001,
-      "idlz": 5647.075000000001,
-      "idlz_heel": 5647.075000000001
+      "base": 4470.0,
+      "heel": 4470.0,
+      "idlz": 4470.0,
+      "idlz_heel": 4470.0
     },
     "on_attr": 4520,
     "on_attr_idlz": 4270,
@@ -9093,10 +9093,10 @@ app.constant('CardData',
   {
     "attribute": "Cool",
     "cScore": {
-      "base": 5567.725000000001,
-      "heel": 5567.725000000001,
-      "idlz": 5567.725000000001,
-      "idlz_heel": 5567.725000000001
+      "base": 4410.0,
+      "heel": 4410.0,
+      "idlz": 4410.0,
+      "idlz_heel": 4410.0
     },
     "event": null,
     "full_name": "SR Promo Nishikino Maki",
@@ -9112,10 +9112,10 @@ app.constant('CardData',
     "non_idolized_maximum_statistics_pure": 2660,
     "non_idolized_maximum_statistics_smile": 2780,
     "oScore": {
-      "base": 5567.725000000001,
-      "heel": 5567.725000000001,
-      "idlz": 5567.725000000001,
-      "idlz_heel": 5567.725000000001
+      "base": 4410.0,
+      "heel": 4410.0,
+      "idlz": 4410.0,
+      "idlz_heel": 4410.0
     },
     "on_attr": 4460,
     "on_attr_idlz": 4210,
@@ -9138,10 +9138,10 @@ app.constant('CardData',
   {
     "attribute": "Smile",
     "cScore": {
-      "base": 5528.050000000001,
-      "heel": 5528.050000000001,
-      "idlz": 5528.050000000001,
-      "idlz_heel": 5528.050000000001
+      "base": 4380.0,
+      "heel": 4380.0,
+      "idlz": 4380.0,
+      "idlz_heel": 4380.0
     },
     "event": null,
     "full_name": "SR Promo Hoshizora Rin",
@@ -9157,10 +9157,10 @@ app.constant('CardData',
     "non_idolized_maximum_statistics_pure": 2830,
     "non_idolized_maximum_statistics_smile": 4180,
     "oScore": {
-      "base": 5528.050000000001,
-      "heel": 5528.050000000001,
-      "idlz": 5528.050000000001,
-      "idlz_heel": 5528.050000000001
+      "base": 4380.0,
+      "heel": 4380.0,
+      "idlz": 4380.0,
+      "idlz_heel": 4380.0
     },
     "on_attr": 4430,
     "on_attr_idlz": 4180,
@@ -9183,10 +9183,10 @@ app.constant('CardData',
   {
     "attribute": "Cool",
     "cScore": {
-      "base": 5567.725000000001,
-      "heel": 5567.725000000001,
-      "idlz": 5567.725000000001,
-      "idlz_heel": 5567.725000000001
+      "base": 4410.0,
+      "heel": 4410.0,
+      "idlz": 4410.0,
+      "idlz_heel": 4410.0
     },
     "event": null,
     "full_name": "SR Promo Sonoda Umi",
@@ -9202,10 +9202,10 @@ app.constant('CardData',
     "non_idolized_maximum_statistics_pure": 2800,
     "non_idolized_maximum_statistics_smile": 2640,
     "oScore": {
-      "base": 5567.725000000001,
-      "heel": 5567.725000000001,
-      "idlz": 5567.725000000001,
-      "idlz_heel": 5567.725000000001
+      "base": 4410.0,
+      "heel": 4410.0,
+      "idlz": 4410.0,
+      "idlz_heel": 4410.0
     },
     "on_attr": 4460,
     "on_attr_idlz": 4210,
@@ -9228,10 +9228,10 @@ app.constant('CardData',
   {
     "attribute": "Pure",
     "cScore": {
-      "base": 5647.075000000001,
-      "heel": 5647.075000000001,
-      "idlz": 5647.075000000001,
-      "idlz_heel": 5647.075000000001
+      "base": 4470.0,
+      "heel": 4470.0,
+      "idlz": 4470.0,
+      "idlz_heel": 4470.0
     },
     "event": null,
     "full_name": "SR Promo Minami Kotori",
@@ -9247,10 +9247,10 @@ app.constant('CardData',
     "non_idolized_maximum_statistics_pure": 4270,
     "non_idolized_maximum_statistics_smile": 2710,
     "oScore": {
-      "base": 5647.075000000001,
-      "heel": 5647.075000000001,
-      "idlz": 5647.075000000001,
-      "idlz_heel": 5647.075000000001
+      "base": 4470.0,
+      "heel": 4470.0,
+      "idlz": 4470.0,
+      "idlz_heel": 4470.0
     },
     "on_attr": 4520,
     "on_attr_idlz": 4270,
@@ -9273,10 +9273,10 @@ app.constant('CardData',
   {
     "attribute": "Cool",
     "cScore": {
-      "base": 5567.725000000001,
-      "heel": 5567.725000000001,
-      "idlz": 5567.725000000001,
-      "idlz_heel": 5567.725000000001
+      "base": 4410.0,
+      "heel": 4410.0,
+      "idlz": 4410.0,
+      "idlz_heel": 4410.0
     },
     "event": null,
     "full_name": "SR Promo Ayase Eli",
@@ -9292,10 +9292,10 @@ app.constant('CardData',
     "non_idolized_maximum_statistics_pure": 2760,
     "non_idolized_maximum_statistics_smile": 2680,
     "oScore": {
-      "base": 5567.725000000001,
-      "heel": 5567.725000000001,
-      "idlz": 5567.725000000001,
-      "idlz_heel": 5567.725000000001
+      "base": 4410.0,
+      "heel": 4410.0,
+      "idlz": 4410.0,
+      "idlz_heel": 4410.0
     },
     "on_attr": 4460,
     "on_attr_idlz": 4210,
@@ -9363,10 +9363,10 @@ app.constant('CardData',
   {
     "attribute": "Smile",
     "cScore": {
-      "base": 5528.050000000001,
-      "heel": 5528.050000000001,
-      "idlz": 5528.050000000001,
-      "idlz_heel": 5528.050000000001
+      "base": 4380.0,
+      "heel": 4380.0,
+      "idlz": 4380.0,
+      "idlz_heel": 4380.0
     },
     "event": null,
     "full_name": "SR Promo Kousaka Honoka",
@@ -9382,10 +9382,10 @@ app.constant('CardData',
     "non_idolized_maximum_statistics_pure": 2670,
     "non_idolized_maximum_statistics_smile": 4180,
     "oScore": {
-      "base": 5528.050000000001,
-      "heel": 5528.050000000001,
-      "idlz": 5528.050000000001,
-      "idlz_heel": 5528.050000000001
+      "base": 4380.0,
+      "heel": 4380.0,
+      "idlz": 4380.0,
+      "idlz_heel": 4380.0
     },
     "on_attr": 4430,
     "on_attr_idlz": 4180,
@@ -9903,10 +9903,10 @@ app.constant('CardData',
   {
     "attribute": "Cool",
     "cScore": {
-      "base": 5461.925000000001,
-      "heel": 5461.925000000001,
-      "idlz": 5461.925000000001,
-      "idlz_heel": 5461.925000000001
+      "base": 4330.0,
+      "heel": 4330.0,
+      "idlz": 4330.0,
+      "idlz_heel": 4330.0
     },
     "event": null,
     "full_name": "SR Promo Nishikino Maki",
@@ -9922,10 +9922,10 @@ app.constant('CardData',
     "non_idolized_maximum_statistics_pure": 2900,
     "non_idolized_maximum_statistics_smile": 2520,
     "oScore": {
-      "base": 5461.925000000001,
-      "heel": 5461.925000000001,
-      "idlz": 5461.925000000001,
-      "idlz_heel": 5461.925000000001
+      "base": 4330.0,
+      "heel": 4330.0,
+      "idlz": 4330.0,
+      "idlz_heel": 4330.0
     },
     "on_attr": 4380,
     "on_attr_idlz": 4130,
@@ -9993,10 +9993,10 @@ app.constant('CardData',
   {
     "attribute": "Cool",
     "cScore": {
-      "base": 6943.125000000001,
-      "heel": 6943.125000000001,
-      "idlz": 6943.125000000001,
-      "idlz_heel": 6943.125000000001
+      "base": 5700.0,
+      "heel": 5700.0,
+      "idlz": 5700.0,
+      "idlz_heel": 5700.0
     },
     "event": null,
     "full_name": "UR Promo Ayase Eli",
@@ -10012,10 +10012,10 @@ app.constant('CardData',
     "non_idolized_maximum_statistics_pure": 3680,
     "non_idolized_maximum_statistics_smile": 2880,
     "oScore": {
-      "base": 6943.125000000001,
-      "heel": 6943.125000000001,
-      "idlz": 6943.125000000001,
-      "idlz_heel": 6943.125000000001
+      "base": 5700.0,
+      "heel": 5700.0,
+      "idlz": 5700.0,
+      "idlz_heel": 5700.0
     },
     "on_attr": 4750,
     "on_attr_idlz": 5250,
@@ -10938,10 +10938,10 @@ app.constant('CardData',
   {
     "attribute": "Smile",
     "cScore": {
-      "base": 5475.150000000001,
-      "heel": 5475.150000000001,
-      "idlz": 5475.150000000001,
-      "idlz_heel": 5475.150000000001
+      "base": 4340.0,
+      "heel": 4340.0,
+      "idlz": 4340.0,
+      "idlz_heel": 4340.0
     },
     "event": null,
     "full_name": "SR Promo Yazawa Nico",
@@ -10957,10 +10957,10 @@ app.constant('CardData',
     "non_idolized_maximum_statistics_pure": 2870,
     "non_idolized_maximum_statistics_smile": 4140,
     "oScore": {
-      "base": 5475.150000000001,
-      "heel": 5475.150000000001,
-      "idlz": 5475.150000000001,
-      "idlz_heel": 5475.150000000001
+      "base": 4340.0,
+      "heel": 4340.0,
+      "idlz": 4340.0,
+      "idlz_heel": 4340.0
     },
     "on_attr": 4390,
     "on_attr_idlz": 4140,
@@ -11478,10 +11478,10 @@ app.constant('CardData',
   {
     "attribute": "Smile",
     "cScore": {
-      "base": 6929.9000000000015,
-      "heel": 6929.9000000000015,
-      "idlz": 6929.9000000000015,
-      "idlz_heel": 6929.9000000000015
+      "base": 5690.0,
+      "heel": 5690.0,
+      "idlz": 5690.0,
+      "idlz_heel": 5690.0
     },
     "event": null,
     "full_name": "UR Promo Yazawa Nico",
@@ -11497,10 +11497,10 @@ app.constant('CardData',
     "non_idolized_maximum_statistics_pure": 2900,
     "non_idolized_maximum_statistics_smile": 4240,
     "oScore": {
-      "base": 6929.9000000000015,
-      "heel": 6929.9000000000015,
-      "idlz": 6929.9000000000015,
-      "idlz_heel": 6929.9000000000015
+      "base": 5690.0,
+      "heel": 5690.0,
+      "idlz": 5690.0,
+      "idlz_heel": 5690.0
     },
     "on_attr": 4740,
     "on_attr_idlz": 5240,
@@ -11793,10 +11793,10 @@ app.constant('CardData',
   {
     "attribute": "Smile",
     "cScore": {
-      "base": 5660.300000000001,
-      "heel": 5660.300000000001,
-      "idlz": 5660.300000000001,
-      "idlz_heel": 5660.300000000001
+      "base": 4480.0,
+      "heel": 4480.0,
+      "idlz": 4480.0,
+      "idlz_heel": 4480.0
     },
     "event": null,
     "full_name": "SR Promo Yazawa Nico",
@@ -11812,10 +11812,10 @@ app.constant('CardData',
     "non_idolized_maximum_statistics_pure": 2550,
     "non_idolized_maximum_statistics_smile": 4280,
     "oScore": {
-      "base": 5660.300000000001,
-      "heel": 5660.300000000001,
-      "idlz": 5660.300000000001,
-      "idlz_heel": 5660.300000000001
+      "base": 4480.0,
+      "heel": 4480.0,
+      "idlz": 4480.0,
+      "idlz_heel": 4480.0
     },
     "on_attr": 4530,
     "on_attr_idlz": 4280,
@@ -11838,10 +11838,10 @@ app.constant('CardData',
   {
     "attribute": "Pure",
     "cScore": {
-      "base": 5752.875000000001,
-      "heel": 5752.875000000001,
-      "idlz": 5752.875000000001,
-      "idlz_heel": 5752.875000000001
+      "base": 4550.0,
+      "heel": 4550.0,
+      "idlz": 4550.0,
+      "idlz_heel": 4550.0
     },
     "event": null,
     "full_name": "SR Promo Koizumi Hanayo",
@@ -11857,10 +11857,10 @@ app.constant('CardData',
     "non_idolized_maximum_statistics_pure": 4350,
     "non_idolized_maximum_statistics_smile": 2830,
     "oScore": {
-      "base": 5752.875000000001,
-      "heel": 5752.875000000001,
-      "idlz": 5752.875000000001,
-      "idlz_heel": 5752.875000000001
+      "base": 4550.0,
+      "heel": 4550.0,
+      "idlz": 4550.0,
+      "idlz_heel": 4550.0
     },
     "on_attr": 4600,
     "on_attr_idlz": 4350,
@@ -11883,10 +11883,10 @@ app.constant('CardData',
   {
     "attribute": "Pure",
     "cScore": {
-      "base": 5647.075000000001,
-      "heel": 5647.075000000001,
-      "idlz": 5647.075000000001,
-      "idlz_heel": 5647.075000000001
+      "base": 4470.0,
+      "heel": 4470.0,
+      "idlz": 4470.0,
+      "idlz_heel": 4470.0
     },
     "event": null,
     "full_name": "SR Promo Toujou Nozomi",
@@ -11902,10 +11902,10 @@ app.constant('CardData',
     "non_idolized_maximum_statistics_pure": 4270,
     "non_idolized_maximum_statistics_smile": 2840,
     "oScore": {
-      "base": 5647.075000000001,
-      "heel": 5647.075000000001,
-      "idlz": 5647.075000000001,
-      "idlz_heel": 5647.075000000001
+      "base": 4470.0,
+      "heel": 4470.0,
+      "idlz": 4470.0,
+      "idlz_heel": 4470.0
     },
     "on_attr": 4520,
     "on_attr_idlz": 4270,
@@ -11928,10 +11928,10 @@ app.constant('CardData',
   {
     "attribute": "Cool",
     "cScore": {
-      "base": 5686.750000000001,
-      "heel": 5686.750000000001,
-      "idlz": 5686.750000000001,
-      "idlz_heel": 5686.750000000001
+      "base": 4500.0,
+      "heel": 4500.0,
+      "idlz": 4500.0,
+      "idlz_heel": 4500.0
     },
     "event": null,
     "full_name": "SR Promo Nishikino Maki",
@@ -11947,10 +11947,10 @@ app.constant('CardData',
     "non_idolized_maximum_statistics_pure": 2540,
     "non_idolized_maximum_statistics_smile": 2850,
     "oScore": {
-      "base": 5686.750000000001,
-      "heel": 5686.750000000001,
-      "idlz": 5686.750000000001,
-      "idlz_heel": 5686.750000000001
+      "base": 4500.0,
+      "heel": 4500.0,
+      "idlz": 4500.0,
+      "idlz_heel": 4500.0
     },
     "on_attr": 4550,
     "on_attr_idlz": 4300,
@@ -11973,10 +11973,10 @@ app.constant('CardData',
   {
     "attribute": "Smile",
     "cScore": {
-      "base": 5673.525000000001,
-      "heel": 5673.525000000001,
-      "idlz": 5673.525000000001,
-      "idlz_heel": 5673.525000000001
+      "base": 4490.0,
+      "heel": 4490.0,
+      "idlz": 4490.0,
+      "idlz_heel": 4490.0
     },
     "event": null,
     "full_name": "SR Promo Hoshizora Rin",
@@ -11992,10 +11992,10 @@ app.constant('CardData',
     "non_idolized_maximum_statistics_pure": 2880,
     "non_idolized_maximum_statistics_smile": 4290,
     "oScore": {
-      "base": 5673.525000000001,
-      "heel": 5673.525000000001,
-      "idlz": 5673.525000000001,
-      "idlz_heel": 5673.525000000001
+      "base": 4490.0,
+      "heel": 4490.0,
+      "idlz": 4490.0,
+      "idlz_heel": 4490.0
     },
     "on_attr": 4540,
     "on_attr_idlz": 4290,
@@ -12018,10 +12018,10 @@ app.constant('CardData',
   {
     "attribute": "Cool",
     "cScore": {
-      "base": 5647.075000000001,
-      "heel": 5647.075000000001,
-      "idlz": 5647.075000000001,
-      "idlz_heel": 5647.075000000001
+      "base": 4470.0,
+      "heel": 4470.0,
+      "idlz": 4470.0,
+      "idlz_heel": 4470.0
     },
     "event": null,
     "full_name": "SR Promo Sonoda Umi",
@@ -12037,10 +12037,10 @@ app.constant('CardData',
     "non_idolized_maximum_statistics_pure": 2900,
     "non_idolized_maximum_statistics_smile": 2520,
     "oScore": {
-      "base": 5647.075000000001,
-      "heel": 5647.075000000001,
-      "idlz": 5647.075000000001,
-      "idlz_heel": 5647.075000000001
+      "base": 4470.0,
+      "heel": 4470.0,
+      "idlz": 4470.0,
+      "idlz_heel": 4470.0
     },
     "on_attr": 4520,
     "on_attr_idlz": 4270,
@@ -12063,10 +12063,10 @@ app.constant('CardData',
   {
     "attribute": "Pure",
     "cScore": {
-      "base": 5660.300000000001,
-      "heel": 5660.300000000001,
-      "idlz": 5660.300000000001,
-      "idlz_heel": 5660.300000000001
+      "base": 4480.0,
+      "heel": 4480.0,
+      "idlz": 4480.0,
+      "idlz_heel": 4480.0
     },
     "event": null,
     "full_name": "SR Promo Minami Kotori",
@@ -12082,10 +12082,10 @@ app.constant('CardData',
     "non_idolized_maximum_statistics_pure": 4280,
     "non_idolized_maximum_statistics_smile": 2860,
     "oScore": {
-      "base": 5660.300000000001,
-      "heel": 5660.300000000001,
-      "idlz": 5660.300000000001,
-      "idlz_heel": 5660.300000000001
+      "base": 4480.0,
+      "heel": 4480.0,
+      "idlz": 4480.0,
+      "idlz_heel": 4480.0
     },
     "on_attr": 4530,
     "on_attr_idlz": 4280,
@@ -12108,10 +12108,10 @@ app.constant('CardData',
   {
     "attribute": "Cool",
     "cScore": {
-      "base": 5726.425000000001,
-      "heel": 5726.425000000001,
-      "idlz": 5726.425000000001,
-      "idlz_heel": 5726.425000000001
+      "base": 4530.0,
+      "heel": 4530.0,
+      "idlz": 4530.0,
+      "idlz_heel": 4530.0
     },
     "event": null,
     "full_name": "SR Promo Ayase Eli",
@@ -12127,10 +12127,10 @@ app.constant('CardData',
     "non_idolized_maximum_statistics_pure": 2830,
     "non_idolized_maximum_statistics_smile": 2530,
     "oScore": {
-      "base": 5726.425000000001,
-      "heel": 5726.425000000001,
-      "idlz": 5726.425000000001,
-      "idlz_heel": 5726.425000000001
+      "base": 4530.0,
+      "heel": 4530.0,
+      "idlz": 4530.0,
+      "idlz_heel": 4530.0
     },
     "on_attr": 4580,
     "on_attr_idlz": 4330,
@@ -12153,10 +12153,10 @@ app.constant('CardData',
   {
     "attribute": "Smile",
     "cScore": {
-      "base": 5726.425000000001,
-      "heel": 5726.425000000001,
-      "idlz": 5726.425000000001,
-      "idlz_heel": 5726.425000000001
+      "base": 4530.0,
+      "heel": 4530.0,
+      "idlz": 4530.0,
+      "idlz_heel": 4530.0
     },
     "event": null,
     "full_name": "SR Promo Kousaka Honoka",
@@ -12172,10 +12172,10 @@ app.constant('CardData',
     "non_idolized_maximum_statistics_pure": 2520,
     "non_idolized_maximum_statistics_smile": 4330,
     "oScore": {
-      "base": 5726.425000000001,
-      "heel": 5726.425000000001,
-      "idlz": 5726.425000000001,
-      "idlz_heel": 5726.425000000001
+      "base": 4530.0,
+      "heel": 4530.0,
+      "idlz": 4530.0,
+      "idlz_heel": 4530.0
     },
     "on_attr": 4580,
     "on_attr_idlz": 4330,
@@ -12918,10 +12918,10 @@ app.constant('CardData',
   {
     "attribute": "Cool",
     "cScore": {
-      "base": 6969.575000000002,
-      "heel": 6969.575000000002,
-      "idlz": 6969.575000000002,
-      "idlz_heel": 6969.575000000002
+      "base": 5720.0,
+      "heel": 5720.0,
+      "idlz": 5720.0,
+      "idlz_heel": 5720.0
     },
     "event": null,
     "full_name": "UR Promo Toujou Nozomi",
@@ -12937,10 +12937,10 @@ app.constant('CardData',
     "non_idolized_maximum_statistics_pure": 3350,
     "non_idolized_maximum_statistics_smile": 2810,
     "oScore": {
-      "base": 6969.575000000002,
-      "heel": 6969.575000000002,
-      "idlz": 6969.575000000002,
-      "idlz_heel": 6969.575000000002
+      "base": 5720.0,
+      "heel": 5720.0,
+      "idlz": 5720.0,
+      "idlz_heel": 5720.0
     },
     "on_attr": 4770,
     "on_attr_idlz": 5270,
@@ -13458,10 +13458,10 @@ app.constant('CardData',
   {
     "attribute": "Smile",
     "cScore": {
-      "base": 7009.250000000001,
-      "heel": 7009.250000000001,
-      "idlz": 7009.250000000001,
-      "idlz_heel": 7009.250000000001
+      "base": 5750.0,
+      "heel": 5750.0,
+      "idlz": 5750.0,
+      "idlz_heel": 5750.0
     },
     "event": null,
     "full_name": "UR Promo Yazawa Nico",
@@ -13477,10 +13477,10 @@ app.constant('CardData',
     "non_idolized_maximum_statistics_pure": 4040,
     "non_idolized_maximum_statistics_smile": 4300,
     "oScore": {
-      "base": 7009.250000000001,
-      "heel": 7009.250000000001,
-      "idlz": 7009.250000000001,
-      "idlz_heel": 7009.250000000001
+      "base": 5750.0,
+      "heel": 5750.0,
+      "idlz": 5750.0,
+      "idlz_heel": 5750.0
     },
     "on_attr": 4800,
     "on_attr_idlz": 5300,
@@ -13998,10 +13998,10 @@ app.constant('CardData',
   {
     "attribute": "Pure",
     "cScore": {
-      "base": 5647.075000000001,
-      "heel": 5647.075000000001,
-      "idlz": 5647.075000000001,
-      "idlz_heel": 5647.075000000001
+      "base": 4470.0,
+      "heel": 4470.0,
+      "idlz": 4470.0,
+      "idlz_heel": 4470.0
     },
     "event": null,
     "full_name": "SR Promo Koizumi Hanayo",
@@ -14017,10 +14017,10 @@ app.constant('CardData',
     "non_idolized_maximum_statistics_pure": 4270,
     "non_idolized_maximum_statistics_smile": 2810,
     "oScore": {
-      "base": 5647.075000000001,
-      "heel": 5647.075000000001,
-      "idlz": 5647.075000000001,
-      "idlz_heel": 5647.075000000001
+      "base": 4470.0,
+      "heel": 4470.0,
+      "idlz": 4470.0,
+      "idlz_heel": 4470.0
     },
     "on_attr": 4520,
     "on_attr_idlz": 4270,
@@ -14088,10 +14088,10 @@ app.constant('CardData',
   {
     "attribute": "Smile",
     "cScore": {
-      "base": 5620.625000000001,
-      "heel": 5620.625000000001,
-      "idlz": 5620.625000000001,
-      "idlz_heel": 5620.625000000001
+      "base": 4450.0,
+      "heel": 4450.0,
+      "idlz": 4450.0,
+      "idlz_heel": 4450.0
     },
     "event": null,
     "full_name": "SR Promo Hoshizora Rin",
@@ -14107,10 +14107,10 @@ app.constant('CardData',
     "non_idolized_maximum_statistics_pure": 3060,
     "non_idolized_maximum_statistics_smile": 4250,
     "oScore": {
-      "base": 5620.625000000001,
-      "heel": 5620.625000000001,
-      "idlz": 5620.625000000001,
-      "idlz_heel": 5620.625000000001
+      "base": 4450.0,
+      "heel": 4450.0,
+      "idlz": 4450.0,
+      "idlz_heel": 4450.0
     },
     "on_attr": 4500,
     "on_attr_idlz": 4250,
@@ -14583,10 +14583,10 @@ app.constant('CardData',
   {
     "attribute": "Smile",
     "cScore": {
-      "base": 5554.500000000001,
-      "heel": 5554.500000000001,
-      "idlz": 5554.500000000001,
-      "idlz_heel": 5554.500000000001
+      "base": 4400.0,
+      "heel": 4400.0,
+      "idlz": 4400.0,
+      "idlz_heel": 4400.0
     },
     "event": null,
     "full_name": "SR Promo Yazawa Nico",
@@ -14602,10 +14602,10 @@ app.constant('CardData',
     "non_idolized_maximum_statistics_pure": 2810,
     "non_idolized_maximum_statistics_smile": 4200,
     "oScore": {
-      "base": 5554.500000000001,
-      "heel": 5554.500000000001,
-      "idlz": 5554.500000000001,
-      "idlz_heel": 5554.500000000001
+      "base": 4400.0,
+      "heel": 4400.0,
+      "idlz": 4400.0,
+      "idlz_heel": 4400.0
     },
     "on_attr": 4450,
     "on_attr_idlz": 4200,
@@ -14628,10 +14628,10 @@ app.constant('CardData',
   {
     "attribute": "Pure",
     "cScore": {
-      "base": 5647.075000000001,
-      "heel": 5647.075000000001,
-      "idlz": 5647.075000000001,
-      "idlz_heel": 5647.075000000001
+      "base": 4470.0,
+      "heel": 4470.0,
+      "idlz": 4470.0,
+      "idlz_heel": 4470.0
     },
     "event": null,
     "full_name": "SR Promo Koizumi Hanayo",
@@ -14647,10 +14647,10 @@ app.constant('CardData',
     "non_idolized_maximum_statistics_pure": 4270,
     "non_idolized_maximum_statistics_smile": 2600,
     "oScore": {
-      "base": 5647.075000000001,
-      "heel": 5647.075000000001,
-      "idlz": 5647.075000000001,
-      "idlz_heel": 5647.075000000001
+      "base": 4470.0,
+      "heel": 4470.0,
+      "idlz": 4470.0,
+      "idlz_heel": 4470.0
     },
     "on_attr": 4520,
     "on_attr_idlz": 4270,
@@ -14718,10 +14718,10 @@ app.constant('CardData',
   {
     "attribute": "Pure",
     "cScore": {
-      "base": 5541.275000000001,
-      "heel": 5541.275000000001,
-      "idlz": 5541.275000000001,
-      "idlz_heel": 5541.275000000001
+      "base": 4390.0,
+      "heel": 4390.0,
+      "idlz": 4390.0,
+      "idlz_heel": 4390.0
     },
     "event": null,
     "full_name": "SR Promo Toujou Nozomi",
@@ -14737,10 +14737,10 @@ app.constant('CardData',
     "non_idolized_maximum_statistics_pure": 4190,
     "non_idolized_maximum_statistics_smile": 2670,
     "oScore": {
-      "base": 5541.275000000001,
-      "heel": 5541.275000000001,
-      "idlz": 5541.275000000001,
-      "idlz_heel": 5541.275000000001
+      "base": 4390.0,
+      "heel": 4390.0,
+      "idlz": 4390.0,
+      "idlz_heel": 4390.0
     },
     "on_attr": 4440,
     "on_attr_idlz": 4190,
@@ -14763,10 +14763,10 @@ app.constant('CardData',
   {
     "attribute": "Cool",
     "cScore": {
-      "base": 5580.950000000001,
-      "heel": 5580.950000000001,
-      "idlz": 5580.950000000001,
-      "idlz_heel": 5580.950000000001
+      "base": 4420.0,
+      "heel": 4420.0,
+      "idlz": 4420.0,
+      "idlz_heel": 4420.0
     },
     "event": null,
     "full_name": "SR Promo Nishikino Maki",
@@ -14782,10 +14782,10 @@ app.constant('CardData',
     "non_idolized_maximum_statistics_pure": 2800,
     "non_idolized_maximum_statistics_smile": 2630,
     "oScore": {
-      "base": 5580.950000000001,
-      "heel": 5580.950000000001,
-      "idlz": 5580.950000000001,
-      "idlz_heel": 5580.950000000001
+      "base": 4420.0,
+      "heel": 4420.0,
+      "idlz": 4420.0,
+      "idlz_heel": 4420.0
     },
     "on_attr": 4470,
     "on_attr_idlz": 4220,
@@ -14808,10 +14808,10 @@ app.constant('CardData',
   {
     "attribute": "Smile",
     "cScore": {
-      "base": 5567.725000000001,
-      "heel": 5567.725000000001,
-      "idlz": 5567.725000000001,
-      "idlz_heel": 5567.725000000001
+      "base": 4410.0,
+      "heel": 4410.0,
+      "idlz": 4410.0,
+      "idlz_heel": 4410.0
     },
     "event": null,
     "full_name": "SR Promo Hoshizora Rin",
@@ -14827,10 +14827,10 @@ app.constant('CardData',
     "non_idolized_maximum_statistics_pure": 2610,
     "non_idolized_maximum_statistics_smile": 4210,
     "oScore": {
-      "base": 5567.725000000001,
-      "heel": 5567.725000000001,
-      "idlz": 5567.725000000001,
-      "idlz_heel": 5567.725000000001
+      "base": 4410.0,
+      "heel": 4410.0,
+      "idlz": 4410.0,
+      "idlz_heel": 4410.0
     },
     "on_attr": 4460,
     "on_attr_idlz": 4210,
@@ -14853,10 +14853,10 @@ app.constant('CardData',
   {
     "attribute": "Cool",
     "cScore": {
-      "base": 5541.275000000001,
-      "heel": 5541.275000000001,
-      "idlz": 5541.275000000001,
-      "idlz_heel": 5541.275000000001
+      "base": 4390.0,
+      "heel": 4390.0,
+      "idlz": 4390.0,
+      "idlz_heel": 4390.0
     },
     "event": null,
     "full_name": "SR Promo Sonoda Umi",
@@ -14872,10 +14872,10 @@ app.constant('CardData',
     "non_idolized_maximum_statistics_pure": 2610,
     "non_idolized_maximum_statistics_smile": 2850,
     "oScore": {
-      "base": 5541.275000000001,
-      "heel": 5541.275000000001,
-      "idlz": 5541.275000000001,
-      "idlz_heel": 5541.275000000001
+      "base": 4390.0,
+      "heel": 4390.0,
+      "idlz": 4390.0,
+      "idlz_heel": 4390.0
     },
     "on_attr": 4440,
     "on_attr_idlz": 4190,
@@ -14898,10 +14898,10 @@ app.constant('CardData',
   {
     "attribute": "Pure",
     "cScore": {
-      "base": 5554.500000000001,
-      "heel": 5554.500000000001,
-      "idlz": 5554.500000000001,
-      "idlz_heel": 5554.500000000001
+      "base": 4400.0,
+      "heel": 4400.0,
+      "idlz": 4400.0,
+      "idlz_heel": 4400.0
     },
     "event": null,
     "full_name": "SR Promo Minami Kotori",
@@ -14917,10 +14917,10 @@ app.constant('CardData',
     "non_idolized_maximum_statistics_pure": 4200,
     "non_idolized_maximum_statistics_smile": 2640,
     "oScore": {
-      "base": 5554.500000000001,
-      "heel": 5554.500000000001,
-      "idlz": 5554.500000000001,
-      "idlz_heel": 5554.500000000001
+      "base": 4400.0,
+      "heel": 4400.0,
+      "idlz": 4400.0,
+      "idlz_heel": 4400.0
     },
     "on_attr": 4450,
     "on_attr_idlz": 4200,
@@ -14943,10 +14943,10 @@ app.constant('CardData',
   {
     "attribute": "Cool",
     "cScore": {
-      "base": 5620.625000000001,
-      "heel": 5620.625000000001,
-      "idlz": 5620.625000000001,
-      "idlz_heel": 5620.625000000001
+      "base": 4450.0,
+      "heel": 4450.0,
+      "idlz": 4450.0,
+      "idlz_heel": 4450.0
     },
     "event": null,
     "full_name": "SR Promo Ayase Eli",
@@ -14962,10 +14962,10 @@ app.constant('CardData',
     "non_idolized_maximum_statistics_pure": 2620,
     "non_idolized_maximum_statistics_smile": 2780,
     "oScore": {
-      "base": 5620.625000000001,
-      "heel": 5620.625000000001,
-      "idlz": 5620.625000000001,
-      "idlz_heel": 5620.625000000001
+      "base": 4450.0,
+      "heel": 4450.0,
+      "idlz": 4450.0,
+      "idlz_heel": 4450.0
     },
     "on_attr": 4500,
     "on_attr_idlz": 4250,
@@ -14988,10 +14988,10 @@ app.constant('CardData',
   {
     "attribute": "Smile",
     "cScore": {
-      "base": 5620.625000000001,
-      "heel": 5620.625000000001,
-      "idlz": 5620.625000000001,
-      "idlz_heel": 5620.625000000001
+      "base": 4450.0,
+      "heel": 4450.0,
+      "idlz": 4450.0,
+      "idlz_heel": 4450.0
     },
     "event": null,
     "full_name": "SR Promo Kousaka Honoka",
@@ -15007,10 +15007,10 @@ app.constant('CardData',
     "non_idolized_maximum_statistics_pure": 2790,
     "non_idolized_maximum_statistics_smile": 4250,
     "oScore": {
-      "base": 5620.625000000001,
-      "heel": 5620.625000000001,
-      "idlz": 5620.625000000001,
-      "idlz_heel": 5620.625000000001
+      "base": 4450.0,
+      "heel": 4450.0,
+      "idlz": 4450.0,
+      "idlz_heel": 4450.0
     },
     "on_attr": 4500,
     "on_attr_idlz": 4250,
@@ -15483,10 +15483,10 @@ app.constant('CardData',
   {
     "attribute": "Smile",
     "cScore": {
-      "base": 6956.350000000001,
-      "heel": 6956.350000000001,
-      "idlz": 6956.350000000001,
-      "idlz_heel": 6956.350000000001
+      "base": 5710.0,
+      "heel": 5710.0,
+      "idlz": 5710.0,
+      "idlz_heel": 5710.0
     },
     "event": null,
     "full_name": "UR Promo Kousaka Honoka",
@@ -15502,10 +15502,10 @@ app.constant('CardData',
     "non_idolized_maximum_statistics_pure": 3690,
     "non_idolized_maximum_statistics_smile": 4260,
     "oScore": {
-      "base": 6956.350000000001,
-      "heel": 6956.350000000001,
-      "idlz": 6956.350000000001,
-      "idlz_heel": 6956.350000000001
+      "base": 5710.0,
+      "heel": 5710.0,
+      "idlz": 5710.0,
+      "idlz_heel": 5710.0
     },
     "on_attr": 4760,
     "on_attr_idlz": 5260,
@@ -15528,10 +15528,10 @@ app.constant('CardData',
   {
     "attribute": "Cool",
     "cScore": {
-      "base": 5633.850000000001,
-      "heel": 5633.850000000001,
-      "idlz": 5633.850000000001,
-      "idlz_heel": 5633.850000000001
+      "base": 4460.0,
+      "heel": 4460.0,
+      "idlz": 4460.0,
+      "idlz_heel": 4460.0
     },
     "event": null,
     "full_name": "SR Promo Yazawa Nico",
@@ -15547,10 +15547,10 @@ app.constant('CardData',
     "non_idolized_maximum_statistics_pure": 2950,
     "non_idolized_maximum_statistics_smile": 2580,
     "oScore": {
-      "base": 5633.850000000001,
-      "heel": 5633.850000000001,
-      "idlz": 5633.850000000001,
-      "idlz_heel": 5633.850000000001
+      "base": 4460.0,
+      "heel": 4460.0,
+      "idlz": 4460.0,
+      "idlz_heel": 4460.0
     },
     "on_attr": 4510,
     "on_attr_idlz": 4260,
@@ -15618,10 +15618,10 @@ app.constant('CardData',
   {
     "attribute": "Pure",
     "cScore": {
-      "base": 5594.175000000001,
-      "heel": 5594.175000000001,
-      "idlz": 5594.175000000001,
-      "idlz_heel": 5594.175000000001
+      "base": 4430.0,
+      "heel": 4430.0,
+      "idlz": 4430.0,
+      "idlz_heel": 4430.0
     },
     "event": null,
     "full_name": "SR Promo Toujou Nozomi",
@@ -15637,10 +15637,10 @@ app.constant('CardData',
     "non_idolized_maximum_statistics_pure": 4230,
     "non_idolized_maximum_statistics_smile": 2830,
     "oScore": {
-      "base": 5594.175000000001,
-      "heel": 5594.175000000001,
-      "idlz": 5594.175000000001,
-      "idlz_heel": 5594.175000000001
+      "base": 4430.0,
+      "heel": 4430.0,
+      "idlz": 4430.0,
+      "idlz_heel": 4430.0
     },
     "on_attr": 4480,
     "on_attr_idlz": 4230,
@@ -15663,10 +15663,10 @@ app.constant('CardData',
   {
     "attribute": "Cool",
     "cScore": {
-      "base": 5726.425000000001,
-      "heel": 5726.425000000001,
-      "idlz": 5726.425000000001,
-      "idlz_heel": 5726.425000000001
+      "base": 4530.0,
+      "heel": 4530.0,
+      "idlz": 4530.0,
+      "idlz_heel": 4530.0
     },
     "event": null,
     "full_name": "SR Promo Nishikino Maki",
@@ -15682,10 +15682,10 @@ app.constant('CardData',
     "non_idolized_maximum_statistics_pure": 2780,
     "non_idolized_maximum_statistics_smile": 2680,
     "oScore": {
-      "base": 5726.425000000001,
-      "heel": 5726.425000000001,
-      "idlz": 5726.425000000001,
-      "idlz_heel": 5726.425000000001
+      "base": 4530.0,
+      "heel": 4530.0,
+      "idlz": 4530.0,
+      "idlz_heel": 4530.0
     },
     "on_attr": 4580,
     "on_attr_idlz": 4330,
@@ -15708,10 +15708,10 @@ app.constant('CardData',
   {
     "attribute": "Cool",
     "cScore": {
-      "base": 5567.725000000001,
-      "heel": 5567.725000000001,
-      "idlz": 5567.725000000001,
-      "idlz_heel": 5567.725000000001
+      "base": 4410.0,
+      "heel": 4410.0,
+      "idlz": 4410.0,
+      "idlz_heel": 4410.0
     },
     "event": null,
     "full_name": "SR Promo Ayase Eli",
@@ -15727,10 +15727,10 @@ app.constant('CardData',
     "non_idolized_maximum_statistics_pure": 2490,
     "non_idolized_maximum_statistics_smile": 3080,
     "oScore": {
-      "base": 5567.725000000001,
-      "heel": 5567.725000000001,
-      "idlz": 5567.725000000001,
-      "idlz_heel": 5567.725000000001
+      "base": 4410.0,
+      "heel": 4410.0,
+      "idlz": 4410.0,
+      "idlz_heel": 4410.0
     },
     "on_attr": 4460,
     "on_attr_idlz": 4210,
@@ -15753,10 +15753,10 @@ app.constant('CardData',
   {
     "attribute": "Cool",
     "cScore": {
-      "base": 5819.000000000001,
-      "heel": 5819.000000000001,
-      "idlz": 5819.000000000001,
-      "idlz_heel": 5819.000000000001
+      "base": 4600.0,
+      "heel": 4600.0,
+      "idlz": 4600.0,
+      "idlz_heel": 4600.0
     },
     "event": null,
     "full_name": "SR Promo Ayase Eli",
@@ -15772,10 +15772,10 @@ app.constant('CardData',
     "non_idolized_maximum_statistics_pure": 2950,
     "non_idolized_maximum_statistics_smile": 2440,
     "oScore": {
-      "base": 5819.000000000001,
-      "heel": 5819.000000000001,
-      "idlz": 5819.000000000001,
-      "idlz_heel": 5819.000000000001
+      "base": 4600.0,
+      "heel": 4600.0,
+      "idlz": 4600.0,
+      "idlz_heel": 4600.0
     },
     "on_attr": 4650,
     "on_attr_idlz": 4400,
@@ -15798,10 +15798,10 @@ app.constant('CardData',
   {
     "attribute": "Smile",
     "cScore": {
-      "base": 6916.675000000001,
-      "heel": 6916.675000000001,
-      "idlz": 6916.675000000001,
-      "idlz_heel": 6916.675000000001
+      "base": 5680.0,
+      "heel": 5680.0,
+      "idlz": 5680.0,
+      "idlz_heel": 5680.0
     },
     "event": null,
     "full_name": "UR Promo Nishikino Maki",
@@ -15817,10 +15817,10 @@ app.constant('CardData',
     "non_idolized_maximum_statistics_pure": 2890,
     "non_idolized_maximum_statistics_smile": 4230,
     "oScore": {
-      "base": 6916.675000000001,
-      "heel": 6916.675000000001,
-      "idlz": 6916.675000000001,
-      "idlz_heel": 6916.675000000001
+      "base": 5680.0,
+      "heel": 5680.0,
+      "idlz": 5680.0,
+      "idlz_heel": 5680.0
     },
     "on_attr": 4730,
     "on_attr_idlz": 5230,
@@ -16293,10 +16293,10 @@ app.constant('CardData',
   {
     "attribute": "Pure",
     "cScore": {
-      "base": 5819.000000000001,
-      "heel": 5819.000000000001,
-      "idlz": 5819.000000000001,
-      "idlz_heel": 5819.000000000001
+      "base": 4600.0,
+      "heel": 4600.0,
+      "idlz": 4600.0,
+      "idlz_heel": 4600.0
     },
     "event": null,
     "full_name": "SR Promo Toujou Nozomi",
@@ -16312,10 +16312,10 @@ app.constant('CardData',
     "non_idolized_maximum_statistics_pure": 4400,
     "non_idolized_maximum_statistics_smile": 2510,
     "oScore": {
-      "base": 5819.000000000001,
-      "heel": 5819.000000000001,
-      "idlz": 5819.000000000001,
-      "idlz_heel": 5819.000000000001
+      "base": 4600.0,
+      "heel": 4600.0,
+      "idlz": 4600.0,
+      "idlz_heel": 4600.0
     },
     "on_attr": 4650,
     "on_attr_idlz": 4400,
@@ -16383,10 +16383,10 @@ app.constant('CardData',
   {
     "attribute": "Pure",
     "cScore": {
-      "base": 5792.550000000001,
-      "heel": 5792.550000000001,
-      "idlz": 5792.550000000001,
-      "idlz_heel": 5792.550000000001
+      "base": 4580.0,
+      "heel": 4580.0,
+      "idlz": 4580.0,
+      "idlz_heel": 4580.0
     },
     "event": null,
     "full_name": "SR Promo Hoshizora Rin",
@@ -16402,10 +16402,10 @@ app.constant('CardData',
     "non_idolized_maximum_statistics_pure": 4380,
     "non_idolized_maximum_statistics_smile": 2920,
     "oScore": {
-      "base": 5792.550000000001,
-      "heel": 5792.550000000001,
-      "idlz": 5792.550000000001,
-      "idlz_heel": 5792.550000000001
+      "base": 4580.0,
+      "heel": 4580.0,
+      "idlz": 4580.0,
+      "idlz_heel": 4580.0
     },
     "on_attr": 4630,
     "on_attr_idlz": 4380,
@@ -16428,10 +16428,10 @@ app.constant('CardData',
   {
     "attribute": "Pure",
     "cScore": {
-      "base": 5739.6500000000015,
-      "heel": 5739.6500000000015,
-      "idlz": 5739.6500000000015,
-      "idlz_heel": 5739.6500000000015
+      "base": 4540.0,
+      "heel": 4540.0,
+      "idlz": 4540.0,
+      "idlz_heel": 4540.0
     },
     "event": null,
     "full_name": "SR Promo Sonoda Umi",
@@ -16447,10 +16447,10 @@ app.constant('CardData',
     "non_idolized_maximum_statistics_pure": 4340,
     "non_idolized_maximum_statistics_smile": 2390,
     "oScore": {
-      "base": 5739.6500000000015,
-      "heel": 5739.6500000000015,
-      "idlz": 5739.6500000000015,
-      "idlz_heel": 5739.6500000000015
+      "base": 4540.0,
+      "heel": 4540.0,
+      "idlz": 4540.0,
+      "idlz_heel": 4540.0
     },
     "on_attr": 4590,
     "on_attr_idlz": 4340,
@@ -16473,10 +16473,10 @@ app.constant('CardData',
   {
     "attribute": "Pure",
     "cScore": {
-      "base": 7048.925000000001,
-      "heel": 7048.925000000001,
-      "idlz": 7048.925000000001,
-      "idlz_heel": 7048.925000000001
+      "base": 5780.0,
+      "heel": 5780.0,
+      "idlz": 5780.0,
+      "idlz_heel": 5780.0
     },
     "event": null,
     "full_name": "UR Promo Koizumi Hanayo",
@@ -16492,10 +16492,10 @@ app.constant('CardData',
     "non_idolized_maximum_statistics_pure": 4330,
     "non_idolized_maximum_statistics_smile": 3500,
     "oScore": {
-      "base": 7048.925000000001,
-      "heel": 7048.925000000001,
-      "idlz": 7048.925000000001,
-      "idlz_heel": 7048.925000000001
+      "base": 5780.0,
+      "heel": 5780.0,
+      "idlz": 5780.0,
+      "idlz_heel": 5780.0
     },
     "on_attr": 4830,
     "on_attr_idlz": 5330,
@@ -16563,10 +16563,10 @@ app.constant('CardData',
   {
     "attribute": "Pure",
     "cScore": {
-      "base": 7022.475000000001,
-      "heel": 7022.475000000001,
-      "idlz": 7022.475000000001,
-      "idlz_heel": 7022.475000000001
+      "base": 5760.0,
+      "heel": 5760.0,
+      "idlz": 5760.0,
+      "idlz_heel": 5760.0
     },
     "event": null,
     "full_name": "UR Promo Minami Kotori",
@@ -16582,10 +16582,10 @@ app.constant('CardData',
     "non_idolized_maximum_statistics_pure": 4310,
     "non_idolized_maximum_statistics_smile": 4020,
     "oScore": {
-      "base": 7022.475000000001,
-      "heel": 7022.475000000001,
-      "idlz": 7022.475000000001,
-      "idlz_heel": 7022.475000000001
+      "base": 5760.0,
+      "heel": 5760.0,
+      "idlz": 5760.0,
+      "idlz_heel": 5760.0
     },
     "on_attr": 4810,
     "on_attr_idlz": 5310,
@@ -17013,10 +17013,10 @@ app.constant('CardData',
   {
     "attribute": "Pure",
     "cScore": {
-      "base": 6996.0250000000015,
-      "heel": 6996.0250000000015,
-      "idlz": 6996.0250000000015,
-      "idlz_heel": 6996.0250000000015
+      "base": 5740.0,
+      "heel": 5740.0,
+      "idlz": 5740.0,
+      "idlz_heel": 5740.0
     },
     "event": null,
     "full_name": "UR Promo Toujou Nozomi",
@@ -17032,10 +17032,10 @@ app.constant('CardData',
     "non_idolized_maximum_statistics_pure": 4290,
     "non_idolized_maximum_statistics_smile": 4000,
     "oScore": {
-      "base": 6996.0250000000015,
-      "heel": 6996.0250000000015,
-      "idlz": 6996.0250000000015,
-      "idlz_heel": 6996.0250000000015
+      "base": 5740.0,
+      "heel": 5740.0,
+      "idlz": 5740.0,
+      "idlz_heel": 5740.0
     },
     "on_attr": 4790,
     "on_attr_idlz": 5290,
@@ -17058,10 +17058,10 @@ app.constant('CardData',
   {
     "attribute": "Smile",
     "cScore": {
-      "base": 5501.600000000001,
-      "heel": 5501.600000000001,
-      "idlz": 5501.600000000001,
-      "idlz_heel": 5501.600000000001
+      "base": 4360.0,
+      "heel": 4360.0,
+      "idlz": 4360.0,
+      "idlz_heel": 4360.0
     },
     "event": null,
     "full_name": "SR Promo Koizumi Hanayo",
@@ -17077,10 +17077,10 @@ app.constant('CardData',
     "non_idolized_maximum_statistics_pure": 2870,
     "non_idolized_maximum_statistics_smile": 4160,
     "oScore": {
-      "base": 5501.600000000001,
-      "heel": 5501.600000000001,
-      "idlz": 5501.600000000001,
-      "idlz_heel": 5501.600000000001
+      "base": 4360.0,
+      "heel": 4360.0,
+      "idlz": 4360.0,
+      "idlz_heel": 4360.0
     },
     "on_attr": 4410,
     "on_attr_idlz": 4160,
@@ -17148,10 +17148,10 @@ app.constant('CardData',
   {
     "attribute": "Cool",
     "cScore": {
-      "base": 5554.500000000001,
-      "heel": 5554.500000000001,
-      "idlz": 5554.500000000001,
-      "idlz_heel": 5554.500000000001
+      "base": 4400.0,
+      "heel": 4400.0,
+      "idlz": 4400.0,
+      "idlz_heel": 4400.0
     },
     "event": null,
     "full_name": "SR Promo Sonoda Umi",
@@ -17167,10 +17167,10 @@ app.constant('CardData',
     "non_idolized_maximum_statistics_pure": 2510,
     "non_idolized_maximum_statistics_smile": 3030,
     "oScore": {
-      "base": 5554.500000000001,
-      "heel": 5554.500000000001,
-      "idlz": 5554.500000000001,
-      "idlz_heel": 5554.500000000001
+      "base": 4400.0,
+      "heel": 4400.0,
+      "idlz": 4400.0,
+      "idlz_heel": 4400.0
     },
     "on_attr": 4450,
     "on_attr_idlz": 4200,
@@ -17193,10 +17193,10 @@ app.constant('CardData',
   {
     "attribute": "Smile",
     "cScore": {
-      "base": 5554.500000000001,
-      "heel": 5554.500000000001,
-      "idlz": 5554.500000000001,
-      "idlz_heel": 5554.500000000001
+      "base": 4400.0,
+      "heel": 4400.0,
+      "idlz": 4400.0,
+      "idlz_heel": 4400.0
     },
     "event": null,
     "full_name": "SR Promo Minami Kotori",
@@ -17212,10 +17212,10 @@ app.constant('CardData',
     "non_idolized_maximum_statistics_pure": 2930,
     "non_idolized_maximum_statistics_smile": 4200,
     "oScore": {
-      "base": 5554.500000000001,
-      "heel": 5554.500000000001,
-      "idlz": 5554.500000000001,
-      "idlz_heel": 5554.500000000001
+      "base": 4400.0,
+      "heel": 4400.0,
+      "idlz": 4400.0,
+      "idlz_heel": 4400.0
     },
     "on_attr": 4450,
     "on_attr_idlz": 4200,
@@ -17238,10 +17238,10 @@ app.constant('CardData',
   {
     "attribute": "Smile",
     "cScore": {
-      "base": 5594.175000000001,
-      "heel": 5594.175000000001,
-      "idlz": 5594.175000000001,
-      "idlz_heel": 5594.175000000001
+      "base": 4430.0,
+      "heel": 4430.0,
+      "idlz": 4430.0,
+      "idlz_heel": 4430.0
     },
     "event": null,
     "full_name": "SR Promo Kousaka Honoka",
@@ -17257,10 +17257,10 @@ app.constant('CardData',
     "non_idolized_maximum_statistics_pure": 2670,
     "non_idolized_maximum_statistics_smile": 4230,
     "oScore": {
-      "base": 5594.175000000001,
-      "heel": 5594.175000000001,
-      "idlz": 5594.175000000001,
-      "idlz_heel": 5594.175000000001
+      "base": 4430.0,
+      "heel": 4430.0,
+      "idlz": 4430.0,
+      "idlz_heel": 4430.0
     },
     "on_attr": 4480,
     "on_attr_idlz": 4230,
@@ -17283,10 +17283,10 @@ app.constant('CardData',
   {
     "attribute": "Smile",
     "cScore": {
-      "base": 5514.825000000001,
-      "heel": 5514.825000000001,
-      "idlz": 5514.825000000001,
-      "idlz_heel": 5514.825000000001
+      "base": 4370.0,
+      "heel": 4370.0,
+      "idlz": 4370.0,
+      "idlz_heel": 4370.0
     },
     "event": null,
     "full_name": "SR Promo Kousaka Honoka",
@@ -17302,10 +17302,10 @@ app.constant('CardData',
     "non_idolized_maximum_statistics_pure": 2980,
     "non_idolized_maximum_statistics_smile": 4170,
     "oScore": {
-      "base": 5514.825000000001,
-      "heel": 5514.825000000001,
-      "idlz": 5514.825000000001,
-      "idlz_heel": 5514.825000000001
+      "base": 4370.0,
+      "heel": 4370.0,
+      "idlz": 4370.0,
+      "idlz_heel": 4370.0
     },
     "on_attr": 4420,
     "on_attr_idlz": 4170,
@@ -17778,10 +17778,10 @@ app.constant('CardData',
   {
     "attribute": "Cool",
     "cScore": {
-      "base": 6982.800000000001,
-      "heel": 6982.800000000001,
-      "idlz": 6982.800000000001,
-      "idlz_heel": 6982.800000000001
+      "base": 5730.0,
+      "heel": 5730.0,
+      "idlz": 5730.0,
+      "idlz_heel": 5730.0
     },
     "event": null,
     "full_name": "UR Promo Sonoda Umi",
@@ -17797,10 +17797,10 @@ app.constant('CardData',
     "non_idolized_maximum_statistics_pure": 4010,
     "non_idolized_maximum_statistics_smile": 3620,
     "oScore": {
-      "base": 6982.800000000001,
-      "heel": 6982.800000000001,
-      "idlz": 6982.800000000001,
-      "idlz_heel": 6982.800000000001
+      "base": 5730.0,
+      "heel": 5730.0,
+      "idlz": 5730.0,
+      "idlz_heel": 5730.0
     },
     "on_attr": 4780,
     "on_attr_idlz": 5280,
@@ -17823,10 +17823,10 @@ app.constant('CardData',
   {
     "attribute": "Cool",
     "cScore": {
-      "base": 6929.9000000000015,
-      "heel": 6929.9000000000015,
-      "idlz": 6929.9000000000015,
-      "idlz_heel": 6929.9000000000015
+      "base": 5690.0,
+      "heel": 5690.0,
+      "idlz": 5690.0,
+      "idlz_heel": 5690.0
     },
     "event": null,
     "full_name": "UR Promo Ayase Eli",
@@ -17842,10 +17842,10 @@ app.constant('CardData',
     "non_idolized_maximum_statistics_pure": 2900,
     "non_idolized_maximum_statistics_smile": 3670,
     "oScore": {
-      "base": 6929.9000000000015,
-      "heel": 6929.9000000000015,
-      "idlz": 6929.9000000000015,
-      "idlz_heel": 6929.9000000000015
+      "base": 5690.0,
+      "heel": 5690.0,
+      "idlz": 5690.0,
+      "idlz_heel": 5690.0
     },
     "on_attr": 4740,
     "on_attr_idlz": 5240,
@@ -18363,10 +18363,10 @@ app.constant('CardData',
   {
     "attribute": "Smile",
     "cScore": {
-      "base": 6982.800000000001,
-      "heel": 6982.800000000001,
-      "idlz": 6982.800000000001,
-      "idlz_heel": 6982.800000000001
+      "base": 5730.0,
+      "heel": 5730.0,
+      "idlz": 5730.0,
+      "idlz_heel": 5730.0
     },
     "event": null,
     "full_name": "UR Promo Hoshizora Rin",
@@ -18382,10 +18382,10 @@ app.constant('CardData',
     "non_idolized_maximum_statistics_pure": 3650,
     "non_idolized_maximum_statistics_smile": 4280,
     "oScore": {
-      "base": 6982.800000000001,
-      "heel": 6982.800000000001,
-      "idlz": 6982.800000000001,
-      "idlz_heel": 6982.800000000001
+      "base": 5730.0,
+      "heel": 5730.0,
+      "idlz": 5730.0,
+      "idlz_heel": 5730.0
     },
     "on_attr": 4780,
     "on_attr_idlz": 5280,
@@ -18408,10 +18408,10 @@ app.constant('CardData',
   {
     "attribute": "Smile",
     "cScore": {
-      "base": 5475.150000000001,
-      "heel": 5475.150000000001,
-      "idlz": 5475.150000000001,
-      "idlz_heel": 5475.150000000001
+      "base": 4340.0,
+      "heel": 4340.0,
+      "idlz": 4340.0,
+      "idlz_heel": 4340.0
     },
     "event": null,
     "full_name": "SR Promo Yazawa Nico",
@@ -18427,10 +18427,10 @@ app.constant('CardData',
     "non_idolized_maximum_statistics_pure": 2670,
     "non_idolized_maximum_statistics_smile": 4140,
     "oScore": {
-      "base": 5475.150000000001,
-      "heel": 5475.150000000001,
-      "idlz": 5475.150000000001,
-      "idlz_heel": 5475.150000000001
+      "base": 4340.0,
+      "heel": 4340.0,
+      "idlz": 4340.0,
+      "idlz_heel": 4340.0
     },
     "on_attr": 4390,
     "on_attr_idlz": 4140,
@@ -18453,10 +18453,10 @@ app.constant('CardData',
   {
     "attribute": "Cool",
     "cScore": {
-      "base": 5580.950000000001,
-      "heel": 5580.950000000001,
-      "idlz": 5580.950000000001,
-      "idlz_heel": 5580.950000000001
+      "base": 4420.0,
+      "heel": 4420.0,
+      "idlz": 4420.0,
+      "idlz_heel": 4420.0
     },
     "event": null,
     "full_name": "SR Promo Nishikino Maki",
@@ -18472,10 +18472,10 @@ app.constant('CardData',
     "non_idolized_maximum_statistics_pure": 2700,
     "non_idolized_maximum_statistics_smile": 2780,
     "oScore": {
-      "base": 5580.950000000001,
-      "heel": 5580.950000000001,
-      "idlz": 5580.950000000001,
-      "idlz_heel": 5580.950000000001
+      "base": 4420.0,
+      "heel": 4420.0,
+      "idlz": 4420.0,
+      "idlz_heel": 4420.0
     },
     "on_attr": 4470,
     "on_attr_idlz": 4220,
@@ -18993,10 +18993,10 @@ app.constant('CardData',
   {
     "attribute": "Smile",
     "cScore": {
-      "base": 6903.450000000002,
-      "heel": 6903.450000000002,
-      "idlz": 6903.450000000002,
-      "idlz_heel": 6903.450000000002
+      "base": 5670.0,
+      "heel": 5670.0,
+      "idlz": 5670.0,
+      "idlz_heel": 5670.0
     },
     "event": null,
     "full_name": "UR Promo Yazawa Nico",
@@ -19012,10 +19012,10 @@ app.constant('CardData',
     "non_idolized_maximum_statistics_pure": 3660,
     "non_idolized_maximum_statistics_smile": 4220,
     "oScore": {
-      "base": 6903.450000000002,
-      "heel": 6903.450000000002,
-      "idlz": 6903.450000000002,
-      "idlz_heel": 6903.450000000002
+      "base": 5670.0,
+      "heel": 5670.0,
+      "idlz": 5670.0,
+      "idlz_heel": 5670.0
     },
     "on_attr": 4720,
     "on_attr_idlz": 5220,
@@ -19038,10 +19038,10 @@ app.constant('CardData',
   {
     "attribute": "Cool",
     "cScore": {
-      "base": 7009.250000000001,
-      "heel": 7009.250000000001,
-      "idlz": 7009.250000000001,
-      "idlz_heel": 7009.250000000001
+      "base": 5750.0,
+      "heel": 5750.0,
+      "idlz": 5750.0,
+      "idlz_heel": 5750.0
     },
     "event": null,
     "full_name": "UR Promo Nishikino Maki",
@@ -19057,10 +19057,10 @@ app.constant('CardData',
     "non_idolized_maximum_statistics_pure": 3800,
     "non_idolized_maximum_statistics_smile": 3770,
     "oScore": {
-      "base": 7009.250000000001,
-      "heel": 7009.250000000001,
-      "idlz": 7009.250000000001,
-      "idlz_heel": 7009.250000000001
+      "base": 5750.0,
+      "heel": 5750.0,
+      "idlz": 5750.0,
+      "idlz_heel": 5750.0
     },
     "on_attr": 4800,
     "on_attr_idlz": 5300,
@@ -19083,10 +19083,10 @@ app.constant('CardData',
   {
     "attribute": "Cool",
     "cScore": {
-      "base": 6943.125000000001,
-      "heel": 6943.125000000001,
-      "idlz": 6943.125000000001,
-      "idlz_heel": 6943.125000000001
+      "base": 5700.0,
+      "heel": 5700.0,
+      "idlz": 5700.0,
+      "idlz_heel": 5700.0
     },
     "event": null,
     "full_name": "UR Promo Ayase Eli",
@@ -19102,10 +19102,10 @@ app.constant('CardData',
     "non_idolized_maximum_statistics_pure": 3390,
     "non_idolized_maximum_statistics_smile": 2830,
     "oScore": {
-      "base": 6943.125000000001,
-      "heel": 6943.125000000001,
-      "idlz": 6943.125000000001,
-      "idlz_heel": 6943.125000000001
+      "base": 5700.0,
+      "heel": 5700.0,
+      "idlz": 5700.0,
+      "idlz_heel": 5700.0
     },
     "on_attr": 4750,
     "on_attr_idlz": 5250,
@@ -19353,10 +19353,10 @@ app.constant('CardData',
   {
     "attribute": "Cool",
     "cScore": {
-      "base": 6863.7750000000015,
-      "heel": 6863.7750000000015,
-      "idlz": 6863.7750000000015,
-      "idlz_heel": 6863.7750000000015
+      "base": 5640.0,
+      "heel": 5640.0,
+      "idlz": 5640.0,
+      "idlz_heel": 5640.0
     },
     "event": null,
     "full_name": "UR Promo Nishikino Maki",
@@ -19372,10 +19372,10 @@ app.constant('CardData',
     "non_idolized_maximum_statistics_pure": 3030,
     "non_idolized_maximum_statistics_smile": 3550,
     "oScore": {
-      "base": 6863.7750000000015,
-      "heel": 6863.7750000000015,
-      "idlz": 6863.7750000000015,
-      "idlz_heel": 6863.7750000000015
+      "base": 5640.0,
+      "heel": 5640.0,
+      "idlz": 5640.0,
+      "idlz_heel": 5640.0
     },
     "on_attr": 4690,
     "on_attr_idlz": 5190,
@@ -19398,10 +19398,10 @@ app.constant('CardData',
   {
     "attribute": "Cool",
     "cScore": {
-      "base": 6824.100000000001,
-      "heel": 6824.100000000001,
-      "idlz": 6824.100000000001,
-      "idlz_heel": 6824.100000000001
+      "base": 5610.0,
+      "heel": 5610.0,
+      "idlz": 5610.0,
+      "idlz_heel": 5610.0
     },
     "event": null,
     "full_name": "UR Promo Ayase Eli",
@@ -19417,10 +19417,10 @@ app.constant('CardData',
     "non_idolized_maximum_statistics_pure": 2990,
     "non_idolized_maximum_statistics_smile": 3620,
     "oScore": {
-      "base": 6824.100000000001,
-      "heel": 6824.100000000001,
-      "idlz": 6824.100000000001,
-      "idlz_heel": 6824.100000000001
+      "base": 5610.0,
+      "heel": 5610.0,
+      "idlz": 5610.0,
+      "idlz_heel": 5610.0
     },
     "on_attr": 4660,
     "on_attr_idlz": 5160,
@@ -19713,10 +19713,10 @@ app.constant('CardData',
   {
     "attribute": "Pure",
     "cScore": {
-      "base": 5448.700000000001,
-      "heel": 5448.700000000001,
-      "idlz": 5448.700000000001,
-      "idlz_heel": 5448.700000000001
+      "base": 4320.0,
+      "heel": 4320.0,
+      "idlz": 4320.0,
+      "idlz_heel": 4320.0
     },
     "event": null,
     "full_name": "SR Promo Toujou Nozomi",
@@ -19732,10 +19732,10 @@ app.constant('CardData',
     "non_idolized_maximum_statistics_pure": 4120,
     "non_idolized_maximum_statistics_smile": 2830,
     "oScore": {
-      "base": 5448.700000000001,
-      "heel": 5448.700000000001,
-      "idlz": 5448.700000000001,
-      "idlz_heel": 5448.700000000001
+      "base": 4320.0,
+      "heel": 4320.0,
+      "idlz": 4320.0,
+      "idlz_heel": 4320.0
     },
     "on_attr": 4370,
     "on_attr_idlz": 4120,
@@ -19758,10 +19758,10 @@ app.constant('CardData',
   {
     "attribute": "Cool",
     "cScore": {
-      "base": 5422.250000000001,
-      "heel": 5422.250000000001,
-      "idlz": 5422.250000000001,
-      "idlz_heel": 5422.250000000001
+      "base": 4300.0,
+      "heel": 4300.0,
+      "idlz": 4300.0,
+      "idlz_heel": 4300.0
     },
     "event": null,
     "full_name": "SR Promo Ayase Eli",
@@ -19777,10 +19777,10 @@ app.constant('CardData',
     "non_idolized_maximum_statistics_pure": 2880,
     "non_idolized_maximum_statistics_smile": 2570,
     "oScore": {
-      "base": 5422.250000000001,
-      "heel": 5422.250000000001,
-      "idlz": 5422.250000000001,
-      "idlz_heel": 5422.250000000001
+      "base": 4300.0,
+      "heel": 4300.0,
+      "idlz": 4300.0,
+      "idlz_heel": 4300.0
     },
     "on_attr": 4350,
     "on_attr_idlz": 4100,
@@ -19848,10 +19848,10 @@ app.constant('CardData',
   {
     "attribute": "Smile",
     "cScore": {
-      "base": 5435.475000000001,
-      "heel": 5435.475000000001,
-      "idlz": 5435.475000000001,
-      "idlz_heel": 5435.475000000001
+      "base": 4310.0,
+      "heel": 4310.0,
+      "idlz": 4310.0,
+      "idlz_heel": 4310.0
     },
     "event": null,
     "full_name": "SR Promo Kousaka Honoka",
@@ -19867,10 +19867,10 @@ app.constant('CardData',
     "non_idolized_maximum_statistics_pure": 2730,
     "non_idolized_maximum_statistics_smile": 4110,
     "oScore": {
-      "base": 5435.475000000001,
-      "heel": 5435.475000000001,
-      "idlz": 5435.475000000001,
-      "idlz_heel": 5435.475000000001
+      "base": 4310.0,
+      "heel": 4310.0,
+      "idlz": 4310.0,
+      "idlz_heel": 4310.0
     },
     "on_attr": 4360,
     "on_attr_idlz": 4110,
@@ -19893,10 +19893,10 @@ app.constant('CardData',
   {
     "attribute": "Smile",
     "cScore": {
-      "base": 6929.9000000000015,
-      "heel": 6929.9000000000015,
-      "idlz": 6929.9000000000015,
-      "idlz_heel": 6929.9000000000015
+      "base": 5690.0,
+      "heel": 5690.0,
+      "idlz": 5690.0,
+      "idlz_heel": 5690.0
     },
     "event": null,
     "full_name": "UR Promo Kousaka Honoka",
@@ -19912,10 +19912,10 @@ app.constant('CardData',
     "non_idolized_maximum_statistics_pure": 3890,
     "non_idolized_maximum_statistics_smile": 4240,
     "oScore": {
-      "base": 6929.9000000000015,
-      "heel": 6929.9000000000015,
-      "idlz": 6929.9000000000015,
-      "idlz_heel": 6929.9000000000015
+      "base": 5690.0,
+      "heel": 5690.0,
+      "idlz": 5690.0,
+      "idlz_heel": 5690.0
     },
     "on_attr": 4740,
     "on_attr_idlz": 5240,
@@ -20883,10 +20883,10 @@ app.constant('CardData',
   {
     "attribute": "Pure",
     "cScore": {
-      "base": 5461.925000000001,
-      "heel": 5461.925000000001,
-      "idlz": 5461.925000000001,
-      "idlz_heel": 5461.925000000001
+      "base": 4330.0,
+      "heel": 4330.0,
+      "idlz": 4330.0,
+      "idlz_heel": 4330.0
     },
     "event": null,
     "full_name": "SR Promo Koizumi Hanayo",
@@ -20902,10 +20902,10 @@ app.constant('CardData',
     "non_idolized_maximum_statistics_pure": 4130,
     "non_idolized_maximum_statistics_smile": 2600,
     "oScore": {
-      "base": 5461.925000000001,
-      "heel": 5461.925000000001,
-      "idlz": 5461.925000000001,
-      "idlz_heel": 5461.925000000001
+      "base": 4330.0,
+      "heel": 4330.0,
+      "idlz": 4330.0,
+      "idlz_heel": 4330.0
     },
     "on_attr": 4380,
     "on_attr_idlz": 4130,
@@ -20973,10 +20973,10 @@ app.constant('CardData',
   {
     "attribute": "Smile",
     "cScore": {
-      "base": 5422.250000000001,
-      "heel": 5422.250000000001,
-      "idlz": 5422.250000000001,
-      "idlz_heel": 5422.250000000001
+      "base": 4300.0,
+      "heel": 4300.0,
+      "idlz": 4300.0,
+      "idlz_heel": 4300.0
     },
     "event": null,
     "full_name": "SR Promo Hoshizora Rin",
@@ -20992,10 +20992,10 @@ app.constant('CardData',
     "non_idolized_maximum_statistics_pure": 2870,
     "non_idolized_maximum_statistics_smile": 4100,
     "oScore": {
-      "base": 5422.250000000001,
-      "heel": 5422.250000000001,
-      "idlz": 5422.250000000001,
-      "idlz_heel": 5422.250000000001
+      "base": 4300.0,
+      "heel": 4300.0,
+      "idlz": 4300.0,
+      "idlz_heel": 4300.0
     },
     "on_attr": 4350,
     "on_attr_idlz": 4100,
@@ -22278,10 +22278,10 @@ app.constant('CardData',
   {
     "attribute": "Pure",
     "cScore": {
-      "base": 6863.7750000000015,
-      "heel": 6863.7750000000015,
-      "idlz": 6863.7750000000015,
-      "idlz_heel": 6863.7750000000015
+      "base": 5640.0,
+      "heel": 5640.0,
+      "idlz": 5640.0,
+      "idlz_heel": 5640.0
     },
     "event": null,
     "full_name": "UR Promo Minami Kotori",
@@ -22297,10 +22297,10 @@ app.constant('CardData',
     "non_idolized_maximum_statistics_pure": 4190,
     "non_idolized_maximum_statistics_smile": 3630,
     "oScore": {
-      "base": 6863.7750000000015,
-      "heel": 6863.7750000000015,
-      "idlz": 6863.7750000000015,
-      "idlz_heel": 6863.7750000000015
+      "base": 5640.0,
+      "heel": 5640.0,
+      "idlz": 5640.0,
+      "idlz_heel": 5640.0
     },
     "on_attr": 4690,
     "on_attr_idlz": 5190,
@@ -22503,10 +22503,10 @@ app.constant('CardData',
   {
     "attribute": "Smile",
     "cScore": {
-      "base": 5528.050000000001,
-      "heel": 5528.050000000001,
-      "idlz": 5528.050000000001,
-      "idlz_heel": 5528.050000000001
+      "base": 4380.0,
+      "heel": 4380.0,
+      "idlz": 4380.0,
+      "idlz_heel": 4380.0
     },
     "event": null,
     "full_name": "SR Promo Yazawa Nico",
@@ -22522,10 +22522,10 @@ app.constant('CardData',
     "non_idolized_maximum_statistics_pure": 2870,
     "non_idolized_maximum_statistics_smile": 4180,
     "oScore": {
-      "base": 5528.050000000001,
-      "heel": 5528.050000000001,
-      "idlz": 5528.050000000001,
-      "idlz_heel": 5528.050000000001
+      "base": 4380.0,
+      "heel": 4380.0,
+      "idlz": 4380.0,
+      "idlz_heel": 4380.0
     },
     "on_attr": 4430,
     "on_attr_idlz": 4180,
@@ -22548,10 +22548,10 @@ app.constant('CardData',
   {
     "attribute": "Pure",
     "cScore": {
-      "base": 5554.500000000001,
-      "heel": 5554.500000000001,
-      "idlz": 5554.500000000001,
-      "idlz_heel": 5554.500000000001
+      "base": 4400.0,
+      "heel": 4400.0,
+      "idlz": 4400.0,
+      "idlz_heel": 4400.0
     },
     "event": null,
     "full_name": "SR Promo Koizumi Hanayo",
@@ -22567,10 +22567,10 @@ app.constant('CardData',
     "non_idolized_maximum_statistics_pure": 4200,
     "non_idolized_maximum_statistics_smile": 2660,
     "oScore": {
-      "base": 5554.500000000001,
-      "heel": 5554.500000000001,
-      "idlz": 5554.500000000001,
-      "idlz_heel": 5554.500000000001
+      "base": 4400.0,
+      "heel": 4400.0,
+      "idlz": 4400.0,
+      "idlz_heel": 4400.0
     },
     "on_attr": 4450,
     "on_attr_idlz": 4200,
@@ -22593,10 +22593,10 @@ app.constant('CardData',
   {
     "attribute": "Pure",
     "cScore": {
-      "base": 5567.725000000001,
-      "heel": 5567.725000000001,
-      "idlz": 5567.725000000001,
-      "idlz_heel": 5567.725000000001
+      "base": 4410.0,
+      "heel": 4410.0,
+      "idlz": 4410.0,
+      "idlz_heel": 4410.0
     },
     "event": null,
     "full_name": "SR Promo Toujou Nozomi",
@@ -22612,10 +22612,10 @@ app.constant('CardData',
     "non_idolized_maximum_statistics_pure": 4210,
     "non_idolized_maximum_statistics_smile": 2700,
     "oScore": {
-      "base": 5567.725000000001,
-      "heel": 5567.725000000001,
-      "idlz": 5567.725000000001,
-      "idlz_heel": 5567.725000000001
+      "base": 4410.0,
+      "heel": 4410.0,
+      "idlz": 4410.0,
+      "idlz_heel": 4410.0
     },
     "on_attr": 4460,
     "on_attr_idlz": 4210,
@@ -22638,10 +22638,10 @@ app.constant('CardData',
   {
     "attribute": "Cool",
     "cScore": {
-      "base": 5594.175000000001,
-      "heel": 5594.175000000001,
-      "idlz": 5594.175000000001,
-      "idlz_heel": 5594.175000000001
+      "base": 4430.0,
+      "heel": 4430.0,
+      "idlz": 4430.0,
+      "idlz_heel": 4430.0
     },
     "event": null,
     "full_name": "SR Promo Nishikino Maki",
@@ -22657,10 +22657,10 @@ app.constant('CardData',
     "non_idolized_maximum_statistics_pure": 2890,
     "non_idolized_maximum_statistics_smile": 2630,
     "oScore": {
-      "base": 5594.175000000001,
-      "heel": 5594.175000000001,
-      "idlz": 5594.175000000001,
-      "idlz_heel": 5594.175000000001
+      "base": 4430.0,
+      "heel": 4430.0,
+      "idlz": 4430.0,
+      "idlz_heel": 4430.0
     },
     "on_attr": 4480,
     "on_attr_idlz": 4230,
@@ -22683,10 +22683,10 @@ app.constant('CardData',
   {
     "attribute": "Smile",
     "cScore": {
-      "base": 5567.725000000001,
-      "heel": 5567.725000000001,
-      "idlz": 5567.725000000001,
-      "idlz_heel": 5567.725000000001
+      "base": 4410.0,
+      "heel": 4410.0,
+      "idlz": 4410.0,
+      "idlz_heel": 4410.0
     },
     "event": null,
     "full_name": "SR Promo Hoshizora Rin",
@@ -22702,10 +22702,10 @@ app.constant('CardData',
     "non_idolized_maximum_statistics_pure": 2690,
     "non_idolized_maximum_statistics_smile": 4210,
     "oScore": {
-      "base": 5567.725000000001,
-      "heel": 5567.725000000001,
-      "idlz": 5567.725000000001,
-      "idlz_heel": 5567.725000000001
+      "base": 4410.0,
+      "heel": 4410.0,
+      "idlz": 4410.0,
+      "idlz_heel": 4410.0
     },
     "on_attr": 4460,
     "on_attr_idlz": 4210,
@@ -22728,10 +22728,10 @@ app.constant('CardData',
   {
     "attribute": "Cool",
     "cScore": {
-      "base": 5620.625000000001,
-      "heel": 5620.625000000001,
-      "idlz": 5620.625000000001,
-      "idlz_heel": 5620.625000000001
+      "base": 4450.0,
+      "heel": 4450.0,
+      "idlz": 4450.0,
+      "idlz_heel": 4450.0
     },
     "event": null,
     "full_name": "SR Promo Sonoda Umi",
@@ -22747,10 +22747,10 @@ app.constant('CardData',
     "non_idolized_maximum_statistics_pure": 2670,
     "non_idolized_maximum_statistics_smile": 2830,
     "oScore": {
-      "base": 5620.625000000001,
-      "heel": 5620.625000000001,
-      "idlz": 5620.625000000001,
-      "idlz_heel": 5620.625000000001
+      "base": 4450.0,
+      "heel": 4450.0,
+      "idlz": 4450.0,
+      "idlz_heel": 4450.0
     },
     "on_attr": 4500,
     "on_attr_idlz": 4250,
@@ -22773,10 +22773,10 @@ app.constant('CardData',
   {
     "attribute": "Pure",
     "cScore": {
-      "base": 5554.500000000001,
-      "heel": 5554.500000000001,
-      "idlz": 5554.500000000001,
-      "idlz_heel": 5554.500000000001
+      "base": 4400.0,
+      "heel": 4400.0,
+      "idlz": 4400.0,
+      "idlz_heel": 4400.0
     },
     "event": null,
     "full_name": "SR Promo Minami Kotori",
@@ -22792,10 +22792,10 @@ app.constant('CardData',
     "non_idolized_maximum_statistics_pure": 4200,
     "non_idolized_maximum_statistics_smile": 2670,
     "oScore": {
-      "base": 5554.500000000001,
-      "heel": 5554.500000000001,
-      "idlz": 5554.500000000001,
-      "idlz_heel": 5554.500000000001
+      "base": 4400.0,
+      "heel": 4400.0,
+      "idlz": 4400.0,
+      "idlz_heel": 4400.0
     },
     "on_attr": 4450,
     "on_attr_idlz": 4200,
@@ -22818,10 +22818,10 @@ app.constant('CardData',
   {
     "attribute": "Cool",
     "cScore": {
-      "base": 5580.950000000001,
-      "heel": 5580.950000000001,
-      "idlz": 5580.950000000001,
-      "idlz_heel": 5580.950000000001
+      "base": 4420.0,
+      "heel": 4420.0,
+      "idlz": 4420.0,
+      "idlz_heel": 4420.0
     },
     "event": null,
     "full_name": "SR Promo Ayase Eli",
@@ -22837,10 +22837,10 @@ app.constant('CardData',
     "non_idolized_maximum_statistics_pure": 2680,
     "non_idolized_maximum_statistics_smile": 2850,
     "oScore": {
-      "base": 5580.950000000001,
-      "heel": 5580.950000000001,
-      "idlz": 5580.950000000001,
-      "idlz_heel": 5580.950000000001
+      "base": 4420.0,
+      "heel": 4420.0,
+      "idlz": 4420.0,
+      "idlz_heel": 4420.0
     },
     "on_attr": 4470,
     "on_attr_idlz": 4220,
@@ -22863,10 +22863,10 @@ app.constant('CardData',
   {
     "attribute": "Smile",
     "cScore": {
-      "base": 5541.275000000001,
-      "heel": 5541.275000000001,
-      "idlz": 5541.275000000001,
-      "idlz_heel": 5541.275000000001
+      "base": 4390.0,
+      "heel": 4390.0,
+      "idlz": 4390.0,
+      "idlz_heel": 4390.0
     },
     "event": null,
     "full_name": "SR Promo Kousaka Honoka",
@@ -22882,10 +22882,10 @@ app.constant('CardData',
     "non_idolized_maximum_statistics_pure": 2840,
     "non_idolized_maximum_statistics_smile": 4190,
     "oScore": {
-      "base": 5541.275000000001,
-      "heel": 5541.275000000001,
-      "idlz": 5541.275000000001,
-      "idlz_heel": 5541.275000000001
+      "base": 4390.0,
+      "heel": 4390.0,
+      "idlz": 4390.0,
+      "idlz_heel": 4390.0
     },
     "on_attr": 4440,
     "on_attr_idlz": 4190,
@@ -22908,10 +22908,10 @@ app.constant('CardData',
   {
     "attribute": "Smile",
     "cScore": {
-      "base": 5594.175000000001,
-      "heel": 5594.175000000001,
-      "idlz": 5594.175000000001,
-      "idlz_heel": 5594.175000000001
+      "base": 4430.0,
+      "heel": 4430.0,
+      "idlz": 4430.0,
+      "idlz_heel": 4430.0
     },
     "event": null,
     "full_name": "SR Promo Yazawa Nico",
@@ -22927,10 +22927,10 @@ app.constant('CardData',
     "non_idolized_maximum_statistics_pure": 2610,
     "non_idolized_maximum_statistics_smile": 4230,
     "oScore": {
-      "base": 5594.175000000001,
-      "heel": 5594.175000000001,
-      "idlz": 5594.175000000001,
-      "idlz_heel": 5594.175000000001
+      "base": 4430.0,
+      "heel": 4430.0,
+      "idlz": 4430.0,
+      "idlz_heel": 4430.0
     },
     "on_attr": 4480,
     "on_attr_idlz": 4230,
@@ -22953,10 +22953,10 @@ app.constant('CardData',
   {
     "attribute": "Pure",
     "cScore": {
-      "base": 5594.175000000001,
-      "heel": 5594.175000000001,
-      "idlz": 5594.175000000001,
-      "idlz_heel": 5594.175000000001
+      "base": 4430.0,
+      "heel": 4430.0,
+      "idlz": 4430.0,
+      "idlz_heel": 4430.0
     },
     "event": null,
     "full_name": "SR Promo Koizumi Hanayo",
@@ -22972,10 +22972,10 @@ app.constant('CardData',
     "non_idolized_maximum_statistics_pure": 4230,
     "non_idolized_maximum_statistics_smile": 2830,
     "oScore": {
-      "base": 5594.175000000001,
-      "heel": 5594.175000000001,
-      "idlz": 5594.175000000001,
-      "idlz_heel": 5594.175000000001
+      "base": 4430.0,
+      "heel": 4430.0,
+      "idlz": 4430.0,
+      "idlz_heel": 4430.0
     },
     "on_attr": 4480,
     "on_attr_idlz": 4230,
@@ -22998,10 +22998,10 @@ app.constant('CardData',
   {
     "attribute": "Pure",
     "cScore": {
-      "base": 5580.950000000001,
-      "heel": 5580.950000000001,
-      "idlz": 5580.950000000001,
-      "idlz_heel": 5580.950000000001
+      "base": 4420.0,
+      "heel": 4420.0,
+      "idlz": 4420.0,
+      "idlz_heel": 4420.0
     },
     "event": null,
     "full_name": "SR Promo Toujou Nozomi",
@@ -23017,10 +23017,10 @@ app.constant('CardData',
     "non_idolized_maximum_statistics_pure": 4220,
     "non_idolized_maximum_statistics_smile": 2810,
     "oScore": {
-      "base": 5580.950000000001,
-      "heel": 5580.950000000001,
-      "idlz": 5580.950000000001,
-      "idlz_heel": 5580.950000000001
+      "base": 4420.0,
+      "heel": 4420.0,
+      "idlz": 4420.0,
+      "idlz_heel": 4420.0
     },
     "on_attr": 4470,
     "on_attr_idlz": 4220,
@@ -23043,10 +23043,10 @@ app.constant('CardData',
   {
     "attribute": "Cool",
     "cScore": {
-      "base": 5567.725000000001,
-      "heel": 5567.725000000001,
-      "idlz": 5567.725000000001,
-      "idlz_heel": 5567.725000000001
+      "base": 4410.0,
+      "heel": 4410.0,
+      "idlz": 4410.0,
+      "idlz_heel": 4410.0
     },
     "event": null,
     "full_name": "SR Promo Nishikino Maki",
@@ -23062,10 +23062,10 @@ app.constant('CardData',
     "non_idolized_maximum_statistics_pure": 2600,
     "non_idolized_maximum_statistics_smile": 2840,
     "oScore": {
-      "base": 5567.725000000001,
-      "heel": 5567.725000000001,
-      "idlz": 5567.725000000001,
-      "idlz_heel": 5567.725000000001
+      "base": 4410.0,
+      "heel": 4410.0,
+      "idlz": 4410.0,
+      "idlz_heel": 4410.0
     },
     "on_attr": 4460,
     "on_attr_idlz": 4210,
@@ -23088,10 +23088,10 @@ app.constant('CardData',
   {
     "attribute": "Smile",
     "cScore": {
-      "base": 5528.050000000001,
-      "heel": 5528.050000000001,
-      "idlz": 5528.050000000001,
-      "idlz_heel": 5528.050000000001
+      "base": 4380.0,
+      "heel": 4380.0,
+      "idlz": 4380.0,
+      "idlz_heel": 4380.0
     },
     "event": null,
     "full_name": "SR Promo Hoshizora Rin",
@@ -23107,10 +23107,10 @@ app.constant('CardData',
     "non_idolized_maximum_statistics_pure": 2850,
     "non_idolized_maximum_statistics_smile": 4180,
     "oScore": {
-      "base": 5528.050000000001,
-      "heel": 5528.050000000001,
-      "idlz": 5528.050000000001,
-      "idlz_heel": 5528.050000000001
+      "base": 4380.0,
+      "heel": 4380.0,
+      "idlz": 4380.0,
+      "idlz_heel": 4380.0
     },
     "on_attr": 4430,
     "on_attr_idlz": 4180,
@@ -23133,10 +23133,10 @@ app.constant('CardData',
   {
     "attribute": "Cool",
     "cScore": {
-      "base": 5514.825000000001,
-      "heel": 5514.825000000001,
-      "idlz": 5514.825000000001,
-      "idlz_heel": 5514.825000000001
+      "base": 4370.0,
+      "heel": 4370.0,
+      "idlz": 4370.0,
+      "idlz_heel": 4370.0
     },
     "event": null,
     "full_name": "SR Promo Sonoda Umi",
@@ -23152,10 +23152,10 @@ app.constant('CardData',
     "non_idolized_maximum_statistics_pure": 2820,
     "non_idolized_maximum_statistics_smile": 2560,
     "oScore": {
-      "base": 5514.825000000001,
-      "heel": 5514.825000000001,
-      "idlz": 5514.825000000001,
-      "idlz_heel": 5514.825000000001
+      "base": 4370.0,
+      "heel": 4370.0,
+      "idlz": 4370.0,
+      "idlz_heel": 4370.0
     },
     "on_attr": 4420,
     "on_attr_idlz": 4170,
@@ -23178,10 +23178,10 @@ app.constant('CardData',
   {
     "attribute": "Pure",
     "cScore": {
-      "base": 5620.625000000001,
-      "heel": 5620.625000000001,
-      "idlz": 5620.625000000001,
-      "idlz_heel": 5620.625000000001
+      "base": 4450.0,
+      "heel": 4450.0,
+      "idlz": 4450.0,
+      "idlz_heel": 4450.0
     },
     "event": null,
     "full_name": "SR Promo Minami Kotori",
@@ -23197,10 +23197,10 @@ app.constant('CardData',
     "non_idolized_maximum_statistics_pure": 4250,
     "non_idolized_maximum_statistics_smile": 2800,
     "oScore": {
-      "base": 5620.625000000001,
-      "heel": 5620.625000000001,
-      "idlz": 5620.625000000001,
-      "idlz_heel": 5620.625000000001
+      "base": 4450.0,
+      "heel": 4450.0,
+      "idlz": 4450.0,
+      "idlz_heel": 4450.0
     },
     "on_attr": 4500,
     "on_attr_idlz": 4250,
@@ -23223,10 +23223,10 @@ app.constant('CardData',
   {
     "attribute": "Cool",
     "cScore": {
-      "base": 5554.500000000001,
-      "heel": 5554.500000000001,
-      "idlz": 5554.500000000001,
-      "idlz_heel": 5554.500000000001
+      "base": 4400.0,
+      "heel": 4400.0,
+      "idlz": 4400.0,
+      "idlz_heel": 4400.0
     },
     "event": null,
     "full_name": "SR Promo Ayase Eli",
@@ -23242,10 +23242,10 @@ app.constant('CardData',
     "non_idolized_maximum_statistics_pure": 2810,
     "non_idolized_maximum_statistics_smile": 2640,
     "oScore": {
-      "base": 5554.500000000001,
-      "heel": 5554.500000000001,
-      "idlz": 5554.500000000001,
-      "idlz_heel": 5554.500000000001
+      "base": 4400.0,
+      "heel": 4400.0,
+      "idlz": 4400.0,
+      "idlz_heel": 4400.0
     },
     "on_attr": 4450,
     "on_attr_idlz": 4200,
@@ -23268,10 +23268,10 @@ app.constant('CardData',
   {
     "attribute": "Smile",
     "cScore": {
-      "base": 5554.500000000001,
-      "heel": 5554.500000000001,
-      "idlz": 5554.500000000001,
-      "idlz_heel": 5554.500000000001
+      "base": 4400.0,
+      "heel": 4400.0,
+      "idlz": 4400.0,
+      "idlz_heel": 4400.0
     },
     "event": null,
     "full_name": "SR Promo Kousaka Honoka",
@@ -23287,10 +23287,10 @@ app.constant('CardData',
     "non_idolized_maximum_statistics_pure": 2610,
     "non_idolized_maximum_statistics_smile": 4200,
     "oScore": {
-      "base": 5554.500000000001,
-      "heel": 5554.500000000001,
-      "idlz": 5554.500000000001,
-      "idlz_heel": 5554.500000000001
+      "base": 4400.0,
+      "heel": 4400.0,
+      "idlz": 4400.0,
+      "idlz_heel": 4400.0
     },
     "on_attr": 4450,
     "on_attr_idlz": 4200,
@@ -23583,10 +23583,10 @@ app.constant('CardData',
   {
     "attribute": "Cool",
     "cScore": {
-      "base": 5554.500000000001,
-      "heel": 5554.500000000001,
-      "idlz": 5554.500000000001,
-      "idlz_heel": 5554.500000000001
+      "base": 4400.0,
+      "heel": 4400.0,
+      "idlz": 4400.0,
+      "idlz_heel": 4400.0
     },
     "event": null,
     "full_name": "SR Promo Nishikino Maki",
@@ -23602,10 +23602,10 @@ app.constant('CardData',
     "non_idolized_maximum_statistics_pure": 2850,
     "non_idolized_maximum_statistics_smile": 2680,
     "oScore": {
-      "base": 5554.500000000001,
-      "heel": 5554.500000000001,
-      "idlz": 5554.500000000001,
-      "idlz_heel": 5554.500000000001
+      "base": 4400.0,
+      "heel": 4400.0,
+      "idlz": 4400.0,
+      "idlz_heel": 4400.0
     },
     "on_attr": 4450,
     "on_attr_idlz": 4200,
@@ -23853,10 +23853,10 @@ app.constant('CardData',
   {
     "attribute": "Cool",
     "cScore": {
-      "base": 6877.000000000001,
-      "heel": 6877.000000000001,
-      "idlz": 6877.000000000001,
-      "idlz_heel": 6877.000000000001
+      "base": 5650.0,
+      "heel": 5650.0,
+      "idlz": 5650.0,
+      "idlz_heel": 5650.0
     },
     "event": null,
     "full_name": "UR Promo Sonoda Umi",
@@ -23872,10 +23872,10 @@ app.constant('CardData',
     "non_idolized_maximum_statistics_pure": 3710,
     "non_idolized_maximum_statistics_smile": 3960,
     "oScore": {
-      "base": 6877.000000000001,
-      "heel": 6877.000000000001,
-      "idlz": 6877.000000000001,
-      "idlz_heel": 6877.000000000001
+      "base": 5650.0,
+      "heel": 5650.0,
+      "idlz": 5650.0,
+      "idlz_heel": 5650.0
     },
     "on_attr": 4700,
     "on_attr_idlz": 5200,
@@ -23898,10 +23898,10 @@ app.constant('CardData',
   {
     "attribute": "Smile",
     "cScore": {
-      "base": 5422.250000000001,
-      "heel": 5422.250000000001,
-      "idlz": 5422.250000000001,
-      "idlz_heel": 5422.250000000001
+      "base": 4300.0,
+      "heel": 4300.0,
+      "idlz": 4300.0,
+      "idlz_heel": 4300.0
     },
     "event": null,
     "full_name": "SR Promo Yazawa Nico",
@@ -23917,10 +23917,10 @@ app.constant('CardData',
     "non_idolized_maximum_statistics_pure": 2710,
     "non_idolized_maximum_statistics_smile": 4100,
     "oScore": {
-      "base": 5422.250000000001,
-      "heel": 5422.250000000001,
-      "idlz": 5422.250000000001,
-      "idlz_heel": 5422.250000000001
+      "base": 4300.0,
+      "heel": 4300.0,
+      "idlz": 4300.0,
+      "idlz_heel": 4300.0
     },
     "on_attr": 4350,
     "on_attr_idlz": 4100,
@@ -23988,10 +23988,10 @@ app.constant('CardData',
   {
     "attribute": "Pure",
     "cScore": {
-      "base": 6810.875000000001,
-      "heel": 6810.875000000001,
-      "idlz": 6810.875000000001,
-      "idlz_heel": 6810.875000000001
+      "base": 5600.0,
+      "heel": 5600.0,
+      "idlz": 5600.0,
+      "idlz_heel": 5600.0
     },
     "event": null,
     "full_name": "UR Promo Minami Kotori",
@@ -24007,10 +24007,10 @@ app.constant('CardData',
     "non_idolized_maximum_statistics_pure": 4150,
     "non_idolized_maximum_statistics_smile": 2990,
     "oScore": {
-      "base": 6810.875000000001,
-      "heel": 6810.875000000001,
-      "idlz": 6810.875000000001,
-      "idlz_heel": 6810.875000000001
+      "base": 5600.0,
+      "heel": 5600.0,
+      "idlz": 5600.0,
+      "idlz_heel": 5600.0
     },
     "on_attr": 4650,
     "on_attr_idlz": 5150,
@@ -24483,10 +24483,10 @@ app.constant('CardData',
   {
     "attribute": "Pure",
     "cScore": {
-      "base": 5501.600000000001,
-      "heel": 5501.600000000001,
-      "idlz": 5501.600000000001,
-      "idlz_heel": 5501.600000000001
+      "base": 4360.0,
+      "heel": 4360.0,
+      "idlz": 4360.0,
+      "idlz_heel": 4360.0
     },
     "event": null,
     "full_name": "SR Promo Minami Kotori",
@@ -24502,10 +24502,10 @@ app.constant('CardData',
     "non_idolized_maximum_statistics_pure": 4160,
     "non_idolized_maximum_statistics_smile": 2760,
     "oScore": {
-      "base": 5501.600000000001,
-      "heel": 5501.600000000001,
-      "idlz": 5501.600000000001,
-      "idlz_heel": 5501.600000000001
+      "base": 4360.0,
+      "heel": 4360.0,
+      "idlz": 4360.0,
+      "idlz_heel": 4360.0
     },
     "on_attr": 4410,
     "on_attr_idlz": 4160,
@@ -25518,10 +25518,10 @@ app.constant('CardData',
   {
     "attribute": "Smile",
     "cScore": {
-      "base": 6916.675000000001,
-      "heel": 6916.675000000001,
-      "idlz": 6916.675000000001,
-      "idlz_heel": 6916.675000000001
+      "base": 5680.0,
+      "heel": 5680.0,
+      "idlz": 5680.0,
+      "idlz_heel": 5680.0
     },
     "event": null,
     "full_name": "UR Promo Kousaka Honoka",
@@ -25537,10 +25537,10 @@ app.constant('CardData',
     "non_idolized_maximum_statistics_pure": 3710,
     "non_idolized_maximum_statistics_smile": 4230,
     "oScore": {
-      "base": 6916.675000000001,
-      "heel": 6916.675000000001,
-      "idlz": 6916.675000000001,
-      "idlz_heel": 6916.675000000001
+      "base": 5680.0,
+      "heel": 5680.0,
+      "idlz": 5680.0,
+      "idlz_heel": 5680.0
     },
     "on_attr": 4730,
     "on_attr_idlz": 5230,
@@ -25563,10 +25563,10 @@ app.constant('CardData',
   {
     "attribute": "Cool",
     "cScore": {
-      "base": 5435.475000000001,
-      "heel": 5435.475000000001,
-      "idlz": 5435.475000000001,
-      "idlz_heel": 5435.475000000001
+      "base": 4310.0,
+      "heel": 4310.0,
+      "idlz": 4310.0,
+      "idlz_heel": 4310.0
     },
     "event": null,
     "full_name": "SR Promo Sonoda Umi",
@@ -25582,10 +25582,10 @@ app.constant('CardData',
     "non_idolized_maximum_statistics_pure": 2790,
     "non_idolized_maximum_statistics_smile": 2650,
     "oScore": {
-      "base": 5435.475000000001,
-      "heel": 5435.475000000001,
-      "idlz": 5435.475000000001,
-      "idlz_heel": 5435.475000000001
+      "base": 4310.0,
+      "heel": 4310.0,
+      "idlz": 4310.0,
+      "idlz_heel": 4310.0
     },
     "on_attr": 4360,
     "on_attr_idlz": 4110,
@@ -26103,10 +26103,10 @@ app.constant('CardData',
   {
     "attribute": "Pure",
     "cScore": {
-      "base": 6929.9000000000015,
-      "heel": 6929.9000000000015,
-      "idlz": 6929.9000000000015,
-      "idlz_heel": 6929.9000000000015
+      "base": 5690.0,
+      "heel": 5690.0,
+      "idlz": 5690.0,
+      "idlz_heel": 5690.0
     },
     "event": null,
     "full_name": "UR Promo Toujou Nozomi",
@@ -26122,10 +26122,10 @@ app.constant('CardData',
     "non_idolized_maximum_statistics_pure": 4240,
     "non_idolized_maximum_statistics_smile": 3680,
     "oScore": {
-      "base": 6929.9000000000015,
-      "heel": 6929.9000000000015,
-      "idlz": 6929.9000000000015,
-      "idlz_heel": 6929.9000000000015
+      "base": 5690.0,
+      "heel": 5690.0,
+      "idlz": 5690.0,
+      "idlz_heel": 5690.0
     },
     "on_attr": 4740,
     "on_attr_idlz": 5240,
@@ -26148,10 +26148,10 @@ app.constant('CardData',
   {
     "attribute": "Cool",
     "cScore": {
-      "base": 6890.225000000001,
-      "heel": 6890.225000000001,
-      "idlz": 6890.225000000001,
-      "idlz_heel": 6890.225000000001
+      "base": 5660.0,
+      "heel": 5660.0,
+      "idlz": 5660.0,
+      "idlz_heel": 5660.0
     },
     "event": null,
     "full_name": "UR Promo Ayase Eli",
@@ -26167,10 +26167,10 @@ app.constant('CardData',
     "non_idolized_maximum_statistics_pure": 3970,
     "non_idolized_maximum_statistics_smile": 3690,
     "oScore": {
-      "base": 6890.225000000001,
-      "heel": 6890.225000000001,
-      "idlz": 6890.225000000001,
-      "idlz_heel": 6890.225000000001
+      "base": 5660.0,
+      "heel": 5660.0,
+      "idlz": 5660.0,
+      "idlz_heel": 5660.0
     },
     "on_attr": 4710,
     "on_attr_idlz": 5210,
@@ -26193,10 +26193,10 @@ app.constant('CardData',
   {
     "attribute": "Smile",
     "cScore": {
-      "base": 6956.350000000001,
-      "heel": 6956.350000000001,
-      "idlz": 6956.350000000001,
-      "idlz_heel": 6956.350000000001
+      "base": 5710.0,
+      "heel": 5710.0,
+      "idlz": 5710.0,
+      "idlz_heel": 5710.0
     },
     "event": null,
     "full_name": "UR Promo Kousaka Honoka",
@@ -26212,10 +26212,10 @@ app.constant('CardData',
     "non_idolized_maximum_statistics_pure": 3620,
     "non_idolized_maximum_statistics_smile": 4260,
     "oScore": {
-      "base": 6956.350000000001,
-      "heel": 6956.350000000001,
-      "idlz": 6956.350000000001,
-      "idlz_heel": 6956.350000000001
+      "base": 5710.0,
+      "heel": 5710.0,
+      "idlz": 5710.0,
+      "idlz_heel": 5710.0
     },
     "on_attr": 4760,
     "on_attr_idlz": 5260,
@@ -26778,10 +26778,10 @@ app.constant('CardData',
   {
     "attribute": "Pure",
     "cScore": {
-      "base": 6638.950000000001,
-      "heel": 6638.950000000001,
-      "idlz": 6638.950000000001,
-      "idlz_heel": 6638.950000000001
+      "base": 5470.0,
+      "heel": 5470.0,
+      "idlz": 5470.0,
+      "idlz_heel": 5470.0
     },
     "event": null,
     "full_name": "UR Promo Minami Kotori",
@@ -26797,10 +26797,10 @@ app.constant('CardData',
     "non_idolized_maximum_statistics_pure": 4020,
     "non_idolized_maximum_statistics_smile": 3000,
     "oScore": {
-      "base": 6638.950000000001,
-      "heel": 6638.950000000001,
-      "idlz": 6638.950000000001,
-      "idlz_heel": 6638.950000000001
+      "base": 5470.0,
+      "heel": 5470.0,
+      "idlz": 5470.0,
+      "idlz_heel": 5470.0
     },
     "on_attr": 4520,
     "on_attr_idlz": 5020,
@@ -26823,10 +26823,10 @@ app.constant('CardData',
   {
     "attribute": "Smile",
     "cScore": {
-      "base": 6943.125000000001,
-      "heel": 6943.125000000001,
-      "idlz": 6943.125000000001,
-      "idlz_heel": 6943.125000000001
+      "base": 5700.0,
+      "heel": 5700.0,
+      "idlz": 5700.0,
+      "idlz_heel": 5700.0
     },
     "event": null,
     "full_name": "UR Promo Yazawa Nico",
@@ -26842,10 +26842,10 @@ app.constant('CardData',
     "non_idolized_maximum_statistics_pure": 3950,
     "non_idolized_maximum_statistics_smile": 4250,
     "oScore": {
-      "base": 6943.125000000001,
-      "heel": 6943.125000000001,
-      "idlz": 6943.125000000001,
-      "idlz_heel": 6943.125000000001
+      "base": 5700.0,
+      "heel": 5700.0,
+      "idlz": 5700.0,
+      "idlz_heel": 5700.0
     },
     "on_attr": 4750,
     "on_attr_idlz": 5250,
@@ -26868,10 +26868,10 @@ app.constant('CardData',
   {
     "attribute": "Smile",
     "cScore": {
-      "base": 5514.825000000001,
-      "heel": 5514.825000000001,
-      "idlz": 5514.825000000001,
-      "idlz_heel": 5514.825000000001
+      "base": 4370.0,
+      "heel": 4370.0,
+      "idlz": 4370.0,
+      "idlz_heel": 4370.0
     },
     "event": null,
     "full_name": "SR Promo Yazawa Nico",
@@ -26887,10 +26887,10 @@ app.constant('CardData',
     "non_idolized_maximum_statistics_pure": 2830,
     "non_idolized_maximum_statistics_smile": 4170,
     "oScore": {
-      "base": 5514.825000000001,
-      "heel": 5514.825000000001,
-      "idlz": 5514.825000000001,
-      "idlz_heel": 5514.825000000001
+      "base": 4370.0,
+      "heel": 4370.0,
+      "idlz": 4370.0,
+      "idlz_heel": 4370.0
     },
     "on_attr": 4420,
     "on_attr_idlz": 4170,
@@ -26913,10 +26913,10 @@ app.constant('CardData',
   {
     "attribute": "Pure",
     "cScore": {
-      "base": 5607.400000000001,
-      "heel": 5607.400000000001,
-      "idlz": 5607.400000000001,
-      "idlz_heel": 5607.400000000001
+      "base": 4440.0,
+      "heel": 4440.0,
+      "idlz": 4440.0,
+      "idlz_heel": 4440.0
     },
     "event": null,
     "full_name": "SR Promo Koizumi Hanayo",
@@ -26932,10 +26932,10 @@ app.constant('CardData',
     "non_idolized_maximum_statistics_pure": 4240,
     "non_idolized_maximum_statistics_smile": 2800,
     "oScore": {
-      "base": 5607.400000000001,
-      "heel": 5607.400000000001,
-      "idlz": 5607.400000000001,
-      "idlz_heel": 5607.400000000001
+      "base": 4440.0,
+      "heel": 4440.0,
+      "idlz": 4440.0,
+      "idlz_heel": 4440.0
     },
     "on_attr": 4490,
     "on_attr_idlz": 4240,
@@ -26958,10 +26958,10 @@ app.constant('CardData',
   {
     "attribute": "Pure",
     "cScore": {
-      "base": 5501.600000000001,
-      "heel": 5501.600000000001,
-      "idlz": 5501.600000000001,
-      "idlz_heel": 5501.600000000001
+      "base": 4360.0,
+      "heel": 4360.0,
+      "idlz": 4360.0,
+      "idlz_heel": 4360.0
     },
     "event": null,
     "full_name": "SR Promo Toujou Nozomi",
@@ -26977,10 +26977,10 @@ app.constant('CardData',
     "non_idolized_maximum_statistics_pure": 4160,
     "non_idolized_maximum_statistics_smile": 2680,
     "oScore": {
-      "base": 5501.600000000001,
-      "heel": 5501.600000000001,
-      "idlz": 5501.600000000001,
-      "idlz_heel": 5501.600000000001
+      "base": 4360.0,
+      "heel": 4360.0,
+      "idlz": 4360.0,
+      "idlz_heel": 4360.0
     },
     "on_attr": 4410,
     "on_attr_idlz": 4160,
@@ -27003,10 +27003,10 @@ app.constant('CardData',
   {
     "attribute": "Cool",
     "cScore": {
-      "base": 5541.275000000001,
-      "heel": 5541.275000000001,
-      "idlz": 5541.275000000001,
-      "idlz_heel": 5541.275000000001
+      "base": 4390.0,
+      "heel": 4390.0,
+      "idlz": 4390.0,
+      "idlz_heel": 4390.0
     },
     "event": null,
     "full_name": "SR Promo Nishikino Maki",
@@ -27022,10 +27022,10 @@ app.constant('CardData',
     "non_idolized_maximum_statistics_pure": 2820,
     "non_idolized_maximum_statistics_smile": 2640,
     "oScore": {
-      "base": 5541.275000000001,
-      "heel": 5541.275000000001,
-      "idlz": 5541.275000000001,
-      "idlz_heel": 5541.275000000001
+      "base": 4390.0,
+      "heel": 4390.0,
+      "idlz": 4390.0,
+      "idlz_heel": 4390.0
     },
     "on_attr": 4440,
     "on_attr_idlz": 4190,
@@ -27048,10 +27048,10 @@ app.constant('CardData',
   {
     "attribute": "Smile",
     "cScore": {
-      "base": 5528.050000000001,
-      "heel": 5528.050000000001,
-      "idlz": 5528.050000000001,
-      "idlz_heel": 5528.050000000001
+      "base": 4380.0,
+      "heel": 4380.0,
+      "idlz": 4380.0,
+      "idlz_heel": 4380.0
     },
     "event": null,
     "full_name": "SR Promo Hoshizora Rin",
@@ -27067,10 +27067,10 @@ app.constant('CardData',
     "non_idolized_maximum_statistics_pure": 2620,
     "non_idolized_maximum_statistics_smile": 4180,
     "oScore": {
-      "base": 5528.050000000001,
-      "heel": 5528.050000000001,
-      "idlz": 5528.050000000001,
-      "idlz_heel": 5528.050000000001
+      "base": 4380.0,
+      "heel": 4380.0,
+      "idlz": 4380.0,
+      "idlz_heel": 4380.0
     },
     "on_attr": 4430,
     "on_attr_idlz": 4180,
@@ -27093,10 +27093,10 @@ app.constant('CardData',
   {
     "attribute": "Cool",
     "cScore": {
-      "base": 5501.600000000001,
-      "heel": 5501.600000000001,
-      "idlz": 5501.600000000001,
-      "idlz_heel": 5501.600000000001
+      "base": 4360.0,
+      "heel": 4360.0,
+      "idlz": 4360.0,
+      "idlz_heel": 4360.0
     },
     "event": null,
     "full_name": "SR Promo Sonoda Umi",
@@ -27112,10 +27112,10 @@ app.constant('CardData',
     "non_idolized_maximum_statistics_pure": 2620,
     "non_idolized_maximum_statistics_smile": 2870,
     "oScore": {
-      "base": 5501.600000000001,
-      "heel": 5501.600000000001,
-      "idlz": 5501.600000000001,
-      "idlz_heel": 5501.600000000001
+      "base": 4360.0,
+      "heel": 4360.0,
+      "idlz": 4360.0,
+      "idlz_heel": 4360.0
     },
     "on_attr": 4410,
     "on_attr_idlz": 4160,
@@ -27138,10 +27138,10 @@ app.constant('CardData',
   {
     "attribute": "Pure",
     "cScore": {
-      "base": 5514.825000000001,
-      "heel": 5514.825000000001,
-      "idlz": 5514.825000000001,
-      "idlz_heel": 5514.825000000001
+      "base": 4370.0,
+      "heel": 4370.0,
+      "idlz": 4370.0,
+      "idlz_heel": 4370.0
     },
     "event": null,
     "full_name": "SR Promo Minami Kotori",
@@ -27157,10 +27157,10 @@ app.constant('CardData',
     "non_idolized_maximum_statistics_pure": 4170,
     "non_idolized_maximum_statistics_smile": 2650,
     "oScore": {
-      "base": 5514.825000000001,
-      "heel": 5514.825000000001,
-      "idlz": 5514.825000000001,
-      "idlz_heel": 5514.825000000001
+      "base": 4370.0,
+      "heel": 4370.0,
+      "idlz": 4370.0,
+      "idlz_heel": 4370.0
     },
     "on_attr": 4420,
     "on_attr_idlz": 4170,
@@ -27183,10 +27183,10 @@ app.constant('CardData',
   {
     "attribute": "Cool",
     "cScore": {
-      "base": 5580.950000000001,
-      "heel": 5580.950000000001,
-      "idlz": 5580.950000000001,
-      "idlz_heel": 5580.950000000001
+      "base": 4420.0,
+      "heel": 4420.0,
+      "idlz": 4420.0,
+      "idlz_heel": 4420.0
     },
     "event": null,
     "full_name": "SR Promo Ayase Eli",
@@ -27202,10 +27202,10 @@ app.constant('CardData',
     "non_idolized_maximum_statistics_pure": 2630,
     "non_idolized_maximum_statistics_smile": 2800,
     "oScore": {
-      "base": 5580.950000000001,
-      "heel": 5580.950000000001,
-      "idlz": 5580.950000000001,
-      "idlz_heel": 5580.950000000001
+      "base": 4420.0,
+      "heel": 4420.0,
+      "idlz": 4420.0,
+      "idlz_heel": 4420.0
     },
     "on_attr": 4470,
     "on_attr_idlz": 4220,
@@ -27228,10 +27228,10 @@ app.constant('CardData',
   {
     "attribute": "Smile",
     "cScore": {
-      "base": 5580.950000000001,
-      "heel": 5580.950000000001,
-      "idlz": 5580.950000000001,
-      "idlz_heel": 5580.950000000001
+      "base": 4420.0,
+      "heel": 4420.0,
+      "idlz": 4420.0,
+      "idlz_heel": 4420.0
     },
     "event": null,
     "full_name": "SR Promo Kousaka Honoka",
@@ -27247,10 +27247,10 @@ app.constant('CardData',
     "non_idolized_maximum_statistics_pure": 2810,
     "non_idolized_maximum_statistics_smile": 4220,
     "oScore": {
-      "base": 5580.950000000001,
-      "heel": 5580.950000000001,
-      "idlz": 5580.950000000001,
-      "idlz_heel": 5580.950000000001
+      "base": 4420.0,
+      "heel": 4420.0,
+      "idlz": 4420.0,
+      "idlz_heel": 4420.0
     },
     "on_attr": 4470,
     "on_attr_idlz": 4220,
@@ -27273,10 +27273,10 @@ app.constant('CardData',
   {
     "attribute": "Smile",
     "cScore": {
-      "base": 5409.025000000001,
-      "heel": 5409.025000000001,
-      "idlz": 5409.025000000001,
-      "idlz_heel": 5409.025000000001
+      "base": 4290.0,
+      "heel": 4290.0,
+      "idlz": 4290.0,
+      "idlz_heel": 4290.0
     },
     "event": null,
     "full_name": "SR Promo Kousaka Honoka",
@@ -27292,10 +27292,10 @@ app.constant('CardData',
     "non_idolized_maximum_statistics_pure": 2630,
     "non_idolized_maximum_statistics_smile": 4090,
     "oScore": {
-      "base": 5409.025000000001,
-      "heel": 5409.025000000001,
-      "idlz": 5409.025000000001,
-      "idlz_heel": 5409.025000000001
+      "base": 4290.0,
+      "heel": 4290.0,
+      "idlz": 4290.0,
+      "idlz_heel": 4290.0
     },
     "on_attr": 4340,
     "on_attr_idlz": 4090,
@@ -27633,10 +27633,10 @@ app.constant('CardData',
   {
     "attribute": "Cool",
     "cScore": {
-      "base": 6982.800000000001,
-      "heel": 6982.800000000001,
-      "idlz": 6982.800000000001,
-      "idlz_heel": 6982.800000000001
+      "base": 5730.0,
+      "heel": 5730.0,
+      "idlz": 5730.0,
+      "idlz_heel": 5730.0
     },
     "event": null,
     "full_name": "UR Promo Nishikino Maki",
@@ -27652,10 +27652,10 @@ app.constant('CardData',
     "non_idolized_maximum_statistics_pure": 3870,
     "non_idolized_maximum_statistics_smile": 3720,
     "oScore": {
-      "base": 6982.800000000001,
-      "heel": 6982.800000000001,
-      "idlz": 6982.800000000001,
-      "idlz_heel": 6982.800000000001
+      "base": 5730.0,
+      "heel": 5730.0,
+      "idlz": 5730.0,
+      "idlz_heel": 5730.0
     },
     "on_attr": 4780,
     "on_attr_idlz": 5280,
@@ -27678,10 +27678,10 @@ app.constant('CardData',
   {
     "attribute": "Smile",
     "cScore": {
-      "base": 7009.250000000001,
-      "heel": 7009.250000000001,
-      "idlz": 7009.250000000001,
-      "idlz_heel": 7009.250000000001
+      "base": 5750.0,
+      "heel": 5750.0,
+      "idlz": 5750.0,
+      "idlz_heel": 5750.0
     },
     "event": null,
     "full_name": "UR Promo Hoshizora Rin",
@@ -27697,10 +27697,10 @@ app.constant('CardData',
     "non_idolized_maximum_statistics_pure": 3910,
     "non_idolized_maximum_statistics_smile": 4300,
     "oScore": {
-      "base": 7009.250000000001,
-      "heel": 7009.250000000001,
-      "idlz": 7009.250000000001,
-      "idlz_heel": 7009.250000000001
+      "base": 5750.0,
+      "heel": 5750.0,
+      "idlz": 5750.0,
+      "idlz_heel": 5750.0
     },
     "on_attr": 4800,
     "on_attr_idlz": 5300,
@@ -28038,10 +28038,10 @@ app.constant('CardData',
   {
     "attribute": "Pure",
     "cScore": {
-      "base": 6996.0250000000015,
-      "heel": 6996.0250000000015,
-      "idlz": 6996.0250000000015,
-      "idlz_heel": 6996.0250000000015
+      "base": 5740.0,
+      "heel": 5740.0,
+      "idlz": 5740.0,
+      "idlz_heel": 5740.0
     },
     "event": null,
     "full_name": "UR Promo Koizumi Hanayo",
@@ -28057,10 +28057,10 @@ app.constant('CardData',
     "non_idolized_maximum_statistics_pure": 4290,
     "non_idolized_maximum_statistics_smile": 3960,
     "oScore": {
-      "base": 6996.0250000000015,
-      "heel": 6996.0250000000015,
-      "idlz": 6996.0250000000015,
-      "idlz_heel": 6996.0250000000015
+      "base": 5740.0,
+      "heel": 5740.0,
+      "idlz": 5740.0,
+      "idlz_heel": 5740.0
     },
     "on_attr": 4790,
     "on_attr_idlz": 5290,
@@ -28443,10 +28443,10 @@ app.constant('CardData',
   {
     "attribute": "Cool",
     "cScore": {
-      "base": 6837.325000000002,
-      "heel": 6837.325000000002,
-      "idlz": 6837.325000000002,
-      "idlz_heel": 6837.325000000002
+      "base": 5620.0,
+      "heel": 5620.0,
+      "idlz": 5620.0,
+      "idlz_heel": 5620.0
     },
     "event": null,
     "full_name": "UR Promo Sonoda Umi",
@@ -28462,10 +28462,10 @@ app.constant('CardData',
     "non_idolized_maximum_statistics_pure": 3930,
     "non_idolized_maximum_statistics_smile": 3770,
     "oScore": {
-      "base": 6837.325000000002,
-      "heel": 6837.325000000002,
-      "idlz": 6837.325000000002,
-      "idlz_heel": 6837.325000000002
+      "base": 5620.0,
+      "heel": 5620.0,
+      "idlz": 5620.0,
+      "idlz_heel": 5620.0
     },
     "on_attr": 4670,
     "on_attr_idlz": 5170,
@@ -28488,10 +28488,10 @@ app.constant('CardData',
   {
     "attribute": "Pure",
     "cScore": {
-      "base": 6969.575000000002,
-      "heel": 6969.575000000002,
-      "idlz": 6969.575000000002,
-      "idlz_heel": 6969.575000000002
+      "base": 5720.0,
+      "heel": 5720.0,
+      "idlz": 5720.0,
+      "idlz_heel": 5720.0
     },
     "event": null,
     "full_name": "UR Promo Minami Kotori",
@@ -28507,10 +28507,10 @@ app.constant('CardData',
     "non_idolized_maximum_statistics_pure": 4270,
     "non_idolized_maximum_statistics_smile": 3990,
     "oScore": {
-      "base": 6969.575000000002,
-      "heel": 6969.575000000002,
-      "idlz": 6969.575000000002,
-      "idlz_heel": 6969.575000000002
+      "base": 5720.0,
+      "heel": 5720.0,
+      "idlz": 5720.0,
+      "idlz_heel": 5720.0
     },
     "on_attr": 4770,
     "on_attr_idlz": 5270,
@@ -28578,10 +28578,10 @@ app.constant('CardData',
   {
     "attribute": "Smile",
     "cScore": {
-      "base": 6877.000000000001,
-      "heel": 6877.000000000001,
-      "idlz": 6877.000000000001,
-      "idlz_heel": 6877.000000000001
+      "base": 5650.0,
+      "heel": 5650.0,
+      "idlz": 5650.0,
+      "idlz_heel": 5650.0
     },
     "event": null,
     "full_name": "UR Promo Kousaka Honoka",
@@ -28597,10 +28597,10 @@ app.constant('CardData',
     "non_idolized_maximum_statistics_pure": 3980,
     "non_idolized_maximum_statistics_smile": 4200,
     "oScore": {
-      "base": 6877.000000000001,
-      "heel": 6877.000000000001,
-      "idlz": 6877.000000000001,
-      "idlz_heel": 6877.000000000001
+      "base": 5650.0,
+      "heel": 5650.0,
+      "idlz": 5650.0,
+      "idlz_heel": 5650.0
     },
     "on_attr": 4700,
     "on_attr_idlz": 5200,

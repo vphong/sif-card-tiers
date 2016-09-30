@@ -222,30 +222,26 @@ def score(card, scoreType):
 
         if card['rarity'] == "SR":
             # 1 slot
-            cScore['base'] = cScore['heel'] = cScore[
-                'idlz_heel'] = cScore['idlz'] = (idlz_stat + kiss) * cLead
+            cScore['base'] = cScore['heel'] = cScore['idlz_heel'] = cScore['idlz'] = rawScoringFormula(idlz_stat,1,0,0,0,cLead)
 
-            oScore['base'] = oScore['heel'] = oScore[
-                'idlz_heel'] = oScore['idlz'] = (idlz_stat + kiss) * oLead
+            oScore['base'] = oScore['heel'] = oScore['idlz_heel'] = oScore['idlz'] =  rawScoringFormula(idlz_stat,1,0,0,0,oLead)
 
         elif card['rarity'] == "UR":
             # 2 slots
             if idlz_stat < 4500:
-                cScore['base'] = cScore['heel'] = cScore['idlz_heel'] = cScore[
-                    'idlz'] = (idlz_stat + perfume) * cLead
+                cScore['base'] = cScore['heel'] = cScore['idlz_heel'] = cScore['idlz'] = rawScoringFormula(idlz_stat,0,1,0,0,cLead)
 
-                oScore['base'] = oScore['heel'] = oScore['idlz_heel'] = oScore[
-                    'idlz'] = (idlz_stat + perfume) * oLead
+                oScore['base'] = oScore['heel'] = oScore['idlz_heel'] = oScore['idlz'] =  rawScoringFormula(idlz_stat,0,1,0,0,oLead)
 
             else:
-                cScore['base'] = cScore['heel'] = cScore['idlz_heel'] = cScore[
-                    'idlz'] = (idlz_stat + math.ceil(idlz_stat * ring)) * cLead
+                cScore['base'] = cScore['heel'] = cScore['idlz_heel'] = cScore['idlz'] = rawScoringFormula(idlz_stat,0,0,1,0,cLead)
 
-                oScore['base'] = oScore['heel'] = oScore['idlz_heel'] = oScore[
-                    'idlz'] = (idlz_stat + math.ceil(idlz_stat * ring)) * oLead
+                oScore['base'] = oScore['heel'] = oScore['idlz_heel'] = oScore['idlz'] =  rawScoringFormula(idlz_stat,0,0,1,0,oLead)
 
         card['cScore'].update(cScore)
         card['oScore'].update(oScore)
+        logging.info(card['cScore'])
+        logging.info(card['oScore'])
 
     else:
         if scoreType == "c":
