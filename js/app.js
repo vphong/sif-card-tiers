@@ -174,8 +174,8 @@ app.factory('Cards', function($rootScope, $http) {
                 card.skill.best *= 270;
             }
 
-            card.cScore_modded = [card.cScore]
-            card.oScore_modded = [card.oScore]
+            card.cScore_modded = [angular.copy(card.cScore)]
+            card.oScore_modded = [angular.copy(card.oScore)]
 
             // convert score up to stat
             if (card.is_promo) score_up_mod = 0
@@ -199,14 +199,15 @@ app.factory('Cards', function($rootScope, $http) {
                 card.oScore_modded[0].idlz_heel += score_up_mod
             }
 
-            if (card.full_name.includes("Initial Minami")) {
-                console.log(card)
-                console.log(score_up_mod)
-                console.log(card.cScore)
-                console.log(card.cScore_modded[0])
-                console.log(card.oScore)
-                console.log(card.oScore_modded[0])
-            }
+            // if (card.full_name.includes("Minami") && card.skill.type=="Score Up") {
+            //     console.log(card.full_name)
+            //     console.log(score_up_mod)
+            //     console.log(card.cScore)
+            //     console.log(card.cScore_modded[0])
+            //     console.log(card.cScore.base + score_up_mod)
+            //     console.log(card.oScore)
+            //     console.log(card.oScore_modded[0])
+            // }
 
         })
 
