@@ -50,7 +50,7 @@ def isnumber(s):
 
 
 def skillDetails(card):
-    logging.info("skillDetails(): init")
+    logging.info("skillDetails(): init for %s", card['full_name'])
     # initalization
     skill = {}
     skillNums = {}
@@ -191,51 +191,64 @@ def stat_to_mod(card, idlz):
 
     return stat
 
-def rawScoringFormula(stat,kiss,ring,perfume,cross):
-    return (stat + kiss*200 + perfume*450 + math.ceil(stat*ring*0.1) + math.ceil(stat*cross*0.16))
 
-def score(card,scoreType):
-    ## init
+def rawScoringFormula(stat, kiss, ring, perfume, cross,lead):
+    ret = stat + kiss * 200 + perfume * 450 + \
+        math.ceil(stat * ring * 0.1) + math.ceil(stat * cross * 0.16) * lead
+    # logging.info("%.2f + %.0f*200 + %.0f*450 + math.ceil(%.2f*%.0f*0.1) + math.ceil(%.2f*%.0f*0.16)) = %.2f",
+                #  stat, kiss, perfume, stat, ring, stat, cross, ret)
+    return ret
+
+
+def score(card, scoreType):
+    # init
     unidlz_stat = stat_to_mod(card, False)
     idlz_stat = stat_to_mod(card, True)
     card['on_attr'] = unidlz_stat
     card['on_attr_idlz'] = idlz_stat
+    cScore = oScore = {}
 
     # sis
-    kiss = 0 # +200
-    perfume = 0 # 450
-    ring = 0 # x0.10
-    cross = 0 # x0.16
+    kiss = 0  # +200
+    perfume = 0  # 450
+    ring = 0  # x0.10
+    cross = 0  # x0.16
 
     # leader bonuses
-    cLead = (1.0+.09+.03)*(1.0+.09+.03)
-    oLead = (1.0+.09+.06)*(1.0+.09+.06)
+    cLead = (1.0 + .09 + .03) * (1.0 + .09 + .03)
+    oLead = (1.0 + .09 + .06) * (1.0 + .09 + .06)
 
     if card['is_promo']:
 
         if card['rarity'] == "SR":
             # 1 slot
-            card['cScore']['base'] = card['cScore']['heel'] = card['cScore']['idlz_heel'] = card['cScore']['idlz'] = (idlz_stat + kiss)*cLead
+            cScore['base'] = cScore['heel'] = cScore['idlz_heel'] = cScore['idlz'] = rawScoringFormula(idlz_stat,1,0,0,0,cLead)
 
-            card['oScore']['base'] = card['oScore']['heel'] = card['oScore']['idlz_heel'] = card['oScore']['idlz'] = (idlz_stat + kiss)*oLead
+            oScore['base'] = oScore['heel'] = oScore['idlz_heel'] = oScore['idlz'] =  rawScoringFormula(idlz_stat,1,0,0,0,oLead)
 
         elif card['rarity'] == "UR":
             # 2 slots
             if idlz_stat < 4500:
-                card['cScore']['base'] = card['cScore']['heel'] = card['cScore']['idlz_heel'] = card['cScore']['idlz'] = (idlz_stat + perfume)*cLead
+                cScore['base'] = cScore['heel'] = cScore['idlz_heel'] = cScore['idlz'] = rawScoringFormula(idlz_stat,0,1,0,0,cLead)
 
-                card['oScore']['base'] = card['oScore']['heel'] = card['oScore']['idlz_heel'] = card['oScore']['idlz'] = (idlz_stat + perfume)*oLead
+                oScore['base'] = oScore['heel'] = oScore['idlz_heel'] = oScore['idlz'] =  rawScoringFormula(idlz_stat,0,1,0,0,oLead)
 
             else:
-                card['cScore']['base'] = card['cScore']['heel'] = card['cScore']['idlz_heel'] = card['cScore']['idlz'] = (idlz_stat + math.ceil(idlz_stat*ring))*cLead
+                cScore['base'] = cScore['heel'] = cScore['idlz_heel'] = cScore['idlz'] = rawScoringFormula(idlz_stat,0,0,1,0,cLead)
 
-                card['oScore']['base'] = card['oScore']['heel'] = card['oScore']['idlz_heel'] = card['oScore']['idlz'] = (idlz_stat + math.ceil(idlz_stat*ring))*oLead
+                oScore['base'] = oScore['heel'] = oScore['idlz_heel'] = oScore['idlz'] =  rawScoringFormula(idlz_stat,0,0,1,0,oLead)
 
+        card['cScore'].update(cScore)
+        card['oScore'].update(oScore)
+        logging.info(card['cScore'])
+        logging.info(card['oScore'])
 
     else:
         if scoreType == "c":
             # unidlz: 2/3/4 slots
             # idlz: 3/3/4 slots
+            logging.info("score(): c-score for %s", card['full_name'])
+
             if card['rarity'] == "SR":
                 # unidlz: 2 slots
                 if unidlz_stat < 4500:
@@ -243,11 +256,14 @@ def score(card,scoreType):
                     perfume = 1
                     ring = 0
                     cross = 0
+
                 else:
                     kiss = 0
                     perfume = 0
                     ring = 1
                     cross = 0
+
+                cScore['base'] = cScore['heel'] = rawScoringFormula(unidlz_stat,kiss,ring,perfume,cross,cLead)
 
                 # idlz: 3 slots
                 if idlz_stat < 4100:
@@ -260,8 +276,8 @@ def score(card,scoreType):
                     perfume = 0
                     ring = 0
                     cross = 1
-                card['cScore']['base'] = card['cScore']['heel'] = rawScoringFormula(unidlz_stat,kiss,perfume,ring,cross)*cLead
-                card['cScore']['idlz'] = card['cScore']['idlz_heel'] = rawScoringFormula(idlz_stat,kiss,perfume,ring,cross)*cLead
+
+                cScore['idlz'] = cScore['idlz_heel'] = rawScoringFormula(idlz_stat,kiss,ring,perfume,cross,cLead)
 
             elif card['rarity'] == "SSR":
                 # unidlz: 3 slots
@@ -276,6 +292,8 @@ def score(card,scoreType):
                     ring = 0
                     cross = 1
 
+                cScore['base'] = cScore['heel'] = rawScoringFormula(unidlz_stat,kiss,perfume,ring,cross,cLead)
+
                 # idlz: 3 slots
                 if idlz_stat < 4100:
                     kiss = 1
@@ -287,8 +305,8 @@ def score(card,scoreType):
                     perfume = 0
                     ring = 0
                     cross = 1
-                card['cScore']['base'] = card['cScore']['heel'] = rawScoringFormula(unidlz_stat,kiss,perfume,ring,cross)*cLead
-                card['cScore']['idlz'] = card['cScore']['idlz_heel'] = rawScoringFormula(idlz_stat,kiss,perfume,ring,cross)*cLead
+
+                cScore['idlz'] = cScore['idlz_heel'] = rawScoringFormula(idlz_stat,kiss,perfume,ring,cross,cLead)
 
             else: # UR
                 # unidlz: 4 slots
@@ -308,6 +326,7 @@ def score(card,scoreType):
                     ring = 0
                     cross = 1
 
+                cScore['base'] = rawScoringFormula(unidlz_stat,kiss,perfume,ring,cross,cLead)
                 # idlz: 4 slots
                 if idlz_stat < 2000:
                     kiss = 2
@@ -324,17 +343,17 @@ def score(card,scoreType):
                     perfume = 0
                     ring = 0
                     cross = 1
-                card['cScore']['base'] = rawScoringFormula(unidlz_stat,kiss,perfume,ring,cross)*cLead
-                card['cScore']['idlz'] = rawScoringFormula(idlz_stat,kiss,perfume,ring,cross)*cLead
+                cScore['idlz'] = rawScoringFormula(idlz_stat,kiss,perfume,ring,cross,cLead)
 
-                card['cScore']['heel'] = rawScoringFormula(unidlz_stat,0,0,0,0)*cLead
-                card['cScore']['idlz_heel'] = rawScoringFormula(idlz_stat,0,0,0,0)*cLead
+                cScore['heel'] = rawScoringFormula(unidlz_stat,0,0,0,0,cLead)
+                cScore['idlz_heel'] = rawScoringFormula(idlz_stat,0,0,0,0,cLead)
 
+            card['cScore'].update(cScore)
 
         elif scoreType == "o":
             # unidlz: 2/3/4 slots
             # idlz: 4/4/5 slots
-
+            logging.info("score(): o-score for %s", card['full_name'])
             if card['rarity'] == "SR":
                 # unidlz: 2 slots
                 if unidlz_stat < 4500:
@@ -342,11 +361,15 @@ def score(card,scoreType):
                     perfume = 1
                     ring = 0
                     cross = 0
+
+
                 else:
                     kiss = 0
                     perfume = 0
                     ring = 1
                     cross = 0
+
+                oScore['base'] = oScore['heel'] = rawScoringFormula(unidlz_stat,kiss,perfume,ring,cross,oLead)
 
                 # idlz: 4 slots
                 if idlz_stat < 2000:
@@ -364,10 +387,8 @@ def score(card,scoreType):
                     perfume = 0
                     ring = 0
                     cross = 1
-                card['oScore']['base'] = card['oScore']['heel'] = rawScoringFormula(unidlz_stat,kiss,perfume,ring,cross)*oLead
-                card['oScore']['idlz'] = rawScoringFormula(idlz_stat,kiss,perfume,ring,cross)*oLead
-
-                card['oScore']['idlz_heel'] = rawScoringFormula(idlz_stat,0,0,0,0)*oLead
+                oScore['idlz'] = rawScoringFormula(idlz_stat,kiss,perfume,ring,cross,oLead)
+                oScore['idlz_heel'] = rawScoringFormula(idlz_stat,0,0,0,0,oLead)
 
             elif card['rarity'] == "SSR":
                 # unidlz: 3 slots
@@ -382,6 +403,7 @@ def score(card,scoreType):
                     ring = 0
                     cross = 1
 
+                oScore['base'] = oScore['heel'] = rawScoringFormula(unidlz_stat,kiss,perfume,ring,cross,oLead)
                 # idlz: 4 slots
                 if idlz_stat < 2000:
                     kiss = 2
@@ -398,9 +420,8 @@ def score(card,scoreType):
                     perfume = 0
                     ring = 0
                     cross = 1
-                card['oScore']['base'] = card['oScore']['heel'] = rawScoringFormula(unidlz_stat,kiss,perfume,ring,cross)*oLead
-                card['oScore']['idlz'] = rawScoringFormula(idlz_stat,kiss,perfume,ring,cross)*oLead
-                card['oScore']['idlz_heel'] = rawScoringFormula(idlz_stat,0,0,0,0)*oLead
+                oScore['idlz'] = rawScoringFormula(idlz_stat,kiss,perfume,ring,cross,oLead)
+                oScore['idlz_heel'] = rawScoringFormula(idlz_stat,0,0,0,0,oLead)
 
             else: # UR
                 # unidlz: 4 slots
@@ -420,6 +441,7 @@ def score(card,scoreType):
                     ring = 0
                     cross = 1
 
+                oScore['base'] = rawScoringFormula(unidlz_stat,kiss,perfume,ring,cross,oLead)
                 # idlz: 5 slots
                 if idlz_stat < 3300:
                     kiss = 1
@@ -436,12 +458,12 @@ def score(card,scoreType):
                     perfume = 0
                     ring = 1
                     cross = 1
-                card['oScore']['base'] = rawScoringFormula(unidlz_stat,kiss,perfume,ring,cross)*oLead
-                card['oScore']['idlz'] = rawScoringFormula(idlz_stat,kiss,perfume,ring,cross)*oLead
+                oScore['idlz'] = rawScoringFormula(idlz_stat,kiss,perfume,ring,cross,oLead)
 
-                card['oScore']['heel'] = rawScoringFormula(unidlz_stat,0,0,0,0)*cLead
-                card['oScore']['idlz_heel'] = rawScoringFormula(idlz_stat,1,0,0,0)*cLead
+                oScore['heel'] = rawScoringFormula(unidlz_stat,0,0,0,0,oLead)
+                oScore['idlz_heel'] = rawScoringFormula(idlz_stat,1,0,0,0,oLead)
 
+            card['oScore'].update(oScore)
 
 
 def cleanCard(d, keys):
@@ -521,9 +543,13 @@ def cleanCard(d, keys):
 
     # stats/scores
     skillDetails(ret)
-    ret['cScore'] = ret['oScore'] = {}
+    ret['cScore'] = ret['oScore'] = {'base': 0, 'idlz': 0, 'heel': 0, 'idlz_heel': 0}
     score(ret,"c")
     score(ret,"o")
+
+    # if ret['rarity'] == "SR":
+    #     logging.info(ret['cScore'])
+    #     logging.info(ret['oScore'])
 
     # load links over https
     # ret['website_url'] = "https" + ret['website_url'][4:]
@@ -583,7 +609,8 @@ def processCards():
         card = cleanCard(card, keysNeeded)
         # addFullName(card)
         cards.append(card)
-    logging.info(cards[0])
+    # logging.info(cards[0]['cScore'])
+    # logging.info(cards[0]['oScore'])
     # write to file with use for angular
     logging.info("processCards(): done cleaning. writing to file...")
     with open('js/cards.js', 'w') as f:

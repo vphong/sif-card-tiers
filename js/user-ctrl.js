@@ -13,7 +13,7 @@ app.controller('UserCtrl', function($rootScope, $scope, Cards, localStorageServi
         $scope.sort = localStorageService.get('sort');
         if (!$scope.sort) {
             $scope.sort = {
-                type: 'cScore_modded',
+                type: 'cScore',
                 desc: true,
             }
             localStorageService.set('sort', $scope.sort);
@@ -48,11 +48,7 @@ app.controller('UserCtrl', function($rootScope, $scope, Cards, localStorageServi
     init();
     $scope.toggleHeel = function() {
         Cards.calcSkill($scope.userCards, $scope.userSong, $scope.userFilters.heel);
-
-        if ($scope.userFilters.heel && $scope.userFilters.idlz) $scope.sortBy("cScore_modded_idlz_heel");
-        else if ($scope.userFilters.heel && !$scope.userFilters.idlz) $scope.sortBy("cScore_modded_heel");
-        else if (!$scope.userFilters.heel && $scope.userFilters.idlz) $scope.sortBy("cScore_modded_idlz")
-        else $scope.sortBy("cScore_modded")
+        $scope.sortBy('cScore')
     }
     $scope.updateSearch = function() {
         localStorageService.set('userSearch', $scope.userSearch);
@@ -158,10 +154,11 @@ app.controller('UserCtrl', function($rootScope, $scope, Cards, localStorageServi
                         card.max_cool = card.idolized_maximum_statistics_cool;
 
                         // set c/o score to idlz score
-                        card.cScore = card.cScore_idlz;
-                        card.cScore_heel = card.cScore_heel_idlz;
-                        card.oScore = card.oScore_idlz;
-                        card.oScore_heel = card.oScore_heel_idlz;
+                        card.cScore.base = card.cScore.idlz;
+                        card.cScore.heel = card.cScore.idlz_heel;
+
+                        card.oScore.base = card.oScore.idlz;
+                        card.oScore.heel = card.oScore.idlz_heel;
 
                     } else {
                         // set smile, pure, cool stats to idolized stats
@@ -169,11 +166,6 @@ app.controller('UserCtrl', function($rootScope, $scope, Cards, localStorageServi
                         card.max_pure = card.non_idolized_maximum_statistics_pure;
                         card.max_cool = card.non_idolized_maximum_statistics_cool;
 
-                        // set c/o score to idlz score
-                        card.cScore = card.cScore;
-                        card.cScore_heel = card.cScore_heel;
-                        card.oScore = card.oScore;
-                        card.oScore_heel = card.oScore_heel;
                     }
 
                     $scope.rawUserCardsData.push(angular.copy(card));
@@ -186,6 +178,7 @@ app.controller('UserCtrl', function($rootScope, $scope, Cards, localStorageServi
 
         // filter for display
         $scope.userCards = angular.copy(Cards.filterCards($scope.userFilters, $scope.rawUserCardsData));
+        Cards.calcSkill($scope.userCards, $scope.userSong, $scope.userFilters.heel);
         localStorageService.set('userCards', $scope.userCards)
 
     };
@@ -224,16 +217,12 @@ app.controller('UserCtrl', function($rootScope, $scope, Cards, localStorageServi
         $scope.sort = {
             type: 'cScore',
             desc: false,
-            gen: "cScore"
         }
         $scope.filterCards()
-        $scope.sortBy('cScore');
+        $scope.sortBy($scope.sort.type);
     }
 
     $scope.sortBy = function(type) {
-        if ($scope.userFilters.heel && type.includes("Score")) {
-            type = type + "_heel";
-        }
         Cards.sortBy($scope.sort, false, type)
         localStorageService.set('sort', $scope.sort)
     }
