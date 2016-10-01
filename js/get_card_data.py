@@ -8,7 +8,7 @@ logging.basicConfig(level=logging.INFO)
 
 # initalization
 # original card endpoint
-baseURL = "http://schoolido.lu/api/cards/?ordering=-id&is_special=False&page_size=100&rarity=SR%2CSSR%2CUR"
+baseURL = "http://schoolido.lu/api/cards/?ordering=-id&is_special=False&page_size=10&rarity=SR%2CSSR%2CUR"
 
 # keys to grab from json
 keysNeeded = ["skill_details", "attribute", "japan_only", "is_promo", "event",
@@ -601,7 +601,7 @@ def getRawCards():
     # write raw data to file
     with open('js/cards.json', 'w') as f:
         logging.info("getRawCards(): writing to file...")
-        json.dump(cards, f, sort_keys=True)
+        json.dump(cards, f, indent=2, sort_keys=True)
 
     logging.info("getRawCards(): done")
 
@@ -631,5 +631,5 @@ def processCards():
 
     logging.info("processCards(): done")
 
-# getRawCards()
+getRawCards()
 processCards()
