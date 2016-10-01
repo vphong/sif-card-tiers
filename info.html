@@ -269,11 +269,11 @@
         <p>Following the
             <a href="http://decaf.kouhi.me/lovelive/index.php?title=Scoring#Calculating_the_Score">score calculation formula on the decaf.kouhi.me wiki</a>, we can convert a raw stat into the Score that shows up when you tap a note during gameplay.
         </p>
-        <p>To manipulate that formula and convert Score Up (from a card's skill activating over the course of a song) into raw stat, we take:</p>s
+        <p>To manipulate that formula and convert Score Up (from a card's skill activating over the course of a song) into raw stat, we take:</p>
         <p>
             <code>raw_stat = input_notes * floor((card_skill_avg / input_notes) / (0.0125 * A * C * T * M * G))</code>
         </p>
-        <p>>We multiply by input_notes to adjust for the course of the entire song, since the original formula only considers one note at a time.</p>
+        <p>We multiply by input_notes to adjust for the course of the entire song, since the original formula only considers one note at a time.</p>
         <p>The numerator,
             <code>card_skill_avg / input_notes</code>
             is derived from the fact that the original formula is based on one note at a time, while the Skill Average on this website is based on the entirety of the song. In other words, this is the average Score Up per note a skill contributes.</p>
@@ -281,11 +281,11 @@
             <code>(0.0125 * A * C * T * M * G)</code>, is simply the right hand side of the original formula without the Stat multiplier, and with constants figured in, where:
         </p>
         <ul class="list">
-            <li>A = accuracy = 0.88 * input_%_greats</li>
-            <li>C = combo position = average position = floor(input_notes / 2)</li>
-            <li>T = type of note = normal note = 1</li>
-            <li>M = attribute of team member the note hits = matching = 1.10</li>
-            <li>G = main unit of team member based on song = matching = 1.10</li>
+            <li>A = accuracy = <code>0.88 * input_%_greats</code></li>
+            <li>C = combo position = average position = <code>floor(input_notes / 2)</code></li>
+            <li>T = type of note = normal note = <code>1</code></li>
+            <li>M = attribute of team member the note hits = matching = <code>1.1</code></li>
+            <li>G = main unit of team member based on song = matching = <code>1.1</code></li>
         </ul>
 
         <p>In final, the Score Up to Stat formula looks like
