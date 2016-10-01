@@ -205,7 +205,7 @@ app.factory('Cards', function($rootScope, $http) {
             //     console.log(score_up_mod)
             //     console.log(card.cScore)
             //     console.log(card.cScore_modded[0])
-            //     console.log(card.cScore.base + score_up_mod)
+            //     // console.log(card.cScore.base + score_up_mod)
             //     console.log(card.oScore)
             //     console.log(card.oScore_modded[0])
             // }
@@ -239,11 +239,8 @@ app.factory('Cards', function($rootScope, $http) {
 
     ret.sortBy = function(sort, idlz, type) {
       // score type : oScore, oScore.heel, cScore, cScore.heel
-        sort.desc = (sort.type == type) ? !sort.desc : true;
-
-        sort.type = type;
-        console.log(sort.type == type)
-        console.log(sort.desc)
+        // temp var for previous sort obj to set sort.desc
+        var oldSort = sort;
 
         if (type == 'smile' && idlz) {
             sort.type = "idolized_maximum_statistics_smile";
@@ -259,8 +256,8 @@ app.factory('Cards', function($rootScope, $http) {
             sort.type = "non_idolized_maximum_statistics_cool"
         } else {
 
-          console.log(sort)
-            console.log(type)
+          // console.log(sort)
+            // console.log(type)
             if (type == 'cScore') {
                 if (idlz) sort.type = "cScore_modded[0].idlz";
                 else sort.type = "cScore_modded[0].base";
@@ -278,9 +275,12 @@ app.factory('Cards', function($rootScope, $http) {
             else {
             sort.type = type;
             }
-            console.log(sort)
+
         }
+        sort.desc = (sort.type == oldSort.type) ? !sort.desc : true;
     }
+
+
 
 
     return ret;
