@@ -200,7 +200,7 @@ app.factory('Cards', function($rootScope, $http) {
                 card.oScore_modded[0].idlz_heel += score_up_mod
             }
 
-            if (card.full_name.includes("Promo Minami") && card.skill.type=="Healer") {
+            if (card.full_name.includes("Yukata Matsuura") && card.skill.type=="Healer") {
                 console.log(card.full_name)
                 console.log(score_up_mod)
                 console.log(card.cScore)
@@ -221,8 +221,8 @@ app.factory('Cards', function($rootScope, $http) {
             else if (card.is_promo && filters.idlz) return card.cScore_modded[0].base;
 
             if (filters.idlz && filters.heel) return card.cScore_modded[0].idlz_heel;
-            else if (filters.idlz && filters.heel) return card.cScore_modded[0].idlz;
-            else if (filters.idlz && filters.heel) return card.cScore_modded[0].heel;
+            else if (filters.idlz && !filters.heel) return card.cScore_modded[0].idlz;
+            else if (!filters.idlz && filters.heel) return card.cScore_modded[0].heel;
             else return card.cScore_modded[0].base
 
         } else if (scoreType == "o") {
@@ -230,8 +230,8 @@ app.factory('Cards', function($rootScope, $http) {
             else if (card.is_promo && filters.idlz) return card.oScore_modded[0].base;
 
             if (filters.idlz && filters.heel) return card.oScore_modded[0].idlz_heel
-            else if (filters.idlz && filters.heel) return card.oScore_modded[0].idlz
-            else if (filters.idlz && filters.heel) return card.oScore_modded[0].heel
+            else if (filters.idlz && !filters.heel) return card.oScore_modded[0].idlz
+            else if (!filters.idlz && filters.heel) return card.oScore_modded[0].heel
             else return card.oScore_modded[0].base
         } else return 0;
     }
