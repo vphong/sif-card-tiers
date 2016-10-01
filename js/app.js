@@ -62,6 +62,11 @@ app.config(function($stateProvider, $urlRouterProvider) {
             controller: 'UserCtrl',
             templateUrl: "user_cards.html",
         })
+        .state("skills", {
+            url: "/skills",
+            controller: 'SkillCtrl',
+            templateUrl: "skill_analysis.html",
+        })
 });
 
 app.controller('TabCtrl', function($rootScope, $scope, $state) {
@@ -76,6 +81,10 @@ app.controller('TabCtrl', function($rootScope, $scope, $state) {
     }, {
         heading: "User Cards",
         route: "user",
+        active: true
+    }, {
+        heading: "Skill Analysis",
+        route: "skills",
         active: true
     }];
 
