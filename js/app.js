@@ -200,15 +200,15 @@ app.factory('Cards', function($rootScope, $http) {
                 card.oScore_modded[0].idlz_heel += score_up_mod
             }
 
-            if (card.full_name.includes("Yukata Matsuura") && card.skill.type=="Healer") {
-                console.log(card.full_name)
-                console.log(score_up_mod)
-                console.log(card.cScore)
-                console.log(card.cScore_modded[0])
-                console.log(card.cScore.base + score_up_mod)
-                console.log(card.oScore)
-                console.log(card.oScore_modded[0])
-            }
+            // if (card.full_name.includes("Yukata Matsuura") && card.skill.type=="Healer") {
+            //     console.log(card.full_name)
+            //     console.log(score_up_mod)
+            //     console.log(card.cScore)
+            //     console.log(card.cScore_modded[0])
+            //     console.log(card.cScore.base + score_up_mod)
+            //     console.log(card.oScore)
+            //     console.log(card.oScore_modded[0])
+            // }
 
         })
 

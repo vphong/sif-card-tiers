@@ -1,6 +1,6 @@
 import urllib.request
 import json
-import os
+import datetime
 import logging
 import math
 
@@ -16,7 +16,7 @@ keysNeeded = ["skill_details", "attribute", "japan_only", "is_promo", "event",
               "idolized_maximum_statistics_smile", "idolized_maximum_statistics_pure",
               "non_idolized_maximum_statistics_pure", "non_idolized_maximum_statistics_cool",
               "non_idolized_maximum_statistics_smile", "translated_collection", "website_url",
-              "round_card_idolized_image", "round_card_image", "id"]
+              "round_card_idolized_image", "round_card_image", "id", "release_date"]
 
 # constants
 aqours = ["Ohara Mari", "Kurosawa Dia", "Matsuura Kanan",
@@ -509,6 +509,27 @@ def cleanCard(d, keys):
 
     ret.pop('idol', None)
 
+    ## rename translated_collection to be more descriptive/accurate
+    # v2 sets: job, animal, pool
+    # parse release_date
+    if ret['release_date']:
+        release_date = datetime.datetime.strptime(ret['release_date'], "%Y-%m-%d")
+        if ret['translated_collection']:
+            if "Job" in ret['translated_collection'] and release_date >= datetime.datetime(2015,3,31):
+                ret['translated_collection'] = "Job v2"
+
+            if "Animal" in ret['translated_collection'] and release_date >= datetime.datetime(2015,9,30):
+                ret['translated_collection'] = "Animal v2"
+
+            if "Pool" in ret['translated_collection'] and release_date >= datetime.datetime(2016,8,8):
+                ret['translated_collection'] = "Pool v2"
+
+    # inaccurately named
+    # Taisho Romance -> Taisho Roman
+    if ret['translated_collection'] == "Taisho Romance":
+        ret['translated_collection'] = "Taisho Roman"
+
+
     # full name
     ret['full_name'] = ret['rarity']
     if ret['is_promo']:
@@ -631,5 +652,5 @@ def processCards():
 
     logging.info("processCards(): done")
 
-getRawCards()
+# getRawCards()
 processCards()
