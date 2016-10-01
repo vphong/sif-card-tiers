@@ -238,11 +238,12 @@ app.factory('Cards', function($rootScope, $http) {
 
 
     ret.sortBy = function(sort, idlz, type) {
-        console.log(sort)
-        console.log(type)
-        sort.desc = (sort.type == type || sort.gen == type) ? !sort.desc : true;
+      // score type : oScore, oScore.heel, cScore, cScore.heel
+        sort.desc = (sort.type == type) ? !sort.desc : true;
 
         sort.type = type;
+        console.log(sort.type == type)
+        console.log(sort.desc)
 
         if (type == 'smile' && idlz) {
             sort.type = "idolized_maximum_statistics_smile";
@@ -258,8 +259,8 @@ app.factory('Cards', function($rootScope, $http) {
             sort.type = "non_idolized_maximum_statistics_cool"
         } else {
 
-            sort.type = type;
-
+          console.log(sort)
+            console.log(type)
             if (type == 'cScore') {
                 if (idlz) sort.type = "cScore_modded[0].idlz";
                 else sort.type = "cScore_modded[0].base";
@@ -273,10 +274,12 @@ app.factory('Cards', function($rootScope, $http) {
             } else if (type == 'oScore.heel') {
                 if (idlz) sort.type = "oScore_modded[0].idlz_heel";
                 else sort.type = "oScore_modded[0].heel";
-
             }
+            else {
+            sort.type = type;
+            }
+            console.log(sort)
         }
-        console.log(sort)
     }
 
 

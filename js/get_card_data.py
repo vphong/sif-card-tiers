@@ -193,10 +193,10 @@ def stat_to_mod(card, idlz):
 
 
 def rawScoringFormula(stat, kiss, ring, perfume, cross,lead):
-    ret = stat + kiss * 200 + perfume * 450 + \
-        math.ceil(stat * ring * 0.1) + math.ceil(stat * cross * 0.16) * lead
-    # logging.info("%.2f + %.0f*200 + %.0f*450 + math.ceil(%.2f*%.0f*0.1) + math.ceil(%.2f*%.0f*0.16)) = %.2f",
-                #  stat, kiss, perfume, stat, ring, stat, cross, ret)
+    ret = (stat + kiss * 200 + perfume * 450 + \
+        math.ceil(stat * ring * 0.1) + math.ceil(stat * cross * 0.16)) * lead
+    logging.info("%.2f + %.0f*200 + %.0f*450 + math.ceil(%.2f*%.0f*0.1) + math.ceil(%.2f*%.0f*0.16)) * %.2f = %.2f",
+                 stat, kiss, perfume, stat, ring, stat, cross, lead, ret)
     return ret
 
 
@@ -349,6 +349,7 @@ def score(card, scoreType):
                 cScore['idlz_heel'] = rawScoringFormula(idlz_stat,0,0,0,0,cLead)
 
             card['cScore'].update(cScore)
+            logging.info(card['cScore'])
 
         elif scoreType == "o":
             # unidlz: 2/3/4 slots
@@ -464,6 +465,8 @@ def score(card, scoreType):
                 oScore['idlz_heel'] = rawScoringFormula(idlz_stat,1,0,0,0,oLead)
 
             card['oScore'].update(oScore)
+            logging.info(card['oScore'])
+
 
 
 def cleanCard(d, keys):
