@@ -43,8 +43,7 @@ app.controller('TierCtrl', function($rootScope, $scope, Cards, localStorageServi
 
     $scope.sortBy = function(type) {
         if ($scope.filters.heel && type.includes("Score")) type += ".heel";
-        console.log($scope.cards[0].cScore_modded[0])
-        console.log($scope.sort)
+
         Cards.sortBy($scope.sort, $scope.filters.idlz, type)
         localStorageService.set('sort', $scope.sort)
     }
@@ -58,7 +57,6 @@ app.controller('TierCtrl', function($rootScope, $scope, Cards, localStorageServi
         //
         // if ($scope.filters.heel) $scope.sortBy("cScore.heel");
         // else $scope.sortBy("cScore")
-        // 6,900.41
     }
 
     $scope.displayScore = function(card, scoreType) {
