@@ -1,5 +1,5 @@
 <div class="container-fluid row">
-    <div class="col-xs-2" id="filters-md-screens">
+    <div class="col-xs-2" id="filters-md-screens" master>
         <div class="row">
             <div class="btn-group-vertical col-xs-12" uib-tooltip="Compare by skill" tooltip-placement="top">
                 <label class="btn btn-success btn-sm" ng-model="filters.su" ng-click="filterCards()" uib-btn-checkbox>Score Up</label>
@@ -187,7 +187,7 @@
         </div>
 
         <div style="border: 1px solid #dfd7ca;border-radius: 3px; position: relative" class="row" bs-loading-overlay bs-loading-overlay-reference-id="all">
-            <div class="table-container">
+            <div class="table-container" ng-style="style">
 
                 <table class="table table-striped" id="tbl">
                     <thead fix-head>

@@ -304,3 +304,17 @@ app.controller('ChangelogCtrl', function($scope, $uibModal) {
         });
     };
 })
+
+app.directive('master',function () { //declaration; identifier master
+    function link(scope, element, attrs) { //scope we are in, element we are bound to, attrs of that element
+      scope.$watch(function(){ //watch any changes to our element
+        scope.style = { //scope variable style, shared with our controller
+            height:(element[0].offsetHeight-55)+'px', //set the height in style to our elements height
+          };
+      });
+    }
+      return {
+        restrict: 'AE', //describes how we can assign an element to our directive in this case like <div master></div
+        link: link // the function to link to our element
+      };
+});

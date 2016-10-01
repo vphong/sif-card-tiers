@@ -156,7 +156,7 @@ footer.well {
 }*/
 
 .table-container {
-    height: calc(100vh - 257px);
+    /*height: calc(100vh - 257px);*/
     overflow-x: auto;
     width: 100%;
 }
