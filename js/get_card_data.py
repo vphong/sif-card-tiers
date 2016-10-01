@@ -50,7 +50,7 @@ def isnumber(s):
 
 
 def skillDetails(card):
-    logging.info("skillDetails(): init for %s", card['full_name'])
+    # logging.info("skillDetails(): init for %s", card['full_name'])
     # initalization
     skill = {}
     skillNums = {}
@@ -72,7 +72,7 @@ def skillDetails(card):
         card['skill']['type'] = "Perfect Lock"
 
     # extract raw skill data from skill_details string
-    logging.info("skillDetails(): processing skill_details...")
+    # logging.info("skillDetails(): processing skill_details...")
     numCount = 0
     skillWords = card['skill_details'].split()
     for word in skillWords:
@@ -158,7 +158,7 @@ def skillDetails(card):
     #
     #     card['skill']['hl_heel'] = card['skill']['hl'] * 270
 
-    logging.info("skillDetails(): done")
+    # logging.info("skillDetails(): done")
 
 
 # grab on-attribute stat + bond bonus for c/o-score
@@ -195,8 +195,8 @@ def stat_to_mod(card, idlz):
 def rawScoringFormula(stat, kiss, ring, perfume, cross,lead):
     ret = (stat + kiss * 200 + perfume * 450 + \
         math.ceil(stat * ring * 0.1) + math.ceil(stat * cross * 0.16)) * lead
-    logging.info("%.2f + %.0f*200 + %.0f*450 + math.ceil(%.2f*%.0f*0.1) + math.ceil(%.2f*%.0f*0.16)) * %.2f = %.2f",
-                 stat, kiss, perfume, stat, ring, stat, cross, lead, ret)
+    # logging.info("%.2f + %.0f*200 + %.0f*450 + math.ceil(%.2f*%.0f*0.1) + math.ceil(%.2f*%.0f*0.16)) * %.2f = %.2f",
+    #              stat, kiss, perfume, stat, ring, stat, cross, lead, ret)
     return ret
 
 
@@ -240,14 +240,15 @@ def score(card, scoreType):
 
         card['cScore'].update(cScore)
         card['oScore'].update(oScore)
-        logging.info(card['cScore'])
-        logging.info(card['oScore'])
+        # logging.info(card['cScore'])
+        # logging.info(card['oScore'])
 
     else:
         if scoreType == "c":
             # unidlz: 2/3/4 slots
             # idlz: 3/3/4 slots
-            logging.info("score(): c-score for %s", card['full_name'])
+            if "Yukata Matsuura" in card['full_name']:
+                logging.info("score(): c-score for %s", card['full_name'])
 
             if card['rarity'] == "SR":
                 # unidlz: 2 slots
@@ -348,13 +349,13 @@ def score(card, scoreType):
                 cScore['heel'] = rawScoringFormula(unidlz_stat,0,0,0,0,cLead)
                 cScore['idlz_heel'] = rawScoringFormula(idlz_stat,0,0,0,0,cLead)
 
-            card['cScore'].update(cScore)
-            logging.info(card['cScore'])
 
         elif scoreType == "o":
             # unidlz: 2/3/4 slots
             # idlz: 4/4/5 slots
-            logging.info("score(): o-score for %s", card['full_name'])
+            if "Yukata Matsuura" in card['full_name']:
+
+                logging.info("score(): o-score for %s", card['full_name'])
             if card['rarity'] == "SR":
                 # unidlz: 2 slots
                 if unidlz_stat < 4500:
@@ -464,8 +465,15 @@ def score(card, scoreType):
                 oScore['heel'] = rawScoringFormula(unidlz_stat,0,0,0,0,oLead)
                 oScore['idlz_heel'] = rawScoringFormula(idlz_stat,1,0,0,0,oLead)
 
-            card['oScore'].update(oScore)
-            logging.info(card['oScore'])
+
+    if "Yukata Matsuura" in card['full_name']:
+        logging.info(cScore)
+        logging.info(oScore)
+
+    if scoreType == "c":
+        return cScore
+    else:
+        return oScore
 
 
 
@@ -547,12 +555,12 @@ def cleanCard(d, keys):
     # stats/scores
     skillDetails(ret)
     ret['cScore'] = ret['oScore'] = {'base': 0, 'idlz': 0, 'heel': 0, 'idlz_heel': 0}
-    score(ret,"c")
-    score(ret,"o")
+    ret['cScore'] = score(ret,"c")
+    ret['oScore'] = score(ret,"o")
 
-    # if ret['rarity'] == "SR":
-    #     logging.info(ret['cScore'])
-    #     logging.info(ret['oScore'])
+    if "Yukata Matsuura" in ret['full_name']:
+        logging.info(ret['cScore'])
+        logging.info(ret['oScore'])
 
     # load links over https
     # ret['website_url'] = "https" + ret['website_url'][4:]

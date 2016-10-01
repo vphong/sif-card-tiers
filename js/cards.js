@@ -3,10 +3,10 @@ app.constant('CardData',
   {
     "attribute": "Pure",
     "cScore": {
-      "base": 7938.967500000002,
-      "heel": 7938.967500000002,
-      "idlz": 9238.985000000002,
-      "idlz_heel": 7736.625000000001
+      "base": 7530.163200000001,
+      "heel": 7530.163200000001,
+      "idlz": 8512.358400000001,
+      "idlz_heel": 8512.358400000001
     },
     "event": null,
     "full_name": "SSR Pool Nishikino Maki",
@@ -48,10 +48,10 @@ app.constant('CardData',
   {
     "attribute": "Cool",
     "cScore": {
-      "base": 7101.825000000002,
-      "heel": 7101.825000000002,
-      "idlz": 7858.295000000001,
-      "idlz_heel": 6546.375000000001
+      "base": 6788.812800000001,
+      "heel": 6788.812800000001,
+      "idlz": 7202.764800000001,
+      "idlz_heel": 7202.764800000001
     },
     "event": null,
     "full_name": "SR Pool Koizumi Hanayo",
@@ -93,10 +93,10 @@ app.constant('CardData',
   {
     "attribute": "Pure",
     "cScore": {
-      "base": 6929.9000000000015,
-      "heel": 6929.9000000000015,
-      "idlz": 7659.920000000001,
-      "idlz_heel": 6374.450000000001
+      "base": 6609.433600000001,
+      "heel": 6609.433600000001,
+      "idlz": 7014.604800000001,
+      "idlz_heel": 7014.604800000001
     },
     "event": true,
     "full_name": "SR Moon Viewing Yazawa Nico",
@@ -138,10 +138,10 @@ app.constant('CardData',
   {
     "attribute": "Smile",
     "cScore": {
-      "base": 6850.550000000001,
-      "heel": 6850.550000000001,
-      "idlz": 7567.345000000001,
-      "idlz_heel": 6295.100000000001
+      "base": 6526.643200000001,
+      "heel": 6526.643200000001,
+      "idlz": 6926.796800000001,
+      "idlz_heel": 6926.796800000001
     },
     "event": true,
     "full_name": "SR Moon Viewing Kousaka Honoka",
@@ -183,10 +183,10 @@ app.constant('CardData',
   {
     "attribute": "Pure",
     "cScore": {
-      "base": 8825.042500000001,
-      "heel": 7379.550000000001,
-      "idlz": 10382.947500000002,
-      "idlz_heel": 8702.050000000001
+      "base": 8370.611200000001,
+      "heel": 6999.552000000001,
+      "idlz": 9534.694400000002,
+      "idlz_heel": 8003.072000000001
     },
     "event": null,
     "full_name": "UR Yukata Matsuura Kanan",
@@ -228,10 +228,10 @@ app.constant('CardData',
   {
     "attribute": "Smile",
     "cScore": {
-      "base": 8001.125000000002,
-      "heel": 8001.125000000002,
-      "idlz": 9301.142500000002,
-      "idlz_heel": 7789.5250000000015
+      "base": 7589.120000000001,
+      "heel": 7589.120000000001,
+      "idlz": 8571.315200000001,
+      "idlz_heel": 8571.315200000001
     },
     "event": null,
     "full_name": "SSR Yukata Sakurauchi Riko",
@@ -273,10 +273,10 @@ app.constant('CardData',
   {
     "attribute": "Cool",
     "cScore": {
-      "base": 7062.1500000000015,
-      "heel": 7062.1500000000015,
-      "idlz": 7813.330000000002,
-      "idlz_heel": 6506.700000000001
+      "base": 6747.417600000001,
+      "heel": 6747.417600000001,
+      "idlz": 7160.115200000001,
+      "idlz_heel": 7160.115200000001
     },
     "event": null,
     "full_name": "SR Yukata Kunikida Hanamaru",
@@ -318,10 +318,10 @@ app.constant('CardData',
   {
     "attribute": "Cool",
     "cScore": {
-      "base": 7141.500000000001,
-      "heel": 7141.500000000001,
-      "idlz": 7904.582500000001,
-      "idlz_heel": 6586.050000000001
+      "base": 6830.2080000000005,
+      "heel": 6830.2080000000005,
+      "idlz": 7246.668800000001,
+      "idlz_heel": 7246.668800000001
     },
     "event": null,
     "full_name": "SR Yukata Watanabe You",
@@ -363,10 +363,10 @@ app.constant('CardData',
   {
     "attribute": "Pure",
     "cScore": {
-      "base": 8810.495,
-      "heel": 7366.325000000002,
-      "idlz": 10368.400000000001,
-      "idlz_heel": 8688.825
+      "base": 8356.812800000002,
+      "heel": 6987.008000000001,
+      "idlz": 9520.896,
+      "idlz_heel": 7990.528000000001
     },
     "event": null,
     "full_name": "UR Pool Minami Kotori",
@@ -408,10 +408,10 @@ app.constant('CardData',
   {
     "attribute": "Smile",
     "cScore": {
-      "base": 7048.925000000001,
-      "heel": 7048.925000000001,
-      "idlz": 7797.460000000001,
-      "idlz_heel": 6493.475000000001
+      "base": 6733.619200000001,
+      "heel": 6733.619200000001,
+      "idlz": 7145.062400000001,
+      "idlz_heel": 7145.062400000001
     },
     "event": null,
     "full_name": "SR Pool Hoshizora Rin",
@@ -453,10 +453,10 @@ app.constant('CardData',
   {
     "attribute": "Smile",
     "cScore": {
-      "base": 6916.675000000001,
-      "heel": 6916.675000000001,
-      "idlz": 7644.050000000001,
-      "idlz_heel": 6361.225000000001
+      "base": 6595.635200000001,
+      "heel": 6595.635200000001,
+      "idlz": 6999.552000000001,
+      "idlz_heel": 6999.552000000001
     },
     "event": true,
     "full_name": "SR Diving Ohara Mari",
@@ -498,10 +498,10 @@ app.constant('CardData',
   {
     "attribute": "Pure",
     "cScore": {
-      "base": 6744.750000000001,
-      "heel": 6744.750000000001,
-      "idlz": 7444.352500000001,
-      "idlz_heel": 6189.300000000001
+      "base": 6416.256000000001,
+      "heel": 6416.256000000001,
+      "idlz": 6810.137600000001,
+      "idlz_heel": 6810.137600000001
     },
     "event": true,
     "full_name": "SR Diving Matsuura Kanan",
@@ -543,10 +543,10 @@ app.constant('CardData',
   {
     "attribute": "Smile",
     "cScore": {
-      "base": 8764.207500000002,
-      "heel": 7326.6500000000015,
-      "idlz": 10322.112500000001,
-      "idlz_heel": 8649.150000000001
+      "base": 8312.908800000001,
+      "heel": 6949.376000000001,
+      "idlz": 9476.992000000002,
+      "idlz_heel": 7952.896000000002
     },
     "event": null,
     "full_name": "UR Yukata Ohara Mari",
@@ -588,10 +588,10 @@ app.constant('CardData',
   {
     "attribute": "Pure",
     "cScore": {
-      "base": 7924.420000000001,
-      "heel": 7924.420000000001,
-      "idlz": 9224.437500000002,
-      "idlz_heel": 7723.4000000000015
+      "base": 7516.364800000001,
+      "heel": 7516.364800000001,
+      "idlz": 8498.560000000001,
+      "idlz_heel": 8498.560000000001
     },
     "event": null,
     "full_name": "SSR Yukata Kurosawa Dia",
@@ -633,10 +633,10 @@ app.constant('CardData',
   {
     "attribute": "Cool",
     "cScore": {
-      "base": 7101.825000000002,
-      "heel": 7101.825000000002,
-      "idlz": 7858.295000000001,
-      "idlz_heel": 6546.375000000001
+      "base": 6788.812800000001,
+      "heel": 6788.812800000001,
+      "idlz": 7202.764800000001,
+      "idlz_heel": 7202.764800000001
     },
     "event": null,
     "full_name": "SR Yukata Kurosawa Ruby",
@@ -678,10 +678,10 @@ app.constant('CardData',
   {
     "attribute": "Smile",
     "cScore": {
-      "base": 7128.2750000000015,
-      "heel": 7128.2750000000015,
-      "idlz": 7890.035000000002,
-      "idlz_heel": 6572.825000000001
+      "base": 6816.409600000001,
+      "heel": 6816.409600000001,
+      "idlz": 7232.870400000001,
+      "idlz_heel": 7232.870400000001
     },
     "event": null,
     "full_name": "SR Yukata Tsushima Yoshiko",
@@ -723,10 +723,10 @@ app.constant('CardData',
   {
     "attribute": "Pure",
     "cScore": {
-      "base": 7075.375000000001,
-      "heel": 7075.375000000001,
-      "idlz": 7827.877500000001,
-      "idlz_heel": 6519.925000000001
+      "base": 6761.216000000001,
+      "heel": 6761.216000000001,
+      "idlz": 7173.913600000001,
+      "idlz_heel": 7173.913600000001
     },
     "event": null,
     "full_name": "SR Yukata Takami Chika",
@@ -768,10 +768,10 @@ app.constant('CardData',
   {
     "attribute": "Cool",
     "cScore": {
-      "base": 8047.412500000001,
-      "heel": 8047.412500000001,
-      "idlz": 9347.430000000002,
-      "idlz_heel": 7829.200000000002
+      "base": 7633.024000000001,
+      "heel": 7633.024000000001,
+      "idlz": 8615.219200000001,
+      "idlz_heel": 8615.219200000001
     },
     "event": null,
     "full_name": "SSR Pool Yazawa Nico",
@@ -813,10 +813,10 @@ app.constant('CardData',
   {
     "attribute": "Smile",
     "cScore": {
-      "base": 7048.925000000001,
-      "heel": 7048.925000000001,
-      "idlz": 7797.460000000001,
-      "idlz_heel": 6493.475000000001
+      "base": 6733.619200000001,
+      "heel": 6733.619200000001,
+      "idlz": 7145.062400000001,
+      "idlz_heel": 7145.062400000001
     },
     "event": null,
     "full_name": "SR Pool Sonoda Umi",
@@ -858,10 +858,10 @@ app.constant('CardData',
   {
     "attribute": "Cool",
     "cScore": {
-      "base": 6757.975000000001,
-      "heel": 6757.975000000001,
-      "idlz": 7460.222500000002,
-      "idlz_heel": 6202.5250000000015
+      "base": 6430.054400000001,
+      "heel": 6430.054400000001,
+      "idlz": 6825.190400000001,
+      "idlz_heel": 6825.190400000001
     },
     "event": true,
     "full_name": "SR Festival Nishikino Maki",
@@ -903,10 +903,10 @@ app.constant('CardData',
   {
     "attribute": "Pure",
     "cScore": {
-      "base": 6916.675000000001,
-      "heel": 6916.675000000001,
-      "idlz": 7644.050000000001,
-      "idlz_heel": 6361.225000000001
+      "base": 6595.635200000001,
+      "heel": 6595.635200000001,
+      "idlz": 6999.552000000001,
+      "idlz_heel": 6999.552000000001
     },
     "event": true,
     "full_name": "SR Festival Sonoda Umi",
@@ -948,10 +948,10 @@ app.constant('CardData',
   {
     "attribute": "Pure",
     "cScore": {
-      "base": 8733.79,
-      "heel": 7300.200000000002,
-      "idlz": 10291.695000000002,
-      "idlz_heel": 8622.7
+      "base": 8284.057600000002,
+      "heel": 6924.288000000001,
+      "idlz": 9448.140800000001,
+      "idlz_heel": 7927.808000000001
     },
     "event": null,
     "full_name": "UR Swimsuit Kurosawa Ruby",
@@ -993,10 +993,10 @@ app.constant('CardData',
   {
     "attribute": "Cool",
     "cScore": {
-      "base": 7970.707500000001,
-      "heel": 7970.707500000001,
-      "idlz": 9238.985000000002,
-      "idlz_heel": 7736.625000000001
+      "base": 7560.268800000001,
+      "heel": 7560.268800000001,
+      "idlz": 8512.358400000001,
+      "idlz_heel": 8512.358400000001
     },
     "event": null,
     "full_name": "SSR Swimsuit Watanabe You",
@@ -1038,10 +1038,10 @@ app.constant('CardData',
   {
     "attribute": "Cool",
     "cScore": {
-      "base": 7035.700000000002,
-      "heel": 7035.700000000002,
-      "idlz": 7781.590000000001,
-      "idlz_heel": 6480.250000000001
+      "base": 6719.820800000001,
+      "heel": 6719.820800000001,
+      "idlz": 7130.009600000001,
+      "idlz_heel": 7130.009600000001
     },
     "event": null,
     "full_name": "SR Swimsuit Matsuura Kanan",
@@ -1083,10 +1083,10 @@ app.constant('CardData',
   {
     "attribute": "Smile",
     "cScore": {
-      "base": 7115.050000000001,
-      "heel": 7115.050000000001,
-      "idlz": 7874.165000000002,
-      "idlz_heel": 6559.600000000001
+      "base": 6802.611200000001,
+      "heel": 6802.611200000001,
+      "idlz": 7217.817600000001,
+      "idlz_heel": 7217.817600000001
     },
     "event": null,
     "full_name": "SR Swimsuit Sakurauchi Riko",
@@ -1128,10 +1128,10 @@ app.constant('CardData',
   {
     "attribute": "Smile",
     "cScore": {
-      "base": 8748.337500000001,
-      "heel": 7313.425000000001,
-      "idlz": 10306.242500000002,
-      "idlz_heel": 8635.925000000001
+      "base": 8297.856000000002,
+      "heel": 6936.832000000001,
+      "idlz": 9461.9392,
+      "idlz_heel": 7940.352000000001
     },
     "event": null,
     "full_name": "UR Pool Kousaka Honoka",
@@ -1173,10 +1173,10 @@ app.constant('CardData',
   {
     "attribute": "Pure",
     "cScore": {
-      "base": 7062.1500000000015,
-      "heel": 7062.1500000000015,
-      "idlz": 7813.330000000002,
-      "idlz_heel": 6506.700000000001
+      "base": 6747.417600000001,
+      "heel": 6747.417600000001,
+      "idlz": 7160.115200000001,
+      "idlz_heel": 7160.115200000001
     },
     "event": null,
     "full_name": "SR Pool Toujou Nozomi",
@@ -1218,10 +1218,10 @@ app.constant('CardData',
   {
     "attribute": "Cool",
     "cScore": {
-      "base": 7128.2750000000015,
-      "heel": 7128.2750000000015,
-      "idlz": 7890.035000000002,
-      "idlz_heel": 6572.825000000001
+      "base": 6816.409600000001,
+      "heel": 6816.409600000001,
+      "idlz": 7232.870400000001,
+      "idlz_heel": 7232.870400000001
     },
     "event": null,
     "full_name": "SR Pool Ayase Eli",
@@ -1263,10 +1263,10 @@ app.constant('CardData',
   {
     "attribute": "Smile",
     "cScore": {
-      "base": 6863.7750000000015,
-      "heel": 6863.7750000000015,
-      "idlz": 7583.215000000001,
-      "idlz_heel": 6308.325000000001
+      "base": 6540.441600000001,
+      "heel": 6540.441600000001,
+      "idlz": 6941.849600000001,
+      "idlz_heel": 6941.849600000001
     },
     "event": true,
     "full_name": "SR Summer Vacation Kunikida Hanamaru",
@@ -1308,10 +1308,10 @@ app.constant('CardData',
   {
     "attribute": "Pure",
     "cScore": {
-      "base": 6797.6500000000015,
-      "heel": 6797.6500000000015,
-      "idlz": 7506.510000000001,
-      "idlz_heel": 6242.200000000001
+      "base": 6471.449600000001,
+      "heel": 6471.449600000001,
+      "idlz": 6869.094400000001,
+      "idlz_heel": 6869.094400000001
     },
     "event": true,
     "full_name": "SR Summer Vacation Watanabe You",
@@ -1353,10 +1353,10 @@ app.constant('CardData',
   {
     "attribute": "Smile",
     "cScore": {
-      "base": 8764.207500000002,
-      "heel": 7326.6500000000015,
-      "idlz": 10322.112500000001,
-      "idlz_heel": 8649.150000000001
+      "base": 8312.908800000001,
+      "heel": 6949.376000000001,
+      "idlz": 9476.992000000002,
+      "idlz_heel": 7952.896000000002
     },
     "event": null,
     "full_name": "UR Swimsuit Kunikida Hanamaru",
@@ -1398,10 +1398,10 @@ app.constant('CardData',
   {
     "attribute": "Pure",
     "cScore": {
-      "base": 7970.707500000001,
-      "heel": 7970.707500000001,
-      "idlz": 9238.985000000002,
-      "idlz_heel": 7736.625000000001
+      "base": 7560.268800000001,
+      "heel": 7560.268800000001,
+      "idlz": 8512.358400000001,
+      "idlz_heel": 8512.358400000001
     },
     "event": null,
     "full_name": "SSR Swimsuit Tsushima Yoshiko",
@@ -1443,10 +1443,10 @@ app.constant('CardData',
   {
     "attribute": "Pure",
     "cScore": {
-      "base": 7101.825000000002,
-      "heel": 7101.825000000002,
-      "idlz": 7858.295000000001,
-      "idlz_heel": 6546.375000000001
+      "base": 6788.812800000001,
+      "heel": 6788.812800000001,
+      "idlz": 7202.764800000001,
+      "idlz_heel": 7202.764800000001
     },
     "event": null,
     "full_name": "SR Swimsuit Ohara Mari",
@@ -1488,10 +1488,10 @@ app.constant('CardData',
   {
     "attribute": "Smile",
     "cScore": {
-      "base": 7048.925000000001,
-      "heel": 7048.925000000001,
-      "idlz": 7797.460000000001,
-      "idlz_heel": 6493.475000000001
+      "base": 6733.619200000001,
+      "heel": 6733.619200000001,
+      "idlz": 7145.062400000001,
+      "idlz_heel": 7145.062400000001
     },
     "event": null,
     "full_name": "SR Swimsuit Kurosawa Dia",
@@ -1533,10 +1533,10 @@ app.constant('CardData',
   {
     "attribute": "Cool",
     "cScore": {
-      "base": 7101.825000000002,
-      "heel": 7101.825000000002,
-      "idlz": 7858.295000000001,
-      "idlz_heel": 6546.375000000001
+      "base": 6788.812800000001,
+      "heel": 6788.812800000001,
+      "idlz": 7202.764800000001,
+      "idlz_heel": 7202.764800000001
     },
     "event": null,
     "full_name": "SR Swimsuit Takami Chika",
@@ -1578,10 +1578,10 @@ app.constant('CardData',
   {
     "attribute": "Smile",
     "cScore": {
-      "base": 6837.325000000002,
-      "heel": 6837.325000000002,
-      "idlz": 7551.475000000001,
-      "idlz_heel": 6281.875000000001
+      "base": 6512.844800000001,
+      "heel": 6512.844800000001,
+      "idlz": 6911.744000000001,
+      "idlz_heel": 6911.744000000001
     },
     "event": true,
     "full_name": "SR Youkai Minami Kotori",
@@ -1623,10 +1623,10 @@ app.constant('CardData',
   {
     "attribute": "Cool",
     "cScore": {
-      "base": 6916.675000000001,
-      "heel": 6916.675000000001,
-      "idlz": 7644.050000000001,
-      "idlz_heel": 6361.225000000001
+      "base": 6595.635200000001,
+      "heel": 6595.635200000001,
+      "idlz": 6999.552000000001,
+      "idlz_heel": 6999.552000000001
     },
     "event": true,
     "full_name": "SR Youkai Ayase Eli",
@@ -1668,10 +1668,10 @@ app.constant('CardData',
   {
     "attribute": "Pure",
     "cScore": {
-      "base": 8748.337500000001,
-      "heel": 7313.425000000001,
-      "idlz": 10306.242500000002,
-      "idlz_heel": 8635.925000000001
+      "base": 8297.856000000002,
+      "heel": 6936.832000000001,
+      "idlz": 9461.9392,
+      "idlz_heel": 7940.352000000001
     },
     "event": null,
     "full_name": "UR Little Devil Sonoda Umi",
@@ -1713,10 +1713,10 @@ app.constant('CardData',
   {
     "attribute": "Pure",
     "cScore": {
-      "base": 7141.500000000001,
-      "heel": 7141.500000000001,
-      "idlz": 7904.582500000001,
-      "idlz_heel": 6586.050000000001
+      "base": 6830.2080000000005,
+      "heel": 6830.2080000000005,
+      "idlz": 7246.668800000001,
+      "idlz_heel": 7246.668800000001
     },
     "event": null,
     "full_name": "SR Little Devil Hoshizora Rin",
@@ -1758,10 +1758,10 @@ app.constant('CardData',
   {
     "attribute": "Cool",
     "cScore": {
-      "base": 7088.600000000001,
-      "heel": 7088.600000000001,
-      "idlz": 7843.747500000001,
-      "idlz_heel": 6533.1500000000015
+      "base": 6775.014400000001,
+      "heel": 6775.014400000001,
+      "idlz": 7188.966400000001,
+      "idlz_heel": 7188.966400000001
     },
     "event": null,
     "full_name": "SR Little Devil Minami Kotori",
@@ -1803,10 +1803,10 @@ app.constant('CardData',
   {
     "attribute": "Smile",
     "cScore": {
-      "base": 7035.700000000002,
-      "heel": 7035.700000000002,
-      "idlz": 7781.590000000001,
-      "idlz_heel": 6480.250000000001
+      "base": 6719.820800000001,
+      "heel": 6719.820800000001,
+      "idlz": 7130.009600000001,
+      "idlz_heel": 7130.009600000001
     },
     "event": null,
     "full_name": "SR Little Devil Ayase Eli",
@@ -1848,10 +1848,10 @@ app.constant('CardData',
   {
     "attribute": "Pure",
     "cScore": {
-      "base": 6916.675000000001,
-      "heel": 6916.675000000001,
-      "idlz": 7644.050000000001,
-      "idlz_heel": 6361.225000000001
+      "base": 6595.635200000001,
+      "heel": 6595.635200000001,
+      "idlz": 6999.552000000001,
+      "idlz_heel": 6999.552000000001
     },
     "event": true,
     "full_name": "SR Tanabata Kurosawa Ruby",
@@ -1893,10 +1893,10 @@ app.constant('CardData',
   {
     "attribute": "Cool",
     "cScore": {
-      "base": 6850.550000000001,
-      "heel": 6850.550000000001,
-      "idlz": 7567.345000000001,
-      "idlz_heel": 6295.100000000001
+      "base": 6526.643200000001,
+      "heel": 6526.643200000001,
+      "idlz": 6926.796800000001,
+      "idlz_heel": 6926.796800000001
     },
     "event": true,
     "full_name": "SR Tanabata Kurosawa Dia",
@@ -1938,10 +1938,10 @@ app.constant('CardData',
   {
     "attribute": "Pure",
     "cScore": {
-      "base": 8748.337500000001,
-      "heel": 7313.425000000001,
-      "idlz": 10306.242500000002,
-      "idlz_heel": 8635.925000000001
+      "base": 8297.856000000002,
+      "heel": 6936.832000000001,
+      "idlz": 9461.9392,
+      "idlz_heel": 7940.352000000001
     },
     "event": null,
     "full_name": "UR Initial Watanabe You",
@@ -1983,10 +1983,10 @@ app.constant('CardData',
   {
     "attribute": "Cool",
     "cScore": {
-      "base": 8778.755000000001,
-      "heel": 7339.875000000001,
-      "idlz": 10336.660000000002,
-      "idlz_heel": 8662.375000000002
+      "base": 8326.7072,
+      "heel": 6961.920000000001,
+      "idlz": 9490.790400000002,
+      "idlz_heel": 7965.440000000001
     },
     "event": null,
     "full_name": "UR Initial Sakurauchi Riko",
@@ -2028,10 +2028,10 @@ app.constant('CardData',
   {
     "attribute": "Smile",
     "cScore": {
-      "base": 8764.207500000002,
-      "heel": 7326.6500000000015,
-      "idlz": 10322.112500000001,
-      "idlz_heel": 8649.150000000001
+      "base": 8312.908800000001,
+      "heel": 6949.376000000001,
+      "idlz": 9476.992000000002,
+      "idlz_heel": 7952.896000000002
     },
     "event": null,
     "full_name": "UR Initial Takami Chika",
@@ -2073,10 +2073,10 @@ app.constant('CardData',
   {
     "attribute": "Pure",
     "cScore": {
-      "base": 8001.125000000002,
-      "heel": 8001.125000000002,
-      "idlz": 9301.142500000002,
-      "idlz_heel": 7789.5250000000015
+      "base": 7589.120000000001,
+      "heel": 7589.120000000001,
+      "idlz": 8571.315200000001,
+      "idlz_heel": 8571.315200000001
     },
     "event": null,
     "full_name": "SSR Initial Kurosawa Ruby",
@@ -2118,10 +2118,10 @@ app.constant('CardData',
   {
     "attribute": "Smile",
     "cScore": {
-      "base": 8047.412500000001,
-      "heel": 8047.412500000001,
-      "idlz": 9347.430000000002,
-      "idlz_heel": 7829.200000000002
+      "base": 7633.024000000001,
+      "heel": 7633.024000000001,
+      "idlz": 8615.219200000001,
+      "idlz_heel": 8615.219200000001
     },
     "event": null,
     "full_name": "SSR Initial Ohara Mari",
@@ -2163,10 +2163,10 @@ app.constant('CardData',
   {
     "attribute": "Smile",
     "cScore": {
-      "base": 7908.550000000001,
-      "heel": 7908.550000000001,
-      "idlz": 9208.567500000001,
-      "idlz_heel": 7710.175000000001
+      "base": 7501.312000000001,
+      "heel": 7501.312000000001,
+      "idlz": 8483.507200000002,
+      "idlz_heel": 8483.507200000002
     },
     "event": null,
     "full_name": "SSR Initial Kunikida Hanamaru",
@@ -2208,10 +2208,10 @@ app.constant('CardData',
   {
     "attribute": "Cool",
     "cScore": {
-      "base": 8047.412500000001,
-      "heel": 8047.412500000001,
-      "idlz": 9347.430000000002,
-      "idlz_heel": 7829.200000000002
+      "base": 7633.024000000001,
+      "heel": 7633.024000000001,
+      "idlz": 8615.219200000001,
+      "idlz_heel": 8615.219200000001
     },
     "event": null,
     "full_name": "SSR Initial Tsushima Yoshiko",
@@ -2253,10 +2253,10 @@ app.constant('CardData',
   {
     "attribute": "Pure",
     "cScore": {
-      "base": 8047.412500000001,
-      "heel": 8047.412500000001,
-      "idlz": 9347.430000000002,
-      "idlz_heel": 7829.200000000002
+      "base": 7633.024000000001,
+      "heel": 7633.024000000001,
+      "idlz": 8615.219200000001,
+      "idlz_heel": 8615.219200000001
     },
     "event": null,
     "full_name": "SSR Initial Watanabe You",
@@ -2298,10 +2298,10 @@ app.constant('CardData',
   {
     "attribute": "Cool",
     "cScore": {
-      "base": 8001.125000000002,
-      "heel": 8001.125000000002,
-      "idlz": 9301.142500000002,
-      "idlz_heel": 7789.5250000000015
+      "base": 7589.120000000001,
+      "heel": 7589.120000000001,
+      "idlz": 8571.315200000001,
+      "idlz_heel": 8571.315200000001
     },
     "event": null,
     "full_name": "SSR Initial Kurosawa Dia",
@@ -2343,10 +2343,10 @@ app.constant('CardData',
   {
     "attribute": "Pure",
     "cScore": {
-      "base": 7924.420000000001,
-      "heel": 7924.420000000001,
-      "idlz": 9224.437500000002,
-      "idlz_heel": 7723.4000000000015
+      "base": 7516.364800000001,
+      "heel": 7516.364800000001,
+      "idlz": 8498.560000000001,
+      "idlz_heel": 8498.560000000001
     },
     "event": null,
     "full_name": "SSR Initial Matsuura Kanan",
@@ -2388,10 +2388,10 @@ app.constant('CardData',
   {
     "attribute": "Cool",
     "cScore": {
-      "base": 7924.420000000001,
-      "heel": 7924.420000000001,
-      "idlz": 9224.437500000002,
-      "idlz_heel": 7723.4000000000015
+      "base": 7516.364800000001,
+      "heel": 7516.364800000001,
+      "idlz": 8498.560000000001,
+      "idlz_heel": 8498.560000000001
     },
     "event": null,
     "full_name": "SSR Initial Sakurauchi Riko",
@@ -2433,10 +2433,10 @@ app.constant('CardData',
   {
     "attribute": "Smile",
     "cScore": {
-      "base": 8001.125000000002,
-      "heel": 8001.125000000002,
-      "idlz": 9301.142500000002,
-      "idlz_heel": 7789.5250000000015
+      "base": 7589.120000000001,
+      "heel": 7589.120000000001,
+      "idlz": 8571.315200000001,
+      "idlz_heel": 8571.315200000001
     },
     "event": null,
     "full_name": "SSR Initial Takami Chika",
@@ -2478,10 +2478,10 @@ app.constant('CardData',
   {
     "attribute": "Smile",
     "cScore": {
-      "base": 8001.125000000002,
-      "heel": 8001.125000000002,
-      "idlz": 9301.142500000002,
-      "idlz_heel": 7789.5250000000015
+      "base": 7589.120000000001,
+      "heel": 7589.120000000001,
+      "idlz": 8571.315200000001,
+      "idlz_heel": 8571.315200000001
     },
     "event": null,
     "full_name": "SSR Initial Yazawa Nico",
@@ -2523,10 +2523,10 @@ app.constant('CardData',
   {
     "attribute": "Pure",
     "cScore": {
-      "base": 7908.550000000001,
-      "heel": 7908.550000000001,
-      "idlz": 9208.567500000001,
-      "idlz_heel": 7710.175000000001
+      "base": 7501.312000000001,
+      "heel": 7501.312000000001,
+      "idlz": 8483.507200000002,
+      "idlz_heel": 8483.507200000002
     },
     "event": null,
     "full_name": "SSR Initial Koizumi Hanayo",
@@ -2568,10 +2568,10 @@ app.constant('CardData',
   {
     "attribute": "Pure",
     "cScore": {
-      "base": 8047.412500000001,
-      "heel": 8047.412500000001,
-      "idlz": 9347.430000000002,
-      "idlz_heel": 7829.200000000002
+      "base": 7633.024000000001,
+      "heel": 7633.024000000001,
+      "idlz": 8615.219200000001,
+      "idlz_heel": 8615.219200000001
     },
     "event": null,
     "full_name": "SSR Initial Toujou Nozomi",
@@ -2613,10 +2613,10 @@ app.constant('CardData',
   {
     "attribute": "Cool",
     "cScore": {
-      "base": 8001.125000000002,
-      "heel": 8001.125000000002,
-      "idlz": 9301.142500000002,
-      "idlz_heel": 7789.5250000000015
+      "base": 7589.120000000001,
+      "heel": 7589.120000000001,
+      "idlz": 8571.315200000001,
+      "idlz_heel": 8571.315200000001
     },
     "event": null,
     "full_name": "SSR Initial Nishikino Maki",
@@ -2658,10 +2658,10 @@ app.constant('CardData',
   {
     "attribute": "Smile",
     "cScore": {
-      "base": 8047.412500000001,
-      "heel": 8047.412500000001,
-      "idlz": 9347.430000000002,
-      "idlz_heel": 7829.200000000002
+      "base": 7633.024000000001,
+      "heel": 7633.024000000001,
+      "idlz": 8615.219200000001,
+      "idlz_heel": 8615.219200000001
     },
     "event": null,
     "full_name": "SSR Initial Hoshizora Rin",
@@ -2703,10 +2703,10 @@ app.constant('CardData',
   {
     "attribute": "Cool",
     "cScore": {
-      "base": 8047.412500000001,
-      "heel": 8047.412500000001,
-      "idlz": 9347.430000000002,
-      "idlz_heel": 7829.200000000002
+      "base": 7633.024000000001,
+      "heel": 7633.024000000001,
+      "idlz": 8615.219200000001,
+      "idlz_heel": 8615.219200000001
     },
     "event": null,
     "full_name": "SSR Initial Sonoda Umi",
@@ -2748,10 +2748,10 @@ app.constant('CardData',
   {
     "attribute": "Pure",
     "cScore": {
-      "base": 8001.125000000002,
-      "heel": 8001.125000000002,
-      "idlz": 9301.142500000002,
-      "idlz_heel": 7789.5250000000015
+      "base": 7589.120000000001,
+      "heel": 7589.120000000001,
+      "idlz": 8571.315200000001,
+      "idlz_heel": 8571.315200000001
     },
     "event": null,
     "full_name": "SSR Initial Minami Kotori",
@@ -2793,10 +2793,10 @@ app.constant('CardData',
   {
     "attribute": "Cool",
     "cScore": {
-      "base": 7938.967500000002,
-      "heel": 7938.967500000002,
-      "idlz": 9238.985000000002,
-      "idlz_heel": 7736.625000000001
+      "base": 7530.163200000001,
+      "heel": 7530.163200000001,
+      "idlz": 8512.358400000001,
+      "idlz_heel": 8512.358400000001
     },
     "event": null,
     "full_name": "SSR Initial Ayase Eli",
@@ -2838,10 +2838,10 @@ app.constant('CardData',
   {
     "attribute": "Smile",
     "cScore": {
-      "base": 7954.8375000000015,
-      "heel": 7954.8375000000015,
-      "idlz": 9254.855000000001,
-      "idlz_heel": 7749.850000000001
+      "base": 7545.216000000001,
+      "heel": 7545.216000000001,
+      "idlz": 8527.4112,
+      "idlz_heel": 8527.4112
     },
     "event": null,
     "full_name": "SSR Initial Kousaka Honoka",
@@ -2883,10 +2883,10 @@ app.constant('CardData',
   {
     "attribute": "Pure",
     "cScore": {
-      "base": 7141.500000000001,
-      "heel": 7141.500000000001,
-      "idlz": 7904.582500000001,
-      "idlz_heel": 6586.050000000001
+      "base": 6830.2080000000005,
+      "heel": 6830.2080000000005,
+      "idlz": 7246.668800000001,
+      "idlz_heel": 7246.668800000001
     },
     "event": null,
     "full_name": "SR Initial Kurosawa Ruby",
@@ -2928,10 +2928,10 @@ app.constant('CardData',
   {
     "attribute": "Smile",
     "cScore": {
-      "base": 7035.700000000002,
-      "heel": 7035.700000000002,
-      "idlz": 7781.590000000001,
-      "idlz_heel": 6480.250000000001
+      "base": 6719.820800000001,
+      "heel": 6719.820800000001,
+      "idlz": 7130.009600000001,
+      "idlz_heel": 7130.009600000001
     },
     "event": null,
     "full_name": "SR Initial Ohara Mari",
@@ -2973,10 +2973,10 @@ app.constant('CardData',
   {
     "attribute": "Smile",
     "cScore": {
-      "base": 7088.600000000001,
-      "heel": 7088.600000000001,
-      "idlz": 7843.747500000001,
-      "idlz_heel": 6533.1500000000015
+      "base": 6775.014400000001,
+      "heel": 6775.014400000001,
+      "idlz": 7188.966400000001,
+      "idlz_heel": 7188.966400000001
     },
     "event": null,
     "full_name": "SR Initial Kunikida Hanamaru",
@@ -3018,10 +3018,10 @@ app.constant('CardData',
   {
     "attribute": "Cool",
     "cScore": {
-      "base": 7035.700000000002,
-      "heel": 7035.700000000002,
-      "idlz": 7781.590000000001,
-      "idlz_heel": 6480.250000000001
+      "base": 6719.820800000001,
+      "heel": 6719.820800000001,
+      "idlz": 7130.009600000001,
+      "idlz_heel": 7130.009600000001
     },
     "event": null,
     "full_name": "SR Initial Tsushima Yoshiko",
@@ -3063,10 +3063,10 @@ app.constant('CardData',
   {
     "attribute": "Pure",
     "cScore": {
-      "base": 7022.475000000001,
-      "heel": 7022.475000000001,
-      "idlz": 7767.042500000001,
-      "idlz_heel": 6467.0250000000015
+      "base": 6706.022400000001,
+      "heel": 6706.022400000001,
+      "idlz": 7116.211200000001,
+      "idlz_heel": 7116.211200000001
     },
     "event": null,
     "full_name": "SR Initial Watanabe You",
@@ -3108,10 +3108,10 @@ app.constant('CardData',
   {
     "attribute": "Cool",
     "cScore": {
-      "base": 7128.2750000000015,
-      "heel": 7128.2750000000015,
-      "idlz": 7890.035000000002,
-      "idlz_heel": 6572.825000000001
+      "base": 6816.409600000001,
+      "heel": 6816.409600000001,
+      "idlz": 7232.870400000001,
+      "idlz_heel": 7232.870400000001
     },
     "event": null,
     "full_name": "SR Initial Kurosawa Dia",
@@ -3153,10 +3153,10 @@ app.constant('CardData',
   {
     "attribute": "Pure",
     "cScore": {
-      "base": 7088.600000000001,
-      "heel": 7088.600000000001,
-      "idlz": 7843.747500000001,
-      "idlz_heel": 6533.1500000000015
+      "base": 6775.014400000001,
+      "heel": 6775.014400000001,
+      "idlz": 7188.966400000001,
+      "idlz_heel": 7188.966400000001
     },
     "event": null,
     "full_name": "SR Initial Matsuura Kanan",
@@ -3198,10 +3198,10 @@ app.constant('CardData',
   {
     "attribute": "Cool",
     "cScore": {
-      "base": 7088.600000000001,
-      "heel": 7088.600000000001,
-      "idlz": 7843.747500000001,
-      "idlz_heel": 6533.1500000000015
+      "base": 6775.014400000001,
+      "heel": 6775.014400000001,
+      "idlz": 7188.966400000001,
+      "idlz_heel": 7188.966400000001
     },
     "event": null,
     "full_name": "SR Initial Sakurauchi Riko",
@@ -3243,10 +3243,10 @@ app.constant('CardData',
   {
     "attribute": "Smile",
     "cScore": {
-      "base": 7141.500000000001,
-      "heel": 7141.500000000001,
-      "idlz": 7904.582500000001,
-      "idlz_heel": 6586.050000000001
+      "base": 6830.2080000000005,
+      "heel": 6830.2080000000005,
+      "idlz": 7246.668800000001,
+      "idlz_heel": 7246.668800000001
     },
     "event": null,
     "full_name": "SR Initial Takami Chika",
@@ -3288,10 +3288,10 @@ app.constant('CardData',
   {
     "attribute": "Cool",
     "cScore": {
-      "base": 8733.79,
-      "heel": 7300.200000000002,
-      "idlz": 10291.695000000002,
-      "idlz_heel": 8622.7
+      "base": 8284.057600000002,
+      "heel": 6924.288000000001,
+      "idlz": 9448.140800000001,
+      "idlz_heel": 7927.808000000001
     },
     "event": null,
     "full_name": "UR Little Devil Yazawa Nico",
@@ -3333,10 +3333,10 @@ app.constant('CardData',
   {
     "attribute": "Smile",
     "cScore": {
-      "base": 7141.500000000001,
-      "heel": 7141.500000000001,
-      "idlz": 7904.582500000001,
-      "idlz_heel": 6586.050000000001
+      "base": 6830.2080000000005,
+      "heel": 6830.2080000000005,
+      "idlz": 7246.668800000001,
+      "idlz_heel": 7246.668800000001
     },
     "event": null,
     "full_name": "SR Little Devil Koizumi Hanayo",
@@ -3378,10 +3378,10 @@ app.constant('CardData',
   {
     "attribute": "Cool",
     "cScore": {
-      "base": 7022.475000000001,
-      "heel": 7022.475000000001,
-      "idlz": 7767.042500000001,
-      "idlz_heel": 6467.0250000000015
+      "base": 6706.022400000001,
+      "heel": 6706.022400000001,
+      "idlz": 7116.211200000001,
+      "idlz_heel": 7116.211200000001
     },
     "event": null,
     "full_name": "SR Little Devil Toujou Nozomi",
@@ -3423,10 +3423,10 @@ app.constant('CardData',
   {
     "attribute": "Pure",
     "cScore": {
-      "base": 7048.925000000001,
-      "heel": 7048.925000000001,
-      "idlz": 7797.460000000001,
-      "idlz_heel": 6493.475000000001
+      "base": 6733.619200000001,
+      "heel": 6733.619200000001,
+      "idlz": 7145.062400000001,
+      "idlz_heel": 7145.062400000001
     },
     "event": null,
     "full_name": "SR Little Devil Nishikino Maki",
@@ -3468,10 +3468,10 @@ app.constant('CardData',
   {
     "attribute": "Smile",
     "cScore": {
-      "base": 7101.825000000002,
-      "heel": 7101.825000000002,
-      "idlz": 7858.295000000001,
-      "idlz_heel": 6546.375000000001
+      "base": 6788.812800000001,
+      "heel": 6788.812800000001,
+      "idlz": 7202.764800000001,
+      "idlz_heel": 7202.764800000001
     },
     "event": null,
     "full_name": "SR Little Devil Kousaka Honoka",
@@ -3513,10 +3513,10 @@ app.constant('CardData',
   {
     "attribute": "Smile",
     "cScore": {
-      "base": 6810.875000000001,
-      "heel": 6810.875000000001,
-      "idlz": 7521.057500000002,
-      "idlz_heel": 6255.425000000001
+      "base": 6485.2480000000005,
+      "heel": 6485.2480000000005,
+      "idlz": 6882.892800000001,
+      "idlz_heel": 6882.892800000001
     },
     "event": true,
     "full_name": "SR Rainy Season Koizumi Hanayo",
@@ -3558,10 +3558,10 @@ app.constant('CardData',
   {
     "attribute": "Cool",
     "cScore": {
-      "base": 6916.675000000001,
-      "heel": 6916.675000000001,
-      "idlz": 7644.050000000001,
-      "idlz_heel": 6361.225000000001
+      "base": 6595.635200000001,
+      "heel": 6595.635200000001,
+      "idlz": 6999.552000000001,
+      "idlz_heel": 6999.552000000001
     },
     "event": true,
     "full_name": "SR Rainy Season Toujou Nozomi",
@@ -3603,10 +3603,10 @@ app.constant('CardData',
   {
     "attribute": "Cool",
     "cScore": {
-      "base": 8733.79,
-      "heel": 7300.200000000002,
-      "idlz": 10291.695000000002,
-      "idlz_heel": 8622.7
+      "base": 8284.057600000002,
+      "heel": 6924.288000000001,
+      "idlz": 9448.140800000001,
+      "idlz_heel": 7927.808000000001
     },
     "event": null,
     "full_name": "UR Idol Outfit Kousaka Honoka",
@@ -3648,10 +3648,10 @@ app.constant('CardData',
   {
     "attribute": "Pure",
     "cScore": {
-      "base": 7022.475000000001,
-      "heel": 7022.475000000001,
-      "idlz": 7767.042500000001,
-      "idlz_heel": 6467.0250000000015
+      "base": 6706.022400000001,
+      "heel": 6706.022400000001,
+      "idlz": 7116.211200000001,
+      "idlz_heel": 7116.211200000001
     },
     "event": null,
     "full_name": "SR Idol Outfit Yazawa Nico",
@@ -3693,10 +3693,10 @@ app.constant('CardData',
   {
     "attribute": "Cool",
     "cScore": {
-      "base": 7062.1500000000015,
-      "heel": 7062.1500000000015,
-      "idlz": 7813.330000000002,
-      "idlz_heel": 6506.700000000001
+      "base": 6747.417600000001,
+      "heel": 6747.417600000001,
+      "idlz": 7160.115200000001,
+      "idlz_heel": 7160.115200000001
     },
     "event": null,
     "full_name": "SR Idol Outfit Nishikino Maki",
@@ -3738,10 +3738,10 @@ app.constant('CardData',
   {
     "attribute": "Smile",
     "cScore": {
-      "base": 7088.600000000001,
-      "heel": 7088.600000000001,
-      "idlz": 7843.747500000001,
-      "idlz_heel": 6533.1500000000015
+      "base": 6775.014400000001,
+      "heel": 6775.014400000001,
+      "idlz": 7188.966400000001,
+      "idlz_heel": 7188.966400000001
     },
     "event": null,
     "full_name": "SR Idol Outfit Hoshizora Rin",
@@ -3783,10 +3783,10 @@ app.constant('CardData',
   {
     "attribute": "Cool",
     "cScore": {
-      "base": 6757.975000000001,
-      "heel": 6757.975000000001,
-      "idlz": 7460.222500000002,
-      "idlz_heel": 6202.5250000000015
+      "base": 6430.054400000001,
+      "heel": 6430.054400000001,
+      "idlz": 6825.190400000001,
+      "idlz_heel": 6825.190400000001
     },
     "event": true,
     "full_name": "SR Rainy Season Sakurauchi Riko",
@@ -3828,10 +3828,10 @@ app.constant('CardData',
   {
     "attribute": "Smile",
     "cScore": {
-      "base": 6916.675000000001,
-      "heel": 6916.675000000001,
-      "idlz": 7644.050000000001,
-      "idlz_heel": 6361.225000000001
+      "base": 6595.635200000001,
+      "heel": 6595.635200000001,
+      "idlz": 6999.552000000001,
+      "idlz_heel": 6999.552000000001
     },
     "event": true,
     "full_name": "SR Rainy Season Takami Chika",
@@ -3963,10 +3963,10 @@ app.constant('CardData',
   {
     "attribute": "Smile",
     "cScore": {
-      "base": 8748.337500000001,
-      "heel": 7313.425000000001,
-      "idlz": 10306.242500000002,
-      "idlz_heel": 8635.925000000001
+      "base": 8297.856000000002,
+      "heel": 6936.832000000001,
+      "idlz": 9461.9392,
+      "idlz_heel": 7940.352000000001
     },
     "event": null,
     "full_name": "UR Idol Outfit Toujou Nozomi",
@@ -4053,10 +4053,10 @@ app.constant('CardData',
   {
     "attribute": "Cool",
     "cScore": {
-      "base": 7141.500000000001,
-      "heel": 7141.500000000001,
-      "idlz": 7904.582500000001,
-      "idlz_heel": 6586.050000000001
+      "base": 6830.2080000000005,
+      "heel": 6830.2080000000005,
+      "idlz": 7246.668800000001,
+      "idlz_heel": 7246.668800000001
     },
     "event": null,
     "full_name": "SR Idol Outfit Koizumi Hanayo",
@@ -4098,10 +4098,10 @@ app.constant('CardData',
   {
     "attribute": "Pure",
     "cScore": {
-      "base": 7075.375000000001,
-      "heel": 7075.375000000001,
-      "idlz": 7827.877500000001,
-      "idlz_heel": 6519.925000000001
+      "base": 6761.216000000001,
+      "heel": 6761.216000000001,
+      "idlz": 7173.913600000001,
+      "idlz_heel": 7173.913600000001
     },
     "event": null,
     "full_name": "SR Idol Outfit Sonoda Umi",
@@ -4143,10 +4143,10 @@ app.constant('CardData',
   {
     "attribute": "Smile",
     "cScore": {
-      "base": 7009.250000000001,
-      "heel": 7009.250000000001,
-      "idlz": 7751.1725000000015,
-      "idlz_heel": 6453.800000000001
+      "base": 6692.224000000001,
+      "heel": 6692.224000000001,
+      "idlz": 7101.158400000001,
+      "idlz_heel": 7101.158400000001
     },
     "event": null,
     "full_name": "SR Idol Outfit Minami Kotori",
@@ -4188,10 +4188,10 @@ app.constant('CardData',
   {
     "attribute": "Pure",
     "cScore": {
-      "base": 7101.825000000002,
-      "heel": 7101.825000000002,
-      "idlz": 7858.295000000001,
-      "idlz_heel": 6546.375000000001
+      "base": 6788.812800000001,
+      "heel": 6788.812800000001,
+      "idlz": 7202.764800000001,
+      "idlz_heel": 7202.764800000001
     },
     "event": null,
     "full_name": "SR Idol Outfit Ayase Eli",
@@ -4233,10 +4233,10 @@ app.constant('CardData',
   {
     "attribute": "Smile",
     "cScore": {
-      "base": 6757.975000000001,
-      "heel": 6757.975000000001,
-      "idlz": 7460.222500000002,
-      "idlz_heel": 6202.5250000000015
+      "base": 6430.054400000001,
+      "heel": 6430.054400000001,
+      "idlz": 6825.190400000001,
+      "idlz_heel": 6825.190400000001
     },
     "event": true,
     "full_name": "SR Sweets Kousaka Honoka",
@@ -4278,10 +4278,10 @@ app.constant('CardData',
   {
     "attribute": "Pure",
     "cScore": {
-      "base": 8702.050000000001,
-      "heel": 7273.750000000001,
-      "idlz": 10259.955000000002,
-      "idlz_heel": 8596.250000000002
+      "base": 8253.952000000001,
+      "heel": 6899.200000000001,
+      "idlz": 9418.035200000002,
+      "idlz_heel": 7902.720000000001
     },
     "event": null,
     "full_name": "UR Dancer Hoshizora Rin",
@@ -4323,10 +4323,10 @@ app.constant('CardData',
   {
     "attribute": "Cool",
     "cScore": {
-      "base": 7141.500000000001,
-      "heel": 7141.500000000001,
-      "idlz": 7904.582500000001,
-      "idlz_heel": 6586.050000000001
+      "base": 6830.2080000000005,
+      "heel": 6830.2080000000005,
+      "idlz": 7246.668800000001,
+      "idlz_heel": 7246.668800000001
     },
     "event": null,
     "full_name": "SR Dancer Yazawa Nico",
@@ -4368,10 +4368,10 @@ app.constant('CardData',
   {
     "attribute": "Smile",
     "cScore": {
-      "base": 7022.475000000001,
-      "heel": 7022.475000000001,
-      "idlz": 7767.042500000001,
-      "idlz_heel": 6467.0250000000015
+      "base": 6706.022400000001,
+      "heel": 6706.022400000001,
+      "idlz": 7116.211200000001,
+      "idlz_heel": 7116.211200000001
     },
     "event": null,
     "full_name": "SR Dancer Toujou Nozomi",
@@ -4413,10 +4413,10 @@ app.constant('CardData',
   {
     "attribute": "Pure",
     "cScore": {
-      "base": 7088.600000000001,
-      "heel": 7088.600000000001,
-      "idlz": 7843.747500000001,
-      "idlz_heel": 6533.1500000000015
+      "base": 6775.014400000001,
+      "heel": 6775.014400000001,
+      "idlz": 7188.966400000001,
+      "idlz_heel": 7188.966400000001
     },
     "event": null,
     "full_name": "SR Dancer Nishikino Maki",
@@ -4458,10 +4458,10 @@ app.constant('CardData',
   {
     "attribute": "Pure",
     "cScore": {
-      "base": 6824.100000000001,
-      "heel": 6824.100000000001,
-      "idlz": 7536.927500000002,
-      "idlz_heel": 6268.6500000000015
+      "base": 6499.046400000001,
+      "heel": 6499.046400000001,
+      "idlz": 6897.945600000001,
+      "idlz_heel": 6897.945600000001
     },
     "event": true,
     "full_name": "SR Children's Day Toujou Nozomi",
@@ -4638,10 +4638,10 @@ app.constant('CardData',
   {
     "attribute": "Cool",
     "cScore": {
-      "base": 8733.79,
-      "heel": 7300.200000000002,
-      "idlz": 10291.695000000002,
-      "idlz_heel": 8622.7
+      "base": 8284.057600000002,
+      "heel": 6924.288000000001,
+      "idlz": 9448.140800000001,
+      "idlz_heel": 7927.808000000001
     },
     "event": null,
     "full_name": "UR Dancer Minami Kotori",
@@ -4683,10 +4683,10 @@ app.constant('CardData',
   {
     "attribute": "Smile",
     "cScore": {
-      "base": 7101.825000000002,
-      "heel": 7101.825000000002,
-      "idlz": 7858.295000000001,
-      "idlz_heel": 6546.375000000001
+      "base": 6788.812800000001,
+      "heel": 6788.812800000001,
+      "idlz": 7202.764800000001,
+      "idlz_heel": 7202.764800000001
     },
     "event": null,
     "full_name": "SR Dancer Koizumi Hanayo",
@@ -4728,10 +4728,10 @@ app.constant('CardData',
   {
     "attribute": "Smile",
     "cScore": {
-      "base": 7141.500000000001,
-      "heel": 7141.500000000001,
-      "idlz": 7904.582500000001,
-      "idlz_heel": 6586.050000000001
+      "base": 6830.2080000000005,
+      "heel": 6830.2080000000005,
+      "idlz": 7246.668800000001,
+      "idlz_heel": 7246.668800000001
     },
     "event": null,
     "full_name": "SR Dancer Sonoda Umi",
@@ -4773,10 +4773,10 @@ app.constant('CardData',
   {
     "attribute": "Cool",
     "cScore": {
-      "base": 7022.475000000001,
-      "heel": 7022.475000000001,
-      "idlz": 7767.042500000001,
-      "idlz_heel": 6467.0250000000015
+      "base": 6706.022400000001,
+      "heel": 6706.022400000001,
+      "idlz": 7116.211200000001,
+      "idlz_heel": 7116.211200000001
     },
     "event": null,
     "full_name": "SR Dancer Ayase Eli",
@@ -4818,10 +4818,10 @@ app.constant('CardData',
   {
     "attribute": "Pure",
     "cScore": {
-      "base": 7128.2750000000015,
-      "heel": 7128.2750000000015,
-      "idlz": 7890.035000000002,
-      "idlz_heel": 6572.825000000001
+      "base": 6816.409600000001,
+      "heel": 6816.409600000001,
+      "idlz": 7232.870400000001,
+      "idlz_heel": 7232.870400000001
     },
     "event": null,
     "full_name": "SR Dancer Kousaka Honoka",
@@ -4863,10 +4863,10 @@ app.constant('CardData',
   {
     "attribute": "Cool",
     "cScore": {
-      "base": 6903.450000000002,
-      "heel": 6903.450000000002,
-      "idlz": 7628.180000000001,
-      "idlz_heel": 6348.000000000001
+      "base": 6581.836800000001,
+      "heel": 6581.836800000001,
+      "idlz": 6984.499200000001,
+      "idlz_heel": 6984.499200000001
     },
     "event": true,
     "full_name": "SR Flower Viewing Hoshizora Rin",
@@ -4908,10 +4908,10 @@ app.constant('CardData',
   {
     "attribute": "Pure",
     "cScore": {
-      "base": 8733.79,
-      "heel": 7300.200000000002,
-      "idlz": 10291.695000000002,
-      "idlz_heel": 8622.7
+      "base": 8284.057600000002,
+      "heel": 6924.288000000001,
+      "idlz": 9448.140800000001,
+      "idlz_heel": 7927.808000000001
     },
     "event": null,
     "full_name": "UR Baseball Ayase Eli",
@@ -4953,10 +4953,10 @@ app.constant('CardData',
   {
     "attribute": "Smile",
     "cScore": {
-      "base": 7022.475000000001,
-      "heel": 7022.475000000001,
-      "idlz": 7767.042500000001,
-      "idlz_heel": 6467.0250000000015
+      "base": 6706.022400000001,
+      "heel": 6706.022400000001,
+      "idlz": 7116.211200000001,
+      "idlz_heel": 7116.211200000001
     },
     "event": null,
     "full_name": "SR Baseball Yazawa Nico",
@@ -4998,10 +4998,10 @@ app.constant('CardData',
   {
     "attribute": "Cool",
     "cScore": {
-      "base": 7101.825000000002,
-      "heel": 7101.825000000002,
-      "idlz": 7858.295000000001,
-      "idlz_heel": 6546.375000000001
+      "base": 6788.812800000001,
+      "heel": 6788.812800000001,
+      "idlz": 7202.764800000001,
+      "idlz_heel": 7202.764800000001
     },
     "event": null,
     "full_name": "SR Baseball Sonoda Umi",
@@ -5043,10 +5043,10 @@ app.constant('CardData',
   {
     "attribute": "Pure",
     "cScore": {
-      "base": 7101.825000000002,
-      "heel": 7101.825000000002,
-      "idlz": 7858.295000000001,
-      "idlz_heel": 6546.375000000001
+      "base": 6788.812800000001,
+      "heel": 6788.812800000001,
+      "idlz": 7202.764800000001,
+      "idlz_heel": 7202.764800000001
     },
     "event": null,
     "full_name": "SR Baseball Minami Kotori",
@@ -5088,10 +5088,10 @@ app.constant('CardData',
   {
     "attribute": "Pure",
     "cScore": {
-      "base": 6837.325000000002,
-      "heel": 6837.325000000002,
-      "idlz": 7551.475000000001,
-      "idlz_heel": 6281.875000000001
+      "base": 6512.844800000001,
+      "heel": 6512.844800000001,
+      "idlz": 6911.744000000001,
+      "idlz_heel": 6911.744000000001
     },
     "event": true,
     "full_name": "SR Reading Koizumi Hanayo",
@@ -5133,10 +5133,10 @@ app.constant('CardData',
   {
     "attribute": "Smile",
     "cScore": {
-      "base": 8748.337500000001,
-      "heel": 7313.425000000001,
-      "idlz": 10306.242500000002,
-      "idlz_heel": 8635.925000000001
+      "base": 8297.856000000002,
+      "heel": 6936.832000000001,
+      "idlz": 9461.9392,
+      "idlz_heel": 7940.352000000001
     },
     "event": null,
     "full_name": "UR Baseball Nishikino Maki",
@@ -5313,10 +5313,10 @@ app.constant('CardData',
   {
     "attribute": "Cool",
     "cScore": {
-      "base": 7048.925000000001,
-      "heel": 7048.925000000001,
-      "idlz": 7797.460000000001,
-      "idlz_heel": 6493.475000000001
+      "base": 6733.619200000001,
+      "heel": 6733.619200000001,
+      "idlz": 7145.062400000001,
+      "idlz_heel": 7145.062400000001
     },
     "event": null,
     "full_name": "SR Baseball Koizumi Hanayo",
@@ -5358,10 +5358,10 @@ app.constant('CardData',
   {
     "attribute": "Cool",
     "cScore": {
-      "base": 7141.500000000001,
-      "heel": 7141.500000000001,
-      "idlz": 7904.582500000001,
-      "idlz_heel": 6586.050000000001
+      "base": 6830.2080000000005,
+      "heel": 6830.2080000000005,
+      "idlz": 7246.668800000001,
+      "idlz_heel": 7246.668800000001
     },
     "event": null,
     "full_name": "SR Baseball Toujou Nozomi",
@@ -5403,10 +5403,10 @@ app.constant('CardData',
   {
     "attribute": "Pure",
     "cScore": {
-      "base": 7062.1500000000015,
-      "heel": 7062.1500000000015,
-      "idlz": 7813.330000000002,
-      "idlz_heel": 6506.700000000001
+      "base": 6747.417600000001,
+      "heel": 6747.417600000001,
+      "idlz": 7160.115200000001,
+      "idlz_heel": 7160.115200000001
     },
     "event": null,
     "full_name": "SR Baseball Hoshizora Rin",
@@ -5448,10 +5448,10 @@ app.constant('CardData',
   {
     "attribute": "Smile",
     "cScore": {
-      "base": 7035.700000000002,
-      "heel": 7035.700000000002,
-      "idlz": 7781.590000000001,
-      "idlz_heel": 6480.250000000001
+      "base": 6719.820800000001,
+      "heel": 6719.820800000001,
+      "idlz": 7130.009600000001,
+      "idlz_heel": 7130.009600000001
     },
     "event": null,
     "full_name": "SR Baseball Kousaka Honoka",
@@ -5538,10 +5538,10 @@ app.constant('CardData',
   {
     "attribute": "Cool",
     "cScore": {
-      "base": 6757.975000000001,
-      "heel": 6757.975000000001,
-      "idlz": 7460.222500000002,
-      "idlz_heel": 6202.5250000000015
+      "base": 6430.054400000001,
+      "heel": 6430.054400000001,
+      "idlz": 6825.190400000001,
+      "idlz_heel": 6825.190400000001
     },
     "event": true,
     "full_name": "SR Rock Yazawa Nico",
@@ -5583,10 +5583,10 @@ app.constant('CardData',
   {
     "attribute": "Smile",
     "cScore": {
-      "base": 8764.207500000002,
-      "heel": 7326.6500000000015,
-      "idlz": 10322.112500000001,
-      "idlz_heel": 8649.150000000001
+      "base": 8312.908800000001,
+      "heel": 6949.376000000001,
+      "idlz": 9476.992000000002,
+      "idlz_heel": 7952.896000000002
     },
     "event": null,
     "full_name": "UR Taisho Romance Koizumi Hanayo",
@@ -5628,10 +5628,10 @@ app.constant('CardData',
   {
     "attribute": "Pure",
     "cScore": {
-      "base": 7088.600000000001,
-      "heel": 7088.600000000001,
-      "idlz": 7843.747500000001,
-      "idlz_heel": 6533.1500000000015
+      "base": 6775.014400000001,
+      "heel": 6775.014400000001,
+      "idlz": 7188.966400000001,
+      "idlz_heel": 7188.966400000001
     },
     "event": null,
     "full_name": "SR Taisho Romance Yazawa Nico",
@@ -5673,10 +5673,10 @@ app.constant('CardData',
   {
     "attribute": "Cool",
     "cScore": {
-      "base": 7154.725000000001,
-      "heel": 7154.725000000001,
-      "idlz": 7920.452500000001,
-      "idlz_heel": 6599.2750000000015
+      "base": 6844.006400000001,
+      "heel": 6844.006400000001,
+      "idlz": 7261.721600000001,
+      "idlz_heel": 7261.721600000001
     },
     "event": null,
     "full_name": "SR Taisho Romance Nishikino Maki",
@@ -5718,10 +5718,10 @@ app.constant('CardData',
   {
     "attribute": "Smile",
     "cScore": {
-      "base": 7009.250000000001,
-      "heel": 7009.250000000001,
-      "idlz": 7751.1725000000015,
-      "idlz_heel": 6453.800000000001
+      "base": 6692.224000000001,
+      "heel": 6692.224000000001,
+      "idlz": 7101.158400000001,
+      "idlz_heel": 7101.158400000001
     },
     "event": null,
     "full_name": "SR Taisho Romance Sonoda Umi",
@@ -5763,10 +5763,10 @@ app.constant('CardData',
   {
     "attribute": "Smile",
     "cScore": {
-      "base": 6916.675000000001,
-      "heel": 6916.675000000001,
-      "idlz": 7644.050000000001,
-      "idlz_heel": 6361.225000000001
+      "base": 6595.635200000001,
+      "heel": 6595.635200000001,
+      "idlz": 6999.552000000001,
+      "idlz_heel": 6999.552000000001
     },
     "event": true,
     "full_name": "SR Easter Nishikino Maki",
@@ -5808,10 +5808,10 @@ app.constant('CardData',
   {
     "attribute": "Pure",
     "cScore": {
-      "base": 8717.920000000002,
-      "heel": 7286.975000000001,
-      "idlz": 10275.825000000003,
-      "idlz_heel": 8609.475000000002
+      "base": 8269.0048,
+      "heel": 6911.744000000001,
+      "idlz": 9433.088000000002,
+      "idlz_heel": 7915.264000000001
     },
     "event": null,
     "full_name": "UR Taisho Romance Kousaka Honoka",
@@ -5988,10 +5988,10 @@ app.constant('CardData',
   {
     "attribute": "Smile",
     "cScore": {
-      "base": 7088.600000000001,
-      "heel": 7088.600000000001,
-      "idlz": 7843.747500000001,
-      "idlz_heel": 6533.1500000000015
+      "base": 6775.014400000001,
+      "heel": 6775.014400000001,
+      "idlz": 7188.966400000001,
+      "idlz_heel": 7188.966400000001
     },
     "event": null,
     "full_name": "SR Taisho Romance Toujou Nozomi",
@@ -6078,10 +6078,10 @@ app.constant('CardData',
   {
     "attribute": "Cool",
     "cScore": {
-      "base": 7141.500000000001,
-      "heel": 7141.500000000001,
-      "idlz": 7904.582500000001,
-      "idlz_heel": 6586.050000000001
+      "base": 6830.2080000000005,
+      "heel": 6830.2080000000005,
+      "idlz": 7246.668800000001,
+      "idlz_heel": 7246.668800000001
     },
     "event": null,
     "full_name": "SR Taisho Romance Hoshizora Rin",
@@ -6213,10 +6213,10 @@ app.constant('CardData',
   {
     "attribute": "Cool",
     "cScore": {
-      "base": 7035.700000000002,
-      "heel": 7035.700000000002,
-      "idlz": 7781.590000000001,
-      "idlz_heel": 6480.250000000001
+      "base": 6719.820800000001,
+      "heel": 6719.820800000001,
+      "idlz": 7130.009600000001,
+      "idlz_heel": 7130.009600000001
     },
     "event": null,
     "full_name": "SR Taisho Romance Minami Kotori",
@@ -6348,10 +6348,10 @@ app.constant('CardData',
   {
     "attribute": "Pure",
     "cScore": {
-      "base": 7048.925000000001,
-      "heel": 7048.925000000001,
-      "idlz": 7797.460000000001,
-      "idlz_heel": 6493.475000000001
+      "base": 6733.619200000001,
+      "heel": 6733.619200000001,
+      "idlz": 7145.062400000001,
+      "idlz_heel": 7145.062400000001
     },
     "event": null,
     "full_name": "SR Taisho Romance Ayase Eli",
@@ -6483,10 +6483,10 @@ app.constant('CardData',
   {
     "attribute": "Smile",
     "cScore": {
-      "base": 6824.100000000001,
-      "heel": 6824.100000000001,
-      "idlz": 7536.927500000002,
-      "idlz_heel": 6268.6500000000015
+      "base": 6499.046400000001,
+      "heel": 6499.046400000001,
+      "idlz": 6897.945600000001,
+      "idlz_heel": 6897.945600000001
     },
     "event": true,
     "full_name": "SR Bubbles Sonoda Umi",
@@ -6528,10 +6528,10 @@ app.constant('CardData',
   {
     "attribute": "Cool",
     "cScore": {
-      "base": 8748.337500000001,
-      "heel": 7313.425000000001,
-      "idlz": 10306.242500000002,
-      "idlz_heel": 8635.925000000001
+      "base": 8297.856000000002,
+      "heel": 6936.832000000001,
+      "idlz": 9461.9392,
+      "idlz_heel": 7940.352000000001
     },
     "event": null,
     "full_name": "UR Land of Fairies Hoshizora Rin",
@@ -6573,10 +6573,10 @@ app.constant('CardData',
   {
     "attribute": "Smile",
     "cScore": {
-      "base": 7022.475000000001,
-      "heel": 7022.475000000001,
-      "idlz": 7767.042500000001,
-      "idlz_heel": 6467.0250000000015
+      "base": 6706.022400000001,
+      "heel": 6706.022400000001,
+      "idlz": 7116.211200000001,
+      "idlz_heel": 7116.211200000001
     },
     "event": null,
     "full_name": "SR Land of Fairies Nishikino Maki",
@@ -6618,10 +6618,10 @@ app.constant('CardData',
   {
     "attribute": "Pure",
     "cScore": {
-      "base": 7101.825000000002,
-      "heel": 7101.825000000002,
-      "idlz": 7858.295000000001,
-      "idlz_heel": 6546.375000000001
+      "base": 6788.812800000001,
+      "heel": 6788.812800000001,
+      "idlz": 7202.764800000001,
+      "idlz_heel": 7202.764800000001
     },
     "event": null,
     "full_name": "SR Land of Fairies Minami Kotori",
@@ -6663,10 +6663,10 @@ app.constant('CardData',
   {
     "attribute": "Cool",
     "cScore": {
-      "base": 7154.725000000001,
-      "heel": 7154.725000000001,
-      "idlz": 7920.452500000001,
-      "idlz_heel": 6599.2750000000015
+      "base": 6844.006400000001,
+      "heel": 6844.006400000001,
+      "idlz": 7261.721600000001,
+      "idlz_heel": 7261.721600000001
     },
     "event": null,
     "full_name": "SR Land of Fairies Kousaka Honoka",
@@ -6708,10 +6708,10 @@ app.constant('CardData',
   {
     "attribute": "Pure",
     "cScore": {
-      "base": 6810.875000000001,
-      "heel": 6810.875000000001,
-      "idlz": 7521.057500000002,
-      "idlz_heel": 6255.425000000001
+      "base": 6485.2480000000005,
+      "heel": 6485.2480000000005,
+      "idlz": 6882.892800000001,
+      "idlz_heel": 6882.892800000001
     },
     "event": true,
     "full_name": "SR Rock Ayase Eli",
@@ -6753,10 +6753,10 @@ app.constant('CardData',
   {
     "attribute": "Pure",
     "cScore": {
-      "base": 8733.79,
-      "heel": 7300.200000000002,
-      "idlz": 10291.695000000002,
-      "idlz_heel": 8622.7
+      "base": 8284.057600000002,
+      "heel": 6924.288000000001,
+      "idlz": 9448.140800000001,
+      "idlz_heel": 7927.808000000001
     },
     "event": null,
     "full_name": "UR Land of Fairies Yazawa Nico",
@@ -6798,10 +6798,10 @@ app.constant('CardData',
   {
     "attribute": "Cool",
     "cScore": {
-      "base": 7101.825000000002,
-      "heel": 7101.825000000002,
-      "idlz": 7858.295000000001,
-      "idlz_heel": 6546.375000000001
+      "base": 6788.812800000001,
+      "heel": 6788.812800000001,
+      "idlz": 7202.764800000001,
+      "idlz_heel": 7202.764800000001
     },
     "event": null,
     "full_name": "SR Land of Fairies Koizumi Hanayo",
@@ -6843,10 +6843,10 @@ app.constant('CardData',
   {
     "attribute": "Pure",
     "cScore": {
-      "base": 7022.475000000001,
-      "heel": 7022.475000000001,
-      "idlz": 7767.042500000001,
-      "idlz_heel": 6467.0250000000015
+      "base": 6706.022400000001,
+      "heel": 6706.022400000001,
+      "idlz": 7116.211200000001,
+      "idlz_heel": 7116.211200000001
     },
     "event": null,
     "full_name": "SR Land of Fairies Toujou Nozomi",
@@ -6888,10 +6888,10 @@ app.constant('CardData',
   {
     "attribute": "Pure",
     "cScore": {
-      "base": 7141.500000000001,
-      "heel": 7141.500000000001,
-      "idlz": 7904.582500000001,
-      "idlz_heel": 6586.050000000001
+      "base": 6830.2080000000005,
+      "heel": 6830.2080000000005,
+      "idlz": 7246.668800000001,
+      "idlz_heel": 7246.668800000001
     },
     "event": null,
     "full_name": "SR Land of Fairies Sonoda Umi",
@@ -6933,10 +6933,10 @@ app.constant('CardData',
   {
     "attribute": "Smile",
     "cScore": {
-      "base": 7101.825000000002,
-      "heel": 7101.825000000002,
-      "idlz": 7858.295000000001,
-      "idlz_heel": 6546.375000000001
+      "base": 6788.812800000001,
+      "heel": 6788.812800000001,
+      "idlz": 7202.764800000001,
+      "idlz_heel": 7202.764800000001
     },
     "event": null,
     "full_name": "SR Land of Fairies Ayase Eli",
@@ -6978,10 +6978,10 @@ app.constant('CardData',
   {
     "attribute": "Cool",
     "cScore": {
-      "base": 6916.675000000001,
-      "heel": 6916.675000000001,
-      "idlz": 7644.050000000001,
-      "idlz_heel": 6361.225000000001
+      "base": 6595.635200000001,
+      "heel": 6595.635200000001,
+      "idlz": 6999.552000000001,
+      "idlz_heel": 6999.552000000001
     },
     "event": true,
     "full_name": "SR Setsubun Minami Kotori",
@@ -7023,10 +7023,10 @@ app.constant('CardData',
   {
     "attribute": "Smile",
     "cScore": {
-      "base": 8717.920000000002,
-      "heel": 7286.975000000001,
-      "idlz": 10275.825000000003,
-      "idlz_heel": 8609.475000000002
+      "base": 8269.0048,
+      "heel": 6911.744000000001,
+      "idlz": 9433.088000000002,
+      "idlz_heel": 7915.264000000001
     },
     "event": null,
     "full_name": "UR Circus Sonoda Umi",
@@ -7113,10 +7113,10 @@ app.constant('CardData',
   {
     "attribute": "Pure",
     "cScore": {
-      "base": 7062.1500000000015,
-      "heel": 7062.1500000000015,
-      "idlz": 7813.330000000002,
-      "idlz_heel": 6506.700000000001
+      "base": 6747.417600000001,
+      "heel": 6747.417600000001,
+      "idlz": 7160.115200000001,
+      "idlz_heel": 7160.115200000001
     },
     "event": null,
     "full_name": "SR Circus Koizumi Hanayo",
@@ -7203,10 +7203,10 @@ app.constant('CardData',
   {
     "attribute": "Smile",
     "cScore": {
-      "base": 7115.050000000001,
-      "heel": 7115.050000000001,
-      "idlz": 7874.165000000002,
-      "idlz_heel": 6559.600000000001
+      "base": 6802.611200000001,
+      "heel": 6802.611200000001,
+      "idlz": 7217.817600000001,
+      "idlz_heel": 7217.817600000001
     },
     "event": null,
     "full_name": "SR Circus Minami Kotori",
@@ -7293,10 +7293,10 @@ app.constant('CardData',
   {
     "attribute": "Cool",
     "cScore": {
-      "base": 7088.600000000001,
-      "heel": 7088.600000000001,
-      "idlz": 7843.747500000001,
-      "idlz_heel": 6533.1500000000015
+      "base": 6775.014400000001,
+      "heel": 6775.014400000001,
+      "idlz": 7188.966400000001,
+      "idlz_heel": 7188.966400000001
     },
     "event": null,
     "full_name": "SR Circus Ayase Eli",
@@ -7338,10 +7338,10 @@ app.constant('CardData',
   {
     "attribute": "Smile",
     "cScore": {
-      "base": 6850.550000000001,
-      "heel": 6850.550000000001,
-      "idlz": 7567.345000000001,
-      "idlz_heel": 6295.100000000001
+      "base": 6526.643200000001,
+      "heel": 6526.643200000001,
+      "idlz": 6926.796800000001,
+      "idlz_heel": 6926.796800000001
     },
     "event": true,
     "full_name": "SR New Year's Food Toujou Nozomi",
@@ -7383,10 +7383,10 @@ app.constant('CardData',
   {
     "attribute": "Pure",
     "cScore": {
-      "base": 8764.207500000002,
-      "heel": 7326.6500000000015,
-      "idlz": 10322.112500000001,
-      "idlz_heel": 8649.150000000001
+      "base": 8312.908800000001,
+      "heel": 6949.376000000001,
+      "idlz": 9476.992000000002,
+      "idlz_heel": 7952.896000000002
     },
     "event": null,
     "full_name": "UR Circus Nishikino Maki",
@@ -7428,10 +7428,10 @@ app.constant('CardData',
   {
     "attribute": "Cool",
     "cScore": {
-      "base": 7022.475000000001,
-      "heel": 7022.475000000001,
-      "idlz": 7767.042500000001,
-      "idlz_heel": 6467.0250000000015
+      "base": 6706.022400000001,
+      "heel": 6706.022400000001,
+      "idlz": 7116.211200000001,
+      "idlz_heel": 7116.211200000001
     },
     "event": null,
     "full_name": "SR Circus Yazawa Nico",
@@ -7473,10 +7473,10 @@ app.constant('CardData',
   {
     "attribute": "Cool",
     "cScore": {
-      "base": 7128.2750000000015,
-      "heel": 7128.2750000000015,
-      "idlz": 7890.035000000002,
-      "idlz_heel": 6572.825000000001
+      "base": 6816.409600000001,
+      "heel": 6816.409600000001,
+      "idlz": 7232.870400000001,
+      "idlz_heel": 7232.870400000001
     },
     "event": null,
     "full_name": "SR Circus Toujou Nozomi",
@@ -7518,10 +7518,10 @@ app.constant('CardData',
   {
     "attribute": "Smile",
     "cScore": {
-      "base": 7035.700000000002,
-      "heel": 7035.700000000002,
-      "idlz": 7781.590000000001,
-      "idlz_heel": 6480.250000000001
+      "base": 6719.820800000001,
+      "heel": 6719.820800000001,
+      "idlz": 7130.009600000001,
+      "idlz_heel": 7130.009600000001
     },
     "event": null,
     "full_name": "SR Circus Hoshizora Rin",
@@ -7563,10 +7563,10 @@ app.constant('CardData',
   {
     "attribute": "Pure",
     "cScore": {
-      "base": 7115.050000000001,
-      "heel": 7115.050000000001,
-      "idlz": 7874.165000000002,
-      "idlz_heel": 6559.600000000001
+      "base": 6802.611200000001,
+      "heel": 6802.611200000001,
+      "idlz": 7217.817600000001,
+      "idlz_heel": 7217.817600000001
     },
     "event": null,
     "full_name": "SR Circus Kousaka Honoka",
@@ -7698,10 +7698,10 @@ app.constant('CardData',
   {
     "attribute": "Pure",
     "cScore": {
-      "base": 6757.975000000001,
-      "heel": 6757.975000000001,
-      "idlz": 7460.222500000002,
-      "idlz_heel": 6202.5250000000015
+      "base": 6430.054400000001,
+      "heel": 6430.054400000001,
+      "idlz": 6825.190400000001,
+      "idlz_heel": 6825.190400000001
     },
     "event": true,
     "full_name": "SR Caf\u00e9 Maid Hoshizora Rin",
@@ -7788,10 +7788,10 @@ app.constant('CardData',
   {
     "attribute": "Cool",
     "cScore": {
-      "base": 8764.207500000002,
-      "heel": 7326.6500000000015,
-      "idlz": 10322.112500000001,
-      "idlz_heel": 8649.150000000001
+      "base": 8312.908800000001,
+      "heel": 6949.376000000001,
+      "idlz": 9476.992000000002,
+      "idlz_heel": 7952.896000000002
     },
     "event": null,
     "full_name": "UR Christmas Koizumi Hanayo",
@@ -7833,10 +7833,10 @@ app.constant('CardData',
   {
     "attribute": "Pure",
     "cScore": {
-      "base": 7141.500000000001,
-      "heel": 7141.500000000001,
-      "idlz": 7904.582500000001,
-      "idlz_heel": 6586.050000000001
+      "base": 6830.2080000000005,
+      "heel": 6830.2080000000005,
+      "idlz": 7246.668800000001,
+      "idlz_heel": 7246.668800000001
     },
     "event": null,
     "full_name": "SR Christmas Yazawa Nico",
@@ -7878,10 +7878,10 @@ app.constant('CardData',
   {
     "attribute": "Cool",
     "cScore": {
-      "base": 7062.1500000000015,
-      "heel": 7062.1500000000015,
-      "idlz": 7813.330000000002,
-      "idlz_heel": 6506.700000000001
+      "base": 6747.417600000001,
+      "heel": 6747.417600000001,
+      "idlz": 7160.115200000001,
+      "idlz_heel": 7160.115200000001
     },
     "event": null,
     "full_name": "SR Christmas Minami Kotori",
@@ -7923,10 +7923,10 @@ app.constant('CardData',
   {
     "attribute": "Smile",
     "cScore": {
-      "base": 7022.475000000001,
-      "heel": 7022.475000000001,
-      "idlz": 7767.042500000001,
-      "idlz_heel": 6467.0250000000015
+      "base": 6706.022400000001,
+      "heel": 6706.022400000001,
+      "idlz": 7116.211200000001,
+      "idlz_heel": 7116.211200000001
     },
     "event": null,
     "full_name": "SR Christmas Kousaka Honoka",
@@ -8013,10 +8013,10 @@ app.constant('CardData',
   {
     "attribute": "Cool",
     "cScore": {
-      "base": 6929.9000000000015,
-      "heel": 6929.9000000000015,
-      "idlz": 7659.920000000001,
-      "idlz_heel": 6374.450000000001
+      "base": 6609.433600000001,
+      "heel": 6609.433600000001,
+      "idlz": 7014.604800000001,
+      "idlz_heel": 7014.604800000001
     },
     "event": true,
     "full_name": "SR Vampire Kousaka Honoka",
@@ -8058,10 +8058,10 @@ app.constant('CardData',
   {
     "attribute": "Smile",
     "cScore": {
-      "base": 8764.207500000002,
-      "heel": 7326.6500000000015,
-      "idlz": 10322.112500000001,
-      "idlz_heel": 8649.150000000001
+      "base": 8312.908800000001,
+      "heel": 6949.376000000001,
+      "idlz": 9476.992000000002,
+      "idlz_heel": 7952.896000000002
     },
     "event": null,
     "full_name": "UR Christmas Ayase Eli",
@@ -8103,10 +8103,10 @@ app.constant('CardData',
   {
     "attribute": "Pure",
     "cScore": {
-      "base": 7128.2750000000015,
-      "heel": 7128.2750000000015,
-      "idlz": 7890.035000000002,
-      "idlz_heel": 6572.825000000001
+      "base": 6816.409600000001,
+      "heel": 6816.409600000001,
+      "idlz": 7232.870400000001,
+      "idlz_heel": 7232.870400000001
     },
     "event": null,
     "full_name": "SR Christmas Toujou Nozomi",
@@ -8148,10 +8148,10 @@ app.constant('CardData',
   {
     "attribute": "Smile",
     "cScore": {
-      "base": 7115.050000000001,
-      "heel": 7115.050000000001,
-      "idlz": 7874.165000000002,
-      "idlz_heel": 6559.600000000001
+      "base": 6802.611200000001,
+      "heel": 6802.611200000001,
+      "idlz": 7217.817600000001,
+      "idlz_heel": 7217.817600000001
     },
     "event": null,
     "full_name": "SR Christmas Nishikino Maki",
@@ -8193,10 +8193,10 @@ app.constant('CardData',
   {
     "attribute": "Cool",
     "cScore": {
-      "base": 7048.925000000001,
-      "heel": 7048.925000000001,
-      "idlz": 7797.460000000001,
-      "idlz_heel": 6493.475000000001
+      "base": 6733.619200000001,
+      "heel": 6733.619200000001,
+      "idlz": 7145.062400000001,
+      "idlz_heel": 7145.062400000001
     },
     "event": null,
     "full_name": "SR Christmas Hoshizora Rin",
@@ -8238,10 +8238,10 @@ app.constant('CardData',
   {
     "attribute": "Pure",
     "cScore": {
-      "base": 7115.050000000001,
-      "heel": 7115.050000000001,
-      "idlz": 7874.165000000002,
-      "idlz_heel": 6559.600000000001
+      "base": 6802.611200000001,
+      "heel": 6802.611200000001,
+      "idlz": 7217.817600000001,
+      "idlz_heel": 7217.817600000001
     },
     "event": null,
     "full_name": "SR Christmas Sonoda Umi",
@@ -8328,10 +8328,10 @@ app.constant('CardData',
   {
     "attribute": "Cool",
     "cScore": {
-      "base": 6850.550000000001,
-      "heel": 6850.550000000001,
-      "idlz": 7567.345000000001,
-      "idlz_heel": 6295.100000000001
+      "base": 6526.643200000001,
+      "heel": 6526.643200000001,
+      "idlz": 6926.796800000001,
+      "idlz_heel": 6926.796800000001
     },
     "event": true,
     "full_name": "SR Explorer Sonoda Umi",
@@ -8463,10 +8463,10 @@ app.constant('CardData',
   {
     "attribute": "Cool",
     "cScore": {
-      "base": 8733.79,
-      "heel": 7300.200000000002,
-      "idlz": 10291.695000000002,
-      "idlz_heel": 8622.7
+      "base": 8284.057600000002,
+      "heel": 6924.288000000001,
+      "idlz": 9448.140800000001,
+      "idlz_heel": 7927.808000000001
     },
     "event": null,
     "full_name": "UR Ball Toujou Nozomi",
@@ -8508,10 +8508,10 @@ app.constant('CardData',
   {
     "attribute": "Smile",
     "cScore": {
-      "base": 7048.925000000001,
-      "heel": 7048.925000000001,
-      "idlz": 7797.460000000001,
-      "idlz_heel": 6493.475000000001
+      "base": 6733.619200000001,
+      "heel": 6733.619200000001,
+      "idlz": 7145.062400000001,
+      "idlz_heel": 7145.062400000001
     },
     "event": null,
     "full_name": "SR Ball Koizumi Hanayo",
@@ -8553,10 +8553,10 @@ app.constant('CardData',
   {
     "attribute": "Pure",
     "cScore": {
-      "base": 7154.725000000001,
-      "heel": 7154.725000000001,
-      "idlz": 7920.452500000001,
-      "idlz_heel": 6599.2750000000015
+      "base": 6844.006400000001,
+      "heel": 6844.006400000001,
+      "idlz": 7261.721600000001,
+      "idlz_heel": 7261.721600000001
     },
     "event": null,
     "full_name": "SR Ball Nishikino Maki",
@@ -8598,10 +8598,10 @@ app.constant('CardData',
   {
     "attribute": "Cool",
     "cScore": {
-      "base": 7115.050000000001,
-      "heel": 7115.050000000001,
-      "idlz": 7874.165000000002,
-      "idlz_heel": 6559.600000000001
+      "base": 6802.611200000001,
+      "heel": 6802.611200000001,
+      "idlz": 7217.817600000001,
+      "idlz_heel": 7217.817600000001
     },
     "event": null,
     "full_name": "SR Ball Kousaka Honoka",
@@ -8643,10 +8643,10 @@ app.constant('CardData',
   {
     "attribute": "Smile",
     "cScore": {
-      "base": 6903.450000000002,
-      "heel": 6903.450000000002,
-      "idlz": 7628.180000000001,
-      "idlz_heel": 6348.000000000001
+      "base": 6581.836800000001,
+      "heel": 6581.836800000001,
+      "idlz": 6984.499200000001,
+      "idlz_heel": 6984.499200000001
     },
     "event": true,
     "full_name": "SR Autumn Yazawa Nico",
@@ -8688,10 +8688,10 @@ app.constant('CardData',
   {
     "attribute": "Smile",
     "cScore": {
-      "base": 8778.755000000001,
-      "heel": 7339.875000000001,
-      "idlz": 10336.660000000002,
-      "idlz_heel": 8662.375000000002
+      "base": 8326.7072,
+      "heel": 6961.920000000001,
+      "idlz": 9490.790400000002,
+      "idlz_heel": 7965.440000000001
     },
     "event": null,
     "full_name": "UR Ball Minami Kotori",
@@ -8733,10 +8733,10 @@ app.constant('CardData',
   {
     "attribute": "Cool",
     "cScore": {
-      "base": 7115.050000000001,
-      "heel": 7115.050000000001,
-      "idlz": 7874.165000000002,
-      "idlz_heel": 6559.600000000001
+      "base": 6802.611200000001,
+      "heel": 6802.611200000001,
+      "idlz": 7217.817600000001,
+      "idlz_heel": 7217.817600000001
     },
     "event": null,
     "full_name": "SR Ball Yazawa Nico",
@@ -8778,10 +8778,10 @@ app.constant('CardData',
   {
     "attribute": "Pure",
     "cScore": {
-      "base": 7075.375000000001,
-      "heel": 7075.375000000001,
-      "idlz": 7827.877500000001,
-      "idlz_heel": 6519.925000000001
+      "base": 6761.216000000001,
+      "heel": 6761.216000000001,
+      "idlz": 7173.913600000001,
+      "idlz_heel": 7173.913600000001
     },
     "event": null,
     "full_name": "SR Ball Hoshizora Rin",
@@ -8823,10 +8823,10 @@ app.constant('CardData',
   {
     "attribute": "Smile",
     "cScore": {
-      "base": 7048.925000000001,
-      "heel": 7048.925000000001,
-      "idlz": 7797.460000000001,
-      "idlz_heel": 6493.475000000001
+      "base": 6733.619200000001,
+      "heel": 6733.619200000001,
+      "idlz": 7145.062400000001,
+      "idlz_heel": 7145.062400000001
     },
     "event": null,
     "full_name": "SR Ball Sonoda Umi",
@@ -8868,10 +8868,10 @@ app.constant('CardData',
   {
     "attribute": "Pure",
     "cScore": {
-      "base": 7154.725000000001,
-      "heel": 7154.725000000001,
-      "idlz": 7920.452500000001,
-      "idlz_heel": 6599.2750000000015
+      "base": 6844.006400000001,
+      "heel": 6844.006400000001,
+      "idlz": 7261.721600000001,
+      "idlz_heel": 7261.721600000001
     },
     "event": null,
     "full_name": "SR Ball Ayase Eli",
@@ -9318,10 +9318,10 @@ app.constant('CardData',
   {
     "attribute": "Smile",
     "cScore": {
-      "base": 6771.200000000001,
-      "heel": 6771.200000000001,
-      "idlz": 7474.770000000001,
-      "idlz_heel": 6215.750000000001
+      "base": 6443.852800000001,
+      "heel": 6443.852800000001,
+      "idlz": 6838.988800000001,
+      "idlz_heel": 6838.988800000001
     },
     "event": true,
     "full_name": "SR Steampunk Ayase Eli",
@@ -9408,10 +9408,10 @@ app.constant('CardData',
   {
     "attribute": "Smile",
     "cScore": {
-      "base": 8733.79,
-      "heel": 7300.200000000002,
-      "idlz": 10291.695000000002,
-      "idlz_heel": 8622.7
+      "base": 8284.057600000002,
+      "heel": 6924.288000000001,
+      "idlz": 9448.140800000001,
+      "idlz_heel": 7927.808000000001
     },
     "event": null,
     "full_name": "UR Animal Kousaka Honoka",
@@ -9453,10 +9453,10 @@ app.constant('CardData',
   {
     "attribute": "Smile",
     "cScore": {
-      "base": 7154.725000000001,
-      "heel": 7154.725000000001,
-      "idlz": 7920.452500000001,
-      "idlz_heel": 6599.2750000000015
+      "base": 6844.006400000001,
+      "heel": 6844.006400000001,
+      "idlz": 7261.721600000001,
+      "idlz_heel": 7261.721600000001
     },
     "event": null,
     "full_name": "SR Animal Hoshizora Rin",
@@ -9498,10 +9498,10 @@ app.constant('CardData',
   {
     "attribute": "Pure",
     "cScore": {
-      "base": 7075.375000000001,
-      "heel": 7075.375000000001,
-      "idlz": 7827.877500000001,
-      "idlz_heel": 6519.925000000001
+      "base": 6761.216000000001,
+      "heel": 6761.216000000001,
+      "idlz": 7173.913600000001,
+      "idlz_heel": 7173.913600000001
     },
     "event": null,
     "full_name": "SR Animal Minami Kotori",
@@ -9543,10 +9543,10 @@ app.constant('CardData',
   {
     "attribute": "Cool",
     "cScore": {
-      "base": 7115.050000000001,
-      "heel": 7115.050000000001,
-      "idlz": 7874.165000000002,
-      "idlz_heel": 6559.600000000001
+      "base": 6802.611200000001,
+      "heel": 6802.611200000001,
+      "idlz": 7217.817600000001,
+      "idlz_heel": 7217.817600000001
     },
     "event": null,
     "full_name": "SR Animal Ayase Eli",
@@ -9588,10 +9588,10 @@ app.constant('CardData',
   {
     "attribute": "Pure",
     "cScore": {
-      "base": 6890.225000000001,
-      "heel": 6890.225000000001,
-      "idlz": 7613.6325000000015,
-      "idlz_heel": 6334.7750000000015
+      "base": 6568.038400000001,
+      "heel": 6568.038400000001,
+      "idlz": 6970.700800000001,
+      "idlz_heel": 6970.700800000001
     },
     "event": true,
     "full_name": "SR Rock Nishikino Maki",
@@ -9633,10 +9633,10 @@ app.constant('CardData',
   {
     "attribute": "Cool",
     "cScore": {
-      "base": 8764.207500000002,
-      "heel": 7326.6500000000015,
-      "idlz": 10322.112500000001,
-      "idlz_heel": 8649.150000000001
+      "base": 8312.908800000001,
+      "heel": 6949.376000000001,
+      "idlz": 9476.992000000002,
+      "idlz_heel": 7952.896000000002
     },
     "event": null,
     "full_name": "UR Animal Nishikino Maki",
@@ -9678,10 +9678,10 @@ app.constant('CardData',
   {
     "attribute": "Pure",
     "cScore": {
-      "base": 7062.1500000000015,
-      "heel": 7062.1500000000015,
-      "idlz": 7813.330000000002,
-      "idlz_heel": 6506.700000000001
+      "base": 6747.417600000001,
+      "heel": 6747.417600000001,
+      "idlz": 7160.115200000001,
+      "idlz_heel": 7160.115200000001
     },
     "event": null,
     "full_name": "SR Animal Yazawa Nico",
@@ -9723,10 +9723,10 @@ app.constant('CardData',
   {
     "attribute": "Smile",
     "cScore": {
-      "base": 7154.725000000001,
-      "heel": 7154.725000000001,
-      "idlz": 7920.452500000001,
-      "idlz_heel": 6599.2750000000015
+      "base": 6844.006400000001,
+      "heel": 6844.006400000001,
+      "idlz": 7261.721600000001,
+      "idlz_heel": 7261.721600000001
     },
     "event": null,
     "full_name": "SR Animal Koizumi Hanayo",
@@ -9768,10 +9768,10 @@ app.constant('CardData',
   {
     "attribute": "Cool",
     "cScore": {
-      "base": 7141.500000000001,
-      "heel": 7141.500000000001,
-      "idlz": 7904.582500000001,
-      "idlz_heel": 6586.050000000001
+      "base": 6830.2080000000005,
+      "heel": 6830.2080000000005,
+      "idlz": 7246.668800000001,
+      "idlz_heel": 7246.668800000001
     },
     "event": null,
     "full_name": "SR Animal Toujou Nozomi",
@@ -9813,10 +9813,10 @@ app.constant('CardData',
   {
     "attribute": "Pure",
     "cScore": {
-      "base": 7154.725000000001,
-      "heel": 7154.725000000001,
-      "idlz": 7920.452500000001,
-      "idlz_heel": 6599.2750000000015
+      "base": 6844.006400000001,
+      "heel": 6844.006400000001,
+      "idlz": 7261.721600000001,
+      "idlz_heel": 7261.721600000001
     },
     "event": null,
     "full_name": "SR Animal Sonoda Umi",
@@ -9858,10 +9858,10 @@ app.constant('CardData',
   {
     "attribute": "Cool",
     "cScore": {
-      "base": 6850.550000000001,
-      "heel": 6850.550000000001,
-      "idlz": 7567.345000000001,
-      "idlz_heel": 6295.100000000001
+      "base": 6526.643200000001,
+      "heel": 6526.643200000001,
+      "idlz": 6926.796800000001,
+      "idlz_heel": 6926.796800000001
     },
     "event": true,
     "full_name": "SR Moon Viewing Koizumi Hanayo",
@@ -9948,10 +9948,10 @@ app.constant('CardData',
   {
     "attribute": "Smile",
     "cScore": {
-      "base": 8825.042500000001,
-      "heel": 7379.550000000001,
-      "idlz": 10382.947500000002,
-      "idlz_heel": 8702.050000000001
+      "base": 8370.611200000001,
+      "heel": 6999.552000000001,
+      "idlz": 9534.694400000002,
+      "idlz_heel": 8003.072000000001
     },
     "event": null,
     "full_name": "UR Kunoichi Yazawa Nico",
@@ -10038,10 +10038,10 @@ app.constant('CardData',
   {
     "attribute": "Pure",
     "cScore": {
-      "base": 7075.375000000001,
-      "heel": 7075.375000000001,
-      "idlz": 7827.877500000001,
-      "idlz_heel": 6519.925000000001
+      "base": 6761.216000000001,
+      "heel": 6761.216000000001,
+      "idlz": 7173.913600000001,
+      "idlz_heel": 7173.913600000001
     },
     "event": null,
     "full_name": "SR Kunoichi Toujou Nozomi",
@@ -10083,10 +10083,10 @@ app.constant('CardData',
   {
     "attribute": "Cool",
     "cScore": {
-      "base": 7154.725000000001,
-      "heel": 7154.725000000001,
-      "idlz": 7920.452500000001,
-      "idlz_heel": 6599.2750000000015
+      "base": 6844.006400000001,
+      "heel": 6844.006400000001,
+      "idlz": 7261.721600000001,
+      "idlz_heel": 7261.721600000001
     },
     "event": null,
     "full_name": "SR Kunoichi Hoshizora Rin",
@@ -10128,10 +10128,10 @@ app.constant('CardData',
   {
     "attribute": "Smile",
     "cScore": {
-      "base": 7128.2750000000015,
-      "heel": 7128.2750000000015,
-      "idlz": 7890.035000000002,
-      "idlz_heel": 6572.825000000001
+      "base": 6816.409600000001,
+      "heel": 6816.409600000001,
+      "idlz": 7232.870400000001,
+      "idlz_heel": 7232.870400000001
     },
     "event": null,
     "full_name": "SR Kunoichi Minami Kotori",
@@ -10173,10 +10173,10 @@ app.constant('CardData',
   {
     "attribute": "Pure",
     "cScore": {
-      "base": 6903.450000000002,
-      "heel": 6903.450000000002,
-      "idlz": 7628.180000000001,
-      "idlz_heel": 6348.000000000001
+      "base": 6581.836800000001,
+      "heel": 6581.836800000001,
+      "idlz": 6984.499200000001,
+      "idlz_heel": 6984.499200000001
     },
     "event": true,
     "full_name": "SR Festival Minami Kotori",
@@ -10218,10 +10218,10 @@ app.constant('CardData',
   {
     "attribute": "Pure",
     "cScore": {
-      "base": 8702.050000000001,
-      "heel": 7273.750000000001,
-      "idlz": 10259.955000000002,
-      "idlz_heel": 8596.250000000002
+      "base": 8253.952000000001,
+      "heel": 6899.200000000001,
+      "idlz": 9418.035200000002,
+      "idlz_heel": 7902.720000000001
     },
     "event": null,
     "full_name": "UR Kunoichi Koizumi Hanayo",
@@ -10263,10 +10263,10 @@ app.constant('CardData',
   {
     "attribute": "Cool",
     "cScore": {
-      "base": 7075.375000000001,
-      "heel": 7075.375000000001,
-      "idlz": 7827.877500000001,
-      "idlz_heel": 6519.925000000001
+      "base": 6761.216000000001,
+      "heel": 6761.216000000001,
+      "idlz": 7173.913600000001,
+      "idlz_heel": 7173.913600000001
     },
     "event": null,
     "full_name": "SR Kunoichi Nishikino Maki",
@@ -10308,10 +10308,10 @@ app.constant('CardData',
   {
     "attribute": "Cool",
     "cScore": {
-      "base": 7154.725000000001,
-      "heel": 7154.725000000001,
-      "idlz": 7920.452500000001,
-      "idlz_heel": 6599.2750000000015
+      "base": 6844.006400000001,
+      "heel": 6844.006400000001,
+      "idlz": 7261.721600000001,
+      "idlz_heel": 7261.721600000001
     },
     "event": null,
     "full_name": "SR Kunoichi Sonoda Umi",
@@ -10353,10 +10353,10 @@ app.constant('CardData',
   {
     "attribute": "Pure",
     "cScore": {
-      "base": 7128.2750000000015,
-      "heel": 7128.2750000000015,
-      "idlz": 7890.035000000002,
-      "idlz_heel": 6572.825000000001
+      "base": 6816.409600000001,
+      "heel": 6816.409600000001,
+      "idlz": 7232.870400000001,
+      "idlz_heel": 7232.870400000001
     },
     "event": null,
     "full_name": "SR Kunoichi Ayase Eli",
@@ -10398,10 +10398,10 @@ app.constant('CardData',
   {
     "attribute": "Smile",
     "cScore": {
-      "base": 7154.725000000001,
-      "heel": 7154.725000000001,
-      "idlz": 7920.452500000001,
-      "idlz_heel": 6599.2750000000015
+      "base": 6844.006400000001,
+      "heel": 6844.006400000001,
+      "idlz": 7261.721600000001,
+      "idlz_heel": 7261.721600000001
     },
     "event": null,
     "full_name": "SR Kunoichi Kousaka Honoka",
@@ -10443,10 +10443,10 @@ app.constant('CardData',
   {
     "attribute": "Cool",
     "cScore": {
-      "base": 6863.7750000000015,
-      "heel": 6863.7750000000015,
-      "idlz": 7583.215000000001,
-      "idlz_heel": 6308.325000000001
+      "base": 6540.441600000001,
+      "heel": 6540.441600000001,
+      "idlz": 6941.849600000001,
+      "idlz_heel": 6941.849600000001
     },
     "event": true,
     "full_name": "SR Track and Field Club Hoshizora Rin",
@@ -10488,10 +10488,10 @@ app.constant('CardData',
   {
     "attribute": "Smile",
     "cScore": {
-      "base": 8810.495,
-      "heel": 7366.325000000002,
-      "idlz": 10368.400000000001,
-      "idlz_heel": 8688.825
+      "base": 8356.812800000002,
+      "heel": 6987.008000000001,
+      "idlz": 9520.896,
+      "idlz_heel": 7990.528000000001
     },
     "event": null,
     "full_name": "UR Pool Hoshizora Rin",
@@ -10533,10 +10533,10 @@ app.constant('CardData',
   {
     "attribute": "Smile",
     "cScore": {
-      "base": 7128.2750000000015,
-      "heel": 7128.2750000000015,
-      "idlz": 7890.035000000002,
-      "idlz_heel": 6572.825000000001
+      "base": 6816.409600000001,
+      "heel": 6816.409600000001,
+      "idlz": 7232.870400000001,
+      "idlz_heel": 7232.870400000001
     },
     "event": null,
     "full_name": "SR Pool Yazawa Nico",
@@ -10578,10 +10578,10 @@ app.constant('CardData',
   {
     "attribute": "Pure",
     "cScore": {
-      "base": 7141.500000000001,
-      "heel": 7141.500000000001,
-      "idlz": 7904.582500000001,
-      "idlz_heel": 6586.050000000001
+      "base": 6830.2080000000005,
+      "heel": 6830.2080000000005,
+      "idlz": 7246.668800000001,
+      "idlz_heel": 7246.668800000001
     },
     "event": null,
     "full_name": "SR Pool Nishikino Maki",
@@ -10623,10 +10623,10 @@ app.constant('CardData',
   {
     "attribute": "Cool",
     "cScore": {
-      "base": 7062.1500000000015,
-      "heel": 7062.1500000000015,
-      "idlz": 7813.330000000002,
-      "idlz_heel": 6506.700000000001
+      "base": 6747.417600000001,
+      "heel": 6747.417600000001,
+      "idlz": 7160.115200000001,
+      "idlz_heel": 7160.115200000001
     },
     "event": null,
     "full_name": "SR Pool Kousaka Honoka",
@@ -10668,10 +10668,10 @@ app.constant('CardData',
   {
     "attribute": "Pure",
     "cScore": {
-      "base": 6890.225000000001,
-      "heel": 6890.225000000001,
-      "idlz": 7613.6325000000015,
-      "idlz_heel": 6334.7750000000015
+      "base": 6568.038400000001,
+      "heel": 6568.038400000001,
+      "idlz": 6970.700800000001,
+      "idlz_heel": 6970.700800000001
     },
     "event": true,
     "full_name": "SR Bathrobe Toujou Nozomi",
@@ -10713,10 +10713,10 @@ app.constant('CardData',
   {
     "attribute": "Cool",
     "cScore": {
-      "base": 8778.755000000001,
-      "heel": 7339.875000000001,
-      "idlz": 10336.660000000002,
-      "idlz_heel": 8662.375000000002
+      "base": 8326.7072,
+      "heel": 6961.920000000001,
+      "idlz": 9490.790400000002,
+      "idlz_heel": 7965.440000000001
     },
     "event": null,
     "full_name": "UR Pool Ayase Eli",
@@ -10758,10 +10758,10 @@ app.constant('CardData',
   {
     "attribute": "Pure",
     "cScore": {
-      "base": 7115.050000000001,
-      "heel": 7115.050000000001,
-      "idlz": 7874.165000000002,
-      "idlz_heel": 6559.600000000001
+      "base": 6802.611200000001,
+      "heel": 6802.611200000001,
+      "idlz": 7217.817600000001,
+      "idlz_heel": 7217.817600000001
     },
     "event": null,
     "full_name": "SR Pool Koizumi Hanayo",
@@ -10803,10 +10803,10 @@ app.constant('CardData',
   {
     "attribute": "Smile",
     "cScore": {
-      "base": 7101.825000000002,
-      "heel": 7101.825000000002,
-      "idlz": 7858.295000000001,
-      "idlz_heel": 6546.375000000001
+      "base": 6788.812800000001,
+      "heel": 6788.812800000001,
+      "idlz": 7202.764800000001,
+      "idlz_heel": 7202.764800000001
     },
     "event": null,
     "full_name": "SR Pool Toujou Nozomi",
@@ -10848,10 +10848,10 @@ app.constant('CardData',
   {
     "attribute": "Pure",
     "cScore": {
-      "base": 7088.600000000001,
-      "heel": 7088.600000000001,
-      "idlz": 7843.747500000001,
-      "idlz_heel": 6533.1500000000015
+      "base": 6775.014400000001,
+      "heel": 6775.014400000001,
+      "idlz": 7188.966400000001,
+      "idlz_heel": 7188.966400000001
     },
     "event": null,
     "full_name": "SR Pool Sonoda Umi",
@@ -10893,10 +10893,10 @@ app.constant('CardData',
   {
     "attribute": "Cool",
     "cScore": {
-      "base": 7101.825000000002,
-      "heel": 7101.825000000002,
-      "idlz": 7858.295000000001,
-      "idlz_heel": 6546.375000000001
+      "base": 6788.812800000001,
+      "heel": 6788.812800000001,
+      "idlz": 7202.764800000001,
+      "idlz_heel": 7202.764800000001
     },
     "event": null,
     "full_name": "SR Pool Minami Kotori",
@@ -10983,10 +10983,10 @@ app.constant('CardData',
   {
     "attribute": "Smile",
     "cScore": {
-      "base": 6929.9000000000015,
-      "heel": 6929.9000000000015,
-      "idlz": 7659.920000000001,
-      "idlz_heel": 6374.450000000001
+      "base": 6609.433600000001,
+      "heel": 6609.433600000001,
+      "idlz": 7014.604800000001,
+      "idlz_heel": 7014.604800000001
     },
     "event": true,
     "full_name": "SR Retro Pop Sonoda Umi",
@@ -11028,10 +11028,10 @@ app.constant('CardData',
   {
     "attribute": "Pure",
     "cScore": {
-      "base": 8717.920000000002,
-      "heel": 7286.975000000001,
-      "idlz": 10275.825000000003,
-      "idlz_heel": 8609.475000000002
+      "base": 8269.0048,
+      "heel": 6911.744000000001,
+      "idlz": 9433.088000000002,
+      "idlz_heel": 7915.264000000001
     },
     "event": null,
     "full_name": "UR Marine Toujou Nozomi",
@@ -11073,10 +11073,10 @@ app.constant('CardData',
   {
     "attribute": "Cool",
     "cScore": {
-      "base": 7141.500000000001,
-      "heel": 7141.500000000001,
-      "idlz": 7904.582500000001,
-      "idlz_heel": 6586.050000000001
+      "base": 6830.2080000000005,
+      "heel": 6830.2080000000005,
+      "idlz": 7246.668800000001,
+      "idlz_heel": 7246.668800000001
     },
     "event": null,
     "full_name": "SR Marine Koizumi Hanayo",
@@ -11118,10 +11118,10 @@ app.constant('CardData',
   {
     "attribute": "Pure",
     "cScore": {
-      "base": 7088.600000000001,
-      "heel": 7088.600000000001,
-      "idlz": 7843.747500000001,
-      "idlz_heel": 6533.1500000000015
+      "base": 6775.014400000001,
+      "heel": 6775.014400000001,
+      "idlz": 7188.966400000001,
+      "idlz_heel": 7188.966400000001
     },
     "event": null,
     "full_name": "SR Marine Minami Kotori",
@@ -11163,10 +11163,10 @@ app.constant('CardData',
   {
     "attribute": "Smile",
     "cScore": {
-      "base": 7101.825000000002,
-      "heel": 7101.825000000002,
-      "idlz": 7858.295000000001,
-      "idlz_heel": 6546.375000000001
+      "base": 6788.812800000001,
+      "heel": 6788.812800000001,
+      "idlz": 7202.764800000001,
+      "idlz_heel": 7202.764800000001
     },
     "event": null,
     "full_name": "SR Marine Ayase Eli",
@@ -11208,10 +11208,10 @@ app.constant('CardData',
   {
     "attribute": "Pure",
     "cScore": {
-      "base": 6850.550000000001,
-      "heel": 6850.550000000001,
-      "idlz": 7567.345000000001,
-      "idlz_heel": 6295.100000000001
+      "base": 6526.643200000001,
+      "heel": 6526.643200000001,
+      "idlz": 6926.796800000001,
+      "idlz_heel": 6926.796800000001
     },
     "event": true,
     "full_name": "SR Masquerade Ayase Eli",
@@ -11253,10 +11253,10 @@ app.constant('CardData',
   {
     "attribute": "Cool",
     "cScore": {
-      "base": 8778.755000000001,
-      "heel": 7339.875000000001,
-      "idlz": 10336.660000000002,
-      "idlz_heel": 8662.375000000002
+      "base": 8326.7072,
+      "heel": 6961.920000000001,
+      "idlz": 9490.790400000002,
+      "idlz_heel": 7965.440000000001
     },
     "event": null,
     "full_name": "UR Marine Sonoda Umi",
@@ -11298,10 +11298,10 @@ app.constant('CardData',
   {
     "attribute": "Cool",
     "cScore": {
-      "base": 7128.2750000000015,
-      "heel": 7128.2750000000015,
-      "idlz": 7890.035000000002,
-      "idlz_heel": 6572.825000000001
+      "base": 6816.409600000001,
+      "heel": 6816.409600000001,
+      "idlz": 7232.870400000001,
+      "idlz_heel": 7232.870400000001
     },
     "event": null,
     "full_name": "SR Marine Yazawa Nico",
@@ -11343,10 +11343,10 @@ app.constant('CardData',
   {
     "attribute": "Smile",
     "cScore": {
-      "base": 7101.825000000002,
-      "heel": 7101.825000000002,
-      "idlz": 7858.295000000001,
-      "idlz_heel": 6546.375000000001
+      "base": 6788.812800000001,
+      "heel": 6788.812800000001,
+      "idlz": 7202.764800000001,
+      "idlz_heel": 7202.764800000001
     },
     "event": null,
     "full_name": "SR Marine Nishikino Maki",
@@ -11388,10 +11388,10 @@ app.constant('CardData',
   {
     "attribute": "Smile",
     "cScore": {
-      "base": 7141.500000000001,
-      "heel": 7141.500000000001,
-      "idlz": 7904.582500000001,
-      "idlz_heel": 6586.050000000001
+      "base": 6830.2080000000005,
+      "heel": 6830.2080000000005,
+      "idlz": 7246.668800000001,
+      "idlz_heel": 7246.668800000001
     },
     "event": null,
     "full_name": "SR Marine Hoshizora Rin",
@@ -11433,10 +11433,10 @@ app.constant('CardData',
   {
     "attribute": "Pure",
     "cScore": {
-      "base": 7101.825000000002,
-      "heel": 7101.825000000002,
-      "idlz": 7858.295000000001,
-      "idlz_heel": 6546.375000000001
+      "base": 6788.812800000001,
+      "heel": 6788.812800000001,
+      "idlz": 7202.764800000001,
+      "idlz_heel": 7202.764800000001
     },
     "event": null,
     "full_name": "SR Marine Kousaka Honoka",
@@ -11523,10 +11523,10 @@ app.constant('CardData',
   {
     "attribute": "Pure",
     "cScore": {
-      "base": 6771.200000000001,
-      "heel": 6771.200000000001,
-      "idlz": 7474.770000000001,
-      "idlz_heel": 6215.750000000001
+      "base": 6443.852800000001,
+      "heel": 6443.852800000001,
+      "idlz": 6838.988800000001,
+      "idlz_heel": 6838.988800000001
     },
     "event": true,
     "full_name": "SR Momotarou Kousaka Honoka",
@@ -11568,10 +11568,10 @@ app.constant('CardData',
   {
     "attribute": "Pure",
     "cScore": {
-      "base": 8748.337500000001,
-      "heel": 7313.425000000001,
-      "idlz": 10306.242500000002,
-      "idlz_heel": 8635.925000000001
+      "base": 8297.856000000002,
+      "heel": 6936.832000000001,
+      "idlz": 9461.9392,
+      "idlz_heel": 7940.352000000001
     },
     "event": null,
     "full_name": "UR Magician Minami Kotori",
@@ -11613,10 +11613,10 @@ app.constant('CardData',
   {
     "attribute": "Smile",
     "cScore": {
-      "base": 7101.825000000002,
-      "heel": 7101.825000000002,
-      "idlz": 7858.295000000001,
-      "idlz_heel": 6546.375000000001
+      "base": 6788.812800000001,
+      "heel": 6788.812800000001,
+      "idlz": 7202.764800000001,
+      "idlz_heel": 7202.764800000001
     },
     "event": null,
     "full_name": "SR Magician Yazawa Nico",
@@ -11658,10 +11658,10 @@ app.constant('CardData',
   {
     "attribute": "Cool",
     "cScore": {
-      "base": 7062.1500000000015,
-      "heel": 7062.1500000000015,
-      "idlz": 7813.330000000002,
-      "idlz_heel": 6506.700000000001
+      "base": 6747.417600000001,
+      "heel": 6747.417600000001,
+      "idlz": 7160.115200000001,
+      "idlz_heel": 7160.115200000001
     },
     "event": null,
     "full_name": "SR Magician Toujou Nozomi",
@@ -11703,10 +11703,10 @@ app.constant('CardData',
   {
     "attribute": "Pure",
     "cScore": {
-      "base": 7062.1500000000015,
-      "heel": 7062.1500000000015,
-      "idlz": 7813.330000000002,
-      "idlz_heel": 6506.700000000001
+      "base": 6747.417600000001,
+      "heel": 6747.417600000001,
+      "idlz": 7160.115200000001,
+      "idlz_heel": 7160.115200000001
     },
     "event": null,
     "full_name": "SR Magician Hoshizora Rin",
@@ -11748,10 +11748,10 @@ app.constant('CardData',
   {
     "attribute": "Cool",
     "cScore": {
-      "base": 6837.325000000002,
-      "heel": 6837.325000000002,
-      "idlz": 7551.475000000001,
-      "idlz_heel": 6281.875000000001
+      "base": 6512.844800000001,
+      "heel": 6512.844800000001,
+      "idlz": 6911.744000000001,
+      "idlz_heel": 6911.744000000001
     },
     "event": true,
     "full_name": "SR Apparition Yazawa Nico",
@@ -12198,10 +12198,10 @@ app.constant('CardData',
   {
     "attribute": "Smile",
     "cScore": {
-      "base": 8687.502500000002,
-      "heel": 7260.5250000000015,
-      "idlz": 10245.407500000001,
-      "idlz_heel": 8583.025000000001
+      "base": 8240.153600000001,
+      "heel": 6886.656000000001,
+      "idlz": 9404.2368,
+      "idlz_heel": 7890.176000000001
     },
     "event": null,
     "full_name": "UR Magician Nishikino Maki",
@@ -12243,10 +12243,10 @@ app.constant('CardData',
   {
     "attribute": "Pure",
     "cScore": {
-      "base": 7141.500000000001,
-      "heel": 7141.500000000001,
-      "idlz": 7904.582500000001,
-      "idlz_heel": 6586.050000000001
+      "base": 6830.2080000000005,
+      "heel": 6830.2080000000005,
+      "idlz": 7246.668800000001,
+      "idlz_heel": 7246.668800000001
     },
     "event": null,
     "full_name": "SR Magician Koizumi Hanayo",
@@ -12288,10 +12288,10 @@ app.constant('CardData',
   {
     "attribute": "Cool",
     "cScore": {
-      "base": 7154.725000000001,
-      "heel": 7154.725000000001,
-      "idlz": 7920.452500000001,
-      "idlz_heel": 6599.2750000000015
+      "base": 6844.006400000001,
+      "heel": 6844.006400000001,
+      "idlz": 7261.721600000001,
+      "idlz_heel": 7261.721600000001
     },
     "event": null,
     "full_name": "SR Magician Sonoda Umi",
@@ -12333,10 +12333,10 @@ app.constant('CardData',
   {
     "attribute": "Cool",
     "cScore": {
-      "base": 7141.500000000001,
-      "heel": 7141.500000000001,
-      "idlz": 7904.582500000001,
-      "idlz_heel": 6586.050000000001
+      "base": 6830.2080000000005,
+      "heel": 6830.2080000000005,
+      "idlz": 7246.668800000001,
+      "idlz_heel": 7246.668800000001
     },
     "event": null,
     "full_name": "SR Magician Ayase Eli",
@@ -12378,10 +12378,10 @@ app.constant('CardData',
   {
     "attribute": "Smile",
     "cScore": {
-      "base": 7115.050000000001,
-      "heel": 7115.050000000001,
-      "idlz": 7874.165000000002,
-      "idlz_heel": 6559.600000000001
+      "base": 6802.611200000001,
+      "heel": 6802.611200000001,
+      "idlz": 7217.817600000001,
+      "idlz_heel": 7217.817600000001
     },
     "event": null,
     "full_name": "SR Magician Kousaka Honoka",
@@ -12423,10 +12423,10 @@ app.constant('CardData',
   {
     "attribute": "Smile",
     "cScore": {
-      "base": 6863.7750000000015,
-      "heel": 6863.7750000000015,
-      "idlz": 7583.215000000001,
-      "idlz_heel": 6308.325000000001
+      "base": 6540.441600000001,
+      "heel": 6540.441600000001,
+      "idlz": 6941.849600000001,
+      "idlz_heel": 6941.849600000001
     },
     "event": true,
     "full_name": "SR Detective Koizumi Hanayo",
@@ -12468,10 +12468,10 @@ app.constant('CardData',
   {
     "attribute": "Cool",
     "cScore": {
-      "base": 8733.79,
-      "heel": 7300.200000000002,
-      "idlz": 10291.695000000002,
-      "idlz_heel": 8622.7
+      "base": 8284.057600000002,
+      "heel": 6924.288000000001,
+      "idlz": 9448.140800000001,
+      "idlz_heel": 7927.808000000001
     },
     "event": null,
     "full_name": "UR Cyber Kousaka Honoka",
@@ -12513,10 +12513,10 @@ app.constant('CardData',
   {
     "attribute": "Cool",
     "cScore": {
-      "base": 7101.825000000002,
-      "heel": 7101.825000000002,
-      "idlz": 7858.295000000001,
-      "idlz_heel": 6546.375000000001
+      "base": 6788.812800000001,
+      "heel": 6788.812800000001,
+      "idlz": 7202.764800000001,
+      "idlz_heel": 7202.764800000001
     },
     "event": null,
     "full_name": "SR Cyber Koizumi Hanayo",
@@ -12558,10 +12558,10 @@ app.constant('CardData',
   {
     "attribute": "Pure",
     "cScore": {
-      "base": 7088.600000000001,
-      "heel": 7088.600000000001,
-      "idlz": 7843.747500000001,
-      "idlz_heel": 6533.1500000000015
+      "base": 6775.014400000001,
+      "heel": 6775.014400000001,
+      "idlz": 7188.966400000001,
+      "idlz_heel": 7188.966400000001
     },
     "event": null,
     "full_name": "SR Cyber Nishikino Maki",
@@ -12603,10 +12603,10 @@ app.constant('CardData',
   {
     "attribute": "Smile",
     "cScore": {
-      "base": 7062.1500000000015,
-      "heel": 7062.1500000000015,
-      "idlz": 7813.330000000002,
-      "idlz_heel": 6506.700000000001
+      "base": 6747.417600000001,
+      "heel": 6747.417600000001,
+      "idlz": 7160.115200000001,
+      "idlz_heel": 7160.115200000001
     },
     "event": null,
     "full_name": "SR Cyber Ayase Eli",
@@ -12648,10 +12648,10 @@ app.constant('CardData',
   {
     "attribute": "Cool",
     "cScore": {
-      "base": 6956.350000000001,
-      "heel": 6956.350000000001,
-      "idlz": 7690.3375000000015,
-      "idlz_heel": 6400.9000000000015
+      "base": 6637.030400000001,
+      "heel": 6637.030400000001,
+      "idlz": 7043.456000000001,
+      "idlz_heel": 7043.456000000001
     },
     "event": true,
     "full_name": "SR Military Nishikino Maki",
@@ -12693,10 +12693,10 @@ app.constant('CardData',
   {
     "attribute": "Pure",
     "cScore": {
-      "base": 8733.79,
-      "heel": 7300.200000000002,
-      "idlz": 10291.695000000002,
-      "idlz_heel": 8622.7
+      "base": 8284.057600000002,
+      "heel": 6924.288000000001,
+      "idlz": 9448.140800000001,
+      "idlz_heel": 7927.808000000001
     },
     "event": null,
     "full_name": "UR Cyber Yazawa Nico",
@@ -12738,10 +12738,10 @@ app.constant('CardData',
   {
     "attribute": "Pure",
     "cScore": {
-      "base": 7101.825000000002,
-      "heel": 7101.825000000002,
-      "idlz": 7858.295000000001,
-      "idlz_heel": 6546.375000000001
+      "base": 6788.812800000001,
+      "heel": 6788.812800000001,
+      "idlz": 7202.764800000001,
+      "idlz_heel": 7202.764800000001
     },
     "event": null,
     "full_name": "SR Cyber Toujou Nozomi",
@@ -12783,10 +12783,10 @@ app.constant('CardData',
   {
     "attribute": "Cool",
     "cScore": {
-      "base": 7128.2750000000015,
-      "heel": 7128.2750000000015,
-      "idlz": 7890.035000000002,
-      "idlz_heel": 6572.825000000001
+      "base": 6816.409600000001,
+      "heel": 6816.409600000001,
+      "idlz": 7232.870400000001,
+      "idlz_heel": 7232.870400000001
     },
     "event": null,
     "full_name": "SR Cyber Hoshizora Rin",
@@ -12828,10 +12828,10 @@ app.constant('CardData',
   {
     "attribute": "Smile",
     "cScore": {
-      "base": 7035.700000000002,
-      "heel": 7035.700000000002,
-      "idlz": 7781.590000000001,
-      "idlz_heel": 6480.250000000001
+      "base": 6719.820800000001,
+      "heel": 6719.820800000001,
+      "idlz": 7130.009600000001,
+      "idlz_heel": 7130.009600000001
     },
     "event": null,
     "full_name": "SR Cyber Sonoda Umi",
@@ -12873,10 +12873,10 @@ app.constant('CardData',
   {
     "attribute": "Smile",
     "cScore": {
-      "base": 7022.475000000001,
-      "heel": 7022.475000000001,
-      "idlz": 7767.042500000001,
-      "idlz_heel": 6467.0250000000015
+      "base": 6706.022400000001,
+      "heel": 6706.022400000001,
+      "idlz": 7116.211200000001,
+      "idlz_heel": 7116.211200000001
     },
     "event": null,
     "full_name": "SR Cyber Minami Kotori",
@@ -12963,10 +12963,10 @@ app.constant('CardData',
   {
     "attribute": "Smile",
     "cScore": {
-      "base": 6837.325000000002,
-      "heel": 6837.325000000002,
-      "idlz": 7551.475000000001,
-      "idlz_heel": 6281.875000000001
+      "base": 6512.844800000001,
+      "heel": 6512.844800000001,
+      "idlz": 6911.744000000001,
+      "idlz_heel": 6911.744000000001
     },
     "event": true,
     "full_name": "SR Easter Minami Kotori",
@@ -13008,10 +13008,10 @@ app.constant('CardData',
   {
     "attribute": "Pure",
     "cScore": {
-      "base": 8671.632500000002,
-      "heel": 7247.300000000001,
-      "idlz": 10229.537500000002,
-      "idlz_heel": 8569.800000000001
+      "base": 8225.100800000002,
+      "heel": 6874.112000000001,
+      "idlz": 9389.184000000001,
+      "idlz_heel": 7877.632000000001
     },
     "event": null,
     "full_name": "UR Job Ayase Eli",
@@ -13053,10 +13053,10 @@ app.constant('CardData',
   {
     "attribute": "Pure",
     "cScore": {
-      "base": 7088.600000000001,
-      "heel": 7088.600000000001,
-      "idlz": 7843.747500000001,
-      "idlz_heel": 6533.1500000000015
+      "base": 6775.014400000001,
+      "heel": 6775.014400000001,
+      "idlz": 7188.966400000001,
+      "idlz_heel": 7188.966400000001
     },
     "event": null,
     "full_name": "SR Job Yazawa Nico",
@@ -13098,10 +13098,10 @@ app.constant('CardData',
   {
     "attribute": "Smile",
     "cScore": {
-      "base": 7062.1500000000015,
-      "heel": 7062.1500000000015,
-      "idlz": 7813.330000000002,
-      "idlz_heel": 6506.700000000001
+      "base": 6747.417600000001,
+      "heel": 6747.417600000001,
+      "idlz": 7160.115200000001,
+      "idlz_heel": 7160.115200000001
     },
     "event": null,
     "full_name": "SR Job Koizumi Hanayo",
@@ -13143,10 +13143,10 @@ app.constant('CardData',
   {
     "attribute": "Cool",
     "cScore": {
-      "base": 7048.925000000001,
-      "heel": 7048.925000000001,
-      "idlz": 7797.460000000001,
-      "idlz_heel": 6493.475000000001
+      "base": 6733.619200000001,
+      "heel": 6733.619200000001,
+      "idlz": 7145.062400000001,
+      "idlz_heel": 7145.062400000001
     },
     "event": null,
     "full_name": "SR Job Sonoda Umi",
@@ -13188,10 +13188,10 @@ app.constant('CardData',
   {
     "attribute": "Pure",
     "cScore": {
-      "base": 6850.550000000001,
-      "heel": 6850.550000000001,
-      "idlz": 7567.345000000001,
-      "idlz_heel": 6295.100000000001
+      "base": 6526.643200000001,
+      "heel": 6526.643200000001,
+      "idlz": 6926.796800000001,
+      "idlz_heel": 6926.796800000001
     },
     "event": true,
     "full_name": "SR Flower Viewing Sonoda Umi",
@@ -13233,10 +13233,10 @@ app.constant('CardData',
   {
     "attribute": "Cool",
     "cScore": {
-      "base": 8625.345000000001,
-      "heel": 7207.625000000001,
-      "idlz": 10183.250000000002,
-      "idlz_heel": 8530.125000000002
+      "base": 8181.1968000000015,
+      "heel": 6836.480000000001,
+      "idlz": 9345.28,
+      "idlz_heel": 7840.000000000001
     },
     "event": null,
     "full_name": "UR Job Minami Kotori",
@@ -13278,10 +13278,10 @@ app.constant('CardData',
   {
     "attribute": "Smile",
     "cScore": {
-      "base": 7062.1500000000015,
-      "heel": 7062.1500000000015,
-      "idlz": 7813.330000000002,
-      "idlz_heel": 6506.700000000001
+      "base": 6747.417600000001,
+      "heel": 6747.417600000001,
+      "idlz": 7160.115200000001,
+      "idlz_heel": 7160.115200000001
     },
     "event": null,
     "full_name": "SR Job Toujou Nozomi",
@@ -13323,10 +13323,10 @@ app.constant('CardData',
   {
     "attribute": "Cool",
     "cScore": {
-      "base": 7141.500000000001,
-      "heel": 7141.500000000001,
-      "idlz": 7904.582500000001,
-      "idlz_heel": 6586.050000000001
+      "base": 6830.2080000000005,
+      "heel": 6830.2080000000005,
+      "idlz": 7246.668800000001,
+      "idlz_heel": 7246.668800000001
     },
     "event": null,
     "full_name": "SR Job Nishikino Maki",
@@ -13368,10 +13368,10 @@ app.constant('CardData',
   {
     "attribute": "Pure",
     "cScore": {
-      "base": 7022.475000000001,
-      "heel": 7022.475000000001,
-      "idlz": 7767.042500000001,
-      "idlz_heel": 6467.0250000000015
+      "base": 6706.022400000001,
+      "heel": 6706.022400000001,
+      "idlz": 7116.211200000001,
+      "idlz_heel": 7116.211200000001
     },
     "event": null,
     "full_name": "SR Job Hoshizora Rin",
@@ -13413,10 +13413,10 @@ app.constant('CardData',
   {
     "attribute": "Smile",
     "cScore": {
-      "base": 7075.375000000001,
-      "heel": 7075.375000000001,
-      "idlz": 7827.877500000001,
-      "idlz_heel": 6519.925000000001
+      "base": 6761.216000000001,
+      "heel": 6761.216000000001,
+      "idlz": 7173.913600000001,
+      "idlz_heel": 7173.913600000001
     },
     "event": null,
     "full_name": "SR Job Kousaka Honoka",
@@ -13503,10 +13503,10 @@ app.constant('CardData',
   {
     "attribute": "Smile",
     "cScore": {
-      "base": 6797.6500000000015,
-      "heel": 6797.6500000000015,
-      "idlz": 7506.510000000001,
-      "idlz_heel": 6242.200000000001
+      "base": 6471.449600000001,
+      "heel": 6471.449600000001,
+      "idlz": 6869.094400000001,
+      "idlz_heel": 6869.094400000001
     },
     "event": true,
     "full_name": "SR Catch Hoshizora Rin",
@@ -13548,10 +13548,10 @@ app.constant('CardData',
   {
     "attribute": "Cool",
     "cScore": {
-      "base": 8610.797500000002,
-      "heel": 7194.4000000000015,
-      "idlz": 10168.702500000001,
-      "idlz_heel": 8516.900000000001
+      "base": 8167.398400000001,
+      "heel": 6823.936000000001,
+      "idlz": 9331.481600000001,
+      "idlz_heel": 7827.456000000001
     },
     "event": null,
     "full_name": "UR White Day Koizumi Hanayo",
@@ -13593,10 +13593,10 @@ app.constant('CardData',
   {
     "attribute": "Smile",
     "cScore": {
-      "base": 7035.700000000002,
-      "heel": 7035.700000000002,
-      "idlz": 7781.590000000001,
-      "idlz_heel": 6480.250000000001
+      "base": 6719.820800000001,
+      "heel": 6719.820800000001,
+      "idlz": 7130.009600000001,
+      "idlz_heel": 7130.009600000001
     },
     "event": null,
     "full_name": "SR White Day Yazawa Nico",
@@ -13638,10 +13638,10 @@ app.constant('CardData',
   {
     "attribute": "Cool",
     "cScore": {
-      "base": 7022.475000000001,
-      "heel": 7022.475000000001,
-      "idlz": 7767.042500000001,
-      "idlz_heel": 6467.0250000000015
+      "base": 6706.022400000001,
+      "heel": 6706.022400000001,
+      "idlz": 7116.211200000001,
+      "idlz_heel": 7116.211200000001
     },
     "event": null,
     "full_name": "SR White Day Toujou Nozomi",
@@ -13683,10 +13683,10 @@ app.constant('CardData',
   {
     "attribute": "Pure",
     "cScore": {
-      "base": 7062.1500000000015,
-      "heel": 7062.1500000000015,
-      "idlz": 7813.330000000002,
-      "idlz_heel": 6506.700000000001
+      "base": 6747.417600000001,
+      "heel": 6747.417600000001,
+      "idlz": 7160.115200000001,
+      "idlz_heel": 7160.115200000001
     },
     "event": null,
     "full_name": "SR White Day Kousaka Honoka",
@@ -13728,10 +13728,10 @@ app.constant('CardData',
   {
     "attribute": "Cool",
     "cScore": {
-      "base": 6797.6500000000015,
-      "heel": 6797.6500000000015,
-      "idlz": 7506.510000000001,
-      "idlz_heel": 6242.200000000001
+      "base": 6471.449600000001,
+      "heel": 6471.449600000001,
+      "idlz": 6869.094400000001,
+      "idlz_heel": 6869.094400000001
     },
     "event": true,
     "full_name": "SR Doll Festival Ayase Eli",
@@ -13773,10 +13773,10 @@ app.constant('CardData',
   {
     "attribute": "Smile",
     "cScore": {
-      "base": 8671.632500000002,
-      "heel": 7247.300000000001,
-      "idlz": 10229.537500000002,
-      "idlz_heel": 8569.800000000001
+      "base": 8225.100800000002,
+      "heel": 6874.112000000001,
+      "idlz": 9389.184000000001,
+      "idlz_heel": 7877.632000000001
     },
     "event": null,
     "full_name": "UR White Day Sonoda Umi",
@@ -13818,10 +13818,10 @@ app.constant('CardData',
   {
     "attribute": "Smile",
     "cScore": {
-      "base": 7062.1500000000015,
-      "heel": 7062.1500000000015,
-      "idlz": 7813.330000000002,
-      "idlz_heel": 6506.700000000001
+      "base": 6747.417600000001,
+      "heel": 6747.417600000001,
+      "idlz": 7160.115200000001,
+      "idlz_heel": 7160.115200000001
     },
     "event": null,
     "full_name": "SR White Day Nishikino Maki",
@@ -13863,10 +13863,10 @@ app.constant('CardData',
   {
     "attribute": "Cool",
     "cScore": {
-      "base": 7115.050000000001,
-      "heel": 7115.050000000001,
-      "idlz": 7874.165000000002,
-      "idlz_heel": 6559.600000000001
+      "base": 6802.611200000001,
+      "heel": 6802.611200000001,
+      "idlz": 7217.817600000001,
+      "idlz_heel": 7217.817600000001
     },
     "event": null,
     "full_name": "SR White Day Hoshizora Rin",
@@ -13908,10 +13908,10 @@ app.constant('CardData',
   {
     "attribute": "Pure",
     "cScore": {
-      "base": 7048.925000000001,
-      "heel": 7048.925000000001,
-      "idlz": 7797.460000000001,
-      "idlz_heel": 6493.475000000001
+      "base": 6733.619200000001,
+      "heel": 6733.619200000001,
+      "idlz": 7145.062400000001,
+      "idlz_heel": 7145.062400000001
     },
     "event": null,
     "full_name": "SR White Day Minami Kotori",
@@ -13953,10 +13953,10 @@ app.constant('CardData',
   {
     "attribute": "Pure",
     "cScore": {
-      "base": 7088.600000000001,
-      "heel": 7088.600000000001,
-      "idlz": 7843.747500000001,
-      "idlz_heel": 6533.1500000000015
+      "base": 6775.014400000001,
+      "heel": 6775.014400000001,
+      "idlz": 7188.966400000001,
+      "idlz_heel": 7188.966400000001
     },
     "event": null,
     "full_name": "SR White Day Ayase Eli",
@@ -14043,10 +14043,10 @@ app.constant('CardData',
   {
     "attribute": "Pure",
     "cScore": {
-      "base": 6837.325000000002,
-      "heel": 6837.325000000002,
-      "idlz": 7551.475000000001,
-      "idlz_heel": 6281.875000000001
+      "base": 6512.844800000001,
+      "heel": 6512.844800000001,
+      "idlz": 6911.744000000001,
+      "idlz_heel": 6911.744000000001
     },
     "event": true,
     "full_name": "SR Snow Bunny Toujou Nozomi",
@@ -14133,10 +14133,10 @@ app.constant('CardData',
   {
     "attribute": "Pure",
     "cScore": {
-      "base": 8748.337500000001,
-      "heel": 7313.425000000001,
-      "idlz": 10306.242500000002,
-      "idlz_heel": 8635.925000000001
+      "base": 8297.856000000002,
+      "heel": 6936.832000000001,
+      "idlz": 9461.9392,
+      "idlz_heel": 7940.352000000001
     },
     "event": null,
     "full_name": "UR Valentine's Hoshizora Rin",
@@ -14178,10 +14178,10 @@ app.constant('CardData',
   {
     "attribute": "Pure",
     "cScore": {
-      "base": 7062.1500000000015,
-      "heel": 7062.1500000000015,
-      "idlz": 7813.330000000002,
-      "idlz_heel": 6506.700000000001
+      "base": 6747.417600000001,
+      "heel": 6747.417600000001,
+      "idlz": 7160.115200000001,
+      "idlz_heel": 7160.115200000001
     },
     "event": null,
     "full_name": "SR Valentine's Yazawa Nico",
@@ -14223,10 +14223,10 @@ app.constant('CardData',
   {
     "attribute": "Smile",
     "cScore": {
-      "base": 6943.125000000001,
-      "heel": 6943.125000000001,
-      "idlz": 7674.467500000002,
-      "idlz_heel": 6387.675000000001
+      "base": 6623.232000000001,
+      "heel": 6623.232000000001,
+      "idlz": 7028.403200000001,
+      "idlz_heel": 7028.403200000001
     },
     "event": null,
     "full_name": "SR Valentine's Sonoda Umi",
@@ -14268,10 +14268,10 @@ app.constant('CardData',
   {
     "attribute": "Cool",
     "cScore": {
-      "base": 7128.2750000000015,
-      "heel": 7128.2750000000015,
-      "idlz": 7890.035000000002,
-      "idlz_heel": 6572.825000000001
+      "base": 6816.409600000001,
+      "heel": 6816.409600000001,
+      "idlz": 7232.870400000001,
+      "idlz_heel": 7232.870400000001
     },
     "event": null,
     "full_name": "SR Valentine's Minami Kotori",
@@ -14313,10 +14313,10 @@ app.constant('CardData',
   {
     "attribute": "Cool",
     "cScore": {
-      "base": 6744.750000000001,
-      "heel": 6744.750000000001,
-      "idlz": 7444.352500000001,
-      "idlz_heel": 6189.300000000001
+      "base": 6416.256000000001,
+      "heel": 6416.256000000001,
+      "idlz": 6810.137600000001,
+      "idlz_heel": 6810.137600000001
     },
     "event": true,
     "full_name": "SR Setsubun Kousaka Honoka",
@@ -14358,10 +14358,10 @@ app.constant('CardData',
   {
     "attribute": "Smile",
     "cScore": {
-      "base": 8594.927500000002,
-      "heel": 7181.175000000001,
-      "idlz": 10152.832500000002,
-      "idlz_heel": 8503.675000000001
+      "base": 8152.3456000000015,
+      "heel": 6811.392000000001,
+      "idlz": 9316.428800000002,
+      "idlz_heel": 7814.912000000001
     },
     "event": null,
     "full_name": "UR Valentine's Toujou Nozomi",
@@ -14403,10 +14403,10 @@ app.constant('CardData',
   {
     "attribute": "Cool",
     "cScore": {
-      "base": 7062.1500000000015,
-      "heel": 7062.1500000000015,
-      "idlz": 7813.330000000002,
-      "idlz_heel": 6506.700000000001
+      "base": 6747.417600000001,
+      "heel": 6747.417600000001,
+      "idlz": 7160.115200000001,
+      "idlz_heel": 7160.115200000001
     },
     "event": null,
     "full_name": "SR Valentine's Koizumi Hanayo",
@@ -14448,10 +14448,10 @@ app.constant('CardData',
   {
     "attribute": "Pure",
     "cScore": {
-      "base": 7022.475000000001,
-      "heel": 7022.475000000001,
-      "idlz": 7767.042500000001,
-      "idlz_heel": 6467.0250000000015
+      "base": 6706.022400000001,
+      "heel": 6706.022400000001,
+      "idlz": 7116.211200000001,
+      "idlz_heel": 7116.211200000001
     },
     "event": null,
     "full_name": "SR Valentine's Nishikino Maki",
@@ -14493,10 +14493,10 @@ app.constant('CardData',
   {
     "attribute": "Cool",
     "cScore": {
-      "base": 7141.500000000001,
-      "heel": 7141.500000000001,
-      "idlz": 7904.582500000001,
-      "idlz_heel": 6586.050000000001
+      "base": 6830.2080000000005,
+      "heel": 6830.2080000000005,
+      "idlz": 7246.668800000001,
+      "idlz_heel": 7246.668800000001
     },
     "event": null,
     "full_name": "SR Valentine's Ayase Eli",
@@ -14538,10 +14538,10 @@ app.constant('CardData',
   {
     "attribute": "Smile",
     "cScore": {
-      "base": 7048.925000000001,
-      "heel": 7048.925000000001,
-      "idlz": 7797.460000000001,
-      "idlz_heel": 6493.475000000001
+      "base": 6733.619200000001,
+      "heel": 6733.619200000001,
+      "idlz": 7145.062400000001,
+      "idlz_heel": 7145.062400000001
     },
     "event": null,
     "full_name": "SR Valentine's Kousaka Honoka",
@@ -14673,10 +14673,10 @@ app.constant('CardData',
   {
     "attribute": "Smile",
     "cScore": {
-      "base": 6890.225000000001,
-      "heel": 6890.225000000001,
-      "idlz": 7613.6325000000015,
-      "idlz_heel": 6334.7750000000015
+      "base": 6568.038400000001,
+      "heel": 6568.038400000001,
+      "idlz": 6970.700800000001,
+      "idlz_heel": 6970.700800000001
     },
     "event": true,
     "full_name": "SR Fairy Koizumi Hanayo",
@@ -15033,10 +15033,10 @@ app.constant('CardData',
   {
     "attribute": "Cool",
     "cScore": {
-      "base": 8610.797500000002,
-      "heel": 7194.4000000000015,
-      "idlz": 10168.702500000001,
-      "idlz_heel": 8516.900000000001
+      "base": 8167.398400000001,
+      "heel": 6823.936000000001,
+      "idlz": 9331.481600000001,
+      "idlz_heel": 7827.456000000001
     },
     "event": null,
     "full_name": "UR Seven Lucky Gods Yazawa Nico",
@@ -15078,10 +15078,10 @@ app.constant('CardData',
   {
     "attribute": "Cool",
     "cScore": {
-      "base": 7115.050000000001,
-      "heel": 7115.050000000001,
-      "idlz": 7874.165000000002,
-      "idlz_heel": 6559.600000000001
+      "base": 6802.611200000001,
+      "heel": 6802.611200000001,
+      "idlz": 7217.817600000001,
+      "idlz_heel": 7217.817600000001
     },
     "event": null,
     "full_name": "SR Seven Lucky Gods Nishikino Maki",
@@ -15123,10 +15123,10 @@ app.constant('CardData',
   {
     "attribute": "Smile",
     "cScore": {
-      "base": 7062.1500000000015,
-      "heel": 7062.1500000000015,
-      "idlz": 7813.330000000002,
-      "idlz_heel": 6506.700000000001
+      "base": 6747.417600000001,
+      "heel": 6747.417600000001,
+      "idlz": 7160.115200000001,
+      "idlz_heel": 7160.115200000001
     },
     "event": null,
     "full_name": "SR Seven Lucky Gods Hoshizora Rin",
@@ -15168,10 +15168,10 @@ app.constant('CardData',
   {
     "attribute": "Pure",
     "cScore": {
-      "base": 6982.800000000001,
-      "heel": 6982.800000000001,
-      "idlz": 7720.755000000001,
-      "idlz_heel": 6427.350000000001
+      "base": 6664.627200000001,
+      "heel": 6664.627200000001,
+      "idlz": 7072.307200000001,
+      "idlz_heel": 7072.307200000001
     },
     "event": null,
     "full_name": "SR Seven Lucky Gods Sonoda Umi",
@@ -15213,10 +15213,10 @@ app.constant('CardData',
   {
     "attribute": "Cool",
     "cScore": {
-      "base": 6797.6500000000015,
-      "heel": 6797.6500000000015,
-      "idlz": 7506.510000000001,
-      "idlz_heel": 6242.200000000001
+      "base": 6471.449600000001,
+      "heel": 6471.449600000001,
+      "idlz": 6869.094400000001,
+      "idlz_heel": 6869.094400000001
     },
     "event": true,
     "full_name": "SR New Year's Food Minami Kotori",
@@ -15258,10 +15258,10 @@ app.constant('CardData',
   {
     "attribute": "Smile",
     "cScore": {
-      "base": 8702.050000000001,
-      "heel": 7273.750000000001,
-      "idlz": 10259.955000000002,
-      "idlz_heel": 8596.250000000002
+      "base": 8253.952000000001,
+      "heel": 6899.200000000001,
+      "idlz": 9418.035200000002,
+      "idlz_heel": 7902.720000000001
     },
     "event": null,
     "full_name": "UR Seven Lucky Gods Ayase Eli",
@@ -15303,10 +15303,10 @@ app.constant('CardData',
   {
     "attribute": "Pure",
     "cScore": {
-      "base": 7035.700000000002,
-      "heel": 7035.700000000002,
-      "idlz": 7781.590000000001,
-      "idlz_heel": 6480.250000000001
+      "base": 6719.820800000001,
+      "heel": 6719.820800000001,
+      "idlz": 7130.009600000001,
+      "idlz_heel": 7130.009600000001
     },
     "event": null,
     "full_name": "SR Seven Lucky Gods Koizumi Hanayo",
@@ -15348,10 +15348,10 @@ app.constant('CardData',
   {
     "attribute": "Smile",
     "cScore": {
-      "base": 7048.925000000001,
-      "heel": 7048.925000000001,
-      "idlz": 7797.460000000001,
-      "idlz_heel": 6493.475000000001
+      "base": 6733.619200000001,
+      "heel": 6733.619200000001,
+      "idlz": 7145.062400000001,
+      "idlz_heel": 7145.062400000001
     },
     "event": null,
     "full_name": "SR Seven Lucky Gods Toujou Nozomi",
@@ -15393,10 +15393,10 @@ app.constant('CardData',
   {
     "attribute": "Pure",
     "cScore": {
-      "base": 7062.1500000000015,
-      "heel": 7062.1500000000015,
-      "idlz": 7813.330000000002,
-      "idlz_heel": 6506.700000000001
+      "base": 6747.417600000001,
+      "heel": 6747.417600000001,
+      "idlz": 7160.115200000001,
+      "idlz_heel": 7160.115200000001
     },
     "event": null,
     "full_name": "SR Seven Lucky Gods Minami Kotori",
@@ -15438,10 +15438,10 @@ app.constant('CardData',
   {
     "attribute": "Cool",
     "cScore": {
-      "base": 7088.600000000001,
-      "heel": 7088.600000000001,
-      "idlz": 7843.747500000001,
-      "idlz_heel": 6533.1500000000015
+      "base": 6775.014400000001,
+      "heel": 6775.014400000001,
+      "idlz": 7188.966400000001,
+      "idlz_heel": 7188.966400000001
     },
     "event": null,
     "full_name": "SR Seven Lucky Gods Kousaka Honoka",
@@ -15573,10 +15573,10 @@ app.constant('CardData',
   {
     "attribute": "Smile",
     "cScore": {
-      "base": 6784.425000000001,
-      "heel": 6784.425000000001,
-      "idlz": 7490.640000000001,
-      "idlz_heel": 6228.975000000001
+      "base": 6457.651200000001,
+      "heel": 6457.651200000001,
+      "idlz": 6854.041600000001,
+      "idlz_heel": 6854.041600000001
     },
     "event": true,
     "full_name": "SR Angel Yazawa Nico",
@@ -15843,10 +15843,10 @@ app.constant('CardData',
   {
     "attribute": "Pure",
     "cScore": {
-      "base": 8610.797500000002,
-      "heel": 7194.4000000000015,
-      "idlz": 10168.702500000001,
-      "idlz_heel": 8516.900000000001
+      "base": 8167.398400000001,
+      "heel": 6823.936000000001,
+      "idlz": 9331.481600000001,
+      "idlz_heel": 7827.456000000001
     },
     "event": null,
     "full_name": "UR Snowy Mountain Kousaka Honoka",
@@ -15888,10 +15888,10 @@ app.constant('CardData',
   {
     "attribute": "Smile",
     "cScore": {
-      "base": 7009.250000000001,
-      "heel": 7009.250000000001,
-      "idlz": 7751.1725000000015,
-      "idlz_heel": 6453.800000000001
+      "base": 6692.224000000001,
+      "heel": 6692.224000000001,
+      "idlz": 7101.158400000001,
+      "idlz_heel": 7101.158400000001
     },
     "event": null,
     "full_name": "SR Snowy Mountain Nishikino Maki",
@@ -15933,10 +15933,10 @@ app.constant('CardData',
   {
     "attribute": "Pure",
     "cScore": {
-      "base": 6877.000000000001,
-      "heel": 6877.000000000001,
-      "idlz": 7597.762500000002,
-      "idlz_heel": 6321.550000000001
+      "base": 6554.240000000001,
+      "heel": 6554.240000000001,
+      "idlz": 6955.648000000001,
+      "idlz_heel": 6955.648000000001
     },
     "event": null,
     "full_name": "SR Snowy Mountain Hoshizora Rin",
@@ -15978,10 +15978,10 @@ app.constant('CardData',
   {
     "attribute": "Cool",
     "cScore": {
-      "base": 7009.250000000001,
-      "heel": 7009.250000000001,
-      "idlz": 7751.1725000000015,
-      "idlz_heel": 6453.800000000001
+      "base": 6692.224000000001,
+      "heel": 6692.224000000001,
+      "idlz": 7101.158400000001,
+      "idlz_heel": 7101.158400000001
     },
     "event": null,
     "full_name": "SR Snowy Mountain Ayase Eli",
@@ -16023,10 +16023,10 @@ app.constant('CardData',
   {
     "attribute": "Pure",
     "cScore": {
-      "base": 6824.100000000001,
-      "heel": 6824.100000000001,
-      "idlz": 7536.927500000002,
-      "idlz_heel": 6268.6500000000015
+      "base": 6499.046400000001,
+      "heel": 6499.046400000001,
+      "idlz": 6897.945600000001,
+      "idlz_heel": 6897.945600000001
     },
     "event": true,
     "full_name": "SR Santa Nishikino Maki",
@@ -16068,10 +16068,10 @@ app.constant('CardData',
   {
     "attribute": "Smile",
     "cScore": {
-      "base": 8733.79,
-      "heel": 7300.200000000002,
-      "idlz": 10291.695000000002,
-      "idlz_heel": 8622.7
+      "base": 8284.057600000002,
+      "heel": 6924.288000000001,
+      "idlz": 9448.140800000001,
+      "idlz_heel": 7927.808000000001
     },
     "event": null,
     "full_name": "UR Snowy Mountain Minami Kotori",
@@ -16113,10 +16113,10 @@ app.constant('CardData',
   {
     "attribute": "Cool",
     "cScore": {
-      "base": 6956.350000000001,
-      "heel": 6956.350000000001,
-      "idlz": 7690.3375000000015,
-      "idlz_heel": 6400.9000000000015
+      "base": 6637.030400000001,
+      "heel": 6637.030400000001,
+      "idlz": 7043.456000000001,
+      "idlz_heel": 7043.456000000001
     },
     "event": null,
     "full_name": "SR Snowy Mountain Yazawa Nico",
@@ -16158,10 +16158,10 @@ app.constant('CardData',
   {
     "attribute": "Cool",
     "cScore": {
-      "base": 7075.375000000001,
-      "heel": 7075.375000000001,
-      "idlz": 7827.877500000001,
-      "idlz_heel": 6519.925000000001
+      "base": 6761.216000000001,
+      "heel": 6761.216000000001,
+      "idlz": 7173.913600000001,
+      "idlz_heel": 7173.913600000001
     },
     "event": null,
     "full_name": "SR Snowy Mountain Koizumi Hanayo",
@@ -16203,10 +16203,10 @@ app.constant('CardData',
   {
     "attribute": "Pure",
     "cScore": {
-      "base": 7022.475000000001,
-      "heel": 7022.475000000001,
-      "idlz": 7767.042500000001,
-      "idlz_heel": 6467.0250000000015
+      "base": 6706.022400000001,
+      "heel": 6706.022400000001,
+      "idlz": 7116.211200000001,
+      "idlz_heel": 7116.211200000001
     },
     "event": null,
     "full_name": "SR Snowy Mountain Toujou Nozomi",
@@ -16248,10 +16248,10 @@ app.constant('CardData',
   {
     "attribute": "Smile",
     "cScore": {
-      "base": 7009.250000000001,
-      "heel": 7009.250000000001,
-      "idlz": 7751.1725000000015,
-      "idlz_heel": 6453.800000000001
+      "base": 6692.224000000001,
+      "heel": 6692.224000000001,
+      "idlz": 7101.158400000001,
+      "idlz_heel": 7101.158400000001
     },
     "event": null,
     "full_name": "SR Snowy Mountain Sonoda Umi",
@@ -16338,10 +16338,10 @@ app.constant('CardData',
   {
     "attribute": "Pure",
     "cScore": {
-      "base": 6784.425000000001,
-      "heel": 6784.425000000001,
-      "idlz": 7490.640000000001,
-      "idlz_heel": 6228.975000000001
+      "base": 6457.651200000001,
+      "heel": 6457.651200000001,
+      "idlz": 6854.041600000001,
+      "idlz_heel": 6854.041600000001
     },
     "event": true,
     "full_name": "SR Fairy Toujou Nozomi",
@@ -16518,10 +16518,10 @@ app.constant('CardData',
   {
     "attribute": "Cool",
     "cScore": {
-      "base": 8671.632500000002,
-      "heel": 7247.300000000001,
-      "idlz": 10229.537500000002,
-      "idlz_heel": 8569.800000000001
+      "base": 8225.100800000002,
+      "heel": 6874.112000000001,
+      "idlz": 9389.184000000001,
+      "idlz_heel": 7877.632000000001
     },
     "event": null,
     "full_name": "UR Constellation Hoshizora Rin",
@@ -16608,10 +16608,10 @@ app.constant('CardData',
   {
     "attribute": "Smile",
     "cScore": {
-      "base": 7035.700000000002,
-      "heel": 7035.700000000002,
-      "idlz": 7781.590000000001,
-      "idlz_heel": 6480.250000000001
+      "base": 6719.820800000001,
+      "heel": 6719.820800000001,
+      "idlz": 7130.009600000001,
+      "idlz_heel": 7130.009600000001
     },
     "event": null,
     "full_name": "SR Constellation Yazawa Nico",
@@ -16653,10 +16653,10 @@ app.constant('CardData',
   {
     "attribute": "Cool",
     "cScore": {
-      "base": 6929.9000000000015,
-      "heel": 6929.9000000000015,
-      "idlz": 7659.920000000001,
-      "idlz_heel": 6374.450000000001
+      "base": 6609.433600000001,
+      "heel": 6609.433600000001,
+      "idlz": 7014.604800000001,
+      "idlz_heel": 7014.604800000001
     },
     "event": null,
     "full_name": "SR Constellation Sonoda Umi",
@@ -16698,10 +16698,10 @@ app.constant('CardData',
   {
     "attribute": "Pure",
     "cScore": {
-      "base": 7048.925000000001,
-      "heel": 7048.925000000001,
-      "idlz": 7797.460000000001,
-      "idlz_heel": 6493.475000000001
+      "base": 6733.619200000001,
+      "heel": 6733.619200000001,
+      "idlz": 7145.062400000001,
+      "idlz_heel": 7145.062400000001
     },
     "event": null,
     "full_name": "SR Constellation Ayase Eli",
@@ -16743,10 +16743,10 @@ app.constant('CardData',
   {
     "attribute": "Smile",
     "cScore": {
-      "base": 6691.850000000001,
-      "heel": 6691.850000000001,
-      "idlz": 7383.517500000001,
-      "idlz_heel": 6136.4000000000015
+      "base": 6361.062400000001,
+      "heel": 6361.062400000001,
+      "idlz": 6752.435200000001,
+      "idlz_heel": 6752.435200000001
     },
     "event": true,
     "full_name": "SR Craftwork Ayase Eli",
@@ -16788,10 +16788,10 @@ app.constant('CardData',
   {
     "attribute": "Pure",
     "cScore": {
-      "base": 8717.920000000002,
-      "heel": 7286.975000000001,
-      "idlz": 10275.825000000003,
-      "idlz_heel": 8609.475000000002
+      "base": 8269.0048,
+      "heel": 6911.744000000001,
+      "idlz": 9433.088000000002,
+      "idlz_heel": 7915.264000000001
     },
     "event": null,
     "full_name": "UR Constellation Nishikino Maki",
@@ -16833,10 +16833,10 @@ app.constant('CardData',
   {
     "attribute": "Smile",
     "cScore": {
-      "base": 7035.700000000002,
-      "heel": 7035.700000000002,
-      "idlz": 7781.590000000001,
-      "idlz_heel": 6480.250000000001
+      "base": 6719.820800000001,
+      "heel": 6719.820800000001,
+      "idlz": 7130.009600000001,
+      "idlz_heel": 7130.009600000001
     },
     "event": null,
     "full_name": "SR Constellation Koizumi Hanayo",
@@ -16878,10 +16878,10 @@ app.constant('CardData',
   {
     "attribute": "Cool",
     "cScore": {
-      "base": 7009.250000000001,
-      "heel": 7009.250000000001,
-      "idlz": 7751.1725000000015,
-      "idlz_heel": 6453.800000000001
+      "base": 6692.224000000001,
+      "heel": 6692.224000000001,
+      "idlz": 7101.158400000001,
+      "idlz_heel": 7101.158400000001
     },
     "event": null,
     "full_name": "SR Constellation Toujou Nozomi",
@@ -16923,10 +16923,10 @@ app.constant('CardData',
   {
     "attribute": "Smile",
     "cScore": {
-      "base": 6982.800000000001,
-      "heel": 6982.800000000001,
-      "idlz": 7720.755000000001,
-      "idlz_heel": 6427.350000000001
+      "base": 6664.627200000001,
+      "heel": 6664.627200000001,
+      "idlz": 7072.307200000001,
+      "idlz_heel": 7072.307200000001
     },
     "event": null,
     "full_name": "SR Constellation Minami Kotori",
@@ -16968,10 +16968,10 @@ app.constant('CardData',
   {
     "attribute": "Pure",
     "cScore": {
-      "base": 6996.0250000000015,
-      "heel": 6996.0250000000015,
-      "idlz": 7736.625000000001,
-      "idlz_heel": 6440.575000000001
+      "base": 6678.425600000001,
+      "heel": 6678.425600000001,
+      "idlz": 7087.360000000001,
+      "idlz_heel": 7087.360000000001
     },
     "event": null,
     "full_name": "SR Constellation Kousaka Honoka",
@@ -17103,10 +17103,10 @@ app.constant('CardData',
   {
     "attribute": "Smile",
     "cScore": {
-      "base": 6771.200000000001,
-      "heel": 6771.200000000001,
-      "idlz": 7474.770000000001,
-      "idlz_heel": 6215.750000000001
+      "base": 6443.852800000001,
+      "heel": 6443.852800000001,
+      "idlz": 6838.988800000001,
+      "idlz_heel": 6838.988800000001
     },
     "event": true,
     "full_name": "SR Cat Girl Hoshizora Rin",
@@ -17328,10 +17328,10 @@ app.constant('CardData',
   {
     "attribute": "Cool",
     "cScore": {
-      "base": 8702.050000000001,
-      "heel": 7273.750000000001,
-      "idlz": 10259.955000000002,
-      "idlz_heel": 8596.250000000002
+      "base": 8253.952000000001,
+      "heel": 6899.200000000001,
+      "idlz": 9418.035200000002,
+      "idlz_heel": 7902.720000000001
     },
     "event": null,
     "full_name": "UR Halloween Toujou Nozomi",
@@ -17373,10 +17373,10 @@ app.constant('CardData',
   {
     "attribute": "Cool",
     "cScore": {
-      "base": 7048.925000000001,
-      "heel": 7048.925000000001,
-      "idlz": 7797.460000000001,
-      "idlz_heel": 6493.475000000001
+      "base": 6733.619200000001,
+      "heel": 6733.619200000001,
+      "idlz": 7145.062400000001,
+      "idlz_heel": 7145.062400000001
     },
     "event": null,
     "full_name": "SR Halloween Hoshizora Rin",
@@ -17418,10 +17418,10 @@ app.constant('CardData',
   {
     "attribute": "Pure",
     "cScore": {
-      "base": 6996.0250000000015,
-      "heel": 6996.0250000000015,
-      "idlz": 7736.625000000001,
-      "idlz_heel": 6440.575000000001
+      "base": 6678.425600000001,
+      "heel": 6678.425600000001,
+      "idlz": 7087.360000000001,
+      "idlz_heel": 7087.360000000001
     },
     "event": null,
     "full_name": "SR Halloween Minami Kotori",
@@ -17463,10 +17463,10 @@ app.constant('CardData',
   {
     "attribute": "Smile",
     "cScore": {
-      "base": 7035.700000000002,
-      "heel": 7035.700000000002,
-      "idlz": 7781.590000000001,
-      "idlz_heel": 6480.250000000001
+      "base": 6719.820800000001,
+      "heel": 6719.820800000001,
+      "idlz": 7130.009600000001,
+      "idlz_heel": 7130.009600000001
     },
     "event": null,
     "full_name": "SR Halloween Ayase Eli",
@@ -17508,10 +17508,10 @@ app.constant('CardData',
   {
     "attribute": "Cool",
     "cScore": {
-      "base": 6784.425000000001,
-      "heel": 6784.425000000001,
-      "idlz": 7490.640000000001,
-      "idlz_heel": 6228.975000000001
+      "base": 6457.651200000001,
+      "heel": 6457.651200000001,
+      "idlz": 6854.041600000001,
+      "idlz_heel": 6854.041600000001
     },
     "event": true,
     "full_name": "SR Harvest Season Koizumi Hanayo",
@@ -17553,10 +17553,10 @@ app.constant('CardData',
   {
     "attribute": "Smile",
     "cScore": {
-      "base": 8717.920000000002,
-      "heel": 7286.975000000001,
-      "idlz": 10275.825000000003,
-      "idlz_heel": 8609.475000000002
+      "base": 8269.0048,
+      "heel": 6911.744000000001,
+      "idlz": 9433.088000000002,
+      "idlz_heel": 7915.264000000001
     },
     "event": null,
     "full_name": "UR Halloween Koizumi Hanayo",
@@ -17598,10 +17598,10 @@ app.constant('CardData',
   {
     "attribute": "Cool",
     "cScore": {
-      "base": 6943.125000000001,
-      "heel": 6943.125000000001,
-      "idlz": 7674.467500000002,
-      "idlz_heel": 6387.675000000001
+      "base": 6623.232000000001,
+      "heel": 6623.232000000001,
+      "idlz": 7028.403200000001,
+      "idlz_heel": 7028.403200000001
     },
     "event": null,
     "full_name": "SR Halloween Yazawa Nico",
@@ -17643,10 +17643,10 @@ app.constant('CardData',
   {
     "attribute": "Pure",
     "cScore": {
-      "base": 6903.450000000002,
-      "heel": 6903.450000000002,
-      "idlz": 7628.180000000001,
-      "idlz_heel": 6348.000000000001
+      "base": 6581.836800000001,
+      "heel": 6581.836800000001,
+      "idlz": 6984.499200000001,
+      "idlz_heel": 6984.499200000001
     },
     "event": null,
     "full_name": "SR Halloween Nishikino Maki",
@@ -17688,10 +17688,10 @@ app.constant('CardData',
   {
     "attribute": "Pure",
     "cScore": {
-      "base": 6877.000000000001,
-      "heel": 6877.000000000001,
-      "idlz": 7597.762500000002,
-      "idlz_heel": 6321.550000000001
+      "base": 6554.240000000001,
+      "heel": 6554.240000000001,
+      "idlz": 6955.648000000001,
+      "idlz_heel": 6955.648000000001
     },
     "event": null,
     "full_name": "SR Halloween Sonoda Umi",
@@ -17733,10 +17733,10 @@ app.constant('CardData',
   {
     "attribute": "Smile",
     "cScore": {
-      "base": 7048.925000000001,
-      "heel": 7048.925000000001,
-      "idlz": 7797.460000000001,
-      "idlz_heel": 6493.475000000001
+      "base": 6733.619200000001,
+      "heel": 6733.619200000001,
+      "idlz": 7145.062400000001,
+      "idlz_heel": 7145.062400000001
     },
     "event": null,
     "full_name": "SR Halloween Kousaka Honoka",
@@ -17868,10 +17868,10 @@ app.constant('CardData',
   {
     "attribute": "Cool",
     "cScore": {
-      "base": 6757.975000000001,
-      "heel": 6757.975000000001,
-      "idlz": 7460.222500000002,
-      "idlz_heel": 6202.5250000000015
+      "base": 6430.054400000001,
+      "heel": 6430.054400000001,
+      "idlz": 6825.190400000001,
+      "idlz_heel": 6825.190400000001
     },
     "event": true,
     "full_name": "SR Hero Sonoda Umi",
@@ -17913,10 +17913,10 @@ app.constant('CardData',
   {
     "attribute": "Pure",
     "cScore": {
-      "base": 8733.79,
-      "heel": 7300.200000000002,
-      "idlz": 10291.695000000002,
-      "idlz_heel": 8622.7
+      "base": 8284.057600000002,
+      "heel": 6924.288000000001,
+      "idlz": 9448.140800000001,
+      "idlz_heel": 7927.808000000001
     },
     "event": null,
     "full_name": "UR Caf\u00e9 Maid Sonoda Umi",
@@ -17958,10 +17958,10 @@ app.constant('CardData',
   {
     "attribute": "Smile",
     "cScore": {
-      "base": 6982.800000000001,
-      "heel": 6982.800000000001,
-      "idlz": 7720.755000000001,
-      "idlz_heel": 6427.350000000001
+      "base": 6664.627200000001,
+      "heel": 6664.627200000001,
+      "idlz": 7072.307200000001,
+      "idlz_heel": 7072.307200000001
     },
     "event": null,
     "full_name": "SR Caf\u00e9 Maid Koizumi Hanayo",
@@ -18003,10 +18003,10 @@ app.constant('CardData',
   {
     "attribute": "Cool",
     "cScore": {
-      "base": 6943.125000000001,
-      "heel": 6943.125000000001,
-      "idlz": 7674.467500000002,
-      "idlz_heel": 6387.675000000001
+      "base": 6623.232000000001,
+      "heel": 6623.232000000001,
+      "idlz": 7028.403200000001,
+      "idlz_heel": 7028.403200000001
     },
     "event": null,
     "full_name": "SR Caf\u00e9 Maid Ayase Eli",
@@ -18048,10 +18048,10 @@ app.constant('CardData',
   {
     "attribute": "Pure",
     "cScore": {
-      "base": 7022.475000000001,
-      "heel": 7022.475000000001,
-      "idlz": 7767.042500000001,
-      "idlz_heel": 6467.0250000000015
+      "base": 6706.022400000001,
+      "heel": 6706.022400000001,
+      "idlz": 7116.211200000001,
+      "idlz_heel": 7116.211200000001
     },
     "event": null,
     "full_name": "SR Caf\u00e9 Maid Kousaka Honoka",
@@ -18093,10 +18093,10 @@ app.constant('CardData',
   {
     "attribute": "Smile",
     "cScore": {
-      "base": 6850.550000000001,
-      "heel": 6850.550000000001,
-      "idlz": 7567.345000000001,
-      "idlz_heel": 6295.100000000001
+      "base": 6526.643200000001,
+      "heel": 6526.643200000001,
+      "idlz": 6926.796800000001,
+      "idlz_heel": 6926.796800000001
     },
     "event": true,
     "full_name": "SR Festival Kousaka Honoka",
@@ -18138,10 +18138,10 @@ app.constant('CardData',
   {
     "attribute": "Smile",
     "cScore": {
-      "base": 8748.337500000001,
-      "heel": 7313.425000000001,
-      "idlz": 10306.242500000002,
-      "idlz_heel": 8635.925000000001
+      "base": 8297.856000000002,
+      "heel": 6936.832000000001,
+      "idlz": 9461.9392,
+      "idlz_heel": 7940.352000000001
     },
     "event": null,
     "full_name": "UR Caf\u00e9 Maid Hoshizora Rin",
@@ -18183,10 +18183,10 @@ app.constant('CardData',
   {
     "attribute": "Pure",
     "cScore": {
-      "base": 6890.225000000001,
-      "heel": 6890.225000000001,
-      "idlz": 7613.6325000000015,
-      "idlz_heel": 6334.7750000000015
+      "base": 6568.038400000001,
+      "heel": 6568.038400000001,
+      "idlz": 6970.700800000001,
+      "idlz_heel": 6970.700800000001
     },
     "event": null,
     "full_name": "SR Caf\u00e9 Maid Yazawa Nico",
@@ -18228,10 +18228,10 @@ app.constant('CardData',
   {
     "attribute": "Smile",
     "cScore": {
-      "base": 6969.575000000002,
-      "heel": 6969.575000000002,
-      "idlz": 7704.885000000001,
-      "idlz_heel": 6414.125000000001
+      "base": 6650.828800000001,
+      "heel": 6650.828800000001,
+      "idlz": 7057.254400000001,
+      "idlz_heel": 7057.254400000001
     },
     "event": null,
     "full_name": "SR Caf\u00e9 Maid Toujou Nozomi",
@@ -18273,10 +18273,10 @@ app.constant('CardData',
   {
     "attribute": "Cool",
     "cScore": {
-      "base": 7022.475000000001,
-      "heel": 7022.475000000001,
-      "idlz": 7767.042500000001,
-      "idlz_heel": 6467.0250000000015
+      "base": 6706.022400000001,
+      "heel": 6706.022400000001,
+      "idlz": 7116.211200000001,
+      "idlz_heel": 7116.211200000001
     },
     "event": null,
     "full_name": "SR Caf\u00e9 Maid Nishikino Maki",
@@ -18318,10 +18318,10 @@ app.constant('CardData',
   {
     "attribute": "Cool",
     "cScore": {
-      "base": 7141.500000000001,
-      "heel": 7141.500000000001,
-      "idlz": 7904.582500000001,
-      "idlz_heel": 6586.050000000001
+      "base": 6830.2080000000005,
+      "heel": 6830.2080000000005,
+      "idlz": 7246.668800000001,
+      "idlz_heel": 7246.668800000001
     },
     "event": null,
     "full_name": "SR Caf\u00e9 Maid Minami Kotori",
@@ -18498,10 +18498,10 @@ app.constant('CardData',
   {
     "attribute": "Cool",
     "cScore": {
-      "base": 6744.750000000001,
-      "heel": 6744.750000000001,
-      "idlz": 7444.352500000001,
-      "idlz_heel": 6189.300000000001
+      "base": 6416.256000000001,
+      "heel": 6416.256000000001,
+      "idlz": 6810.137600000001,
+      "idlz_heel": 6810.137600000001
     },
     "event": true,
     "full_name": "SR Ghost Story Nishikino Maki",
@@ -18543,10 +18543,10 @@ app.constant('CardData',
   {
     "attribute": "Smile",
     "cScore": {
-      "base": 8733.79,
-      "heel": 7300.200000000002,
-      "idlz": 10291.695000000002,
-      "idlz_heel": 8622.7
+      "base": 8284.057600000002,
+      "heel": 6924.288000000001,
+      "idlz": 9448.140800000001,
+      "idlz_heel": 7927.808000000001
     },
     "event": null,
     "full_name": "UR China Dress Yazawa Nico",
@@ -18588,10 +18588,10 @@ app.constant('CardData',
   {
     "attribute": "Pure",
     "cScore": {
-      "base": 6916.675000000001,
-      "heel": 6916.675000000001,
-      "idlz": 7644.050000000001,
-      "idlz_heel": 6361.225000000001
+      "base": 6595.635200000001,
+      "heel": 6595.635200000001,
+      "idlz": 6999.552000000001,
+      "idlz_heel": 6999.552000000001
     },
     "event": null,
     "full_name": "SR China Dress Koizumi Hanayo",
@@ -18633,10 +18633,10 @@ app.constant('CardData',
   {
     "attribute": "Smile",
     "cScore": {
-      "base": 6969.575000000002,
-      "heel": 6969.575000000002,
-      "idlz": 7704.885000000001,
-      "idlz_heel": 6414.125000000001
+      "base": 6650.828800000001,
+      "heel": 6650.828800000001,
+      "idlz": 7057.254400000001,
+      "idlz_heel": 7057.254400000001
     },
     "event": null,
     "full_name": "SR China Dress Nishikino Maki",
@@ -18678,10 +18678,10 @@ app.constant('CardData',
   {
     "attribute": "Cool",
     "cScore": {
-      "base": 6850.550000000001,
-      "heel": 6850.550000000001,
-      "idlz": 7567.345000000001,
-      "idlz_heel": 6295.100000000001
+      "base": 6526.643200000001,
+      "heel": 6526.643200000001,
+      "idlz": 6926.796800000001,
+      "idlz_heel": 6926.796800000001
     },
     "event": null,
     "full_name": "SR China Dress Sonoda Umi",
@@ -18723,10 +18723,10 @@ app.constant('CardData',
   {
     "attribute": "Pure",
     "cScore": {
-      "base": 6810.875000000001,
-      "heel": 6810.875000000001,
-      "idlz": 7521.057500000002,
-      "idlz_heel": 6255.425000000001
+      "base": 6485.2480000000005,
+      "heel": 6485.2480000000005,
+      "idlz": 6882.892800000001,
+      "idlz_heel": 6882.892800000001
     },
     "event": true,
     "full_name": "SR Swimsuit Yazawa Nico",
@@ -18768,10 +18768,10 @@ app.constant('CardData',
   {
     "attribute": "Pure",
     "cScore": {
-      "base": 8702.050000000001,
-      "heel": 7273.750000000001,
-      "idlz": 10259.955000000002,
-      "idlz_heel": 8596.250000000002
+      "base": 8253.952000000001,
+      "heel": 6899.200000000001,
+      "idlz": 9418.035200000002,
+      "idlz_heel": 7902.720000000001
     },
     "event": null,
     "full_name": "UR China Dress Minami Kotori",
@@ -18813,10 +18813,10 @@ app.constant('CardData',
   {
     "attribute": "Cool",
     "cScore": {
-      "base": 6863.7750000000015,
-      "heel": 6863.7750000000015,
-      "idlz": 7583.215000000001,
-      "idlz_heel": 6308.325000000001
+      "base": 6540.441600000001,
+      "heel": 6540.441600000001,
+      "idlz": 6941.849600000001,
+      "idlz_heel": 6941.849600000001
     },
     "event": null,
     "full_name": "SR China Dress Toujou Nozomi",
@@ -18858,10 +18858,10 @@ app.constant('CardData',
   {
     "attribute": "Pure",
     "cScore": {
-      "base": 6890.225000000001,
-      "heel": 6890.225000000001,
-      "idlz": 7613.6325000000015,
-      "idlz_heel": 6334.7750000000015
+      "base": 6568.038400000001,
+      "heel": 6568.038400000001,
+      "idlz": 6970.700800000001,
+      "idlz_heel": 6970.700800000001
     },
     "event": null,
     "full_name": "SR China Dress Hoshizora Rin",
@@ -18903,10 +18903,10 @@ app.constant('CardData',
   {
     "attribute": "Smile",
     "cScore": {
-      "base": 6837.325000000002,
-      "heel": 6837.325000000002,
-      "idlz": 7551.475000000001,
-      "idlz_heel": 6281.875000000001
+      "base": 6512.844800000001,
+      "heel": 6512.844800000001,
+      "idlz": 6911.744000000001,
+      "idlz_heel": 6911.744000000001
     },
     "event": null,
     "full_name": "SR China Dress Ayase Eli",
@@ -18948,10 +18948,10 @@ app.constant('CardData',
   {
     "attribute": "Cool",
     "cScore": {
-      "base": 6943.125000000001,
-      "heel": 6943.125000000001,
-      "idlz": 7674.467500000002,
-      "idlz_heel": 6387.675000000001
+      "base": 6623.232000000001,
+      "heel": 6623.232000000001,
+      "idlz": 7028.403200000001,
+      "idlz_heel": 7028.403200000001
     },
     "event": null,
     "full_name": "SR China Dress Kousaka Honoka",
@@ -19128,10 +19128,10 @@ app.constant('CardData',
   {
     "attribute": "Pure",
     "cScore": {
-      "base": 6691.850000000001,
-      "heel": 6691.850000000001,
-      "idlz": 7383.517500000001,
-      "idlz_heel": 6136.4000000000015
+      "base": 6361.062400000001,
+      "heel": 6361.062400000001,
+      "idlz": 6752.435200000001,
+      "idlz_heel": 6752.435200000001
     },
     "event": true,
     "full_name": "SR Swimsuit Minami Kotori",
@@ -19173,10 +19173,10 @@ app.constant('CardData',
   {
     "attribute": "Pure",
     "cScore": {
-      "base": 8748.337500000001,
-      "heel": 7313.425000000001,
-      "idlz": 10306.242500000002,
-      "idlz_heel": 8635.925000000001
+      "base": 8297.856000000002,
+      "heel": 6936.832000000001,
+      "idlz": 9461.9392,
+      "idlz_heel": 7940.352000000001
     },
     "event": null,
     "full_name": "UR July Toujou Nozomi",
@@ -19218,10 +19218,10 @@ app.constant('CardData',
   {
     "attribute": "Cool",
     "cScore": {
-      "base": 7035.700000000002,
-      "heel": 7035.700000000002,
-      "idlz": 7781.590000000001,
-      "idlz_heel": 6480.250000000001
+      "base": 6719.820800000001,
+      "heel": 6719.820800000001,
+      "idlz": 7130.009600000001,
+      "idlz_heel": 7130.009600000001
     },
     "event": null,
     "full_name": "SR July Koizumi Hanayo",
@@ -19263,10 +19263,10 @@ app.constant('CardData',
   {
     "attribute": "Smile",
     "cScore": {
-      "base": 6982.800000000001,
-      "heel": 6982.800000000001,
-      "idlz": 7720.755000000001,
-      "idlz_heel": 6427.350000000001
+      "base": 6664.627200000001,
+      "heel": 6664.627200000001,
+      "idlz": 7072.307200000001,
+      "idlz_heel": 7072.307200000001
     },
     "event": null,
     "full_name": "SR July Minami Kotori",
@@ -19308,10 +19308,10 @@ app.constant('CardData',
   {
     "attribute": "Pure",
     "cScore": {
-      "base": 7009.250000000001,
-      "heel": 7009.250000000001,
-      "idlz": 7751.1725000000015,
-      "idlz_heel": 6453.800000000001
+      "base": 6692.224000000001,
+      "heel": 6692.224000000001,
+      "idlz": 7101.158400000001,
+      "idlz_heel": 7101.158400000001
     },
     "event": null,
     "full_name": "SR July Ayase Eli",
@@ -19443,10 +19443,10 @@ app.constant('CardData',
   {
     "attribute": "Smile",
     "cScore": {
-      "base": 6810.875000000001,
-      "heel": 6810.875000000001,
-      "idlz": 7521.057500000002,
-      "idlz_heel": 6255.425000000001
+      "base": 6485.2480000000005,
+      "heel": 6485.2480000000005,
+      "idlz": 6882.892800000001,
+      "idlz_heel": 6882.892800000001
     },
     "event": true,
     "full_name": "SR Campaign Girl Toujou Nozomi",
@@ -19488,10 +19488,10 @@ app.constant('CardData',
   {
     "attribute": "Cool",
     "cScore": {
-      "base": 8702.050000000001,
-      "heel": 7273.750000000001,
-      "idlz": 10259.955000000002,
-      "idlz_heel": 8596.250000000002
+      "base": 8253.952000000001,
+      "heel": 6899.200000000001,
+      "idlz": 9418.035200000002,
+      "idlz_heel": 7902.720000000001
     },
     "event": null,
     "full_name": "UR July Nishikino Maki",
@@ -19533,10 +19533,10 @@ app.constant('CardData',
   {
     "attribute": "Smile",
     "cScore": {
-      "base": 7009.250000000001,
-      "heel": 7009.250000000001,
-      "idlz": 7751.1725000000015,
-      "idlz_heel": 6453.800000000001
+      "base": 6692.224000000001,
+      "heel": 6692.224000000001,
+      "idlz": 7101.158400000001,
+      "idlz_heel": 7101.158400000001
     },
     "event": null,
     "full_name": "SR July Yazawa Nico",
@@ -19578,10 +19578,10 @@ app.constant('CardData',
   {
     "attribute": "Cool",
     "cScore": {
-      "base": 6943.125000000001,
-      "heel": 6943.125000000001,
-      "idlz": 7674.467500000002,
-      "idlz_heel": 6387.675000000001
+      "base": 6623.232000000001,
+      "heel": 6623.232000000001,
+      "idlz": 7028.403200000001,
+      "idlz_heel": 7028.403200000001
     },
     "event": null,
     "full_name": "SR July Hoshizora Rin",
@@ -19623,10 +19623,10 @@ app.constant('CardData',
   {
     "attribute": "Smile",
     "cScore": {
-      "base": 6982.800000000001,
-      "heel": 6982.800000000001,
-      "idlz": 7720.755000000001,
-      "idlz_heel": 6427.350000000001
+      "base": 6664.627200000001,
+      "heel": 6664.627200000001,
+      "idlz": 7072.307200000001,
+      "idlz_heel": 7072.307200000001
     },
     "event": null,
     "full_name": "SR July Sonoda Umi",
@@ -19668,10 +19668,10 @@ app.constant('CardData',
   {
     "attribute": "Pure",
     "cScore": {
-      "base": 6969.575000000002,
-      "heel": 6969.575000000002,
-      "idlz": 7704.885000000001,
-      "idlz_heel": 6414.125000000001
+      "base": 6650.828800000001,
+      "heel": 6650.828800000001,
+      "idlz": 7057.254400000001,
+      "idlz_heel": 7057.254400000001
     },
     "event": null,
     "full_name": "SR July Kousaka Honoka",
@@ -19803,10 +19803,10 @@ app.constant('CardData',
   {
     "attribute": "Cool",
     "cScore": {
-      "base": 6718.300000000001,
-      "heel": 6718.300000000001,
-      "idlz": 7413.935000000001,
-      "idlz_heel": 6162.850000000001
+      "base": 6388.659200000001,
+      "heel": 6388.659200000001,
+      "idlz": 6781.286400000001,
+      "idlz_heel": 6781.286400000001
     },
     "event": true,
     "full_name": "SR Rain Shower Ayase Eli",
@@ -19938,10 +19938,10 @@ app.constant('CardData',
   {
     "attribute": "Smile",
     "cScore": {
-      "base": 8764.207500000002,
-      "heel": 7326.6500000000015,
-      "idlz": 10322.112500000001,
-      "idlz_heel": 8649.150000000001
+      "base": 8312.908800000001,
+      "heel": 6949.376000000001,
+      "idlz": 9476.992000000002,
+      "idlz_heel": 7952.896000000002
     },
     "event": null,
     "full_name": "UR June Kousaka Honoka",
@@ -19983,10 +19983,10 @@ app.constant('CardData',
   {
     "attribute": "Smile",
     "cScore": {
-      "base": 6996.0250000000015,
-      "heel": 6996.0250000000015,
-      "idlz": 7736.625000000001,
-      "idlz_heel": 6440.575000000001
+      "base": 6678.425600000001,
+      "heel": 6678.425600000001,
+      "idlz": 7087.360000000001,
+      "idlz_heel": 7087.360000000001
     },
     "event": null,
     "full_name": "SR June Koizumi Hanayo",
@@ -20028,10 +20028,10 @@ app.constant('CardData',
   {
     "attribute": "Pure",
     "cScore": {
-      "base": 6943.125000000001,
-      "heel": 6943.125000000001,
-      "idlz": 7674.467500000002,
-      "idlz_heel": 6387.675000000001
+      "base": 6623.232000000001,
+      "heel": 6623.232000000001,
+      "idlz": 7028.403200000001,
+      "idlz_heel": 7028.403200000001
     },
     "event": null,
     "full_name": "SR June Nishikino Maki",
@@ -20073,10 +20073,10 @@ app.constant('CardData',
   {
     "attribute": "Cool",
     "cScore": {
-      "base": 7035.700000000002,
-      "heel": 7035.700000000002,
-      "idlz": 7781.590000000001,
-      "idlz_heel": 6480.250000000001
+      "base": 6719.820800000001,
+      "heel": 6719.820800000001,
+      "idlz": 7130.009600000001,
+      "idlz_heel": 7130.009600000001
     },
     "event": null,
     "full_name": "SR June Minami Kotori",
@@ -20118,10 +20118,10 @@ app.constant('CardData',
   {
     "attribute": "Smile",
     "cScore": {
-      "base": 6744.750000000001,
-      "heel": 6744.750000000001,
-      "idlz": 7444.352500000001,
-      "idlz_heel": 6189.300000000001
+      "base": 6416.256000000001,
+      "heel": 6416.256000000001,
+      "idlz": 6810.137600000001,
+      "idlz_heel": 6810.137600000001
     },
     "event": true,
     "full_name": "SR Rainy Season Hoshizora Rin",
@@ -20163,10 +20163,10 @@ app.constant('CardData',
   {
     "attribute": "Cool",
     "cScore": {
-      "base": 8733.79,
-      "heel": 7300.200000000002,
-      "idlz": 10291.695000000002,
-      "idlz_heel": 8622.7
+      "base": 8284.057600000002,
+      "heel": 6924.288000000001,
+      "idlz": 9448.140800000001,
+      "idlz_heel": 7927.808000000001
     },
     "event": null,
     "full_name": "UR June Ayase Eli",
@@ -20208,10 +20208,10 @@ app.constant('CardData',
   {
     "attribute": "Cool",
     "cScore": {
-      "base": 6996.0250000000015,
-      "heel": 6996.0250000000015,
-      "idlz": 7736.625000000001,
-      "idlz_heel": 6440.575000000001
+      "base": 6678.425600000001,
+      "heel": 6678.425600000001,
+      "idlz": 7087.360000000001,
+      "idlz_heel": 7087.360000000001
     },
     "event": null,
     "full_name": "SR June Yazawa Nico",
@@ -20253,10 +20253,10 @@ app.constant('CardData',
   {
     "attribute": "Smile",
     "cScore": {
-      "base": 6929.9000000000015,
-      "heel": 6929.9000000000015,
-      "idlz": 7659.920000000001,
-      "idlz_heel": 6374.450000000001
+      "base": 6609.433600000001,
+      "heel": 6609.433600000001,
+      "idlz": 7014.604800000001,
+      "idlz_heel": 7014.604800000001
     },
     "event": null,
     "full_name": "SR June Toujou Nozomi",
@@ -20298,10 +20298,10 @@ app.constant('CardData',
   {
     "attribute": "Pure",
     "cScore": {
-      "base": 6982.800000000001,
-      "heel": 6982.800000000001,
-      "idlz": 7720.755000000001,
-      "idlz_heel": 6427.350000000001
+      "base": 6664.627200000001,
+      "heel": 6664.627200000001,
+      "idlz": 7072.307200000001,
+      "idlz_heel": 7072.307200000001
     },
     "event": null,
     "full_name": "SR June Hoshizora Rin",
@@ -20343,10 +20343,10 @@ app.constant('CardData',
   {
     "attribute": "Pure",
     "cScore": {
-      "base": 6956.350000000001,
-      "heel": 6956.350000000001,
-      "idlz": 7690.3375000000015,
-      "idlz_heel": 6400.9000000000015
+      "base": 6637.030400000001,
+      "heel": 6637.030400000001,
+      "idlz": 7043.456000000001,
+      "idlz_heel": 7043.456000000001
     },
     "event": null,
     "full_name": "SR June Sonoda Umi",
@@ -20388,10 +20388,10 @@ app.constant('CardData',
   {
     "attribute": "Smile",
     "cScore": {
-      "base": 6718.300000000001,
-      "heel": 6718.300000000001,
-      "idlz": 7413.935000000001,
-      "idlz_heel": 6162.850000000001
+      "base": 6388.659200000001,
+      "heel": 6388.659200000001,
+      "idlz": 6781.286400000001,
+      "idlz_heel": 6781.286400000001
     },
     "event": true,
     "full_name": "SR Hiking Kousaka Honoka",
@@ -20433,10 +20433,10 @@ app.constant('CardData',
   {
     "attribute": "Pure",
     "cScore": {
-      "base": 8671.632500000002,
-      "heel": 7247.300000000001,
-      "idlz": 10229.537500000002,
-      "idlz_heel": 8569.800000000001
+      "base": 8225.100800000002,
+      "heel": 6874.112000000001,
+      "idlz": 9389.184000000001,
+      "idlz_heel": 7877.632000000001
     },
     "event": null,
     "full_name": "UR May Koizumi Hanayo",
@@ -20478,10 +20478,10 @@ app.constant('CardData',
   {
     "attribute": "Smile",
     "cScore": {
-      "base": 6890.225000000001,
-      "heel": 6890.225000000001,
-      "idlz": 7613.6325000000015,
-      "idlz_heel": 6334.7750000000015
+      "base": 6568.038400000001,
+      "heel": 6568.038400000001,
+      "idlz": 6970.700800000001,
+      "idlz_heel": 6970.700800000001
     },
     "event": null,
     "full_name": "SR May Yazawa Nico",
@@ -20523,10 +20523,10 @@ app.constant('CardData',
   {
     "attribute": "Pure",
     "cScore": {
-      "base": 6916.675000000001,
-      "heel": 6916.675000000001,
-      "idlz": 7644.050000000001,
-      "idlz_heel": 6361.225000000001
+      "base": 6595.635200000001,
+      "heel": 6595.635200000001,
+      "idlz": 6999.552000000001,
+      "idlz_heel": 6999.552000000001
     },
     "event": null,
     "full_name": "SR May Ayase Eli",
@@ -20568,10 +20568,10 @@ app.constant('CardData',
   {
     "attribute": "Cool",
     "cScore": {
-      "base": 6929.9000000000015,
-      "heel": 6929.9000000000015,
-      "idlz": 7659.920000000001,
-      "idlz_heel": 6374.450000000001
+      "base": 6609.433600000001,
+      "heel": 6609.433600000001,
+      "idlz": 7014.604800000001,
+      "idlz_heel": 7014.604800000001
     },
     "event": null,
     "full_name": "SR May Kousaka Honoka",
@@ -20613,10 +20613,10 @@ app.constant('CardData',
   {
     "attribute": "Pure",
     "cScore": {
-      "base": 6797.6500000000015,
-      "heel": 6797.6500000000015,
-      "idlz": 7506.510000000001,
-      "idlz_heel": 6242.200000000001
+      "base": 6471.449600000001,
+      "heel": 6471.449600000001,
+      "idlz": 6869.094400000001,
+      "idlz_heel": 6869.094400000001
     },
     "event": true,
     "full_name": "SR Children's Day Sonoda Umi",
@@ -20658,10 +20658,10 @@ app.constant('CardData',
   {
     "attribute": "Smile",
     "cScore": {
-      "base": 8564.510000000002,
-      "heel": 7154.725000000001,
-      "idlz": 10122.415,
-      "idlz_heel": 8477.225000000002
+      "base": 8123.494400000001,
+      "heel": 6786.304000000001,
+      "idlz": 9287.5776,
+      "idlz_heel": 7789.824000000001
     },
     "event": null,
     "full_name": "UR May Minami Kotori",
@@ -20703,10 +20703,10 @@ app.constant('CardData',
   {
     "attribute": "Pure",
     "cScore": {
-      "base": 6824.100000000001,
-      "heel": 6824.100000000001,
-      "idlz": 7536.927500000002,
-      "idlz_heel": 6268.6500000000015
+      "base": 6499.046400000001,
+      "heel": 6499.046400000001,
+      "idlz": 6897.945600000001,
+      "idlz_heel": 6897.945600000001
     },
     "event": null,
     "full_name": "SR May Toujou Nozomi",
@@ -20748,10 +20748,10 @@ app.constant('CardData',
   {
     "attribute": "Cool",
     "cScore": {
-      "base": 6916.675000000001,
-      "heel": 6916.675000000001,
-      "idlz": 7644.050000000001,
-      "idlz_heel": 6361.225000000001
+      "base": 6595.635200000001,
+      "heel": 6595.635200000001,
+      "idlz": 6999.552000000001,
+      "idlz_heel": 6999.552000000001
     },
     "event": null,
     "full_name": "SR May Nishikino Maki",
@@ -20793,10 +20793,10 @@ app.constant('CardData',
   {
     "attribute": "Cool",
     "cScore": {
-      "base": 6890.225000000001,
-      "heel": 6890.225000000001,
-      "idlz": 7613.6325000000015,
-      "idlz_heel": 6334.7750000000015
+      "base": 6568.038400000001,
+      "heel": 6568.038400000001,
+      "idlz": 6970.700800000001,
+      "idlz_heel": 6970.700800000001
     },
     "event": null,
     "full_name": "SR May Hoshizora Rin",
@@ -20838,10 +20838,10 @@ app.constant('CardData',
   {
     "attribute": "Smile",
     "cScore": {
-      "base": 6969.575000000002,
-      "heel": 6969.575000000002,
-      "idlz": 7704.885000000001,
-      "idlz_heel": 6414.125000000001
+      "base": 6650.828800000001,
+      "heel": 6650.828800000001,
+      "idlz": 7057.254400000001,
+      "idlz_heel": 7057.254400000001
     },
     "event": null,
     "full_name": "SR May Sonoda Umi",
@@ -20928,10 +20928,10 @@ app.constant('CardData',
   {
     "attribute": "Pure",
     "cScore": {
-      "base": 6744.750000000001,
-      "heel": 6744.750000000001,
-      "idlz": 7444.352500000001,
-      "idlz_heel": 6189.300000000001
+      "base": 6416.256000000001,
+      "heel": 6416.256000000001,
+      "idlz": 6810.137600000001,
+      "idlz_heel": 6810.137600000001
     },
     "event": true,
     "full_name": "SR Clam Digging Koizumi Hanayo",
@@ -21018,10 +21018,10 @@ app.constant('CardData',
   {
     "attribute": "Cool",
     "cScore": {
-      "base": 8687.502500000002,
-      "heel": 7260.5250000000015,
-      "idlz": 10245.407500000001,
-      "idlz_heel": 8583.025000000001
+      "base": 8240.153600000001,
+      "heel": 6886.656000000001,
+      "idlz": 9404.2368,
+      "idlz_heel": 7890.176000000001
     },
     "event": null,
     "full_name": "UR April Sonoda Umi",
@@ -21063,10 +21063,10 @@ app.constant('CardData',
   {
     "attribute": "Pure",
     "cScore": {
-      "base": 6916.675000000001,
-      "heel": 6916.675000000001,
-      "idlz": 7644.050000000001,
-      "idlz_heel": 6361.225000000001
+      "base": 6595.635200000001,
+      "heel": 6595.635200000001,
+      "idlz": 6999.552000000001,
+      "idlz_heel": 6999.552000000001
     },
     "event": null,
     "full_name": "SR April Yazawa Nico",
@@ -21108,10 +21108,10 @@ app.constant('CardData',
   {
     "attribute": "Cool",
     "cScore": {
-      "base": 6956.350000000001,
-      "heel": 6956.350000000001,
-      "idlz": 7690.3375000000015,
-      "idlz_heel": 6400.9000000000015
+      "base": 6637.030400000001,
+      "heel": 6637.030400000001,
+      "idlz": 7043.456000000001,
+      "idlz_heel": 7043.456000000001
     },
     "event": null,
     "full_name": "SR April Toujou Nozomi",
@@ -21153,10 +21153,10 @@ app.constant('CardData',
   {
     "attribute": "Smile",
     "cScore": {
-      "base": 6996.0250000000015,
-      "heel": 6996.0250000000015,
-      "idlz": 7736.625000000001,
-      "idlz_heel": 6440.575000000001
+      "base": 6678.425600000001,
+      "heel": 6678.425600000001,
+      "idlz": 7087.360000000001,
+      "idlz_heel": 7087.360000000001
     },
     "event": null,
     "full_name": "SR April Nishikino Maki",
@@ -21198,10 +21198,10 @@ app.constant('CardData',
   {
     "attribute": "Cool",
     "cScore": {
-      "base": 6771.200000000001,
-      "heel": 6771.200000000001,
-      "idlz": 7474.770000000001,
-      "idlz_heel": 6215.750000000001
+      "base": 6443.852800000001,
+      "heel": 6443.852800000001,
+      "idlz": 6838.988800000001,
+      "idlz_heel": 6838.988800000001
     },
     "event": true,
     "full_name": "SR Flower Viewing Nishikino Maki",
@@ -21243,10 +21243,10 @@ app.constant('CardData',
   {
     "attribute": "Smile",
     "cScore": {
-      "base": 8580.380000000001,
-      "heel": 7167.950000000002,
-      "idlz": 10138.285000000002,
-      "idlz_heel": 8490.45
+      "base": 8138.547200000001,
+      "heel": 6798.848000000001,
+      "idlz": 9302.630400000002,
+      "idlz_heel": 7802.368000000001
     },
     "event": null,
     "full_name": "UR April Ayase Eli",
@@ -21288,10 +21288,10 @@ app.constant('CardData',
   {
     "attribute": "Cool",
     "cScore": {
-      "base": 6943.125000000001,
-      "heel": 6943.125000000001,
-      "idlz": 7674.467500000002,
-      "idlz_heel": 6387.675000000001
+      "base": 6623.232000000001,
+      "heel": 6623.232000000001,
+      "idlz": 7028.403200000001,
+      "idlz_heel": 7028.403200000001
     },
     "event": null,
     "full_name": "SR April Koizumi Hanayo",
@@ -21333,10 +21333,10 @@ app.constant('CardData',
   {
     "attribute": "Smile",
     "cScore": {
-      "base": 6877.000000000001,
-      "heel": 6877.000000000001,
-      "idlz": 7597.762500000002,
-      "idlz_heel": 6321.550000000001
+      "base": 6554.240000000001,
+      "heel": 6554.240000000001,
+      "idlz": 6955.648000000001,
+      "idlz_heel": 6955.648000000001
     },
     "event": null,
     "full_name": "SR April Hoshizora Rin",
@@ -21378,10 +21378,10 @@ app.constant('CardData',
   {
     "attribute": "Pure",
     "cScore": {
-      "base": 6903.450000000002,
-      "heel": 6903.450000000002,
-      "idlz": 7628.180000000001,
-      "idlz_heel": 6348.000000000001
+      "base": 6581.836800000001,
+      "heel": 6581.836800000001,
+      "idlz": 6984.499200000001,
+      "idlz_heel": 6984.499200000001
     },
     "event": null,
     "full_name": "SR April Minami Kotori",
@@ -21423,10 +21423,10 @@ app.constant('CardData',
   {
     "attribute": "Pure",
     "cScore": {
-      "base": 6929.9000000000015,
-      "heel": 6929.9000000000015,
-      "idlz": 7659.920000000001,
-      "idlz_heel": 6374.450000000001
+      "base": 6609.433600000001,
+      "heel": 6609.433600000001,
+      "idlz": 7014.604800000001,
+      "idlz_heel": 7014.604800000001
     },
     "event": null,
     "full_name": "SR April Kousaka Honoka",
@@ -21468,10 +21468,10 @@ app.constant('CardData',
   {
     "attribute": "Cool",
     "cScore": {
-      "base": 6731.5250000000015,
-      "heel": 6731.5250000000015,
-      "idlz": 7429.805000000001,
-      "idlz_heel": 6176.075000000001
+      "base": 6402.457600000001,
+      "heel": 6402.457600000001,
+      "idlz": 6796.339200000001,
+      "idlz_heel": 6796.339200000001
     },
     "event": true,
     "full_name": "SR Birdwatching Minami Kotori",
@@ -21513,10 +21513,10 @@ app.constant('CardData',
   {
     "attribute": "Pure",
     "cScore": {
-      "base": 8594.927500000002,
-      "heel": 7181.175000000001,
-      "idlz": 10152.832500000002,
-      "idlz_heel": 8503.675000000001
+      "base": 8152.3456000000015,
+      "heel": 6811.392000000001,
+      "idlz": 9316.428800000002,
+      "idlz_heel": 7814.912000000001
     },
     "event": null,
     "full_name": "UR March Hoshizora Rin",
@@ -21558,10 +21558,10 @@ app.constant('CardData',
   {
     "attribute": "Cool",
     "cScore": {
-      "base": 6903.450000000002,
-      "heel": 6903.450000000002,
-      "idlz": 7628.180000000001,
-      "idlz_heel": 6348.000000000001
+      "base": 6581.836800000001,
+      "heel": 6581.836800000001,
+      "idlz": 6984.499200000001,
+      "idlz_heel": 6984.499200000001
     },
     "event": null,
     "full_name": "SR March Yazawa Nico",
@@ -21603,10 +21603,10 @@ app.constant('CardData',
   {
     "attribute": "Pure",
     "cScore": {
-      "base": 6850.550000000001,
-      "heel": 6850.550000000001,
-      "idlz": 7567.345000000001,
-      "idlz_heel": 6295.100000000001
+      "base": 6526.643200000001,
+      "heel": 6526.643200000001,
+      "idlz": 6926.796800000001,
+      "idlz_heel": 6926.796800000001
     },
     "event": null,
     "full_name": "SR March Nishikino Maki",
@@ -21648,10 +21648,10 @@ app.constant('CardData',
   {
     "attribute": "Smile",
     "cScore": {
-      "base": 6982.800000000001,
-      "heel": 6982.800000000001,
-      "idlz": 7720.755000000001,
-      "idlz_heel": 6427.350000000001
+      "base": 6664.627200000001,
+      "heel": 6664.627200000001,
+      "idlz": 7072.307200000001,
+      "idlz_heel": 7072.307200000001
     },
     "event": null,
     "full_name": "SR March Minami Kotori",
@@ -21693,10 +21693,10 @@ app.constant('CardData',
   {
     "attribute": "Pure",
     "cScore": {
-      "base": 6784.425000000001,
-      "heel": 6784.425000000001,
-      "idlz": 7490.640000000001,
-      "idlz_heel": 6228.975000000001
+      "base": 6457.651200000001,
+      "heel": 6457.651200000001,
+      "idlz": 6854.041600000001,
+      "idlz_heel": 6854.041600000001
     },
     "event": true,
     "full_name": "SR Doll Festival Yazawa Nico",
@@ -21738,10 +21738,10 @@ app.constant('CardData',
   {
     "attribute": "Smile",
     "cScore": {
-      "base": 8610.797500000002,
-      "heel": 7194.4000000000015,
-      "idlz": 10168.702500000001,
-      "idlz_heel": 8516.900000000001
+      "base": 8167.398400000001,
+      "heel": 6823.936000000001,
+      "idlz": 9331.481600000001,
+      "idlz_heel": 7827.456000000001
     },
     "event": null,
     "full_name": "UR March Koizumi Hanayo",
@@ -21783,10 +21783,10 @@ app.constant('CardData',
   {
     "attribute": "Pure",
     "cScore": {
-      "base": 6890.225000000001,
-      "heel": 6890.225000000001,
-      "idlz": 7613.6325000000015,
-      "idlz_heel": 6334.7750000000015
+      "base": 6568.038400000001,
+      "heel": 6568.038400000001,
+      "idlz": 6970.700800000001,
+      "idlz_heel": 6970.700800000001
     },
     "event": null,
     "full_name": "SR March Toujou Nozomi",
@@ -21828,10 +21828,10 @@ app.constant('CardData',
   {
     "attribute": "Cool",
     "cScore": {
-      "base": 6916.675000000001,
-      "heel": 6916.675000000001,
-      "idlz": 7644.050000000001,
-      "idlz_heel": 6361.225000000001
+      "base": 6595.635200000001,
+      "heel": 6595.635200000001,
+      "idlz": 6999.552000000001,
+      "idlz_heel": 6999.552000000001
     },
     "event": null,
     "full_name": "SR March Sonoda Umi",
@@ -21873,10 +21873,10 @@ app.constant('CardData',
   {
     "attribute": "Smile",
     "cScore": {
-      "base": 6956.350000000001,
-      "heel": 6956.350000000001,
-      "idlz": 7690.3375000000015,
-      "idlz_heel": 6400.9000000000015
+      "base": 6637.030400000001,
+      "heel": 6637.030400000001,
+      "idlz": 7043.456000000001,
+      "idlz_heel": 7043.456000000001
     },
     "event": null,
     "full_name": "SR March Ayase Eli",
@@ -21918,10 +21918,10 @@ app.constant('CardData',
   {
     "attribute": "Cool",
     "cScore": {
-      "base": 6863.7750000000015,
-      "heel": 6863.7750000000015,
-      "idlz": 7583.215000000001,
-      "idlz_heel": 6308.325000000001
+      "base": 6540.441600000001,
+      "heel": 6540.441600000001,
+      "idlz": 6941.849600000001,
+      "idlz_heel": 6941.849600000001
     },
     "event": null,
     "full_name": "SR March Kousaka Honoka",
@@ -21963,10 +21963,10 @@ app.constant('CardData',
   {
     "attribute": "Smile",
     "cScore": {
-      "base": 6731.5250000000015,
-      "heel": 6731.5250000000015,
-      "idlz": 7429.805000000001,
-      "idlz_heel": 6176.075000000001
+      "base": 6402.457600000001,
+      "heel": 6402.457600000001,
+      "idlz": 6796.339200000001,
+      "idlz_heel": 6796.339200000001
     },
     "event": true,
     "full_name": "SR Setsubun Nishikino Maki",
@@ -22008,10 +22008,10 @@ app.constant('CardData',
   {
     "attribute": "Pure",
     "cScore": {
-      "base": 8594.927500000002,
-      "heel": 7181.175000000001,
-      "idlz": 10152.832500000002,
-      "idlz_heel": 8503.675000000001
+      "base": 8152.3456000000015,
+      "heel": 6811.392000000001,
+      "idlz": 9316.428800000002,
+      "idlz_heel": 7814.912000000001
     },
     "event": null,
     "full_name": "UR February Nishikino Maki",
@@ -22053,10 +22053,10 @@ app.constant('CardData',
   {
     "attribute": "Smile",
     "cScore": {
-      "base": 7035.700000000002,
-      "heel": 7035.700000000002,
-      "idlz": 7781.590000000001,
-      "idlz_heel": 6480.250000000001
+      "base": 6719.820800000001,
+      "heel": 6719.820800000001,
+      "idlz": 7130.009600000001,
+      "idlz_heel": 7130.009600000001
     },
     "event": null,
     "full_name": "SR February Toujou Nozomi",
@@ -22098,10 +22098,10 @@ app.constant('CardData',
   {
     "attribute": "Cool",
     "cScore": {
-      "base": 6969.575000000002,
-      "heel": 6969.575000000002,
-      "idlz": 7704.885000000001,
-      "idlz_heel": 6414.125000000001
+      "base": 6650.828800000001,
+      "heel": 6650.828800000001,
+      "idlz": 7057.254400000001,
+      "idlz_heel": 7057.254400000001
     },
     "event": null,
     "full_name": "SR February Minami Kotori",
@@ -22143,10 +22143,10 @@ app.constant('CardData',
   {
     "attribute": "Pure",
     "cScore": {
-      "base": 6929.9000000000015,
-      "heel": 6929.9000000000015,
-      "idlz": 7659.920000000001,
-      "idlz_heel": 6374.450000000001
+      "base": 6609.433600000001,
+      "heel": 6609.433600000001,
+      "idlz": 7014.604800000001,
+      "idlz_heel": 7014.604800000001
     },
     "event": null,
     "full_name": "SR February Ayase Eli",
@@ -22188,10 +22188,10 @@ app.constant('CardData',
   {
     "attribute": "Pure",
     "cScore": {
-      "base": 6691.850000000001,
-      "heel": 6691.850000000001,
-      "idlz": 7383.517500000001,
-      "idlz_heel": 6136.4000000000015
+      "base": 6361.062400000001,
+      "heel": 6361.062400000001,
+      "idlz": 6752.435200000001,
+      "idlz_heel": 6752.435200000001
     },
     "event": true,
     "full_name": "SR Fairy Hoshizora Rin",
@@ -22233,10 +22233,10 @@ app.constant('CardData',
   {
     "attribute": "Cool",
     "cScore": {
-      "base": 8534.0925,
-      "heel": 7128.2750000000015,
-      "idlz": 10091.997500000001,
-      "idlz_heel": 8450.775000000001
+      "base": 8094.643200000001,
+      "heel": 6761.216000000001,
+      "idlz": 9258.726400000001,
+      "idlz_heel": 7764.736000000001
     },
     "event": null,
     "full_name": "UR February Yazawa Nico",
@@ -22323,10 +22323,10 @@ app.constant('CardData',
   {
     "attribute": "Pure",
     "cScore": {
-      "base": 6956.350000000001,
-      "heel": 6956.350000000001,
-      "idlz": 7690.3375000000015,
-      "idlz_heel": 6400.9000000000015
+      "base": 6637.030400000001,
+      "heel": 6637.030400000001,
+      "idlz": 7043.456000000001,
+      "idlz_heel": 7043.456000000001
     },
     "event": null,
     "full_name": "SR February Koizumi Hanayo",
@@ -22368,10 +22368,10 @@ app.constant('CardData',
   {
     "attribute": "Cool",
     "cScore": {
-      "base": 6916.675000000001,
-      "heel": 6916.675000000001,
-      "idlz": 7644.050000000001,
-      "idlz_heel": 6361.225000000001
+      "base": 6595.635200000001,
+      "heel": 6595.635200000001,
+      "idlz": 6999.552000000001,
+      "idlz_heel": 6999.552000000001
     },
     "event": null,
     "full_name": "SR February Hoshizora Rin",
@@ -22413,10 +22413,10 @@ app.constant('CardData',
   {
     "attribute": "Smile",
     "cScore": {
-      "base": 6982.800000000001,
-      "heel": 6982.800000000001,
-      "idlz": 7720.755000000001,
-      "idlz_heel": 6427.350000000001
+      "base": 6664.627200000001,
+      "heel": 6664.627200000001,
+      "idlz": 7072.307200000001,
+      "idlz_heel": 7072.307200000001
     },
     "event": null,
     "full_name": "SR February Sonoda Umi",
@@ -22458,10 +22458,10 @@ app.constant('CardData',
   {
     "attribute": "Smile",
     "cScore": {
-      "base": 7009.250000000001,
-      "heel": 7009.250000000001,
-      "idlz": 7751.1725000000015,
-      "idlz_heel": 6453.800000000001
+      "base": 6692.224000000001,
+      "heel": 6692.224000000001,
+      "idlz": 7101.158400000001,
+      "idlz_heel": 7101.158400000001
     },
     "event": null,
     "full_name": "SR February Kousaka Honoka",
@@ -23313,10 +23313,10 @@ app.constant('CardData',
   {
     "attribute": "Cool",
     "cScore": {
-      "base": 6625.725000000001,
-      "heel": 6625.725000000001,
-      "idlz": 7306.812500000001,
-      "idlz_heel": 6070.2750000000015
+      "base": 6292.0704000000005,
+      "heel": 6292.0704000000005,
+      "idlz": 6679.680000000001,
+      "idlz_heel": 6679.680000000001
     },
     "event": true,
     "full_name": "SR Caf\u00e9 Maid Toujou Nozomi",
@@ -23358,10 +23358,10 @@ app.constant('CardData',
   {
     "attribute": "Cool",
     "cScore": {
-      "base": 8518.222500000002,
-      "heel": 7115.050000000001,
-      "idlz": 10076.127500000002,
-      "idlz_heel": 8437.550000000001
+      "base": 8079.590400000001,
+      "heel": 6748.672000000001,
+      "idlz": 9243.673600000002,
+      "idlz_heel": 7752.192000000001
     },
     "event": null,
     "full_name": "UR January Kousaka Honoka",
@@ -23403,10 +23403,10 @@ app.constant('CardData',
   {
     "attribute": "Smile",
     "cScore": {
-      "base": 7022.475000000001,
-      "heel": 7022.475000000001,
-      "idlz": 7767.042500000001,
-      "idlz_heel": 6467.0250000000015
+      "base": 6706.022400000001,
+      "heel": 6706.022400000001,
+      "idlz": 7116.211200000001,
+      "idlz_heel": 7116.211200000001
     },
     "event": null,
     "full_name": "SR January Koizumi Hanayo",
@@ -23448,10 +23448,10 @@ app.constant('CardData',
   {
     "attribute": "Pure",
     "cScore": {
-      "base": 6969.575000000002,
-      "heel": 6969.575000000002,
-      "idlz": 7704.885000000001,
-      "idlz_heel": 6414.125000000001
+      "base": 6650.828800000001,
+      "heel": 6650.828800000001,
+      "idlz": 7057.254400000001,
+      "idlz_heel": 7057.254400000001
     },
     "event": null,
     "full_name": "SR January Nishikino Maki",
@@ -23493,10 +23493,10 @@ app.constant('CardData',
   {
     "attribute": "Cool",
     "cScore": {
-      "base": 6996.0250000000015,
-      "heel": 6996.0250000000015,
-      "idlz": 7736.625000000001,
-      "idlz_heel": 6440.575000000001
+      "base": 6678.425600000001,
+      "heel": 6678.425600000001,
+      "idlz": 7087.360000000001,
+      "idlz_heel": 7087.360000000001
     },
     "event": null,
     "full_name": "SR January Ayase Eli",
@@ -23538,10 +23538,10 @@ app.constant('CardData',
   {
     "attribute": "Smile",
     "cScore": {
-      "base": 6757.975000000001,
-      "heel": 6757.975000000001,
-      "idlz": 7460.222500000002,
-      "idlz_heel": 6202.5250000000015
+      "base": 6430.054400000001,
+      "heel": 6430.054400000001,
+      "idlz": 6825.190400000001,
+      "idlz_heel": 6825.190400000001
     },
     "event": true,
     "full_name": "SR New Year's Food Yazawa Nico",
@@ -23628,10 +23628,10 @@ app.constant('CardData',
   {
     "attribute": "Pure",
     "cScore": {
-      "base": 8580.380000000001,
-      "heel": 7167.950000000002,
-      "idlz": 10138.285000000002,
-      "idlz_heel": 8490.45
+      "base": 8138.547200000001,
+      "heel": 6798.848000000001,
+      "idlz": 9302.630400000002,
+      "idlz_heel": 7802.368000000001
     },
     "event": null,
     "full_name": "UR January Sonoda Umi",
@@ -23673,10 +23673,10 @@ app.constant('CardData',
   {
     "attribute": "Cool",
     "cScore": {
-      "base": 6969.575000000002,
-      "heel": 6969.575000000002,
-      "idlz": 7704.885000000001,
-      "idlz_heel": 6414.125000000001
+      "base": 6650.828800000001,
+      "heel": 6650.828800000001,
+      "idlz": 7057.254400000001,
+      "idlz_heel": 7057.254400000001
     },
     "event": null,
     "full_name": "SR January Yazawa Nico",
@@ -23718,10 +23718,10 @@ app.constant('CardData',
   {
     "attribute": "Smile",
     "cScore": {
-      "base": 6982.800000000001,
-      "heel": 6982.800000000001,
-      "idlz": 7720.755000000001,
-      "idlz_heel": 6427.350000000001
+      "base": 6664.627200000001,
+      "heel": 6664.627200000001,
+      "idlz": 7072.307200000001,
+      "idlz_heel": 7072.307200000001
     },
     "event": null,
     "full_name": "SR January Toujou Nozomi",
@@ -23763,10 +23763,10 @@ app.constant('CardData',
   {
     "attribute": "Smile",
     "cScore": {
-      "base": 6996.0250000000015,
-      "heel": 6996.0250000000015,
-      "idlz": 7736.625000000001,
-      "idlz_heel": 6440.575000000001
+      "base": 6678.425600000001,
+      "heel": 6678.425600000001,
+      "idlz": 7087.360000000001,
+      "idlz_heel": 7087.360000000001
     },
     "event": null,
     "full_name": "SR January Hoshizora Rin",
@@ -23808,10 +23808,10 @@ app.constant('CardData',
   {
     "attribute": "Pure",
     "cScore": {
-      "base": 7035.700000000002,
-      "heel": 7035.700000000002,
-      "idlz": 7781.590000000001,
-      "idlz_heel": 6480.250000000001
+      "base": 6719.820800000001,
+      "heel": 6719.820800000001,
+      "idlz": 7130.009600000001,
+      "idlz_heel": 7130.009600000001
     },
     "event": null,
     "full_name": "SR January Minami Kotori",
@@ -23943,10 +23943,10 @@ app.constant('CardData',
   {
     "attribute": "Pure",
     "cScore": {
-      "base": 6705.075000000001,
-      "heel": 6705.075000000001,
-      "idlz": 7398.065000000001,
-      "idlz_heel": 6149.625000000001
+      "base": 6374.860800000001,
+      "heel": 6374.860800000001,
+      "idlz": 6766.233600000001,
+      "idlz_heel": 6766.233600000001
     },
     "event": true,
     "full_name": "SR Caf\u00e9 Maid Sonoda Umi",
@@ -24033,10 +24033,10 @@ app.constant('CardData',
   {
     "attribute": "Cool",
     "cScore": {
-      "base": 8548.640000000001,
-      "heel": 7141.500000000001,
-      "idlz": 10106.545000000002,
-      "idlz_heel": 8464.000000000002
+      "base": 8108.441600000001,
+      "heel": 6773.760000000001,
+      "idlz": 9272.524800000001,
+      "idlz_heel": 7777.280000000002
     },
     "event": null,
     "full_name": "UR December Toujou Nozomi",
@@ -24078,10 +24078,10 @@ app.constant('CardData',
   {
     "attribute": "Smile",
     "cScore": {
-      "base": 6982.800000000001,
-      "heel": 6982.800000000001,
-      "idlz": 7720.755000000001,
-      "idlz_heel": 6427.350000000001
+      "base": 6664.627200000001,
+      "heel": 6664.627200000001,
+      "idlz": 7072.307200000001,
+      "idlz_heel": 7072.307200000001
     },
     "event": null,
     "full_name": "SR December Koizumi Hanayo",
@@ -24123,10 +24123,10 @@ app.constant('CardData',
   {
     "attribute": "Cool",
     "cScore": {
-      "base": 7009.250000000001,
-      "heel": 7009.250000000001,
-      "idlz": 7751.1725000000015,
-      "idlz_heel": 6453.800000000001
+      "base": 6692.224000000001,
+      "heel": 6692.224000000001,
+      "idlz": 7101.158400000001,
+      "idlz_heel": 7101.158400000001
     },
     "event": null,
     "full_name": "SR December Minami Kotori",
@@ -24168,10 +24168,10 @@ app.constant('CardData',
   {
     "attribute": "Pure",
     "cScore": {
-      "base": 6956.350000000001,
-      "heel": 6956.350000000001,
-      "idlz": 7690.3375000000015,
-      "idlz_heel": 6400.9000000000015
+      "base": 6637.030400000001,
+      "heel": 6637.030400000001,
+      "idlz": 7043.456000000001,
+      "idlz_heel": 7043.456000000001
     },
     "event": null,
     "full_name": "SR December Kousaka Honoka",
@@ -24213,10 +24213,10 @@ app.constant('CardData',
   {
     "attribute": "Cool",
     "cScore": {
-      "base": 6652.175000000001,
-      "heel": 6652.175000000001,
-      "idlz": 7337.230000000001,
-      "idlz_heel": 6096.725000000001
+      "base": 6319.667200000001,
+      "heel": 6319.667200000001,
+      "idlz": 6708.531200000001,
+      "idlz_heel": 6708.531200000001
     },
     "event": true,
     "full_name": "SR Skating Koizumi Hanayo",
@@ -24258,10 +24258,10 @@ app.constant('CardData',
   {
     "attribute": "Pure",
     "cScore": {
-      "base": 8610.797500000002,
-      "heel": 7194.4000000000015,
-      "idlz": 10168.702500000001,
-      "idlz_heel": 8516.900000000001
+      "base": 8167.398400000001,
+      "heel": 6823.936000000001,
+      "idlz": 9331.481600000001,
+      "idlz_heel": 7827.456000000001
     },
     "event": null,
     "full_name": "UR December Ayase Eli",
@@ -24303,10 +24303,10 @@ app.constant('CardData',
   {
     "attribute": "Pure",
     "cScore": {
-      "base": 6982.800000000001,
-      "heel": 6982.800000000001,
-      "idlz": 7720.755000000001,
-      "idlz_heel": 6427.350000000001
+      "base": 6664.627200000001,
+      "heel": 6664.627200000001,
+      "idlz": 7072.307200000001,
+      "idlz_heel": 7072.307200000001
     },
     "event": null,
     "full_name": "SR December Yazawa Nico",
@@ -24348,10 +24348,10 @@ app.constant('CardData',
   {
     "attribute": "Smile",
     "cScore": {
-      "base": 6996.0250000000015,
-      "heel": 6996.0250000000015,
-      "idlz": 7736.625000000001,
-      "idlz_heel": 6440.575000000001
+      "base": 6678.425600000001,
+      "heel": 6678.425600000001,
+      "idlz": 7087.360000000001,
+      "idlz_heel": 7087.360000000001
     },
     "event": null,
     "full_name": "SR December Nishikino Maki",
@@ -24393,10 +24393,10 @@ app.constant('CardData',
   {
     "attribute": "Cool",
     "cScore": {
-      "base": 6969.575000000002,
-      "heel": 6969.575000000002,
-      "idlz": 7704.885000000001,
-      "idlz_heel": 6414.125000000001
+      "base": 6650.828800000001,
+      "heel": 6650.828800000001,
+      "idlz": 7057.254400000001,
+      "idlz_heel": 7057.254400000001
     },
     "event": null,
     "full_name": "SR December Hoshizora Rin",
@@ -24438,10 +24438,10 @@ app.constant('CardData',
   {
     "attribute": "Smile",
     "cScore": {
-      "base": 6943.125000000001,
-      "heel": 6943.125000000001,
-      "idlz": 7674.467500000002,
-      "idlz_heel": 6387.675000000001
+      "base": 6623.232000000001,
+      "heel": 6623.232000000001,
+      "idlz": 7028.403200000001,
+      "idlz_heel": 7028.403200000001
     },
     "event": null,
     "full_name": "SR December Sonoda Umi",
@@ -24528,10 +24528,10 @@ app.constant('CardData',
   {
     "attribute": "Pure",
     "cScore": {
-      "base": 6665.4000000000015,
-      "heel": 6665.4000000000015,
-      "idlz": 7353.100000000001,
-      "idlz_heel": 6109.950000000001
+      "base": 6333.465600000001,
+      "heel": 6333.465600000001,
+      "idlz": 6723.584000000001,
+      "idlz_heel": 6723.584000000001
     },
     "event": true,
     "full_name": "SR Homura Kousaka Honoka",
@@ -24573,10 +24573,10 @@ app.constant('CardData',
   {
     "attribute": "Smile",
     "cScore": {
-      "base": 8564.510000000002,
-      "heel": 7154.725000000001,
-      "idlz": 10122.415,
-      "idlz_heel": 8477.225000000002
+      "base": 8123.494400000001,
+      "heel": 6786.304000000001,
+      "idlz": 9287.5776,
+      "idlz_heel": 7789.824000000001
     },
     "event": null,
     "full_name": "UR November Nishikino Maki",
@@ -24618,10 +24618,10 @@ app.constant('CardData',
   {
     "attribute": "Cool",
     "cScore": {
-      "base": 6890.225000000001,
-      "heel": 6890.225000000001,
-      "idlz": 7613.6325000000015,
-      "idlz_heel": 6334.7750000000015
+      "base": 6568.038400000001,
+      "heel": 6568.038400000001,
+      "idlz": 6970.700800000001,
+      "idlz_heel": 6970.700800000001
     },
     "event": null,
     "full_name": "SR November Toujou Nozomi",
@@ -24663,10 +24663,10 @@ app.constant('CardData',
   {
     "attribute": "Pure",
     "cScore": {
-      "base": 6810.875000000001,
-      "heel": 6810.875000000001,
-      "idlz": 7521.057500000002,
-      "idlz_heel": 6255.425000000001
+      "base": 6485.2480000000005,
+      "heel": 6485.2480000000005,
+      "idlz": 6882.892800000001,
+      "idlz_heel": 6882.892800000001
     },
     "event": null,
     "full_name": "SR November Hoshizora Rin",
@@ -24708,10 +24708,10 @@ app.constant('CardData',
   {
     "attribute": "Smile",
     "cScore": {
-      "base": 6850.550000000001,
-      "heel": 6850.550000000001,
-      "idlz": 7567.345000000001,
-      "idlz_heel": 6295.100000000001
+      "base": 6526.643200000001,
+      "heel": 6526.643200000001,
+      "idlz": 6926.796800000001,
+      "idlz_heel": 6926.796800000001
     },
     "event": null,
     "full_name": "SR November Sonoda Umi",
@@ -24753,10 +24753,10 @@ app.constant('CardData',
   {
     "attribute": "Cool",
     "cScore": {
-      "base": 6691.850000000001,
-      "heel": 6691.850000000001,
-      "idlz": 7383.517500000001,
-      "idlz_heel": 6136.4000000000015
+      "base": 6361.062400000001,
+      "heel": 6361.062400000001,
+      "idlz": 6752.435200000001,
+      "idlz_heel": 6752.435200000001
     },
     "event": true,
     "full_name": "SR Health Committee Minami Kotori",
@@ -24798,10 +24798,10 @@ app.constant('CardData',
   {
     "attribute": "Cool",
     "cScore": {
-      "base": 8580.380000000001,
-      "heel": 7167.950000000002,
-      "idlz": 10138.285000000002,
-      "idlz_heel": 8490.45
+      "base": 8138.547200000001,
+      "heel": 6798.848000000001,
+      "idlz": 9302.630400000002,
+      "idlz_heel": 7802.368000000001
     },
     "event": null,
     "full_name": "UR November Koizumi Hanayo",
@@ -24843,10 +24843,10 @@ app.constant('CardData',
   {
     "attribute": "Pure",
     "cScore": {
-      "base": 6784.425000000001,
-      "heel": 6784.425000000001,
-      "idlz": 7490.640000000001,
-      "idlz_heel": 6228.975000000001
+      "base": 6457.651200000001,
+      "heel": 6457.651200000001,
+      "idlz": 6854.041600000001,
+      "idlz_heel": 6854.041600000001
     },
     "event": null,
     "full_name": "SR November Yazawa Nico",
@@ -24888,10 +24888,10 @@ app.constant('CardData',
   {
     "attribute": "Smile",
     "cScore": {
-      "base": 6824.100000000001,
-      "heel": 6824.100000000001,
-      "idlz": 7536.927500000002,
-      "idlz_heel": 6268.6500000000015
+      "base": 6499.046400000001,
+      "heel": 6499.046400000001,
+      "idlz": 6897.945600000001,
+      "idlz_heel": 6897.945600000001
     },
     "event": null,
     "full_name": "SR November Minami Kotori",
@@ -24933,10 +24933,10 @@ app.constant('CardData',
   {
     "attribute": "Pure",
     "cScore": {
-      "base": 6863.7750000000015,
-      "heel": 6863.7750000000015,
-      "idlz": 7583.215000000001,
-      "idlz_heel": 6308.325000000001
+      "base": 6540.441600000001,
+      "heel": 6540.441600000001,
+      "idlz": 6941.849600000001,
+      "idlz_heel": 6941.849600000001
     },
     "event": null,
     "full_name": "SR November Ayase Eli",
@@ -24978,10 +24978,10 @@ app.constant('CardData',
   {
     "attribute": "Cool",
     "cScore": {
-      "base": 6837.325000000002,
-      "heel": 6837.325000000002,
-      "idlz": 7551.475000000001,
-      "idlz_heel": 6281.875000000001
+      "base": 6512.844800000001,
+      "heel": 6512.844800000001,
+      "idlz": 6911.744000000001,
+      "idlz_heel": 6911.744000000001
     },
     "event": null,
     "full_name": "SR November Kousaka Honoka",
@@ -25023,10 +25023,10 @@ app.constant('CardData',
   {
     "attribute": "Smile",
     "cScore": {
-      "base": 6652.175000000001,
-      "heel": 6652.175000000001,
-      "idlz": 7337.230000000001,
-      "idlz_heel": 6096.725000000001
+      "base": 6319.667200000001,
+      "heel": 6319.667200000001,
+      "idlz": 6708.531200000001,
+      "idlz_heel": 6708.531200000001
     },
     "event": true,
     "full_name": "SR Reading Ayase Eli",
@@ -25068,10 +25068,10 @@ app.constant('CardData',
   {
     "attribute": "Cool",
     "cScore": {
-      "base": 8641.215000000002,
-      "heel": 7220.850000000001,
-      "idlz": 10199.120000000003,
-      "idlz_heel": 8543.350000000002
+      "base": 8196.249600000001,
+      "heel": 6849.024000000001,
+      "idlz": 9360.332800000002,
+      "idlz_heel": 7852.544000000001
     },
     "event": null,
     "full_name": "UR October Hoshizora Rin",
@@ -25113,10 +25113,10 @@ app.constant('CardData',
   {
     "attribute": "Cool",
     "cScore": {
-      "base": 6890.225000000001,
-      "heel": 6890.225000000001,
-      "idlz": 7613.6325000000015,
-      "idlz_heel": 6334.7750000000015
+      "base": 6568.038400000001,
+      "heel": 6568.038400000001,
+      "idlz": 6970.700800000001,
+      "idlz_heel": 6970.700800000001
     },
     "event": null,
     "full_name": "SR October Yazawa Nico",
@@ -25158,10 +25158,10 @@ app.constant('CardData',
   {
     "attribute": "Pure",
     "cScore": {
-      "base": 6877.000000000001,
-      "heel": 6877.000000000001,
-      "idlz": 7597.762500000002,
-      "idlz_heel": 6321.550000000001
+      "base": 6554.240000000001,
+      "heel": 6554.240000000001,
+      "idlz": 6955.648000000001,
+      "idlz_heel": 6955.648000000001
     },
     "event": null,
     "full_name": "SR October Nishikino Maki",
@@ -25203,10 +25203,10 @@ app.constant('CardData',
   {
     "attribute": "Smile",
     "cScore": {
-      "base": 6850.550000000001,
-      "heel": 6850.550000000001,
-      "idlz": 7567.345000000001,
-      "idlz_heel": 6295.100000000001
+      "base": 6526.643200000001,
+      "heel": 6526.643200000001,
+      "idlz": 6926.796800000001,
+      "idlz_heel": 6926.796800000001
     },
     "event": null,
     "full_name": "SR October Minami Kotori",
@@ -25248,10 +25248,10 @@ app.constant('CardData',
   {
     "attribute": "Smile",
     "cScore": {
-      "base": 6625.725000000001,
-      "heel": 6625.725000000001,
-      "idlz": 7306.812500000001,
-      "idlz_heel": 6070.2750000000015
+      "base": 6292.0704000000005,
+      "heel": 6292.0704000000005,
+      "idlz": 6679.680000000001,
+      "idlz_heel": 6679.680000000001
     },
     "event": true,
     "full_name": "SR Caf\u00e9 Maid Nishikino Maki",
@@ -25293,10 +25293,10 @@ app.constant('CardData',
   {
     "attribute": "Pure",
     "cScore": {
-      "base": 8564.510000000002,
-      "heel": 7154.725000000001,
-      "idlz": 10122.415,
-      "idlz_heel": 8477.225000000002
+      "base": 8123.494400000001,
+      "heel": 6786.304000000001,
+      "idlz": 9287.5776,
+      "idlz_heel": 7789.824000000001
     },
     "event": null,
     "full_name": "UR October Kousaka Honoka",
@@ -25338,10 +25338,10 @@ app.constant('CardData',
   {
     "attribute": "Cool",
     "cScore": {
-      "base": 6837.325000000002,
-      "heel": 6837.325000000002,
-      "idlz": 7551.475000000001,
-      "idlz_heel": 6281.875000000001
+      "base": 6512.844800000001,
+      "heel": 6512.844800000001,
+      "idlz": 6911.744000000001,
+      "idlz_heel": 6911.744000000001
     },
     "event": null,
     "full_name": "SR October Koizumi Hanayo",
@@ -25383,10 +25383,10 @@ app.constant('CardData',
   {
     "attribute": "Smile",
     "cScore": {
-      "base": 6863.7750000000015,
-      "heel": 6863.7750000000015,
-      "idlz": 7583.215000000001,
-      "idlz_heel": 6308.325000000001
+      "base": 6540.441600000001,
+      "heel": 6540.441600000001,
+      "idlz": 6941.849600000001,
+      "idlz_heel": 6941.849600000001
     },
     "event": null,
     "full_name": "SR October Toujou Nozomi",
@@ -25428,10 +25428,10 @@ app.constant('CardData',
   {
     "attribute": "Pure",
     "cScore": {
-      "base": 6850.550000000001,
-      "heel": 6850.550000000001,
-      "idlz": 7567.345000000001,
-      "idlz_heel": 6295.100000000001
+      "base": 6526.643200000001,
+      "heel": 6526.643200000001,
+      "idlz": 6926.796800000001,
+      "idlz_heel": 6926.796800000001
     },
     "event": null,
     "full_name": "SR October Sonoda Umi",
@@ -25473,10 +25473,10 @@ app.constant('CardData',
   {
     "attribute": "Smile",
     "cScore": {
-      "base": 6824.100000000001,
-      "heel": 6824.100000000001,
-      "idlz": 7536.927500000002,
-      "idlz_heel": 6268.6500000000015
+      "base": 6499.046400000001,
+      "heel": 6499.046400000001,
+      "idlz": 6897.945600000001,
+      "idlz_heel": 6897.945600000001
     },
     "event": null,
     "full_name": "SR October Ayase Eli",
@@ -25608,10 +25608,10 @@ app.constant('CardData',
   {
     "attribute": "Pure",
     "cScore": {
-      "base": 6371.805000000001,
-      "heel": 6371.805000000001,
-      "idlz": 7030.410000000002,
-      "idlz_heel": 5832.225000000001
+      "base": 6058.752000000001,
+      "heel": 6058.752000000001,
+      "idlz": 6417.510400000001,
+      "idlz_heel": 6417.510400000001
     },
     "event": true,
     "full_name": "SR Moon Viewing Hoshizora Rin",
@@ -25653,10 +25653,10 @@ app.constant('CardData',
   {
     "attribute": "Cool",
     "cScore": {
-      "base": 8548.640000000001,
-      "heel": 7141.500000000001,
-      "idlz": 10106.545000000002,
-      "idlz_heel": 8464.000000000002
+      "base": 8108.441600000001,
+      "heel": 6773.760000000001,
+      "idlz": 9272.524800000001,
+      "idlz_heel": 7777.280000000002
     },
     "event": null,
     "full_name": "UR September Minami Kotori",
@@ -25698,10 +25698,10 @@ app.constant('CardData',
   {
     "attribute": "Cool",
     "cScore": {
-      "base": 6771.200000000001,
-      "heel": 6771.200000000001,
-      "idlz": 7474.770000000001,
-      "idlz_heel": 6215.750000000001
+      "base": 6443.852800000001,
+      "heel": 6443.852800000001,
+      "idlz": 6838.988800000001,
+      "idlz_heel": 6838.988800000001
     },
     "event": null,
     "full_name": "SR September Yazawa Nico",
@@ -25743,10 +25743,10 @@ app.constant('CardData',
   {
     "attribute": "Smile",
     "cScore": {
-      "base": 6810.875000000001,
-      "heel": 6810.875000000001,
-      "idlz": 7521.057500000002,
-      "idlz_heel": 6255.425000000001
+      "base": 6485.2480000000005,
+      "heel": 6485.2480000000005,
+      "idlz": 6882.892800000001,
+      "idlz_heel": 6882.892800000001
     },
     "event": null,
     "full_name": "SR September Koizumi Hanayo",
@@ -25788,10 +25788,10 @@ app.constant('CardData',
   {
     "attribute": "Pure",
     "cScore": {
-      "base": 6784.425000000001,
-      "heel": 6784.425000000001,
-      "idlz": 7490.640000000001,
-      "idlz_heel": 6228.975000000001
+      "base": 6457.651200000001,
+      "heel": 6457.651200000001,
+      "idlz": 6854.041600000001,
+      "idlz_heel": 6854.041600000001
     },
     "event": null,
     "full_name": "SR September Ayase Eli",
@@ -25833,10 +25833,10 @@ app.constant('CardData',
   {
     "attribute": "Cool",
     "cScore": {
-      "base": 6415.447500000001,
-      "heel": 6415.447500000001,
-      "idlz": 7076.697500000001,
-      "idlz_heel": 5871.9000000000015
+      "base": 6096.384000000001,
+      "heel": 6096.384000000001,
+      "idlz": 6461.414400000001,
+      "idlz_heel": 6461.414400000001
     },
     "event": true,
     "full_name": "SR Ghost Story Toujou Nozomi",
@@ -25878,10 +25878,10 @@ app.constant('CardData',
   {
     "attribute": "Smile",
     "cScore": {
-      "base": 8610.797500000002,
-      "heel": 7194.4000000000015,
-      "idlz": 10168.702500000001,
-      "idlz_heel": 8516.900000000001
+      "base": 8167.398400000001,
+      "heel": 6823.936000000001,
+      "idlz": 9331.481600000001,
+      "idlz_heel": 7827.456000000001
     },
     "event": null,
     "full_name": "UR September Sonoda Umi",
@@ -25923,10 +25923,10 @@ app.constant('CardData',
   {
     "attribute": "Cool",
     "cScore": {
-      "base": 6784.425000000001,
-      "heel": 6784.425000000001,
-      "idlz": 7490.640000000001,
-      "idlz_heel": 6228.975000000001
+      "base": 6457.651200000001,
+      "heel": 6457.651200000001,
+      "idlz": 6854.041600000001,
+      "idlz_heel": 6854.041600000001
     },
     "event": null,
     "full_name": "SR September Toujou Nozomi",
@@ -25968,10 +25968,10 @@ app.constant('CardData',
   {
     "attribute": "Smile",
     "cScore": {
-      "base": 6731.5250000000015,
-      "heel": 6731.5250000000015,
-      "idlz": 7429.805000000001,
-      "idlz_heel": 6176.075000000001
+      "base": 6402.457600000001,
+      "heel": 6402.457600000001,
+      "idlz": 6796.339200000001,
+      "idlz_heel": 6796.339200000001
     },
     "event": null,
     "full_name": "SR September Nishikino Maki",
@@ -26013,10 +26013,10 @@ app.constant('CardData',
   {
     "attribute": "Pure",
     "cScore": {
-      "base": 6757.975000000001,
-      "heel": 6757.975000000001,
-      "idlz": 7460.222500000002,
-      "idlz_heel": 6202.5250000000015
+      "base": 6430.054400000001,
+      "heel": 6430.054400000001,
+      "idlz": 6825.190400000001,
+      "idlz_heel": 6825.190400000001
     },
     "event": null,
     "full_name": "SR September Hoshizora Rin",
@@ -26058,10 +26058,10 @@ app.constant('CardData',
   {
     "attribute": "Pure",
     "cScore": {
-      "base": 6705.075000000001,
-      "heel": 6705.075000000001,
-      "idlz": 7398.065000000001,
-      "idlz_heel": 6149.625000000001
+      "base": 6374.860800000001,
+      "heel": 6374.860800000001,
+      "idlz": 6766.233600000001,
+      "idlz_heel": 6766.233600000001
     },
     "event": null,
     "full_name": "SR September Kousaka Honoka",
@@ -26238,10 +26238,10 @@ app.constant('CardData',
   {
     "attribute": "Pure",
     "cScore": {
-      "base": 6586.050000000001,
-      "heel": 6586.050000000001,
-      "idlz": 7260.5250000000015,
-      "idlz_heel": 6030.600000000001
+      "base": 6250.675200000001,
+      "heel": 6250.675200000001,
+      "idlz": 6635.776000000001,
+      "idlz_heel": 6635.776000000001
     },
     "event": true,
     "full_name": "SR Animal Koizumi Hanayo",
@@ -26283,10 +26283,10 @@ app.constant('CardData',
   {
     "attribute": "Smile",
     "cScore": {
-      "base": 8657.085000000001,
-      "heel": 7234.075000000002,
-      "idlz": 10214.990000000002,
-      "idlz_heel": 8556.575
+      "base": 8211.3024,
+      "heel": 6861.568000000001,
+      "idlz": 9375.385600000001,
+      "idlz_heel": 7865.088000000002
     },
     "event": null,
     "full_name": "UR August Toujou Nozomi",
@@ -26328,10 +26328,10 @@ app.constant('CardData',
   {
     "attribute": "Cool",
     "cScore": {
-      "base": 6757.975000000001,
-      "heel": 6757.975000000001,
-      "idlz": 7460.222500000002,
-      "idlz_heel": 6202.5250000000015
+      "base": 6430.054400000001,
+      "heel": 6430.054400000001,
+      "idlz": 6825.190400000001,
+      "idlz_heel": 6825.190400000001
     },
     "event": null,
     "full_name": "SR August Koizumi Hanayo",
@@ -26373,10 +26373,10 @@ app.constant('CardData',
   {
     "attribute": "Pure",
     "cScore": {
-      "base": 6797.6500000000015,
-      "heel": 6797.6500000000015,
-      "idlz": 7506.510000000001,
-      "idlz_heel": 6242.200000000001
+      "base": 6471.449600000001,
+      "heel": 6471.449600000001,
+      "idlz": 6869.094400000001,
+      "idlz_heel": 6869.094400000001
     },
     "event": null,
     "full_name": "SR August Nishikino Maki",
@@ -26418,10 +26418,10 @@ app.constant('CardData',
   {
     "attribute": "Smile",
     "cScore": {
-      "base": 6731.5250000000015,
-      "heel": 6731.5250000000015,
-      "idlz": 7429.805000000001,
-      "idlz_heel": 6176.075000000001
+      "base": 6402.457600000001,
+      "heel": 6402.457600000001,
+      "idlz": 6796.339200000001,
+      "idlz_heel": 6796.339200000001
     },
     "event": null,
     "full_name": "SR August Minami Kotori",
@@ -26463,10 +26463,10 @@ app.constant('CardData',
   {
     "attribute": "Cool",
     "cScore": {
-      "base": 6473.637500000001,
-      "heel": 6473.637500000001,
-      "idlz": 7137.532500000001,
-      "idlz_heel": 5924.800000000001
+      "base": 6146.560000000001,
+      "heel": 6146.560000000001,
+      "idlz": 6519.116800000001,
+      "idlz_heel": 6519.116800000001
     },
     "event": true,
     "full_name": "SR Animal Ayase Eli",
@@ -26508,10 +26508,10 @@ app.constant('CardData',
   {
     "attribute": "Pure",
     "cScore": {
-      "base": 8625.345000000001,
-      "heel": 7207.625000000001,
-      "idlz": 10183.250000000002,
-      "idlz_heel": 8530.125000000002
+      "base": 8181.1968000000015,
+      "heel": 6836.480000000001,
+      "idlz": 9345.28,
+      "idlz_heel": 7840.000000000001
     },
     "event": null,
     "full_name": "UR August Yazawa Nico",
@@ -26553,10 +26553,10 @@ app.constant('CardData',
   {
     "attribute": "Cool",
     "cScore": {
-      "base": 8671.632500000002,
-      "heel": 7247.300000000001,
-      "idlz": 10229.537500000002,
-      "idlz_heel": 8569.800000000001
+      "base": 8225.100800000002,
+      "heel": 6874.112000000001,
+      "idlz": 9389.184000000001,
+      "idlz_heel": 7877.632000000001
     },
     "event": null,
     "full_name": "UR Initial Nishikino Maki",
@@ -26598,10 +26598,10 @@ app.constant('CardData',
   {
     "attribute": "Cool",
     "cScore": {
-      "base": 6718.300000000001,
-      "heel": 6718.300000000001,
-      "idlz": 7413.935000000001,
-      "idlz_heel": 6162.850000000001
+      "base": 6388.659200000001,
+      "heel": 6388.659200000001,
+      "idlz": 6781.286400000001,
+      "idlz_heel": 6781.286400000001
     },
     "event": null,
     "full_name": "SR August Hoshizora Rin",
@@ -26643,10 +26643,10 @@ app.constant('CardData',
   {
     "attribute": "Pure",
     "cScore": {
-      "base": 6837.325000000002,
-      "heel": 6837.325000000002,
-      "idlz": 7551.475000000001,
-      "idlz_heel": 6281.875000000001
+      "base": 6512.844800000001,
+      "heel": 6512.844800000001,
+      "idlz": 6911.744000000001,
+      "idlz_heel": 6911.744000000001
     },
     "event": null,
     "full_name": "SR August Sonoda Umi",
@@ -26688,10 +26688,10 @@ app.constant('CardData',
   {
     "attribute": "Smile",
     "cScore": {
-      "base": 6784.425000000001,
-      "heel": 6784.425000000001,
-      "idlz": 7490.640000000001,
-      "idlz_heel": 6228.975000000001
+      "base": 6457.651200000001,
+      "heel": 6457.651200000001,
+      "idlz": 6854.041600000001,
+      "idlz_heel": 6854.041600000001
     },
     "event": null,
     "full_name": "SR August Ayase Eli",
@@ -26733,10 +26733,10 @@ app.constant('CardData',
   {
     "attribute": "Cool",
     "cScore": {
-      "base": 6744.750000000001,
-      "heel": 6744.750000000001,
-      "idlz": 7444.352500000001,
-      "idlz_heel": 6189.300000000001
+      "base": 6416.256000000001,
+      "heel": 6416.256000000001,
+      "idlz": 6810.137600000001,
+      "idlz_heel": 6810.137600000001
     },
     "event": null,
     "full_name": "SR August Kousaka Honoka",
@@ -27318,10 +27318,10 @@ app.constant('CardData',
   {
     "attribute": "Smile",
     "cScore": {
-      "base": 6546.375000000001,
-      "heel": 6546.375000000001,
-      "idlz": 7214.237500000001,
-      "idlz_heel": 5990.925000000001
+      "base": 6209.280000000001,
+      "heel": 6209.280000000001,
+      "idlz": 6591.872000000001,
+      "idlz_heel": 6591.872000000001
     },
     "event": true,
     "full_name": "SR Animal Kousaka Honoka",
@@ -27363,10 +27363,10 @@ app.constant('CardData',
   {
     "attribute": "Smile",
     "cScore": {
-      "base": 8687.502500000002,
-      "heel": 7260.5250000000015,
-      "idlz": 10245.407500000001,
-      "idlz_heel": 8583.025000000001
+      "base": 8240.153600000001,
+      "heel": 6886.656000000001,
+      "idlz": 9404.2368,
+      "idlz_heel": 7890.176000000001
     },
     "event": null,
     "full_name": "UR Initial Hoshizora Rin",
@@ -27408,10 +27408,10 @@ app.constant('CardData',
   {
     "attribute": "Pure",
     "cScore": {
-      "base": 6810.875000000001,
-      "heel": 6810.875000000001,
-      "idlz": 7521.057500000002,
-      "idlz_heel": 6255.425000000001
+      "base": 6485.2480000000005,
+      "heel": 6485.2480000000005,
+      "idlz": 6882.892800000001,
+      "idlz_heel": 6882.892800000001
     },
     "event": null,
     "full_name": "SR Animal Toujou Nozomi",
@@ -27453,10 +27453,10 @@ app.constant('CardData',
   {
     "attribute": "Cool",
     "cScore": {
-      "base": 6638.950000000001,
-      "heel": 6638.950000000001,
-      "idlz": 7321.3600000000015,
-      "idlz_heel": 6083.500000000001
+      "base": 6305.868800000001,
+      "heel": 6305.868800000001,
+      "idlz": 6693.478400000001,
+      "idlz_heel": 6693.478400000001
     },
     "event": null,
     "full_name": "SR Job Ayase Eli",
@@ -27498,10 +27498,10 @@ app.constant('CardData',
   {
     "attribute": "Pure",
     "cScore": {
-      "base": 8702.050000000001,
-      "heel": 7273.750000000001,
-      "idlz": 10259.955000000002,
-      "idlz_heel": 8596.250000000002
+      "base": 8253.952000000001,
+      "heel": 6899.200000000001,
+      "idlz": 9418.035200000002,
+      "idlz_heel": 7902.720000000001
     },
     "event": null,
     "full_name": "UR Initial Toujou Nozomi",
@@ -27543,10 +27543,10 @@ app.constant('CardData',
   {
     "attribute": "Smile",
     "cScore": {
-      "base": 6625.725000000001,
-      "heel": 6625.725000000001,
-      "idlz": 7306.812500000001,
-      "idlz_heel": 6070.2750000000015
+      "base": 6292.0704000000005,
+      "heel": 6292.0704000000005,
+      "idlz": 6679.680000000001,
+      "idlz_heel": 6679.680000000001
     },
     "event": null,
     "full_name": "SR Job Yazawa Nico",
@@ -27588,10 +27588,10 @@ app.constant('CardData',
   {
     "attribute": "Cool",
     "cScore": {
-      "base": 6652.175000000001,
-      "heel": 6652.175000000001,
-      "idlz": 7337.230000000001,
-      "idlz_heel": 6096.725000000001
+      "base": 6319.667200000001,
+      "heel": 6319.667200000001,
+      "idlz": 6708.531200000001,
+      "idlz_heel": 6708.531200000001
     },
     "event": null,
     "full_name": "SR Animal Nishikino Maki",
@@ -27723,10 +27723,10 @@ app.constant('CardData',
   {
     "attribute": "Cool",
     "cScore": {
-      "base": 8641.215000000002,
-      "heel": 7220.850000000001,
-      "idlz": 10199.120000000003,
-      "idlz_heel": 8543.350000000002
+      "base": 8196.249600000001,
+      "heel": 6849.024000000001,
+      "idlz": 9360.332800000002,
+      "idlz_heel": 7852.544000000001
     },
     "event": null,
     "full_name": "UR Initial Ayase Eli",
@@ -27768,10 +27768,10 @@ app.constant('CardData',
   {
     "attribute": "Smile",
     "cScore": {
-      "base": 6850.550000000001,
-      "heel": 6850.550000000001,
-      "idlz": 7567.345000000001,
-      "idlz_heel": 6295.100000000001
+      "base": 6526.643200000001,
+      "heel": 6526.643200000001,
+      "idlz": 6926.796800000001,
+      "idlz_heel": 6926.796800000001
     },
     "event": null,
     "full_name": "SR Animal Hoshizora Rin",
@@ -27813,10 +27813,10 @@ app.constant('CardData',
   {
     "attribute": "Pure",
     "cScore": {
-      "base": 6678.625000000001,
-      "heel": 6678.625000000001,
-      "idlz": 7367.647500000001,
-      "idlz_heel": 6123.175000000001
+      "base": 6347.264000000001,
+      "heel": 6347.264000000001,
+      "idlz": 6737.382400000001,
+      "idlz_heel": 6737.382400000001
     },
     "event": null,
     "full_name": "SR Job Minami Kotori",
@@ -27858,10 +27858,10 @@ app.constant('CardData',
   {
     "attribute": "Smile",
     "cScore": {
-      "base": 6299.067500000001,
-      "heel": 6299.067500000001,
-      "idlz": 6953.705000000001,
-      "idlz_heel": 5766.100000000001
+      "base": 5996.032000000001,
+      "heel": 5996.032000000001,
+      "idlz": 6344.7552000000005,
+      "idlz_heel": 6344.7552000000005
     },
     "event": true,
     "full_name": "SR Animal Yazawa Nico",
@@ -27903,10 +27903,10 @@ app.constant('CardData',
   {
     "attribute": "Pure",
     "cScore": {
-      "base": 8534.0925,
-      "heel": 7128.2750000000015,
-      "idlz": 10091.997500000001,
-      "idlz_heel": 8450.775000000001
+      "base": 8094.643200000001,
+      "heel": 6761.216000000001,
+      "idlz": 9258.726400000001,
+      "idlz_heel": 7764.736000000001
     },
     "event": null,
     "full_name": "UR Initial Minami Kotori",
@@ -27948,10 +27948,10 @@ app.constant('CardData',
   {
     "attribute": "Smile",
     "cScore": {
-      "base": 6797.6500000000015,
-      "heel": 6797.6500000000015,
-      "idlz": 7506.510000000001,
-      "idlz_heel": 6242.200000000001
+      "base": 6471.449600000001,
+      "heel": 6471.449600000001,
+      "idlz": 6869.094400000001,
+      "idlz_heel": 6869.094400000001
     },
     "event": null,
     "full_name": "SR Job Hoshizora Rin",
@@ -27993,10 +27993,10 @@ app.constant('CardData',
   {
     "attribute": "Cool",
     "cScore": {
-      "base": 6586.050000000001,
-      "heel": 6586.050000000001,
-      "idlz": 7260.5250000000015,
-      "idlz_heel": 6030.600000000001
+      "base": 6250.675200000001,
+      "heel": 6250.675200000001,
+      "idlz": 6635.776000000001,
+      "idlz_heel": 6635.776000000001
     },
     "event": null,
     "full_name": "SR Job Sonoda Umi",
@@ -28083,10 +28083,10 @@ app.constant('CardData',
   {
     "attribute": "Cool",
     "cScore": {
-      "base": 6328.162500000001,
-      "heel": 6328.162500000001,
-      "idlz": 6984.122500000001,
-      "idlz_heel": 5792.550000000001
+      "base": 6021.120000000001,
+      "heel": 6021.120000000001,
+      "idlz": 6373.606400000001,
+      "idlz_heel": 6373.606400000001
     },
     "event": true,
     "full_name": "SR Animal Sonoda Umi",
@@ -28128,10 +28128,10 @@ app.constant('CardData',
   {
     "attribute": "Smile",
     "cScore": {
-      "base": 8580.380000000001,
-      "heel": 7167.950000000002,
-      "idlz": 10138.285000000002,
-      "idlz_heel": 8490.45
+      "base": 8138.547200000001,
+      "heel": 6798.848000000001,
+      "idlz": 9302.630400000002,
+      "idlz_heel": 7802.368000000001
     },
     "event": null,
     "full_name": "UR Initial Kousaka Honoka",
@@ -28173,10 +28173,10 @@ app.constant('CardData',
   {
     "attribute": "Pure",
     "cScore": {
-      "base": 6784.425000000001,
-      "heel": 6784.425000000001,
-      "idlz": 7490.640000000001,
-      "idlz_heel": 6228.975000000001
+      "base": 6457.651200000001,
+      "heel": 6457.651200000001,
+      "idlz": 6854.041600000001,
+      "idlz_heel": 6854.041600000001
     },
     "event": null,
     "full_name": "SR Job Koizumi Hanayo",
@@ -28218,10 +28218,10 @@ app.constant('CardData',
   {
     "attribute": "Cool",
     "cScore": {
-      "base": 6810.875000000001,
-      "heel": 6810.875000000001,
-      "idlz": 7521.057500000002,
-      "idlz_heel": 6255.425000000001
+      "base": 6485.2480000000005,
+      "heel": 6485.2480000000005,
+      "idlz": 6882.892800000001,
+      "idlz_heel": 6882.892800000001
     },
     "event": null,
     "full_name": "SR Job Nishikino Maki",
@@ -28263,10 +28263,10 @@ app.constant('CardData',
   {
     "attribute": "Pure",
     "cScore": {
-      "base": 6255.425000000001,
-      "heel": 6255.425000000001,
-      "idlz": 6907.417500000001,
-      "idlz_heel": 5726.425000000001
+      "base": 5958.400000000001,
+      "heel": 5958.400000000001,
+      "idlz": 6300.851200000001,
+      "idlz_heel": 6300.851200000001
     },
     "event": true,
     "full_name": "SR Animal Minami Kotori",
@@ -28308,10 +28308,10 @@ app.constant('CardData',
   {
     "attribute": "Cool",
     "cScore": {
-      "base": 8625.345000000001,
-      "heel": 7207.625000000001,
-      "idlz": 10183.250000000002,
-      "idlz_heel": 8530.125000000002
+      "base": 8181.1968000000015,
+      "heel": 6836.480000000001,
+      "idlz": 9345.28,
+      "idlz_heel": 7840.000000000001
     },
     "event": null,
     "full_name": "UR Initial Sonoda Umi",
@@ -28353,10 +28353,10 @@ app.constant('CardData',
   {
     "attribute": "Pure",
     "cScore": {
-      "base": 6517.280000000002,
-      "heel": 6517.280000000002,
-      "idlz": 7183.8200000000015,
-      "idlz_heel": 5964.475000000001
+      "base": 6184.192000000001,
+      "heel": 6184.192000000001,
+      "idlz": 6563.020800000001,
+      "idlz_heel": 6563.020800000001
     },
     "event": null,
     "full_name": "SR Job Toujou Nozomi",
@@ -28398,10 +28398,10 @@ app.constant('CardData',
   {
     "attribute": "Smile",
     "cScore": {
-      "base": 6744.750000000001,
-      "heel": 6744.750000000001,
-      "idlz": 7444.352500000001,
-      "idlz_heel": 6189.300000000001
+      "base": 6416.256000000001,
+      "heel": 6416.256000000001,
+      "idlz": 6810.137600000001,
+      "idlz_heel": 6810.137600000001
     },
     "event": null,
     "full_name": "SR Job Kousaka Honoka",
@@ -28533,10 +28533,10 @@ app.constant('CardData',
   {
     "attribute": "Smile",
     "cScore": {
-      "base": 8671.632500000002,
-      "heel": 7247.300000000001,
-      "idlz": 10229.537500000002,
-      "idlz_heel": 8569.800000000001
+      "base": 8225.100800000002,
+      "heel": 6874.112000000001,
+      "idlz": 9389.184000000001,
+      "idlz_heel": 7877.632000000001
     },
     "event": null,
     "full_name": "UR Initial Yazawa Nico",
@@ -28623,10 +28623,10 @@ app.constant('CardData',
   {
     "attribute": "Pure",
     "cScore": {
-      "base": 8594.927500000002,
-      "heel": 7181.175000000001,
-      "idlz": 10152.832500000002,
-      "idlz_heel": 8503.675000000001
+      "base": 8152.3456000000015,
+      "heel": 6811.392000000001,
+      "idlz": 9316.428800000002,
+      "idlz_heel": 7814.912000000001
     },
     "event": null,
     "full_name": "UR Initial Koizumi Hanayo",
@@ -28668,10 +28668,10 @@ app.constant('CardData',
   {
     "attribute": "Smile",
     "cScore": {
-      "base": 6444.542500000001,
-      "heel": 6444.542500000001,
-      "idlz": 7107.115000000002,
-      "idlz_heel": 5898.350000000001
+      "base": 6121.472000000001,
+      "heel": 6121.472000000001,
+      "idlz": 6490.265600000001,
+      "idlz_heel": 6490.265600000001
     },
     "event": null,
     "full_name": "SR Initial Yazawa Nico",
@@ -28713,10 +28713,10 @@ app.constant('CardData',
   {
     "attribute": "Pure",
     "cScore": {
-      "base": 6678.625000000001,
-      "heel": 6678.625000000001,
-      "idlz": 7367.647500000001,
-      "idlz_heel": 6123.175000000001
+      "base": 6347.264000000001,
+      "heel": 6347.264000000001,
+      "idlz": 6737.382400000001,
+      "idlz_heel": 6737.382400000001
     },
     "event": null,
     "full_name": "SR Initial Koizumi Hanayo",
@@ -28758,10 +28758,10 @@ app.constant('CardData',
   {
     "attribute": "Pure",
     "cScore": {
-      "base": 6371.805000000001,
-      "heel": 6371.805000000001,
-      "idlz": 7030.410000000002,
-      "idlz_heel": 5832.225000000001
+      "base": 6058.752000000001,
+      "heel": 6058.752000000001,
+      "idlz": 6417.510400000001,
+      "idlz_heel": 6417.510400000001
     },
     "event": null,
     "full_name": "SR Initial Toujou Nozomi",
@@ -28803,10 +28803,10 @@ app.constant('CardData',
   {
     "attribute": "Cool",
     "cScore": {
-      "base": 6744.750000000001,
-      "heel": 6744.750000000001,
-      "idlz": 7444.352500000001,
-      "idlz_heel": 6189.300000000001
+      "base": 6416.256000000001,
+      "heel": 6416.256000000001,
+      "idlz": 6810.137600000001,
+      "idlz_heel": 6810.137600000001
     },
     "event": null,
     "full_name": "SR Initial Nishikino Maki",
@@ -28848,10 +28848,10 @@ app.constant('CardData',
   {
     "attribute": "Smile",
     "cScore": {
-      "base": 6784.425000000001,
-      "heel": 6784.425000000001,
-      "idlz": 7490.640000000001,
-      "idlz_heel": 6228.975000000001
+      "base": 6457.651200000001,
+      "heel": 6457.651200000001,
+      "idlz": 6854.041600000001,
+      "idlz_heel": 6854.041600000001
     },
     "event": null,
     "full_name": "SR Initial Hoshizora Rin",
@@ -28893,10 +28893,10 @@ app.constant('CardData',
   {
     "attribute": "Cool",
     "cScore": {
-      "base": 6415.447500000001,
-      "heel": 6415.447500000001,
-      "idlz": 7076.697500000001,
-      "idlz_heel": 5871.9000000000015
+      "base": 6096.384000000001,
+      "heel": 6096.384000000001,
+      "idlz": 6461.414400000001,
+      "idlz_heel": 6461.414400000001
     },
     "event": null,
     "full_name": "SR Initial Sonoda Umi",
@@ -28938,10 +28938,10 @@ app.constant('CardData',
   {
     "attribute": "Pure",
     "cScore": {
-      "base": 6638.950000000001,
-      "heel": 6638.950000000001,
-      "idlz": 7321.3600000000015,
-      "idlz_heel": 6083.500000000001
+      "base": 6305.868800000001,
+      "heel": 6305.868800000001,
+      "idlz": 6693.478400000001,
+      "idlz_heel": 6693.478400000001
     },
     "event": null,
     "full_name": "SR Initial Minami Kotori",
@@ -28983,10 +28983,10 @@ app.constant('CardData',
   {
     "attribute": "Cool",
     "cScore": {
-      "base": 6226.330000000001,
-      "heel": 6226.330000000001,
-      "idlz": 6877.000000000001,
-      "idlz_heel": 5699.975000000001
+      "base": 5933.312000000001,
+      "heel": 5933.312000000001,
+      "idlz": 6272.000000000001,
+      "idlz_heel": 6272.000000000001
     },
     "event": null,
     "full_name": "SR Initial Ayase Eli",
@@ -29028,10 +29028,10 @@ app.constant('CardData',
   {
     "attribute": "Smile",
     "cScore": {
-      "base": 6652.175000000001,
-      "heel": 6652.175000000001,
-      "idlz": 7337.230000000001,
-      "idlz_heel": 6096.725000000001
+      "base": 6319.667200000001,
+      "heel": 6319.667200000001,
+      "idlz": 6708.531200000001,
+      "idlz_heel": 6708.531200000001
     },
     "event": null,
     "full_name": "SR Initial Kousaka Honoka",
