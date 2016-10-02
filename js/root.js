@@ -39,11 +39,21 @@ app.constant('InitSong', {
   perfects: .85,
   stars: 65
 })
-app.run(function($rootScope, Typeahead, InitFilters, InitSong, CardData, SongData) {
+app.constant('BaseSkill', {
+    "activation_count": 25,
+    "activation_type": "notes",
+    "activation_percent": .38,
+    "activation_value": 200,
+    "editing": false,
+    "type": "Score Up",
+    "string": "score"
+})
+app.run(function($rootScope, Typeahead, InitFilters, InitSong, CardData, SongData, BaseSkill) {
     $rootScope.Typeahead = angular.copy(Typeahead);
     $rootScope.InitFilters = angular.copy(InitFilters);
     $rootScope.Cards = angular.copy(CardData);
     $rootScope.Song = angular.copy(InitSong);
+    $rootScope.Skill = angular.copy(BaseSkill)
 
 
 });

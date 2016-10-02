@@ -29,7 +29,7 @@ app.controller('SkillCtrl', function($rootScope, $scope, Cards, localStorageServ
             "label": "perfects",
             "id": "perfects"
         }, {
-            "label":"star notes",
+            "label": "star notes",
             "id": "star"
         }, {
             "label": "seconds",
@@ -37,15 +37,8 @@ app.controller('SkillCtrl', function($rootScope, $scope, Cards, localStorageServ
         }]
         $scope.skillSong = $rootScope.Song;
 
-        $scope.skills = [{
-            "activation_count": 25,
-            "activation_type": "notes",
-            "activation_percent": .38,
-            "activation_value": 200,
-            "editing": false,
-            "type": $scope.skillTypes[0].type,
-            "string": $scope.skillTypes[0].string
-        }];
+        $scope.skills = localStorageService.get("skills");
+        if (!$scope.skills) $scope.skills = [$rootScope.Skill];
         calcSkills()
     }
     $scope.init()
@@ -53,21 +46,44 @@ app.controller('SkillCtrl', function($rootScope, $scope, Cards, localStorageServ
     $scope.updateSong = function() {
         localStorageService.set("skillSong", $scope.skillSong);
         calcSkills()
-        console.log($scope.skillSong)
+            // console.log($scope.skillSong)
     }
 
     $scope.editSkill = function(skill) {
-        skill.editing = true;
-    }
-
-    $scope.doneEditing = function(skill) {
+            skill.editing = true;
+        }
+        // $scope.parseInput = function(skill) {
+        //     if (skill.activation_percent > 1) skill.activation_percent = 1
+        //     console.log(skill)
+        // }
+    $scope.saveSkill = function(skill) {
         angular.forEach($scope.skillTypes, function(type) {
             if (skill.type == type.type) skill.string = type.string;
         });
+        calcSkills()
 
         skill.editing = false;
-        //dong some background ajax calling for persistence...
+        localStorageService.set('skills', $scope.skills)
+            //dong some background ajax calling for persistence...
     };
+
+    $scope.addSkill = function() {
+        var newSkill = angular.copy($rootScope.Skill)
+        newSkill.type = $scope.skillTypes[Math.floor(Math.random() * 3)].type
+        newSkill.activation_count = Math.floor(Math.random() * 40 + 10)
+        newSkill.activation_type = $scope.activationTypes[Math.floor(Math.random() * $scope.activationTypes.length)].id
+        newSkill.activation_percent = Math.floor(Math.random() * 80) / 100
+        newSkill.editing = true
+        console.log(newSkill)
+        $scope.skills.push(newSkill)
+    }
+
+    $scope.deleteSkill = function(skill) {
+        var index = $scope.skills.indexOf(skill);
+        if (index > -1) $scope.skills.splice(index, 1);
+        localStorageService.set('skills', $scope.skills)
+
+    }
 
 });
 app.filter('percent', function() {

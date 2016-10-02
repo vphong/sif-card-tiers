@@ -1,10 +1,13 @@
 <style type="text/css">
-    .table td {
-        text-align: left;
-    }
     #edit {
-      cursor: pointer
+        cursor: pointer;
     }
+    .form-inline input,
+    .form-inline select {
+        max-width: 80px;
+        display: inline !important;
+    }
+
 </style>
 <div class="container-fluid" style="margin-top: -10px;">
     <h2>Song Details</h2>
@@ -53,48 +56,72 @@
             <th>Best</th>
             <th></th>
         </thead>
+        <tfoot>
+            <td colspan=20 style="padding-left: 0px; padding-right: 0px">
+                <button type="button" class="btn btn-block btn-sm" style="padding-top: 10px; padding-bottom: 10px" ng-click="addSkill()">
+                    <big>
+                        <i class="fa fa-plus"></i>
+                        Add skill</big>
+                </button>
+            </td>
+        </tfoot>
         <tbody>
-            <tr ng-repeat="skill in skills">
+            <!-- <tr ng-repeat="skill in skills">
                 <td colspan="20">{{skill|json}}</td>
-            </tr>
+            </tr> -->
             <tr ng-repeat="skill in skills">
+
                 <td>
                     <span id="edit" ng-hide="skill.editing" ng-click="editSkill(skill)">{{skill.type}}</span>
-                    <select ng-show="skill.editing" ng-model="skill.type" ng-options="skill.type as skill.type for skill in skillTypes" ng-blur="doneEditing(skill)"/>
+                    <select class="form-control input-sm" style="max-width: 60px;" ng-show="skill.editing" ng-model="skill.type" ng-change="saveSkill(skill)" ng-options="skill.type as skill.type for skill in skillTypes"></select>
                 </td>
-                <td>For every
-                <span id="edit" ng-hide="skill.editing" ng-click="editSkill(skill)">
-                        <b>{{skill.activation_count}}</b>
-                    </span>
-                    <input type="number" ng-show="skill.editing" ng-model="skill.activation_count" ng-blur="doneEditing(skill)">
-                </select>
+                <td style="vertical-align: middle" class="text-left form-inline form-group">
+                    <!-- <form name="form"> -->
+                    <div>
+                        For every
+                        <span id="edit" ng-hide="skill.editing" ng-click="editSkill(skill)">
+                            <b>{{skill.activation_count}}</b>
+                        </span>
+                        <input class="form-control input-sm" type="number" ng-show="skill.editing" ng-model="skill.activation_count">
 
-                <span id="edit" ng-hide="skill.editing" ng-click="editSkill(skill)">
-                    <b>{{skill.activation_type}}</b>,
-                </span>
-                <select ng-show="skill.editing" ng-model="skill.activation_type" ng-options="act.label as act.label for act in activationTypes track by act.id" ng-blur="doneEditing(skill)"></select>
+                        <span id="edit" ng-hide="skill.editing" ng-click="editSkill(skill)">
+                            <b>{{skill.activation_type}}</b>,
+                        </span>
+                        <select class="form-control input-sm" ng-show="skill.editing" ng-model="skill.activation_type" ng-options="act.label as act.label for act in activationTypes track by act.id"></select>
 
-                there is a
-                <span id="edit" ng-hide="skill.editing" ng-click="editSkill(skill)">
-                    <b>{{skill.activation_percent|percent}}</b>
-                </span>
-                <input type="number" ng-show="skill.editing" ng-model="skill.activation_percent" ng-blur="doneEditing(skill)">
-                chance of
-                <span id="edit" ng-hide="skill.editing" ng-click="editSkill(skill)">+<b>{{skill.activation_value}}</b>
-                </span>
-                <input type="number" ng-show="skill.editing" ng-model="skill.activation_value" ng-blur="doneEditing(skill)">
-                {{skill.string}}.
-            </td>
-            <td>{{skill.avg}}</td>
-            <td>{{skill.best}}</td>
-            <td>
-                <button type="button" ng-click="editSkill(skill)" class="btn btn-sm btn-success">
-                    <i class="fa fa-edit fa-2x"></i>
-                </button>
-                <button type="button" ng-click="removeSkill(skill)" class="btn btn-sm btn-danger">
-                    <i class="fa fa-trash fa-2x"></i>
-                </button>
-            </td>
-        </tr>
-    </tbody>
-</table>
+                        there is a
+                        <span id="edit" ng-hide="skill.editing" ng-click="editSkill(skill)">
+                            <b>{{skill.activation_percent|percent}}</b>
+                        </span>
+                        <input class="form-control input-sm" name="percent" min="0" step=".01" type="number" ng-show="skill.editing" ng-model="skill.activation_percent" ng-change="parseInput(skill)">
+                        chance of
+                        <span id="edit" ng-hide="skill.editing" ng-click="editSkill(skill)">+<b>{{skill.activation_value}}</b>
+                        </span>
+                        <div style="max-width: 100px; display: inline-block; vertical-align: middle"><div class="input-group input-group-sm" ng-if="skill.editing">
+                            <span class="input-group-addon">
+                                <i class="fa fa-plus"></i>
+                            </span>
+                            <input class="form-control" type="number" ng-model="skill.activation_value">
+                        </div>
+                      </div>
+                      {{skill.string}}.
+                    </div>
+                    <!-- </form> -->
+                </td>
+                <td>{{skill.avg | number:2}}</td>
+                <td>{{skill.best | number:2}}</td>
+                <td>
+
+                    <button ng-hide="skill.editing" type="button" ng-click="editSkill(skill)" class="btn btn-sm btn-success">
+                        <i class="fa fa-edit fa-2x"></i>
+                    </button>
+                    <button ng-show="skill.editing" type="button" ng-click="saveSkill(skill)" class="btn btn-sm btn-success">
+                        <i class="fa fa-floppy-o fa-2x"></i>
+                    </button>
+                    <button type="button" ng-click="deleteSkill(skill)" class="btn btn-sm btn-danger">
+                        <i class="fa fa-trash fa-2x"></i>
+                    </button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
