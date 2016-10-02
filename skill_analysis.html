@@ -10,7 +10,7 @@
 
 </style>
 <div class="container-fluid" style="margin-top: -10px;">
-    <h2>Song Details</h2>
+    <h3>Song Details</h3>
     <div class="col-xs-3 no-padding" style="padding-left: 3px">
         <div class="input-group input-group-sm">
             <span class="input-group-addon" style="cursor: help" popover-append-to-body="true" popover-trigger="'mouseenter'" popover-placement="top" uib-popover="Number of notes in song for skill evaluation">
@@ -44,17 +44,25 @@
         </div>
     </div>
 
-    <h2>Skill details</h2>
+    <hr/>
+    <!-- <h2>Skill details</h2> -->
 
-    <p>"For every (activation num) (activation type), there is a (activation chance)% chance that (skill type) by (skill contr)"</p>
+    <!-- <p>"For every (activation num) (activation type), there is a (activation chance)% chance that (skill type) by (skill contr)"</p> -->
 
     <table class="table table-striped">
         <thead>
-            <th>Type</th>
-            <th>Details</th>
-            <th>Average</th>
-            <th>Best</th>
-            <th></th>
+            <tr>
+                <th colspan="20">
+                    <h3 class="no-padding">Skills</h3>
+                </th>
+            </tr>
+            <tr>
+                <th>Type</th>
+                <th>Details</th>
+                <th style="cursor: pointer" ng-click="sortBy('avg')">Average</th>
+                <th style="cursor: pointer" ng-click="sortBy('best')">Best</th>
+                <th></th>
+            </tr>
         </thead>
         <tfoot>
             <td colspan=20 style="padding-left: 0px; padding-right: 0px">
@@ -97,14 +105,15 @@
                         chance of
                         <span id="edit" ng-hide="skill.editing" ng-click="editSkill(skill)">+<b>{{skill.activation_value}}</b>
                         </span>
-                        <div style="max-width: 100px; display: inline-block; vertical-align: middle"><div class="input-group input-group-sm" ng-if="skill.editing">
-                            <span class="input-group-addon">
-                                <i class="fa fa-plus"></i>
-                            </span>
-                            <input class="form-control" type="number" ng-model="skill.activation_value">
+                        <div style="max-width: 100px; display: inline-block; vertical-align: middle">
+                            <div class="input-group input-group-sm" ng-if="skill.editing">
+                                <span class="input-group-addon">
+                                    <i class="fa fa-plus"></i>
+                                </span>
+                                <input class="form-control" type="number" ng-model="skill.activation_value">
+                            </div>
                         </div>
-                      </div>
-                      {{skill.string}}.
+                        {{skill.string}}.
                     </div>
                     <!-- </form> -->
                 </td>

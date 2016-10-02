@@ -39,7 +39,16 @@ app.controller('SkillCtrl', function($rootScope, $scope, Cards, localStorageServ
 
         $scope.skills = localStorageService.get("skills");
         if (!$scope.skills) $scope.skills = [$rootScope.Skill];
+
+        $scope.skillSort = localStorageService.get("sort");
+        if (!$scope.skillSort) {
+          $scope.skillSort = {
+            "type": "avg",
+            "desc": true
+          }
+        }
         calcSkills()
+        // localStorageService.clearAll()
     }
     $scope.init()
 
@@ -83,6 +92,12 @@ app.controller('SkillCtrl', function($rootScope, $scope, Cards, localStorageServ
         if (index > -1) $scope.skills.splice(index, 1);
         localStorageService.set('skills', $scope.skills)
 
+    }
+    $scope.sortBy = function(type) {
+      console.log($scope.skillSort)
+      console.log($scope.skills[0])
+        Cards.sortBy($scope.skillSort, false, type)
+        localStorageService.set('sort', $scope.sort)
     }
 
 });
