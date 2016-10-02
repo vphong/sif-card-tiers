@@ -192,7 +192,6 @@ footer.well {
     /*padding-left: 10px;*/
     border-bottom: 2px solid #dfd7ca;
 }
-
 .skill-config-left-col {
     width: 160px;
     text-align: right
@@ -215,4 +214,8 @@ footer.well {
 }
 .dropdown-menu > li > .active {
   background-color: #f8f5f0
+}
+.skillGrid {
+      width: 100%;
+    max-height: 250px;
 }

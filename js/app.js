@@ -1,5 +1,5 @@
 var app = angular.module('tierList', ['ui.bootstrap', 'ui.router.tabs',
-    'bsLoadingOverlay', 'bsLoadingOverlayHttpInterceptor', 'ui.grid',
+    'bsLoadingOverlay', 'bsLoadingOverlayHttpInterceptor', //'ui.grid',
     'ui.router', 'LocalStorageModule', 'fixed.table.header'
 ]);
 
@@ -158,30 +158,32 @@ app.factory('Cards', function($rootScope, $http) {
         return newCards;
     }
 
-    ret.calcSkill = function(cards, song, heel) {
+    ret.calcSkill = function(skill, song) {
+        // for each ~act_count~ ~act_type~, ~act_percent~ chance of ~act_val~
+        var activations = 0;
+        if (skill.activation_type == "perfects") {
+            activations = Math.floor(song.notes * song.perfects / skill.activation_count)
+        } else if (skill.activation_type == "seconds") {
+            activations = Math.floor(song.seconds / skill.activation_count)
+        } else if (skill.activation_type.includes("star")) {
+            activations = Math.floor(song.stars / skill.activation_count)
+        } else { // notes or combo string
+            activations = Math.floor(song.notes / skill.activation_count)
+        }
+        skill.avg = activations * skill.activation_percent * skill.activation_value
+        skill.best = activations * skill.activation_value
+
+        return skill
+
+    }
+    ret.calcSkillAllCards = function(cards, song, heel) {
         var score_up_mod = 0;
         var activations = 0;
 
         angular.forEach(cards, function(card) {
 
-            // for each ~act_count~ ~act_type~, ~act_percent~ chance of ~act_val~
-            // skill value = (# of activation times) * (chance of activation) * (activation value)
-            if (card.skill.activation_type == "perfects") {
-                activations = Math.floor(song.notes * song.perfects / card.skill.activation_count)
-            } else if (card.skill.activation_type == "seconds") {
-                activations = Math.floor(song.seconds / card.skill.activation_count)
-            } else if (card.skill.activation_type.includes("star")) {
-                activations = Math.floor(song.stars / card.skill.activation_count)
-            } else { // notes or combo string
-                activations = Math.floor(song.notes / card.skill.activation_count)
-            }
-            card.skill.avg = activations * card.skill.activation_percent * card.skill.activation_value
-            card.skill.best = activations * card.skill.activation_value
+            card.skill = ret.calcSkill(card.skill, song)
 
-            if (heel && card.skill.type == "Healer" && !card.is_promo) {
-                card.skill.avg *= 270;
-                card.skill.best *= 270;
-            }
 
             // deep copy for score up addition, array for orderBy use
             card.cScore_modded = [angular.copy(card.cScore)]
@@ -247,7 +249,7 @@ app.factory('Cards', function($rootScope, $http) {
 
 
     ret.sortBy = function(sort, idlz, type) {
-      // score type : oScore, oScore.heel, cScore, cScore.heel
+        // score type : oScore, oScore.heel, cScore, cScore.heel
         // temp var for previous sort obj to set sort.desc
         var oldSort = sort;
 
@@ -265,7 +267,7 @@ app.factory('Cards', function($rootScope, $http) {
             sort.type = "non_idolized_maximum_statistics_cool"
         } else {
 
-          // console.log(sort)
+            // console.log(sort)
             // console.log(type)
             if (type == 'cScore') {
                 if (idlz) sort.type = "cScore_modded[0].idlz";
@@ -280,9 +282,8 @@ app.factory('Cards', function($rootScope, $http) {
             } else if (type == 'oScore.heel') {
                 if (idlz) sort.type = "oScore_modded[0].idlz_heel";
                 else sort.type = "oScore_modded[0].heel";
-            }
-            else {
-            sort.type = type;
+            } else {
+                sort.type = type;
             }
 
         }
@@ -314,16 +315,16 @@ app.controller('ChangelogCtrl', function($scope, $uibModal) {
     };
 })
 
-app.directive('master',function () { //declaration; identifier master
+app.directive('master', function() { //declaration; identifier master
     function link(scope, element, attrs) { //scope we are in, element we are bound to, attrs of that element
-      scope.$watch(function(){ //watch any changes to our element
-        scope.style = { //scope variable style, shared with our controller
-            height:(element[0].offsetHeight-55)+'px', //set the height in style to our elements height
-          };
-      });
+        scope.$watch(function() { //watch any changes to our element
+            scope.style = { //scope variable style, shared with our controller
+                height: (element[0].offsetHeight - 55) + 'px', //set the height in style to our elements height
+            };
+        });
     }
-      return {
+    return {
         restrict: 'AE', //describes how we can assign an element to our directive in this case like <div master></div
         link: link // the function to link to our element
-      };
+    };
 });

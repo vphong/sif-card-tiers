@@ -1,3 +1,11 @@
+<style type="text/css">
+    .table td {
+        text-align: left;
+    }
+    #edit {
+      cursor: pointer
+    }
+</style>
 <div class="container-fluid" style="margin-top: -10px;">
     <h2>Song Details</h2>
     <div class="col-xs-3 no-padding" style="padding-left: 3px">
@@ -5,7 +13,7 @@
             <span class="input-group-addon" style="cursor: help" popover-append-to-body="true" popover-trigger="'mouseenter'" popover-placement="top" uib-popover="Number of notes in song for skill evaluation">
                 <i class="fa fa-music"></i>
             </span>
-            <input type="number" class="form-control" ng-model="song.notes" ng-change="updateSong()" popover-trigger="'mouseenter'" placeholder="length (notes)">
+            <input type="number" class="form-control" ng-model="skillSong.notes" ng-change="updateSong()" popover-trigger="'mouseenter'" placeholder="length (notes)">
         </div>
     </div>
     <div class="col-xs-3 no-padding" style="padding-left: 3px">
@@ -13,7 +21,7 @@
             <span class="input-group-addon" style="cursor: help" popover-append-to-body="true" popover-trigger="'mouseenter'" popover-placement="top" uib-popover="Number of seconds in song for skill evaluation">
                 <i class="fa fa-clock-o"></i>
             </span>
-            <input type="number" class="form-control" ng-model="song.seconds" ng-change="updateSong()" popover-trigger="'mouseenter'" placeholder="length (secs)">
+            <input type="number" class="form-control" ng-model="skillSong.seconds" ng-change="updateSong()" popover-trigger="'mouseenter'" placeholder="length (secs)">
         </div>
     </div>
     <div class="col-xs-3 no-padding" style="padding-left: 3px">
@@ -21,7 +29,7 @@
             <span class="input-group-addon" style="cursor: help" popover-append-to-body="true" popover-trigger="'mouseenter'" popover-placement="top" uib-popover="Percent of perfects per song for skill evaluation">
                 <i class="fa fa-bolt"></i>
             </span>
-            <input type="number" class="form-control" ng-model="song.perfects" ng-change="updateSong()" placeholder="% perfects">
+            <input type="number" class="form-control" ng-model="skillSong.perfects" ng-change="updateSong()" placeholder="% perfects">
         </div>
     </div>
     <div class="col-xs-3 no-padding" style="padding-left: 3px">
@@ -29,9 +37,64 @@
             <span class="input-group-addon" style="cursor: help" popover-append-to-body="true" popover-trigger="'mouseenter'" popover-placement="top-right" uib-popover="Number of star notes in song">
                 <i class="fa fa-star"></i>
             </span>
-            <input type="number" class="form-control" ng-model="song.stars" ng-change="updateSong()" placeholder="# star notes">
+            <input type="number" class="form-control" ng-model="skillSong.stars" ng-change="updateSong()" placeholder="# star notes">
         </div>
     </div>
 
     <h2>Skill details</h2>
-</div>
+
+    <p>"For every (activation num) (activation type), there is a (activation chance)% chance that (skill type) by (skill contr)"</p>
+
+    <table class="table table-striped">
+        <thead>
+            <th>Type</th>
+            <th>Details</th>
+            <th>Average</th>
+            <th>Best</th>
+            <th></th>
+        </thead>
+        <tbody>
+            <tr ng-repeat="skill in skills">
+                <td colspan="20">{{skill|json}}</td>
+            </tr>
+            <tr ng-repeat="skill in skills">
+                <td>
+                    <span id="edit" ng-hide="skill.editing" ng-click="editSkill(skill)">{{skill.type}}</span>
+                    <select ng-show="skill.editing" ng-model="skill.type" ng-options="skill.type as skill.type for skill in skillTypes" ng-blur="doneEditing(skill)"/>
+                </td>
+                <td>For every
+                <span id="edit" ng-hide="skill.editing" ng-click="editSkill(skill)">
+                        <b>{{skill.activation_count}}</b>
+                    </span>
+                    <input type="number" ng-show="skill.editing" ng-model="skill.activation_count" ng-blur="doneEditing(skill)">
+                </select>
+
+                <span id="edit" ng-hide="skill.editing" ng-click="editSkill(skill)">
+                    <b>{{skill.activation_type}}</b>,
+                </span>
+                <select ng-show="skill.editing" ng-model="skill.activation_type" ng-options="act.label as act.label for act in activationTypes track by act.id" ng-blur="doneEditing(skill)"></select>
+
+                there is a
+                <span id="edit" ng-hide="skill.editing" ng-click="editSkill(skill)">
+                    <b>{{skill.activation_percent|percent}}</b>
+                </span>
+                <input type="number" ng-show="skill.editing" ng-model="skill.activation_percent" ng-blur="doneEditing(skill)">
+                chance of
+                <span id="edit" ng-hide="skill.editing" ng-click="editSkill(skill)">+<b>{{skill.activation_value}}</b>
+                </span>
+                <input type="number" ng-show="skill.editing" ng-model="skill.activation_value" ng-blur="doneEditing(skill)">
+                {{skill.string}}.
+            </td>
+            <td>{{skill.avg}}</td>
+            <td>{{skill.best}}</td>
+            <td>
+                <button type="button" ng-click="editSkill(skill)" class="btn btn-sm btn-success">
+                    <i class="fa fa-edit fa-2x"></i>
+                </button>
+                <button type="button" ng-click="removeSkill(skill)" class="btn btn-sm btn-danger">
+                    <i class="fa fa-trash fa-2x"></i>
+                </button>
+            </td>
+        </tr>
+    </tbody>
+</table>

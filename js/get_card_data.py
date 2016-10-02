@@ -117,6 +117,8 @@ def skillDetails(card):
                 skillNums['activation_percent'] = float(word.strip("%")) / 100
 
     card['skill'].update(skillNums)
+    if card['is_promo']:
+        logging.info(card['skill']['activation_type'])
     card.pop('skill_details', None)
     # static skill contribution calculation
     # theoretical 550 note, 125 second song with 85% greats and 65 star notes

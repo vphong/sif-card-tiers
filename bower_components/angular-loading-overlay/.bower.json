@@ -28,6 +28,5 @@
   },
   "_source": "https://github.com/bsalex/angular-loading-overlay.git",
   "_target": "^1.1.1",
-  "_originalSource": "angular-loading-overlay",
-  "_direct": true
+  "_originalSource": "angular-loading-overlay"
 }
