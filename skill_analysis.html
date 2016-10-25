@@ -81,7 +81,7 @@
 
                 <td>
                     <span id="edit" ng-hide="skill.editing" ng-click="editSkill(skill)">{{skill.type}}</span>
-                    <select class="form-control input-sm" style="max-width: 60px;" ng-show="skill.editing" ng-model="skill.type" ng-change="saveSkill(skill)" ng-options="skill.type as skill.type for skill in skillTypes"></select>
+                    <select class="form-control input-sm" style="max-width: 60px;" ng-show="skill.editing" ng-model="skill.type" ng-change="saveSkill(skill);setSkillStr(skill)" ng-options="skill as skill.type for skill in skillTypes track by skill.type"></select>
                 </td>
                 <td style="vertical-align: middle" class="text-left form-inline form-group">
                     <!-- <form name="form"> -->

@@ -161,6 +161,7 @@ app.factory('Cards', function($rootScope, $http) {
     ret.calcSkill = function(skill, song) {
         // for each ~act_count~ ~act_type~, ~act_percent~ chance of ~act_val~
         var activations = 0;
+        console.log(song)
         if (skill.activation_type == "perfects") {
             activations = Math.floor(song.notes * song.perfects / skill.activation_count)
         } else if (skill.activation_type == "seconds") {

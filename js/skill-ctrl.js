@@ -2,9 +2,10 @@ app.controller('SkillCtrl', function($rootScope, $scope, Cards, localStorageServ
 
     var calcSkills = function() {
         angular.forEach($scope.skills, function(skill) {
-            Cards.calcSkill(skill, $scope.skillSong)
+            skill = Cards.calcSkill(skill, $scope.skillSong)
         })
         console.log("calculating skills")
+        console.log($scope.skillSong)
     };
 
     $scope.init = function() {
@@ -69,7 +70,8 @@ app.controller('SkillCtrl', function($rootScope, $scope, Cards, localStorageServ
         angular.forEach($scope.skillTypes, function(type) {
             if (skill.type == type.type) skill.string = type.string;
         });
-        calcSkills()
+        skill = Cards.calcSkill(skill, $scope.skillSong)
+        console.log(skill)
 
         skill.editing = false;
         localStorageService.set('skills', $scope.skills)
@@ -83,8 +85,6 @@ app.controller('SkillCtrl', function($rootScope, $scope, Cards, localStorageServ
         newSkill.activation_type = $scope.activationTypes[Math.floor(Math.random() * $scope.activationTypes.length)].id
         newSkill.activation_percent = Math.floor(Math.random() * 80) / 100
         newSkill.editing = true
-        console.log(newSkill)
-        $scope.skills.push(newSkill)
     }
 
     $scope.deleteSkill = function(skill) {
@@ -92,6 +92,11 @@ app.controller('SkillCtrl', function($rootScope, $scope, Cards, localStorageServ
         if (index > -1) $scope.skills.splice(index, 1);
         localStorageService.set('skills', $scope.skills)
 
+    }
+    $scope.setSkillStr = function(skill) {
+      angular.forEach($scope.skillTypes, function(skillType) {
+        if (skill.type == skillType.type) skill.string = skillType.string
+      })
     }
     $scope.sortBy = function(type) {
       console.log($scope.skillSort)
