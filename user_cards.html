@@ -193,7 +193,40 @@
     <div style="border: 1px solid #dfd7ca;border-radius: 3px;position:relative" bs-loading-overlay bs-loading-overlay-reference-id="table">
       <div class="table-container user-table">
         <table class="table table-striped" id="tbl">
-          <thead ng-include src="'table-header.html'"></thead>
+          <thead fix-head>
+            <tr ng-show="filtered.length!=0">
+              <th>Rank</th>
+              <th>Card Name</th>
+              <th>Idolized?</th>
+              <th class="num-header" ng-click="sortBy('id')">ID
+                <i ng-show="userSort.desc && userSort.type=='id'" class="fa fa-chevron-down"></i>
+                <i ng-show="!userSort.desc && userSort.type=='id'" class="fa fa-chevron-up"></i>
+              </th>
+              <th class="num-header" ng-click="sortBy('stat.display')">Stat
+                <i ng-show="userSort.desc && userSort.type == 'stat.display'" class="fa fa-chevron-down"></i>
+                <i ng-show="!userSort.desc && userSort.type == 'stat.display'" class="fa fa-chevron-up"></i>
+              </th>
+              </th>
+              <th class="num-header" style="min-width:100px" ng-click="sortBy('skill.avg')">Skill (Avg)
+                <i ng-show="userSort.desc && userSort.type=='skill.avg'" class="fa fa-chevron-down"></i>
+                <i ng-show="!userSort.desc && userSort.type=='skill.avg'" class="fa fa-chevron-up"></i>
+              </th>
+              <th class="num-header" style="min-width:100px" ng-click="sortBy('skill.best')">Skill (Max)
+                <i ng-show="userSort.desc && userSort.type=='skill.best'" class="fa fa-chevron-down"></i>
+                <i ng-show="!userSort.desc && userSort.type=='skill.best'" class="fa fa-chevron-up"></i>
+              </th>
+              <th style="min-width: 90px">Activated By
+              </th>
+              <th class="num-header" style="min-width:100px" ng-click="sortBy('stat.avg')">Stat + Skill (Avg)
+                <i ng-show="userSort.desc && userSort.type=='stat.avg'" class="fa fa-chevron-down"></i>
+                <i ng-show="!userSort.desc && userSort.type=='stat.avg'" class="fa fa-chevron-up"></i>
+              </th>
+              <th class="num-header" style="min-width:100px" ng-click="sortBy('stat.best')">Stat + Skill (Max)
+                <i ng-show="userSort.desc && userSort.type=='stat.best'" class="fa fa-chevron-down"></i>
+                <i ng-show="!userSort.desc && userSort.type=='stat.best'" class="fa fa-chevron-up"></i>
+              </th>
+            </tr>
+          </thead>
 
 
           <tbody>
@@ -216,7 +249,7 @@
                 <a style="cursor: pointer" ng-click="resetFilters()">Reset filters?</a>
               </td>
             </tr>
-            <tr ng-repeat="card in filtered = (userCards | filter:userSearch) | orderBy:sort.type:sort.desc track by $index" ng-include src="'table-body.html'">
+            <tr ng-repeat="card in filtered = (userCards | filter:userSearch) | orderBy:userSort.type:userSort.desc track by $index" ng-include src="'table-body.html'">
             </tr>
           </tbody>
         </table>
