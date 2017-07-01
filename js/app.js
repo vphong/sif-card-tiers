@@ -240,6 +240,7 @@ app.factory('Cards', function($rootScope, $http, Calculations) {
 
       card.skill.avg = Math.floor(activations * card.skill.percent) * card.skill.amount
       card.skill.best = activations * card.skill.amount
+        console.log(card)
 
       if (card.skill.category == "Perfect Lock" || card.skill.category.includes("Trick")) {
         card.skill.stat_bonus_avg = Calculations.plScoreBonus(card.stat.base, song, card.skill.avg)
