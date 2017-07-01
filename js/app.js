@@ -213,8 +213,11 @@ app.factory('Cards', function($rootScope, $http, Calculations) {
     var calcStatBonus = function (card) {
         var base, bonus = {};
         if (!card.idlz) {
-            base = card.on_attr.base
-        } else base = card.on_attr.idlz
+            base = card.stat.base
+        } else base = card.stat.idlz
+
+        // TODO: delete
+        card.sis = {}
 
         if (!card.equippedSIS) {
             bonus.avg = card.skill.stat_bonus_avg

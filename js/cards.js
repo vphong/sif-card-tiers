@@ -21,10 +21,6 @@ app.constant('CardData',
       "idlz": 0,
       "idlz_heel": 0
     },
-    "on_attr": {
-      "base": 5040,
-      "idlz": 5340
-    },
     "premium": true,
     "rarity": "UR",
     "release_date": "2017-06-30",
@@ -66,10 +62,6 @@ app.constant('CardData',
       "heel": 0,
       "idlz": 0,
       "idlz_heel": 0
-    },
-    "on_attr": {
-      "base": 4880,
-      "idlz": 5180
     },
     "premium": true,
     "rarity": "SSR",
@@ -113,10 +105,6 @@ app.constant('CardData',
       "idlz": 0,
       "idlz_heel": 0
     },
-    "on_attr": {
-      "base": 4650,
-      "idlz": 4930
-    },
     "premium": true,
     "rarity": "SR",
     "release_date": "2017-06-30",
@@ -158,10 +146,6 @@ app.constant('CardData',
       "heel": 0,
       "idlz": 0,
       "idlz_heel": 0
-    },
-    "on_attr": {
-      "base": 4600,
-      "idlz": 4880
     },
     "premium": true,
     "rarity": "SR",
@@ -205,10 +189,6 @@ app.constant('CardData',
       "idlz": 0,
       "idlz_heel": 0
     },
-    "on_attr": {
-      "base": 4700,
-      "idlz": 4980
-    },
     "premium": true,
     "rarity": "SR",
     "release_date": "2017-06-30",
@@ -250,10 +230,6 @@ app.constant('CardData',
       "heel": 0,
       "idlz": 0,
       "idlz_heel": 0
-    },
-    "on_attr": {
-      "base": 4810,
-      "idlz": 5110
     },
     "premium": true,
     "rarity": "SSR",
@@ -297,10 +273,6 @@ app.constant('CardData',
       "idlz": 0,
       "idlz_heel": 0
     },
-    "on_attr": {
-      "base": 4690,
-      "idlz": 4970
-    },
     "premium": true,
     "rarity": "SR",
     "release_date": "2017-06-25",
@@ -342,10 +314,6 @@ app.constant('CardData',
       "heel": 0,
       "idlz": 0,
       "idlz_heel": 0
-    },
-    "on_attr": {
-      "base": 4360,
-      "idlz": 4360
     },
     "premium": false,
     "rarity": "UR",
@@ -389,10 +357,6 @@ app.constant('CardData',
       "idlz": 0,
       "idlz_heel": 0
     },
-    "on_attr": {
-      "base": 4540,
-      "idlz": 4820
-    },
     "premium": false,
     "rarity": "SR",
     "release_date": "2017-06-20",
@@ -434,10 +398,6 @@ app.constant('CardData',
       "heel": 0,
       "idlz": 0,
       "idlz_heel": 0
-    },
-    "on_attr": {
-      "base": 4390,
-      "idlz": 4670
     },
     "premium": false,
     "rarity": "SR",
@@ -481,10 +441,6 @@ app.constant('CardData',
       "idlz": 0,
       "idlz_heel": 0
     },
-    "on_attr": {
-      "base": 5020,
-      "idlz": 5320
-    },
     "premium": true,
     "rarity": "UR",
     "release_date": "2017-06-15",
@@ -526,10 +482,6 @@ app.constant('CardData',
       "heel": 0,
       "idlz": 0,
       "idlz_heel": 0
-    },
-    "on_attr": {
-      "base": 4800,
-      "idlz": 5100
     },
     "premium": true,
     "rarity": "SSR",
@@ -573,10 +525,6 @@ app.constant('CardData',
       "idlz": 0,
       "idlz_heel": 0
     },
-    "on_attr": {
-      "base": 4700,
-      "idlz": 4980
-    },
     "premium": true,
     "rarity": "SR",
     "release_date": "2017-06-15",
@@ -618,10 +566,6 @@ app.constant('CardData',
       "heel": 0,
       "idlz": 0,
       "idlz_heel": 0
-    },
-    "on_attr": {
-      "base": 4690,
-      "idlz": 4970
     },
     "premium": true,
     "rarity": "SR",
@@ -665,10 +609,6 @@ app.constant('CardData',
       "idlz": 0,
       "idlz_heel": 0
     },
-    "on_attr": {
-      "base": 5070,
-      "idlz": 5370
-    },
     "premium": true,
     "rarity": "UR",
     "release_date": "2017-06-10",
@@ -710,10 +650,6 @@ app.constant('CardData',
       "heel": 0,
       "idlz": 0,
       "idlz_heel": 0
-    },
-    "on_attr": {
-      "base": 4680,
-      "idlz": 4960
     },
     "premium": true,
     "rarity": "SR",
@@ -757,10 +693,6 @@ app.constant('CardData',
       "idlz": 0,
       "idlz_heel": 0
     },
-    "on_attr": {
-      "base": 4640,
-      "idlz": 4920
-    },
     "premium": true,
     "rarity": "SR",
     "release_date": "2017-06-10",
@@ -802,10 +734,6 @@ app.constant('CardData',
       "heel": 0,
       "idlz": 0,
       "idlz_heel": 0
-    },
-    "on_attr": {
-      "base": 4490,
-      "idlz": 4770
     },
     "premium": false,
     "rarity": "SR",
@@ -849,10 +777,6 @@ app.constant('CardData',
       "idlz": 0,
       "idlz_heel": 0
     },
-    "on_attr": {
-      "base": 4530,
-      "idlz": 4810
-    },
     "premium": false,
     "rarity": "SR",
     "release_date": "2017-06-05",
@@ -894,10 +818,6 @@ app.constant('CardData',
       "heel": 0,
       "idlz": 0,
       "idlz_heel": 0
-    },
-    "on_attr": {
-      "base": 5070,
-      "idlz": 5370
     },
     "premium": true,
     "rarity": "UR",
@@ -941,10 +861,6 @@ app.constant('CardData',
       "idlz": 0,
       "idlz_heel": 0
     },
-    "on_attr": {
-      "base": 4830,
-      "idlz": 5130
-    },
     "premium": true,
     "rarity": "SSR",
     "release_date": "2017-05-31",
@@ -986,10 +902,6 @@ app.constant('CardData',
       "heel": 0,
       "idlz": 0,
       "idlz_heel": 0
-    },
-    "on_attr": {
-      "base": 4690,
-      "idlz": 4970
     },
     "premium": true,
     "rarity": "SR",
@@ -1033,10 +945,6 @@ app.constant('CardData',
       "idlz": 0,
       "idlz_heel": 0
     },
-    "on_attr": {
-      "base": 4640,
-      "idlz": 4920
-    },
     "premium": true,
     "rarity": "SR",
     "release_date": "2017-05-31",
@@ -1078,10 +986,6 @@ app.constant('CardData',
       "heel": 0,
       "idlz": 0,
       "idlz_heel": 0
-    },
-    "on_attr": {
-      "base": 4640,
-      "idlz": 4920
     },
     "premium": true,
     "rarity": "SR",
@@ -1125,10 +1029,6 @@ app.constant('CardData',
       "idlz": 0,
       "idlz_heel": 0
     },
-    "on_attr": {
-      "base": 4870,
-      "idlz": 5170
-    },
     "premium": true,
     "rarity": "SSR",
     "release_date": "2017-05-25",
@@ -1170,10 +1070,6 @@ app.constant('CardData',
       "heel": 0,
       "idlz": 0,
       "idlz_heel": 0
-    },
-    "on_attr": {
-      "base": 4610,
-      "idlz": 4890
     },
     "premium": true,
     "rarity": "SR",
@@ -1217,10 +1113,6 @@ app.constant('CardData',
       "idlz": 0,
       "idlz_heel": 0
     },
-    "on_attr": {
-      "base": 4410,
-      "idlz": 4690
-    },
     "premium": false,
     "rarity": "SR",
     "release_date": "2017-05-20",
@@ -1262,10 +1154,6 @@ app.constant('CardData',
       "heel": 0,
       "idlz": 0,
       "idlz_heel": 0
-    },
-    "on_attr": {
-      "base": 4530,
-      "idlz": 4810
     },
     "premium": false,
     "rarity": "SR",
@@ -1309,10 +1197,6 @@ app.constant('CardData',
       "idlz": 0,
       "idlz_heel": 0
     },
-    "on_attr": {
-      "base": 5020,
-      "idlz": 5320
-    },
     "premium": true,
     "rarity": "UR",
     "release_date": "2017-05-15",
@@ -1354,10 +1238,6 @@ app.constant('CardData',
       "heel": 0,
       "idlz": 0,
       "idlz_heel": 0
-    },
-    "on_attr": {
-      "base": 4880,
-      "idlz": 5180
     },
     "premium": true,
     "rarity": "SSR",
@@ -1401,10 +1281,6 @@ app.constant('CardData',
       "idlz": 0,
       "idlz_heel": 0
     },
-    "on_attr": {
-      "base": 4630,
-      "idlz": 4910
-    },
     "premium": true,
     "rarity": "SR",
     "release_date": "2017-05-15",
@@ -1446,10 +1322,6 @@ app.constant('CardData',
       "heel": 0,
       "idlz": 0,
       "idlz_heel": 0
-    },
-    "on_attr": {
-      "base": 4690,
-      "idlz": 4970
     },
     "premium": true,
     "rarity": "SR",
@@ -1493,10 +1365,6 @@ app.constant('CardData',
       "idlz": 0,
       "idlz_heel": 0
     },
-    "on_attr": {
-      "base": 5030,
-      "idlz": 5330
-    },
     "premium": true,
     "rarity": "UR",
     "release_date": "2017-05-10",
@@ -1538,10 +1406,6 @@ app.constant('CardData',
       "heel": 0,
       "idlz": 0,
       "idlz_heel": 0
-    },
-    "on_attr": {
-      "base": 4690,
-      "idlz": 4970
     },
     "premium": true,
     "rarity": "SR",
@@ -1585,10 +1449,6 @@ app.constant('CardData',
       "idlz": 0,
       "idlz_heel": 0
     },
-    "on_attr": {
-      "base": 4530,
-      "idlz": 4810
-    },
     "premium": false,
     "rarity": "SR",
     "release_date": "2017-05-05",
@@ -1630,10 +1490,6 @@ app.constant('CardData',
       "heel": 0,
       "idlz": 0,
       "idlz_heel": 0
-    },
-    "on_attr": {
-      "base": 4480,
-      "idlz": 4760
     },
     "premium": false,
     "rarity": "SR",
@@ -1677,10 +1533,6 @@ app.constant('CardData',
       "idlz": 0,
       "idlz_heel": 0
     },
-    "on_attr": {
-      "base": 5040,
-      "idlz": 5340
-    },
     "premium": true,
     "rarity": "UR",
     "release_date": "2017-04-30",
@@ -1722,10 +1574,6 @@ app.constant('CardData',
       "heel": 0,
       "idlz": 0,
       "idlz_heel": 0
-    },
-    "on_attr": {
-      "base": 4800,
-      "idlz": 5100
     },
     "premium": true,
     "rarity": "SSR",
@@ -1769,10 +1617,6 @@ app.constant('CardData',
       "idlz": 0,
       "idlz_heel": 0
     },
-    "on_attr": {
-      "base": 4680,
-      "idlz": 4960
-    },
     "premium": true,
     "rarity": "SR",
     "release_date": "2017-04-30",
@@ -1814,10 +1658,6 @@ app.constant('CardData',
       "heel": 0,
       "idlz": 0,
       "idlz_heel": 0
-    },
-    "on_attr": {
-      "base": 4620,
-      "idlz": 4900
     },
     "premium": true,
     "rarity": "SR",
@@ -1861,10 +1701,6 @@ app.constant('CardData',
       "idlz": 0,
       "idlz_heel": 0
     },
-    "on_attr": {
-      "base": 4700,
-      "idlz": 4980
-    },
     "premium": true,
     "rarity": "SR",
     "release_date": "2017-04-30",
@@ -1906,10 +1742,6 @@ app.constant('CardData',
       "heel": 0,
       "idlz": 0,
       "idlz_heel": 0
-    },
-    "on_attr": {
-      "base": 4800,
-      "idlz": 5100
     },
     "premium": true,
     "rarity": "SSR",
@@ -1953,10 +1785,6 @@ app.constant('CardData',
       "idlz": 0,
       "idlz_heel": 0
     },
-    "on_attr": {
-      "base": 4690,
-      "idlz": 4970
-    },
     "premium": true,
     "rarity": "SR",
     "release_date": "2017-04-25",
@@ -1998,10 +1826,6 @@ app.constant('CardData',
       "heel": 0,
       "idlz": 0,
       "idlz_heel": 0
-    },
-    "on_attr": {
-      "base": 4530,
-      "idlz": 4810
     },
     "premium": false,
     "rarity": "SR",
@@ -2045,10 +1869,6 @@ app.constant('CardData',
       "idlz": 0,
       "idlz_heel": 0
     },
-    "on_attr": {
-      "base": 4490,
-      "idlz": 4770
-    },
     "premium": false,
     "rarity": "SR",
     "release_date": "2017-04-20",
@@ -2090,10 +1910,6 @@ app.constant('CardData',
       "heel": 0,
       "idlz": 0,
       "idlz_heel": 0
-    },
-    "on_attr": {
-      "base": 5050,
-      "idlz": 5350
     },
     "premium": true,
     "rarity": "UR",
@@ -2137,10 +1953,6 @@ app.constant('CardData',
       "idlz": 0,
       "idlz_heel": 0
     },
-    "on_attr": {
-      "base": 4880,
-      "idlz": 5180
-    },
     "premium": true,
     "rarity": "SSR",
     "release_date": "2017-04-15",
@@ -2182,10 +1994,6 @@ app.constant('CardData',
       "heel": 0,
       "idlz": 0,
       "idlz_heel": 0
-    },
-    "on_attr": {
-      "base": 4690,
-      "idlz": 4970
     },
     "premium": true,
     "rarity": "SR",
@@ -2229,10 +2037,6 @@ app.constant('CardData',
       "idlz": 0,
       "idlz_heel": 0
     },
-    "on_attr": {
-      "base": 4600,
-      "idlz": 4880
-    },
     "premium": true,
     "rarity": "SR",
     "release_date": "2017-04-15",
@@ -2274,10 +2078,6 @@ app.constant('CardData',
       "heel": 0,
       "idlz": 0,
       "idlz_heel": 0
-    },
-    "on_attr": {
-      "base": 5030,
-      "idlz": 5330
     },
     "premium": true,
     "rarity": "UR",
@@ -2321,10 +2121,6 @@ app.constant('CardData',
       "idlz": 0,
       "idlz_heel": 0
     },
-    "on_attr": {
-      "base": 4700,
-      "idlz": 4980
-    },
     "premium": true,
     "rarity": "SR",
     "release_date": "2017-04-10",
@@ -2366,10 +2162,6 @@ app.constant('CardData',
       "heel": 0,
       "idlz": 0,
       "idlz_heel": 0
-    },
-    "on_attr": {
-      "base": 4700,
-      "idlz": 4980
     },
     "premium": true,
     "rarity": "SR",
@@ -2413,10 +2205,6 @@ app.constant('CardData',
       "idlz": 0,
       "idlz_heel": 0
     },
-    "on_attr": {
-      "base": 4490,
-      "idlz": 4770
-    },
     "premium": false,
     "rarity": "SR",
     "release_date": "2017-04-05",
@@ -2458,10 +2246,6 @@ app.constant('CardData',
       "heel": 0,
       "idlz": 0,
       "idlz_heel": 0
-    },
-    "on_attr": {
-      "base": 4530,
-      "idlz": 4810
     },
     "premium": false,
     "rarity": "SR",
@@ -2505,10 +2289,6 @@ app.constant('CardData',
       "idlz": 0,
       "idlz_heel": 0
     },
-    "on_attr": {
-      "base": 5010,
-      "idlz": 5310
-    },
     "premium": true,
     "rarity": "UR",
     "release_date": "2017-03-31",
@@ -2550,10 +2330,6 @@ app.constant('CardData',
       "heel": 0,
       "idlz": 0,
       "idlz_heel": 0
-    },
-    "on_attr": {
-      "base": 4880,
-      "idlz": 5180
     },
     "premium": true,
     "rarity": "SSR",
@@ -2597,10 +2373,6 @@ app.constant('CardData',
       "idlz": 0,
       "idlz_heel": 0
     },
-    "on_attr": {
-      "base": 4700,
-      "idlz": 4980
-    },
     "premium": true,
     "rarity": "SR",
     "release_date": "2017-03-31",
@@ -2642,10 +2414,6 @@ app.constant('CardData',
       "heel": 0,
       "idlz": 0,
       "idlz_heel": 0
-    },
-    "on_attr": {
-      "base": 4610,
-      "idlz": 4890
     },
     "premium": true,
     "rarity": "SR",
@@ -2689,10 +2457,6 @@ app.constant('CardData',
       "idlz": 0,
       "idlz_heel": 0
     },
-    "on_attr": {
-      "base": 4690,
-      "idlz": 4970
-    },
     "premium": true,
     "rarity": "SR",
     "release_date": "2017-03-31",
@@ -2734,10 +2498,6 @@ app.constant('CardData',
       "heel": 0,
       "idlz": 0,
       "idlz_heel": 0
-    },
-    "on_attr": {
-      "base": 4790,
-      "idlz": 5090
     },
     "premium": true,
     "rarity": "SSR",
@@ -2781,10 +2541,6 @@ app.constant('CardData',
       "idlz": 0,
       "idlz_heel": 0
     },
-    "on_attr": {
-      "base": 4700,
-      "idlz": 4980
-    },
     "premium": true,
     "rarity": "SR",
     "release_date": "2013-04-16",
@@ -2826,10 +2582,6 @@ app.constant('CardData',
       "heel": 0,
       "idlz": 0,
       "idlz_heel": 0
-    },
-    "on_attr": {
-      "base": 4400,
-      "idlz": 4680
     },
     "premium": false,
     "rarity": "SR",
@@ -2873,10 +2625,6 @@ app.constant('CardData',
       "idlz": 0,
       "idlz_heel": 0
     },
-    "on_attr": {
-      "base": 4530,
-      "idlz": 4810
-    },
     "premium": false,
     "rarity": "SR",
     "release_date": "2017-03-20",
@@ -2918,10 +2666,6 @@ app.constant('CardData',
       "heel": 0,
       "idlz": 0,
       "idlz_heel": 0
-    },
-    "on_attr": {
-      "base": 5020,
-      "idlz": 5320
     },
     "premium": true,
     "rarity": "UR",
@@ -2965,10 +2709,6 @@ app.constant('CardData',
       "idlz": 0,
       "idlz_heel": 0
     },
-    "on_attr": {
-      "base": 4790,
-      "idlz": 5090
-    },
     "premium": true,
     "rarity": "SSR",
     "release_date": "2017-03-15",
@@ -3010,10 +2750,6 @@ app.constant('CardData',
       "heel": 0,
       "idlz": 0,
       "idlz_heel": 0
-    },
-    "on_attr": {
-      "base": 4650,
-      "idlz": 4930
     },
     "premium": true,
     "rarity": "SR",
@@ -3057,10 +2793,6 @@ app.constant('CardData',
       "idlz": 0,
       "idlz_heel": 0
     },
-    "on_attr": {
-      "base": 4690,
-      "idlz": 4970
-    },
     "premium": true,
     "rarity": "SR",
     "release_date": "2017-03-15",
@@ -3102,10 +2834,6 @@ app.constant('CardData',
       "heel": 0,
       "idlz": 0,
       "idlz_heel": 0
-    },
-    "on_attr": {
-      "base": 5050,
-      "idlz": 5350
     },
     "premium": true,
     "rarity": "UR",
@@ -3149,10 +2877,6 @@ app.constant('CardData',
       "idlz": 0,
       "idlz_heel": 0
     },
-    "on_attr": {
-      "base": 4650,
-      "idlz": 4930
-    },
     "premium": true,
     "rarity": "SR",
     "release_date": "2017-03-10",
@@ -3194,10 +2918,6 @@ app.constant('CardData',
       "heel": 0,
       "idlz": 0,
       "idlz_heel": 0
-    },
-    "on_attr": {
-      "base": 4480,
-      "idlz": 4760
     },
     "premium": false,
     "rarity": "SR",
@@ -3241,10 +2961,6 @@ app.constant('CardData',
       "idlz": 0,
       "idlz_heel": 0
     },
-    "on_attr": {
-      "base": 4520,
-      "idlz": 4800
-    },
     "premium": false,
     "rarity": "SR",
     "release_date": "2017-03-05",
@@ -3286,10 +3002,6 @@ app.constant('CardData',
       "heel": 0,
       "idlz": 0,
       "idlz_heel": 0
-    },
-    "on_attr": {
-      "base": 5060,
-      "idlz": 5360
     },
     "premium": true,
     "rarity": "UR",
@@ -3333,10 +3045,6 @@ app.constant('CardData',
       "idlz": 0,
       "idlz_heel": 0
     },
-    "on_attr": {
-      "base": 4800,
-      "idlz": 5100
-    },
     "premium": true,
     "rarity": "SSR",
     "release_date": "2017-02-28",
@@ -3378,10 +3086,6 @@ app.constant('CardData',
       "heel": 0,
       "idlz": 0,
       "idlz_heel": 0
-    },
-    "on_attr": {
-      "base": 4700,
-      "idlz": 4980
     },
     "premium": true,
     "rarity": "SR",
@@ -3425,10 +3129,6 @@ app.constant('CardData',
       "idlz": 0,
       "idlz_heel": 0
     },
-    "on_attr": {
-      "base": 4700,
-      "idlz": 4980
-    },
     "premium": true,
     "rarity": "SR",
     "release_date": "2017-02-28",
@@ -3470,10 +3170,6 @@ app.constant('CardData',
       "heel": 0,
       "idlz": 0,
       "idlz_heel": 0
-    },
-    "on_attr": {
-      "base": 4630,
-      "idlz": 4910
     },
     "premium": true,
     "rarity": "SR",
@@ -3517,10 +3213,6 @@ app.constant('CardData',
       "idlz": 0,
       "idlz_heel": 0
     },
-    "on_attr": {
-      "base": 4830,
-      "idlz": 5130
-    },
     "premium": true,
     "rarity": "SSR",
     "release_date": "2017-02-25",
@@ -3562,10 +3254,6 @@ app.constant('CardData',
       "heel": 0,
       "idlz": 0,
       "idlz_heel": 0
-    },
-    "on_attr": {
-      "base": 4630,
-      "idlz": 4910
     },
     "premium": true,
     "rarity": "SR",
@@ -3609,10 +3297,6 @@ app.constant('CardData',
       "idlz": 0,
       "idlz_heel": 0
     },
-    "on_attr": {
-      "base": 4490,
-      "idlz": 4770
-    },
     "premium": false,
     "rarity": "SR",
     "release_date": "2017-02-20",
@@ -3654,10 +3338,6 @@ app.constant('CardData',
       "heel": 0,
       "idlz": 0,
       "idlz_heel": 0
-    },
-    "on_attr": {
-      "base": 4510,
-      "idlz": 4790
     },
     "premium": false,
     "rarity": "SR",
@@ -3701,10 +3381,6 @@ app.constant('CardData',
       "idlz": 0,
       "idlz_heel": 0
     },
-    "on_attr": {
-      "base": 5040,
-      "idlz": 5340
-    },
     "premium": true,
     "rarity": "UR",
     "release_date": "2017-02-15",
@@ -3746,10 +3422,6 @@ app.constant('CardData',
       "heel": 0,
       "idlz": 0,
       "idlz_heel": 0
-    },
-    "on_attr": {
-      "base": 4790,
-      "idlz": 5090
     },
     "premium": true,
     "rarity": "SSR",
@@ -3793,10 +3465,6 @@ app.constant('CardData',
       "idlz": 0,
       "idlz_heel": 0
     },
-    "on_attr": {
-      "base": 4640,
-      "idlz": 4920
-    },
     "premium": true,
     "rarity": "SR",
     "release_date": "2017-02-15",
@@ -3838,10 +3506,6 @@ app.constant('CardData',
       "heel": 0,
       "idlz": 0,
       "idlz_heel": 0
-    },
-    "on_attr": {
-      "base": 4700,
-      "idlz": 4980
     },
     "premium": true,
     "rarity": "SR",
@@ -3885,10 +3549,6 @@ app.constant('CardData',
       "idlz": 0,
       "idlz_heel": 0
     },
-    "on_attr": {
-      "base": 5020,
-      "idlz": 5320
-    },
     "premium": true,
     "rarity": "UR",
     "release_date": "2017-02-10",
@@ -3930,10 +3590,6 @@ app.constant('CardData',
       "heel": 0,
       "idlz": 0,
       "idlz_heel": 0
-    },
-    "on_attr": {
-      "base": 4610,
-      "idlz": 4890
     },
     "premium": true,
     "rarity": "SR",
@@ -3977,10 +3633,6 @@ app.constant('CardData',
       "idlz": 0,
       "idlz_heel": 0
     },
-    "on_attr": {
-      "base": 4650,
-      "idlz": 4930
-    },
     "premium": true,
     "rarity": "SR",
     "release_date": "2017-02-10",
@@ -4022,10 +3674,6 @@ app.constant('CardData',
       "heel": 0,
       "idlz": 0,
       "idlz_heel": 0
-    },
-    "on_attr": {
-      "base": 4400,
-      "idlz": 4680
     },
     "premium": false,
     "rarity": "SR",
@@ -4069,10 +3717,6 @@ app.constant('CardData',
       "idlz": 0,
       "idlz_heel": 0
     },
-    "on_attr": {
-      "base": 4530,
-      "idlz": 4810
-    },
     "premium": false,
     "rarity": "SR",
     "release_date": "2017-02-05",
@@ -4114,10 +3758,6 @@ app.constant('CardData',
       "heel": 0,
       "idlz": 0,
       "idlz_heel": 0
-    },
-    "on_attr": {
-      "base": 5060,
-      "idlz": 5360
     },
     "premium": true,
     "rarity": "UR",
@@ -4161,10 +3801,6 @@ app.constant('CardData',
       "idlz": 0,
       "idlz_heel": 0
     },
-    "on_attr": {
-      "base": 4880,
-      "idlz": 5180
-    },
     "premium": true,
     "rarity": "SSR",
     "release_date": "2017-01-31",
@@ -4206,10 +3842,6 @@ app.constant('CardData',
       "heel": 0,
       "idlz": 0,
       "idlz_heel": 0
-    },
-    "on_attr": {
-      "base": 4680,
-      "idlz": 4960
     },
     "premium": true,
     "rarity": "SR",
@@ -4253,10 +3885,6 @@ app.constant('CardData',
       "idlz": 0,
       "idlz_heel": 0
     },
-    "on_attr": {
-      "base": 4630,
-      "idlz": 4910
-    },
     "premium": true,
     "rarity": "SR",
     "release_date": "2017-01-31",
@@ -4298,10 +3926,6 @@ app.constant('CardData',
       "heel": 0,
       "idlz": 0,
       "idlz_heel": 0
-    },
-    "on_attr": {
-      "base": 4630,
-      "idlz": 4910
     },
     "premium": true,
     "rarity": "SR",
@@ -4345,10 +3969,6 @@ app.constant('CardData',
       "idlz": 0,
       "idlz_heel": 0
     },
-    "on_attr": {
-      "base": 4790,
-      "idlz": 5090
-    },
     "premium": true,
     "rarity": "SSR",
     "release_date": "2017-01-25",
@@ -4390,10 +4010,6 @@ app.constant('CardData',
       "heel": 0,
       "idlz": 0,
       "idlz_heel": 0
-    },
-    "on_attr": {
-      "base": 4690,
-      "idlz": 4970
     },
     "premium": true,
     "rarity": "SR",
@@ -4437,10 +4053,6 @@ app.constant('CardData',
       "idlz": 0,
       "idlz_heel": 0
     },
-    "on_attr": {
-      "base": 4540,
-      "idlz": 4820
-    },
     "premium": false,
     "rarity": "SR",
     "release_date": "2017-01-20",
@@ -4482,10 +4094,6 @@ app.constant('CardData',
       "heel": 0,
       "idlz": 0,
       "idlz_heel": 0
-    },
-    "on_attr": {
-      "base": 4490,
-      "idlz": 4770
     },
     "premium": false,
     "rarity": "SR",
@@ -4529,10 +4137,6 @@ app.constant('CardData',
       "idlz": 0,
       "idlz_heel": 0
     },
-    "on_attr": {
-      "base": 5030,
-      "idlz": 5330
-    },
     "premium": true,
     "rarity": "UR",
     "release_date": "2017-01-15",
@@ -4574,10 +4178,6 @@ app.constant('CardData',
       "heel": 0,
       "idlz": 0,
       "idlz_heel": 0
-    },
-    "on_attr": {
-      "base": 4870,
-      "idlz": 5170
     },
     "premium": true,
     "rarity": "SSR",
@@ -4621,10 +4221,6 @@ app.constant('CardData',
       "idlz": 0,
       "idlz_heel": 0
     },
-    "on_attr": {
-      "base": 4680,
-      "idlz": 4960
-    },
     "premium": true,
     "rarity": "SR",
     "release_date": "2017-01-15",
@@ -4666,10 +4262,6 @@ app.constant('CardData',
       "heel": 0,
       "idlz": 0,
       "idlz_heel": 0
-    },
-    "on_attr": {
-      "base": 4630,
-      "idlz": 4910
     },
     "premium": true,
     "rarity": "SR",
@@ -4713,10 +4305,6 @@ app.constant('CardData',
       "idlz": 0,
       "idlz_heel": 0
     },
-    "on_attr": {
-      "base": 5070,
-      "idlz": 5370
-    },
     "premium": true,
     "rarity": "UR",
     "release_date": "2017-01-10",
@@ -4758,10 +4346,6 @@ app.constant('CardData',
       "heel": 0,
       "idlz": 0,
       "idlz_heel": 0
-    },
-    "on_attr": {
-      "base": 4600,
-      "idlz": 4880
     },
     "premium": true,
     "rarity": "SR",
@@ -4805,10 +4389,6 @@ app.constant('CardData',
       "idlz": 0,
       "idlz_heel": 0
     },
-    "on_attr": {
-      "base": 4480,
-      "idlz": 4760
-    },
     "premium": false,
     "rarity": "SR",
     "release_date": "2017-01-05",
@@ -4850,10 +4430,6 @@ app.constant('CardData',
       "heel": 0,
       "idlz": 0,
       "idlz_heel": 0
-    },
-    "on_attr": {
-      "base": 4540,
-      "idlz": 4820
     },
     "premium": false,
     "rarity": "SR",
@@ -4897,10 +4473,6 @@ app.constant('CardData',
       "idlz": 0,
       "idlz_heel": 0
     },
-    "on_attr": {
-      "base": 5070,
-      "idlz": 5370
-    },
     "premium": true,
     "rarity": "UR",
     "release_date": "2016-12-31",
@@ -4942,10 +4514,6 @@ app.constant('CardData',
       "heel": 0,
       "idlz": 0,
       "idlz_heel": 0
-    },
-    "on_attr": {
-      "base": 4800,
-      "idlz": 5100
     },
     "premium": true,
     "rarity": "SSR",
@@ -4989,10 +4557,6 @@ app.constant('CardData',
       "idlz": 0,
       "idlz_heel": 0
     },
-    "on_attr": {
-      "base": 4670,
-      "idlz": 4950
-    },
     "premium": true,
     "rarity": "SR",
     "release_date": "2016-12-31",
@@ -5034,10 +4598,6 @@ app.constant('CardData',
       "heel": 0,
       "idlz": 0,
       "idlz_heel": 0
-    },
-    "on_attr": {
-      "base": 4630,
-      "idlz": 4910
     },
     "premium": true,
     "rarity": "SR",
@@ -5081,10 +4641,6 @@ app.constant('CardData',
       "idlz": 0,
       "idlz_heel": 0
     },
-    "on_attr": {
-      "base": 4700,
-      "idlz": 4980
-    },
     "premium": true,
     "rarity": "SR",
     "release_date": "2016-12-31",
@@ -5126,10 +4682,6 @@ app.constant('CardData',
       "heel": 0,
       "idlz": 0,
       "idlz_heel": 0
-    },
-    "on_attr": {
-      "base": 4790,
-      "idlz": 5090
     },
     "premium": true,
     "rarity": "SSR",
@@ -5173,10 +4725,6 @@ app.constant('CardData',
       "idlz": 0,
       "idlz_heel": 0
     },
-    "on_attr": {
-      "base": 4680,
-      "idlz": 4960
-    },
     "premium": true,
     "rarity": "SR",
     "release_date": "2016-12-24",
@@ -5218,10 +4766,6 @@ app.constant('CardData',
       "heel": 0,
       "idlz": 0,
       "idlz_heel": 0
-    },
-    "on_attr": {
-      "base": 4360,
-      "idlz": 4360
     },
     "premium": false,
     "rarity": "UR",
@@ -5265,10 +4809,6 @@ app.constant('CardData',
       "idlz": 0,
       "idlz_heel": 0
     },
-    "on_attr": {
-      "base": 4490,
-      "idlz": 4770
-    },
     "premium": false,
     "rarity": "SR",
     "release_date": "2016-12-20",
@@ -5310,10 +4850,6 @@ app.constant('CardData',
       "heel": 0,
       "idlz": 0,
       "idlz_heel": 0
-    },
-    "on_attr": {
-      "base": 4530,
-      "idlz": 4810
     },
     "premium": false,
     "rarity": "SR",
@@ -5357,10 +4893,6 @@ app.constant('CardData',
       "idlz": 0,
       "idlz_heel": 0
     },
-    "on_attr": {
-      "base": 5020,
-      "idlz": 5320
-    },
     "premium": true,
     "rarity": "UR",
     "release_date": "2016-12-14",
@@ -5402,10 +4934,6 @@ app.constant('CardData',
       "heel": 0,
       "idlz": 0,
       "idlz_heel": 0
-    },
-    "on_attr": {
-      "base": 4790,
-      "idlz": 5090
     },
     "premium": true,
     "rarity": "SSR",
@@ -5449,10 +4977,6 @@ app.constant('CardData',
       "idlz": 0,
       "idlz_heel": 0
     },
-    "on_attr": {
-      "base": 4690,
-      "idlz": 4970
-    },
     "premium": true,
     "rarity": "SR",
     "release_date": "2016-12-14",
@@ -5494,10 +5018,6 @@ app.constant('CardData',
       "heel": 0,
       "idlz": 0,
       "idlz_heel": 0
-    },
-    "on_attr": {
-      "base": 4630,
-      "idlz": 4910
     },
     "premium": true,
     "rarity": "SR",
@@ -5541,10 +5061,6 @@ app.constant('CardData',
       "idlz": 0,
       "idlz_heel": 0
     },
-    "on_attr": {
-      "base": 5010,
-      "idlz": 5310
-    },
     "premium": true,
     "rarity": "UR",
     "release_date": "2016-12-09",
@@ -5586,10 +5102,6 @@ app.constant('CardData',
       "heel": 0,
       "idlz": 0,
       "idlz_heel": 0
-    },
-    "on_attr": {
-      "base": 4700,
-      "idlz": 4980
     },
     "premium": true,
     "rarity": "SR",
@@ -5633,10 +5145,6 @@ app.constant('CardData',
       "idlz": 0,
       "idlz_heel": 0
     },
-    "on_attr": {
-      "base": 4630,
-      "idlz": 4910
-    },
     "premium": true,
     "rarity": "SR",
     "release_date": "2016-12-09",
@@ -5678,10 +5186,6 @@ app.constant('CardData',
       "heel": 0,
       "idlz": 0,
       "idlz_heel": 0
-    },
-    "on_attr": {
-      "base": 4490,
-      "idlz": 4770
     },
     "premium": false,
     "rarity": "SR",
@@ -5725,10 +5229,6 @@ app.constant('CardData',
       "idlz": 0,
       "idlz_heel": 0
     },
-    "on_attr": {
-      "base": 4540,
-      "idlz": 4820
-    },
     "premium": false,
     "rarity": "SR",
     "release_date": "2016-12-05",
@@ -5770,10 +5270,6 @@ app.constant('CardData',
       "heel": 0,
       "idlz": 0,
       "idlz_heel": 0
-    },
-    "on_attr": {
-      "base": 5030,
-      "idlz": 5330
     },
     "premium": true,
     "rarity": "UR",
@@ -5817,10 +5313,6 @@ app.constant('CardData',
       "idlz": 0,
       "idlz_heel": 0
     },
-    "on_attr": {
-      "base": 4820,
-      "idlz": 5120
-    },
     "premium": true,
     "rarity": "SSR",
     "release_date": "2016-11-29",
@@ -5862,10 +5354,6 @@ app.constant('CardData',
       "heel": 0,
       "idlz": 0,
       "idlz_heel": 0
-    },
-    "on_attr": {
-      "base": 4700,
-      "idlz": 4980
     },
     "premium": true,
     "rarity": "SR",
@@ -5909,10 +5397,6 @@ app.constant('CardData',
       "idlz": 0,
       "idlz_heel": 0
     },
-    "on_attr": {
-      "base": 4690,
-      "idlz": 4970
-    },
     "premium": true,
     "rarity": "SR",
     "release_date": "2016-11-29",
@@ -5954,10 +5438,6 @@ app.constant('CardData',
       "heel": 0,
       "idlz": 0,
       "idlz_heel": 0
-    },
-    "on_attr": {
-      "base": 4610,
-      "idlz": 4890
     },
     "premium": true,
     "rarity": "SR",
@@ -6001,10 +5481,6 @@ app.constant('CardData',
       "idlz": 0,
       "idlz_heel": 0
     },
-    "on_attr": {
-      "base": 4800,
-      "idlz": 5100
-    },
     "premium": true,
     "rarity": "SSR",
     "release_date": "2016-11-24",
@@ -6046,10 +5522,6 @@ app.constant('CardData',
       "heel": 0,
       "idlz": 0,
       "idlz_heel": 0
-    },
-    "on_attr": {
-      "base": 4680,
-      "idlz": 4960
     },
     "premium": true,
     "rarity": "SR",
@@ -6093,10 +5565,6 @@ app.constant('CardData',
       "idlz": 0,
       "idlz_heel": 0
     },
-    "on_attr": {
-      "base": 4480,
-      "idlz": 4760
-    },
     "premium": false,
     "rarity": "SR",
     "release_date": "2016-11-20",
@@ -6138,10 +5606,6 @@ app.constant('CardData',
       "heel": 0,
       "idlz": 0,
       "idlz_heel": 0
-    },
-    "on_attr": {
-      "base": 4540,
-      "idlz": 4820
     },
     "premium": false,
     "rarity": "SR",
@@ -6185,10 +5649,6 @@ app.constant('CardData',
       "idlz": 0,
       "idlz_heel": 0
     },
-    "on_attr": {
-      "base": 4360,
-      "idlz": 4360
-    },
     "premium": false,
     "rarity": "UR",
     "release_date": "2016-11-14",
@@ -6230,10 +5690,6 @@ app.constant('CardData',
       "heel": 0,
       "idlz": 0,
       "idlz_heel": 0
-    },
-    "on_attr": {
-      "base": 5030,
-      "idlz": 5330
     },
     "premium": true,
     "rarity": "UR",
@@ -6277,10 +5733,6 @@ app.constant('CardData',
       "idlz": 0,
       "idlz_heel": 0
     },
-    "on_attr": {
-      "base": 4790,
-      "idlz": 5090
-    },
     "premium": true,
     "rarity": "SSR",
     "release_date": "2016-11-14",
@@ -6322,10 +5774,6 @@ app.constant('CardData',
       "heel": 0,
       "idlz": 0,
       "idlz_heel": 0
-    },
-    "on_attr": {
-      "base": 4590,
-      "idlz": 4870
     },
     "premium": true,
     "rarity": "SR",
@@ -6369,10 +5817,6 @@ app.constant('CardData',
       "idlz": 0,
       "idlz_heel": 0
     },
-    "on_attr": {
-      "base": 4690,
-      "idlz": 4970
-    },
     "premium": true,
     "rarity": "SR",
     "release_date": "2016-11-14",
@@ -6414,10 +5858,6 @@ app.constant('CardData',
       "heel": 0,
       "idlz": 0,
       "idlz_heel": 0
-    },
-    "on_attr": {
-      "base": 5010,
-      "idlz": 5310
     },
     "premium": true,
     "rarity": "UR",
@@ -6461,10 +5901,6 @@ app.constant('CardData',
       "idlz": 0,
       "idlz_heel": 0
     },
-    "on_attr": {
-      "base": 4700,
-      "idlz": 4980
-    },
     "premium": true,
     "rarity": "SR",
     "release_date": "2016-11-09",
@@ -6506,10 +5942,6 @@ app.constant('CardData',
       "heel": 0,
       "idlz": 0,
       "idlz_heel": 0
-    },
-    "on_attr": {
-      "base": 4490,
-      "idlz": 4770
     },
     "premium": false,
     "rarity": "SR",
@@ -6553,10 +5985,6 @@ app.constant('CardData',
       "idlz": 0,
       "idlz_heel": 0
     },
-    "on_attr": {
-      "base": 4540,
-      "idlz": 4820
-    },
     "premium": false,
     "rarity": "SR",
     "release_date": "2016-11-05",
@@ -6598,10 +6026,6 @@ app.constant('CardData',
       "heel": 0,
       "idlz": 0,
       "idlz_heel": 0
-    },
-    "on_attr": {
-      "base": 5020,
-      "idlz": 5320
     },
     "premium": true,
     "rarity": "UR",
@@ -6645,10 +6069,6 @@ app.constant('CardData',
       "idlz": 0,
       "idlz_heel": 0
     },
-    "on_attr": {
-      "base": 4790,
-      "idlz": 5090
-    },
     "premium": true,
     "rarity": "SSR",
     "release_date": "2016-10-31",
@@ -6690,10 +6110,6 @@ app.constant('CardData',
       "heel": 0,
       "idlz": 0,
       "idlz_heel": 0
-    },
-    "on_attr": {
-      "base": 4700,
-      "idlz": 4980
     },
     "premium": true,
     "rarity": "SR",
@@ -6737,10 +6153,6 @@ app.constant('CardData',
       "idlz": 0,
       "idlz_heel": 0
     },
-    "on_attr": {
-      "base": 4680,
-      "idlz": 4960
-    },
     "premium": true,
     "rarity": "SR",
     "release_date": "2016-10-31",
@@ -6782,10 +6194,6 @@ app.constant('CardData',
       "heel": 0,
       "idlz": 0,
       "idlz_heel": 0
-    },
-    "on_attr": {
-      "base": 4620,
-      "idlz": 4900
     },
     "premium": true,
     "rarity": "SR",
@@ -6829,10 +6237,6 @@ app.constant('CardData',
       "idlz": 0,
       "idlz_heel": 0
     },
-    "on_attr": {
-      "base": 4800,
-      "idlz": 5100
-    },
     "premium": true,
     "rarity": "SSR",
     "release_date": "2016-10-25",
@@ -6874,10 +6278,6 @@ app.constant('CardData',
       "heel": 0,
       "idlz": 0,
       "idlz_heel": 0
-    },
-    "on_attr": {
-      "base": 4660,
-      "idlz": 4940
     },
     "premium": true,
     "rarity": "SR",
@@ -6921,10 +6321,6 @@ app.constant('CardData',
       "idlz": 0,
       "idlz_heel": 0
     },
-    "on_attr": {
-      "base": 4540,
-      "idlz": 4820
-    },
     "premium": false,
     "rarity": "SR",
     "release_date": "2016-10-20",
@@ -6966,10 +6362,6 @@ app.constant('CardData',
       "heel": 0,
       "idlz": 0,
       "idlz_heel": 0
-    },
-    "on_attr": {
-      "base": 4480,
-      "idlz": 4760
     },
     "premium": false,
     "rarity": "SR",
@@ -7013,10 +6405,6 @@ app.constant('CardData',
       "idlz": 0,
       "idlz_heel": 0
     },
-    "on_attr": {
-      "base": 5020,
-      "idlz": 5320
-    },
     "premium": true,
     "rarity": "UR",
     "release_date": "2016-10-15",
@@ -7058,10 +6446,6 @@ app.constant('CardData',
       "heel": 0,
       "idlz": 0,
       "idlz_heel": 0
-    },
-    "on_attr": {
-      "base": 4790,
-      "idlz": 5090
     },
     "premium": true,
     "rarity": "SSR",
@@ -7105,10 +6489,6 @@ app.constant('CardData',
       "idlz": 0,
       "idlz_heel": 0
     },
-    "on_attr": {
-      "base": 4690,
-      "idlz": 4970
-    },
     "premium": true,
     "rarity": "SR",
     "release_date": "2016-10-15",
@@ -7150,10 +6530,6 @@ app.constant('CardData',
       "heel": 0,
       "idlz": 0,
       "idlz_heel": 0
-    },
-    "on_attr": {
-      "base": 4670,
-      "idlz": 4950
     },
     "premium": true,
     "rarity": "SR",
@@ -7197,10 +6573,6 @@ app.constant('CardData',
       "idlz": 0,
       "idlz_heel": 0
     },
-    "on_attr": {
-      "base": 5030,
-      "idlz": 5330
-    },
     "premium": true,
     "rarity": "UR",
     "release_date": "2016-10-10",
@@ -7242,10 +6614,6 @@ app.constant('CardData',
       "heel": 0,
       "idlz": 0,
       "idlz_heel": 0
-    },
-    "on_attr": {
-      "base": 4640,
-      "idlz": 4920
     },
     "premium": true,
     "rarity": "SR",
@@ -7289,10 +6657,6 @@ app.constant('CardData',
       "idlz": 0,
       "idlz_heel": 0
     },
-    "on_attr": {
-      "base": 4700,
-      "idlz": 4980
-    },
     "premium": true,
     "rarity": "SR",
     "release_date": "2016-10-10",
@@ -7334,10 +6698,6 @@ app.constant('CardData',
       "heel": 0,
       "idlz": 0,
       "idlz_heel": 0
-    },
-    "on_attr": {
-      "base": 4400,
-      "idlz": 4680
     },
     "premium": false,
     "rarity": "SR",
@@ -7381,10 +6741,6 @@ app.constant('CardData',
       "idlz": 0,
       "idlz_heel": 0
     },
-    "on_attr": {
-      "base": 4540,
-      "idlz": 4820
-    },
     "premium": false,
     "rarity": "SR",
     "release_date": "2016-10-05",
@@ -7426,10 +6782,6 @@ app.constant('CardData',
       "heel": 0,
       "idlz": 0,
       "idlz_heel": 0
-    },
-    "on_attr": {
-      "base": 5030,
-      "idlz": 5330
     },
     "premium": true,
     "rarity": "UR",
@@ -7473,10 +6825,6 @@ app.constant('CardData',
       "idlz": 0,
       "idlz_heel": 0
     },
-    "on_attr": {
-      "base": 4790,
-      "idlz": 5090
-    },
     "premium": true,
     "rarity": "SSR",
     "release_date": "2016-09-30",
@@ -7518,10 +6866,6 @@ app.constant('CardData',
       "heel": 0,
       "idlz": 0,
       "idlz_heel": 0
-    },
-    "on_attr": {
-      "base": 4670,
-      "idlz": 4950
     },
     "premium": true,
     "rarity": "SR",
@@ -7565,10 +6909,6 @@ app.constant('CardData',
       "idlz": 0,
       "idlz_heel": 0
     },
-    "on_attr": {
-      "base": 4690,
-      "idlz": 4970
-    },
     "premium": true,
     "rarity": "SR",
     "release_date": "2016-09-30",
@@ -7610,10 +6950,6 @@ app.constant('CardData',
       "heel": 0,
       "idlz": 0,
       "idlz_heel": 0
-    },
-    "on_attr": {
-      "base": 4600,
-      "idlz": 4880
     },
     "premium": true,
     "rarity": "SR",
@@ -7657,10 +6993,6 @@ app.constant('CardData',
       "idlz": 0,
       "idlz_heel": 0
     },
-    "on_attr": {
-      "base": 4800,
-      "idlz": 5100
-    },
     "premium": true,
     "rarity": "SSR",
     "release_date": "2016-09-25",
@@ -7702,10 +7034,6 @@ app.constant('CardData',
       "heel": 0,
       "idlz": 0,
       "idlz_heel": 0
-    },
-    "on_attr": {
-      "base": 4670,
-      "idlz": 4950
     },
     "premium": true,
     "rarity": "SR",
@@ -7749,10 +7077,6 @@ app.constant('CardData',
       "idlz": 0,
       "idlz_heel": 0
     },
-    "on_attr": {
-      "base": 4540,
-      "idlz": 4820
-    },
     "premium": false,
     "rarity": "SR",
     "release_date": "2016-09-20",
@@ -7794,10 +7118,6 @@ app.constant('CardData',
       "heel": 0,
       "idlz": 0,
       "idlz_heel": 0
-    },
-    "on_attr": {
-      "base": 4480,
-      "idlz": 4760
     },
     "premium": false,
     "rarity": "SR",
@@ -7841,10 +7161,6 @@ app.constant('CardData',
       "idlz": 0,
       "idlz_heel": 0
     },
-    "on_attr": {
-      "base": 5080,
-      "idlz": 5380
-    },
     "premium": true,
     "rarity": "UR",
     "release_date": "2016-09-15",
@@ -7886,10 +7202,6 @@ app.constant('CardData',
       "heel": 0,
       "idlz": 0,
       "idlz_heel": 0
-    },
-    "on_attr": {
-      "base": 4840,
-      "idlz": 5140
     },
     "premium": true,
     "rarity": "SSR",
@@ -7933,10 +7245,6 @@ app.constant('CardData',
       "idlz": 0,
       "idlz_heel": 0
     },
-    "on_attr": {
-      "base": 4640,
-      "idlz": 4920
-    },
     "premium": true,
     "rarity": "SR",
     "release_date": "2016-09-15",
@@ -7978,10 +7286,6 @@ app.constant('CardData',
       "heel": 0,
       "idlz": 0,
       "idlz_heel": 0
-    },
-    "on_attr": {
-      "base": 4700,
-      "idlz": 4980
     },
     "premium": true,
     "rarity": "SR",
@@ -8025,10 +7329,6 @@ app.constant('CardData',
       "idlz": 0,
       "idlz_heel": 0
     },
-    "on_attr": {
-      "base": 5070,
-      "idlz": 5370
-    },
     "premium": true,
     "rarity": "UR",
     "release_date": "2016-09-15",
@@ -8070,10 +7370,6 @@ app.constant('CardData',
       "heel": 0,
       "idlz": 0,
       "idlz_heel": 0
-    },
-    "on_attr": {
-      "base": 4630,
-      "idlz": 4910
     },
     "premium": true,
     "rarity": "SR",
@@ -8117,10 +7413,6 @@ app.constant('CardData',
       "idlz": 0,
       "idlz_heel": 0
     },
-    "on_attr": {
-      "base": 4530,
-      "idlz": 4810
-    },
     "premium": false,
     "rarity": "SR",
     "release_date": "2016-09-05",
@@ -8162,10 +7454,6 @@ app.constant('CardData',
       "heel": 0,
       "idlz": 0,
       "idlz_heel": 0
-    },
-    "on_attr": {
-      "base": 4400,
-      "idlz": 4680
     },
     "premium": false,
     "rarity": "SR",
@@ -8209,10 +7497,6 @@ app.constant('CardData',
       "idlz": 0,
       "idlz_heel": 0
     },
-    "on_attr": {
-      "base": 5040,
-      "idlz": 5340
-    },
     "premium": true,
     "rarity": "UR",
     "release_date": "2016-08-31",
@@ -8254,10 +7538,6 @@ app.constant('CardData',
       "heel": 0,
       "idlz": 0,
       "idlz_heel": 0
-    },
-    "on_attr": {
-      "base": 4790,
-      "idlz": 5090
     },
     "premium": true,
     "rarity": "SSR",
@@ -8301,10 +7581,6 @@ app.constant('CardData',
       "idlz": 0,
       "idlz_heel": 0
     },
-    "on_attr": {
-      "base": 4670,
-      "idlz": 4950
-    },
     "premium": true,
     "rarity": "SR",
     "release_date": "2016-08-31",
@@ -8346,10 +7622,6 @@ app.constant('CardData',
       "heel": 0,
       "idlz": 0,
       "idlz_heel": 0
-    },
-    "on_attr": {
-      "base": 4690,
-      "idlz": 4970
     },
     "premium": true,
     "rarity": "SR",
@@ -8393,10 +7665,6 @@ app.constant('CardData',
       "idlz": 0,
       "idlz_heel": 0
     },
-    "on_attr": {
-      "base": 4650,
-      "idlz": 4930
-    },
     "premium": true,
     "rarity": "SR",
     "release_date": "2016-08-31",
@@ -8438,10 +7706,6 @@ app.constant('CardData',
       "heel": 0,
       "idlz": 0,
       "idlz_heel": 0
-    },
-    "on_attr": {
-      "base": 4870,
-      "idlz": 5170
     },
     "premium": true,
     "rarity": "SSR",
@@ -8485,10 +7749,6 @@ app.constant('CardData',
       "idlz": 0,
       "idlz_heel": 0
     },
-    "on_attr": {
-      "base": 4630,
-      "idlz": 4910
-    },
     "premium": true,
     "rarity": "SR",
     "release_date": "2016-08-20",
@@ -8530,10 +7790,6 @@ app.constant('CardData',
       "heel": 0,
       "idlz": 0,
       "idlz_heel": 0
-    },
-    "on_attr": {
-      "base": 4410,
-      "idlz": 4690
     },
     "premium": false,
     "rarity": "SR",
@@ -8577,10 +7833,6 @@ app.constant('CardData',
       "idlz": 0,
       "idlz_heel": 0
     },
-    "on_attr": {
-      "base": 4530,
-      "idlz": 4810
-    },
     "premium": false,
     "rarity": "SR",
     "release_date": "2016-08-20",
@@ -8622,10 +7874,6 @@ app.constant('CardData',
       "heel": 0,
       "idlz": 0,
       "idlz_heel": 0
-    },
-    "on_attr": {
-      "base": 5020,
-      "idlz": 5320
     },
     "premium": true,
     "rarity": "UR",
@@ -8669,10 +7917,6 @@ app.constant('CardData',
       "idlz": 0,
       "idlz_heel": 0
     },
-    "on_attr": {
-      "base": 4800,
-      "idlz": 5100
-    },
     "premium": true,
     "rarity": "SSR",
     "release_date": "2016-08-15",
@@ -8714,10 +7958,6 @@ app.constant('CardData',
       "heel": 0,
       "idlz": 0,
       "idlz_heel": 0
-    },
-    "on_attr": {
-      "base": 4620,
-      "idlz": 4900
     },
     "premium": true,
     "rarity": "SR",
@@ -8761,10 +8001,6 @@ app.constant('CardData',
       "idlz": 0,
       "idlz_heel": 0
     },
-    "on_attr": {
-      "base": 4680,
-      "idlz": 4960
-    },
     "premium": true,
     "rarity": "SR",
     "release_date": "2016-08-15",
@@ -8806,10 +8042,6 @@ app.constant('CardData',
       "heel": 0,
       "idlz": 0,
       "idlz_heel": 0
-    },
-    "on_attr": {
-      "base": 5030,
-      "idlz": 5330
     },
     "premium": true,
     "rarity": "UR",
@@ -8853,10 +8085,6 @@ app.constant('CardData',
       "idlz": 0,
       "idlz_heel": 0
     },
-    "on_attr": {
-      "base": 4640,
-      "idlz": 4920
-    },
     "premium": true,
     "rarity": "SR",
     "release_date": "2016-08-08",
@@ -8898,10 +8126,6 @@ app.constant('CardData',
       "heel": 0,
       "idlz": 0,
       "idlz_heel": 0
-    },
-    "on_attr": {
-      "base": 4690,
-      "idlz": 4970
     },
     "premium": true,
     "rarity": "SR",
@@ -8945,10 +8169,6 @@ app.constant('CardData',
       "idlz": 0,
       "idlz_heel": 0
     },
-    "on_attr": {
-      "base": 4490,
-      "idlz": 4770
-    },
     "premium": false,
     "rarity": "SR",
     "release_date": "2016-08-05",
@@ -8990,10 +8210,6 @@ app.constant('CardData',
       "heel": 0,
       "idlz": 0,
       "idlz_heel": 0
-    },
-    "on_attr": {
-      "base": 4440,
-      "idlz": 4720
     },
     "premium": false,
     "rarity": "SR",
@@ -9037,10 +8253,6 @@ app.constant('CardData',
       "idlz": 0,
       "idlz_heel": 0
     },
-    "on_attr": {
-      "base": 5040,
-      "idlz": 5340
-    },
     "premium": true,
     "rarity": "UR",
     "release_date": "2016-07-31",
@@ -9082,10 +8294,6 @@ app.constant('CardData',
       "heel": 0,
       "idlz": 0,
       "idlz_heel": 0
-    },
-    "on_attr": {
-      "base": 4800,
-      "idlz": 5100
     },
     "premium": true,
     "rarity": "SSR",
@@ -9129,10 +8337,6 @@ app.constant('CardData',
       "idlz": 0,
       "idlz_heel": 0
     },
-    "on_attr": {
-      "base": 4670,
-      "idlz": 4950
-    },
     "premium": true,
     "rarity": "SR",
     "release_date": "2016-07-31",
@@ -9174,10 +8378,6 @@ app.constant('CardData',
       "heel": 0,
       "idlz": 0,
       "idlz_heel": 0
-    },
-    "on_attr": {
-      "base": 4630,
-      "idlz": 4910
     },
     "premium": true,
     "rarity": "SR",
@@ -9221,10 +8421,6 @@ app.constant('CardData',
       "idlz": 0,
       "idlz_heel": 0
     },
-    "on_attr": {
-      "base": 4670,
-      "idlz": 4950
-    },
     "premium": true,
     "rarity": "SR",
     "release_date": "2016-07-31",
@@ -9266,10 +8462,6 @@ app.constant('CardData',
       "heel": 0,
       "idlz": 0,
       "idlz_heel": 0
-    },
-    "on_attr": {
-      "base": 4470,
-      "idlz": 4750
     },
     "premium": false,
     "rarity": "SR",
@@ -9313,10 +8505,6 @@ app.constant('CardData',
       "idlz": 0,
       "idlz_heel": 0
     },
-    "on_attr": {
-      "base": 4530,
-      "idlz": 4810
-    },
     "premium": false,
     "rarity": "SR",
     "release_date": "2016-07-20",
@@ -9358,10 +8546,6 @@ app.constant('CardData',
       "heel": 0,
       "idlz": 0,
       "idlz_heel": 0
-    },
-    "on_attr": {
-      "base": 5030,
-      "idlz": 5330
     },
     "premium": true,
     "rarity": "UR",
@@ -9405,10 +8589,6 @@ app.constant('CardData',
       "idlz": 0,
       "idlz_heel": 0
     },
-    "on_attr": {
-      "base": 4700,
-      "idlz": 4980
-    },
     "premium": true,
     "rarity": "SR",
     "release_date": "2016-07-15",
@@ -9450,10 +8630,6 @@ app.constant('CardData',
       "heel": 0,
       "idlz": 0,
       "idlz_heel": 0
-    },
-    "on_attr": {
-      "base": 4660,
-      "idlz": 4940
     },
     "premium": true,
     "rarity": "SR",
@@ -9497,10 +8673,6 @@ app.constant('CardData',
       "idlz": 0,
       "idlz_heel": 0
     },
-    "on_attr": {
-      "base": 4620,
-      "idlz": 4900
-    },
     "premium": true,
     "rarity": "SR",
     "release_date": "2016-07-15",
@@ -9542,10 +8714,6 @@ app.constant('CardData',
       "heel": 0,
       "idlz": 0,
       "idlz_heel": 0
-    },
-    "on_attr": {
-      "base": 4530,
-      "idlz": 4810
     },
     "premium": false,
     "rarity": "SR",
@@ -9589,10 +8757,6 @@ app.constant('CardData',
       "idlz": 0,
       "idlz_heel": 0
     },
-    "on_attr": {
-      "base": 4480,
-      "idlz": 4760
-    },
     "premium": false,
     "rarity": "SR",
     "release_date": "2016-07-05",
@@ -9634,10 +8798,6 @@ app.constant('CardData',
       "heel": 0,
       "idlz": 0,
       "idlz_heel": 0
-    },
-    "on_attr": {
-      "base": 5030,
-      "idlz": 5330
     },
     "premium": true,
     "rarity": "UR",
@@ -9681,10 +8841,6 @@ app.constant('CardData',
       "idlz": 0,
       "idlz_heel": 0
     },
-    "on_attr": {
-      "base": 5050,
-      "idlz": 5350
-    },
     "premium": true,
     "rarity": "UR",
     "release_date": "2016-07-05",
@@ -9726,10 +8882,6 @@ app.constant('CardData',
       "heel": 0,
       "idlz": 0,
       "idlz_heel": 0
-    },
-    "on_attr": {
-      "base": 5040,
-      "idlz": 5340
     },
     "premium": true,
     "rarity": "UR",
@@ -9773,10 +8925,6 @@ app.constant('CardData',
       "idlz": 0,
       "idlz_heel": 0
     },
-    "on_attr": {
-      "base": 4840,
-      "idlz": 5140
-    },
     "premium": true,
     "rarity": "SSR",
     "release_date": "2016-07-05",
@@ -9818,10 +8966,6 @@ app.constant('CardData',
       "heel": 0,
       "idlz": 0,
       "idlz_heel": 0
-    },
-    "on_attr": {
-      "base": 4870,
-      "idlz": 5170
     },
     "premium": true,
     "rarity": "SSR",
@@ -9865,10 +9009,6 @@ app.constant('CardData',
       "idlz": 0,
       "idlz_heel": 0
     },
-    "on_attr": {
-      "base": 4780,
-      "idlz": 5080
-    },
     "premium": true,
     "rarity": "SSR",
     "release_date": "2016-07-05",
@@ -9910,10 +9050,6 @@ app.constant('CardData',
       "heel": 0,
       "idlz": 0,
       "idlz_heel": 0
-    },
-    "on_attr": {
-      "base": 4870,
-      "idlz": 5170
     },
     "premium": true,
     "rarity": "SSR",
@@ -9957,10 +9093,6 @@ app.constant('CardData',
       "idlz": 0,
       "idlz_heel": 0
     },
-    "on_attr": {
-      "base": 4870,
-      "idlz": 5170
-    },
     "premium": true,
     "rarity": "SSR",
     "release_date": "2016-07-05",
@@ -10002,10 +9134,6 @@ app.constant('CardData',
       "heel": 0,
       "idlz": 0,
       "idlz_heel": 0
-    },
-    "on_attr": {
-      "base": 4840,
-      "idlz": 5140
     },
     "premium": true,
     "rarity": "SSR",
@@ -10049,10 +9177,6 @@ app.constant('CardData',
       "idlz": 0,
       "idlz_heel": 0
     },
-    "on_attr": {
-      "base": 4790,
-      "idlz": 5090
-    },
     "premium": true,
     "rarity": "SSR",
     "release_date": "2016-07-05",
@@ -10094,10 +9218,6 @@ app.constant('CardData',
       "heel": 0,
       "idlz": 0,
       "idlz_heel": 0
-    },
-    "on_attr": {
-      "base": 4790,
-      "idlz": 5090
     },
     "premium": true,
     "rarity": "SSR",
@@ -10141,10 +9261,6 @@ app.constant('CardData',
       "idlz": 0,
       "idlz_heel": 0
     },
-    "on_attr": {
-      "base": 4840,
-      "idlz": 5140
-    },
     "premium": true,
     "rarity": "SSR",
     "release_date": "2016-07-05",
@@ -10186,10 +9302,6 @@ app.constant('CardData',
       "heel": 0,
       "idlz": 0,
       "idlz_heel": 0
-    },
-    "on_attr": {
-      "base": 4840,
-      "idlz": 5140
     },
     "premium": true,
     "rarity": "SSR",
@@ -10233,10 +9345,6 @@ app.constant('CardData',
       "idlz": 0,
       "idlz_heel": 0
     },
-    "on_attr": {
-      "base": 4780,
-      "idlz": 5080
-    },
     "premium": true,
     "rarity": "SSR",
     "release_date": "2016-07-05",
@@ -10278,10 +9386,6 @@ app.constant('CardData',
       "heel": 0,
       "idlz": 0,
       "idlz_heel": 0
-    },
-    "on_attr": {
-      "base": 4870,
-      "idlz": 5170
     },
     "premium": true,
     "rarity": "SSR",
@@ -10325,10 +9429,6 @@ app.constant('CardData',
       "idlz": 0,
       "idlz_heel": 0
     },
-    "on_attr": {
-      "base": 4840,
-      "idlz": 5140
-    },
     "premium": true,
     "rarity": "SSR",
     "release_date": "2016-07-05",
@@ -10370,10 +9470,6 @@ app.constant('CardData',
       "heel": 0,
       "idlz": 0,
       "idlz_heel": 0
-    },
-    "on_attr": {
-      "base": 4870,
-      "idlz": 5170
     },
     "premium": true,
     "rarity": "SSR",
@@ -10417,10 +9513,6 @@ app.constant('CardData',
       "idlz": 0,
       "idlz_heel": 0
     },
-    "on_attr": {
-      "base": 4870,
-      "idlz": 5170
-    },
     "premium": true,
     "rarity": "SSR",
     "release_date": "2016-07-05",
@@ -10462,10 +9554,6 @@ app.constant('CardData',
       "heel": 0,
       "idlz": 0,
       "idlz_heel": 0
-    },
-    "on_attr": {
-      "base": 4840,
-      "idlz": 5140
     },
     "premium": true,
     "rarity": "SSR",
@@ -10509,10 +9597,6 @@ app.constant('CardData',
       "idlz": 0,
       "idlz_heel": 0
     },
-    "on_attr": {
-      "base": 4800,
-      "idlz": 5100
-    },
     "premium": true,
     "rarity": "SSR",
     "release_date": "2016-07-05",
@@ -10554,10 +9638,6 @@ app.constant('CardData',
       "heel": 0,
       "idlz": 0,
       "idlz_heel": 0
-    },
-    "on_attr": {
-      "base": 4810,
-      "idlz": 5110
     },
     "premium": true,
     "rarity": "SSR",
@@ -10601,10 +9681,6 @@ app.constant('CardData',
       "idlz": 0,
       "idlz_heel": 0
     },
-    "on_attr": {
-      "base": 4700,
-      "idlz": 4980
-    },
     "premium": true,
     "rarity": "SR",
     "release_date": "2016-07-05",
@@ -10646,10 +9722,6 @@ app.constant('CardData',
       "heel": 0,
       "idlz": 0,
       "idlz_heel": 0
-    },
-    "on_attr": {
-      "base": 4620,
-      "idlz": 4900
     },
     "premium": true,
     "rarity": "SR",
@@ -10693,10 +9765,6 @@ app.constant('CardData',
       "idlz": 0,
       "idlz_heel": 0
     },
-    "on_attr": {
-      "base": 4660,
-      "idlz": 4940
-    },
     "premium": true,
     "rarity": "SR",
     "release_date": "2016-07-05",
@@ -10738,10 +9806,6 @@ app.constant('CardData',
       "heel": 0,
       "idlz": 0,
       "idlz_heel": 0
-    },
-    "on_attr": {
-      "base": 4620,
-      "idlz": 4900
     },
     "premium": true,
     "rarity": "SR",
@@ -10785,10 +9849,6 @@ app.constant('CardData',
       "idlz": 0,
       "idlz_heel": 0
     },
-    "on_attr": {
-      "base": 4610,
-      "idlz": 4890
-    },
     "premium": true,
     "rarity": "SR",
     "release_date": "2016-07-05",
@@ -10830,10 +9890,6 @@ app.constant('CardData',
       "heel": 0,
       "idlz": 0,
       "idlz_heel": 0
-    },
-    "on_attr": {
-      "base": 4690,
-      "idlz": 4970
     },
     "premium": true,
     "rarity": "SR",
@@ -10877,10 +9933,6 @@ app.constant('CardData',
       "idlz": 0,
       "idlz_heel": 0
     },
-    "on_attr": {
-      "base": 4660,
-      "idlz": 4940
-    },
     "premium": true,
     "rarity": "SR",
     "release_date": "2016-07-05",
@@ -10922,10 +9974,6 @@ app.constant('CardData',
       "heel": 0,
       "idlz": 0,
       "idlz_heel": 0
-    },
-    "on_attr": {
-      "base": 4660,
-      "idlz": 4940
     },
     "premium": true,
     "rarity": "SR",
@@ -10969,10 +10017,6 @@ app.constant('CardData',
       "idlz": 0,
       "idlz_heel": 0
     },
-    "on_attr": {
-      "base": 4700,
-      "idlz": 4980
-    },
     "premium": true,
     "rarity": "SR",
     "release_date": "2016-07-05",
@@ -11014,10 +10058,6 @@ app.constant('CardData',
       "heel": 0,
       "idlz": 0,
       "idlz_heel": 0
-    },
-    "on_attr": {
-      "base": 5020,
-      "idlz": 5320
     },
     "premium": true,
     "rarity": "UR",
@@ -11061,10 +10101,6 @@ app.constant('CardData',
       "idlz": 0,
       "idlz_heel": 0
     },
-    "on_attr": {
-      "base": 4700,
-      "idlz": 4980
-    },
     "premium": true,
     "rarity": "SR",
     "release_date": "2016-06-30",
@@ -11106,10 +10142,6 @@ app.constant('CardData',
       "heel": 0,
       "idlz": 0,
       "idlz_heel": 0
-    },
-    "on_attr": {
-      "base": 4610,
-      "idlz": 4890
     },
     "premium": true,
     "rarity": "SR",
@@ -11153,10 +10185,6 @@ app.constant('CardData',
       "idlz": 0,
       "idlz_heel": 0
     },
-    "on_attr": {
-      "base": 4630,
-      "idlz": 4910
-    },
     "premium": true,
     "rarity": "SR",
     "release_date": "2016-06-30",
@@ -11198,10 +10226,6 @@ app.constant('CardData',
       "heel": 0,
       "idlz": 0,
       "idlz_heel": 0
-    },
-    "on_attr": {
-      "base": 4670,
-      "idlz": 4950
     },
     "premium": true,
     "rarity": "SR",
@@ -11245,10 +10269,6 @@ app.constant('CardData',
       "idlz": 0,
       "idlz_heel": 0
     },
-    "on_attr": {
-      "base": 4450,
-      "idlz": 4730
-    },
     "premium": false,
     "rarity": "SR",
     "release_date": "2016-06-20",
@@ -11290,10 +10310,6 @@ app.constant('CardData',
       "heel": 0,
       "idlz": 0,
       "idlz_heel": 0
-    },
-    "on_attr": {
-      "base": 4530,
-      "idlz": 4810
     },
     "premium": false,
     "rarity": "SR",
@@ -11337,10 +10353,6 @@ app.constant('CardData',
       "idlz": 0,
       "idlz_heel": 0
     },
-    "on_attr": {
-      "base": 5020,
-      "idlz": 5320
-    },
     "premium": true,
     "rarity": "UR",
     "release_date": "2016-06-15",
@@ -11382,10 +10394,6 @@ app.constant('CardData',
       "heel": 0,
       "idlz": 0,
       "idlz_heel": 0
-    },
-    "on_attr": {
-      "base": 4610,
-      "idlz": 4890
     },
     "premium": true,
     "rarity": "SR",
@@ -11429,10 +10437,6 @@ app.constant('CardData',
       "idlz": 0,
       "idlz_heel": 0
     },
-    "on_attr": {
-      "base": 4640,
-      "idlz": 4920
-    },
     "premium": true,
     "rarity": "SR",
     "release_date": "2016-06-15",
@@ -11474,10 +10478,6 @@ app.constant('CardData',
       "heel": 0,
       "idlz": 0,
       "idlz_heel": 0
-    },
-    "on_attr": {
-      "base": 4660,
-      "idlz": 4940
     },
     "premium": true,
     "rarity": "SR",
@@ -11521,10 +10521,6 @@ app.constant('CardData',
       "idlz": 0,
       "idlz_heel": 0
     },
-    "on_attr": {
-      "base": 4410,
-      "idlz": 4690
-    },
     "premium": false,
     "rarity": "SR",
     "release_date": "2016-06-05",
@@ -11566,10 +10562,6 @@ app.constant('CardData',
       "heel": 0,
       "idlz": 0,
       "idlz_heel": 0
-    },
-    "on_attr": {
-      "base": 4530,
-      "idlz": 4810
     },
     "premium": false,
     "rarity": "SR",
@@ -11613,10 +10605,6 @@ app.constant('CardData',
       "idlz": 0,
       "idlz_heel": 0
     },
-    "on_attr": {
-      "base": 4360,
-      "idlz": 4360
-    },
     "premium": false,
     "rarity": "UR",
     "release_date": "2016-05-31",
@@ -11658,10 +10646,6 @@ app.constant('CardData',
       "heel": 0,
       "idlz": 0,
       "idlz_heel": 0
-    },
-    "on_attr": {
-      "base": 4350,
-      "idlz": 4350
     },
     "premium": false,
     "rarity": "UR",
@@ -11705,10 +10689,6 @@ app.constant('CardData',
       "idlz": 0,
       "idlz_heel": 0
     },
-    "on_attr": {
-      "base": 5030,
-      "idlz": 5330
-    },
     "premium": true,
     "rarity": "UR",
     "release_date": "2016-05-31",
@@ -11750,10 +10730,6 @@ app.constant('CardData',
       "heel": 0,
       "idlz": 0,
       "idlz_heel": 0
-    },
-    "on_attr": {
-      "base": 4340,
-      "idlz": 4340
     },
     "premium": false,
     "rarity": "UR",
@@ -11797,10 +10773,6 @@ app.constant('CardData',
       "idlz": 0,
       "idlz_heel": 0
     },
-    "on_attr": {
-      "base": 4700,
-      "idlz": 4980
-    },
     "premium": true,
     "rarity": "SR",
     "release_date": "2016-05-31",
@@ -11842,10 +10814,6 @@ app.constant('CardData',
       "heel": 0,
       "idlz": 0,
       "idlz_heel": 0
-    },
-    "on_attr": {
-      "base": 4650,
-      "idlz": 4930
     },
     "premium": true,
     "rarity": "SR",
@@ -11889,10 +10857,6 @@ app.constant('CardData',
       "idlz": 0,
       "idlz_heel": 0
     },
-    "on_attr": {
-      "base": 4600,
-      "idlz": 4880
-    },
     "premium": true,
     "rarity": "SR",
     "release_date": "2016-05-31",
@@ -11934,10 +10898,6 @@ app.constant('CardData',
       "heel": 0,
       "idlz": 0,
       "idlz_heel": 0
-    },
-    "on_attr": {
-      "base": 4670,
-      "idlz": 4950
     },
     "premium": true,
     "rarity": "SR",
@@ -11981,10 +10941,6 @@ app.constant('CardData',
       "idlz": 0,
       "idlz_heel": 0
     },
-    "on_attr": {
-      "base": 4410,
-      "idlz": 4690
-    },
     "premium": false,
     "rarity": "SR",
     "release_date": "2016-05-20",
@@ -12026,10 +10982,6 @@ app.constant('CardData',
       "heel": 0,
       "idlz": 0,
       "idlz_heel": 0
-    },
-    "on_attr": {
-      "base": 5000,
-      "idlz": 5300
     },
     "premium": true,
     "rarity": "UR",
@@ -12073,10 +11025,6 @@ app.constant('CardData',
       "idlz": 0,
       "idlz_heel": 0
     },
-    "on_attr": {
-      "base": 4700,
-      "idlz": 4980
-    },
     "premium": true,
     "rarity": "SR",
     "release_date": "2016-05-15",
@@ -12118,10 +11066,6 @@ app.constant('CardData',
       "heel": 0,
       "idlz": 0,
       "idlz_heel": 0
-    },
-    "on_attr": {
-      "base": 4610,
-      "idlz": 4890
     },
     "premium": true,
     "rarity": "SR",
@@ -12165,10 +11109,6 @@ app.constant('CardData',
       "idlz": 0,
       "idlz_heel": 0
     },
-    "on_attr": {
-      "base": 4660,
-      "idlz": 4940
-    },
     "premium": true,
     "rarity": "SR",
     "release_date": "2016-05-15",
@@ -12210,10 +11150,6 @@ app.constant('CardData',
       "heel": 0,
       "idlz": 0,
       "idlz_heel": 0
-    },
-    "on_attr": {
-      "base": 4460,
-      "idlz": 4740
     },
     "premium": false,
     "rarity": "SR",
@@ -12257,10 +11193,6 @@ app.constant('CardData',
       "idlz": 0,
       "idlz_heel": 0
     },
-    "on_attr": {
-      "base": 4340,
-      "idlz": 4340
-    },
     "premium": false,
     "rarity": "UR",
     "release_date": "2016-04-30",
@@ -12302,10 +11234,6 @@ app.constant('CardData',
       "heel": 0,
       "idlz": 0,
       "idlz_heel": 0
-    },
-    "on_attr": {
-      "base": 4360,
-      "idlz": 4360
     },
     "premium": false,
     "rarity": "UR",
@@ -12349,10 +11277,6 @@ app.constant('CardData',
       "idlz": 0,
       "idlz_heel": 0
     },
-    "on_attr": {
-      "base": 4350,
-      "idlz": 4350
-    },
     "premium": false,
     "rarity": "UR",
     "release_date": "2016-04-30",
@@ -12394,10 +11318,6 @@ app.constant('CardData',
       "heel": 0,
       "idlz": 0,
       "idlz_heel": 0
-    },
-    "on_attr": {
-      "base": 5020,
-      "idlz": 5320
     },
     "premium": true,
     "rarity": "UR",
@@ -12441,10 +11361,6 @@ app.constant('CardData',
       "idlz": 0,
       "idlz_heel": 0
     },
-    "on_attr": {
-      "base": 4670,
-      "idlz": 4950
-    },
     "premium": true,
     "rarity": "SR",
     "release_date": "2016-04-30",
@@ -12486,10 +11402,6 @@ app.constant('CardData',
       "heel": 0,
       "idlz": 0,
       "idlz_heel": 0
-    },
-    "on_attr": {
-      "base": 4700,
-      "idlz": 4980
     },
     "premium": true,
     "rarity": "SR",
@@ -12533,10 +11445,6 @@ app.constant('CardData',
       "idlz": 0,
       "idlz_heel": 0
     },
-    "on_attr": {
-      "base": 4610,
-      "idlz": 4890
-    },
     "premium": true,
     "rarity": "SR",
     "release_date": "2016-04-30",
@@ -12578,10 +11486,6 @@ app.constant('CardData',
       "heel": 0,
       "idlz": 0,
       "idlz_heel": 0
-    },
-    "on_attr": {
-      "base": 4690,
-      "idlz": 4970
     },
     "premium": true,
     "rarity": "SR",
@@ -12625,10 +11529,6 @@ app.constant('CardData',
       "idlz": 0,
       "idlz_heel": 0
     },
-    "on_attr": {
-      "base": 4520,
-      "idlz": 4800
-    },
     "premium": false,
     "rarity": "SR",
     "release_date": "2016-04-20",
@@ -12670,10 +11570,6 @@ app.constant('CardData',
       "heel": 0,
       "idlz": 0,
       "idlz_heel": 0
-    },
-    "on_attr": {
-      "base": 5020,
-      "idlz": 5320
     },
     "premium": true,
     "rarity": "UR",
@@ -12717,10 +11613,6 @@ app.constant('CardData',
       "idlz": 0,
       "idlz_heel": 0
     },
-    "on_attr": {
-      "base": 4610,
-      "idlz": 4890
-    },
     "premium": true,
     "rarity": "SR",
     "release_date": "2016-04-15",
@@ -12762,10 +11654,6 @@ app.constant('CardData',
       "heel": 0,
       "idlz": 0,
       "idlz_heel": 0
-    },
-    "on_attr": {
-      "base": 4670,
-      "idlz": 4950
     },
     "premium": true,
     "rarity": "SR",
@@ -12809,10 +11697,6 @@ app.constant('CardData',
       "idlz": 0,
       "idlz_heel": 0
     },
-    "on_attr": {
-      "base": 4670,
-      "idlz": 4950
-    },
     "premium": true,
     "rarity": "SR",
     "release_date": "2016-04-15",
@@ -12854,10 +11738,6 @@ app.constant('CardData',
       "heel": 0,
       "idlz": 0,
       "idlz_heel": 0
-    },
-    "on_attr": {
-      "base": 4470,
-      "idlz": 4750
     },
     "premium": false,
     "rarity": "SR",
@@ -12901,10 +11781,6 @@ app.constant('CardData',
       "idlz": 0,
       "idlz_heel": 0
     },
-    "on_attr": {
-      "base": 5030,
-      "idlz": 5330
-    },
     "premium": true,
     "rarity": "UR",
     "release_date": "2016-03-31",
@@ -12946,10 +11822,6 @@ app.constant('CardData',
       "heel": 0,
       "idlz": 0,
       "idlz_heel": 0
-    },
-    "on_attr": {
-      "base": 4350,
-      "idlz": 4350
     },
     "premium": false,
     "rarity": "UR",
@@ -12993,10 +11865,6 @@ app.constant('CardData',
       "idlz": 0,
       "idlz_heel": 0
     },
-    "on_attr": {
-      "base": 4360,
-      "idlz": 4360
-    },
     "premium": false,
     "rarity": "UR",
     "release_date": "2016-03-31",
@@ -13038,10 +11906,6 @@ app.constant('CardData',
       "heel": 0,
       "idlz": 0,
       "idlz_heel": 0
-    },
-    "on_attr": {
-      "base": 4340,
-      "idlz": 4340
     },
     "premium": false,
     "rarity": "UR",
@@ -13085,10 +11949,6 @@ app.constant('CardData',
       "idlz": 0,
       "idlz_heel": 0
     },
-    "on_attr": {
-      "base": 4630,
-      "idlz": 4910
-    },
     "premium": true,
     "rarity": "SR",
     "release_date": "2016-03-31",
@@ -13130,10 +11990,6 @@ app.constant('CardData',
       "heel": 0,
       "idlz": 0,
       "idlz_heel": 0
-    },
-    "on_attr": {
-      "base": 4700,
-      "idlz": 4980
     },
     "premium": true,
     "rarity": "SR",
@@ -13177,10 +12033,6 @@ app.constant('CardData',
       "idlz": 0,
       "idlz_heel": 0
     },
-    "on_attr": {
-      "base": 4640,
-      "idlz": 4920
-    },
     "premium": true,
     "rarity": "SR",
     "release_date": "2016-03-31",
@@ -13222,10 +12074,6 @@ app.constant('CardData',
       "heel": 0,
       "idlz": 0,
       "idlz_heel": 0
-    },
-    "on_attr": {
-      "base": 4620,
-      "idlz": 4900
     },
     "premium": true,
     "rarity": "SR",
@@ -13269,10 +12117,6 @@ app.constant('CardData',
       "idlz": 0,
       "idlz_heel": 0
     },
-    "on_attr": {
-      "base": 4350,
-      "idlz": 4350
-    },
     "premium": false,
     "rarity": "UR",
     "release_date": "2016-03-20",
@@ -13314,10 +12158,6 @@ app.constant('CardData',
       "heel": 0,
       "idlz": 0,
       "idlz_heel": 0
-    },
-    "on_attr": {
-      "base": 4410,
-      "idlz": 4690
     },
     "premium": false,
     "rarity": "SR",
@@ -13361,10 +12201,6 @@ app.constant('CardData',
       "idlz": 0,
       "idlz_heel": 0
     },
-    "on_attr": {
-      "base": 5040,
-      "idlz": 5340
-    },
     "premium": true,
     "rarity": "UR",
     "release_date": "2016-03-15",
@@ -13406,10 +12242,6 @@ app.constant('CardData',
       "heel": 0,
       "idlz": 0,
       "idlz_heel": 0
-    },
-    "on_attr": {
-      "base": 4660,
-      "idlz": 4940
     },
     "premium": true,
     "rarity": "SR",
@@ -13453,10 +12285,6 @@ app.constant('CardData',
       "idlz": 0,
       "idlz_heel": 0
     },
-    "on_attr": {
-      "base": 4710,
-      "idlz": 4990
-    },
     "premium": true,
     "rarity": "SR",
     "release_date": "2016-03-15",
@@ -13498,10 +12326,6 @@ app.constant('CardData',
       "heel": 0,
       "idlz": 0,
       "idlz_heel": 0
-    },
-    "on_attr": {
-      "base": 4600,
-      "idlz": 4880
     },
     "premium": true,
     "rarity": "SR",
@@ -13545,10 +12369,6 @@ app.constant('CardData',
       "idlz": 0,
       "idlz_heel": 0
     },
-    "on_attr": {
-      "base": 4530,
-      "idlz": 4810
-    },
     "premium": false,
     "rarity": "SR",
     "release_date": "2016-03-05",
@@ -13590,10 +12410,6 @@ app.constant('CardData',
       "heel": 0,
       "idlz": 0,
       "idlz_heel": 0
-    },
-    "on_attr": {
-      "base": 5010,
-      "idlz": 5310
     },
     "premium": true,
     "rarity": "UR",
@@ -13637,10 +12453,6 @@ app.constant('CardData',
       "idlz": 0,
       "idlz_heel": 0
     },
-    "on_attr": {
-      "base": 4280,
-      "idlz": 4280
-    },
     "premium": false,
     "rarity": "SR",
     "release_date": "2016-02-29",
@@ -13682,10 +12494,6 @@ app.constant('CardData',
       "heel": 0,
       "idlz": 0,
       "idlz_heel": 0
-    },
-    "on_attr": {
-      "base": 4180,
-      "idlz": 4180
     },
     "premium": false,
     "rarity": "SR",
@@ -13729,10 +12537,6 @@ app.constant('CardData',
       "idlz": 0,
       "idlz_heel": 0
     },
-    "on_attr": {
-      "base": 4180,
-      "idlz": 4180
-    },
     "premium": false,
     "rarity": "SR",
     "release_date": "2016-02-29",
@@ -13774,10 +12578,6 @@ app.constant('CardData',
       "heel": 0,
       "idlz": 0,
       "idlz_heel": 0
-    },
-    "on_attr": {
-      "base": 4660,
-      "idlz": 4940
     },
     "premium": true,
     "rarity": "SR",
@@ -13821,10 +12621,6 @@ app.constant('CardData',
       "idlz": 0,
       "idlz_heel": 0
     },
-    "on_attr": {
-      "base": 4230,
-      "idlz": 4230
-    },
     "premium": false,
     "rarity": "SR",
     "release_date": "2016-02-29",
@@ -13866,10 +12662,6 @@ app.constant('CardData',
       "heel": 0,
       "idlz": 0,
       "idlz_heel": 0
-    },
-    "on_attr": {
-      "base": 4700,
-      "idlz": 4980
     },
     "premium": true,
     "rarity": "SR",
@@ -13913,10 +12705,6 @@ app.constant('CardData',
       "idlz": 0,
       "idlz_heel": 0
     },
-    "on_attr": {
-      "base": 4280,
-      "idlz": 4280
-    },
     "premium": false,
     "rarity": "SR",
     "release_date": "2016-02-29",
@@ -13958,10 +12746,6 @@ app.constant('CardData',
       "heel": 0,
       "idlz": 0,
       "idlz_heel": 0
-    },
-    "on_attr": {
-      "base": 4230,
-      "idlz": 4230
     },
     "premium": false,
     "rarity": "SR",
@@ -14005,10 +12789,6 @@ app.constant('CardData',
       "idlz": 0,
       "idlz_heel": 0
     },
-    "on_attr": {
-      "base": 4620,
-      "idlz": 4900
-    },
     "premium": true,
     "rarity": "SR",
     "release_date": "2016-02-29",
@@ -14050,10 +12830,6 @@ app.constant('CardData',
       "heel": 0,
       "idlz": 0,
       "idlz_heel": 0
-    },
-    "on_attr": {
-      "base": 4180,
-      "idlz": 4180
     },
     "premium": false,
     "rarity": "SR",
@@ -14097,10 +12873,6 @@ app.constant('CardData',
       "idlz": 0,
       "idlz_heel": 0
     },
-    "on_attr": {
-      "base": 4230,
-      "idlz": 4230
-    },
     "premium": false,
     "rarity": "SR",
     "release_date": "2016-02-29",
@@ -14142,10 +12914,6 @@ app.constant('CardData',
       "heel": 0,
       "idlz": 0,
       "idlz_heel": 0
-    },
-    "on_attr": {
-      "base": 4630,
-      "idlz": 4910
     },
     "premium": true,
     "rarity": "SR",
@@ -14189,10 +12957,6 @@ app.constant('CardData',
       "idlz": 0,
       "idlz_heel": 0
     },
-    "on_attr": {
-      "base": 4280,
-      "idlz": 4280
-    },
     "premium": false,
     "rarity": "SR",
     "release_date": "2016-02-29",
@@ -14234,10 +12998,6 @@ app.constant('CardData',
       "heel": 0,
       "idlz": 0,
       "idlz_heel": 0
-    },
-    "on_attr": {
-      "base": 4360,
-      "idlz": 4360
     },
     "premium": false,
     "rarity": "UR",
@@ -14281,10 +13041,6 @@ app.constant('CardData',
       "idlz": 0,
       "idlz_heel": 0
     },
-    "on_attr": {
-      "base": 4460,
-      "idlz": 4740
-    },
     "premium": false,
     "rarity": "SR",
     "release_date": "2016-02-20",
@@ -14326,10 +13082,6 @@ app.constant('CardData',
       "heel": 0,
       "idlz": 0,
       "idlz_heel": 0
-    },
-    "on_attr": {
-      "base": 5030,
-      "idlz": 5330
     },
     "premium": true,
     "rarity": "UR",
@@ -14373,10 +13125,6 @@ app.constant('CardData',
       "idlz": 0,
       "idlz_heel": 0
     },
-    "on_attr": {
-      "base": 4610,
-      "idlz": 4890
-    },
     "premium": true,
     "rarity": "SR",
     "release_date": "2016-02-15",
@@ -14418,10 +13166,6 @@ app.constant('CardData',
       "heel": 0,
       "idlz": 0,
       "idlz_heel": 0
-    },
-    "on_attr": {
-      "base": 4670,
-      "idlz": 4950
     },
     "premium": true,
     "rarity": "SR",
@@ -14465,10 +13209,6 @@ app.constant('CardData',
       "idlz": 0,
       "idlz_heel": 0
     },
-    "on_attr": {
-      "base": 4710,
-      "idlz": 4990
-    },
     "premium": true,
     "rarity": "SR",
     "release_date": "2016-02-15",
@@ -14510,10 +13250,6 @@ app.constant('CardData',
       "heel": 0,
       "idlz": 0,
       "idlz_heel": 0
-    },
-    "on_attr": {
-      "base": 4450,
-      "idlz": 4730
     },
     "premium": false,
     "rarity": "SR",
@@ -14557,10 +13293,6 @@ app.constant('CardData',
       "idlz": 0,
       "idlz_heel": 0
     },
-    "on_attr": {
-      "base": 5020,
-      "idlz": 5320
-    },
     "premium": true,
     "rarity": "UR",
     "release_date": "2016-01-31",
@@ -14602,10 +13334,6 @@ app.constant('CardData',
       "heel": 0,
       "idlz": 0,
       "idlz_heel": 0
-    },
-    "on_attr": {
-      "base": 4670,
-      "idlz": 4950
     },
     "premium": true,
     "rarity": "SR",
@@ -14649,10 +13377,6 @@ app.constant('CardData',
       "idlz": 0,
       "idlz_heel": 0
     },
-    "on_attr": {
-      "base": 4610,
-      "idlz": 4890
-    },
     "premium": true,
     "rarity": "SR",
     "release_date": "2016-01-31",
@@ -14694,10 +13418,6 @@ app.constant('CardData',
       "heel": 0,
       "idlz": 0,
       "idlz_heel": 0
-    },
-    "on_attr": {
-      "base": 4700,
-      "idlz": 4980
     },
     "premium": true,
     "rarity": "SR",
@@ -14741,10 +13461,6 @@ app.constant('CardData',
       "idlz": 0,
       "idlz_heel": 0
     },
-    "on_attr": {
-      "base": 4670,
-      "idlz": 4950
-    },
     "premium": true,
     "rarity": "SR",
     "release_date": "2016-01-31",
@@ -14786,10 +13502,6 @@ app.constant('CardData',
       "heel": 0,
       "idlz": 0,
       "idlz_heel": 0
-    },
-    "on_attr": {
-      "base": 4530,
-      "idlz": 4810
     },
     "premium": false,
     "rarity": "SR",
@@ -14833,10 +13545,6 @@ app.constant('CardData',
       "idlz": 0,
       "idlz_heel": 0
     },
-    "on_attr": {
-      "base": 5010,
-      "idlz": 5310
-    },
     "premium": true,
     "rarity": "UR",
     "release_date": "2016-01-15",
@@ -14878,10 +13586,6 @@ app.constant('CardData',
       "heel": 0,
       "idlz": 0,
       "idlz_heel": 0
-    },
-    "on_attr": {
-      "base": 4160,
-      "idlz": 4160
     },
     "premium": false,
     "rarity": "SR",
@@ -14925,10 +13629,6 @@ app.constant('CardData',
       "idlz": 0,
       "idlz_heel": 0
     },
-    "on_attr": {
-      "base": 4640,
-      "idlz": 4920
-    },
     "premium": true,
     "rarity": "SR",
     "release_date": "2016-01-15",
@@ -14970,10 +13670,6 @@ app.constant('CardData',
       "heel": 0,
       "idlz": 0,
       "idlz_heel": 0
-    },
-    "on_attr": {
-      "base": 4160,
-      "idlz": 4160
     },
     "premium": false,
     "rarity": "SR",
@@ -15017,10 +13713,6 @@ app.constant('CardData',
       "idlz": 0,
       "idlz_heel": 0
     },
-    "on_attr": {
-      "base": 4680,
-      "idlz": 4960
-    },
     "premium": true,
     "rarity": "SR",
     "release_date": "2016-01-15",
@@ -15062,10 +13754,6 @@ app.constant('CardData',
       "heel": 0,
       "idlz": 0,
       "idlz_heel": 0
-    },
-    "on_attr": {
-      "base": 4160,
-      "idlz": 4160
     },
     "premium": false,
     "rarity": "SR",
@@ -15109,10 +13797,6 @@ app.constant('CardData',
       "idlz": 0,
       "idlz_heel": 0
     },
-    "on_attr": {
-      "base": 4660,
-      "idlz": 4940
-    },
     "premium": true,
     "rarity": "SR",
     "release_date": "2016-01-15",
@@ -15154,10 +13838,6 @@ app.constant('CardData',
       "heel": 0,
       "idlz": 0,
       "idlz_heel": 0
-    },
-    "on_attr": {
-      "base": 4480,
-      "idlz": 4760
     },
     "premium": false,
     "rarity": "SR",
@@ -15201,10 +13881,6 @@ app.constant('CardData',
       "idlz": 0,
       "idlz_heel": 0
     },
-    "on_attr": {
-      "base": 5040,
-      "idlz": 5340
-    },
     "premium": true,
     "rarity": "UR",
     "release_date": "2015-12-31",
@@ -15246,10 +13922,6 @@ app.constant('CardData',
       "heel": 0,
       "idlz": 0,
       "idlz_heel": 0
-    },
-    "on_attr": {
-      "base": 4610,
-      "idlz": 4890
     },
     "premium": true,
     "rarity": "SR",
@@ -15293,10 +13965,6 @@ app.constant('CardData',
       "idlz": 0,
       "idlz_heel": 0
     },
-    "on_attr": {
-      "base": 4690,
-      "idlz": 4970
-    },
     "premium": true,
     "rarity": "SR",
     "release_date": "2015-12-31",
@@ -15338,10 +14006,6 @@ app.constant('CardData',
       "heel": 0,
       "idlz": 0,
       "idlz_heel": 0
-    },
-    "on_attr": {
-      "base": 4620,
-      "idlz": 4900
     },
     "premium": true,
     "rarity": "SR",
@@ -15385,10 +14049,6 @@ app.constant('CardData',
       "idlz": 0,
       "idlz_heel": 0
     },
-    "on_attr": {
-      "base": 4680,
-      "idlz": 4960
-    },
     "premium": true,
     "rarity": "SR",
     "release_date": "2015-12-31",
@@ -15430,10 +14090,6 @@ app.constant('CardData',
       "heel": 0,
       "idlz": 0,
       "idlz_heel": 0
-    },
-    "on_attr": {
-      "base": 4360,
-      "idlz": 4360
     },
     "premium": false,
     "rarity": "SR",
@@ -15477,10 +14133,6 @@ app.constant('CardData',
       "idlz": 0,
       "idlz_heel": 0
     },
-    "on_attr": {
-      "base": 4360,
-      "idlz": 4360
-    },
     "premium": false,
     "rarity": "SR",
     "release_date": "2015-12-20",
@@ -15522,10 +14174,6 @@ app.constant('CardData',
       "heel": 0,
       "idlz": 0,
       "idlz_heel": 0
-    },
-    "on_attr": {
-      "base": 4410,
-      "idlz": 4690
     },
     "premium": false,
     "rarity": "SR",
@@ -15569,10 +14217,6 @@ app.constant('CardData',
       "idlz": 0,
       "idlz_heel": 0
     },
-    "on_attr": {
-      "base": 4360,
-      "idlz": 4360
-    },
     "premium": false,
     "rarity": "SR",
     "release_date": "2015-12-20",
@@ -15614,10 +14258,6 @@ app.constant('CardData',
       "heel": 0,
       "idlz": 0,
       "idlz_heel": 0
-    },
-    "on_attr": {
-      "base": 5040,
-      "idlz": 5340
     },
     "premium": true,
     "rarity": "UR",
@@ -15661,10 +14301,6 @@ app.constant('CardData',
       "idlz": 0,
       "idlz_heel": 0
     },
-    "on_attr": {
-      "base": 4700,
-      "idlz": 4980
-    },
     "premium": true,
     "rarity": "SR",
     "release_date": "2015-12-15",
@@ -15706,10 +14342,6 @@ app.constant('CardData',
       "heel": 0,
       "idlz": 0,
       "idlz_heel": 0
-    },
-    "on_attr": {
-      "base": 4640,
-      "idlz": 4920
     },
     "premium": true,
     "rarity": "SR",
@@ -15753,10 +14385,6 @@ app.constant('CardData',
       "idlz": 0,
       "idlz_heel": 0
     },
-    "on_attr": {
-      "base": 4610,
-      "idlz": 4890
-    },
     "premium": true,
     "rarity": "SR",
     "release_date": "2015-12-15",
@@ -15798,10 +14426,6 @@ app.constant('CardData',
       "heel": 0,
       "idlz": 0,
       "idlz_heel": 0
-    },
-    "on_attr": {
-      "base": 4230,
-      "idlz": 4230
     },
     "premium": false,
     "rarity": "UR",
@@ -15845,10 +14469,6 @@ app.constant('CardData',
       "idlz": 0,
       "idlz_heel": 0
     },
-    "on_attr": {
-      "base": 4540,
-      "idlz": 4820
-    },
     "premium": false,
     "rarity": "SR",
     "release_date": "2015-12-05",
@@ -15890,10 +14510,6 @@ app.constant('CardData',
       "heel": 0,
       "idlz": 0,
       "idlz_heel": 0
-    },
-    "on_attr": {
-      "base": 5040,
-      "idlz": 5340
     },
     "premium": true,
     "rarity": "UR",
@@ -15937,10 +14553,6 @@ app.constant('CardData',
       "idlz": 0,
       "idlz_heel": 0
     },
-    "on_attr": {
-      "base": 4690,
-      "idlz": 4970
-    },
     "premium": true,
     "rarity": "SR",
     "release_date": "2015-11-30",
@@ -15982,10 +14594,6 @@ app.constant('CardData',
       "heel": 0,
       "idlz": 0,
       "idlz_heel": 0
-    },
-    "on_attr": {
-      "base": 4680,
-      "idlz": 4960
     },
     "premium": true,
     "rarity": "SR",
@@ -16029,10 +14637,6 @@ app.constant('CardData',
       "idlz": 0,
       "idlz_heel": 0
     },
-    "on_attr": {
-      "base": 4630,
-      "idlz": 4910
-    },
     "premium": true,
     "rarity": "SR",
     "release_date": "2015-11-30",
@@ -16074,10 +14678,6 @@ app.constant('CardData',
       "heel": 0,
       "idlz": 0,
       "idlz_heel": 0
-    },
-    "on_attr": {
-      "base": 4680,
-      "idlz": 4960
     },
     "premium": true,
     "rarity": "SR",
@@ -16121,10 +14721,6 @@ app.constant('CardData',
       "idlz": 0,
       "idlz_heel": 0
     },
-    "on_attr": {
-      "base": 4260,
-      "idlz": 4260
-    },
     "premium": false,
     "rarity": "SR",
     "release_date": "2015-11-20",
@@ -16166,10 +14762,6 @@ app.constant('CardData',
       "heel": 0,
       "idlz": 0,
       "idlz_heel": 0
-    },
-    "on_attr": {
-      "base": 4480,
-      "idlz": 4760
     },
     "premium": false,
     "rarity": "SR",
@@ -16213,10 +14805,6 @@ app.constant('CardData',
       "idlz": 0,
       "idlz_heel": 0
     },
-    "on_attr": {
-      "base": 4260,
-      "idlz": 4260
-    },
     "premium": false,
     "rarity": "SR",
     "release_date": "2015-11-20",
@@ -16258,10 +14846,6 @@ app.constant('CardData',
       "heel": 0,
       "idlz": 0,
       "idlz_heel": 0
-    },
-    "on_attr": {
-      "base": 4260,
-      "idlz": 4260
     },
     "premium": false,
     "rarity": "SR",
@@ -16305,10 +14889,6 @@ app.constant('CardData',
       "idlz": 0,
       "idlz_heel": 0
     },
-    "on_attr": {
-      "base": 5020,
-      "idlz": 5320
-    },
     "premium": true,
     "rarity": "UR",
     "release_date": "2015-11-15",
@@ -16350,10 +14930,6 @@ app.constant('CardData',
       "heel": 0,
       "idlz": 0,
       "idlz_heel": 0
-    },
-    "on_attr": {
-      "base": 4630,
-      "idlz": 4910
     },
     "premium": true,
     "rarity": "SR",
@@ -16397,10 +14973,6 @@ app.constant('CardData',
       "idlz": 0,
       "idlz_heel": 0
     },
-    "on_attr": {
-      "base": 4710,
-      "idlz": 4990
-    },
     "premium": true,
     "rarity": "SR",
     "release_date": "2015-11-15",
@@ -16442,10 +15014,6 @@ app.constant('CardData',
       "heel": 0,
       "idlz": 0,
       "idlz_heel": 0
-    },
-    "on_attr": {
-      "base": 4680,
-      "idlz": 4960
     },
     "premium": true,
     "rarity": "SR",
@@ -16489,10 +15057,6 @@ app.constant('CardData',
       "idlz": 0,
       "idlz_heel": 0
     },
-    "on_attr": {
-      "base": 4520,
-      "idlz": 4800
-    },
     "premium": false,
     "rarity": "SR",
     "release_date": "2015-11-05",
@@ -16534,10 +15098,6 @@ app.constant('CardData',
       "heel": 0,
       "idlz": 0,
       "idlz_heel": 0
-    },
-    "on_attr": {
-      "base": 5050,
-      "idlz": 5350
     },
     "premium": true,
     "rarity": "UR",
@@ -16581,10 +15141,6 @@ app.constant('CardData',
       "idlz": 0,
       "idlz_heel": 0
     },
-    "on_attr": {
-      "base": 4680,
-      "idlz": 4960
-    },
     "premium": true,
     "rarity": "SR",
     "release_date": "2015-10-31",
@@ -16626,10 +15182,6 @@ app.constant('CardData',
       "heel": 0,
       "idlz": 0,
       "idlz_heel": 0
-    },
-    "on_attr": {
-      "base": 4650,
-      "idlz": 4930
     },
     "premium": true,
     "rarity": "SR",
@@ -16673,10 +15225,6 @@ app.constant('CardData',
       "idlz": 0,
       "idlz_heel": 0
     },
-    "on_attr": {
-      "base": 4630,
-      "idlz": 4910
-    },
     "premium": true,
     "rarity": "SR",
     "release_date": "2015-10-31",
@@ -16718,10 +15266,6 @@ app.constant('CardData',
       "heel": 0,
       "idlz": 0,
       "idlz_heel": 0
-    },
-    "on_attr": {
-      "base": 4710,
-      "idlz": 4990
     },
     "premium": true,
     "rarity": "SR",
@@ -16765,10 +15309,6 @@ app.constant('CardData',
       "idlz": 0,
       "idlz_heel": 0
     },
-    "on_attr": {
-      "base": 4240,
-      "idlz": 4240
-    },
     "premium": false,
     "rarity": "UR",
     "release_date": "2015-10-20",
@@ -16810,10 +15350,6 @@ app.constant('CardData',
       "heel": 0,
       "idlz": 0,
       "idlz_heel": 0
-    },
-    "on_attr": {
-      "base": 4180,
-      "idlz": 4180
     },
     "premium": false,
     "rarity": "SR",
@@ -16857,10 +15393,6 @@ app.constant('CardData',
       "idlz": 0,
       "idlz_heel": 0
     },
-    "on_attr": {
-      "base": 4280,
-      "idlz": 4280
-    },
     "premium": false,
     "rarity": "SR",
     "release_date": "2015-10-20",
@@ -16902,10 +15434,6 @@ app.constant('CardData',
       "heel": 0,
       "idlz": 0,
       "idlz_heel": 0
-    },
-    "on_attr": {
-      "base": 4270,
-      "idlz": 4270
     },
     "premium": false,
     "rarity": "SR",
@@ -16949,10 +15477,6 @@ app.constant('CardData',
       "idlz": 0,
       "idlz_heel": 0
     },
-    "on_attr": {
-      "base": 4210,
-      "idlz": 4210
-    },
     "premium": false,
     "rarity": "SR",
     "release_date": "2015-10-20",
@@ -16994,10 +15518,6 @@ app.constant('CardData',
       "heel": 0,
       "idlz": 0,
       "idlz_heel": 0
-    },
-    "on_attr": {
-      "base": 4180,
-      "idlz": 4180
     },
     "premium": false,
     "rarity": "SR",
@@ -17041,10 +15561,6 @@ app.constant('CardData',
       "idlz": 0,
       "idlz_heel": 0
     },
-    "on_attr": {
-      "base": 4210,
-      "idlz": 4210
-    },
     "premium": false,
     "rarity": "SR",
     "release_date": "2015-10-20",
@@ -17086,10 +15602,6 @@ app.constant('CardData',
       "heel": 0,
       "idlz": 0,
       "idlz_heel": 0
-    },
-    "on_attr": {
-      "base": 4270,
-      "idlz": 4270
     },
     "premium": false,
     "rarity": "SR",
@@ -17133,10 +15645,6 @@ app.constant('CardData',
       "idlz": 0,
       "idlz_heel": 0
     },
-    "on_attr": {
-      "base": 4210,
-      "idlz": 4210
-    },
     "premium": false,
     "rarity": "SR",
     "release_date": "2015-10-20",
@@ -17178,10 +15686,6 @@ app.constant('CardData',
       "heel": 0,
       "idlz": 0,
       "idlz_heel": 0
-    },
-    "on_attr": {
-      "base": 4420,
-      "idlz": 4700
     },
     "premium": false,
     "rarity": "SR",
@@ -17225,10 +15729,6 @@ app.constant('CardData',
       "idlz": 0,
       "idlz_heel": 0
     },
-    "on_attr": {
-      "base": 4180,
-      "idlz": 4180
-    },
     "premium": false,
     "rarity": "SR",
     "release_date": "2015-10-20",
@@ -17270,10 +15770,6 @@ app.constant('CardData',
       "heel": 0,
       "idlz": 0,
       "idlz_heel": 0
-    },
-    "on_attr": {
-      "base": 5020,
-      "idlz": 5320
     },
     "premium": true,
     "rarity": "UR",
@@ -17317,10 +15813,6 @@ app.constant('CardData',
       "idlz": 0,
       "idlz_heel": 0
     },
-    "on_attr": {
-      "base": 4710,
-      "idlz": 4990
-    },
     "premium": true,
     "rarity": "SR",
     "release_date": "2015-10-15",
@@ -17362,10 +15854,6 @@ app.constant('CardData',
       "heel": 0,
       "idlz": 0,
       "idlz_heel": 0
-    },
-    "on_attr": {
-      "base": 4650,
-      "idlz": 4930
     },
     "premium": true,
     "rarity": "SR",
@@ -17409,10 +15897,6 @@ app.constant('CardData',
       "idlz": 0,
       "idlz_heel": 0
     },
-    "on_attr": {
-      "base": 4680,
-      "idlz": 4960
-    },
     "premium": true,
     "rarity": "SR",
     "release_date": "2015-10-15",
@@ -17454,10 +15938,6 @@ app.constant('CardData',
       "heel": 0,
       "idlz": 0,
       "idlz_heel": 0
-    },
-    "on_attr": {
-      "base": 4510,
-      "idlz": 4790
     },
     "premium": false,
     "rarity": "SR",
@@ -17501,10 +15981,6 @@ app.constant('CardData',
       "idlz": 0,
       "idlz_heel": 0
     },
-    "on_attr": {
-      "base": 5040,
-      "idlz": 5340
-    },
     "premium": true,
     "rarity": "UR",
     "release_date": "2015-09-30",
@@ -17546,10 +16022,6 @@ app.constant('CardData',
       "heel": 0,
       "idlz": 0,
       "idlz_heel": 0
-    },
-    "on_attr": {
-      "base": 4640,
-      "idlz": 4920
     },
     "premium": true,
     "rarity": "SR",
@@ -17593,10 +16065,6 @@ app.constant('CardData',
       "idlz": 0,
       "idlz_heel": 0
     },
-    "on_attr": {
-      "base": 4710,
-      "idlz": 4990
-    },
     "premium": true,
     "rarity": "SR",
     "release_date": "2015-09-30",
@@ -17638,10 +16106,6 @@ app.constant('CardData',
       "heel": 0,
       "idlz": 0,
       "idlz_heel": 0
-    },
-    "on_attr": {
-      "base": 4700,
-      "idlz": 4980
     },
     "premium": true,
     "rarity": "SR",
@@ -17685,10 +16149,6 @@ app.constant('CardData',
       "idlz": 0,
       "idlz_heel": 0
     },
-    "on_attr": {
-      "base": 4710,
-      "idlz": 4990
-    },
     "premium": true,
     "rarity": "SR",
     "release_date": "2015-09-30",
@@ -17730,10 +16190,6 @@ app.constant('CardData',
       "heel": 0,
       "idlz": 0,
       "idlz_heel": 0
-    },
-    "on_attr": {
-      "base": 4480,
-      "idlz": 4760
     },
     "premium": false,
     "rarity": "SR",
@@ -17777,10 +16233,6 @@ app.constant('CardData',
       "idlz": 0,
       "idlz_heel": 0
     },
-    "on_attr": {
-      "base": 4130,
-      "idlz": 4130
-    },
     "premium": false,
     "rarity": "SR",
     "release_date": "2015-09-20",
@@ -17822,10 +16274,6 @@ app.constant('CardData',
       "heel": 0,
       "idlz": 0,
       "idlz_heel": 0
-    },
-    "on_attr": {
-      "base": 5080,
-      "idlz": 5380
     },
     "premium": true,
     "rarity": "UR",
@@ -17869,10 +16317,6 @@ app.constant('CardData',
       "idlz": 0,
       "idlz_heel": 0
     },
-    "on_attr": {
-      "base": 4250,
-      "idlz": 4250
-    },
     "premium": false,
     "rarity": "UR",
     "release_date": "2015-09-15",
@@ -17914,10 +16358,6 @@ app.constant('CardData',
       "heel": 0,
       "idlz": 0,
       "idlz_heel": 0
-    },
-    "on_attr": {
-      "base": 4650,
-      "idlz": 4930
     },
     "premium": true,
     "rarity": "SR",
@@ -17961,10 +16401,6 @@ app.constant('CardData',
       "idlz": 0,
       "idlz_heel": 0
     },
-    "on_attr": {
-      "base": 4710,
-      "idlz": 4990
-    },
     "premium": true,
     "rarity": "SR",
     "release_date": "2015-09-15",
@@ -18006,10 +16442,6 @@ app.constant('CardData',
       "heel": 0,
       "idlz": 0,
       "idlz_heel": 0
-    },
-    "on_attr": {
-      "base": 4690,
-      "idlz": 4970
     },
     "premium": true,
     "rarity": "SR",
@@ -18053,10 +16485,6 @@ app.constant('CardData',
       "idlz": 0,
       "idlz_heel": 0
     },
-    "on_attr": {
-      "base": 4520,
-      "idlz": 4800
-    },
     "premium": false,
     "rarity": "SR",
     "release_date": "2015-09-05",
@@ -18098,10 +16526,6 @@ app.constant('CardData',
       "heel": 0,
       "idlz": 0,
       "idlz_heel": 0
-    },
-    "on_attr": {
-      "base": 5000,
-      "idlz": 5300
     },
     "premium": true,
     "rarity": "UR",
@@ -18145,10 +16569,6 @@ app.constant('CardData',
       "idlz": 0,
       "idlz_heel": 0
     },
-    "on_attr": {
-      "base": 4650,
-      "idlz": 4930
-    },
     "premium": true,
     "rarity": "SR",
     "release_date": "2015-08-31",
@@ -18190,10 +16610,6 @@ app.constant('CardData',
       "heel": 0,
       "idlz": 0,
       "idlz_heel": 0
-    },
-    "on_attr": {
-      "base": 4710,
-      "idlz": 4990
     },
     "premium": true,
     "rarity": "SR",
@@ -18237,10 +16653,6 @@ app.constant('CardData',
       "idlz": 0,
       "idlz_heel": 0
     },
-    "on_attr": {
-      "base": 4690,
-      "idlz": 4970
-    },
     "premium": true,
     "rarity": "SR",
     "release_date": "2015-08-31",
@@ -18282,10 +16694,6 @@ app.constant('CardData',
       "heel": 0,
       "idlz": 0,
       "idlz_heel": 0
-    },
-    "on_attr": {
-      "base": 4710,
-      "idlz": 4990
     },
     "premium": true,
     "rarity": "SR",
@@ -18329,10 +16737,6 @@ app.constant('CardData',
       "idlz": 0,
       "idlz_heel": 0
     },
-    "on_attr": {
-      "base": 4490,
-      "idlz": 4770
-    },
     "premium": false,
     "rarity": "SR",
     "release_date": "2015-08-20",
@@ -18374,10 +16778,6 @@ app.constant('CardData',
       "heel": 0,
       "idlz": 0,
       "idlz_heel": 0
-    },
-    "on_attr": {
-      "base": 5070,
-      "idlz": 5370
     },
     "premium": true,
     "rarity": "UR",
@@ -18421,10 +16821,6 @@ app.constant('CardData',
       "idlz": 0,
       "idlz_heel": 0
     },
-    "on_attr": {
-      "base": 4690,
-      "idlz": 4970
-    },
     "premium": true,
     "rarity": "SR",
     "release_date": "2015-08-15",
@@ -18466,10 +16862,6 @@ app.constant('CardData',
       "heel": 0,
       "idlz": 0,
       "idlz_heel": 0
-    },
-    "on_attr": {
-      "base": 4700,
-      "idlz": 4980
     },
     "premium": true,
     "rarity": "SR",
@@ -18513,10 +16905,6 @@ app.constant('CardData',
       "idlz": 0,
       "idlz_heel": 0
     },
-    "on_attr": {
-      "base": 4640,
-      "idlz": 4920
-    },
     "premium": true,
     "rarity": "SR",
     "release_date": "2015-08-15",
@@ -18558,10 +16946,6 @@ app.constant('CardData',
       "heel": 0,
       "idlz": 0,
       "idlz_heel": 0
-    },
-    "on_attr": {
-      "base": 4510,
-      "idlz": 4790
     },
     "premium": false,
     "rarity": "SR",
@@ -18605,10 +16989,6 @@ app.constant('CardData',
       "idlz": 0,
       "idlz_heel": 0
     },
-    "on_attr": {
-      "base": 5050,
-      "idlz": 5350
-    },
     "premium": true,
     "rarity": "UR",
     "release_date": "2015-07-31",
@@ -18650,10 +17030,6 @@ app.constant('CardData',
       "heel": 0,
       "idlz": 0,
       "idlz_heel": 0
-    },
-    "on_attr": {
-      "base": 4680,
-      "idlz": 4960
     },
     "premium": true,
     "rarity": "SR",
@@ -18697,10 +17073,6 @@ app.constant('CardData',
       "idlz": 0,
       "idlz_heel": 0
     },
-    "on_attr": {
-      "base": 4670,
-      "idlz": 4950
-    },
     "premium": true,
     "rarity": "SR",
     "release_date": "2015-07-31",
@@ -18742,10 +17114,6 @@ app.constant('CardData',
       "heel": 0,
       "idlz": 0,
       "idlz_heel": 0
-    },
-    "on_attr": {
-      "base": 4660,
-      "idlz": 4940
     },
     "premium": true,
     "rarity": "SR",
@@ -18789,10 +17157,6 @@ app.constant('CardData',
       "idlz": 0,
       "idlz_heel": 0
     },
-    "on_attr": {
-      "base": 4670,
-      "idlz": 4950
-    },
     "premium": true,
     "rarity": "SR",
     "release_date": "2015-07-31",
@@ -18834,10 +17198,6 @@ app.constant('CardData',
       "heel": 0,
       "idlz": 0,
       "idlz_heel": 0
-    },
-    "on_attr": {
-      "base": 4140,
-      "idlz": 4140
     },
     "premium": false,
     "rarity": "SR",
@@ -18881,10 +17241,6 @@ app.constant('CardData',
       "idlz": 0,
       "idlz_heel": 0
     },
-    "on_attr": {
-      "base": 4540,
-      "idlz": 4820
-    },
     "premium": false,
     "rarity": "SR",
     "release_date": "2015-07-20",
@@ -18926,10 +17282,6 @@ app.constant('CardData',
       "heel": 0,
       "idlz": 0,
       "idlz_heel": 0
-    },
-    "on_attr": {
-      "base": 5010,
-      "idlz": 5310
     },
     "premium": true,
     "rarity": "UR",
@@ -18973,10 +17325,6 @@ app.constant('CardData',
       "idlz": 0,
       "idlz_heel": 0
     },
-    "on_attr": {
-      "base": 4700,
-      "idlz": 4980
-    },
     "premium": true,
     "rarity": "SR",
     "release_date": "2015-07-15",
@@ -19018,10 +17366,6 @@ app.constant('CardData',
       "heel": 0,
       "idlz": 0,
       "idlz_heel": 0
-    },
-    "on_attr": {
-      "base": 4660,
-      "idlz": 4940
     },
     "premium": true,
     "rarity": "SR",
@@ -19065,10 +17409,6 @@ app.constant('CardData',
       "idlz": 0,
       "idlz_heel": 0
     },
-    "on_attr": {
-      "base": 4670,
-      "idlz": 4950
-    },
     "premium": true,
     "rarity": "SR",
     "release_date": "2015-07-15",
@@ -19110,10 +17450,6 @@ app.constant('CardData',
       "heel": 0,
       "idlz": 0,
       "idlz_heel": 0
-    },
-    "on_attr": {
-      "base": 4480,
-      "idlz": 4760
     },
     "premium": false,
     "rarity": "SR",
@@ -19157,10 +17493,6 @@ app.constant('CardData',
       "idlz": 0,
       "idlz_heel": 0
     },
-    "on_attr": {
-      "base": 5050,
-      "idlz": 5350
-    },
     "premium": true,
     "rarity": "UR",
     "release_date": "2015-06-30",
@@ -19202,10 +17534,6 @@ app.constant('CardData',
       "heel": 0,
       "idlz": 0,
       "idlz_heel": 0
-    },
-    "on_attr": {
-      "base": 4690,
-      "idlz": 4970
     },
     "premium": true,
     "rarity": "SR",
@@ -19249,10 +17577,6 @@ app.constant('CardData',
       "idlz": 0,
       "idlz_heel": 0
     },
-    "on_attr": {
-      "base": 4670,
-      "idlz": 4950
-    },
     "premium": true,
     "rarity": "SR",
     "release_date": "2015-06-30",
@@ -19294,10 +17618,6 @@ app.constant('CardData',
       "heel": 0,
       "idlz": 0,
       "idlz_heel": 0
-    },
-    "on_attr": {
-      "base": 4700,
-      "idlz": 4980
     },
     "premium": true,
     "rarity": "SR",
@@ -19341,10 +17661,6 @@ app.constant('CardData',
       "idlz": 0,
       "idlz_heel": 0
     },
-    "on_attr": {
-      "base": 4670,
-      "idlz": 4950
-    },
     "premium": true,
     "rarity": "SR",
     "release_date": "2015-06-30",
@@ -19386,10 +17702,6 @@ app.constant('CardData',
       "heel": 0,
       "idlz": 0,
       "idlz_heel": 0
-    },
-    "on_attr": {
-      "base": 4240,
-      "idlz": 4240
     },
     "premium": false,
     "rarity": "UR",
@@ -19433,10 +17745,6 @@ app.constant('CardData',
       "idlz": 0,
       "idlz_heel": 0
     },
-    "on_attr": {
-      "base": 4420,
-      "idlz": 4700
-    },
     "premium": false,
     "rarity": "SR",
     "release_date": "2015-06-20",
@@ -19478,10 +17786,6 @@ app.constant('CardData',
       "heel": 0,
       "idlz": 0,
       "idlz_heel": 0
-    },
-    "on_attr": {
-      "base": 5030,
-      "idlz": 5330
     },
     "premium": true,
     "rarity": "UR",
@@ -19525,10 +17829,6 @@ app.constant('CardData',
       "idlz": 0,
       "idlz_heel": 0
     },
-    "on_attr": {
-      "base": 4670,
-      "idlz": 4950
-    },
     "premium": true,
     "rarity": "SR",
     "release_date": "2015-06-15",
@@ -19570,10 +17870,6 @@ app.constant('CardData',
       "heel": 0,
       "idlz": 0,
       "idlz_heel": 0
-    },
-    "on_attr": {
-      "base": 4640,
-      "idlz": 4920
     },
     "premium": true,
     "rarity": "SR",
@@ -19617,10 +17913,6 @@ app.constant('CardData',
       "idlz": 0,
       "idlz_heel": 0
     },
-    "on_attr": {
-      "base": 4640,
-      "idlz": 4920
-    },
     "premium": true,
     "rarity": "SR",
     "release_date": "2015-06-15",
@@ -19662,10 +17954,6 @@ app.constant('CardData',
       "heel": 0,
       "idlz": 0,
       "idlz_heel": 0
-    },
-    "on_attr": {
-      "base": 4470,
-      "idlz": 4750
     },
     "premium": false,
     "rarity": "SR",
@@ -19709,10 +17997,6 @@ app.constant('CardData',
       "idlz": 0,
       "idlz_heel": 0
     },
-    "on_attr": {
-      "base": 4270,
-      "idlz": 4270
-    },
     "premium": false,
     "rarity": "SR",
     "release_date": "2015-06-05",
@@ -19754,10 +18038,6 @@ app.constant('CardData',
       "heel": 0,
       "idlz": 0,
       "idlz_heel": 0
-    },
-    "on_attr": {
-      "base": 4350,
-      "idlz": 4350
     },
     "premium": false,
     "rarity": "SR",
@@ -19801,10 +18081,6 @@ app.constant('CardData',
       "idlz": 0,
       "idlz_heel": 0
     },
-    "on_attr": {
-      "base": 4270,
-      "idlz": 4270
-    },
     "premium": false,
     "rarity": "SR",
     "release_date": "2015-06-05",
@@ -19846,10 +18122,6 @@ app.constant('CardData',
       "heel": 0,
       "idlz": 0,
       "idlz_heel": 0
-    },
-    "on_attr": {
-      "base": 4300,
-      "idlz": 4300
     },
     "premium": false,
     "rarity": "SR",
@@ -19893,10 +18165,6 @@ app.constant('CardData',
       "idlz": 0,
       "idlz_heel": 0
     },
-    "on_attr": {
-      "base": 4290,
-      "idlz": 4290
-    },
     "premium": false,
     "rarity": "SR",
     "release_date": "2015-06-05",
@@ -19938,10 +18206,6 @@ app.constant('CardData',
       "heel": 0,
       "idlz": 0,
       "idlz_heel": 0
-    },
-    "on_attr": {
-      "base": 4270,
-      "idlz": 4270
     },
     "premium": false,
     "rarity": "SR",
@@ -19985,10 +18249,6 @@ app.constant('CardData',
       "idlz": 0,
       "idlz_heel": 0
     },
-    "on_attr": {
-      "base": 4280,
-      "idlz": 4280
-    },
     "premium": false,
     "rarity": "SR",
     "release_date": "2015-06-05",
@@ -20030,10 +18290,6 @@ app.constant('CardData',
       "heel": 0,
       "idlz": 0,
       "idlz_heel": 0
-    },
-    "on_attr": {
-      "base": 4330,
-      "idlz": 4330
     },
     "premium": false,
     "rarity": "SR",
@@ -20077,10 +18333,6 @@ app.constant('CardData',
       "idlz": 0,
       "idlz_heel": 0
     },
-    "on_attr": {
-      "base": 4330,
-      "idlz": 4330
-    },
     "premium": false,
     "rarity": "SR",
     "release_date": "2015-06-05",
@@ -20122,10 +18374,6 @@ app.constant('CardData',
       "heel": 0,
       "idlz": 0,
       "idlz_heel": 0
-    },
-    "on_attr": {
-      "base": 4990,
-      "idlz": 5290
     },
     "premium": true,
     "rarity": "UR",
@@ -20169,10 +18417,6 @@ app.constant('CardData',
       "idlz": 0,
       "idlz_heel": 0
     },
-    "on_attr": {
-      "base": 4700,
-      "idlz": 4980
-    },
     "premium": true,
     "rarity": "SR",
     "release_date": "2015-05-31",
@@ -20214,10 +18458,6 @@ app.constant('CardData',
       "heel": 0,
       "idlz": 0,
       "idlz_heel": 0
-    },
-    "on_attr": {
-      "base": 4710,
-      "idlz": 4990
     },
     "premium": true,
     "rarity": "SR",
@@ -20261,10 +18501,6 @@ app.constant('CardData',
       "idlz": 0,
       "idlz_heel": 0
     },
-    "on_attr": {
-      "base": 4700,
-      "idlz": 4980
-    },
     "premium": true,
     "rarity": "SR",
     "release_date": "2015-05-31",
@@ -20306,10 +18542,6 @@ app.constant('CardData',
       "heel": 0,
       "idlz": 0,
       "idlz_heel": 0
-    },
-    "on_attr": {
-      "base": 4680,
-      "idlz": 4960
     },
     "premium": true,
     "rarity": "SR",
@@ -20353,10 +18585,6 @@ app.constant('CardData',
       "idlz": 0,
       "idlz_heel": 0
     },
-    "on_attr": {
-      "base": 4490,
-      "idlz": 4770
-    },
     "premium": false,
     "rarity": "SR",
     "release_date": "2015-05-20",
@@ -20398,10 +18626,6 @@ app.constant('CardData',
       "heel": 0,
       "idlz": 0,
       "idlz_heel": 0
-    },
-    "on_attr": {
-      "base": 5020,
-      "idlz": 5320
     },
     "premium": true,
     "rarity": "UR",
@@ -20445,10 +18669,6 @@ app.constant('CardData',
       "idlz": 0,
       "idlz_heel": 0
     },
-    "on_attr": {
-      "base": 4670,
-      "idlz": 4950
-    },
     "premium": true,
     "rarity": "SR",
     "release_date": "2015-05-15",
@@ -20490,10 +18710,6 @@ app.constant('CardData',
       "heel": 0,
       "idlz": 0,
       "idlz_heel": 0
-    },
-    "on_attr": {
-      "base": 4660,
-      "idlz": 4940
     },
     "premium": true,
     "rarity": "SR",
@@ -20537,10 +18753,6 @@ app.constant('CardData',
       "idlz": 0,
       "idlz_heel": 0
     },
-    "on_attr": {
-      "base": 4640,
-      "idlz": 4920
-    },
     "premium": true,
     "rarity": "SR",
     "release_date": "2015-05-15",
@@ -20582,10 +18794,6 @@ app.constant('CardData',
       "heel": 0,
       "idlz": 0,
       "idlz_heel": 0
-    },
-    "on_attr": {
-      "base": 4560,
-      "idlz": 4840
     },
     "premium": false,
     "rarity": "SR",
@@ -20629,10 +18837,6 @@ app.constant('CardData',
       "idlz": 0,
       "idlz_heel": 0
     },
-    "on_attr": {
-      "base": 5020,
-      "idlz": 5320
-    },
     "premium": true,
     "rarity": "UR",
     "release_date": "2015-04-30",
@@ -20674,10 +18878,6 @@ app.constant('CardData',
       "heel": 0,
       "idlz": 0,
       "idlz_heel": 0
-    },
-    "on_attr": {
-      "base": 4670,
-      "idlz": 4950
     },
     "premium": true,
     "rarity": "SR",
@@ -20721,10 +18921,6 @@ app.constant('CardData',
       "idlz": 0,
       "idlz_heel": 0
     },
-    "on_attr": {
-      "base": 4690,
-      "idlz": 4970
-    },
     "premium": true,
     "rarity": "SR",
     "release_date": "2015-04-30",
@@ -20766,10 +18962,6 @@ app.constant('CardData',
       "heel": 0,
       "idlz": 0,
       "idlz_heel": 0
-    },
-    "on_attr": {
-      "base": 4620,
-      "idlz": 4900
     },
     "premium": true,
     "rarity": "SR",
@@ -20813,10 +19005,6 @@ app.constant('CardData',
       "idlz": 0,
       "idlz_heel": 0
     },
-    "on_attr": {
-      "base": 4610,
-      "idlz": 4890
-    },
     "premium": true,
     "rarity": "SR",
     "release_date": "2015-04-30",
@@ -20858,10 +19046,6 @@ app.constant('CardData',
       "heel": 0,
       "idlz": 0,
       "idlz_heel": 0
-    },
-    "on_attr": {
-      "base": 4270,
-      "idlz": 4270
     },
     "premium": false,
     "rarity": "UR",
@@ -20905,10 +19089,6 @@ app.constant('CardData',
       "idlz": 0,
       "idlz_heel": 0
     },
-    "on_attr": {
-      "base": 4470,
-      "idlz": 4750
-    },
     "premium": false,
     "rarity": "SR",
     "release_date": "2015-04-20",
@@ -20950,10 +19130,6 @@ app.constant('CardData',
       "heel": 0,
       "idlz": 0,
       "idlz_heel": 0
-    },
-    "on_attr": {
-      "base": 4980,
-      "idlz": 5280
     },
     "premium": true,
     "rarity": "UR",
@@ -20997,10 +19173,6 @@ app.constant('CardData',
       "idlz": 0,
       "idlz_heel": 0
     },
-    "on_attr": {
-      "base": 4660,
-      "idlz": 4940
-    },
     "premium": true,
     "rarity": "SR",
     "release_date": "2015-04-15",
@@ -21042,10 +19214,6 @@ app.constant('CardData',
       "heel": 0,
       "idlz": 0,
       "idlz_heel": 0
-    },
-    "on_attr": {
-      "base": 4640,
-      "idlz": 4920
     },
     "premium": true,
     "rarity": "SR",
@@ -21089,10 +19257,6 @@ app.constant('CardData',
       "idlz": 0,
       "idlz_heel": 0
     },
-    "on_attr": {
-      "base": 4630,
-      "idlz": 4910
-    },
     "premium": true,
     "rarity": "SR",
     "release_date": "2015-04-15",
@@ -21134,10 +19298,6 @@ app.constant('CardData',
       "heel": 0,
       "idlz": 0,
       "idlz_heel": 0
-    },
-    "on_attr": {
-      "base": 4480,
-      "idlz": 4760
     },
     "premium": false,
     "rarity": "SR",
@@ -21181,10 +19341,6 @@ app.constant('CardData',
       "idlz": 0,
       "idlz_heel": 0
     },
-    "on_attr": {
-      "base": 4950,
-      "idlz": 5250
-    },
     "premium": true,
     "rarity": "UR",
     "release_date": "2015-03-31",
@@ -21226,10 +19382,6 @@ app.constant('CardData',
       "heel": 0,
       "idlz": 0,
       "idlz_heel": 0
-    },
-    "on_attr": {
-      "base": 4640,
-      "idlz": 4920
     },
     "premium": true,
     "rarity": "SR",
@@ -21273,10 +19425,6 @@ app.constant('CardData',
       "idlz": 0,
       "idlz_heel": 0
     },
-    "on_attr": {
-      "base": 4700,
-      "idlz": 4980
-    },
     "premium": true,
     "rarity": "SR",
     "release_date": "2015-03-31",
@@ -21318,10 +19466,6 @@ app.constant('CardData',
       "heel": 0,
       "idlz": 0,
       "idlz_heel": 0
-    },
-    "on_attr": {
-      "base": 4610,
-      "idlz": 4890
     },
     "premium": true,
     "rarity": "SR",
@@ -21365,10 +19509,6 @@ app.constant('CardData',
       "idlz": 0,
       "idlz_heel": 0
     },
-    "on_attr": {
-      "base": 4650,
-      "idlz": 4930
-    },
     "premium": true,
     "rarity": "SR",
     "release_date": "2015-03-31",
@@ -21410,10 +19550,6 @@ app.constant('CardData',
       "heel": 0,
       "idlz": 0,
       "idlz_heel": 0
-    },
-    "on_attr": {
-      "base": 4300,
-      "idlz": 4300
     },
     "premium": false,
     "rarity": "UR",
@@ -21457,10 +19593,6 @@ app.constant('CardData',
       "idlz": 0,
       "idlz_heel": 0
     },
-    "on_attr": {
-      "base": 4440,
-      "idlz": 4720
-    },
     "premium": false,
     "rarity": "SR",
     "release_date": "2015-03-20",
@@ -21502,10 +19634,6 @@ app.constant('CardData',
       "heel": 0,
       "idlz": 0,
       "idlz_heel": 0
-    },
-    "on_attr": {
-      "base": 4940,
-      "idlz": 5240
     },
     "premium": true,
     "rarity": "UR",
@@ -21549,10 +19677,6 @@ app.constant('CardData',
       "idlz": 0,
       "idlz_heel": 0
     },
-    "on_attr": {
-      "base": 4620,
-      "idlz": 4900
-    },
     "premium": true,
     "rarity": "SR",
     "release_date": "2015-03-15",
@@ -21594,10 +19718,6 @@ app.constant('CardData',
       "heel": 0,
       "idlz": 0,
       "idlz_heel": 0
-    },
-    "on_attr": {
-      "base": 4610,
-      "idlz": 4890
     },
     "premium": true,
     "rarity": "SR",
@@ -21641,10 +19761,6 @@ app.constant('CardData',
       "idlz": 0,
       "idlz_heel": 0
     },
-    "on_attr": {
-      "base": 4640,
-      "idlz": 4920
-    },
     "premium": true,
     "rarity": "SR",
     "release_date": "2015-03-15",
@@ -21686,10 +19802,6 @@ app.constant('CardData',
       "heel": 0,
       "idlz": 0,
       "idlz_heel": 0
-    },
-    "on_attr": {
-      "base": 4440,
-      "idlz": 4720
     },
     "premium": false,
     "rarity": "SR",
@@ -21733,10 +19845,6 @@ app.constant('CardData',
       "idlz": 0,
       "idlz_heel": 0
     },
-    "on_attr": {
-      "base": 4980,
-      "idlz": 5280
-    },
     "premium": true,
     "rarity": "UR",
     "release_date": "2015-02-28",
@@ -21778,10 +19886,6 @@ app.constant('CardData',
       "heel": 0,
       "idlz": 0,
       "idlz_heel": 0
-    },
-    "on_attr": {
-      "base": 4640,
-      "idlz": 4920
     },
     "premium": true,
     "rarity": "SR",
@@ -21825,10 +19929,6 @@ app.constant('CardData',
       "idlz": 0,
       "idlz_heel": 0
     },
-    "on_attr": {
-      "base": 4680,
-      "idlz": 4960
-    },
     "premium": true,
     "rarity": "SR",
     "release_date": "2015-02-28",
@@ -21870,10 +19970,6 @@ app.constant('CardData',
       "heel": 0,
       "idlz": 0,
       "idlz_heel": 0
-    },
-    "on_attr": {
-      "base": 4630,
-      "idlz": 4910
     },
     "premium": true,
     "rarity": "SR",
@@ -21917,10 +20013,6 @@ app.constant('CardData',
       "idlz": 0,
       "idlz_heel": 0
     },
-    "on_attr": {
-      "base": 4660,
-      "idlz": 4940
-    },
     "premium": true,
     "rarity": "SR",
     "release_date": "2015-02-28",
@@ -21962,10 +20054,6 @@ app.constant('CardData',
       "heel": 0,
       "idlz": 0,
       "idlz_heel": 0
-    },
-    "on_attr": {
-      "base": 4270,
-      "idlz": 4270
     },
     "premium": false,
     "rarity": "SR",
@@ -22009,10 +20097,6 @@ app.constant('CardData',
       "idlz": 0,
       "idlz_heel": 0
     },
-    "on_attr": {
-      "base": 4470,
-      "idlz": 4750
-    },
     "premium": false,
     "rarity": "SR",
     "release_date": "2015-02-20",
@@ -22054,10 +20138,6 @@ app.constant('CardData',
       "heel": 0,
       "idlz": 0,
       "idlz_heel": 0
-    },
-    "on_attr": {
-      "base": 4250,
-      "idlz": 4250
     },
     "premium": false,
     "rarity": "SR",
@@ -22101,10 +20181,6 @@ app.constant('CardData',
       "idlz": 0,
       "idlz_heel": 0
     },
-    "on_attr": {
-      "base": 5030,
-      "idlz": 5330
-    },
     "premium": true,
     "rarity": "UR",
     "release_date": "2015-02-15",
@@ -22146,10 +20222,6 @@ app.constant('CardData',
       "heel": 0,
       "idlz": 0,
       "idlz_heel": 0
-    },
-    "on_attr": {
-      "base": 4640,
-      "idlz": 4920
     },
     "premium": true,
     "rarity": "SR",
@@ -22193,10 +20265,6 @@ app.constant('CardData',
       "idlz": 0,
       "idlz_heel": 0
     },
-    "on_attr": {
-      "base": 4550,
-      "idlz": 4830
-    },
     "premium": true,
     "rarity": "SR",
     "release_date": "2015-02-15",
@@ -22238,10 +20306,6 @@ app.constant('CardData',
       "heel": 0,
       "idlz": 0,
       "idlz_heel": 0
-    },
-    "on_attr": {
-      "base": 4690,
-      "idlz": 4970
     },
     "premium": true,
     "rarity": "SR",
@@ -22285,10 +20349,6 @@ app.constant('CardData',
       "idlz": 0,
       "idlz_heel": 0
     },
-    "on_attr": {
-      "base": 4400,
-      "idlz": 4680
-    },
     "premium": false,
     "rarity": "SR",
     "release_date": "2015-02-05",
@@ -22330,10 +20390,6 @@ app.constant('CardData',
       "heel": 0,
       "idlz": 0,
       "idlz_heel": 0
-    },
-    "on_attr": {
-      "base": 4930,
-      "idlz": 5230
     },
     "premium": true,
     "rarity": "UR",
@@ -22377,10 +20433,6 @@ app.constant('CardData',
       "idlz": 0,
       "idlz_heel": 0
     },
-    "on_attr": {
-      "base": 4640,
-      "idlz": 4920
-    },
     "premium": true,
     "rarity": "SR",
     "release_date": "2015-01-31",
@@ -22422,10 +20474,6 @@ app.constant('CardData',
       "heel": 0,
       "idlz": 0,
       "idlz_heel": 0
-    },
-    "on_attr": {
-      "base": 4610,
-      "idlz": 4890
     },
     "premium": true,
     "rarity": "SR",
@@ -22469,10 +20517,6 @@ app.constant('CardData',
       "idlz": 0,
       "idlz_heel": 0
     },
-    "on_attr": {
-      "base": 4700,
-      "idlz": 4980
-    },
     "premium": true,
     "rarity": "SR",
     "release_date": "2015-01-31",
@@ -22514,10 +20558,6 @@ app.constant('CardData',
       "heel": 0,
       "idlz": 0,
       "idlz_heel": 0
-    },
-    "on_attr": {
-      "base": 4630,
-      "idlz": 4910
     },
     "premium": true,
     "rarity": "SR",
@@ -22561,10 +20601,6 @@ app.constant('CardData',
       "idlz": 0,
       "idlz_heel": 0
     },
-    "on_attr": {
-      "base": 4200,
-      "idlz": 4200
-    },
     "premium": false,
     "rarity": "SR",
     "release_date": "2015-01-20",
@@ -22606,10 +20642,6 @@ app.constant('CardData',
       "heel": 0,
       "idlz": 0,
       "idlz_heel": 0
-    },
-    "on_attr": {
-      "base": 4270,
-      "idlz": 4270
     },
     "premium": false,
     "rarity": "SR",
@@ -22653,10 +20685,6 @@ app.constant('CardData',
       "idlz": 0,
       "idlz_heel": 0
     },
-    "on_attr": {
-      "base": 4510,
-      "idlz": 4790
-    },
     "premium": false,
     "rarity": "SR",
     "release_date": "2015-01-20",
@@ -22698,10 +20726,6 @@ app.constant('CardData',
       "heel": 0,
       "idlz": 0,
       "idlz_heel": 0
-    },
-    "on_attr": {
-      "base": 4190,
-      "idlz": 4190
     },
     "premium": false,
     "rarity": "SR",
@@ -22745,10 +20769,6 @@ app.constant('CardData',
       "idlz": 0,
       "idlz_heel": 0
     },
-    "on_attr": {
-      "base": 4220,
-      "idlz": 4220
-    },
     "premium": false,
     "rarity": "SR",
     "release_date": "2015-01-20",
@@ -22790,10 +20810,6 @@ app.constant('CardData',
       "heel": 0,
       "idlz": 0,
       "idlz_heel": 0
-    },
-    "on_attr": {
-      "base": 4210,
-      "idlz": 4210
     },
     "premium": false,
     "rarity": "SR",
@@ -22837,10 +20853,6 @@ app.constant('CardData',
       "idlz": 0,
       "idlz_heel": 0
     },
-    "on_attr": {
-      "base": 4190,
-      "idlz": 4190
-    },
     "premium": false,
     "rarity": "SR",
     "release_date": "2015-01-20",
@@ -22882,10 +20894,6 @@ app.constant('CardData',
       "heel": 0,
       "idlz": 0,
       "idlz_heel": 0
-    },
-    "on_attr": {
-      "base": 4200,
-      "idlz": 4200
     },
     "premium": false,
     "rarity": "SR",
@@ -22929,10 +20937,6 @@ app.constant('CardData',
       "idlz": 0,
       "idlz_heel": 0
     },
-    "on_attr": {
-      "base": 4250,
-      "idlz": 4250
-    },
     "premium": false,
     "rarity": "SR",
     "release_date": "2015-01-20",
@@ -22974,10 +20978,6 @@ app.constant('CardData',
       "heel": 0,
       "idlz": 0,
       "idlz_heel": 0
-    },
-    "on_attr": {
-      "base": 4250,
-      "idlz": 4250
     },
     "premium": false,
     "rarity": "SR",
@@ -23021,10 +21021,6 @@ app.constant('CardData',
       "idlz": 0,
       "idlz_heel": 0
     },
-    "on_attr": {
-      "base": 4940,
-      "idlz": 5240
-    },
     "premium": true,
     "rarity": "UR",
     "release_date": "2015-01-15",
@@ -23066,10 +21062,6 @@ app.constant('CardData',
       "heel": 0,
       "idlz": 0,
       "idlz_heel": 0
-    },
-    "on_attr": {
-      "base": 4680,
-      "idlz": 4960
     },
     "premium": true,
     "rarity": "SR",
@@ -23113,10 +21105,6 @@ app.constant('CardData',
       "idlz": 0,
       "idlz_heel": 0
     },
-    "on_attr": {
-      "base": 4640,
-      "idlz": 4920
-    },
     "premium": true,
     "rarity": "SR",
     "release_date": "2015-01-15",
@@ -23158,10 +21146,6 @@ app.constant('CardData',
       "heel": 0,
       "idlz": 0,
       "idlz_heel": 0
-    },
-    "on_attr": {
-      "base": 4580,
-      "idlz": 4860
     },
     "premium": true,
     "rarity": "SR",
@@ -23205,10 +21189,6 @@ app.constant('CardData',
       "idlz": 0,
       "idlz_heel": 0
     },
-    "on_attr": {
-      "base": 4440,
-      "idlz": 4720
-    },
     "premium": false,
     "rarity": "SR",
     "release_date": "2015-01-05",
@@ -23250,10 +21230,6 @@ app.constant('CardData',
       "heel": 0,
       "idlz": 0,
       "idlz_heel": 0
-    },
-    "on_attr": {
-      "base": 5000,
-      "idlz": 5300
     },
     "premium": true,
     "rarity": "UR",
@@ -23297,10 +21273,6 @@ app.constant('CardData',
       "idlz": 0,
       "idlz_heel": 0
     },
-    "on_attr": {
-      "base": 4620,
-      "idlz": 4900
-    },
     "premium": true,
     "rarity": "SR",
     "release_date": "2014-12-31",
@@ -23342,10 +21314,6 @@ app.constant('CardData',
       "heel": 0,
       "idlz": 0,
       "idlz_heel": 0
-    },
-    "on_attr": {
-      "base": 4630,
-      "idlz": 4910
     },
     "premium": true,
     "rarity": "SR",
@@ -23389,10 +21357,6 @@ app.constant('CardData',
       "idlz": 0,
       "idlz_heel": 0
     },
-    "on_attr": {
-      "base": 4640,
-      "idlz": 4920
-    },
     "premium": true,
     "rarity": "SR",
     "release_date": "2014-12-31",
@@ -23434,10 +21398,6 @@ app.constant('CardData',
       "heel": 0,
       "idlz": 0,
       "idlz_heel": 0
-    },
-    "on_attr": {
-      "base": 4660,
-      "idlz": 4940
     },
     "premium": true,
     "rarity": "SR",
@@ -23481,10 +21441,6 @@ app.constant('CardData',
       "idlz": 0,
       "idlz_heel": 0
     },
-    "on_attr": {
-      "base": 4260,
-      "idlz": 4260
-    },
     "premium": false,
     "rarity": "UR",
     "release_date": "2014-12-20",
@@ -23526,10 +21482,6 @@ app.constant('CardData',
       "heel": 0,
       "idlz": 0,
       "idlz_heel": 0
-    },
-    "on_attr": {
-      "base": 4260,
-      "idlz": 4260
     },
     "premium": false,
     "rarity": "SR",
@@ -23573,10 +21525,6 @@ app.constant('CardData',
       "idlz": 0,
       "idlz_heel": 0
     },
-    "on_attr": {
-      "base": 4430,
-      "idlz": 4710
-    },
     "premium": false,
     "rarity": "SR",
     "release_date": "2014-12-20",
@@ -23618,10 +21566,6 @@ app.constant('CardData',
       "heel": 0,
       "idlz": 0,
       "idlz_heel": 0
-    },
-    "on_attr": {
-      "base": 4230,
-      "idlz": 4230
     },
     "premium": false,
     "rarity": "SR",
@@ -23665,10 +21609,6 @@ app.constant('CardData',
       "idlz": 0,
       "idlz_heel": 0
     },
-    "on_attr": {
-      "base": 4330,
-      "idlz": 4330
-    },
     "premium": false,
     "rarity": "SR",
     "release_date": "2014-12-20",
@@ -23710,10 +21650,6 @@ app.constant('CardData',
       "heel": 0,
       "idlz": 0,
       "idlz_heel": 0
-    },
-    "on_attr": {
-      "base": 4210,
-      "idlz": 4210
     },
     "premium": false,
     "rarity": "SR",
@@ -23757,10 +21693,6 @@ app.constant('CardData',
       "idlz": 0,
       "idlz_heel": 0
     },
-    "on_attr": {
-      "base": 4400,
-      "idlz": 4400
-    },
     "premium": false,
     "rarity": "SR",
     "release_date": "2014-12-20",
@@ -23802,10 +21734,6 @@ app.constant('CardData',
       "heel": 0,
       "idlz": 0,
       "idlz_heel": 0
-    },
-    "on_attr": {
-      "base": 4230,
-      "idlz": 4230
     },
     "premium": false,
     "rarity": "UR",
@@ -23849,10 +21777,6 @@ app.constant('CardData',
       "idlz": 0,
       "idlz_heel": 0
     },
-    "on_attr": {
-      "base": 4940,
-      "idlz": 5240
-    },
     "premium": true,
     "rarity": "UR",
     "release_date": "2014-12-15",
@@ -23894,10 +21818,6 @@ app.constant('CardData',
       "heel": 0,
       "idlz": 0,
       "idlz_heel": 0
-    },
-    "on_attr": {
-      "base": 4600,
-      "idlz": 4880
     },
     "premium": true,
     "rarity": "SR",
@@ -23941,10 +21861,6 @@ app.constant('CardData',
       "idlz": 0,
       "idlz_heel": 0
     },
-    "on_attr": {
-      "base": 4500,
-      "idlz": 4780
-    },
     "premium": true,
     "rarity": "SR",
     "release_date": "2014-12-15",
@@ -23986,10 +21902,6 @@ app.constant('CardData',
       "heel": 0,
       "idlz": 0,
       "idlz_heel": 0
-    },
-    "on_attr": {
-      "base": 4600,
-      "idlz": 4880
     },
     "premium": true,
     "rarity": "SR",
@@ -24033,10 +21945,6 @@ app.constant('CardData',
       "idlz": 0,
       "idlz_heel": 0
     },
-    "on_attr": {
-      "base": 4460,
-      "idlz": 4740
-    },
     "premium": false,
     "rarity": "SR",
     "release_date": "2014-12-05",
@@ -24078,10 +21986,6 @@ app.constant('CardData',
       "heel": 0,
       "idlz": 0,
       "idlz_heel": 0
-    },
-    "on_attr": {
-      "base": 5020,
-      "idlz": 5320
     },
     "premium": true,
     "rarity": "UR",
@@ -24125,10 +22029,6 @@ app.constant('CardData',
       "idlz": 0,
       "idlz_heel": 0
     },
-    "on_attr": {
-      "base": 4560,
-      "idlz": 4840
-    },
     "premium": true,
     "rarity": "SR",
     "release_date": "2014-11-30",
@@ -24170,10 +22070,6 @@ app.constant('CardData',
       "heel": 0,
       "idlz": 0,
       "idlz_heel": 0
-    },
-    "on_attr": {
-      "base": 4650,
-      "idlz": 4930
     },
     "premium": true,
     "rarity": "SR",
@@ -24217,10 +22113,6 @@ app.constant('CardData',
       "idlz": 0,
       "idlz_heel": 0
     },
-    "on_attr": {
-      "base": 4610,
-      "idlz": 4890
-    },
     "premium": true,
     "rarity": "SR",
     "release_date": "2014-11-30",
@@ -24262,10 +22154,6 @@ app.constant('CardData',
       "heel": 0,
       "idlz": 0,
       "idlz_heel": 0
-    },
-    "on_attr": {
-      "base": 4600,
-      "idlz": 4880
     },
     "premium": true,
     "rarity": "SR",
@@ -24309,10 +22197,6 @@ app.constant('CardData',
       "idlz": 0,
       "idlz_heel": 0
     },
-    "on_attr": {
-      "base": 4400,
-      "idlz": 4400
-    },
     "premium": false,
     "rarity": "SR",
     "release_date": "2014-11-20",
@@ -24354,10 +22238,6 @@ app.constant('CardData',
       "heel": 0,
       "idlz": 0,
       "idlz_heel": 0
-    },
-    "on_attr": {
-      "base": 4430,
-      "idlz": 4710
     },
     "premium": false,
     "rarity": "SR",
@@ -24401,10 +22281,6 @@ app.constant('CardData',
       "idlz": 0,
       "idlz_heel": 0
     },
-    "on_attr": {
-      "base": 4380,
-      "idlz": 4380
-    },
     "premium": false,
     "rarity": "SR",
     "release_date": "2014-11-20",
@@ -24446,10 +22322,6 @@ app.constant('CardData',
       "heel": 0,
       "idlz": 0,
       "idlz_heel": 0
-    },
-    "on_attr": {
-      "base": 4340,
-      "idlz": 4340
     },
     "premium": false,
     "rarity": "SR",
@@ -24493,10 +22365,6 @@ app.constant('CardData',
       "idlz": 0,
       "idlz_heel": 0
     },
-    "on_attr": {
-      "base": 4330,
-      "idlz": 4330
-    },
     "premium": false,
     "rarity": "UR",
     "release_date": "2014-11-15",
@@ -24538,10 +22406,6 @@ app.constant('CardData',
       "heel": 0,
       "idlz": 0,
       "idlz_heel": 0
-    },
-    "on_attr": {
-      "base": 4980,
-      "idlz": 5280
     },
     "premium": true,
     "rarity": "UR",
@@ -24585,10 +22449,6 @@ app.constant('CardData',
       "idlz": 0,
       "idlz_heel": 0
     },
-    "on_attr": {
-      "base": 4310,
-      "idlz": 4310
-    },
     "premium": false,
     "rarity": "UR",
     "release_date": "2014-11-15",
@@ -24630,10 +22490,6 @@ app.constant('CardData',
       "heel": 0,
       "idlz": 0,
       "idlz_heel": 0
-    },
-    "on_attr": {
-      "base": 4620,
-      "idlz": 4900
     },
     "premium": true,
     "rarity": "SR",
@@ -24677,10 +22533,6 @@ app.constant('CardData',
       "idlz": 0,
       "idlz_heel": 0
     },
-    "on_attr": {
-      "base": 4540,
-      "idlz": 4820
-    },
     "premium": true,
     "rarity": "SR",
     "release_date": "2014-11-15",
@@ -24722,10 +22574,6 @@ app.constant('CardData',
       "heel": 0,
       "idlz": 0,
       "idlz_heel": 0
-    },
-    "on_attr": {
-      "base": 4630,
-      "idlz": 4910
     },
     "premium": true,
     "rarity": "SR",
@@ -24769,10 +22617,6 @@ app.constant('CardData',
       "idlz": 0,
       "idlz_heel": 0
     },
-    "on_attr": {
-      "base": 4360,
-      "idlz": 4640
-    },
     "premium": false,
     "rarity": "SR",
     "release_date": "2014-11-05",
@@ -24814,10 +22658,6 @@ app.constant('CardData',
       "heel": 0,
       "idlz": 0,
       "idlz_heel": 0
-    },
-    "on_attr": {
-      "base": 5010,
-      "idlz": 5310
     },
     "premium": true,
     "rarity": "UR",
@@ -24861,10 +22701,6 @@ app.constant('CardData',
       "idlz": 0,
       "idlz_heel": 0
     },
-    "on_attr": {
-      "base": 4620,
-      "idlz": 4900
-    },
     "premium": true,
     "rarity": "SR",
     "release_date": "2014-10-31",
@@ -24906,10 +22742,6 @@ app.constant('CardData',
       "heel": 0,
       "idlz": 0,
       "idlz_heel": 0
-    },
-    "on_attr": {
-      "base": 4600,
-      "idlz": 4880
     },
     "premium": true,
     "rarity": "SR",
@@ -24953,10 +22785,6 @@ app.constant('CardData',
       "idlz": 0,
       "idlz_heel": 0
     },
-    "on_attr": {
-      "base": 4580,
-      "idlz": 4860
-    },
     "premium": true,
     "rarity": "SR",
     "release_date": "2014-10-31",
@@ -24998,10 +22826,6 @@ app.constant('CardData',
       "heel": 0,
       "idlz": 0,
       "idlz_heel": 0
-    },
-    "on_attr": {
-      "base": 4590,
-      "idlz": 4870
     },
     "premium": true,
     "rarity": "SR",
@@ -25045,10 +22869,6 @@ app.constant('CardData',
       "idlz": 0,
       "idlz_heel": 0
     },
-    "on_attr": {
-      "base": 4290,
-      "idlz": 4290
-    },
     "premium": false,
     "rarity": "UR",
     "release_date": "2014-10-20",
@@ -25090,10 +22910,6 @@ app.constant('CardData',
       "heel": 0,
       "idlz": 0,
       "idlz_heel": 0
-    },
-    "on_attr": {
-      "base": 4160,
-      "idlz": 4160
     },
     "premium": false,
     "rarity": "SR",
@@ -25137,10 +22953,6 @@ app.constant('CardData',
       "idlz": 0,
       "idlz_heel": 0
     },
-    "on_attr": {
-      "base": 4420,
-      "idlz": 4700
-    },
     "premium": false,
     "rarity": "SR",
     "release_date": "2014-10-20",
@@ -25182,10 +22994,6 @@ app.constant('CardData',
       "heel": 0,
       "idlz": 0,
       "idlz_heel": 0
-    },
-    "on_attr": {
-      "base": 4200,
-      "idlz": 4200
     },
     "premium": false,
     "rarity": "SR",
@@ -25229,10 +23037,6 @@ app.constant('CardData',
       "idlz": 0,
       "idlz_heel": 0
     },
-    "on_attr": {
-      "base": 4200,
-      "idlz": 4200
-    },
     "premium": false,
     "rarity": "SR",
     "release_date": "2014-10-20",
@@ -25274,10 +23078,6 @@ app.constant('CardData',
       "heel": 0,
       "idlz": 0,
       "idlz_heel": 0
-    },
-    "on_attr": {
-      "base": 4230,
-      "idlz": 4230
     },
     "premium": false,
     "rarity": "SR",
@@ -25321,10 +23121,6 @@ app.constant('CardData',
       "idlz": 0,
       "idlz_heel": 0
     },
-    "on_attr": {
-      "base": 4170,
-      "idlz": 4170
-    },
     "premium": false,
     "rarity": "SR",
     "release_date": "2014-10-20",
@@ -25366,10 +23162,6 @@ app.constant('CardData',
       "heel": 0,
       "idlz": 0,
       "idlz_heel": 0
-    },
-    "on_attr": {
-      "base": 5000,
-      "idlz": 5300
     },
     "premium": true,
     "rarity": "UR",
@@ -25413,10 +23205,6 @@ app.constant('CardData',
       "idlz": 0,
       "idlz_heel": 0
     },
-    "on_attr": {
-      "base": 4630,
-      "idlz": 4910
-    },
     "premium": true,
     "rarity": "SR",
     "release_date": "2014-10-15",
@@ -25458,10 +23246,6 @@ app.constant('CardData',
       "heel": 0,
       "idlz": 0,
       "idlz_heel": 0
-    },
-    "on_attr": {
-      "base": 4590,
-      "idlz": 4870
     },
     "premium": true,
     "rarity": "SR",
@@ -25505,10 +23289,6 @@ app.constant('CardData',
       "idlz": 0,
       "idlz_heel": 0
     },
-    "on_attr": {
-      "base": 4620,
-      "idlz": 4900
-    },
     "premium": true,
     "rarity": "SR",
     "release_date": "2014-10-15",
@@ -25550,10 +23330,6 @@ app.constant('CardData',
       "heel": 0,
       "idlz": 0,
       "idlz_heel": 0
-    },
-    "on_attr": {
-      "base": 4430,
-      "idlz": 4710
     },
     "premium": false,
     "rarity": "SR",
@@ -25597,10 +23373,6 @@ app.constant('CardData',
       "idlz": 0,
       "idlz_heel": 0
     },
-    "on_attr": {
-      "base": 5010,
-      "idlz": 5310
-    },
     "premium": true,
     "rarity": "UR",
     "release_date": "2014-09-30",
@@ -25642,10 +23414,6 @@ app.constant('CardData',
       "heel": 0,
       "idlz": 0,
       "idlz_heel": 0
-    },
-    "on_attr": {
-      "base": 4550,
-      "idlz": 4830
     },
     "premium": true,
     "rarity": "SR",
@@ -25689,10 +23457,6 @@ app.constant('CardData',
       "idlz": 0,
       "idlz_heel": 0
     },
-    "on_attr": {
-      "base": 4520,
-      "idlz": 4800
-    },
     "premium": true,
     "rarity": "SR",
     "release_date": "2014-09-30",
@@ -25734,10 +23498,6 @@ app.constant('CardData',
       "heel": 0,
       "idlz": 0,
       "idlz_heel": 0
-    },
-    "on_attr": {
-      "base": 4500,
-      "idlz": 4780
     },
     "premium": true,
     "rarity": "SR",
@@ -25781,10 +23541,6 @@ app.constant('CardData',
       "idlz": 0,
       "idlz_heel": 0
     },
-    "on_attr": {
-      "base": 4630,
-      "idlz": 4910
-    },
     "premium": true,
     "rarity": "SR",
     "release_date": "2014-09-30",
@@ -25826,10 +23582,6 @@ app.constant('CardData',
       "heel": 0,
       "idlz": 0,
       "idlz_heel": 0
-    },
-    "on_attr": {
-      "base": 4280,
-      "idlz": 4280
     },
     "premium": false,
     "rarity": "UR",
@@ -25873,10 +23625,6 @@ app.constant('CardData',
       "idlz": 0,
       "idlz_heel": 0
     },
-    "on_attr": {
-      "base": 4240,
-      "idlz": 4240
-    },
     "premium": false,
     "rarity": "UR",
     "release_date": "2014-09-20",
@@ -25918,10 +23666,6 @@ app.constant('CardData',
       "heel": 0,
       "idlz": 0,
       "idlz_heel": 0
-    },
-    "on_attr": {
-      "base": 4410,
-      "idlz": 4690
     },
     "premium": false,
     "rarity": "SR",
@@ -25965,10 +23709,6 @@ app.constant('CardData',
       "idlz": 0,
       "idlz_heel": 0
     },
-    "on_attr": {
-      "base": 5020,
-      "idlz": 5320
-    },
     "premium": true,
     "rarity": "UR",
     "release_date": "2014-09-15",
@@ -26010,10 +23750,6 @@ app.constant('CardData',
       "heel": 0,
       "idlz": 0,
       "idlz_heel": 0
-    },
-    "on_attr": {
-      "base": 4580,
-      "idlz": 4860
     },
     "premium": true,
     "rarity": "SR",
@@ -26057,10 +23793,6 @@ app.constant('CardData',
       "idlz": 0,
       "idlz_heel": 0
     },
-    "on_attr": {
-      "base": 4550,
-      "idlz": 4830
-    },
     "premium": true,
     "rarity": "SR",
     "release_date": "2014-09-15",
@@ -26102,10 +23834,6 @@ app.constant('CardData',
       "heel": 0,
       "idlz": 0,
       "idlz_heel": 0
-    },
-    "on_attr": {
-      "base": 4610,
-      "idlz": 4890
     },
     "premium": true,
     "rarity": "SR",
@@ -26149,10 +23877,6 @@ app.constant('CardData',
       "idlz": 0,
       "idlz_heel": 0
     },
-    "on_attr": {
-      "base": 4480,
-      "idlz": 4760
-    },
     "premium": false,
     "rarity": "SR",
     "release_date": "2014-09-05",
@@ -26194,10 +23918,6 @@ app.constant('CardData',
       "heel": 0,
       "idlz": 0,
       "idlz_heel": 0
-    },
-    "on_attr": {
-      "base": 5030,
-      "idlz": 5330
     },
     "premium": true,
     "rarity": "UR",
@@ -26241,10 +23961,6 @@ app.constant('CardData',
       "idlz": 0,
       "idlz_heel": 0
     },
-    "on_attr": {
-      "base": 4510,
-      "idlz": 4790
-    },
     "premium": true,
     "rarity": "SR",
     "release_date": "2014-08-31",
@@ -26286,10 +24002,6 @@ app.constant('CardData',
       "heel": 0,
       "idlz": 0,
       "idlz_heel": 0
-    },
-    "on_attr": {
-      "base": 4570,
-      "idlz": 4850
     },
     "premium": true,
     "rarity": "SR",
@@ -26333,10 +24045,6 @@ app.constant('CardData',
       "idlz": 0,
       "idlz_heel": 0
     },
-    "on_attr": {
-      "base": 4610,
-      "idlz": 4890
-    },
     "premium": true,
     "rarity": "SR",
     "release_date": "2014-08-31",
@@ -26378,10 +24086,6 @@ app.constant('CardData',
       "heel": 0,
       "idlz": 0,
       "idlz_heel": 0
-    },
-    "on_attr": {
-      "base": 4700,
-      "idlz": 4980
     },
     "premium": true,
     "rarity": "SR",
@@ -26425,10 +24129,6 @@ app.constant('CardData',
       "idlz": 0,
       "idlz_heel": 0
     },
-    "on_attr": {
-      "base": 4280,
-      "idlz": 4280
-    },
     "premium": false,
     "rarity": "UR",
     "release_date": "2014-08-20",
@@ -26470,10 +24170,6 @@ app.constant('CardData',
       "heel": 0,
       "idlz": 0,
       "idlz_heel": 0
-    },
-    "on_attr": {
-      "base": 4140,
-      "idlz": 4140
     },
     "premium": false,
     "rarity": "SR",
@@ -26517,10 +24213,6 @@ app.constant('CardData',
       "idlz": 0,
       "idlz_heel": 0
     },
-    "on_attr": {
-      "base": 4220,
-      "idlz": 4220
-    },
     "premium": false,
     "rarity": "SR",
     "release_date": "2014-08-20",
@@ -26562,10 +24254,6 @@ app.constant('CardData',
       "heel": 0,
       "idlz": 0,
       "idlz_heel": 0
-    },
-    "on_attr": {
-      "base": 4400,
-      "idlz": 4680
     },
     "premium": false,
     "rarity": "SR",
@@ -26609,10 +24297,6 @@ app.constant('CardData',
       "idlz": 0,
       "idlz_heel": 0
     },
-    "on_attr": {
-      "base": 5020,
-      "idlz": 5320
-    },
     "premium": true,
     "rarity": "UR",
     "release_date": "2014-08-15",
@@ -26654,10 +24338,6 @@ app.constant('CardData',
       "heel": 0,
       "idlz": 0,
       "idlz_heel": 0
-    },
-    "on_attr": {
-      "base": 4530,
-      "idlz": 4810
     },
     "premium": true,
     "rarity": "SR",
@@ -26701,10 +24381,6 @@ app.constant('CardData',
       "idlz": 0,
       "idlz_heel": 0
     },
-    "on_attr": {
-      "base": 4570,
-      "idlz": 4850
-    },
     "premium": true,
     "rarity": "SR",
     "release_date": "2014-08-15",
@@ -26746,10 +24422,6 @@ app.constant('CardData',
       "heel": 0,
       "idlz": 0,
       "idlz_heel": 0
-    },
-    "on_attr": {
-      "base": 4480,
-      "idlz": 4760
     },
     "premium": true,
     "rarity": "SR",
@@ -26793,10 +24465,6 @@ app.constant('CardData',
       "idlz": 0,
       "idlz_heel": 0
     },
-    "on_attr": {
-      "base": 4450,
-      "idlz": 4730
-    },
     "premium": false,
     "rarity": "SR",
     "release_date": "2014-08-05",
@@ -26838,10 +24506,6 @@ app.constant('CardData',
       "heel": 0,
       "idlz": 0,
       "idlz_heel": 0
-    },
-    "on_attr": {
-      "base": 5000,
-      "idlz": 5300
     },
     "premium": true,
     "rarity": "UR",
@@ -26885,10 +24549,6 @@ app.constant('CardData',
       "idlz": 0,
       "idlz_heel": 0
     },
-    "on_attr": {
-      "base": 4490,
-      "idlz": 4770
-    },
     "premium": true,
     "rarity": "SR",
     "release_date": "2014-07-31",
@@ -26930,10 +24590,6 @@ app.constant('CardData',
       "heel": 0,
       "idlz": 0,
       "idlz_heel": 0
-    },
-    "on_attr": {
-      "base": 4510,
-      "idlz": 4790
     },
     "premium": true,
     "rarity": "SR",
@@ -26977,10 +24633,6 @@ app.constant('CardData',
       "idlz": 0,
       "idlz_heel": 0
     },
-    "on_attr": {
-      "base": 4470,
-      "idlz": 4750
-    },
     "premium": true,
     "rarity": "SR",
     "release_date": "2014-07-31",
@@ -27022,10 +24674,6 @@ app.constant('CardData',
       "heel": 0,
       "idlz": 0,
       "idlz_heel": 0
-    },
-    "on_attr": {
-      "base": 4550,
-      "idlz": 4830
     },
     "premium": true,
     "rarity": "SR",
@@ -27069,10 +24717,6 @@ app.constant('CardData',
       "idlz": 0,
       "idlz_heel": 0
     },
-    "on_attr": {
-      "base": 4220,
-      "idlz": 4220
-    },
     "premium": false,
     "rarity": "UR",
     "release_date": "2014-07-20",
@@ -27114,10 +24758,6 @@ app.constant('CardData',
       "heel": 0,
       "idlz": 0,
       "idlz_heel": 0
-    },
-    "on_attr": {
-      "base": 4300,
-      "idlz": 4300
     },
     "premium": false,
     "rarity": "UR",
@@ -27161,10 +24801,6 @@ app.constant('CardData',
       "idlz": 0,
       "idlz_heel": 0
     },
-    "on_attr": {
-      "base": 4250,
-      "idlz": 4250
-    },
     "premium": false,
     "rarity": "UR",
     "release_date": "2014-07-20",
@@ -27206,10 +24842,6 @@ app.constant('CardData',
       "heel": 0,
       "idlz": 0,
       "idlz_heel": 0
-    },
-    "on_attr": {
-      "base": 4360,
-      "idlz": 4640
     },
     "premium": false,
     "rarity": "SR",
@@ -27253,10 +24885,6 @@ app.constant('CardData',
       "idlz": 0,
       "idlz_heel": 0
     },
-    "on_attr": {
-      "base": 5030,
-      "idlz": 5330
-    },
     "premium": true,
     "rarity": "UR",
     "release_date": "2014-07-15",
@@ -27298,10 +24926,6 @@ app.constant('CardData',
       "heel": 0,
       "idlz": 0,
       "idlz_heel": 0
-    },
-    "on_attr": {
-      "base": 4620,
-      "idlz": 4900
     },
     "premium": true,
     "rarity": "SR",
@@ -27345,10 +24969,6 @@ app.constant('CardData',
       "idlz": 0,
       "idlz_heel": 0
     },
-    "on_attr": {
-      "base": 4580,
-      "idlz": 4860
-    },
     "premium": true,
     "rarity": "SR",
     "release_date": "2014-07-15",
@@ -27390,10 +25010,6 @@ app.constant('CardData',
       "heel": 0,
       "idlz": 0,
       "idlz_heel": 0
-    },
-    "on_attr": {
-      "base": 4600,
-      "idlz": 4880
     },
     "premium": true,
     "rarity": "SR",
@@ -27437,10 +25053,6 @@ app.constant('CardData',
       "idlz": 0,
       "idlz_heel": 0
     },
-    "on_attr": {
-      "base": 4190,
-      "idlz": 4190
-    },
     "premium": false,
     "rarity": "UR",
     "release_date": "2014-07-05",
@@ -27482,10 +25094,6 @@ app.constant('CardData',
       "heel": 0,
       "idlz": 0,
       "idlz_heel": 0
-    },
-    "on_attr": {
-      "base": 4160,
-      "idlz": 4160
     },
     "premium": false,
     "rarity": "UR",
@@ -27529,10 +25137,6 @@ app.constant('CardData',
       "idlz": 0,
       "idlz_heel": 0
     },
-    "on_attr": {
-      "base": 4450,
-      "idlz": 4730
-    },
     "premium": false,
     "rarity": "SR",
     "release_date": "2014-07-05",
@@ -27574,10 +25178,6 @@ app.constant('CardData',
       "heel": 0,
       "idlz": 0,
       "idlz_heel": 0
-    },
-    "on_attr": {
-      "base": 5000,
-      "idlz": 5300
     },
     "premium": true,
     "rarity": "UR",
@@ -27621,10 +25221,6 @@ app.constant('CardData',
       "idlz": 0,
       "idlz_heel": 0
     },
-    "on_attr": {
-      "base": 4600,
-      "idlz": 4880
-    },
     "premium": true,
     "rarity": "SR",
     "release_date": "2014-06-30",
@@ -27666,10 +25262,6 @@ app.constant('CardData',
       "heel": 0,
       "idlz": 0,
       "idlz_heel": 0
-    },
-    "on_attr": {
-      "base": 4550,
-      "idlz": 4830
     },
     "premium": true,
     "rarity": "SR",
@@ -27713,10 +25305,6 @@ app.constant('CardData',
       "idlz": 0,
       "idlz_heel": 0
     },
-    "on_attr": {
-      "base": 4580,
-      "idlz": 4860
-    },
     "premium": true,
     "rarity": "SR",
     "release_date": "2014-06-30",
@@ -27758,10 +25346,6 @@ app.constant('CardData',
       "heel": 0,
       "idlz": 0,
       "idlz_heel": 0
-    },
-    "on_attr": {
-      "base": 4570,
-      "idlz": 4850
     },
     "premium": true,
     "rarity": "SR",
@@ -27805,10 +25389,6 @@ app.constant('CardData',
       "idlz": 0,
       "idlz_heel": 0
     },
-    "on_attr": {
-      "base": 4120,
-      "idlz": 4120
-    },
     "premium": false,
     "rarity": "SR",
     "release_date": "2014-06-20",
@@ -27850,10 +25430,6 @@ app.constant('CardData',
       "heel": 0,
       "idlz": 0,
       "idlz_heel": 0
-    },
-    "on_attr": {
-      "base": 4100,
-      "idlz": 4100
     },
     "premium": false,
     "rarity": "SR",
@@ -27897,10 +25473,6 @@ app.constant('CardData',
       "idlz": 0,
       "idlz_heel": 0
     },
-    "on_attr": {
-      "base": 4380,
-      "idlz": 4660
-    },
     "premium": false,
     "rarity": "SR",
     "release_date": "2014-06-20",
@@ -27942,10 +25514,6 @@ app.constant('CardData',
       "heel": 0,
       "idlz": 0,
       "idlz_heel": 0
-    },
-    "on_attr": {
-      "base": 4110,
-      "idlz": 4110
     },
     "premium": false,
     "rarity": "SR",
@@ -27989,10 +25557,6 @@ app.constant('CardData',
       "idlz": 0,
       "idlz_heel": 0
     },
-    "on_attr": {
-      "base": 4240,
-      "idlz": 4240
-    },
     "premium": false,
     "rarity": "UR",
     "release_date": "2014-06-15",
@@ -28034,10 +25598,6 @@ app.constant('CardData',
       "heel": 0,
       "idlz": 0,
       "idlz_heel": 0
-    },
-    "on_attr": {
-      "base": 5040,
-      "idlz": 5340
     },
     "premium": true,
     "rarity": "UR",
@@ -28081,10 +25641,6 @@ app.constant('CardData',
       "idlz": 0,
       "idlz_heel": 0
     },
-    "on_attr": {
-      "base": 4590,
-      "idlz": 4870
-    },
     "premium": true,
     "rarity": "SR",
     "release_date": "2014-06-15",
@@ -28126,10 +25682,6 @@ app.constant('CardData',
       "heel": 0,
       "idlz": 0,
       "idlz_heel": 0
-    },
-    "on_attr": {
-      "base": 4550,
-      "idlz": 4830
     },
     "premium": true,
     "rarity": "SR",
@@ -28173,10 +25725,6 @@ app.constant('CardData',
       "idlz": 0,
       "idlz_heel": 0
     },
-    "on_attr": {
-      "base": 4620,
-      "idlz": 4900
-    },
     "premium": true,
     "rarity": "SR",
     "release_date": "2014-06-15",
@@ -28218,10 +25766,6 @@ app.constant('CardData',
       "heel": 0,
       "idlz": 0,
       "idlz_heel": 0
-    },
-    "on_attr": {
-      "base": 4400,
-      "idlz": 4680
     },
     "premium": false,
     "rarity": "SR",
@@ -28265,10 +25809,6 @@ app.constant('CardData',
       "idlz": 0,
       "idlz_heel": 0
     },
-    "on_attr": {
-      "base": 5020,
-      "idlz": 5320
-    },
     "premium": true,
     "rarity": "UR",
     "release_date": "2014-05-31",
@@ -28310,10 +25850,6 @@ app.constant('CardData',
       "heel": 0,
       "idlz": 0,
       "idlz_heel": 0
-    },
-    "on_attr": {
-      "base": 4590,
-      "idlz": 4870
     },
     "premium": true,
     "rarity": "SR",
@@ -28357,10 +25893,6 @@ app.constant('CardData',
       "idlz": 0,
       "idlz_heel": 0
     },
-    "on_attr": {
-      "base": 4540,
-      "idlz": 4820
-    },
     "premium": true,
     "rarity": "SR",
     "release_date": "2014-05-31",
@@ -28402,10 +25934,6 @@ app.constant('CardData',
       "heel": 0,
       "idlz": 0,
       "idlz_heel": 0
-    },
-    "on_attr": {
-      "base": 4580,
-      "idlz": 4860
     },
     "premium": true,
     "rarity": "SR",
@@ -28449,10 +25977,6 @@ app.constant('CardData',
       "idlz": 0,
       "idlz_heel": 0
     },
-    "on_attr": {
-      "base": 4560,
-      "idlz": 4840
-    },
     "premium": true,
     "rarity": "SR",
     "release_date": "2014-05-31",
@@ -28494,10 +26018,6 @@ app.constant('CardData',
       "heel": 0,
       "idlz": 0,
       "idlz_heel": 0
-    },
-    "on_attr": {
-      "base": 4380,
-      "idlz": 4660
     },
     "premium": false,
     "rarity": "SR",
@@ -28541,10 +26061,6 @@ app.constant('CardData',
       "idlz": 0,
       "idlz_heel": 0
     },
-    "on_attr": {
-      "base": 4980,
-      "idlz": 5280
-    },
     "premium": true,
     "rarity": "UR",
     "release_date": "2014-05-15",
@@ -28586,10 +26102,6 @@ app.constant('CardData',
       "heel": 0,
       "idlz": 0,
       "idlz_heel": 0
-    },
-    "on_attr": {
-      "base": 4510,
-      "idlz": 4790
     },
     "premium": true,
     "rarity": "SR",
@@ -28633,10 +26145,6 @@ app.constant('CardData',
       "idlz": 0,
       "idlz_heel": 0
     },
-    "on_attr": {
-      "base": 4530,
-      "idlz": 4810
-    },
     "premium": true,
     "rarity": "SR",
     "release_date": "2014-05-15",
@@ -28678,10 +26186,6 @@ app.constant('CardData',
       "heel": 0,
       "idlz": 0,
       "idlz_heel": 0
-    },
-    "on_attr": {
-      "base": 4540,
-      "idlz": 4820
     },
     "premium": true,
     "rarity": "SR",
@@ -28725,10 +26229,6 @@ app.constant('CardData',
       "idlz": 0,
       "idlz_heel": 0
     },
-    "on_attr": {
-      "base": 4440,
-      "idlz": 4720
-    },
     "premium": false,
     "rarity": "SR",
     "release_date": "2014-05-05",
@@ -28770,10 +26270,6 @@ app.constant('CardData',
       "heel": 0,
       "idlz": 0,
       "idlz_heel": 0
-    },
-    "on_attr": {
-      "base": 4910,
-      "idlz": 5210
     },
     "premium": true,
     "rarity": "UR",
@@ -28817,10 +26313,6 @@ app.constant('CardData',
       "idlz": 0,
       "idlz_heel": 0
     },
-    "on_attr": {
-      "base": 4460,
-      "idlz": 4740
-    },
     "premium": true,
     "rarity": "SR",
     "release_date": "2014-04-30",
@@ -28862,10 +26354,6 @@ app.constant('CardData',
       "heel": 0,
       "idlz": 0,
       "idlz_heel": 0
-    },
-    "on_attr": {
-      "base": 4530,
-      "idlz": 4810
     },
     "premium": true,
     "rarity": "SR",
@@ -28909,10 +26397,6 @@ app.constant('CardData',
       "idlz": 0,
       "idlz_heel": 0
     },
-    "on_attr": {
-      "base": 4510,
-      "idlz": 4790
-    },
     "premium": true,
     "rarity": "SR",
     "release_date": "2014-04-30",
@@ -28954,10 +26438,6 @@ app.constant('CardData',
       "heel": 0,
       "idlz": 0,
       "idlz_heel": 0
-    },
-    "on_attr": {
-      "base": 4570,
-      "idlz": 4850
     },
     "premium": true,
     "rarity": "SR",
@@ -29001,10 +26481,6 @@ app.constant('CardData',
       "idlz": 0,
       "idlz_heel": 0
     },
-    "on_attr": {
-      "base": 4130,
-      "idlz": 4130
-    },
     "premium": false,
     "rarity": "SR",
     "release_date": "2014-04-20",
@@ -29046,10 +26522,6 @@ app.constant('CardData',
       "heel": 0,
       "idlz": 0,
       "idlz_heel": 0
-    },
-    "on_attr": {
-      "base": 4400,
-      "idlz": 4680
     },
     "premium": false,
     "rarity": "SR",
@@ -29093,10 +26565,6 @@ app.constant('CardData',
       "idlz": 0,
       "idlz_heel": 0
     },
-    "on_attr": {
-      "base": 4100,
-      "idlz": 4100
-    },
     "premium": false,
     "rarity": "SR",
     "release_date": "2014-04-20",
@@ -29138,10 +26606,6 @@ app.constant('CardData',
       "heel": 0,
       "idlz": 0,
       "idlz_heel": 0
-    },
-    "on_attr": {
-      "base": 4990,
-      "idlz": 5290
     },
     "premium": true,
     "rarity": "UR",
@@ -29185,10 +26649,6 @@ app.constant('CardData',
       "idlz": 0,
       "idlz_heel": 0
     },
-    "on_attr": {
-      "base": 4530,
-      "idlz": 4810
-    },
     "premium": true,
     "rarity": "SR",
     "release_date": "2014-04-15",
@@ -29230,10 +26690,6 @@ app.constant('CardData',
       "heel": 0,
       "idlz": 0,
       "idlz_heel": 0
-    },
-    "on_attr": {
-      "base": 4560,
-      "idlz": 4840
     },
     "premium": true,
     "rarity": "SR",
@@ -29277,10 +26733,6 @@ app.constant('CardData',
       "idlz": 0,
       "idlz_heel": 0
     },
-    "on_attr": {
-      "base": 4590,
-      "idlz": 4870
-    },
     "premium": true,
     "rarity": "SR",
     "release_date": "2014-04-15",
@@ -29322,10 +26774,6 @@ app.constant('CardData',
       "heel": 0,
       "idlz": 0,
       "idlz_heel": 0
-    },
-    "on_attr": {
-      "base": 4420,
-      "idlz": 4700
     },
     "premium": false,
     "rarity": "SR",
@@ -29369,10 +26817,6 @@ app.constant('CardData',
       "idlz": 0,
       "idlz_heel": 0
     },
-    "on_attr": {
-      "base": 4920,
-      "idlz": 5220
-    },
     "premium": true,
     "rarity": "UR",
     "release_date": "2014-03-31",
@@ -29414,10 +26858,6 @@ app.constant('CardData',
       "heel": 0,
       "idlz": 0,
       "idlz_heel": 0
-    },
-    "on_attr": {
-      "base": 4550,
-      "idlz": 4830
     },
     "premium": true,
     "rarity": "SR",
@@ -29461,10 +26901,6 @@ app.constant('CardData',
       "idlz": 0,
       "idlz_heel": 0
     },
-    "on_attr": {
-      "base": 4500,
-      "idlz": 4780
-    },
     "premium": true,
     "rarity": "SR",
     "release_date": "2014-03-31",
@@ -29506,10 +26942,6 @@ app.constant('CardData',
       "heel": 0,
       "idlz": 0,
       "idlz_heel": 0
-    },
-    "on_attr": {
-      "base": 4520,
-      "idlz": 4800
     },
     "premium": true,
     "rarity": "SR",
@@ -29553,10 +26985,6 @@ app.constant('CardData',
       "idlz": 0,
       "idlz_heel": 0
     },
-    "on_attr": {
-      "base": 4540,
-      "idlz": 4820
-    },
     "premium": true,
     "rarity": "SR",
     "release_date": "2014-03-31",
@@ -29598,10 +27026,6 @@ app.constant('CardData',
       "heel": 0,
       "idlz": 0,
       "idlz_heel": 0
-    },
-    "on_attr": {
-      "base": 4390,
-      "idlz": 4670
     },
     "premium": false,
     "rarity": "SR",
@@ -29645,10 +27069,6 @@ app.constant('CardData',
       "idlz": 0,
       "idlz_heel": 0
     },
-    "on_attr": {
-      "base": 4930,
-      "idlz": 5230
-    },
     "premium": true,
     "rarity": "UR",
     "release_date": "2014-03-15",
@@ -29690,10 +27110,6 @@ app.constant('CardData',
       "heel": 0,
       "idlz": 0,
       "idlz_heel": 0
-    },
-    "on_attr": {
-      "base": 4520,
-      "idlz": 4800
     },
     "premium": true,
     "rarity": "SR",
@@ -29737,10 +27153,6 @@ app.constant('CardData',
       "idlz": 0,
       "idlz_heel": 0
     },
-    "on_attr": {
-      "base": 4480,
-      "idlz": 4760
-    },
     "premium": true,
     "rarity": "SR",
     "release_date": "2014-03-15",
@@ -29782,10 +27194,6 @@ app.constant('CardData',
       "heel": 0,
       "idlz": 0,
       "idlz_heel": 0
-    },
-    "on_attr": {
-      "base": 4580,
-      "idlz": 4860
     },
     "premium": true,
     "rarity": "SR",
@@ -29829,10 +27237,6 @@ app.constant('CardData',
       "idlz": 0,
       "idlz_heel": 0
     },
-    "on_attr": {
-      "base": 4430,
-      "idlz": 4710
-    },
     "premium": false,
     "rarity": "SR",
     "release_date": "2014-03-05",
@@ -29874,10 +27278,6 @@ app.constant('CardData',
       "heel": 0,
       "idlz": 0,
       "idlz_heel": 0
-    },
-    "on_attr": {
-      "base": 4940,
-      "idlz": 5240
     },
     "premium": true,
     "rarity": "UR",
@@ -29921,10 +27321,6 @@ app.constant('CardData',
       "idlz": 0,
       "idlz_heel": 0
     },
-    "on_attr": {
-      "base": 4510,
-      "idlz": 4790
-    },
     "premium": true,
     "rarity": "SR",
     "release_date": "2014-02-28",
@@ -29966,10 +27362,6 @@ app.constant('CardData',
       "heel": 0,
       "idlz": 0,
       "idlz_heel": 0
-    },
-    "on_attr": {
-      "base": 4530,
-      "idlz": 4810
     },
     "premium": true,
     "rarity": "SR",
@@ -30013,10 +27405,6 @@ app.constant('CardData',
       "idlz": 0,
       "idlz_heel": 0
     },
-    "on_attr": {
-      "base": 4560,
-      "idlz": 4840
-    },
     "premium": true,
     "rarity": "SR",
     "release_date": "2014-02-28",
@@ -30058,10 +27446,6 @@ app.constant('CardData',
       "heel": 0,
       "idlz": 0,
       "idlz_heel": 0
-    },
-    "on_attr": {
-      "base": 4490,
-      "idlz": 4770
     },
     "premium": true,
     "rarity": "SR",
@@ -30105,10 +27489,6 @@ app.constant('CardData',
       "idlz": 0,
       "idlz_heel": 0
     },
-    "on_attr": {
-      "base": 4390,
-      "idlz": 4670
-    },
     "premium": false,
     "rarity": "SR",
     "release_date": "2014-02-20",
@@ -30150,10 +27530,6 @@ app.constant('CardData',
       "heel": 0,
       "idlz": 0,
       "idlz_heel": 0
-    },
-    "on_attr": {
-      "base": 4930,
-      "idlz": 5230
     },
     "premium": true,
     "rarity": "UR",
@@ -30197,10 +27573,6 @@ app.constant('CardData',
       "idlz": 0,
       "idlz_heel": 0
     },
-    "on_attr": {
-      "base": 4620,
-      "idlz": 4900
-    },
     "premium": true,
     "rarity": "SR",
     "release_date": "2014-02-15",
@@ -30242,10 +27614,6 @@ app.constant('CardData',
       "heel": 0,
       "idlz": 0,
       "idlz_heel": 0
-    },
-    "on_attr": {
-      "base": 4570,
-      "idlz": 4850
     },
     "premium": true,
     "rarity": "SR",
@@ -30289,10 +27657,6 @@ app.constant('CardData',
       "idlz": 0,
       "idlz_heel": 0
     },
-    "on_attr": {
-      "base": 4540,
-      "idlz": 4820
-    },
     "premium": true,
     "rarity": "SR",
     "release_date": "2014-02-15",
@@ -30334,10 +27698,6 @@ app.constant('CardData',
       "heel": 0,
       "idlz": 0,
       "idlz_heel": 0
-    },
-    "on_attr": {
-      "base": 4360,
-      "idlz": 4640
     },
     "premium": false,
     "rarity": "SR",
@@ -30381,10 +27741,6 @@ app.constant('CardData',
       "idlz": 0,
       "idlz_heel": 0
     },
-    "on_attr": {
-      "base": 4890,
-      "idlz": 5190
-    },
     "premium": true,
     "rarity": "UR",
     "release_date": "2014-01-31",
@@ -30426,10 +27782,6 @@ app.constant('CardData',
       "heel": 0,
       "idlz": 0,
       "idlz_heel": 0
-    },
-    "on_attr": {
-      "base": 4190,
-      "idlz": 4190
     },
     "premium": false,
     "rarity": "UR",
@@ -30473,10 +27825,6 @@ app.constant('CardData',
       "idlz": 0,
       "idlz_heel": 0
     },
-    "on_attr": {
-      "base": 4560,
-      "idlz": 4840
-    },
     "premium": true,
     "rarity": "SR",
     "release_date": "2014-01-31",
@@ -30518,10 +27866,6 @@ app.constant('CardData',
       "heel": 0,
       "idlz": 0,
       "idlz_heel": 0
-    },
-    "on_attr": {
-      "base": 4530,
-      "idlz": 4810
     },
     "premium": true,
     "rarity": "SR",
@@ -30565,10 +27909,6 @@ app.constant('CardData',
       "idlz": 0,
       "idlz_heel": 0
     },
-    "on_attr": {
-      "base": 4580,
-      "idlz": 4860
-    },
     "premium": true,
     "rarity": "SR",
     "release_date": "2014-01-31",
@@ -30610,10 +27950,6 @@ app.constant('CardData',
       "heel": 0,
       "idlz": 0,
       "idlz_heel": 0
-    },
-    "on_attr": {
-      "base": 4600,
-      "idlz": 4880
     },
     "premium": true,
     "rarity": "SR",
@@ -30657,10 +27993,6 @@ app.constant('CardData',
       "idlz": 0,
       "idlz_heel": 0
     },
-    "on_attr": {
-      "base": 4180,
-      "idlz": 4180
-    },
     "premium": false,
     "rarity": "SR",
     "release_date": "2014-01-20",
@@ -30702,10 +28034,6 @@ app.constant('CardData',
       "heel": 0,
       "idlz": 0,
       "idlz_heel": 0
-    },
-    "on_attr": {
-      "base": 4200,
-      "idlz": 4200
     },
     "premium": false,
     "rarity": "SR",
@@ -30749,10 +28077,6 @@ app.constant('CardData',
       "idlz": 0,
       "idlz_heel": 0
     },
-    "on_attr": {
-      "base": 4210,
-      "idlz": 4210
-    },
     "premium": false,
     "rarity": "SR",
     "release_date": "2014-01-20",
@@ -30794,10 +28118,6 @@ app.constant('CardData',
       "heel": 0,
       "idlz": 0,
       "idlz_heel": 0
-    },
-    "on_attr": {
-      "base": 4230,
-      "idlz": 4230
     },
     "premium": false,
     "rarity": "SR",
@@ -30841,10 +28161,6 @@ app.constant('CardData',
       "idlz": 0,
       "idlz_heel": 0
     },
-    "on_attr": {
-      "base": 4210,
-      "idlz": 4210
-    },
     "premium": false,
     "rarity": "SR",
     "release_date": "2014-01-20",
@@ -30886,10 +28202,6 @@ app.constant('CardData',
       "heel": 0,
       "idlz": 0,
       "idlz_heel": 0
-    },
-    "on_attr": {
-      "base": 4250,
-      "idlz": 4250
     },
     "premium": false,
     "rarity": "SR",
@@ -30933,10 +28245,6 @@ app.constant('CardData',
       "idlz": 0,
       "idlz_heel": 0
     },
-    "on_attr": {
-      "base": 4200,
-      "idlz": 4200
-    },
     "premium": false,
     "rarity": "SR",
     "release_date": "2014-01-20",
@@ -30978,10 +28286,6 @@ app.constant('CardData',
       "heel": 0,
       "idlz": 0,
       "idlz_heel": 0
-    },
-    "on_attr": {
-      "base": 4220,
-      "idlz": 4220
     },
     "premium": false,
     "rarity": "SR",
@@ -31025,10 +28329,6 @@ app.constant('CardData',
       "idlz": 0,
       "idlz_heel": 0
     },
-    "on_attr": {
-      "base": 4190,
-      "idlz": 4190
-    },
     "premium": false,
     "rarity": "SR",
     "release_date": "2014-01-20",
@@ -31070,10 +28370,6 @@ app.constant('CardData',
       "heel": 0,
       "idlz": 0,
       "idlz_heel": 0
-    },
-    "on_attr": {
-      "base": 4230,
-      "idlz": 4230
     },
     "premium": false,
     "rarity": "SR",
@@ -31117,10 +28413,6 @@ app.constant('CardData',
       "idlz": 0,
       "idlz_heel": 0
     },
-    "on_attr": {
-      "base": 4230,
-      "idlz": 4230
-    },
     "premium": false,
     "rarity": "SR",
     "release_date": "2014-01-20",
@@ -31162,10 +28454,6 @@ app.constant('CardData',
       "heel": 0,
       "idlz": 0,
       "idlz_heel": 0
-    },
-    "on_attr": {
-      "base": 4220,
-      "idlz": 4220
     },
     "premium": false,
     "rarity": "SR",
@@ -31209,10 +28497,6 @@ app.constant('CardData',
       "idlz": 0,
       "idlz_heel": 0
     },
-    "on_attr": {
-      "base": 4210,
-      "idlz": 4210
-    },
     "premium": false,
     "rarity": "SR",
     "release_date": "2014-01-20",
@@ -31254,10 +28538,6 @@ app.constant('CardData',
       "heel": 0,
       "idlz": 0,
       "idlz_heel": 0
-    },
-    "on_attr": {
-      "base": 4180,
-      "idlz": 4180
     },
     "premium": false,
     "rarity": "SR",
@@ -31301,10 +28581,6 @@ app.constant('CardData',
       "idlz": 0,
       "idlz_heel": 0
     },
-    "on_attr": {
-      "base": 4170,
-      "idlz": 4170
-    },
     "premium": false,
     "rarity": "SR",
     "release_date": "2014-01-20",
@@ -31346,10 +28622,6 @@ app.constant('CardData',
       "heel": 0,
       "idlz": 0,
       "idlz_heel": 0
-    },
-    "on_attr": {
-      "base": 4250,
-      "idlz": 4250
     },
     "premium": false,
     "rarity": "SR",
@@ -31393,10 +28665,6 @@ app.constant('CardData',
       "idlz": 0,
       "idlz_heel": 0
     },
-    "on_attr": {
-      "base": 4200,
-      "idlz": 4200
-    },
     "premium": false,
     "rarity": "SR",
     "release_date": "2014-01-20",
@@ -31438,10 +28706,6 @@ app.constant('CardData',
       "heel": 0,
       "idlz": 0,
       "idlz_heel": 0
-    },
-    "on_attr": {
-      "base": 4200,
-      "idlz": 4200
     },
     "premium": false,
     "rarity": "SR",
@@ -31485,10 +28749,6 @@ app.constant('CardData',
       "idlz": 0,
       "idlz_heel": 0
     },
-    "on_attr": {
-      "base": 4310,
-      "idlz": 4590
-    },
     "premium": false,
     "rarity": "SR",
     "release_date": "2014-01-20",
@@ -31530,10 +28790,6 @@ app.constant('CardData',
       "heel": 0,
       "idlz": 0,
       "idlz_heel": 0
-    },
-    "on_attr": {
-      "base": 4880,
-      "idlz": 5180
     },
     "premium": true,
     "rarity": "UR",
@@ -31577,10 +28833,6 @@ app.constant('CardData',
       "idlz": 0,
       "idlz_heel": 0
     },
-    "on_attr": {
-      "base": 4610,
-      "idlz": 4890
-    },
     "premium": true,
     "rarity": "SR",
     "release_date": "2014-01-15",
@@ -31622,10 +28874,6 @@ app.constant('CardData',
       "heel": 0,
       "idlz": 0,
       "idlz_heel": 0
-    },
-    "on_attr": {
-      "base": 4570,
-      "idlz": 4850
     },
     "premium": true,
     "rarity": "SR",
@@ -31669,10 +28917,6 @@ app.constant('CardData',
       "idlz": 0,
       "idlz_heel": 0
     },
-    "on_attr": {
-      "base": 4590,
-      "idlz": 4870
-    },
     "premium": true,
     "rarity": "SR",
     "release_date": "2014-01-15",
@@ -31714,10 +28958,6 @@ app.constant('CardData',
       "heel": 0,
       "idlz": 0,
       "idlz_heel": 0
-    },
-    "on_attr": {
-      "base": 4410,
-      "idlz": 4690
     },
     "premium": false,
     "rarity": "SR",
@@ -31761,10 +29001,6 @@ app.constant('CardData',
       "idlz": 0,
       "idlz_heel": 0
     },
-    "on_attr": {
-      "base": 4200,
-      "idlz": 4200
-    },
     "premium": false,
     "rarity": "SR",
     "release_date": "2014-01-05",
@@ -31806,10 +29042,6 @@ app.constant('CardData',
       "heel": 0,
       "idlz": 0,
       "idlz_heel": 0
-    },
-    "on_attr": {
-      "base": 4920,
-      "idlz": 5220
     },
     "premium": true,
     "rarity": "UR",
@@ -31853,10 +29085,6 @@ app.constant('CardData',
       "idlz": 0,
       "idlz_heel": 0
     },
-    "on_attr": {
-      "base": 4570,
-      "idlz": 4850
-    },
     "premium": true,
     "rarity": "SR",
     "release_date": "2013-12-31",
@@ -31898,10 +29126,6 @@ app.constant('CardData',
       "heel": 0,
       "idlz": 0,
       "idlz_heel": 0
-    },
-    "on_attr": {
-      "base": 4580,
-      "idlz": 4860
     },
     "premium": true,
     "rarity": "SR",
@@ -31945,10 +29169,6 @@ app.constant('CardData',
       "idlz": 0,
       "idlz_heel": 0
     },
-    "on_attr": {
-      "base": 4590,
-      "idlz": 4870
-    },
     "premium": true,
     "rarity": "SR",
     "release_date": "2013-12-31",
@@ -31990,10 +29210,6 @@ app.constant('CardData',
       "heel": 0,
       "idlz": 0,
       "idlz_heel": 0
-    },
-    "on_attr": {
-      "base": 4620,
-      "idlz": 4900
     },
     "premium": true,
     "rarity": "SR",
@@ -32037,10 +29253,6 @@ app.constant('CardData',
       "idlz": 0,
       "idlz_heel": 0
     },
-    "on_attr": {
-      "base": 4200,
-      "idlz": 4200
-    },
     "premium": false,
     "rarity": "UR",
     "release_date": "2013-12-20",
@@ -32082,10 +29294,6 @@ app.constant('CardData',
       "heel": 0,
       "idlz": 0,
       "idlz_heel": 0
-    },
-    "on_attr": {
-      "base": 4100,
-      "idlz": 4100
     },
     "premium": false,
     "rarity": "SR",
@@ -32129,10 +29337,6 @@ app.constant('CardData',
       "idlz": 0,
       "idlz_heel": 0
     },
-    "on_attr": {
-      "base": 4370,
-      "idlz": 4650
-    },
     "premium": false,
     "rarity": "SR",
     "release_date": "2013-12-20",
@@ -32174,10 +29378,6 @@ app.constant('CardData',
       "heel": 0,
       "idlz": 0,
       "idlz_heel": 0
-    },
-    "on_attr": {
-      "base": 4150,
-      "idlz": 4150
     },
     "premium": false,
     "rarity": "UR",
@@ -32221,10 +29421,6 @@ app.constant('CardData',
       "idlz": 0,
       "idlz_heel": 0
     },
-    "on_attr": {
-      "base": 4900,
-      "idlz": 5200
-    },
     "premium": true,
     "rarity": "UR",
     "release_date": "2013-12-15",
@@ -32266,10 +29462,6 @@ app.constant('CardData',
       "heel": 0,
       "idlz": 0,
       "idlz_heel": 0
-    },
-    "on_attr": {
-      "base": 4580,
-      "idlz": 4860
     },
     "premium": true,
     "rarity": "SR",
@@ -32313,10 +29505,6 @@ app.constant('CardData',
       "idlz": 0,
       "idlz_heel": 0
     },
-    "on_attr": {
-      "base": 4600,
-      "idlz": 4880
-    },
     "premium": true,
     "rarity": "SR",
     "release_date": "2013-12-15",
@@ -32358,10 +29546,6 @@ app.constant('CardData',
       "heel": 0,
       "idlz": 0,
       "idlz_heel": 0
-    },
-    "on_attr": {
-      "base": 4560,
-      "idlz": 4840
     },
     "premium": true,
     "rarity": "SR",
@@ -32405,10 +29589,6 @@ app.constant('CardData',
       "idlz": 0,
       "idlz_heel": 0
     },
-    "on_attr": {
-      "base": 4330,
-      "idlz": 4610
-    },
     "premium": false,
     "rarity": "SR",
     "release_date": "2013-12-05",
@@ -32450,10 +29630,6 @@ app.constant('CardData',
       "heel": 0,
       "idlz": 0,
       "idlz_heel": 0
-    },
-    "on_attr": {
-      "base": 4940,
-      "idlz": 5240
     },
     "premium": true,
     "rarity": "UR",
@@ -32497,10 +29673,6 @@ app.constant('CardData',
       "idlz": 0,
       "idlz_heel": 0
     },
-    "on_attr": {
-      "base": 4580,
-      "idlz": 4860
-    },
     "premium": true,
     "rarity": "SR",
     "release_date": "2013-11-30",
@@ -32542,10 +29714,6 @@ app.constant('CardData',
       "heel": 0,
       "idlz": 0,
       "idlz_heel": 0
-    },
-    "on_attr": {
-      "base": 4590,
-      "idlz": 4870
     },
     "premium": true,
     "rarity": "SR",
@@ -32589,10 +29757,6 @@ app.constant('CardData',
       "idlz": 0,
       "idlz_heel": 0
     },
-    "on_attr": {
-      "base": 4570,
-      "idlz": 4850
-    },
     "premium": true,
     "rarity": "SR",
     "release_date": "2013-11-30",
@@ -32634,10 +29798,6 @@ app.constant('CardData',
       "heel": 0,
       "idlz": 0,
       "idlz_heel": 0
-    },
-    "on_attr": {
-      "base": 4550,
-      "idlz": 4830
     },
     "premium": true,
     "rarity": "SR",
@@ -32681,10 +29841,6 @@ app.constant('CardData',
       "idlz": 0,
       "idlz_heel": 0
     },
-    "on_attr": {
-      "base": 4160,
-      "idlz": 4160
-    },
     "premium": false,
     "rarity": "SR",
     "release_date": "2013-11-20",
@@ -32726,10 +29882,6 @@ app.constant('CardData',
       "heel": 0,
       "idlz": 0,
       "idlz_heel": 0
-    },
-    "on_attr": {
-      "base": 4340,
-      "idlz": 4620
     },
     "premium": false,
     "rarity": "SR",
@@ -32773,10 +29925,6 @@ app.constant('CardData',
       "idlz": 0,
       "idlz_heel": 0
     },
-    "on_attr": {
-      "base": 4910,
-      "idlz": 5210
-    },
     "premium": true,
     "rarity": "UR",
     "release_date": "2013-11-15",
@@ -32818,10 +29966,6 @@ app.constant('CardData',
       "heel": 0,
       "idlz": 0,
       "idlz_heel": 0
-    },
-    "on_attr": {
-      "base": 4510,
-      "idlz": 4790
     },
     "premium": true,
     "rarity": "SR",
@@ -32865,10 +30009,6 @@ app.constant('CardData',
       "idlz": 0,
       "idlz_heel": 0
     },
-    "on_attr": {
-      "base": 4450,
-      "idlz": 4730
-    },
     "premium": true,
     "rarity": "SR",
     "release_date": "2013-11-15",
@@ -32910,10 +30050,6 @@ app.constant('CardData',
       "heel": 0,
       "idlz": 0,
       "idlz_heel": 0
-    },
-    "on_attr": {
-      "base": 4480,
-      "idlz": 4760
     },
     "premium": true,
     "rarity": "SR",
@@ -32957,10 +30093,6 @@ app.constant('CardData',
       "idlz": 0,
       "idlz_heel": 0
     },
-    "on_attr": {
-      "base": 4360,
-      "idlz": 4640
-    },
     "premium": false,
     "rarity": "SR",
     "release_date": "2013-11-05",
@@ -33002,10 +30134,6 @@ app.constant('CardData',
       "heel": 0,
       "idlz": 0,
       "idlz_heel": 0
-    },
-    "on_attr": {
-      "base": 4920,
-      "idlz": 5220
     },
     "premium": true,
     "rarity": "UR",
@@ -33049,10 +30177,6 @@ app.constant('CardData',
       "idlz": 0,
       "idlz_heel": 0
     },
-    "on_attr": {
-      "base": 4430,
-      "idlz": 4710
-    },
     "premium": true,
     "rarity": "SR",
     "release_date": "2013-10-31",
@@ -33094,10 +30218,6 @@ app.constant('CardData',
       "heel": 0,
       "idlz": 0,
       "idlz_heel": 0
-    },
-    "on_attr": {
-      "base": 4460,
-      "idlz": 4740
     },
     "premium": true,
     "rarity": "SR",
@@ -33141,10 +30261,6 @@ app.constant('CardData',
       "idlz": 0,
       "idlz_heel": 0
     },
-    "on_attr": {
-      "base": 4490,
-      "idlz": 4770
-    },
     "premium": true,
     "rarity": "SR",
     "release_date": "2013-10-31",
@@ -33186,10 +30302,6 @@ app.constant('CardData',
       "heel": 0,
       "idlz": 0,
       "idlz_heel": 0
-    },
-    "on_attr": {
-      "base": 4470,
-      "idlz": 4750
     },
     "premium": true,
     "rarity": "SR",
@@ -33233,10 +30345,6 @@ app.constant('CardData',
       "idlz": 0,
       "idlz_heel": 0
     },
-    "on_attr": {
-      "base": 4330,
-      "idlz": 4610
-    },
     "premium": false,
     "rarity": "SR",
     "release_date": "2013-10-20",
@@ -33278,10 +30386,6 @@ app.constant('CardData',
       "heel": 0,
       "idlz": 0,
       "idlz_heel": 0
-    },
-    "on_attr": {
-      "base": 4960,
-      "idlz": 5260
     },
     "premium": true,
     "rarity": "UR",
@@ -33325,10 +30429,6 @@ app.constant('CardData',
       "idlz": 0,
       "idlz_heel": 0
     },
-    "on_attr": {
-      "base": 4510,
-      "idlz": 4790
-    },
     "premium": true,
     "rarity": "SR",
     "release_date": "2013-10-15",
@@ -33370,10 +30470,6 @@ app.constant('CardData',
       "heel": 0,
       "idlz": 0,
       "idlz_heel": 0
-    },
-    "on_attr": {
-      "base": 4500,
-      "idlz": 4780
     },
     "premium": true,
     "rarity": "SR",
@@ -33417,10 +30513,6 @@ app.constant('CardData',
       "idlz": 0,
       "idlz_heel": 0
     },
-    "on_attr": {
-      "base": 4480,
-      "idlz": 4760
-    },
     "premium": true,
     "rarity": "SR",
     "release_date": "2013-10-15",
@@ -33462,10 +30554,6 @@ app.constant('CardData',
       "heel": 0,
       "idlz": 0,
       "idlz_heel": 0
-    },
-    "on_attr": {
-      "base": 4310,
-      "idlz": 4590
     },
     "premium": false,
     "rarity": "SR",
@@ -33509,10 +30597,6 @@ app.constant('CardData',
       "idlz": 0,
       "idlz_heel": 0
     },
-    "on_attr": {
-      "base": 4910,
-      "idlz": 5210
-    },
     "premium": true,
     "rarity": "UR",
     "release_date": "2013-09-30",
@@ -33554,10 +30638,6 @@ app.constant('CardData',
       "heel": 0,
       "idlz": 0,
       "idlz_heel": 0
-    },
-    "on_attr": {
-      "base": 4470,
-      "idlz": 4750
     },
     "premium": true,
     "rarity": "SR",
@@ -33601,10 +30681,6 @@ app.constant('CardData',
       "idlz": 0,
       "idlz_heel": 0
     },
-    "on_attr": {
-      "base": 4490,
-      "idlz": 4770
-    },
     "premium": true,
     "rarity": "SR",
     "release_date": "2013-09-30",
@@ -33646,10 +30722,6 @@ app.constant('CardData',
       "heel": 0,
       "idlz": 0,
       "idlz_heel": 0
-    },
-    "on_attr": {
-      "base": 4480,
-      "idlz": 4760
     },
     "premium": true,
     "rarity": "SR",
@@ -33693,10 +30765,6 @@ app.constant('CardData',
       "idlz": 0,
       "idlz_heel": 0
     },
-    "on_attr": {
-      "base": 4460,
-      "idlz": 4740
-    },
     "premium": true,
     "rarity": "SR",
     "release_date": "2013-09-30",
@@ -33738,10 +30806,6 @@ app.constant('CardData',
       "heel": 0,
       "idlz": 0,
       "idlz_heel": 0
-    },
-    "on_attr": {
-      "base": 4230,
-      "idlz": 4230
     },
     "premium": false,
     "rarity": "UR",
@@ -33785,10 +30849,6 @@ app.constant('CardData',
       "idlz": 0,
       "idlz_heel": 0
     },
-    "on_attr": {
-      "base": 4110,
-      "idlz": 4110
-    },
     "premium": false,
     "rarity": "SR",
     "release_date": "2013-09-20",
@@ -33830,10 +30890,6 @@ app.constant('CardData',
       "heel": 0,
       "idlz": 0,
       "idlz_heel": 0
-    },
-    "on_attr": {
-      "base": 4130,
-      "idlz": 4410
     },
     "premium": false,
     "rarity": "SR",
@@ -33877,10 +30933,6 @@ app.constant('CardData',
       "idlz": 0,
       "idlz_heel": 0
     },
-    "on_attr": {
-      "base": 4900,
-      "idlz": 5200
-    },
     "premium": true,
     "rarity": "UR",
     "release_date": "2013-09-15",
@@ -33922,10 +30974,6 @@ app.constant('CardData',
       "heel": 0,
       "idlz": 0,
       "idlz_heel": 0
-    },
-    "on_attr": {
-      "base": 4420,
-      "idlz": 4700
     },
     "premium": true,
     "rarity": "SR",
@@ -33969,10 +31017,6 @@ app.constant('CardData',
       "idlz": 0,
       "idlz_heel": 0
     },
-    "on_attr": {
-      "base": 4450,
-      "idlz": 4730
-    },
     "premium": true,
     "rarity": "SR",
     "release_date": "2013-09-15",
@@ -34014,10 +31058,6 @@ app.constant('CardData',
       "heel": 0,
       "idlz": 0,
       "idlz_heel": 0
-    },
-    "on_attr": {
-      "base": 4430,
-      "idlz": 4710
     },
     "premium": true,
     "rarity": "SR",
@@ -34061,10 +31101,6 @@ app.constant('CardData',
       "idlz": 0,
       "idlz_heel": 0
     },
-    "on_attr": {
-      "base": 4160,
-      "idlz": 4440
-    },
     "premium": false,
     "rarity": "SR",
     "release_date": "2013-09-05",
@@ -34106,10 +31142,6 @@ app.constant('CardData',
       "heel": 0,
       "idlz": 0,
       "idlz_heel": 0
-    },
-    "on_attr": {
-      "base": 4940,
-      "idlz": 5240
     },
     "premium": true,
     "rarity": "UR",
@@ -34153,10 +31185,6 @@ app.constant('CardData',
       "idlz": 0,
       "idlz_heel": 0
     },
-    "on_attr": {
-      "base": 4430,
-      "idlz": 4710
-    },
     "premium": true,
     "rarity": "SR",
     "release_date": "2013-08-31",
@@ -34198,10 +31226,6 @@ app.constant('CardData',
       "heel": 0,
       "idlz": 0,
       "idlz_heel": 0
-    },
-    "on_attr": {
-      "base": 4390,
-      "idlz": 4670
     },
     "premium": true,
     "rarity": "SR",
@@ -34245,10 +31269,6 @@ app.constant('CardData',
       "idlz": 0,
       "idlz_heel": 0
     },
-    "on_attr": {
-      "base": 4410,
-      "idlz": 4690
-    },
     "premium": true,
     "rarity": "SR",
     "release_date": "2013-08-31",
@@ -34290,10 +31310,6 @@ app.constant('CardData',
       "heel": 0,
       "idlz": 0,
       "idlz_heel": 0
-    },
-    "on_attr": {
-      "base": 4370,
-      "idlz": 4650
     },
     "premium": true,
     "rarity": "SR",
@@ -34337,10 +31353,6 @@ app.constant('CardData',
       "idlz": 0,
       "idlz_heel": 0
     },
-    "on_attr": {
-      "base": 4240,
-      "idlz": 4240
-    },
     "premium": false,
     "rarity": "UR",
     "release_date": "2013-08-20",
@@ -34382,10 +31394,6 @@ app.constant('CardData',
       "heel": 0,
       "idlz": 0,
       "idlz_heel": 0
-    },
-    "on_attr": {
-      "base": 4210,
-      "idlz": 4210
     },
     "premium": false,
     "rarity": "UR",
@@ -34429,10 +31437,6 @@ app.constant('CardData',
       "idlz": 0,
       "idlz_heel": 0
     },
-    "on_attr": {
-      "base": 4260,
-      "idlz": 4260
-    },
     "premium": false,
     "rarity": "UR",
     "release_date": "2013-08-20",
@@ -34474,10 +31478,6 @@ app.constant('CardData',
       "heel": 0,
       "idlz": 0,
       "idlz_heel": 0
-    },
-    "on_attr": {
-      "base": 4280,
-      "idlz": 4560
     },
     "premium": false,
     "rarity": "SR",
@@ -34521,10 +31521,6 @@ app.constant('CardData',
       "idlz": 0,
       "idlz_heel": 0
     },
-    "on_attr": {
-      "base": 4970,
-      "idlz": 5270
-    },
     "premium": true,
     "rarity": "UR",
     "release_date": "2013-08-15",
@@ -34566,10 +31562,6 @@ app.constant('CardData',
       "heel": 0,
       "idlz": 0,
       "idlz_heel": 0
-    },
-    "on_attr": {
-      "base": 4410,
-      "idlz": 4690
     },
     "premium": true,
     "rarity": "SR",
@@ -34613,10 +31605,6 @@ app.constant('CardData',
       "idlz": 0,
       "idlz_heel": 0
     },
-    "on_attr": {
-      "base": 4440,
-      "idlz": 4720
-    },
     "premium": true,
     "rarity": "SR",
     "release_date": "2013-08-15",
@@ -34658,10 +31646,6 @@ app.constant('CardData',
       "heel": 0,
       "idlz": 0,
       "idlz_heel": 0
-    },
-    "on_attr": {
-      "base": 4390,
-      "idlz": 4670
     },
     "premium": true,
     "rarity": "SR",
@@ -34705,10 +31689,6 @@ app.constant('CardData',
       "idlz": 0,
       "idlz_heel": 0
     },
-    "on_attr": {
-      "base": 4200,
-      "idlz": 4480
-    },
     "premium": false,
     "rarity": "SR",
     "release_date": "2013-08-05",
@@ -34750,10 +31730,6 @@ app.constant('CardData',
       "heel": 0,
       "idlz": 0,
       "idlz_heel": 0
-    },
-    "on_attr": {
-      "base": 4950,
-      "idlz": 5250
     },
     "premium": true,
     "rarity": "UR",
@@ -34797,10 +31773,6 @@ app.constant('CardData',
       "idlz": 0,
       "idlz_heel": 0
     },
-    "on_attr": {
-      "base": 4980,
-      "idlz": 5280
-    },
     "premium": true,
     "rarity": "UR",
     "release_date": "2013-07-31",
@@ -34842,10 +31814,6 @@ app.constant('CardData',
       "heel": 0,
       "idlz": 0,
       "idlz_heel": 0
-    },
-    "on_attr": {
-      "base": 4380,
-      "idlz": 4660
     },
     "premium": true,
     "rarity": "SR",
@@ -34889,10 +31857,6 @@ app.constant('CardData',
       "idlz": 0,
       "idlz_heel": 0
     },
-    "on_attr": {
-      "base": 4470,
-      "idlz": 4750
-    },
     "premium": true,
     "rarity": "SR",
     "release_date": "2013-07-31",
@@ -34934,10 +31898,6 @@ app.constant('CardData',
       "heel": 0,
       "idlz": 0,
       "idlz_heel": 0
-    },
-    "on_attr": {
-      "base": 4430,
-      "idlz": 4710
     },
     "premium": true,
     "rarity": "SR",
@@ -34981,10 +31941,6 @@ app.constant('CardData',
       "idlz": 0,
       "idlz_heel": 0
     },
-    "on_attr": {
-      "base": 4400,
-      "idlz": 4680
-    },
     "premium": true,
     "rarity": "SR",
     "release_date": "2013-07-31",
@@ -35026,10 +31982,6 @@ app.constant('CardData',
       "heel": 0,
       "idlz": 0,
       "idlz_heel": 0
-    },
-    "on_attr": {
-      "base": 4020,
-      "idlz": 4020
     },
     "premium": false,
     "rarity": "UR",
@@ -35073,10 +32025,6 @@ app.constant('CardData',
       "idlz": 0,
       "idlz_heel": 0
     },
-    "on_attr": {
-      "base": 4250,
-      "idlz": 4250
-    },
     "premium": false,
     "rarity": "UR",
     "release_date": "2013-07-19",
@@ -35118,10 +32066,6 @@ app.constant('CardData',
       "heel": 0,
       "idlz": 0,
       "idlz_heel": 0
-    },
-    "on_attr": {
-      "base": 4170,
-      "idlz": 4170
     },
     "premium": false,
     "rarity": "SR",
@@ -35165,10 +32109,6 @@ app.constant('CardData',
       "idlz": 0,
       "idlz_heel": 0
     },
-    "on_attr": {
-      "base": 4240,
-      "idlz": 4240
-    },
     "premium": false,
     "rarity": "SR",
     "release_date": "2013-07-19",
@@ -35210,10 +32150,6 @@ app.constant('CardData',
       "heel": 0,
       "idlz": 0,
       "idlz_heel": 0
-    },
-    "on_attr": {
-      "base": 4160,
-      "idlz": 4160
     },
     "premium": false,
     "rarity": "SR",
@@ -35257,10 +32193,6 @@ app.constant('CardData',
       "idlz": 0,
       "idlz_heel": 0
     },
-    "on_attr": {
-      "base": 4190,
-      "idlz": 4190
-    },
     "premium": false,
     "rarity": "SR",
     "release_date": "2013-07-19",
@@ -35302,10 +32234,6 @@ app.constant('CardData',
       "heel": 0,
       "idlz": 0,
       "idlz_heel": 0
-    },
-    "on_attr": {
-      "base": 4180,
-      "idlz": 4180
     },
     "premium": false,
     "rarity": "SR",
@@ -35349,10 +32277,6 @@ app.constant('CardData',
       "idlz": 0,
       "idlz_heel": 0
     },
-    "on_attr": {
-      "base": 4160,
-      "idlz": 4160
-    },
     "premium": false,
     "rarity": "SR",
     "release_date": "2013-07-19",
@@ -35394,10 +32318,6 @@ app.constant('CardData',
       "heel": 0,
       "idlz": 0,
       "idlz_heel": 0
-    },
-    "on_attr": {
-      "base": 4170,
-      "idlz": 4170
     },
     "premium": false,
     "rarity": "SR",
@@ -35441,10 +32361,6 @@ app.constant('CardData',
       "idlz": 0,
       "idlz_heel": 0
     },
-    "on_attr": {
-      "base": 4220,
-      "idlz": 4220
-    },
     "premium": false,
     "rarity": "SR",
     "release_date": "2013-07-19",
@@ -35486,10 +32402,6 @@ app.constant('CardData',
       "heel": 0,
       "idlz": 0,
       "idlz_heel": 0
-    },
-    "on_attr": {
-      "base": 4220,
-      "idlz": 4220
     },
     "premium": false,
     "rarity": "SR",
@@ -35533,10 +32445,6 @@ app.constant('CardData',
       "idlz": 0,
       "idlz_heel": 0
     },
-    "on_attr": {
-      "base": 4090,
-      "idlz": 4090
-    },
     "premium": false,
     "rarity": "SR",
     "release_date": "2013-07-19",
@@ -35578,10 +32486,6 @@ app.constant('CardData',
       "heel": 0,
       "idlz": 0,
       "idlz_heel": 0
-    },
-    "on_attr": {
-      "base": 4250,
-      "idlz": 4530
     },
     "premium": false,
     "rarity": "SR",
@@ -35625,10 +32529,6 @@ app.constant('CardData',
       "idlz": 0,
       "idlz_heel": 0
     },
-    "on_attr": {
-      "base": 4990,
-      "idlz": 5290
-    },
     "premium": true,
     "rarity": "UR",
     "release_date": "2013-07-15",
@@ -35670,10 +32570,6 @@ app.constant('CardData',
       "heel": 0,
       "idlz": 0,
       "idlz_heel": 0
-    },
-    "on_attr": {
-      "base": 4450,
-      "idlz": 4730
     },
     "premium": true,
     "rarity": "SR",
@@ -35717,10 +32613,6 @@ app.constant('CardData',
       "idlz": 0,
       "idlz_heel": 0
     },
-    "on_attr": {
-      "base": 4320,
-      "idlz": 4600
-    },
     "premium": true,
     "rarity": "SR",
     "release_date": "2013-07-15",
@@ -35762,10 +32654,6 @@ app.constant('CardData',
       "heel": 0,
       "idlz": 0,
       "idlz_heel": 0
-    },
-    "on_attr": {
-      "base": 5000,
-      "idlz": 5300
     },
     "premium": true,
     "rarity": "UR",
@@ -35809,10 +32697,6 @@ app.constant('CardData',
       "idlz": 0,
       "idlz_heel": 0
     },
-    "on_attr": {
-      "base": 4310,
-      "idlz": 4590
-    },
     "premium": true,
     "rarity": "SR",
     "release_date": "2013-06-30",
@@ -35854,10 +32738,6 @@ app.constant('CardData',
       "heel": 0,
       "idlz": 0,
       "idlz_heel": 0
-    },
-    "on_attr": {
-      "base": 4330,
-      "idlz": 4610
     },
     "premium": true,
     "rarity": "SR",
@@ -35901,10 +32781,6 @@ app.constant('CardData',
       "idlz": 0,
       "idlz_heel": 0
     },
-    "on_attr": {
-      "base": 4280,
-      "idlz": 4280
-    },
     "premium": false,
     "rarity": "UR",
     "release_date": "2013-06-14",
@@ -35946,10 +32822,6 @@ app.constant('CardData',
       "heel": 0,
       "idlz": 0,
       "idlz_heel": 0
-    },
-    "on_attr": {
-      "base": 4300,
-      "idlz": 4300
     },
     "premium": false,
     "rarity": "UR",
@@ -35993,10 +32865,6 @@ app.constant('CardData',
       "idlz": 0,
       "idlz_heel": 0
     },
-    "on_attr": {
-      "base": 4960,
-      "idlz": 5260
-    },
     "premium": true,
     "rarity": "UR",
     "release_date": "2013-06-14",
@@ -36038,10 +32906,6 @@ app.constant('CardData',
       "heel": 0,
       "idlz": 0,
       "idlz_heel": 0
-    },
-    "on_attr": {
-      "base": 4480,
-      "idlz": 4760
     },
     "premium": true,
     "rarity": "SR",
@@ -36085,10 +32949,6 @@ app.constant('CardData',
       "idlz": 0,
       "idlz_heel": 0
     },
-    "on_attr": {
-      "base": 4350,
-      "idlz": 4630
-    },
     "premium": true,
     "rarity": "SR",
     "release_date": "2013-06-14",
@@ -36130,10 +32990,6 @@ app.constant('CardData',
       "heel": 0,
       "idlz": 0,
       "idlz_heel": 0
-    },
-    "on_attr": {
-      "base": 4080,
-      "idlz": 4360
     },
     "premium": false,
     "rarity": "SR",
@@ -36177,10 +33033,6 @@ app.constant('CardData',
       "idlz": 0,
       "idlz_heel": 0
     },
-    "on_attr": {
-      "base": 4890,
-      "idlz": 5190
-    },
     "premium": true,
     "rarity": "UR",
     "release_date": "2013-05-31",
@@ -36222,10 +33074,6 @@ app.constant('CardData',
       "heel": 0,
       "idlz": 0,
       "idlz_heel": 0
-    },
-    "on_attr": {
-      "base": 4440,
-      "idlz": 4720
     },
     "premium": true,
     "rarity": "SR",
@@ -36269,10 +33117,6 @@ app.constant('CardData',
       "idlz": 0,
       "idlz_heel": 0
     },
-    "on_attr": {
-      "base": 4280,
-      "idlz": 4560
-    },
     "premium": true,
     "rarity": "SR",
     "release_date": "2013-05-31",
@@ -36314,10 +33158,6 @@ app.constant('CardData',
       "heel": 0,
       "idlz": 0,
       "idlz_heel": 0
-    },
-    "on_attr": {
-      "base": 4290,
-      "idlz": 4290
     },
     "premium": false,
     "rarity": "UR",
@@ -36361,10 +33201,6 @@ app.constant('CardData',
       "idlz": 0,
       "idlz_heel": 0
     },
-    "on_attr": {
-      "base": 4100,
-      "idlz": 4380
-    },
     "premium": false,
     "rarity": "SR",
     "release_date": "2013-05-21",
@@ -36406,10 +33242,6 @@ app.constant('CardData',
       "heel": 0,
       "idlz": 0,
       "idlz_heel": 0
-    },
-    "on_attr": {
-      "base": 4920,
-      "idlz": 5220
     },
     "premium": true,
     "rarity": "UR",
@@ -36453,10 +33285,6 @@ app.constant('CardData',
       "idlz": 0,
       "idlz_heel": 0
     },
-    "on_attr": {
-      "base": 4430,
-      "idlz": 4710
-    },
     "premium": true,
     "rarity": "SR",
     "release_date": "2013-05-16",
@@ -36498,10 +33326,6 @@ app.constant('CardData',
       "heel": 0,
       "idlz": 0,
       "idlz_heel": 0
-    },
-    "on_attr": {
-      "base": 4450,
-      "idlz": 4730
     },
     "premium": true,
     "rarity": "SR",
@@ -36545,10 +33369,6 @@ app.constant('CardData',
       "idlz": 0,
       "idlz_heel": 0
     },
-    "on_attr": {
-      "base": 4050,
-      "idlz": 4330
-    },
     "premium": false,
     "rarity": "SR",
     "release_date": "2013-05-03",
@@ -36590,10 +33410,6 @@ app.constant('CardData',
       "heel": 0,
       "idlz": 0,
       "idlz_heel": 0
-    },
-    "on_attr": {
-      "base": 4950,
-      "idlz": 5250
     },
     "premium": true,
     "rarity": "UR",
@@ -36637,10 +33453,6 @@ app.constant('CardData',
       "idlz": 0,
       "idlz_heel": 0
     },
-    "on_attr": {
-      "base": 4230,
-      "idlz": 4510
-    },
     "premium": true,
     "rarity": "SR",
     "release_date": "2013-04-30",
@@ -36682,10 +33494,6 @@ app.constant('CardData',
       "heel": 0,
       "idlz": 0,
       "idlz_heel": 0
-    },
-    "on_attr": {
-      "base": 4400,
-      "idlz": 4680
     },
     "premium": true,
     "rarity": "SR",
@@ -36729,10 +33537,6 @@ app.constant('CardData',
       "idlz": 0,
       "idlz_heel": 0
     },
-    "on_attr": {
-      "base": 4170,
-      "idlz": 4170
-    },
     "premium": false,
     "rarity": "UR",
     "release_date": "2013-04-16",
@@ -36774,10 +33578,6 @@ app.constant('CardData',
       "heel": 0,
       "idlz": 0,
       "idlz_heel": 0
-    },
-    "on_attr": {
-      "base": 4270,
-      "idlz": 4270
     },
     "premium": false,
     "rarity": "UR",
@@ -36821,10 +33621,6 @@ app.constant('CardData',
       "idlz": 0,
       "idlz_heel": 0
     },
-    "on_attr": {
-      "base": 4980,
-      "idlz": 5280
-    },
     "premium": true,
     "rarity": "UR",
     "release_date": "2013-04-16",
@@ -36866,10 +33662,6 @@ app.constant('CardData',
       "heel": 0,
       "idlz": 0,
       "idlz_heel": 0
-    },
-    "on_attr": {
-      "base": 4200,
-      "idlz": 4200
     },
     "premium": false,
     "rarity": "UR",
@@ -36913,10 +33705,6 @@ app.constant('CardData',
       "idlz": 0,
       "idlz_heel": 0
     },
-    "on_attr": {
-      "base": 4930,
-      "idlz": 5230
-    },
     "premium": true,
     "rarity": "UR",
     "release_date": "2013-04-16",
@@ -36958,10 +33746,6 @@ app.constant('CardData',
       "heel": 0,
       "idlz": 0,
       "idlz_heel": 0
-    },
-    "on_attr": {
-      "base": 4180,
-      "idlz": 4460
     },
     "premium": true,
     "rarity": "SR",
@@ -37005,10 +33789,6 @@ app.constant('CardData',
       "idlz": 0,
       "idlz_heel": 0
     },
-    "on_attr": {
-      "base": 4350,
-      "idlz": 4630
-    },
     "premium": true,
     "rarity": "SR",
     "release_date": "2013-04-16",
@@ -37050,10 +33830,6 @@ app.constant('CardData',
       "heel": 0,
       "idlz": 0,
       "idlz_heel": 0
-    },
-    "on_attr": {
-      "base": 4130,
-      "idlz": 4410
     },
     "premium": true,
     "rarity": "SR",
@@ -37097,10 +33873,6 @@ app.constant('CardData',
       "idlz": 0,
       "idlz_heel": 0
     },
-    "on_attr": {
-      "base": 4400,
-      "idlz": 4680
-    },
     "premium": true,
     "rarity": "SR",
     "release_date": "2013-04-16",
@@ -37142,10 +33914,6 @@ app.constant('CardData',
       "heel": 0,
       "idlz": 0,
       "idlz_heel": 0
-    },
-    "on_attr": {
-      "base": 4430,
-      "idlz": 4710
     },
     "premium": true,
     "rarity": "SR",
@@ -37189,10 +33957,6 @@ app.constant('CardData',
       "idlz": 0,
       "idlz_heel": 0
     },
-    "on_attr": {
-      "base": 4160,
-      "idlz": 4440
-    },
     "premium": true,
     "rarity": "SR",
     "release_date": "2013-04-16",
@@ -37234,10 +33998,6 @@ app.constant('CardData',
       "heel": 0,
       "idlz": 0,
       "idlz_heel": 0
-    },
-    "on_attr": {
-      "base": 4320,
-      "idlz": 4600
     },
     "premium": true,
     "rarity": "SR",
@@ -37281,10 +34041,6 @@ app.constant('CardData',
       "idlz": 0,
       "idlz_heel": 0
     },
-    "on_attr": {
-      "base": 4030,
-      "idlz": 4310
-    },
     "premium": true,
     "rarity": "SR",
     "release_date": "2013-04-16",
@@ -37326,10 +34082,6 @@ app.constant('CardData',
       "heel": 0,
       "idlz": 0,
       "idlz_heel": 0
-    },
-    "on_attr": {
-      "base": 4330,
-      "idlz": 4610
     },
     "premium": true,
     "rarity": "SR",
