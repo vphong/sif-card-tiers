@@ -237,7 +237,6 @@ app.factory('Cards', function($rootScope, $http, Calculations) {
       // skill value = (# of activation times) * (chance of activation) * (activation value)
       // console.log(card)
       activations = Calculations.activations(song, card.skill)
-      // console.log(activations)
 
       card.skill.avg = Math.floor(activations * card.skill.percent) * card.skill.amount
       card.skill.best = activations * card.skill.amount
@@ -273,7 +272,7 @@ app.factory('Cards', function($rootScope, $http, Calculations) {
       sort.desc = true
     } else {
 
-      sort.desc = (sort.type == oldSort.type) ? !sort.desc : false;
+      sort.desc = (sort.type == oldSort.type) ? !sort.desc : true;
     }
   }
 
