@@ -1,399 +1,180 @@
 <div class="container-fluid">
-<div class="alert alert-danger">If something doesn't work, try clearing your cache. </div>
+  <div class="alert alert-danger">If something doesn't work, try clearing your cache. </div>
 
-    <div id="intro">
-        <h2 class="info-title">Intro
+  <div id="intro">
+    <h2 class="info-title">Intro
             <small>hello world</small>
         </h2>
-        <p>Evaluating
-            <a href="http://www.school-fes.klabgames.net/">Love Live! School Idol Festival</a>
-            card strength with some mathy stuff.</p>
-        <p>Based off of
-            <a href="http://sif.artonico.com/index.php">artonico's tier list</a>. Huge thank you to artonico for giving me guidance!
-        </p>
-        <ul class="list-unstyled">
-            <li>
-                <b>What's the difference between that website and this one?</b>
-            </li>
-            <li>This website:
-                <ul>
-                    <li>is based off of 4.0 and accounts for School Idol Skills and new Center Bonuses</li>
-                    <li>is more interactive, with built-in searching and filtering</li>
-                    <li>is semi-automated, so it will stay up to date with the
-                        <a href="https://schoolido.lu">schoolido.lu</a>
-                        database</li>
-                    <li>can link to your
-                        <a href="https://schoolido.lu">schoolido.lu</a>
-                        account and run calculations on your own deck</li>
-                </ul>
-            </li>
+    <p>Evaluating
+      <a href="http://www.school-fes.klabgames.net/">Love Live! School Idol Festival</a> card strength with some mathy stuff.</p>
+    <p>Based off of
+      <a href="http://sif.artonico.com/index.php">artonico's tier list</a>. Huge thank you to artonico for giving me guidance!
+    </p>
+    <ul class="list-unstyled">
+      <li>
+        <b>What's the difference between that website and this one?</b>
+      </li>
+      <li>This website:
+        <ul>
+          <li>is based off of 4.0 and accounts for School Idol Skills and new Center Bonuses</li>
+          <li>is more interactive, with built-in searching and filtering</li>
+          <li>is semi-automated, so it will stay up to date with the
+            <a href="https://schoolido.lu">schoolido.lu</a> database
+          </li>
+          <li>can link to your
+            <a href="https://schoolido.lu">schoolido.lu</a> account and run calculations on your own deck</li>
         </ul>
+      </li>
+    </ul>
 
-        <div class="well">
-            <b>Disclaimer:</b>
-            This page is under beta. It may be laggy, buggy, and completely broken on any given visit. Formulas may be revised at any time.</div>
-    </div>
+  </div>
 
-    <div id="math">
-        <h2 class="info-title">The Math
+  <div id="math">
+    <h2 class="info-title">The Math
             <small>the best part!</small>
         </h2>
-        <p>Following Artonico's lead, I based the strength of each card based off of a Common Score (C-Score) and an Optimal Score (O-Score).</p>
+    <p><a href="https://github.com/vphong/sif-card-tiers/blob/revamp/js/app.js#L97-L156">check it</a> </p>
+
+
+    <h3 class="info-subtitle" id="raw-stat">Raw Stat</h3>
+    <div class="row">
+      <div class="col-xs-5 col-lg-8">
+        <p>This is the card's on-attribute stat + maximum bond for that card's rarity and idolization status.</p>
         <p>
-            <b>C-Score</b>
-            is the premise of using a card under a common setting - easy to access boosts a player can give their team.</p>
-        <p>
-            <b>O-Score</b>
-            is the premise of using a card under an optimal setting - relatively harder to access boosts.</p>
-
-        <p>The raw formula (based on the
-            <a href="http://www59.atwiki.jp/lovelive-sif/pages/30.html">formula found here</a>) for both Scores is:
-            <code>score = (raw_stat + SIS_static_boost) * ceiling(raw_stat * SIS_ring) * ceiling(raw_stat * SIS_cross) * center_skill_boost^2 + score_up_to_stat</code>.
+          <b>Example:</b> For an unidolized
+          <span class="text-pure">Pure</span> SSR, we take the unidolized maximum
+          <span class="text-pure">Pure</span> stat and add 375 bond points.
         </p>
-        <p>What do these variables mean? Well..</p>
+      </div>
 
-        <h3 class="info-subtitle" id="raw-stat">Raw Stat</h3>
-        <div class="row">
-            <div class="col-xs-5 col-lg-8">
-                <p>This is the card's on-attribute stat + maximum bond for that card's rarity and idolization status.</p>
-                <p>
-                    <b>Example:</b>
-                    For an unidolized
-                    <span class="text-pure">Pure</span>
-                    SSR, we take the unidolized maximum
-                    <span class="text-pure">Pure</span>
-                    stat and add 375 bond points.
-                </p>
-            </div>
-
-            <div class="col-xs-7 col-lg-4">
-                <table class="table table-striped table-bordered">
-                    <thead>
-                        <tr>
-                            <th colspan=3 class="text-center">
-                                Bond Points by Rarity and Idolization
-                            </th>
-                        </tr>
-                        <tr>
-                            <th></th>
-                            <th class="text-center">Unidolized</th>
-                            <th class="text-center">Idolized</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <th class="text-right">SR</th>
-                            <td>250</td>
-                            <td>500</td>
-                        </tr>
-                        <tr>
-                            <th class="text-right">SSR</th>
-                            <td>375</td>
-                            <td>750</td>
-                        </tr>
-                        <tr>
-                            <th class="text-right">UR</th>
-                            <td>500</td>
-                            <td>1000</td>
-                        </tr>
-                    </tbody>
-
-                </table>
-            </div>
-        </div>
-
-        <h3 class="info-subtitle" id="sis">School Idol Skills</h3>
-        <p>I will go into this section assuming that you understand what School Idol Skills (<abbr title="School Idol Skills">SIS</abbr>) are and how to use them. If you don't, I recommend looking at
-            <a href="http://kachagain.com/llsif/sis.php">kachagain.com's
-                <abbr title="School Idol Skills">SIS</abbr>
-                page</a>
-            or looking up other guides about them.
-        </p>
-
-        <h4>Number of School Idol Skill Slots</h4>
-        <dl class="dl-horizontal">
-            <dt>C- &amp; O-Score, unidolized</dt>
-            <dd>2 per SR | 3 per SSR | 4 per UR</dd>
-            <dt>C-Score, idolized</dt>
-            <dd>3 per SR | 3 per SSR | 4 per UR</dd>
-            <dt>O-Score, idolized</dt>
-            <dd>4 per SR | 4 per SSR | 5 per UR</dd>
-        </dl>
-        <ul class="list-unstyled">
-            <li>
-                <strong>Why these numbers of skill slots?</strong>
-                <ul>
-                    <li>For unidolized cards, the number of slots stays constant.</li>
-                    <li>For idolized SRs/SSRs/URs, it is more
-                        <i>common</i>
-                        to idolize a card with one copy and add one slot.</li>
-                    <li>It is
-                        <i>optimal</i>
-                        and viable to idolize an SR twice (for f2p players, by ranking in Tier 1 during an event). However, it is unlikely to idolize an SSR or UR multiple times, so the number of slots for C- and O-Score are the same for idolized SSRs and URs.
-                    </li>
-                </ul>
-            </li>
-        </ul>
-
-        <h4>Equipped School Idol Skills</h4>
-        <p>To decide which
-            <abbr title="School Idol Skills">SIS</abbr>
-            to equip to a card, I referenced
-            <a href="https://www.reddit.com/r/SchoolIdolFestival/comments/4sm8cf/information_optimal_skill_slot_configurations/">Optimal Skill Slot Configurations</a>. I let Team Strength = 0 and equipped skills based only on the card's raw stat, since we are looking only at individual cards.
-        </p>
-        <p id="heel">
-            <b>On Heel:</b>
-            For Healers with 4+ skill slots, I equipped Heel to them and also calculated 1) how much Score Up the card would contribute
-            <mark>at skill level 1*</mark>
-            and 2) its alternative C- and O-Scores.
-            <del>Just 'cause I thought it'd be something interesting to analyze.</del>
-        </p>
-        <small class="text-muted">
-            <mark>* Keep in mind that a card's skill may be greatly improved by skill level ups.</mark>
-            Card data comes from
-            <a href="http://schoolido.lu">schoolido.lu</a>, which only offers information on skill level 1.
-        </small>
-
-        <h4>Example School Idol Skill Configurations</h4>
-        <p>A sample of School Idol Skill configurations, in case you were wondering how a card is optimized according to this Tier List.</p>
-        <div class="row">
-            <div class="col-xs-12 col-sm-5">
-                <table class="table table-striped table-bordered">
-                    <thead>
-                        <tr>
-                            <th colspan=3 class="text-center">C-Score, Unidolized SR</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <th class="skill-config-left-col"># of Skill Slots</th>
-                            <td>1</td>
-                            <td>2</td>
-                        </tr>
-                        <tr>
-                            <th class="skill-config-left-col">Skill(s), < 4500 Raw Stat
-                            </th>
-                            <td colspan=2>
-                                <span uib-tooltip="+450 to stat">Perfume
-                                    <i class="fa fa-info-circle"></i>
-                                </span>
-                            </td>
-                        </tr>
-
-                        <tr>
-                            <th class="skill-config-left-col">Skill(s), &ge; 4500 Raw Stat
-                            </th>
-                            <td colspan=2>
-                                <span uib-tooltip="+101% to stat">Ring
-                                    <i class="fa fa-info-circle"></i>
-                                </span>
-                            </td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
-
-            <div class="visible-xs-block col-xs-12" style="height:20px"></div>
-
-            <div class="col-xs-12 col-sm-7">
-                <table class="table table-striped table-bordered">
-                    <thead>
-                        <tr>
-                            <th colspan=5 class="text-center">C-Score, Unidolized UR || O-Score, Idolized SR</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <th class="skill-config-left-col"># of Skill Slots</th>
-                            <td>1</td>
-                            <td>2</td>
-                            <td>3</td>
-                            <td>4</td>
-                        </tr>
-                        <tr>
-                            <th class="skill-config-left-col">Skill(s), < 4200 Raw Stat
-                            </th>
-                            <td colspan="2">
-                                <span uib-tooltip="+101% to stat">Ring
-                                    <i class="fa fa-info-circle"></i>
-                                </span>
-                            </td>
-                            <td colspan=2>
-                                <span uib-tooltip="+450 to stat">Perfume
-                                    <i class="fa fa-info-circle" uib-tooltip="t"></i>
-                                </span>
-                            </td>
-                        </tr>
-                        <tr>
-                            <th class="skill-config-left-col">Skill(s), &ge; 4200 Raw Stat
-                            </th>
-                            <td colspan=3>
-                                <span uib-tooltip="+116% to stat">Cross
-                                    <i class="fa fa-info-circle"></i>
-                                </span>
-                            </td>
-                            <td>
-                                <span uib-tooltip="+200 to stat">Kiss
-                                    <i class="fa fa-info-circle"></i>
-                                </span>
-                            </td>
-                        </tr>
-                        <tr>
-                            <th class="skill-config-left-col">With Heel
-                            </th>
-                            <td colspan=4>
-                                <span uib-popover="score up by 270*(HP recovered by Healer skill) when Healer skill activates" popover-trigger="'mouseenter'">Heel
-                                    <i class="fa fa-info-circle"></i>
-                                </span>
-                            </td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
-
-        </div>
-
-        <h3 class="info-subtitle" id="center">Center Skill Boosts</h3>
-        <p>I will go into this section assuming that you understand what Center Skills are. If not, I recommend looking at
-            <a href="http://kachagain.com/llsif/urskills.php">kachagain.com's UR center skills page</a>
-            to get the idea of them.
-        </p>
-        <p>In 4.0, optimal Center Skills are the on-attribute, +9% skills (<span class="text-smile">Smile Princess</span>,
-            <span class="text-pure">Pure Angel</span>, and
-            <span class="text-cool">Cool Empress</span>) because bond points are directly added to raw stat. No other Center Skills are considered in C- and O-Score calculation.</p>
-        <p>There are two types of Secondary center skills:
-            <abbr title="Muse or Aqours">main unit</abbr>
-            (+3%) and
-            <abbr title="1st year, 2nd year, or 3rd year">class year</abbr>/subunit (+6%). For each card, C-Score assumes a main unit boost and O-Score assumes a class/subunit boost.</p>
-
-        <h3 class="info-subtitle" id="scoring">Converting Score Up To Stat</h3>
-        <p>Following the
-            <a href="http://decaf.kouhi.me/lovelive/index.php?title=Scoring#Calculating_the_Score">score calculation formula on the decaf.kouhi.me wiki</a>, we can convert a raw stat into the Score that shows up when you tap a note during gameplay.
-        </p>
-        <p>To manipulate that formula and convert Score Up (from a card's skill activating over the course of a song) into raw stat, we take:</p>
-        <p>
-            <code>raw_stat = input_notes * floor((card_skill_avg / input_notes) / (0.0125 * A * C * T * M * G))</code>
-        </p>
-        <p>We multiply by input_notes to adjust for the course of the entire song, since the original formula only considers one note at a time.</p>
-        <p>The numerator,
-            <code>card_skill_avg / input_notes</code>
-            is derived from the fact that the original formula is based on one note at a time, while the Skill Average on this website is based on the entirety of the song. In other words, this is the average Score Up per note a skill contributes.</p>
-        <p>The denominator,
-            <code>(0.0125 * A * C * T * M * G)</code>, is simply the right hand side of the original formula without the Stat multiplier, and with constants figured in, where:
-        </p>
-        <ul class="list">
-            <li>A = accuracy = <code>0.88 * input_%_greats</code></li>
-            <li>C = combo position = average position = <code>floor(input_notes / 2)</code></li>
-            <li>T = type of note = normal note = <code>1</code></li>
-            <li>M = attribute of team member the note hits = matching = <code>1.1</code></li>
-            <li>G = main unit of team member based on song = matching = <code>1.1</code></li>
-        </ul>
-
-        <p>In final, the Score Up to Stat formula looks like
-            <code>input_notes * floor((card_skill_avg / input_notes) / (0.0125 * (0.88*input_%_greats) * floor(input_notes/2) * 1 * 1.1 * 1.1)</code>. These constants may be adjusted in the future.</p>
-
-        <h3 class="info-subtitle" id="tldr">Summary: C-Score vs. O-Score
-            <small>tl;dr</small>
-        </h3>
-
+      <div class="col-xs-7 col-lg-4">
         <table class="table table-striped table-bordered">
-            <thead>
-                <tr>
-                    <th></th>
-                    <th>C-Score</th>
-                    <th>O-Score</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <th>Raw Stat</th>
-                    <td colspan=2>on-attribute stat + max bond points + score up boost</td>
-                </tr>
-                <tr>
-                    <th># of Skill Slots, Unidolized</th>
-                    <td colspan=2>SR: 2 | SSR: 3 | UR: 4</td>
-                </tr>
-                <tr>
-                    <th># of Skill Slots, Idolized</th>
-                    <td>
-                        <b>SR: 3</b>
-                        | SSR: 4 | UR: 5</td>
-                    <td>
-                        <b>SR: 4</b>
-                        | SSR: 4 | UR: 5</td>
-                </tr>
-                <tr>
-                    <th>Primary Center Skill</th>
-                    <td colspan=2>on-attribute (+9%)</td>
-                </tr>
-                <tr>
-                    <th>Secondary Center Skill</th>
-                    <td>main unit (+3%)</td>
-                    <td>year/subunit (+6%)</td>
-                </tr>
-            </tbody>
+          <thead>
+            <tr>
+              <th colspan=3 class="text-center">
+                Bond Points by Rarity and Idolization
+              </th>
+            </tr>
+            <tr>
+              <th></th>
+              <th class="text-center">Unidolized</th>
+              <th class="text-center">Idolized</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th class="text-right">SR</th>
+              <td>250</td>
+              <td>500</td>
+            </tr>
+            <tr>
+              <th class="text-right">SSR</th>
+              <td>375</td>
+              <td>750</td>
+            </tr>
+            <tr>
+              <th class="text-right">UR</th>
+              <td>500</td>
+              <td>1000</td>
+            </tr>
+          </tbody>
+
         </table>
+      </div>
+    </div>
 
-        <h2 class="info-subtitle" id="skill">On Card Skill Quality</h2>
-        <p>
-            <b>Skill quality</b>
-            is the amount of score up/perfect lock time/stamina healed a card's skill
-            <mark>at skill level 1*</mark>
-            can contribute over the course of a song.</p>
-        <p>
-            The
-            <b>average</b>
-            case takes into account the percent chance of activation. The
-            <b>best</b>
-            case assumes the skill activates every single chance it gets.
-        </p>
+    <h3 class="info-subtitle" id="center">Center Skill Boosts</h3>
+    <p>I will go into this section assuming that you understand what Center Skills are. If not, I recommend looking at
+      <a href="http://kachagain.com/llsif/urskills.php">kachagain.com's UR center skills page</a> to get the idea of them.
+    </p>
+    <p>In 4.0, optimal Center Skills are the on-attribute, +9% skills (<span class="text-smile">Smile Princess</span>,
+      <span class="text-pure">Pure Angel</span>, and
+      <span class="text-cool">Cool Empress</span>) because bond points are directly added to raw stat. No other Center Skills are considered in C- and O-Score calculation.</p>
+    <p>There are two types of Secondary center skills:
+      <abbr title="Muse or Aqours">main unit</abbr> (+3%) and
+      <abbr title="1st year, 2nd year, or 3rd year">class year</abbr>/subunit (+6%). For each card, C-Score assumes a main unit boost and O-Score assumes a class/subunit boost.</p>
 
-        <p>For example, take a skill that can activate 20 times with a 50% chance during a song. The average case assumes it activates 10 times. The best case assumes it activates 20 times.
-        </p>
+    <h3 class="info-subtitle" id="scoring">Converting Score Up To Stat</h3>
+    <p>Following the
+      <a href="http://decaf.kouhi.me/lovelive/index.php?title=Scoring#Calculating_the_Score">score calculation formula on the decaf.kouhi.me wiki</a>, we can convert a raw stat into the Score that shows up when you tap a note during gameplay.
+    </p>
+    <p>To manipulate that formula and convert Score Up (from a card's skill activating over the course of a song) into raw stat, we take:</p>
+    <p>
+      <code>raw_stat = input_notes * floor((card_skill_avg / input_notes) / (0.0125 * A * C * T * M * G))</code>
+    </p>
+    <p>We multiply by input_notes to adjust for the course of the entire song, since the original formula only considers one note at a time.</p>
+    <p>The numerator,
+      <code>card_skill_avg / input_notes</code> is derived from the fact that the original formula is based on one note at a time, while the Skill Average on this website is based on the entirety of the song. In other words, this is the average Score
+      Up per note a skill contributes.</p>
+    <p>The denominator,
+      <code>(0.0125 * A * C * T * M * G)</code>, is simply the right hand side of the original formula without the Stat multiplier, and with constants figured in, where:
+    </p>
+    <ul class="list">
+      <li>A = accuracy = <code>0.88 * input_%_greats</code></li>
+      <li>C = combo position = average position = <code>floor(input_notes / 2)</code></li>
+      <li>T = type of note = normal note = <code>1</code></li>
+      <li>M = attribute of team member the note hits = matching = <code>1.1</code></li>
+      <li>G = main unit of team member based on song = matching = <code>1.1</code></li>
+    </ul>
 
-      <p><code>skill_avg = floor(song.notes * song.perfects / card.skill.activation_count) * card.skill.activation_percent * card.skill.activation_value</code></p>
+    <p>In final, the Score Up to Stat formula looks like
+      <code>input_notes * floor((card_skill_avg / input_notes) / (0.0125 * (0.88*input_%_greats) * floor(input_notes/2) * 1 * 1.1 * 1.1)</code>. These constants may be adjusted in the future.</p>
 
 
-        <!-- <p>
+    <h2 class="info-subtitle" id="skill">On Card Skill Quality</h2>
+    <p>
+      <b>Skill quality</b> is the amount of score up/perfect lock time/stamina healed a card's skill
+      <mark>at skill level 1*</mark> can contribute over the course of a song.</p>
+    <p>
+      The
+      <b>average</b> case takes into account the percent chance of activation. The
+      <b>best</b> case assumes the skill activates every single chance it gets.
+    </p>
+
+    <p>For example, take a skill that can activate 20 times with a 50% chance during a song. The average case assumes it activates 10 times. The best case assumes it activates 20 times.
+    </p>
+
+    <p><code>skill_avg = floor(song.notes * song.perfects / card.skill.activation_count) * card.skill.activation_percent * card.skill.activation_value</code></p>
+
+
+    <!-- <p>
             Score Up is directly added to C- and O-Score because it directly affects card strength, unlike perfect lock time and healing.
         </p> -->
 
-        <small class="text-muted">
+    <small class="text-muted">
             <mark>* Again, keep in mind that a card's skill can be greatly improved by skill level ups.</mark>
             Card data comes from
             <a href="http://schoolido.lu">schoolido.lu</a>, which only offers information on skill level 1.
         </small>
-    </div>
+  </div>
 
-    <div id="resources">
-        <h2 class="info-title">Resources Used
+  <div id="resources">
+    <h2 class="info-title">Resources Used
             <small>credit where credit is due</small>
         </h2>
-        <dl class="dl-horizontal">
-            <dt>
+    <dl class="dl-horizontal">
+      <dt>
                 <a href="http://sif.artonico.com/index.php">SIF Cards Tier List</a>
             </dt>
-            <dd>by /u/artonico - without him, this wouldn't exist</dd>
+      <dd>by /u/artonico - without him, this wouldn't exist</dd>
 
-            <dt>
+      <dt>
                 <a href="http://schoolido.lu">schoolido.lu</a>
             </dt>
-            <dd>aka
-                <a href="http://twitter.com/schoolidolu">@schoolidolu</a>
-                - for all of the card data and image hosting</dd>
+      <dd>aka
+        <a href="http://twitter.com/schoolidolu">@schoolidolu</a> - for all of the card data and image hosting</dd>
 
-            <dt>
+      <dt>
                 <a href="http://kachagain.com/">kach again</a>
             </dt>
-            <dd>aka
-                <a href="http://twitter.com/kachagain">@kachagain</a>
-                - for school idol skill info, UR center skills info, and tons more</dd>
+      <dd>aka
+        <a href="http://twitter.com/kachagain">@kachagain</a> - for school idol skill info, UR center skills info, and tons more</dd>
 
-            <dt>
+      <dt>
                 <a href="https://www.reddit.com/r/SchoolIdolFestival/comments/4sm8cf/information_optimal_skill_slot_configurations/">optimal skill slot configurations</a>
             </dt>
-            <dd>by /u/Flightopath on reddit</dd>
-        </dl>
-    </div>
+      <dd>by /u/Flightopath on reddit</dd>
+    </dl>
+  </div>
 
 </div>
