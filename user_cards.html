@@ -236,6 +236,9 @@
                 <i ng-show="!sort.desc && sort.type=='id'" class="fa fa-chevron-up"></i>
               </th>
               <th class="num-header" ng-click="sortBy('stat.display')">Stat
+                <span popover-append-to-body="true" popover-trigger="'mouseenter'" popover-placement="top" uib-popover="Max bond for the card's rarity and idolization status is included.">
+                    <i class="text-primary fa fa-info-circle"></i>
+                </span>
                 <i ng-show="sort.desc && sort.type == 'stat.display'" class="fa fa-chevron-down"></i>
                 <i ng-show="!sort.desc && sort.type == 'stat.display'" class="fa fa-chevron-up"></i>
               </th>
