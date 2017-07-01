@@ -1,319 +1,304 @@
 var app = angular.module('tierList', ['ui.bootstrap', 'ui.router.tabs',
-    'bsLoadingOverlay', 'bsLoadingOverlayHttpInterceptor', 'mgcrea.ngStrap',
-    'ui.router', 'LocalStorageModule', 'fixed.table.header'
+  'bsLoadingOverlay', 'bsLoadingOverlayHttpInterceptor', 'mgcrea.ngStrap',
+  'ui.router', 'LocalStorageModule', 'fixed.table.header'
 ]);
 
 app.factory('cardInterceptor', function(bsLoadingOverlayHttpInterceptorFactoryFactory) {
-    return bsLoadingOverlayHttpInterceptorFactoryFactory({
-        referenceId: 'table',
-        requestsMatcher: function(requestConfig) {
-            return requestConfig.url.indexOf('ownedcards') !== -1;
-        }
-    });
+  return bsLoadingOverlayHttpInterceptorFactoryFactory({
+    referenceId: 'table',
+    requestsMatcher: function(requestConfig) {
+      return requestConfig.url.indexOf('ownedcards') !== -1;
+    }
+  });
 });
 
 app.factory('accountInterceptor', function(bsLoadingOverlayHttpInterceptorFactoryFactory) {
-    return bsLoadingOverlayHttpInterceptorFactoryFactory({
-        referenceId: 'accounts',
-        requestsMatcher: function(requestConfig) {
-            return requestConfig.url.indexOf('owner__username') !== -1;
-        }
-    });
+  return bsLoadingOverlayHttpInterceptorFactoryFactory({
+    referenceId: 'accounts',
+    requestsMatcher: function(requestConfig) {
+      return requestConfig.url.indexOf('owner__username') !== -1;
+    }
+  });
 });
 
 app.factory('allCardsInterceptor', function(bsLoadingOverlayHttpInterceptorFactoryFactory) {
-    return bsLoadingOverlayHttpInterceptorFactoryFactory({
-        referenceId: 'all',
-        // requestsMatcher: function(requestConfig) {
-        //     return requestConfig.url.indexOf('cards') !== -1;
-        // }
-    });
+  return bsLoadingOverlayHttpInterceptorFactoryFactory({
+    referenceId: 'all',
+    // requestsMatcher: function(requestConfig) {
+    //     return requestConfig.url.indexOf('cards') !== -1;
+    // }
+  });
 });
 
 app.config(function($httpProvider) {
-    $httpProvider.interceptors.push('allCardsInterceptor');
-    $httpProvider.interceptors.push('cardInterceptor');
-    $httpProvider.interceptors.push('accountInterceptor');
+  $httpProvider.interceptors.push('allCardsInterceptor');
+  $httpProvider.interceptors.push('cardInterceptor');
+  $httpProvider.interceptors.push('accountInterceptor');
 });
 
 app.run(function(bsLoadingOverlayService) {
-    bsLoadingOverlayService.setGlobalConfig({
-        delay: 900, // Minimal delay to hide loading overlay in ms.
-        templateUrl: 'loading-overlay.html' // Template url for overlay element. If not specified - no overlay element is created.
-    });
+  bsLoadingOverlayService.setGlobalConfig({
+    delay: 900, // Minimal delay to hide loading overlay in ms.
+    templateUrl: 'loading-overlay.html' // Template url for overlay element. If not specified - no overlay element is created.
+  });
 });
 
 app.config(function($stateProvider, $urlRouterProvider) {
 
-    $urlRouterProvider.otherwise("/");
+  $urlRouterProvider.otherwise("/");
 
-    $stateProvider
-        .state("home", {
-            url: "/",
-            templateUrl: "info.html",
-        })
-        .state("all", {
-            url: "/all",
-            controller: 'TierCtrl',
-            templateUrl: "all_cards.html",
-        })
-        .state("user", {
-            url: "/user",
-            controller: 'UserCtrl',
-            templateUrl: "user_cards.html",
-        })
+  $stateProvider
+    .state("home", {
+      url: "/",
+      templateUrl: "info.html",
+    })
+    .state("all", {
+      url: "/all",
+      controller: 'TierCtrl',
+      templateUrl: "all_cards.html",
+    })
+    .state("user", {
+      url: "/user",
+      controller: 'UserCtrl',
+      templateUrl: "user_cards.html",
+    })
 });
 
 app.controller('TabCtrl', function($rootScope, $scope, $state) {
-    $scope.tabs = [{
-        heading: "Home",
-        route: "home",
-        active: true
-    }, {
-        heading: "All Cards",
-        route: "all",
-        active: false
-    }, {
-        heading: "User Cards",
-        route: "user",
-        active: true
-    }];
+  $scope.tabs = [{
+    heading: "Home",
+    route: "home",
+    active: true
+  }, {
+    heading: "All Cards",
+    route: "all",
+    active: false
+  }, {
+    heading: "User Cards",
+    route: "user",
+    active: true
+  }];
 
-    $scope.go = function(route) {
-        $state.go(route);
-    };
+  $scope.go = function(route) {
+    $state.go(route);
+  };
 
-    $scope.active = function(route) {
-        return $state.is(route);
-    };
+  $scope.active = function(route) {
+    return $state.is(route);
+  };
 
-    $scope.$on("$stateChangeSuccess", function() {
-        $scope.tabs.forEach(function(tab) {
-            tab.active = $scope.active(tab.route);
-        });
+  $scope.$on("$stateChangeSuccess", function() {
+    $scope.tabs.forEach(function(tab) {
+      tab.active = $scope.active(tab.route);
     });
+  });
 });
 
-app.factory('Calculations', function () {
-    var ret = {};
+app.factory('Calculations', function() {
+  var ret = {};
 
-    ret.activations = function (song, skill) {
-      // console.log(skill)
-        if (skill.type == "notes" || skill.type == "hit" || skill.type == "combo") {
-            return Math.floor(song.notes / skill.interval)
-        }
-        else if (skill.type == "perfects") {
-            return Math.floor(Math.floor(song.notes * song.perfects) / skill.interval)
-        }
-        else if (skill.type == "seconds") {
-            return Math.floor(song.seconds / skill.interval)
-        }
-        else if (skill.type == "points") {
-            return Math.floor(song.score / skill.interval)
-        }
-        else {
-            //TODO: handle Snow Maiden Umi
-            return 0
-        }
-    };
-
-    // score = floor(stat * 0.0125 * accuracy * combo_position * note_type * attribute_bool * group_bool)
-    ret.scoreUpMod = function (song, scoreUp) {
-        // given a score that a card has generated, return stat corresponding to that score
-        return Math.floor(scoreUp / song.notes / 0.0125);
-    };
-
-    ret.plScoreBonus = function (on_attr, song, pl_time, type) {
-        // calculate exactly how many notes are estimated to go great -> perfect
-        var pl_proportion_of_song = pl_time < song.seconds ? pl_time / song.seconds : 1
-        var notes_during_pl = Math.floor(song.notes * pl_proportion_of_song)
-        var transformed_greats_proportion_of_song = notes_during_pl * (1 - song.perfects) / song.notes
-
-        // how much the score changed due to greats -> perfects
-        var score_difference = Math.floor(on_attr * 0.0125 * .22 * Math.floor(song.notes / 2) * 1 * 1.1 * 1.1) * transformed_greats_proportion_of_song
-
-        return Math.floor(score_difference / song.notes / (0.0125 * 1.1 * 1.1))
+  ret.activations = function(song, skill) {
+    // console.log(skill)
+    if (skill.type == "notes" || skill.type == "hit" || skill.type == "combo") {
+      return Math.floor(song.notes / skill.interval)
+    } else if (skill.type == "perfects") {
+      return Math.floor(Math.floor(song.notes * song.perfects) / skill.interval)
+    } else if (skill.type == "seconds") {
+      return Math.floor(song.seconds / skill.interval)
+    } else if (skill.type == "points") {
+      return Math.floor(song.score / skill.interval)
+    } else {
+      //TODO: handle Snow Maiden Umi
+      return 0
     }
+  };
 
-    ret.trickStatBonus = function (on_attr, song, pl_time) {
-        // calculate exactly how many notes are estimated to go great -> perfect
-        var pl_proportion_of_song = pl_time < song.seconds ? pl_time / song.seconds : 1
-        var notes_during_pl = Math.floor(song.notes * pl_proportion_of_song)
-        var greats_during_pl = notes_during_pl * (1 - song.perfects) / song.notes
-        var perfects_during_pl = notes_during_pl * song.perfects / song.notes
+  // score = floor(stat * 0.0125 * accuracy * combo_position * note_type * attribute_bool * group_bool)
+  ret.scoreUpMod = function(song, scoreUp) {
+    // given a score that a card has generated, return stat corresponding to that score
+    return Math.floor(scoreUp / song.notes / 0.0125);
+  };
 
-        var bonus = Math.floor(on_attr * 0.33)
-        // how many more points greats give
-        var trick_greats_bonus = Math.floor(bonus * 0.0125 * .22 * Math.floor(song.notes / 2) * 1 * 1.1 * 1.1) * greats_during_pl
-        // how many more points perfects give
-        var trick_perfects_bonus = Math.floor(bonus * 0.0125 * 1 * Math.floor(song.notes / 2) * 1 * 1.1 * 1.1) * perfects_during_pl
+  ret.plScoreBonus = function(on_attr, song, pl_time, type) {
+    // calculate exactly how many notes are estimated to go great -> perfect
+    var pl_proportion_of_song = pl_time < song.seconds ? pl_time / song.seconds : 1
+    var notes_during_pl = Math.floor(song.notes * pl_proportion_of_song)
+    var transformed_greats_proportion_of_song = notes_during_pl * (1 - song.perfects) / song.notes
 
-        return ret.scoreUpMod(song, trick_greats_bonus + trick_perfects_bonus)
-    }
+    // how much the score changed due to greats -> perfects
+    var score_difference = Math.floor(on_attr * 0.0125 * .22 * Math.floor(song.notes / 2) * 1 * 1.1 * 1.1) * transformed_greats_proportion_of_song
+
+    return Math.floor(score_difference / song.notes / (0.0125 * 1.1 * 1.1))
+  }
+
+  ret.trickStatBonus = function(on_attr, song, pl_time) {
+    // calculate exactly how many notes are estimated to go great -> perfect
+    var pl_proportion_of_song = pl_time < song.seconds ? pl_time / song.seconds : 1
+    var notes_during_pl = Math.floor(song.notes * pl_proportion_of_song)
+    var greats_during_pl = notes_during_pl * (1 - song.perfects) / song.notes
+    var perfects_during_pl = notes_during_pl * song.perfects / song.notes
+
+    var bonus = Math.floor(on_attr * 0.33)
+    // how many more points greats give
+    var trick_greats_bonus = Math.floor(bonus * 0.0125 * .22 * Math.floor(song.notes / 2) * 1 * 1.1 * 1.1) * greats_during_pl
+    // how many more points perfects give
+    var trick_perfects_bonus = Math.floor(bonus * 0.0125 * 1 * Math.floor(song.notes / 2) * 1 * 1.1 * 1.1) * perfects_during_pl
+
+    return ret.scoreUpMod(song, trick_greats_bonus + trick_perfects_bonus)
+  }
 
 
-    return ret;
+  return ret;
 })
 
 app.factory('Cards', function($rootScope, $http, Calculations) {
-    var ret = {};
+  var ret = {};
 
-    ret.getUrl = function(url) {
-        return $http.get(url)
+  ret.getUrl = function(url) {
+    return $http.get(url)
+  }
+
+  ret.filterCards = function(filters, cards) {
+    var card;
+    var newCards = [];
+    var len = cards.length;
+
+    angular.forEach(cards, function(card) {
+      if ((filters.server == 'en' && !card.japan_only ||
+          filters.server == 'jp') &&
+
+        (filters.sr && card.rarity == "SR" ||
+          filters.ssr && card.rarity == "SSR" ||
+          filters.ur && card.rarity == "UR") &&
+
+        (filters.attribute == 'all' && card.attribute ||
+          filters.attribute == 'smile' && card.attribute == "Smile" ||
+          filters.attribute == 'pure' && card.attribute == "Pure" ||
+          filters.attribute == 'cool' && card.attribute == "Cool") &&
+
+        ((filters.premium && !card.event && !card.is_promo) ||
+          filters.event && card.event || filters.promo && card.is_promo) &&
+
+        (filters.su && card.skill.category == "Score Up" ||
+          filters.pl && card.skill.category == "Perfect Lock" ||
+          filters.hl && card.skill.category == "Healer") &&
+
+        (filters.muse && card.main_unit == "Muse" ||
+          filters.aqours && card.main_unit == "Aqours") &&
+
+        (filters.subunit == "all" && card.sub_unit ||
+          filters.subunit == "BiBi" && card.sub_unit == "Bibi" ||
+          filters.subunit == "Printemps" && card.sub_unit == "Printemps" ||
+          filters.subunit == "lily white" && card.sub_unit == "Lily White" ||
+          filters.subunit == "AZALEA" && card.sub_unit == "AZALEA" ||
+          filters.subunit == "CYaRon" && card.sub_unit == "CYaRon!" ||
+          filters.subunit == "Guilty Kiss" && card.sub_unit == "Guilty Kiss") &&
+
+        (filters.year == "all" && card.year ||
+          filters.year == "1" && card.year == "first" ||
+          filters.year == "2" && card.year == "second" ||
+          filters.year == "3" && card.year == "third")
+      ) {
+        newCards.push(card);
+      }
+
+    })
+    return newCards;
+  }
+
+  var calcStatBonus = function(card) {
+    var base, bonus = {};
+    if (!card.idlz) {
+      base = card.stat.base
+    } else base = card.stat.idlz
+
+    // TODO: delete
+    card.sis = {}
+
+    if (!card.equippedSIS) {
+      bonus.avg = card.skill.stat_bonus_avg
+      bonus.best = card.skill.stat_bonus_best
+    } else {
+      bonus.avg = card.sis.stat_bonus_avg
+      bonus.best = card.sis.stat_bonus_best
     }
 
-    ret.filterCards = function(filters, cards) {
-        var card;
-        var newCards = [];
-        var len = cards.length;
+    card.stat.avg = base + bonus.avg
+    card.stat.best = base + bonus.best
+  }
 
-        angular.forEach(cards, function(card) {
-            if ((filters.server == 'en' && !card.japan_only ||
-                    filters.server == 'jp') &&
+  ret.calcSkill = function(cards, song, heel) {
+    var score_up_mod = 0;
+    var activations = 0;
 
-                (filters.sr && card.rarity == "SR" ||
-                    filters.ssr && card.rarity == "SSR" ||
-                    filters.ur && card.rarity == "UR") &&
+    angular.forEach(cards, function(card) {
 
-                (filters.attribute == 'all' && card.attribute ||
-                    filters.attribute == 'smile' && card.attribute == "Smile" ||
-                    filters.attribute == 'pure' && card.attribute == "Pure" ||
-                    filters.attribute == 'cool' && card.attribute == "Cool") &&
+      // for each ~act_count~ ~act_type~, ~act_percent~ chance of ~act_val~
+      // skill value = (# of activation times) * (chance of activation) * (activation value)
+      // console.log(card)
+      activations = Calculations.activations(song, card.skill)
+      // console.log(activations)
 
-                ((filters.premium && !card.event && !card.is_promo) ||
-                    filters.event && card.event || filters.promo && card.is_promo) &&
+      card.skill.avg = Math.floor(activations * card.skill.percent) * card.skill.amount
+      card.skill.best = activations * card.skill.amount
 
-                (filters.su && card.skill.category == "Score Up" ||
-                    filters.pl && card.skill.category == "Perfect Lock" ||
-                    filters.hl && card.skill.category == "Healer") &&
+      if (card.skill.category == "Perfect Lock" || card.skill.category.includes("Trick")) {
+        card.skill.stat_bonus_avg = Calculations.plScoreBonus(card.stat.base, song, card.skill.avg)
+        card.skill.stat_bonus_best = Calculations.plScoreBonus(card.stat.base, song, card.skill.best)
+      } else if ((card.skill.category == "Healer" || card.skill.category.includes("Yell")) && !card.equippedSIS) {
+        card.skill.stat_bonus_avg = card.skill.stat_bonus_best = 0;
+      } else { // scorer
+        card.skill.stat_bonus_avg = Calculations.scoreUpMod(song, card.skill.avg)
+        card.skill.stat_bonus_best = Calculations.scoreUpMod(song, card.skill.best)
+      }
 
-                (filters.muse && card.main_unit == "Muse" ||
-                    filters.aqours && card.main_unit == "Aqours") &&
+      calcStatBonus(card)
 
-                (filters.subunit == "all" && card.sub_unit ||
-                    filters.subunit == "BiBi" && card.sub_unit == "Bibi" ||
-                    filters.subunit == "Printemps" && card.sub_unit == "Printemps" ||
-                    filters.subunit == "lily white" && card.sub_unit == "Lily White" ||
-                    filters.subunit == "AZALEA" && card.sub_unit == "AZALEA" ||
-                    filters.subunit == "CYaRon" && card.sub_unit == "CYaRon!" ||
-                    filters.subunit == "Guilty Kiss" && card.sub_unit == "Guilty Kiss") &&
-
-                (filters.year == "all" && card.year ||
-                    filters.year == "1" && card.year == "first" ||
-                    filters.year == "2" && card.year == "second" ||
-                    filters.year == "3" && card.year == "third")
-            ) {
-                newCards.push(card);
-            }
-
-        })
-        return newCards;
-    }
-
-    var calcStatBonus = function (card) {
-        var base, bonus = {};
-        if (!card.idlz) {
-            base = card.stat.base
-        } else base = card.stat.idlz
-
-        // TODO: delete
-        card.sis = {}
-
-        if (!card.equippedSIS) {
-            bonus.avg = card.skill.stat_bonus_avg
-            bonus.best = card.skill.stat_bonus_best
-        }
-        else {
-            bonus.avg = card.sis.stat_bonus_avg
-            bonus.best = card.sis.stat_bonus_best
-        }
-
-        card.stat.avg = base + bonus.avg
-        card.stat.best = base + bonus.best
-    }
-
-    ret.calcSkill = function(cards, song, heel) {
-        var score_up_mod = 0;
-        var activations = 0;
-
-        angular.forEach(cards, function(card) {
-
-            // for each ~act_count~ ~act_type~, ~act_percent~ chance of ~act_val~
-            // skill value = (# of activation times) * (chance of activation) * (activation value)
-            // console.log(card)
-            activations = Calculations.activations(song, card.skill)
-            // console.log(activations)
-
-            card.skill.avg = Math.floor(activations * card.skill.percent) * card.skill.amount
-            card.skill.best = activations * card.skill.amount
-
-            if (card.skill.category == "Perfect Lock" || card.skill.category.includes("Trick")) {
-                card.skill.stat_bonus_avg = Calculations.plScoreBonus(card.stat.base, song, card.skill.avg)
-                card.skill.stat_bonus_best = Calculations.plScoreBonus(card.stat.base, song, card.skill.best)
-            }
-            else if ((card.skill.category == "Healer" || card.skill.category.includes("Yell")) && !card.equippedSIS) {
-                card.skill.stat_bonus_avg = card.skill.stat_bonus_best = 0;
-            }
-            else { // scorer
-                card.skill.stat_bonus_avg = Calculations.scoreUpMod(song, card.skill.avg)
-                card.skill.stat_bonus_best = Calculations.scoreUpMod(song, card.skill.best)
-            }
-
-            calcStatBonus(card)
-
-        })
+    })
 
 
-    }
+  }
 
 
-    ret.sortBy = function(sort, idlz, type) {
-      // score type : oScore, oScore.heel, cScore, cScore.heel
-        // temp var for previous sort obj to set sort.desc
-        var oldSort = sort;
+  ret.sortBy = function(sort, type) {
+    // temp var for previous sort obj to set sort.desc
+    var oldSort = sort;
+    sort.type = type;
+    sort.desc = (sort.type == oldSort.type) ? !sort.desc : false;
+  }
 
-        if (type == 'stat' && idlz) {
-          sort.type = 'idlz_stat'
-        } else if (type == 'stat' && !idlz) {
-          sort.type = 'base_stat'
-        }
-        else sort.type = type;
-
-        sort.desc = (sort.type == oldSort.type) ? !sort.desc : false;
-    }
-
-    return ret;
+  return ret;
 })
 
 var modalController = function($scope, $uibModalInstance) {
-    $scope.close = function() {
-        $uibModalInstance.close();
-    };
+  $scope.close = function() {
+    $uibModalInstance.close();
+  };
 };
 modalController.$inject = ['$scope', '$uibModalInstance'];
 
 app.controller('ChangelogCtrl', function($scope, $uibModal) {
-    $scope.open = function(size) {
-        var modalInstance = $uibModal.open({
-            animation: true,
-            templateUrl: 'changelog.html',
-            controller: modalController,
-            size: size,
-            resolve: {}
-        });
-    };
+  $scope.open = function(size) {
+    var modalInstance = $uibModal.open({
+      animation: true,
+      templateUrl: 'changelog.html',
+      controller: modalController,
+      size: size,
+      resolve: {}
+    });
+  };
 })
 
-app.directive('master',function () { //declaration; identifier master
-    function link(scope, element, attrs) { //scope we are in, element we are bound to, attrs of that element
-      scope.$watch(function(){ //watch any changes to our element
-        scope.style = { //scope variable style, shared with our controller
-            height:(element[0].offsetHeight-55)+'px', //set the height in style to our elements height
-          };
-      });
-    }
-      return {
-        restrict: 'AE', //describes how we can assign an element to our directive in this case like <div master></div
-        link: link // the function to link to our element
+app.directive('master', function() { //declaration; identifier master
+  function link(scope, element, attrs) { //scope we are in, element we are bound to, attrs of that element
+    scope.$watch(function() { //watch any changes to our element
+      scope.style = { //scope variable style, shared with our controller
+        height: (element[0].offsetHeight - 55) + 'px', //set the height in style to our elements height
       };
+    });
+  }
+  return {
+    restrict: 'AE', //describes how we can assign an element to our directive in this case like <div master></div
+    link: link // the function to link to our element
+  };
 });

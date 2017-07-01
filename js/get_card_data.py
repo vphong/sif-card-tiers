@@ -579,7 +579,7 @@ def cleanCard(d, keys):
 
     # stats/scores
     skillDetails(ret)
-    ret['cScore'] = ret['oScore'] = {'base': 0, 'idlz': 0, 'heel': 0, 'idlz_heel': 0}
+    # ret['cScore'] = ret['oScore'] = {'base': 0, 'idlz': 0, 'heel': 0, 'idlz_heel': 0}
     # ret['cScore'] = score(ret,"c")
     # ret['oScore'] = score(ret,"o")
 
@@ -594,6 +594,8 @@ def cleanCard(d, keys):
     elif ret['attribute'] == 'Cool':
         ret['stat']['base'] = ret['non_idolized_maximum_statistics_cool']
         ret['stat']['idlz'] = ret['idolized_maximum_statistics_cool']
+
+    ret['stat']['display'] = ret['stat']['base']
 
     ret.pop('non_idolized_maximum_statistics_cool', None)
     ret.pop('non_idolized_maximum_statistics_pure', None)

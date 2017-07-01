@@ -72,17 +72,13 @@
                 </button>
                 <ul class="dropdown-menu" uib-dropdown-menu role="menu" aria-labelledby="split-button">
                     <li role="menuitem">
-                        <a ng-model="filters.origin" ng-click="filterCards()" uib-btn-radio="'all'">All</a>
-                    </li>
-                    <li class="divider"></li>
-                    <li role="menuitem">
-                        <a ng-model="filters.origin" ng-click="filterCards()" uib-btn-radio="'premium'">Premium</a>
+                        <a ng-model="filters.premium" ng-click="filterCards()" uib-btn-checkbox>Premium</a>
                     </li>
                     <li role="menuitem">
-                        <a ng-model="filters.origin" ng-click="filterCards()" uib-btn-radio="'event'">Event</a>
+                        <a ng-model="filters.event" ng-click="filterCards()" uib-btn-checkbox>Event</a>
                     </li>
                     <li role="menuitem">
-                        <a ng-model="filters.origin" ng-click="filterCards()" uib-btn-radio="'promo'">Promo</a>
+                        <a ng-model="filters.promo" ng-click="filterCards()" uib-btn-checkbox>Promo</a>
                     </li>
                 </ul>
             </div>
@@ -222,13 +218,14 @@
                         <tr ng-show="filtered.length!=0">
                             <th>Rank</th>
                             <th>Card Name</th>
+                            <th>Options</th>
                             <th class="num-header" ng-click="sortBy('id')">ID
                                 <i ng-show="sort.desc && sort.type=='id'" class="fa fa-chevron-down"></i>
                                 <i ng-show="!sort.desc && sort.type=='id'" class="fa fa-chevron-up"></i>
                             </th>
-                            <th class="num-header" ng-click="sortBy('stat')">Stat
-                                <i ng-show="sort.desc && sort.type.includes('stat')" class="fa fa-chevron-down"></i>
-                                <i ng-show="!sort.desc && sort.type.includes('stat')" class="fa fa-chevron-up"></i>
+                            <th class="num-header" ng-click="sortBy('stat.display')">Stat
+                                <i ng-show="sort.desc && sort.type == 'stat.display'" class="fa fa-chevron-down"></i>
+                                <i ng-show="!sort.desc && sort.type == 'stat.display'" class="fa fa-chevron-up"></i>
                             </th>
                             </th>
                             <th class="num-header" style="min-width:100px" ng-click="sortBy('skill.avg')">Skill (Avg)
@@ -279,8 +276,18 @@
                                     </div>
                                 </div>
                             </td>
+                            <td>
+                              <div class="row">
+                                <div class="col-xs-6">
+                                  <span class="label label-info">Idlz?</span>
+                                  <input type="checkbox" ng-model="card.idlz" ng-click="toggleIdlz(card)">
+                                </div>
+                              <div class="col-xs-6">
+                                SIS
+                              </div>
+                            </td>
                             <td>{{card.id}}</td>
-                            <td>{{filters.idlz ? card.stat.idlz : card.stat.base}}
+                            <td>{{card.stat.display}}
                               <br/><span ng-class="{'text-smile': card.attribute=='Smile', 'text-pure': card.attribute=='Pure', 'text-cool': card.attribute=='Cool'}">{{card.attribute}}</span>
                             </td>
                             <td>

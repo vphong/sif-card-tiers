@@ -1,89 +1,82 @@
 app.controller('TierCtrl', function($rootScope, $scope, Cards, localStorageService, $filter) {
 
-    // $rootScope = $rootScope.$new(true)
-    // $scope = $scope.$new(true)
-    $scope.init = function() {
+  // $rootScope = $rootScope.$new(true)
+  // $scope = $scope.$new(true)
+  $scope.init = function() {
 
-        $scope.filters = localStorageService.get('filters');
-        if (!$scope.filters) $scope.filters = angular.copy($rootScope.InitFilters);
+    $scope.filters = localStorageService.get('filters');
+    if (!$scope.filters) $scope.filters = angular.copy($rootScope.InitFilters);
 
-        /*$scope.cards = localStorageService.get('cards');
-        if (!$scope.cards)*/
+    /*$scope.cards = localStorageService.get('cards');
+    if (!$scope.cards)*/
 
-        $scope.song = localStorageService.get('song');
-        if (!$scope.song) $scope.song = angular.copy($rootScope.Song);
+    $scope.song = localStorageService.get('song');
+    if (!$scope.song) $scope.song = angular.copy($rootScope.Song);
 
-        $scope.cards = angular.copy(Cards.filterCards($scope.filters, $rootScope.Cards));
+    $scope.cards = angular.copy(Cards.filterCards($scope.filters, $rootScope.Cards));
 
-        $scope.sort = localStorageService.get('sort');
-        if (!$scope.sort) {
-            $scope.sort = {
-                type: 'cScore',
-                desc: true
-            }
-        }
-        $scope.search = localStorageService.get('search');
-        if (!$scope.search) $scope.search = "";
-
-        Cards.calcSkill($scope.cards, $scope.song, $scope.filters.heel);
-
-
+    $scope.sort = localStorageService.get('sort');
+    if (!$scope.sort) {
+      $scope.sort = {
+        type: 'stat.avg',
+        desc: true
+      }
     }
-    $scope.init();
+    $scope.search = localStorageService.get('search');
+    if (!$scope.search) $scope.search = "";
+
+    Cards.calcSkill($scope.cards, $scope.song);
 
 
-    $scope.updateSearch = function() {
-        localStorageService.set('search', $scope.search);
+  }
+  $scope.init();
+
+
+  $scope.updateSearch = function() {
+    localStorageService.set('search', $scope.search);
+  }
+
+  $scope.updateSong = function() {
+    Cards.calcSkill($scope.cards, $scope.song, $scope.filters.heel);
+    localStorageService.set('song', $scope.song);
+  }
+
+  $scope.sortBy = function(type) {
+
+    Cards.sortBy($scope.sort, type)
+    localStorageService.set('sort', $scope.sort)
+  }
+
+  $scope.toggleIdlz = function(card) {
+    // console.log(card)
+    card.stat.display = card.idlz ? card.stat.idlz : card.stat.base
+  }
+  $scope.toggleHeel = function() {
+    Cards.calcSkill($scope.cards, $scope.song);
+  }
+
+
+  $scope.filterCards = function() {
+    $scope.cards = Cards.filterCards($scope.filters, angular.copy($rootScope.Cards));
+    Cards.calcSkill($scope.cards, $scope.song, $scope.filters.heel);
+    localStorageService.set('filters', $scope.filters);
+  }
+
+
+  $scope.resetFilters = function() {
+    $scope.filters = angular.copy($rootScope.InitFilters);
+    localStorageService.set('filters', $scope.filters);
+
+    $scope.sort = {
+      type: 'stat.avg',
+      desc: true
     }
+    $scope.filterCards()
+    $scope.sortBy($scope.sort.type);
+  }
 
-    $scope.updateSong = function() {
-        Cards.calcSkill($scope.cards, $scope.song, $scope.filters.heel);
-        localStorageService.set('song', $scope.song);
-    }
-
-    $scope.sortBy = function(type) {
-        if ($scope.filters.heel && type.includes("Score")) type += ".heel";
-
-        Cards.sortBy($scope.sort, $scope.filters.idlz, type)
-        localStorageService.set('sort', $scope.sort)
-    }
-
-    $scope.toggleHeel = function() {
-        Cards.calcSkill($scope.cards, $scope.song, $scope.filters.heel);
-        // console.log($scope.cards[0].full_name)
-        //
-        // console.log($scope.cards[0].cScore_modded[0])
-        // console.log($scope.cards[0].oScore_modded[0])
-        //
-        // if ($scope.filters.heel) $scope.sortBy("cScore.heel");
-        // else $scope.sortBy("cScore")
-    }
-
-    $scope.displayScore = function(card, scoreType) {
-        return Cards.displayScore(card, scoreType, $scope.filters)
-    }
-
-    $scope.filterCards = function() {
-        $scope.cards = Cards.filterCards($scope.filters, angular.copy($rootScope.Cards));
-        Cards.calcSkill($scope.cards, $scope.song, $scope.filters.heel);
-        localStorageService.set('filters', $scope.filters);
-    }
-
-
-    $scope.resetFilters = function() {
-        $scope.filters = angular.copy($rootScope.InitFilters);
-        localStorageService.set('filters', $scope.filters);
-
-        $scope.sort = {
-            type: 'cScore',
-            desc: false
-        }
-        $scope.filterCards()
-        $scope.sortBy($scope.sort.type);
-    }
-
-    $scope.setLocalStorageFilters = function() {
-        localStorageService.set('filters', $scope.filters);
-    }
+  $scope.setLocalStorageFilters = function() {
+    localStorageService.set('filters', $scope.filters);
+  }
 
 });

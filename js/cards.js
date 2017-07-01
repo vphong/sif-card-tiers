@@ -2,12 +2,6 @@ app.constant('CardData',
 [
   {
     "attribute": "Smile",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": null,
     "full_name": "UR Unnamed Matsuura Kanan",
     "id": 1232,
@@ -15,12 +9,6 @@ app.constant('CardData',
     "japan_only": true,
     "main_unit": "Aqours",
     "name": "Matsuura Kanan",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": true,
     "rarity": "UR",
     "release_date": "2017-06-30",
@@ -35,6 +23,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 5040,
+      "display": 5040,
       "idlz": 5340
     },
     "sub_unit": "AZALEA",
@@ -44,12 +33,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Cool",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": null,
     "full_name": "SSR Unnamed Sakurauchi Riko",
     "id": 1231,
@@ -57,12 +40,6 @@ app.constant('CardData',
     "japan_only": true,
     "main_unit": "Aqours",
     "name": "Sakurauchi Riko",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": true,
     "rarity": "SSR",
     "release_date": "2017-06-30",
@@ -77,6 +54,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 4880,
+      "display": 4880,
       "idlz": 5180
     },
     "sub_unit": "Guilty Kiss",
@@ -86,12 +64,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Pure",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": null,
     "full_name": "SR Unnamed Ohara Mari",
     "id": 1230,
@@ -99,12 +71,6 @@ app.constant('CardData',
     "japan_only": true,
     "main_unit": "Aqours",
     "name": "Ohara Mari",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": true,
     "rarity": "SR",
     "release_date": "2017-06-30",
@@ -119,6 +85,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 4650,
+      "display": 4650,
       "idlz": 4930
     },
     "sub_unit": "Guilty Kiss",
@@ -128,12 +95,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Smile",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": null,
     "full_name": "SR Unnamed Kunikida Hanamaru",
     "id": 1229,
@@ -141,12 +102,6 @@ app.constant('CardData',
     "japan_only": true,
     "main_unit": "Aqours",
     "name": "Kunikida Hanamaru",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": true,
     "rarity": "SR",
     "release_date": "2017-06-30",
@@ -161,6 +116,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 4600,
+      "display": 4600,
       "idlz": 4880
     },
     "sub_unit": "AZALEA",
@@ -170,12 +126,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Pure",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": null,
     "full_name": "SR Unnamed Watanabe You",
     "id": 1228,
@@ -183,12 +133,6 @@ app.constant('CardData',
     "japan_only": true,
     "main_unit": "Aqours",
     "name": "Watanabe You",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": true,
     "rarity": "SR",
     "release_date": "2017-06-30",
@@ -203,6 +147,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 4700,
+      "display": 4700,
       "idlz": 4980
     },
     "sub_unit": "CYaRon!",
@@ -212,12 +157,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Pure",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": null,
     "full_name": "SSR Unnamed Yazawa Nico",
     "id": 1226,
@@ -225,12 +164,6 @@ app.constant('CardData',
     "japan_only": true,
     "main_unit": "Muse",
     "name": "Yazawa Nico",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": true,
     "rarity": "SSR",
     "release_date": "2017-06-25",
@@ -245,6 +178,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 4810,
+      "display": 4810,
       "idlz": 5110
     },
     "sub_unit": "Bibi",
@@ -254,12 +188,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Cool",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": null,
     "full_name": "SR Unnamed Sonoda Umi",
     "id": 1225,
@@ -267,12 +195,6 @@ app.constant('CardData',
     "japan_only": true,
     "main_unit": "Muse",
     "name": "Sonoda Umi",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": true,
     "rarity": "SR",
     "release_date": "2017-06-25",
@@ -287,6 +209,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 4690,
+      "display": 4690,
       "idlz": 4970
     },
     "sub_unit": "Lily White",
@@ -296,12 +219,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Cool",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": null,
     "full_name": "UR Promo Tsushima Yoshiko",
     "id": 1224,
@@ -309,12 +226,6 @@ app.constant('CardData',
     "japan_only": true,
     "main_unit": "Aqours",
     "name": "Tsushima Yoshiko",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": false,
     "rarity": "UR",
     "release_date": "2017-06-22",
@@ -329,6 +240,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 4360,
+      "display": 4360,
       "idlz": 4360
     },
     "sub_unit": "Guilty Kiss",
@@ -338,12 +250,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Cool",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": true,
     "full_name": "SR Unnamed Yazawa Nico",
     "id": 1223,
@@ -351,12 +257,6 @@ app.constant('CardData',
     "japan_only": true,
     "main_unit": "Muse",
     "name": "Yazawa Nico",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": false,
     "rarity": "SR",
     "release_date": "2017-06-20",
@@ -371,6 +271,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 4540,
+      "display": 4540,
       "idlz": 4820
     },
     "sub_unit": "Bibi",
@@ -380,12 +281,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Pure",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": true,
     "full_name": "SR Unnamed Toujou Nozomi",
     "id": 1222,
@@ -393,12 +288,6 @@ app.constant('CardData',
     "japan_only": true,
     "main_unit": "Muse",
     "name": "Toujou Nozomi",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": false,
     "rarity": "SR",
     "release_date": "2017-06-20",
@@ -413,6 +302,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 4390,
+      "display": 4390,
       "idlz": 4670
     },
     "sub_unit": "Lily White",
@@ -422,12 +312,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Smile",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": null,
     "full_name": "UR Time Travel Watanabe You",
     "id": 1220,
@@ -435,12 +319,6 @@ app.constant('CardData',
     "japan_only": true,
     "main_unit": "Aqours",
     "name": "Watanabe You",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": true,
     "rarity": "UR",
     "release_date": "2017-06-15",
@@ -455,6 +333,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 5020,
+      "display": 5020,
       "idlz": 5320
     },
     "sub_unit": "CYaRon!",
@@ -464,12 +343,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Pure",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": null,
     "full_name": "SSR Time Travel Kurosawa Ruby",
     "id": 1219,
@@ -477,12 +350,6 @@ app.constant('CardData',
     "japan_only": true,
     "main_unit": "Aqours",
     "name": "Kurosawa Ruby",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": true,
     "rarity": "SSR",
     "release_date": "2017-06-15",
@@ -497,6 +364,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 4800,
+      "display": 4800,
       "idlz": 5100
     },
     "sub_unit": "CYaRon!",
@@ -506,12 +374,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Cool",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": null,
     "full_name": "SR Time Travel Tsushima Yoshiko",
     "id": 1218,
@@ -519,12 +381,6 @@ app.constant('CardData',
     "japan_only": true,
     "main_unit": "Aqours",
     "name": "Tsushima Yoshiko",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": true,
     "rarity": "SR",
     "release_date": "2017-06-15",
@@ -539,6 +395,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 4700,
+      "display": 4700,
       "idlz": 4980
     },
     "sub_unit": "Guilty Kiss",
@@ -548,12 +405,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Smile",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": null,
     "full_name": "SR Time Travel Matsuura Kanan",
     "id": 1217,
@@ -561,12 +412,6 @@ app.constant('CardData',
     "japan_only": true,
     "main_unit": "Aqours",
     "name": "Matsuura Kanan",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": true,
     "rarity": "SR",
     "release_date": "2017-06-15",
@@ -581,6 +426,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 4690,
+      "display": 4690,
       "idlz": 4970
     },
     "sub_unit": "AZALEA",
@@ -590,12 +436,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Pure",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": null,
     "full_name": "UR Unnamed Kousaka Honoka",
     "id": 1215,
@@ -603,12 +443,6 @@ app.constant('CardData',
     "japan_only": true,
     "main_unit": "Muse",
     "name": "Kousaka Honoka",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": true,
     "rarity": "UR",
     "release_date": "2017-06-10",
@@ -623,6 +457,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 5070,
+      "display": 5070,
       "idlz": 5370
     },
     "sub_unit": "Printemps",
@@ -632,12 +467,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Smile",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": null,
     "full_name": "SR Unnamed Hoshizora Rin",
     "id": 1214,
@@ -645,12 +474,6 @@ app.constant('CardData',
     "japan_only": true,
     "main_unit": "Muse",
     "name": "Hoshizora Rin",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": true,
     "rarity": "SR",
     "release_date": "2017-06-10",
@@ -665,6 +488,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 4680,
+      "display": 4680,
       "idlz": 4960
     },
     "sub_unit": "Lily White",
@@ -674,12 +498,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Pure",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": null,
     "full_name": "SR Unnamed Ayase Eli",
     "id": 1213,
@@ -687,12 +505,6 @@ app.constant('CardData',
     "japan_only": true,
     "main_unit": "Muse",
     "name": "Ayase Eli",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": true,
     "rarity": "SR",
     "release_date": "2017-06-10",
@@ -707,6 +519,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 4640,
+      "display": 4640,
       "idlz": 4920
     },
     "sub_unit": "Bibi",
@@ -716,12 +529,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Pure",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": true,
     "full_name": "SR Unnamed Tsushima Yoshiko",
     "id": 1212,
@@ -729,12 +536,6 @@ app.constant('CardData',
     "japan_only": true,
     "main_unit": "Aqours",
     "name": "Tsushima Yoshiko",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": false,
     "rarity": "SR",
     "release_date": "2017-06-05",
@@ -749,6 +550,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 4490,
+      "display": 4490,
       "idlz": 4770
     },
     "sub_unit": "Guilty Kiss",
@@ -758,12 +560,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Smile",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": true,
     "full_name": "SR Unnamed Watanabe You",
     "id": 1211,
@@ -771,12 +567,6 @@ app.constant('CardData',
     "japan_only": true,
     "main_unit": "Aqours",
     "name": "Watanabe You",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": false,
     "rarity": "SR",
     "release_date": "2017-06-05",
@@ -791,6 +581,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 4530,
+      "display": 4530,
       "idlz": 4810
     },
     "sub_unit": "CYaRon!",
@@ -800,12 +591,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Pure",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": null,
     "full_name": "UR Time Travel Takami Chika",
     "id": 1209,
@@ -813,12 +598,6 @@ app.constant('CardData',
     "japan_only": true,
     "main_unit": "Aqours",
     "name": "Takami Chika",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": true,
     "rarity": "UR",
     "release_date": "2017-05-31",
@@ -833,6 +612,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 5070,
+      "display": 5070,
       "idlz": 5370
     },
     "sub_unit": "CYaRon!",
@@ -842,12 +622,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Smile",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": null,
     "full_name": "SSR Time Travel Ohara Mari",
     "id": 1208,
@@ -855,12 +629,6 @@ app.constant('CardData',
     "japan_only": true,
     "main_unit": "Aqours",
     "name": "Ohara Mari",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": true,
     "rarity": "SSR",
     "release_date": "2017-05-31",
@@ -875,6 +643,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 4830,
+      "display": 4830,
       "idlz": 5130
     },
     "sub_unit": "Guilty Kiss",
@@ -884,12 +653,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Cool",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": null,
     "full_name": "SR Time Travel Kunikida Hanamaru",
     "id": 1207,
@@ -897,12 +660,6 @@ app.constant('CardData',
     "japan_only": true,
     "main_unit": "Aqours",
     "name": "Kunikida Hanamaru",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": true,
     "rarity": "SR",
     "release_date": "2017-05-31",
@@ -917,6 +674,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 4690,
+      "display": 4690,
       "idlz": 4970
     },
     "sub_unit": "AZALEA",
@@ -926,12 +684,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Pure",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": null,
     "full_name": "SR Time Travel Kurosawa Dia",
     "id": 1206,
@@ -939,12 +691,6 @@ app.constant('CardData',
     "japan_only": true,
     "main_unit": "Aqours",
     "name": "Kurosawa Dia",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": true,
     "rarity": "SR",
     "release_date": "2017-05-31",
@@ -959,6 +705,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 4640,
+      "display": 4640,
       "idlz": 4920
     },
     "sub_unit": "AZALEA",
@@ -968,12 +715,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Cool",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": null,
     "full_name": "SR Time Travel Sakurauchi Riko",
     "id": 1205,
@@ -981,12 +722,6 @@ app.constant('CardData',
     "japan_only": true,
     "main_unit": "Aqours",
     "name": "Sakurauchi Riko",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": true,
     "rarity": "SR",
     "release_date": "2017-05-31",
@@ -1001,6 +736,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 4640,
+      "display": 4640,
       "idlz": 4920
     },
     "sub_unit": "Guilty Kiss",
@@ -1010,12 +746,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Pure",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": null,
     "full_name": "SSR Tennis Kousaka Honoka",
     "id": 1203,
@@ -1023,12 +753,6 @@ app.constant('CardData',
     "japan_only": true,
     "main_unit": "Muse",
     "name": "Kousaka Honoka",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": true,
     "rarity": "SSR",
     "release_date": "2017-05-25",
@@ -1043,6 +767,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 4870,
+      "display": 4870,
       "idlz": 5170
     },
     "sub_unit": "Printemps",
@@ -1052,12 +777,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Cool",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": null,
     "full_name": "SR Tennis Ayase Eli",
     "id": 1202,
@@ -1065,12 +784,6 @@ app.constant('CardData',
     "japan_only": true,
     "main_unit": "Muse",
     "name": "Ayase Eli",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": true,
     "rarity": "SR",
     "release_date": "2017-05-25",
@@ -1085,6 +798,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 4610,
+      "display": 4610,
       "idlz": 4890
     },
     "sub_unit": "Bibi",
@@ -1094,12 +808,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Pure",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": true,
     "full_name": "SR Military Sonoda Umi",
     "id": 1201,
@@ -1107,12 +815,6 @@ app.constant('CardData',
     "japan_only": true,
     "main_unit": "Muse",
     "name": "Sonoda Umi",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": false,
     "rarity": "SR",
     "release_date": "2017-05-20",
@@ -1127,6 +829,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 4410,
+      "display": 4410,
       "idlz": 4690
     },
     "sub_unit": "Lily White",
@@ -1136,12 +839,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Smile",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": true,
     "full_name": "SR Military Ayase Eli",
     "id": 1200,
@@ -1149,12 +846,6 @@ app.constant('CardData',
     "japan_only": true,
     "main_unit": "Muse",
     "name": "Ayase Eli",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": false,
     "rarity": "SR",
     "release_date": "2017-05-20",
@@ -1169,6 +860,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 4530,
+      "display": 4530,
       "idlz": 4810
     },
     "sub_unit": "Bibi",
@@ -1178,12 +870,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Cool",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": null,
     "full_name": "UR Angel Ohara Mari",
     "id": 1198,
@@ -1191,12 +877,6 @@ app.constant('CardData',
     "japan_only": true,
     "main_unit": "Aqours",
     "name": "Ohara Mari",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": true,
     "rarity": "UR",
     "release_date": "2017-05-15",
@@ -1211,6 +891,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 5020,
+      "display": 5020,
       "idlz": 5320
     },
     "sub_unit": "Guilty Kiss",
@@ -1220,12 +901,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Smile",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": null,
     "full_name": "SSR Angel Takami Chika",
     "id": 1197,
@@ -1233,12 +908,6 @@ app.constant('CardData',
     "japan_only": true,
     "main_unit": "Aqours",
     "name": "Takami Chika",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": true,
     "rarity": "SSR",
     "release_date": "2017-05-15",
@@ -1253,6 +922,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 4880,
+      "display": 4880,
       "idlz": 5180
     },
     "sub_unit": "CYaRon!",
@@ -1262,12 +932,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Pure",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": null,
     "full_name": "SR Angel Kunikida Hanamaru",
     "id": 1196,
@@ -1275,12 +939,6 @@ app.constant('CardData',
     "japan_only": true,
     "main_unit": "Aqours",
     "name": "Kunikida Hanamaru",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": true,
     "rarity": "SR",
     "release_date": "2017-05-15",
@@ -1295,6 +953,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 4630,
+      "display": 4630,
       "idlz": 4910
     },
     "sub_unit": "AZALEA",
@@ -1304,12 +963,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Smile",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": null,
     "full_name": "SR Angel Tsushima Yoshiko",
     "id": 1195,
@@ -1317,12 +970,6 @@ app.constant('CardData',
     "japan_only": true,
     "main_unit": "Aqours",
     "name": "Tsushima Yoshiko",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": true,
     "rarity": "SR",
     "release_date": "2017-05-15",
@@ -1337,6 +984,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 4690,
+      "display": 4690,
       "idlz": 4970
     },
     "sub_unit": "Guilty Kiss",
@@ -1346,12 +994,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Smile",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": null,
     "full_name": "UR Tennis Minami Kotori",
     "id": 1193,
@@ -1359,12 +1001,6 @@ app.constant('CardData',
     "japan_only": true,
     "main_unit": "Muse",
     "name": "Minami Kotori",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": true,
     "rarity": "UR",
     "release_date": "2017-05-10",
@@ -1379,6 +1015,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 5030,
+      "display": 5030,
       "idlz": 5330
     },
     "sub_unit": "Printemps",
@@ -1388,12 +1025,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Cool",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": null,
     "full_name": "SR Tennis Hoshizora Rin",
     "id": 1192,
@@ -1401,12 +1032,6 @@ app.constant('CardData',
     "japan_only": true,
     "main_unit": "Muse",
     "name": "Hoshizora Rin",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": true,
     "rarity": "SR",
     "release_date": "2017-05-10",
@@ -1421,6 +1046,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 4690,
+      "display": 4690,
       "idlz": 4970
     },
     "sub_unit": "Lily White",
@@ -1430,12 +1056,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Cool",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": true,
     "full_name": "SR Unnamed Kunikida Hanamaru",
     "id": 1191,
@@ -1443,12 +1063,6 @@ app.constant('CardData',
     "japan_only": true,
     "main_unit": "Aqours",
     "name": "Kunikida Hanamaru",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": false,
     "rarity": "SR",
     "release_date": "2017-05-05",
@@ -1463,6 +1077,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 4530,
+      "display": 4530,
       "idlz": 4810
     },
     "sub_unit": "AZALEA",
@@ -1472,12 +1087,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Smile",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": true,
     "full_name": "SR Unnamed Matsuura Kanan",
     "id": 1190,
@@ -1485,12 +1094,6 @@ app.constant('CardData',
     "japan_only": true,
     "main_unit": "Aqours",
     "name": "Matsuura Kanan",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": false,
     "rarity": "SR",
     "release_date": "2017-05-05",
@@ -1505,6 +1108,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 4480,
+      "display": 4480,
       "idlz": 4760
     },
     "sub_unit": "AZALEA",
@@ -1514,12 +1118,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Pure",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": null,
     "full_name": "UR Angel Sakurauchi Riko",
     "id": 1188,
@@ -1527,12 +1125,6 @@ app.constant('CardData',
     "japan_only": true,
     "main_unit": "Aqours",
     "name": "Sakurauchi Riko",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": true,
     "rarity": "UR",
     "release_date": "2017-04-30",
@@ -1547,6 +1139,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 5040,
+      "display": 5040,
       "idlz": 5340
     },
     "sub_unit": "Guilty Kiss",
@@ -1556,12 +1149,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Pure",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": null,
     "full_name": "SSR Angel Matsuura Kanan",
     "id": 1187,
@@ -1569,12 +1156,6 @@ app.constant('CardData',
     "japan_only": true,
     "main_unit": "Aqours",
     "name": "Matsuura Kanan",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": true,
     "rarity": "SSR",
     "release_date": "2017-04-30",
@@ -1589,6 +1170,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 4800,
+      "display": 4800,
       "idlz": 5100
     },
     "sub_unit": "AZALEA",
@@ -1598,12 +1180,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Smile",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": null,
     "full_name": "SR Angel Kurosawa Ruby",
     "id": 1186,
@@ -1611,12 +1187,6 @@ app.constant('CardData',
     "japan_only": true,
     "main_unit": "Aqours",
     "name": "Kurosawa Ruby",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": true,
     "rarity": "SR",
     "release_date": "2017-04-30",
@@ -1631,6 +1201,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 4680,
+      "display": 4680,
       "idlz": 4960
     },
     "sub_unit": "CYaRon!",
@@ -1640,12 +1211,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Cool",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": null,
     "full_name": "SR Angel Watanabe You",
     "id": 1185,
@@ -1653,12 +1218,6 @@ app.constant('CardData',
     "japan_only": true,
     "main_unit": "Aqours",
     "name": "Watanabe You",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": true,
     "rarity": "SR",
     "release_date": "2017-04-30",
@@ -1673,6 +1232,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 4620,
+      "display": 4620,
       "idlz": 4900
     },
     "sub_unit": "CYaRon!",
@@ -1682,12 +1242,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Cool",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": null,
     "full_name": "SR Angel Kurosawa Dia",
     "id": 1184,
@@ -1695,12 +1249,6 @@ app.constant('CardData',
     "japan_only": true,
     "main_unit": "Aqours",
     "name": "Kurosawa Dia",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": true,
     "rarity": "SR",
     "release_date": "2017-04-30",
@@ -1715,6 +1263,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 4700,
+      "display": 4700,
       "idlz": 4980
     },
     "sub_unit": "AZALEA",
@@ -1724,12 +1273,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Smile",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": null,
     "full_name": "SSR Tennis Toujou Nozomi",
     "id": 1182,
@@ -1737,12 +1280,6 @@ app.constant('CardData',
     "japan_only": true,
     "main_unit": "Muse",
     "name": "Toujou Nozomi",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": true,
     "rarity": "SSR",
     "release_date": "2017-04-25",
@@ -1757,6 +1294,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 4800,
+      "display": 4800,
       "idlz": 5100
     },
     "sub_unit": "Lily White",
@@ -1766,12 +1304,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Pure",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": null,
     "full_name": "SR Tennis Yazawa Nico",
     "id": 1181,
@@ -1779,12 +1311,6 @@ app.constant('CardData',
     "japan_only": true,
     "main_unit": "Muse",
     "name": "Yazawa Nico",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": true,
     "rarity": "SR",
     "release_date": "2017-04-25",
@@ -1799,6 +1325,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 4690,
+      "display": 4690,
       "idlz": 4970
     },
     "sub_unit": "Bibi",
@@ -1808,12 +1335,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Smile",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": true,
     "full_name": "SR Easter Hoshizora Rin",
     "id": 1180,
@@ -1821,12 +1342,6 @@ app.constant('CardData',
     "japan_only": true,
     "main_unit": "Muse",
     "name": "Hoshizora Rin",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": false,
     "rarity": "SR",
     "release_date": "2017-04-20",
@@ -1841,6 +1356,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 4530,
+      "display": 4530,
       "idlz": 4810
     },
     "sub_unit": "Lily White",
@@ -1850,12 +1366,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Cool",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": true,
     "full_name": "SR Easter Kousaka Honoka",
     "id": 1179,
@@ -1863,12 +1373,6 @@ app.constant('CardData',
     "japan_only": true,
     "main_unit": "Muse",
     "name": "Kousaka Honoka",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": false,
     "rarity": "SR",
     "release_date": "2017-04-20",
@@ -1883,6 +1387,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 4490,
+      "display": 4490,
       "idlz": 4770
     },
     "sub_unit": "Printemps",
@@ -1892,12 +1397,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Cool",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": null,
     "full_name": "UR Animal v2 Kunikida Hanamaru",
     "id": 1177,
@@ -1905,12 +1404,6 @@ app.constant('CardData',
     "japan_only": true,
     "main_unit": "Aqours",
     "name": "Kunikida Hanamaru",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": true,
     "rarity": "UR",
     "release_date": "2017-04-15",
@@ -1925,6 +1418,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 5050,
+      "display": 5050,
       "idlz": 5350
     },
     "sub_unit": "AZALEA",
@@ -1934,12 +1428,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Smile",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": null,
     "full_name": "SSR Animal v2 Kurosawa Dia",
     "id": 1176,
@@ -1947,12 +1435,6 @@ app.constant('CardData',
     "japan_only": true,
     "main_unit": "Aqours",
     "name": "Kurosawa Dia",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": true,
     "rarity": "SSR",
     "release_date": "2017-04-15",
@@ -1967,6 +1449,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 4880,
+      "display": 4880,
       "idlz": 5180
     },
     "sub_unit": "AZALEA",
@@ -1976,12 +1459,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Smile",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": null,
     "full_name": "SR Animal v2 Watanabe You",
     "id": 1175,
@@ -1989,12 +1466,6 @@ app.constant('CardData',
     "japan_only": true,
     "main_unit": "Aqours",
     "name": "Watanabe You",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": true,
     "rarity": "SR",
     "release_date": "2017-04-15",
@@ -2009,6 +1480,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 4690,
+      "display": 4690,
       "idlz": 4970
     },
     "sub_unit": "CYaRon!",
@@ -2018,12 +1490,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Pure",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": null,
     "full_name": "SR Animal v2 Sakurauchi Riko",
     "id": 1174,
@@ -2031,12 +1497,6 @@ app.constant('CardData',
     "japan_only": true,
     "main_unit": "Aqours",
     "name": "Sakurauchi Riko",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": true,
     "rarity": "SR",
     "release_date": "2017-04-15",
@@ -2051,6 +1511,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 4600,
+      "display": 4600,
       "idlz": 4880
     },
     "sub_unit": "Guilty Kiss",
@@ -2060,12 +1521,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Pure",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": null,
     "full_name": "UR Tennis Koizumi Hanayo",
     "id": 1172,
@@ -2073,12 +1528,6 @@ app.constant('CardData',
     "japan_only": true,
     "main_unit": "Muse",
     "name": "Koizumi Hanayo",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": true,
     "rarity": "UR",
     "release_date": "2017-04-10",
@@ -2093,6 +1542,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 5030,
+      "display": 5030,
       "idlz": 5330
     },
     "sub_unit": "Printemps",
@@ -2102,12 +1552,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Cool",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": null,
     "full_name": "SR Tennis Nishikino Maki",
     "id": 1171,
@@ -2115,12 +1559,6 @@ app.constant('CardData',
     "japan_only": true,
     "main_unit": "Muse",
     "name": "Nishikino Maki",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": true,
     "rarity": "SR",
     "release_date": "2017-04-10",
@@ -2135,6 +1573,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 4700,
+      "display": 4700,
       "idlz": 4980
     },
     "sub_unit": "Bibi",
@@ -2144,12 +1583,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Smile",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": null,
     "full_name": "SR Tennis Sonoda Umi",
     "id": 1170,
@@ -2157,12 +1590,6 @@ app.constant('CardData',
     "japan_only": true,
     "main_unit": "Muse",
     "name": "Sonoda Umi",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": true,
     "rarity": "SR",
     "release_date": "2017-04-10",
@@ -2177,6 +1604,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 4700,
+      "display": 4700,
       "idlz": 4980
     },
     "sub_unit": "Lily White",
@@ -2186,12 +1614,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Pure",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": true,
     "full_name": "SR Playing Cards Ohara Mari",
     "id": 1169,
@@ -2199,12 +1621,6 @@ app.constant('CardData',
     "japan_only": true,
     "main_unit": "Aqours",
     "name": "Ohara Mari",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": false,
     "rarity": "SR",
     "release_date": "2017-04-05",
@@ -2219,6 +1635,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 4490,
+      "display": 4490,
       "idlz": 4770
     },
     "sub_unit": "Guilty Kiss",
@@ -2228,12 +1645,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Smile",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": true,
     "full_name": "SR Playing Cards Kurosawa Dia",
     "id": 1168,
@@ -2241,12 +1652,6 @@ app.constant('CardData',
     "japan_only": true,
     "main_unit": "Aqours",
     "name": "Kurosawa Dia",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": false,
     "rarity": "SR",
     "release_date": "2017-04-05",
@@ -2261,6 +1666,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 4530,
+      "display": 4530,
       "idlz": 4810
     },
     "sub_unit": "AZALEA",
@@ -2270,12 +1676,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Pure",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": null,
     "full_name": "UR Animal v2 Tsushima Yoshiko",
     "id": 1165,
@@ -2283,12 +1683,6 @@ app.constant('CardData',
     "japan_only": true,
     "main_unit": "Aqours",
     "name": "Tsushima Yoshiko",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": true,
     "rarity": "UR",
     "release_date": "2017-03-31",
@@ -2303,6 +1697,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 5010,
+      "display": 5010,
       "idlz": 5310
     },
     "sub_unit": "Guilty Kiss",
@@ -2312,12 +1707,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Cool",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": null,
     "full_name": "SSR Animal v2 Matsuura Kanan",
     "id": 1164,
@@ -2325,12 +1714,6 @@ app.constant('CardData',
     "japan_only": true,
     "main_unit": "Aqours",
     "name": "Matsuura Kanan",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": true,
     "rarity": "SSR",
     "release_date": "2017-03-31",
@@ -2345,6 +1728,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 4880,
+      "display": 4880,
       "idlz": 5180
     },
     "sub_unit": "AZALEA",
@@ -2354,12 +1738,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Pure",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": null,
     "full_name": "SR Animal v2 Kurosawa Ruby",
     "id": 1163,
@@ -2367,12 +1745,6 @@ app.constant('CardData',
     "japan_only": true,
     "main_unit": "Aqours",
     "name": "Kurosawa Ruby",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": true,
     "rarity": "SR",
     "release_date": "2017-03-31",
@@ -2387,6 +1759,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 4700,
+      "display": 4700,
       "idlz": 4980
     },
     "sub_unit": "CYaRon!",
@@ -2396,12 +1769,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Cool",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": null,
     "full_name": "SR Animal v2 Ohara Mari",
     "id": 1162,
@@ -2409,12 +1776,6 @@ app.constant('CardData',
     "japan_only": true,
     "main_unit": "Aqours",
     "name": "Ohara Mari",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": true,
     "rarity": "SR",
     "release_date": "2017-03-31",
@@ -2429,6 +1790,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 4610,
+      "display": 4610,
       "idlz": 4890
     },
     "sub_unit": "Guilty Kiss",
@@ -2438,12 +1800,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Smile",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": null,
     "full_name": "SR Animal v2 Takami Chika",
     "id": 1161,
@@ -2451,12 +1807,6 @@ app.constant('CardData',
     "japan_only": true,
     "main_unit": "Aqours",
     "name": "Takami Chika",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": true,
     "rarity": "SR",
     "release_date": "2017-03-31",
@@ -2471,6 +1821,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 4690,
+      "display": 4690,
       "idlz": 4970
     },
     "sub_unit": "CYaRon!",
@@ -2480,12 +1831,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Cool",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": null,
     "full_name": "SSR Flower Bouquet Hoshizora Rin",
     "id": 1159,
@@ -2493,12 +1838,6 @@ app.constant('CardData',
     "japan_only": true,
     "main_unit": "Muse",
     "name": "Hoshizora Rin",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": true,
     "rarity": "SSR",
     "release_date": "2017-04-16",
@@ -2513,6 +1852,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 4790,
+      "display": 4790,
       "idlz": 5090
     },
     "sub_unit": "Lily White",
@@ -2522,12 +1862,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Smile",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": null,
     "full_name": "SR Flower Bouquet Nishikino Maki",
     "id": 1158,
@@ -2535,12 +1869,6 @@ app.constant('CardData',
     "japan_only": true,
     "main_unit": "Muse",
     "name": "Nishikino Maki",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": true,
     "rarity": "SR",
     "release_date": "2013-04-16",
@@ -2555,6 +1883,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 4700,
+      "display": 4700,
       "idlz": 4980
     },
     "sub_unit": "Bibi",
@@ -2564,12 +1893,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Smile",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": true,
     "full_name": "SR Doll Festival Koizumi Hanayo",
     "id": 1157,
@@ -2577,12 +1900,6 @@ app.constant('CardData',
     "japan_only": true,
     "main_unit": "Muse",
     "name": "Koizumi Hanayo",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": false,
     "rarity": "SR",
     "release_date": "2017-03-20",
@@ -2597,6 +1914,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 4400,
+      "display": 4400,
       "idlz": 4680
     },
     "sub_unit": "Printemps",
@@ -2606,12 +1924,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Pure",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": true,
     "full_name": "SR Doll Festival Nishikino Maki",
     "id": 1156,
@@ -2619,12 +1931,6 @@ app.constant('CardData',
     "japan_only": true,
     "main_unit": "Muse",
     "name": "Nishikino Maki",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": false,
     "rarity": "SR",
     "release_date": "2017-03-20",
@@ -2639,6 +1945,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 4530,
+      "display": 4530,
       "idlz": 4810
     },
     "sub_unit": "Bibi",
@@ -2648,12 +1955,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Smile",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": null,
     "full_name": "UR Job v2 Kurosawa Dia",
     "id": 1154,
@@ -2661,12 +1962,6 @@ app.constant('CardData',
     "japan_only": false,
     "main_unit": "Aqours",
     "name": "Kurosawa Dia",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": true,
     "rarity": "UR",
     "release_date": "2017-03-15",
@@ -2681,6 +1976,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 5020,
+      "display": 5020,
       "idlz": 5320
     },
     "sub_unit": "AZALEA",
@@ -2690,12 +1986,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Cool",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": null,
     "full_name": "SSR Job v2 Kurosawa Ruby",
     "id": 1153,
@@ -2703,12 +1993,6 @@ app.constant('CardData',
     "japan_only": false,
     "main_unit": "Aqours",
     "name": "Kurosawa Ruby",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": true,
     "rarity": "SSR",
     "release_date": "2017-03-15",
@@ -2723,6 +2007,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 4790,
+      "display": 4790,
       "idlz": 5090
     },
     "sub_unit": "CYaRon!",
@@ -2732,12 +2017,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Pure",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": null,
     "full_name": "SR Job v2 Tsushima Yoshiko",
     "id": 1152,
@@ -2745,12 +2024,6 @@ app.constant('CardData',
     "japan_only": false,
     "main_unit": "Aqours",
     "name": "Tsushima Yoshiko",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": true,
     "rarity": "SR",
     "release_date": "2017-03-15",
@@ -2765,6 +2038,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 4650,
+      "display": 4650,
       "idlz": 4930
     },
     "sub_unit": "Guilty Kiss",
@@ -2774,12 +2048,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Smile",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": null,
     "full_name": "SR Job v2 Sakurauchi Riko",
     "id": 1151,
@@ -2787,12 +2055,6 @@ app.constant('CardData',
     "japan_only": false,
     "main_unit": "Aqours",
     "name": "Sakurauchi Riko",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": true,
     "rarity": "SR",
     "release_date": "2017-03-15",
@@ -2807,6 +2069,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 4690,
+      "display": 4690,
       "idlz": 4970
     },
     "sub_unit": "Guilty Kiss",
@@ -2816,12 +2079,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Smile",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": null,
     "full_name": "UR Flower Bouquet Yazawa Nico",
     "id": 1149,
@@ -2829,12 +2086,6 @@ app.constant('CardData',
     "japan_only": true,
     "main_unit": "Muse",
     "name": "Yazawa Nico",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": true,
     "rarity": "UR",
     "release_date": "2017-03-10",
@@ -2849,6 +2100,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 5050,
+      "display": 5050,
       "idlz": 5350
     },
     "sub_unit": "Bibi",
@@ -2858,12 +2110,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Pure",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": null,
     "full_name": "SR Flower Bouquet Kousaka Honoka",
     "id": 1148,
@@ -2871,12 +2117,6 @@ app.constant('CardData',
     "japan_only": true,
     "main_unit": "Muse",
     "name": "Kousaka Honoka",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": true,
     "rarity": "SR",
     "release_date": "2017-03-10",
@@ -2891,6 +2131,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 4650,
+      "display": 4650,
       "idlz": 4930
     },
     "sub_unit": "Printemps",
@@ -2900,12 +2141,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Cool",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": true,
     "full_name": "SR White Day Kurosawa Ruby",
     "id": 1147,
@@ -2913,12 +2148,6 @@ app.constant('CardData',
     "japan_only": true,
     "main_unit": "Aqours",
     "name": "Kurosawa Ruby",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": false,
     "rarity": "SR",
     "release_date": "2017-03-05",
@@ -2933,6 +2162,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 4480,
+      "display": 4480,
       "idlz": 4760
     },
     "sub_unit": "CYaRon!",
@@ -2942,12 +2172,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Pure",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": true,
     "full_name": "SR White Day Sakurauchi Riko",
     "id": 1146,
@@ -2955,12 +2179,6 @@ app.constant('CardData',
     "japan_only": true,
     "main_unit": "Aqours",
     "name": "Sakurauchi Riko",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": false,
     "rarity": "SR",
     "release_date": "2017-03-05",
@@ -2975,6 +2193,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 4520,
+      "display": 4520,
       "idlz": 4800
     },
     "sub_unit": "Guilty Kiss",
@@ -2984,12 +2203,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Cool",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": null,
     "full_name": "UR Job v2 Matsuura Kanan",
     "id": 1144,
@@ -2997,12 +2210,6 @@ app.constant('CardData',
     "japan_only": false,
     "main_unit": "Aqours",
     "name": "Matsuura Kanan",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": true,
     "rarity": "UR",
     "release_date": "2017-02-28",
@@ -3017,6 +2224,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 5060,
+      "display": 5060,
       "idlz": 5360
     },
     "sub_unit": "AZALEA",
@@ -3026,12 +2234,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Pure",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": null,
     "full_name": "SSR Job v2 Kunikida Hanamaru",
     "id": 1143,
@@ -3039,12 +2241,6 @@ app.constant('CardData',
     "japan_only": false,
     "main_unit": "Aqours",
     "name": "Kunikida Hanamaru",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": true,
     "rarity": "SSR",
     "release_date": "2017-02-28",
@@ -3059,6 +2255,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 4800,
+      "display": 4800,
       "idlz": 5100
     },
     "sub_unit": "AZALEA",
@@ -3068,12 +2265,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Smile",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": null,
     "full_name": "SR Job v2 Ohara Mari",
     "id": 1142,
@@ -3081,12 +2272,6 @@ app.constant('CardData',
     "japan_only": false,
     "main_unit": "Aqours",
     "name": "Ohara Mari",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": true,
     "rarity": "SR",
     "release_date": "2017-02-28",
@@ -3101,6 +2286,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 4700,
+      "display": 4700,
       "idlz": 4980
     },
     "sub_unit": "Guilty Kiss",
@@ -3110,12 +2296,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Cool",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": null,
     "full_name": "SR Job v2 Watanabe You",
     "id": 1141,
@@ -3123,12 +2303,6 @@ app.constant('CardData',
     "japan_only": false,
     "main_unit": "Aqours",
     "name": "Watanabe You",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": true,
     "rarity": "SR",
     "release_date": "2017-02-28",
@@ -3143,6 +2317,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 4700,
+      "display": 4700,
       "idlz": 4980
     },
     "sub_unit": "CYaRon!",
@@ -3152,12 +2327,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Pure",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": null,
     "full_name": "SR Job v2 Takami Chika",
     "id": 1140,
@@ -3165,12 +2334,6 @@ app.constant('CardData',
     "japan_only": false,
     "main_unit": "Aqours",
     "name": "Takami Chika",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": true,
     "rarity": "SR",
     "release_date": "2017-02-28",
@@ -3185,6 +2348,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 4630,
+      "display": 4630,
       "idlz": 4910
     },
     "sub_unit": "CYaRon!",
@@ -3194,12 +2358,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Pure",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": null,
     "full_name": "SSR Flower Bouquet Ayase Eli",
     "id": 1138,
@@ -3207,12 +2365,6 @@ app.constant('CardData',
     "japan_only": true,
     "main_unit": "Muse",
     "name": "Ayase Eli",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": true,
     "rarity": "SSR",
     "release_date": "2017-02-25",
@@ -3227,6 +2379,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 4830,
+      "display": 4830,
       "idlz": 5130
     },
     "sub_unit": "Bibi",
@@ -3236,12 +2389,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Cool",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": null,
     "full_name": "SR Flower Bouquet Toujou Nozomi",
     "id": 1137,
@@ -3249,12 +2396,6 @@ app.constant('CardData',
     "japan_only": true,
     "main_unit": "Muse",
     "name": "Toujou Nozomi",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": true,
     "rarity": "SR",
     "release_date": "2017-02-25",
@@ -3269,6 +2410,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 4630,
+      "display": 4630,
       "idlz": 4910
     },
     "sub_unit": "Lily White",
@@ -3278,12 +2420,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Smile",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": true,
     "full_name": "SR Setsubun Yazawa Nico",
     "id": 1135,
@@ -3291,12 +2427,6 @@ app.constant('CardData',
     "japan_only": true,
     "main_unit": "Muse",
     "name": "Yazawa Nico",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": false,
     "rarity": "SR",
     "release_date": "2017-02-20",
@@ -3311,6 +2441,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 4490,
+      "display": 4490,
       "idlz": 4770
     },
     "sub_unit": "Bibi",
@@ -3320,12 +2451,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Cool",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": true,
     "full_name": "SR Setsubun Hoshizora Rin",
     "id": 1134,
@@ -3333,12 +2458,6 @@ app.constant('CardData',
     "japan_only": true,
     "main_unit": "Muse",
     "name": "Hoshizora Rin",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": false,
     "rarity": "SR",
     "release_date": "2017-02-20",
@@ -3353,6 +2472,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 4510,
+      "display": 4510,
       "idlz": 4790
     },
     "sub_unit": "Lily White",
@@ -3362,12 +2482,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Pure",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": null,
     "full_name": "UR Valentine's Ohara Mari",
     "id": 1132,
@@ -3375,12 +2489,6 @@ app.constant('CardData',
     "japan_only": false,
     "main_unit": "Aqours",
     "name": "Ohara Mari",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": true,
     "rarity": "UR",
     "release_date": "2017-02-15",
@@ -3395,6 +2503,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 5040,
+      "display": 5040,
       "idlz": 5340
     },
     "sub_unit": "Guilty Kiss",
@@ -3404,12 +2513,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Smile",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": null,
     "full_name": "SSR Valentine's Watanabe You",
     "id": 1131,
@@ -3417,12 +2520,6 @@ app.constant('CardData',
     "japan_only": false,
     "main_unit": "Aqours",
     "name": "Watanabe You",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": true,
     "rarity": "SSR",
     "release_date": "2017-02-15",
@@ -3437,6 +2534,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 4790,
+      "display": 4790,
       "idlz": 5090
     },
     "sub_unit": "CYaRon!",
@@ -3446,12 +2544,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Cool",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": null,
     "full_name": "SR Valentine's Kurosawa Ruby",
     "id": 1130,
@@ -3459,12 +2551,6 @@ app.constant('CardData',
     "japan_only": false,
     "main_unit": "Aqours",
     "name": "Kurosawa Ruby",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": true,
     "rarity": "SR",
     "release_date": "2017-02-15",
@@ -3479,6 +2565,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 4640,
+      "display": 4640,
       "idlz": 4920
     },
     "sub_unit": "CYaRon!",
@@ -3488,12 +2575,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Cool",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": null,
     "full_name": "SR Valentine's Kunikida Hanamaru",
     "id": 1129,
@@ -3501,12 +2582,6 @@ app.constant('CardData',
     "japan_only": false,
     "main_unit": "Aqours",
     "name": "Kunikida Hanamaru",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": true,
     "rarity": "SR",
     "release_date": "2017-02-15",
@@ -3521,6 +2596,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 4700,
+      "display": 4700,
       "idlz": 4980
     },
     "sub_unit": "AZALEA",
@@ -3530,12 +2606,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Cool",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": null,
     "full_name": "UR Flower Bouquet Sonoda Umi",
     "id": 1127,
@@ -3543,12 +2613,6 @@ app.constant('CardData',
     "japan_only": true,
     "main_unit": "Muse",
     "name": "Sonoda Umi",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": true,
     "rarity": "UR",
     "release_date": "2017-02-10",
@@ -3563,6 +2627,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 5020,
+      "display": 5020,
       "idlz": 5320
     },
     "sub_unit": "Lily White",
@@ -3572,12 +2637,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Smile",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": null,
     "full_name": "SR Flower Bouquet Koizumi Hanayo",
     "id": 1126,
@@ -3585,12 +2644,6 @@ app.constant('CardData',
     "japan_only": true,
     "main_unit": "Muse",
     "name": "Koizumi Hanayo",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": true,
     "rarity": "SR",
     "release_date": "2017-02-10",
@@ -3605,6 +2658,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 4610,
+      "display": 4610,
       "idlz": 4890
     },
     "sub_unit": "Printemps",
@@ -3614,12 +2668,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Pure",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": null,
     "full_name": "SR Flower Bouquet Minami Kotori",
     "id": 1125,
@@ -3627,12 +2675,6 @@ app.constant('CardData',
     "japan_only": true,
     "main_unit": "Muse",
     "name": "Minami Kotori",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": true,
     "rarity": "SR",
     "release_date": "2017-02-10",
@@ -3647,6 +2689,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 4650,
+      "display": 4650,
       "idlz": 4930
     },
     "sub_unit": "Printemps",
@@ -3656,12 +2699,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Pure",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": true,
     "full_name": "SR Fun in the Snow Kunikida Hanamaru",
     "id": 1124,
@@ -3669,12 +2706,6 @@ app.constant('CardData',
     "japan_only": true,
     "main_unit": "Aqours",
     "name": "Kunikida Hanamaru",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": false,
     "rarity": "SR",
     "release_date": "2017-02-05",
@@ -3689,6 +2720,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 4400,
+      "display": 4400,
       "idlz": 4680
     },
     "sub_unit": "AZALEA",
@@ -3698,12 +2730,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Cool",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": true,
     "full_name": "SR Fun in the Snow Matsuura Kanan",
     "id": 1123,
@@ -3711,12 +2737,6 @@ app.constant('CardData',
     "japan_only": true,
     "main_unit": "Aqours",
     "name": "Matsuura Kanan",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": false,
     "rarity": "SR",
     "release_date": "2017-02-05",
@@ -3731,6 +2751,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 4530,
+      "display": 4530,
       "idlz": 4810
     },
     "sub_unit": "AZALEA",
@@ -3740,12 +2761,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Smile",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": null,
     "full_name": "UR Valentine's Tsushima Yoshiko",
     "id": 1121,
@@ -3753,12 +2768,6 @@ app.constant('CardData',
     "japan_only": false,
     "main_unit": "Aqours",
     "name": "Tsushima Yoshiko",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": true,
     "rarity": "UR",
     "release_date": "2017-01-31",
@@ -3773,6 +2782,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 5060,
+      "display": 5060,
       "idlz": 5360
     },
     "sub_unit": "Guilty Kiss",
@@ -3782,12 +2792,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Pure",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": null,
     "full_name": "SSR Valentine's Takami Chika",
     "id": 1120,
@@ -3795,12 +2799,6 @@ app.constant('CardData',
     "japan_only": false,
     "main_unit": "Aqours",
     "name": "Takami Chika",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": true,
     "rarity": "SSR",
     "release_date": "2017-01-31",
@@ -3815,6 +2813,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 4880,
+      "display": 4880,
       "idlz": 5180
     },
     "sub_unit": "CYaRon!",
@@ -3824,12 +2823,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Smile",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": null,
     "full_name": "SR Valentine's Kurosawa Dia",
     "id": 1119,
@@ -3837,12 +2830,6 @@ app.constant('CardData',
     "japan_only": false,
     "main_unit": "Aqours",
     "name": "Kurosawa Dia",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": true,
     "rarity": "SR",
     "release_date": "2017-01-31",
@@ -3857,6 +2844,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 4680,
+      "display": 4680,
       "idlz": 4960
     },
     "sub_unit": "AZALEA",
@@ -3866,12 +2854,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Pure",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": null,
     "full_name": "SR Valentine's Matsuura Kanan",
     "id": 1118,
@@ -3879,12 +2861,6 @@ app.constant('CardData',
     "japan_only": false,
     "main_unit": "Aqours",
     "name": "Matsuura Kanan",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": true,
     "rarity": "SR",
     "release_date": "2017-01-31",
@@ -3899,6 +2875,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 4630,
+      "display": 4630,
       "idlz": 4910
     },
     "sub_unit": "AZALEA",
@@ -3908,12 +2885,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Cool",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": null,
     "full_name": "SR Valentine's Sakurauchi Riko",
     "id": 1117,
@@ -3921,12 +2892,6 @@ app.constant('CardData',
     "japan_only": false,
     "main_unit": "Aqours",
     "name": "Sakurauchi Riko",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": true,
     "rarity": "SR",
     "release_date": "2017-01-31",
@@ -3941,6 +2906,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 4630,
+      "display": 4630,
       "idlz": 4910
     },
     "sub_unit": "Guilty Kiss",
@@ -3950,12 +2916,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Smile",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": null,
     "full_name": "SSR Pajama Party Minami Kotori",
     "id": 1115,
@@ -3963,12 +2923,6 @@ app.constant('CardData',
     "japan_only": true,
     "main_unit": "Muse",
     "name": "Minami Kotori",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": true,
     "rarity": "SSR",
     "release_date": "2017-01-25",
@@ -3983,6 +2937,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 4790,
+      "display": 4790,
       "idlz": 5090
     },
     "sub_unit": "Printemps",
@@ -3992,12 +2947,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Cool",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": null,
     "full_name": "SR Pajama Party Kousaka Honoka",
     "id": 1114,
@@ -4005,12 +2954,6 @@ app.constant('CardData',
     "japan_only": true,
     "main_unit": "Muse",
     "name": "Kousaka Honoka",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": true,
     "rarity": "SR",
     "release_date": "2017-01-25",
@@ -4025,6 +2968,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 4690,
+      "display": 4690,
       "idlz": 4970
     },
     "sub_unit": "Printemps",
@@ -4034,12 +2978,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Cool",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": true,
     "full_name": "SR New Year's Food Koizumi Hanayo",
     "id": 1113,
@@ -4047,12 +2985,6 @@ app.constant('CardData',
     "japan_only": true,
     "main_unit": "Muse",
     "name": "Koizumi Hanayo",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": false,
     "rarity": "SR",
     "release_date": "2017-01-20",
@@ -4067,6 +2999,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 4540,
+      "display": 4540,
       "idlz": 4820
     },
     "sub_unit": "Printemps",
@@ -4076,12 +3009,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Pure",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": true,
     "full_name": "SR New Year's Food Ayase Eli",
     "id": 1112,
@@ -4089,12 +3016,6 @@ app.constant('CardData',
     "japan_only": true,
     "main_unit": "Muse",
     "name": "Ayase Eli",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": false,
     "rarity": "SR",
     "release_date": "2017-01-20",
@@ -4109,6 +3030,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 4490,
+      "display": 4490,
       "idlz": 4770
     },
     "sub_unit": "Bibi",
@@ -4118,12 +3040,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Smile",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": null,
     "full_name": "UR Haregi Kurosawa Ruby",
     "id": 1110,
@@ -4131,12 +3047,6 @@ app.constant('CardData',
     "japan_only": false,
     "main_unit": "Aqours",
     "name": "Kurosawa Ruby",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": true,
     "rarity": "UR",
     "release_date": "2017-01-15",
@@ -4151,6 +3061,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 5030,
+      "display": 5030,
       "idlz": 5330
     },
     "sub_unit": "CYaRon!",
@@ -4160,12 +3071,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Pure",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": null,
     "full_name": "SSR Haregi Sakurauchi Riko",
     "id": 1109,
@@ -4173,12 +3078,6 @@ app.constant('CardData',
     "japan_only": false,
     "main_unit": "Aqours",
     "name": "Sakurauchi Riko",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": true,
     "rarity": "SSR",
     "release_date": "2017-01-15",
@@ -4193,6 +3092,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 4870,
+      "display": 4870,
       "idlz": 5170
     },
     "sub_unit": "Guilty Kiss",
@@ -4202,12 +3102,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Cool",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": null,
     "full_name": "SR Haregi Tsushima Yoshiko",
     "id": 1108,
@@ -4215,12 +3109,6 @@ app.constant('CardData',
     "japan_only": false,
     "main_unit": "Aqours",
     "name": "Tsushima Yoshiko",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": true,
     "rarity": "SR",
     "release_date": "2017-01-15",
@@ -4235,6 +3123,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 4680,
+      "display": 4680,
       "idlz": 4960
     },
     "sub_unit": "Guilty Kiss",
@@ -4244,12 +3133,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Smile",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": null,
     "full_name": "SR Haregi Matsuura Kanan",
     "id": 1107,
@@ -4257,12 +3140,6 @@ app.constant('CardData',
     "japan_only": false,
     "main_unit": "Aqours",
     "name": "Matsuura Kanan",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": true,
     "rarity": "SR",
     "release_date": "2017-01-15",
@@ -4277,6 +3154,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 4630,
+      "display": 4630,
       "idlz": 4910
     },
     "sub_unit": "AZALEA",
@@ -4286,12 +3164,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Smile",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": null,
     "full_name": "UR Pajama Party Hoshizora Rin",
     "id": 1105,
@@ -4299,12 +3171,6 @@ app.constant('CardData',
     "japan_only": true,
     "main_unit": "Muse",
     "name": "Hoshizora Rin",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": true,
     "rarity": "UR",
     "release_date": "2017-01-10",
@@ -4319,6 +3185,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 5070,
+      "display": 5070,
       "idlz": 5370
     },
     "sub_unit": "Lily White",
@@ -4328,12 +3195,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Pure",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": null,
     "full_name": "SR Pajama Party Koizumi Hanayo",
     "id": 1104,
@@ -4341,12 +3202,6 @@ app.constant('CardData',
     "japan_only": true,
     "main_unit": "Muse",
     "name": "Koizumi Hanayo",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": true,
     "rarity": "SR",
     "release_date": "2017-01-10",
@@ -4361,6 +3216,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 4600,
+      "display": 4600,
       "idlz": 4880
     },
     "sub_unit": "Printemps",
@@ -4370,12 +3226,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Cool",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": true,
     "full_name": "SR New Year's Food Ohara Mari",
     "id": 1103,
@@ -4383,12 +3233,6 @@ app.constant('CardData',
     "japan_only": false,
     "main_unit": "Aqours",
     "name": "Ohara Mari",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": false,
     "rarity": "SR",
     "release_date": "2017-01-05",
@@ -4403,6 +3247,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 4480,
+      "display": 4480,
       "idlz": 4760
     },
     "sub_unit": "Guilty Kiss",
@@ -4412,12 +3257,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Smile",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": true,
     "full_name": "SR New Year's Food Tsushima Yoshiko",
     "id": 1102,
@@ -4425,12 +3264,6 @@ app.constant('CardData',
     "japan_only": false,
     "main_unit": "Aqours",
     "name": "Tsushima Yoshiko",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": false,
     "rarity": "SR",
     "release_date": "2017-01-05",
@@ -4445,6 +3278,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 4540,
+      "display": 4540,
       "idlz": 4820
     },
     "sub_unit": "Guilty Kiss",
@@ -4454,12 +3288,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Pure",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": null,
     "full_name": "UR Haregi Kurosawa Dia",
     "id": 1100,
@@ -4467,12 +3295,6 @@ app.constant('CardData',
     "japan_only": false,
     "main_unit": "Aqours",
     "name": "Kurosawa Dia",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": true,
     "rarity": "UR",
     "release_date": "2016-12-31",
@@ -4487,6 +3309,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 5070,
+      "display": 5070,
       "idlz": 5370
     },
     "sub_unit": "AZALEA",
@@ -4496,12 +3319,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Cool",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": null,
     "full_name": "SSR Haregi Ohara Mari",
     "id": 1099,
@@ -4509,12 +3326,6 @@ app.constant('CardData',
     "japan_only": false,
     "main_unit": "Aqours",
     "name": "Ohara Mari",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": true,
     "rarity": "SSR",
     "release_date": "2016-12-31",
@@ -4529,6 +3340,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 4800,
+      "display": 4800,
       "idlz": 5100
     },
     "sub_unit": "Guilty Kiss",
@@ -4538,12 +3350,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Smile",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": null,
     "full_name": "SR Haregi Kunikida Hanamaru",
     "id": 1098,
@@ -4551,12 +3357,6 @@ app.constant('CardData',
     "japan_only": false,
     "main_unit": "Aqours",
     "name": "Kunikida Hanamaru",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": true,
     "rarity": "SR",
     "release_date": "2016-12-31",
@@ -4571,6 +3371,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 4670,
+      "display": 4670,
       "idlz": 4950
     },
     "sub_unit": "AZALEA",
@@ -4580,12 +3381,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Pure",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": null,
     "full_name": "SR Haregi Watanabe You",
     "id": 1097,
@@ -4593,12 +3388,6 @@ app.constant('CardData',
     "japan_only": false,
     "main_unit": "Aqours",
     "name": "Watanabe You",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": true,
     "rarity": "SR",
     "release_date": "2016-12-31",
@@ -4613,6 +3402,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 4630,
+      "display": 4630,
       "idlz": 4910
     },
     "sub_unit": "CYaRon!",
@@ -4622,12 +3412,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Cool",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": null,
     "full_name": "SR Haregi Takami Chika",
     "id": 1096,
@@ -4635,12 +3419,6 @@ app.constant('CardData',
     "japan_only": false,
     "main_unit": "Aqours",
     "name": "Takami Chika",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": true,
     "rarity": "SR",
     "release_date": "2016-12-31",
@@ -4655,6 +3433,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 4700,
+      "display": 4700,
       "idlz": 4980
     },
     "sub_unit": "CYaRon!",
@@ -4664,12 +3443,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Pure",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": null,
     "full_name": "SSR Pajama Party Sonoda Umi",
     "id": 1085,
@@ -4677,12 +3450,6 @@ app.constant('CardData',
     "japan_only": true,
     "main_unit": "Muse",
     "name": "Sonoda Umi",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": true,
     "rarity": "SSR",
     "release_date": "2016-12-24",
@@ -4697,6 +3464,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 4790,
+      "display": 4790,
       "idlz": 5090
     },
     "sub_unit": "Lily White",
@@ -4706,12 +3474,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Cool",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": null,
     "full_name": "SR Pajama Party Yazawa Nico",
     "id": 1084,
@@ -4719,12 +3481,6 @@ app.constant('CardData',
     "japan_only": true,
     "main_unit": "Muse",
     "name": "Yazawa Nico",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": true,
     "rarity": "SR",
     "release_date": "2016-12-24",
@@ -4739,6 +3495,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 4680,
+      "display": 4680,
       "idlz": 4960
     },
     "sub_unit": "Bibi",
@@ -4748,12 +3505,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Pure",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": null,
     "full_name": "UR Promo Watanabe You",
     "id": 1082,
@@ -4761,12 +3512,6 @@ app.constant('CardData',
     "japan_only": false,
     "main_unit": "Aqours",
     "name": "Watanabe You",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": false,
     "rarity": "UR",
     "release_date": "2016-12-20",
@@ -4781,6 +3526,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 4360,
+      "display": 4360,
       "idlz": 4360
     },
     "sub_unit": "CYaRon!",
@@ -4790,12 +3536,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Cool",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": true,
     "full_name": "SR Santa Sonoda Umi",
     "id": 1081,
@@ -4803,12 +3543,6 @@ app.constant('CardData',
     "japan_only": true,
     "main_unit": "Muse",
     "name": "Sonoda Umi",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": false,
     "rarity": "SR",
     "release_date": "2016-12-20",
@@ -4823,6 +3557,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 4490,
+      "display": 4490,
       "idlz": 4770
     },
     "sub_unit": "Lily White",
@@ -4832,12 +3567,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Pure",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": true,
     "full_name": "SR Santa Kousaka Honoka",
     "id": 1080,
@@ -4845,12 +3574,6 @@ app.constant('CardData',
     "japan_only": true,
     "main_unit": "Muse",
     "name": "Kousaka Honoka",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": false,
     "rarity": "SR",
     "release_date": "2016-12-20",
@@ -4865,6 +3588,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 4530,
+      "display": 4530,
       "idlz": 4810
     },
     "sub_unit": "Printemps",
@@ -4874,12 +3598,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Pure",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": null,
     "full_name": "UR Christmas Kunikida Hanamaru",
     "id": 1078,
@@ -4887,12 +3605,6 @@ app.constant('CardData',
     "japan_only": false,
     "main_unit": "Aqours",
     "name": "Kunikida Hanamaru",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": true,
     "rarity": "UR",
     "release_date": "2016-12-14",
@@ -4907,6 +3619,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 5020,
+      "display": 5020,
       "idlz": 5320
     },
     "sub_unit": "AZALEA",
@@ -4916,12 +3629,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Smile",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": null,
     "full_name": "SSR Christmas Tsushima Yoshiko",
     "id": 1077,
@@ -4929,12 +3636,6 @@ app.constant('CardData',
     "japan_only": false,
     "main_unit": "Aqours",
     "name": "Tsushima Yoshiko",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": true,
     "rarity": "SSR",
     "release_date": "2016-12-14",
@@ -4949,6 +3650,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 4790,
+      "display": 4790,
       "idlz": 5090
     },
     "sub_unit": "Guilty Kiss",
@@ -4958,12 +3660,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Pure",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": null,
     "full_name": "SR Christmas Kurosawa Ruby",
     "id": 1076,
@@ -4971,12 +3667,6 @@ app.constant('CardData',
     "japan_only": false,
     "main_unit": "Aqours",
     "name": "Kurosawa Ruby",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": true,
     "rarity": "SR",
     "release_date": "2016-12-14",
@@ -4991,6 +3681,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 4690,
+      "display": 4690,
       "idlz": 4970
     },
     "sub_unit": "CYaRon!",
@@ -5000,12 +3691,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Cool",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": null,
     "full_name": "SR Christmas Kurosawa Dia",
     "id": 1075,
@@ -5013,12 +3698,6 @@ app.constant('CardData',
     "japan_only": false,
     "main_unit": "Aqours",
     "name": "Kurosawa Dia",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": true,
     "rarity": "SR",
     "release_date": "2016-12-14",
@@ -5033,6 +3712,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 4630,
+      "display": 4630,
       "idlz": 4910
     },
     "sub_unit": "AZALEA",
@@ -5042,12 +3722,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Cool",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": null,
     "full_name": "UR Pajama Party Nishikino Maki",
     "id": 1073,
@@ -5055,12 +3729,6 @@ app.constant('CardData',
     "japan_only": true,
     "main_unit": "Muse",
     "name": "Nishikino Maki",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": true,
     "rarity": "UR",
     "release_date": "2016-12-09",
@@ -5075,6 +3743,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 5010,
+      "display": 5010,
       "idlz": 5310
     },
     "sub_unit": "Bibi",
@@ -5084,12 +3753,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Pure",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": null,
     "full_name": "SR Pajama Party Toujou Nozomi",
     "id": 1072,
@@ -5097,12 +3760,6 @@ app.constant('CardData',
     "japan_only": true,
     "main_unit": "Muse",
     "name": "Toujou Nozomi",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": true,
     "rarity": "SR",
     "release_date": "2016-12-09",
@@ -5117,6 +3774,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 4700,
+      "display": 4700,
       "idlz": 4980
     },
     "sub_unit": "Lily White",
@@ -5126,12 +3784,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Smile",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": null,
     "full_name": "SR Pajama Party Ayase Eli",
     "id": 1071,
@@ -5139,12 +3791,6 @@ app.constant('CardData',
     "japan_only": true,
     "main_unit": "Muse",
     "name": "Ayase Eli",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": true,
     "rarity": "SR",
     "release_date": "2016-12-09",
@@ -5159,6 +3805,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 4630,
+      "display": 4630,
       "idlz": 4910
     },
     "sub_unit": "Bibi",
@@ -5168,12 +3815,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Pure",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": true,
     "full_name": "SR Skating Kurosawa Dia",
     "id": 1069,
@@ -5181,12 +3822,6 @@ app.constant('CardData',
     "japan_only": false,
     "main_unit": "Aqours",
     "name": "Kurosawa Dia",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": false,
     "rarity": "SR",
     "release_date": "2016-12-05",
@@ -5201,6 +3836,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 4490,
+      "display": 4490,
       "idlz": 4770
     },
     "sub_unit": "AZALEA",
@@ -5210,12 +3846,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Smile",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": true,
     "full_name": "SR Skating Sakurauchi Riko",
     "id": 1068,
@@ -5223,12 +3853,6 @@ app.constant('CardData',
     "japan_only": false,
     "main_unit": "Aqours",
     "name": "Sakurauchi Riko",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": false,
     "rarity": "SR",
     "release_date": "2016-12-05",
@@ -5243,6 +3867,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 4540,
+      "display": 4540,
       "idlz": 4820
     },
     "sub_unit": "Guilty Kiss",
@@ -5252,12 +3877,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Cool",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": null,
     "full_name": "UR Christmas Watanabe You",
     "id": 1066,
@@ -5265,12 +3884,6 @@ app.constant('CardData',
     "japan_only": false,
     "main_unit": "Aqours",
     "name": "Watanabe You",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": true,
     "rarity": "UR",
     "release_date": "2016-11-29",
@@ -5285,6 +3898,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 5030,
+      "display": 5030,
       "idlz": 5330
     },
     "sub_unit": "CYaRon!",
@@ -5294,12 +3908,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Smile",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": null,
     "full_name": "SSR Christmas Matsuura Kanan",
     "id": 1065,
@@ -5307,12 +3915,6 @@ app.constant('CardData',
     "japan_only": false,
     "main_unit": "Aqours",
     "name": "Matsuura Kanan",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": true,
     "rarity": "SSR",
     "release_date": "2016-11-29",
@@ -5327,6 +3929,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 4820,
+      "display": 4820,
       "idlz": 5120
     },
     "sub_unit": "AZALEA",
@@ -5336,12 +3939,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Cool",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": null,
     "full_name": "SR Christmas Ohara Mari",
     "id": 1064,
@@ -5349,12 +3946,6 @@ app.constant('CardData',
     "japan_only": false,
     "main_unit": "Aqours",
     "name": "Ohara Mari",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": true,
     "rarity": "SR",
     "release_date": "2016-11-29",
@@ -5369,6 +3960,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 4700,
+      "display": 4700,
       "idlz": 4980
     },
     "sub_unit": "Guilty Kiss",
@@ -5378,12 +3970,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Pure",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": null,
     "full_name": "SR Christmas Sakurauchi Riko",
     "id": 1063,
@@ -5391,12 +3977,6 @@ app.constant('CardData',
     "japan_only": false,
     "main_unit": "Aqours",
     "name": "Sakurauchi Riko",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": true,
     "rarity": "SR",
     "release_date": "2016-11-29",
@@ -5411,6 +3991,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 4690,
+      "display": 4690,
       "idlz": 4970
     },
     "sub_unit": "Guilty Kiss",
@@ -5420,12 +4001,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Smile",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": null,
     "full_name": "SR Christmas Takami Chika",
     "id": 1062,
@@ -5433,12 +4008,6 @@ app.constant('CardData',
     "japan_only": false,
     "main_unit": "Aqours",
     "name": "Takami Chika",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": true,
     "rarity": "SR",
     "release_date": "2016-11-29",
@@ -5453,6 +4022,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 4610,
+      "display": 4610,
       "idlz": 4890
     },
     "sub_unit": "CYaRon!",
@@ -5462,12 +4032,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Cool",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": null,
     "full_name": "SSR Birthstone Kousaka Honoka",
     "id": 1060,
@@ -5475,12 +4039,6 @@ app.constant('CardData',
     "japan_only": false,
     "main_unit": "Muse",
     "name": "Kousaka Honoka",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": true,
     "rarity": "SSR",
     "release_date": "2016-11-24",
@@ -5495,6 +4053,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 4800,
+      "display": 4800,
       "idlz": 5100
     },
     "sub_unit": "Printemps",
@@ -5504,12 +4063,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Pure",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": null,
     "full_name": "SR Birthstone Nishikino Maki",
     "id": 1059,
@@ -5517,12 +4070,6 @@ app.constant('CardData',
     "japan_only": false,
     "main_unit": "Muse",
     "name": "Nishikino Maki",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": true,
     "rarity": "SR",
     "release_date": "2016-11-24",
@@ -5537,6 +4084,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 4680,
+      "display": 4680,
       "idlz": 4960
     },
     "sub_unit": "Bibi",
@@ -5546,12 +4094,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Smile",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": true,
     "full_name": "SR World Travel Nishikino Maki",
     "id": 1058,
@@ -5559,12 +4101,6 @@ app.constant('CardData',
     "japan_only": true,
     "main_unit": "Muse",
     "name": "Nishikino Maki",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": false,
     "rarity": "SR",
     "release_date": "2016-11-20",
@@ -5579,6 +4115,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 4480,
+      "display": 4480,
       "idlz": 4760
     },
     "sub_unit": "Bibi",
@@ -5588,12 +4125,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Pure",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": true,
     "full_name": "SR World Travel Minami Kotori",
     "id": 1057,
@@ -5601,12 +4132,6 @@ app.constant('CardData',
     "japan_only": true,
     "main_unit": "Muse",
     "name": "Minami Kotori",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": false,
     "rarity": "SR",
     "release_date": "2016-11-20",
@@ -5621,6 +4146,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 4540,
+      "display": 4540,
       "idlz": 4820
     },
     "sub_unit": "Printemps",
@@ -5630,12 +4156,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Smile",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": null,
     "full_name": "UR Promo Yazawa Nico",
     "id": 1055,
@@ -5643,12 +4163,6 @@ app.constant('CardData',
     "japan_only": false,
     "main_unit": "Muse",
     "name": "Yazawa Nico",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": false,
     "rarity": "UR",
     "release_date": "2016-11-14",
@@ -5663,6 +4177,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 4360,
+      "display": 4360,
       "idlz": 4360
     },
     "sub_unit": "Bibi",
@@ -5672,12 +4187,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Cool",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": null,
     "full_name": "UR Cheer Girl Takami Chika",
     "id": 1053,
@@ -5685,12 +4194,6 @@ app.constant('CardData',
     "japan_only": false,
     "main_unit": "Aqours",
     "name": "Takami Chika",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": true,
     "rarity": "UR",
     "release_date": "2016-11-14",
@@ -5705,6 +4208,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 5030,
+      "display": 5030,
       "idlz": 5330
     },
     "sub_unit": "CYaRon!",
@@ -5714,12 +4218,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Pure",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": null,
     "full_name": "SSR Cheer Girl Ohara Mari",
     "id": 1052,
@@ -5727,12 +4225,6 @@ app.constant('CardData',
     "japan_only": false,
     "main_unit": "Aqours",
     "name": "Ohara Mari",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": true,
     "rarity": "SSR",
     "release_date": "2016-11-14",
@@ -5747,6 +4239,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 4790,
+      "display": 4790,
       "idlz": 5090
     },
     "sub_unit": "Guilty Kiss",
@@ -5756,12 +4249,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Smile",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": null,
     "full_name": "SR Cheer Girl Watanabe You",
     "id": 1051,
@@ -5769,12 +4256,6 @@ app.constant('CardData',
     "japan_only": false,
     "main_unit": "Aqours",
     "name": "Watanabe You",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": true,
     "rarity": "SR",
     "release_date": "2016-11-14",
@@ -5789,6 +4270,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 4590,
+      "display": 4590,
       "idlz": 4870
     },
     "sub_unit": "CYaRon!",
@@ -5798,12 +4280,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Pure",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": null,
     "full_name": "SR Cheer Girl Kurosawa Dia",
     "id": 1050,
@@ -5811,12 +4287,6 @@ app.constant('CardData',
     "japan_only": false,
     "main_unit": "Aqours",
     "name": "Kurosawa Dia",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": true,
     "rarity": "SR",
     "release_date": "2016-11-14",
@@ -5831,6 +4301,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 4690,
+      "display": 4690,
       "idlz": 4970
     },
     "sub_unit": "AZALEA",
@@ -5840,12 +4311,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Pure",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": null,
     "full_name": "UR Birthstone Toujou Nozomi",
     "id": 1046,
@@ -5853,12 +4318,6 @@ app.constant('CardData',
     "japan_only": false,
     "main_unit": "Muse",
     "name": "Toujou Nozomi",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": true,
     "rarity": "UR",
     "release_date": "2016-11-09",
@@ -5873,6 +4332,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 5010,
+      "display": 5010,
       "idlz": 5310
     },
     "sub_unit": "Lily White",
@@ -5882,12 +4342,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Smile",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": null,
     "full_name": "SR Birthstone Minami Kotori",
     "id": 1045,
@@ -5895,12 +4349,6 @@ app.constant('CardData',
     "japan_only": false,
     "main_unit": "Muse",
     "name": "Minami Kotori",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": true,
     "rarity": "SR",
     "release_date": "2016-11-09",
@@ -5915,6 +4363,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 4700,
+      "display": 4700,
       "idlz": 4980
     },
     "sub_unit": "Printemps",
@@ -5924,12 +4373,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Cool",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": true,
     "full_name": "SR Helper Watanabe You",
     "id": 1044,
@@ -5937,12 +4380,6 @@ app.constant('CardData',
     "japan_only": false,
     "main_unit": "Aqours",
     "name": "Watanabe You",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": false,
     "rarity": "SR",
     "release_date": "2016-11-05",
@@ -5957,6 +4394,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 4490,
+      "display": 4490,
       "idlz": 4770
     },
     "sub_unit": "CYaRon!",
@@ -5966,12 +4404,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Pure",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": true,
     "full_name": "SR Helper Takami Chika",
     "id": 1043,
@@ -5979,12 +4411,6 @@ app.constant('CardData',
     "japan_only": false,
     "main_unit": "Aqours",
     "name": "Takami Chika",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": false,
     "rarity": "SR",
     "release_date": "2016-11-05",
@@ -5999,6 +4425,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 4540,
+      "display": 4540,
       "idlz": 4820
     },
     "sub_unit": "CYaRon!",
@@ -6008,12 +4435,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Smile",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": null,
     "full_name": "UR Cheer Girl Sakurauchi Riko",
     "id": 1041,
@@ -6021,12 +4442,6 @@ app.constant('CardData',
     "japan_only": false,
     "main_unit": "Aqours",
     "name": "Sakurauchi Riko",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": true,
     "rarity": "UR",
     "release_date": "2016-10-31",
@@ -6041,6 +4456,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 5020,
+      "display": 5020,
       "idlz": 5320
     },
     "sub_unit": "Guilty Kiss",
@@ -6050,12 +4466,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Cool",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": null,
     "full_name": "SSR Cheer Girl Kunikida Hanamaru",
     "id": 1040,
@@ -6063,12 +4473,6 @@ app.constant('CardData',
     "japan_only": false,
     "main_unit": "Aqours",
     "name": "Kunikida Hanamaru",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": true,
     "rarity": "SSR",
     "release_date": "2016-10-31",
@@ -6083,6 +4487,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 4790,
+      "display": 4790,
       "idlz": 5090
     },
     "sub_unit": "AZALEA",
@@ -6092,12 +4497,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Smile",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": null,
     "full_name": "SR Cheer Girl Kurosawa Ruby",
     "id": 1039,
@@ -6105,12 +4504,6 @@ app.constant('CardData',
     "japan_only": false,
     "main_unit": "Aqours",
     "name": "Kurosawa Ruby",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": true,
     "rarity": "SR",
     "release_date": "2016-10-31",
@@ -6125,6 +4518,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 4700,
+      "display": 4700,
       "idlz": 4980
     },
     "sub_unit": "CYaRon!",
@@ -6134,12 +4528,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Pure",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": null,
     "full_name": "SR Cheer Girl Tsushima Yoshiko",
     "id": 1038,
@@ -6147,12 +4535,6 @@ app.constant('CardData',
     "japan_only": false,
     "main_unit": "Aqours",
     "name": "Tsushima Yoshiko",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": true,
     "rarity": "SR",
     "release_date": "2016-10-31",
@@ -6167,6 +4549,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 4680,
+      "display": 4680,
       "idlz": 4960
     },
     "sub_unit": "Guilty Kiss",
@@ -6176,12 +4559,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Cool",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": null,
     "full_name": "SR Cheer Girl Matsuura Kanan",
     "id": 1037,
@@ -6189,12 +4566,6 @@ app.constant('CardData',
     "japan_only": false,
     "main_unit": "Aqours",
     "name": "Matsuura Kanan",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": true,
     "rarity": "SR",
     "release_date": "2016-10-31",
@@ -6209,6 +4580,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 4620,
+      "display": 4620,
       "idlz": 4900
     },
     "sub_unit": "AZALEA",
@@ -6218,12 +4590,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Smile",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": null,
     "full_name": "SSR Birthstone Koizumi Hanayo",
     "id": 1035,
@@ -6231,12 +4597,6 @@ app.constant('CardData',
     "japan_only": false,
     "main_unit": "Muse",
     "name": "Koizumi Hanayo",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": true,
     "rarity": "SSR",
     "release_date": "2016-10-25",
@@ -6251,6 +4611,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 4800,
+      "display": 4800,
       "idlz": 5100
     },
     "sub_unit": "Printemps",
@@ -6260,12 +4621,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Cool",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": null,
     "full_name": "SR Birthstone Hoshizora Rin",
     "id": 1034,
@@ -6273,12 +4628,6 @@ app.constant('CardData',
     "japan_only": false,
     "main_unit": "Muse",
     "name": "Hoshizora Rin",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": true,
     "rarity": "SR",
     "release_date": "2016-10-25",
@@ -6293,6 +4642,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 4660,
+      "display": 4660,
       "idlz": 4940
     },
     "sub_unit": "Lily White",
@@ -6302,12 +4652,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Smile",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": true,
     "full_name": "SR Rock Toujou Nozomi",
     "id": 1033,
@@ -6315,12 +4659,6 @@ app.constant('CardData',
     "japan_only": true,
     "main_unit": "Muse",
     "name": "Toujou Nozomi",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": false,
     "rarity": "SR",
     "release_date": "2016-10-20",
@@ -6335,6 +4673,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 4540,
+      "display": 4540,
       "idlz": 4820
     },
     "sub_unit": "Lily White",
@@ -6344,12 +4683,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Pure",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": true,
     "full_name": "SR Rock Hoshizora Rin",
     "id": 1032,
@@ -6357,12 +4690,6 @@ app.constant('CardData',
     "japan_only": true,
     "main_unit": "Muse",
     "name": "Hoshizora Rin",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": false,
     "rarity": "SR",
     "release_date": "2016-10-20",
@@ -6377,6 +4704,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 4480,
+      "display": 4480,
       "idlz": 4760
     },
     "sub_unit": "Lily White",
@@ -6386,12 +4714,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Cool",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": null,
     "full_name": "UR Halloween Kurosawa Dia",
     "id": 1030,
@@ -6399,12 +4721,6 @@ app.constant('CardData',
     "japan_only": false,
     "main_unit": "Aqours",
     "name": "Kurosawa Dia",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": true,
     "rarity": "UR",
     "release_date": "2016-10-15",
@@ -6419,6 +4735,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 5020,
+      "display": 5020,
       "idlz": 5320
     },
     "sub_unit": "AZALEA",
@@ -6428,12 +4745,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Cool",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": null,
     "full_name": "SSR Halloween Takami Chika",
     "id": 1029,
@@ -6441,12 +4752,6 @@ app.constant('CardData',
     "japan_only": false,
     "main_unit": "Aqours",
     "name": "Takami Chika",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": true,
     "rarity": "SSR",
     "release_date": "2016-10-15",
@@ -6461,6 +4766,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 4790,
+      "display": 4790,
       "idlz": 5090
     },
     "sub_unit": "CYaRon!",
@@ -6470,12 +4776,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Pure",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": null,
     "full_name": "SR Halloween Kunikida Hanamaru",
     "id": 1028,
@@ -6483,12 +4783,6 @@ app.constant('CardData',
     "japan_only": false,
     "main_unit": "Aqours",
     "name": "Kunikida Hanamaru",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": true,
     "rarity": "SR",
     "release_date": "2016-10-15",
@@ -6503,6 +4797,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 4690,
+      "display": 4690,
       "idlz": 4970
     },
     "sub_unit": "AZALEA",
@@ -6512,12 +4807,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Smile",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": null,
     "full_name": "SR Halloween Watanabe You",
     "id": 1027,
@@ -6525,12 +4814,6 @@ app.constant('CardData',
     "japan_only": false,
     "main_unit": "Aqours",
     "name": "Watanabe You",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": true,
     "rarity": "SR",
     "release_date": "2016-10-15",
@@ -6545,6 +4828,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 4670,
+      "display": 4670,
       "idlz": 4950
     },
     "sub_unit": "CYaRon!",
@@ -6554,12 +4838,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Cool",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": null,
     "full_name": "UR Birthstone Ayase Eli",
     "id": 1025,
@@ -6567,12 +4845,6 @@ app.constant('CardData',
     "japan_only": false,
     "main_unit": "Muse",
     "name": "Ayase Eli",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": true,
     "rarity": "UR",
     "release_date": "2016-10-10",
@@ -6587,6 +4859,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 5030,
+      "display": 5030,
       "idlz": 5330
     },
     "sub_unit": "Bibi",
@@ -6596,12 +4869,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Smile",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": null,
     "full_name": "SR Birthstone Yazawa Nico",
     "id": 1024,
@@ -6609,12 +4876,6 @@ app.constant('CardData',
     "japan_only": false,
     "main_unit": "Muse",
     "name": "Yazawa Nico",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": true,
     "rarity": "SR",
     "release_date": "2016-10-10",
@@ -6629,6 +4890,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 4640,
+      "display": 4640,
       "idlz": 4920
     },
     "sub_unit": "Bibi",
@@ -6638,12 +4900,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Pure",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": null,
     "full_name": "SR Birthstone Sonoda Umi",
     "id": 1023,
@@ -6651,12 +4907,6 @@ app.constant('CardData',
     "japan_only": false,
     "main_unit": "Muse",
     "name": "Sonoda Umi",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": true,
     "rarity": "SR",
     "release_date": "2016-10-10",
@@ -6671,6 +4921,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 4700,
+      "display": 4700,
       "idlz": 4980
     },
     "sub_unit": "Lily White",
@@ -6680,12 +4931,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Smile",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": true,
     "full_name": "SR Gothic Dress Kurosawa Ruby",
     "id": 1021,
@@ -6693,12 +4938,6 @@ app.constant('CardData',
     "japan_only": false,
     "main_unit": "Aqours",
     "name": "Kurosawa Ruby",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": false,
     "rarity": "SR",
     "release_date": "2016-10-05",
@@ -6713,6 +4952,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 4400,
+      "display": 4400,
       "idlz": 4680
     },
     "sub_unit": "CYaRon!",
@@ -6722,12 +4962,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Cool",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": true,
     "full_name": "SR Gothic Dress Tsushima Yoshiko",
     "id": 1020,
@@ -6735,12 +4969,6 @@ app.constant('CardData',
     "japan_only": false,
     "main_unit": "Aqours",
     "name": "Tsushima Yoshiko",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": false,
     "rarity": "SR",
     "release_date": "2016-10-05",
@@ -6755,6 +4983,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 4540,
+      "display": 4540,
       "idlz": 4820
     },
     "sub_unit": "Guilty Kiss",
@@ -6764,12 +4993,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Cool",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": null,
     "full_name": "UR Halloween Tsushima Yoshiko",
     "id": 1018,
@@ -6777,12 +5000,6 @@ app.constant('CardData',
     "japan_only": false,
     "main_unit": "Aqours",
     "name": "Tsushima Yoshiko",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": true,
     "rarity": "UR",
     "release_date": "2016-09-30",
@@ -6797,6 +5014,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 5030,
+      "display": 5030,
       "idlz": 5330
     },
     "sub_unit": "Guilty Kiss",
@@ -6806,12 +5024,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Smile",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": null,
     "full_name": "SSR Halloween Kurosawa Ruby",
     "id": 1017,
@@ -6819,12 +5031,6 @@ app.constant('CardData',
     "japan_only": false,
     "main_unit": "Aqours",
     "name": "Kurosawa Ruby",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": true,
     "rarity": "SSR",
     "release_date": "2016-09-30",
@@ -6839,6 +5045,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 4790,
+      "display": 4790,
       "idlz": 5090
     },
     "sub_unit": "CYaRon!",
@@ -6848,12 +5055,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Pure",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": null,
     "full_name": "SR Halloween Ohara Mari",
     "id": 1016,
@@ -6861,12 +5062,6 @@ app.constant('CardData',
     "japan_only": false,
     "main_unit": "Aqours",
     "name": "Ohara Mari",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": true,
     "rarity": "SR",
     "release_date": "2016-09-30",
@@ -6881,6 +5076,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 4670,
+      "display": 4670,
       "idlz": 4950
     },
     "sub_unit": "Guilty Kiss",
@@ -6890,12 +5086,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Smile",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": null,
     "full_name": "SR Halloween Matsuura Kanan",
     "id": 1015,
@@ -6903,12 +5093,6 @@ app.constant('CardData',
     "japan_only": false,
     "main_unit": "Aqours",
     "name": "Matsuura Kanan",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": true,
     "rarity": "SR",
     "release_date": "2016-09-30",
@@ -6923,6 +5107,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 4690,
+      "display": 4690,
       "idlz": 4970
     },
     "sub_unit": "AZALEA",
@@ -6932,12 +5117,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Pure",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": null,
     "full_name": "SR Halloween Sakurauchi Riko",
     "id": 1014,
@@ -6945,12 +5124,6 @@ app.constant('CardData',
     "japan_only": false,
     "main_unit": "Aqours",
     "name": "Sakurauchi Riko",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": true,
     "rarity": "SR",
     "release_date": "2016-09-30",
@@ -6965,6 +5138,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 4600,
+      "display": 4600,
       "idlz": 4880
     },
     "sub_unit": "Guilty Kiss",
@@ -6974,12 +5148,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Pure",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": null,
     "full_name": "SSR Pool v2 Nishikino Maki",
     "id": 1012,
@@ -6987,12 +5155,6 @@ app.constant('CardData',
     "japan_only": false,
     "main_unit": "Muse",
     "name": "Nishikino Maki",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": true,
     "rarity": "SSR",
     "release_date": "2016-09-25",
@@ -7007,6 +5169,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 4800,
+      "display": 4800,
       "idlz": 5100
     },
     "sub_unit": "Bibi",
@@ -7016,12 +5179,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Cool",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": null,
     "full_name": "SR Pool v2 Koizumi Hanayo",
     "id": 1011,
@@ -7029,12 +5186,6 @@ app.constant('CardData',
     "japan_only": false,
     "main_unit": "Muse",
     "name": "Koizumi Hanayo",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": true,
     "rarity": "SR",
     "release_date": "2016-09-25",
@@ -7049,6 +5200,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 4670,
+      "display": 4670,
       "idlz": 4950
     },
     "sub_unit": "Printemps",
@@ -7058,12 +5210,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Pure",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": true,
     "full_name": "SR Moon Viewing Yazawa Nico",
     "id": 1010,
@@ -7071,12 +5217,6 @@ app.constant('CardData',
     "japan_only": true,
     "main_unit": "Muse",
     "name": "Yazawa Nico",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": false,
     "rarity": "SR",
     "release_date": "2016-09-20",
@@ -7091,6 +5231,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 4540,
+      "display": 4540,
       "idlz": 4820
     },
     "sub_unit": "Bibi",
@@ -7100,12 +5241,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Smile",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": true,
     "full_name": "SR Moon Viewing Kousaka Honoka",
     "id": 1009,
@@ -7113,12 +5248,6 @@ app.constant('CardData',
     "japan_only": true,
     "main_unit": "Muse",
     "name": "Kousaka Honoka",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": false,
     "rarity": "SR",
     "release_date": "2016-09-20",
@@ -7133,6 +5262,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 4480,
+      "display": 4480,
       "idlz": 4760
     },
     "sub_unit": "Printemps",
@@ -7142,12 +5272,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Pure",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": null,
     "full_name": "UR Yukata Matsuura Kanan",
     "id": 1007,
@@ -7155,12 +5279,6 @@ app.constant('CardData',
     "japan_only": false,
     "main_unit": "Aqours",
     "name": "Matsuura Kanan",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": true,
     "rarity": "UR",
     "release_date": "2016-09-15",
@@ -7175,6 +5293,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 5080,
+      "display": 5080,
       "idlz": 5380
     },
     "sub_unit": "AZALEA",
@@ -7184,12 +5303,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Smile",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": null,
     "full_name": "SSR Yukata Sakurauchi Riko",
     "id": 1006,
@@ -7197,12 +5310,6 @@ app.constant('CardData',
     "japan_only": false,
     "main_unit": "Aqours",
     "name": "Sakurauchi Riko",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": true,
     "rarity": "SSR",
     "release_date": "2016-09-15",
@@ -7217,6 +5324,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 4840,
+      "display": 4840,
       "idlz": 5140
     },
     "sub_unit": "Guilty Kiss",
@@ -7226,12 +5334,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Cool",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": null,
     "full_name": "SR Yukata Kunikida Hanamaru",
     "id": 1005,
@@ -7239,12 +5341,6 @@ app.constant('CardData',
     "japan_only": false,
     "main_unit": "Aqours",
     "name": "Kunikida Hanamaru",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": true,
     "rarity": "SR",
     "release_date": "2016-09-15",
@@ -7259,6 +5355,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 4640,
+      "display": 4640,
       "idlz": 4920
     },
     "sub_unit": "AZALEA",
@@ -7268,12 +5365,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Cool",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": null,
     "full_name": "SR Yukata Watanabe You",
     "id": 1004,
@@ -7281,12 +5372,6 @@ app.constant('CardData',
     "japan_only": false,
     "main_unit": "Aqours",
     "name": "Watanabe You",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": true,
     "rarity": "SR",
     "release_date": "2016-09-15",
@@ -7301,6 +5386,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 4700,
+      "display": 4700,
       "idlz": 4980
     },
     "sub_unit": "CYaRon!",
@@ -7310,12 +5396,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Pure",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": null,
     "full_name": "UR Pool v2 Minami Kotori",
     "id": 1002,
@@ -7323,12 +5403,6 @@ app.constant('CardData',
     "japan_only": false,
     "main_unit": "Muse",
     "name": "Minami Kotori",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": true,
     "rarity": "UR",
     "release_date": "2016-09-15",
@@ -7343,6 +5417,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 5070,
+      "display": 5070,
       "idlz": 5370
     },
     "sub_unit": "Printemps",
@@ -7352,12 +5427,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Smile",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": null,
     "full_name": "SR Pool v2 Hoshizora Rin",
     "id": 1001,
@@ -7365,12 +5434,6 @@ app.constant('CardData',
     "japan_only": false,
     "main_unit": "Muse",
     "name": "Hoshizora Rin",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": true,
     "rarity": "SR",
     "release_date": "2016-09-06",
@@ -7385,6 +5448,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 4630,
+      "display": 4630,
       "idlz": 4910
     },
     "sub_unit": "Lily White",
@@ -7394,12 +5458,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Smile",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": true,
     "full_name": "SR Diving Ohara Mari",
     "id": 1000,
@@ -7407,12 +5465,6 @@ app.constant('CardData',
     "japan_only": false,
     "main_unit": "Aqours",
     "name": "Ohara Mari",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": false,
     "rarity": "SR",
     "release_date": "2016-09-05",
@@ -7427,6 +5479,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 4530,
+      "display": 4530,
       "idlz": 4810
     },
     "sub_unit": "Guilty Kiss",
@@ -7436,12 +5489,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Pure",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": true,
     "full_name": "SR Diving Matsuura Kanan",
     "id": 999,
@@ -7449,12 +5496,6 @@ app.constant('CardData',
     "japan_only": false,
     "main_unit": "Aqours",
     "name": "Matsuura Kanan",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": false,
     "rarity": "SR",
     "release_date": "2016-09-05",
@@ -7469,6 +5510,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 4400,
+      "display": 4400,
       "idlz": 4680
     },
     "sub_unit": "AZALEA",
@@ -7478,12 +5520,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Smile",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": null,
     "full_name": "UR Yukata Ohara Mari",
     "id": 997,
@@ -7491,12 +5527,6 @@ app.constant('CardData',
     "japan_only": false,
     "main_unit": "Aqours",
     "name": "Ohara Mari",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": true,
     "rarity": "UR",
     "release_date": "2016-08-31",
@@ -7511,6 +5541,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 5040,
+      "display": 5040,
       "idlz": 5340
     },
     "sub_unit": "Guilty Kiss",
@@ -7520,12 +5551,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Pure",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": null,
     "full_name": "SSR Yukata Kurosawa Dia",
     "id": 996,
@@ -7533,12 +5558,6 @@ app.constant('CardData',
     "japan_only": false,
     "main_unit": "Aqours",
     "name": "Kurosawa Dia",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": true,
     "rarity": "SSR",
     "release_date": "2016-08-31",
@@ -7553,6 +5572,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 4790,
+      "display": 4790,
       "idlz": 5090
     },
     "sub_unit": "AZALEA",
@@ -7562,12 +5582,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Cool",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": null,
     "full_name": "SR Yukata Kurosawa Ruby",
     "id": 995,
@@ -7575,12 +5589,6 @@ app.constant('CardData',
     "japan_only": false,
     "main_unit": "Aqours",
     "name": "Kurosawa Ruby",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": true,
     "rarity": "SR",
     "release_date": "2016-08-31",
@@ -7595,6 +5603,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 4670,
+      "display": 4670,
       "idlz": 4950
     },
     "sub_unit": "CYaRon!",
@@ -7604,12 +5613,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Smile",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": null,
     "full_name": "SR Yukata Tsushima Yoshiko",
     "id": 994,
@@ -7617,12 +5620,6 @@ app.constant('CardData',
     "japan_only": false,
     "main_unit": "Aqours",
     "name": "Tsushima Yoshiko",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": true,
     "rarity": "SR",
     "release_date": "2016-08-31",
@@ -7637,6 +5634,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 4690,
+      "display": 4690,
       "idlz": 4970
     },
     "sub_unit": "Guilty Kiss",
@@ -7646,12 +5644,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Pure",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": null,
     "full_name": "SR Yukata Takami Chika",
     "id": 993,
@@ -7659,12 +5651,6 @@ app.constant('CardData',
     "japan_only": false,
     "main_unit": "Aqours",
     "name": "Takami Chika",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": true,
     "rarity": "SR",
     "release_date": "2016-08-31",
@@ -7679,6 +5665,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 4650,
+      "display": 4650,
       "idlz": 4930
     },
     "sub_unit": "CYaRon!",
@@ -7688,12 +5675,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Cool",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": null,
     "full_name": "SSR Pool v2 Yazawa Nico",
     "id": 991,
@@ -7701,12 +5682,6 @@ app.constant('CardData',
     "japan_only": false,
     "main_unit": "Muse",
     "name": "Yazawa Nico",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": true,
     "rarity": "SSR",
     "release_date": "2016-08-20",
@@ -7721,6 +5696,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 4870,
+      "display": 4870,
       "idlz": 5170
     },
     "sub_unit": "Bibi",
@@ -7730,12 +5706,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Smile",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": null,
     "full_name": "SR Pool v2 Sonoda Umi",
     "id": 990,
@@ -7743,12 +5713,6 @@ app.constant('CardData',
     "japan_only": false,
     "main_unit": "Muse",
     "name": "Sonoda Umi",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": true,
     "rarity": "SR",
     "release_date": "2016-08-20",
@@ -7763,6 +5727,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 4630,
+      "display": 4630,
       "idlz": 4910
     },
     "sub_unit": "Lily White",
@@ -7772,12 +5737,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Cool",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": true,
     "full_name": "SR Festival Nishikino Maki",
     "id": 989,
@@ -7785,12 +5744,6 @@ app.constant('CardData',
     "japan_only": true,
     "main_unit": "Muse",
     "name": "Nishikino Maki",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": false,
     "rarity": "SR",
     "release_date": "2016-08-20",
@@ -7805,6 +5758,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 4410,
+      "display": 4410,
       "idlz": 4690
     },
     "sub_unit": "Bibi",
@@ -7814,12 +5768,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Pure",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": true,
     "full_name": "SR Festival Sonoda Umi",
     "id": 988,
@@ -7827,12 +5775,6 @@ app.constant('CardData',
     "japan_only": true,
     "main_unit": "Muse",
     "name": "Sonoda Umi",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": false,
     "rarity": "SR",
     "release_date": "2016-08-20",
@@ -7847,6 +5789,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 4530,
+      "display": 4530,
       "idlz": 4810
     },
     "sub_unit": "Lily White",
@@ -7856,12 +5799,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Pure",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": null,
     "full_name": "UR Swimsuit Kurosawa Ruby",
     "id": 985,
@@ -7869,12 +5806,6 @@ app.constant('CardData',
     "japan_only": false,
     "main_unit": "Aqours",
     "name": "Kurosawa Ruby",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": true,
     "rarity": "UR",
     "release_date": "2016-08-15",
@@ -7889,6 +5820,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 5020,
+      "display": 5020,
       "idlz": 5320
     },
     "sub_unit": "CYaRon!",
@@ -7898,12 +5830,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Cool",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": null,
     "full_name": "SSR Swimsuit Watanabe You",
     "id": 984,
@@ -7911,12 +5837,6 @@ app.constant('CardData',
     "japan_only": false,
     "main_unit": "Aqours",
     "name": "Watanabe You",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": true,
     "rarity": "SSR",
     "release_date": "2016-08-15",
@@ -7931,6 +5851,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 4800,
+      "display": 4800,
       "idlz": 5100
     },
     "sub_unit": "CYaRon!",
@@ -7940,12 +5861,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Cool",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": null,
     "full_name": "SR Swimsuit Matsuura Kanan",
     "id": 983,
@@ -7953,12 +5868,6 @@ app.constant('CardData',
     "japan_only": false,
     "main_unit": "Aqours",
     "name": "Matsuura Kanan",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": true,
     "rarity": "SR",
     "release_date": "2016-08-15",
@@ -7973,6 +5882,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 4620,
+      "display": 4620,
       "idlz": 4900
     },
     "sub_unit": "AZALEA",
@@ -7982,12 +5892,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Smile",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": null,
     "full_name": "SR Swimsuit Sakurauchi Riko",
     "id": 982,
@@ -7995,12 +5899,6 @@ app.constant('CardData',
     "japan_only": false,
     "main_unit": "Aqours",
     "name": "Sakurauchi Riko",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": true,
     "rarity": "SR",
     "release_date": "2016-08-15",
@@ -8015,6 +5913,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 4680,
+      "display": 4680,
       "idlz": 4960
     },
     "sub_unit": "Guilty Kiss",
@@ -8024,12 +5923,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Smile",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": null,
     "full_name": "UR Pool v2 Kousaka Honoka",
     "id": 980,
@@ -8037,12 +5930,6 @@ app.constant('CardData',
     "japan_only": false,
     "main_unit": "Muse",
     "name": "Kousaka Honoka",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": true,
     "rarity": "UR",
     "release_date": "2016-08-08",
@@ -8057,6 +5944,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 5030,
+      "display": 5030,
       "idlz": 5330
     },
     "sub_unit": "Printemps",
@@ -8066,12 +5954,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Pure",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": null,
     "full_name": "SR Pool v2 Toujou Nozomi",
     "id": 979,
@@ -8079,12 +5961,6 @@ app.constant('CardData',
     "japan_only": false,
     "main_unit": "Muse",
     "name": "Toujou Nozomi",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": true,
     "rarity": "SR",
     "release_date": "2016-08-08",
@@ -8099,6 +5975,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 4640,
+      "display": 4640,
       "idlz": 4920
     },
     "sub_unit": "Lily White",
@@ -8108,12 +5985,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Cool",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": null,
     "full_name": "SR Pool v2 Ayase Eli",
     "id": 978,
@@ -8121,12 +5992,6 @@ app.constant('CardData',
     "japan_only": false,
     "main_unit": "Muse",
     "name": "Ayase Eli",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": true,
     "rarity": "SR",
     "release_date": "2016-08-08",
@@ -8141,6 +6006,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 4690,
+      "display": 4690,
       "idlz": 4970
     },
     "sub_unit": "Bibi",
@@ -8150,12 +6016,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Smile",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": true,
     "full_name": "SR Summer Vacation Kunikida Hanamaru",
     "id": 977,
@@ -8163,12 +6023,6 @@ app.constant('CardData',
     "japan_only": false,
     "main_unit": "Aqours",
     "name": "Kunikida Hanamaru",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": false,
     "rarity": "SR",
     "release_date": "2016-08-05",
@@ -8183,6 +6037,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 4490,
+      "display": 4490,
       "idlz": 4770
     },
     "sub_unit": "AZALEA",
@@ -8192,12 +6047,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Pure",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": true,
     "full_name": "SR Summer Vacation Watanabe You",
     "id": 976,
@@ -8205,12 +6054,6 @@ app.constant('CardData',
     "japan_only": false,
     "main_unit": "Aqours",
     "name": "Watanabe You",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": false,
     "rarity": "SR",
     "release_date": "2016-08-05",
@@ -8225,6 +6068,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 4440,
+      "display": 4440,
       "idlz": 4720
     },
     "sub_unit": "CYaRon!",
@@ -8234,12 +6078,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Smile",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": null,
     "full_name": "UR Swimsuit Kunikida Hanamaru",
     "id": 974,
@@ -8247,12 +6085,6 @@ app.constant('CardData',
     "japan_only": false,
     "main_unit": "Aqours",
     "name": "Kunikida Hanamaru",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": true,
     "rarity": "UR",
     "release_date": "2016-07-31",
@@ -8267,6 +6099,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 5040,
+      "display": 5040,
       "idlz": 5340
     },
     "sub_unit": "AZALEA",
@@ -8276,12 +6109,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Pure",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": null,
     "full_name": "SSR Swimsuit Tsushima Yoshiko",
     "id": 973,
@@ -8289,12 +6116,6 @@ app.constant('CardData',
     "japan_only": false,
     "main_unit": "Aqours",
     "name": "Tsushima Yoshiko",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": true,
     "rarity": "SSR",
     "release_date": "2016-07-31",
@@ -8309,6 +6130,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 4800,
+      "display": 4800,
       "idlz": 5100
     },
     "sub_unit": "Guilty Kiss",
@@ -8318,12 +6140,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Pure",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": null,
     "full_name": "SR Swimsuit Ohara Mari",
     "id": 972,
@@ -8331,12 +6147,6 @@ app.constant('CardData',
     "japan_only": false,
     "main_unit": "Aqours",
     "name": "Ohara Mari",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": true,
     "rarity": "SR",
     "release_date": "2016-07-31",
@@ -8351,6 +6161,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 4670,
+      "display": 4670,
       "idlz": 4950
     },
     "sub_unit": "Guilty Kiss",
@@ -8360,12 +6171,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Smile",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": null,
     "full_name": "SR Swimsuit Kurosawa Dia",
     "id": 971,
@@ -8373,12 +6178,6 @@ app.constant('CardData',
     "japan_only": false,
     "main_unit": "Aqours",
     "name": "Kurosawa Dia",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": true,
     "rarity": "SR",
     "release_date": "2016-07-31",
@@ -8393,6 +6192,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 4630,
+      "display": 4630,
       "idlz": 4910
     },
     "sub_unit": "AZALEA",
@@ -8402,12 +6202,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Cool",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": null,
     "full_name": "SR Swimsuit Takami Chika",
     "id": 970,
@@ -8415,12 +6209,6 @@ app.constant('CardData',
     "japan_only": false,
     "main_unit": "Aqours",
     "name": "Takami Chika",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": true,
     "rarity": "SR",
     "release_date": "2016-07-31",
@@ -8435,6 +6223,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 4670,
+      "display": 4670,
       "idlz": 4950
     },
     "sub_unit": "CYaRon!",
@@ -8444,12 +6233,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Smile",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": true,
     "full_name": "SR Apparition Minami Kotori",
     "id": 968,
@@ -8457,12 +6240,6 @@ app.constant('CardData',
     "japan_only": true,
     "main_unit": "Muse",
     "name": "Minami Kotori",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": false,
     "rarity": "SR",
     "release_date": "2016-07-20",
@@ -8477,6 +6254,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 4470,
+      "display": 4470,
       "idlz": 4750
     },
     "sub_unit": "Printemps",
@@ -8486,12 +6264,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Cool",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": true,
     "full_name": "SR Apparition Ayase Eli",
     "id": 967,
@@ -8499,12 +6271,6 @@ app.constant('CardData',
     "japan_only": true,
     "main_unit": "Muse",
     "name": "Ayase Eli",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": false,
     "rarity": "SR",
     "release_date": "2016-07-20",
@@ -8519,6 +6285,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 4530,
+      "display": 4530,
       "idlz": 4810
     },
     "sub_unit": "Bibi",
@@ -8528,12 +6295,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Pure",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": null,
     "full_name": "UR Little Devil Sonoda Umi",
     "id": 965,
@@ -8541,12 +6302,6 @@ app.constant('CardData',
     "japan_only": false,
     "main_unit": "Muse",
     "name": "Sonoda Umi",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": true,
     "rarity": "UR",
     "release_date": "2016-07-15",
@@ -8561,6 +6316,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 5030,
+      "display": 5030,
       "idlz": 5330
     },
     "sub_unit": "Lily White",
@@ -8570,12 +6326,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Pure",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": null,
     "full_name": "SR Little Devil Hoshizora Rin",
     "id": 964,
@@ -8583,12 +6333,6 @@ app.constant('CardData',
     "japan_only": false,
     "main_unit": "Muse",
     "name": "Hoshizora Rin",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": true,
     "rarity": "SR",
     "release_date": "2016-07-15",
@@ -8603,6 +6347,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 4700,
+      "display": 4700,
       "idlz": 4980
     },
     "sub_unit": "Lily White",
@@ -8612,12 +6357,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Cool",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": null,
     "full_name": "SR Little Devil Minami Kotori",
     "id": 963,
@@ -8625,12 +6364,6 @@ app.constant('CardData',
     "japan_only": false,
     "main_unit": "Muse",
     "name": "Minami Kotori",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": true,
     "rarity": "SR",
     "release_date": "2016-07-15",
@@ -8645,6 +6378,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 4660,
+      "display": 4660,
       "idlz": 4940
     },
     "sub_unit": "Printemps",
@@ -8654,12 +6388,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Smile",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": null,
     "full_name": "SR Little Devil Ayase Eli",
     "id": 962,
@@ -8667,12 +6395,6 @@ app.constant('CardData',
     "japan_only": false,
     "main_unit": "Muse",
     "name": "Ayase Eli",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": true,
     "rarity": "SR",
     "release_date": "2016-07-15",
@@ -8687,6 +6409,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 4620,
+      "display": 4620,
       "idlz": 4900
     },
     "sub_unit": "Bibi",
@@ -8696,12 +6419,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Pure",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": true,
     "full_name": "SR Tanabata Kurosawa Ruby",
     "id": 960,
@@ -8709,12 +6426,6 @@ app.constant('CardData',
     "japan_only": false,
     "main_unit": "Aqours",
     "name": "Kurosawa Ruby",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": false,
     "rarity": "SR",
     "release_date": "2016-07-05",
@@ -8729,6 +6440,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 4530,
+      "display": 4530,
       "idlz": 4810
     },
     "sub_unit": "CYaRon!",
@@ -8738,12 +6450,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Cool",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": true,
     "full_name": "SR Tanabata Kurosawa Dia",
     "id": 959,
@@ -8751,12 +6457,6 @@ app.constant('CardData',
     "japan_only": false,
     "main_unit": "Aqours",
     "name": "Kurosawa Dia",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": false,
     "rarity": "SR",
     "release_date": "2016-07-05",
@@ -8771,6 +6471,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 4480,
+      "display": 4480,
       "idlz": 4760
     },
     "sub_unit": "AZALEA",
@@ -8780,12 +6481,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Pure",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": null,
     "full_name": "UR Initial Watanabe You",
     "id": 957,
@@ -8793,12 +6488,6 @@ app.constant('CardData',
     "japan_only": false,
     "main_unit": "Aqours",
     "name": "Watanabe You",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": true,
     "rarity": "UR",
     "release_date": "2016-07-05",
@@ -8813,6 +6502,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 5030,
+      "display": 5030,
       "idlz": 5330
     },
     "sub_unit": "CYaRon!",
@@ -8822,12 +6512,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Cool",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": null,
     "full_name": "UR Initial Sakurauchi Riko",
     "id": 956,
@@ -8835,12 +6519,6 @@ app.constant('CardData',
     "japan_only": false,
     "main_unit": "Aqours",
     "name": "Sakurauchi Riko",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": true,
     "rarity": "UR",
     "release_date": "2016-07-05",
@@ -8855,6 +6533,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 5050,
+      "display": 5050,
       "idlz": 5350
     },
     "sub_unit": "Guilty Kiss",
@@ -8864,12 +6543,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Smile",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": null,
     "full_name": "UR Initial Takami Chika",
     "id": 955,
@@ -8877,12 +6550,6 @@ app.constant('CardData',
     "japan_only": false,
     "main_unit": "Aqours",
     "name": "Takami Chika",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": true,
     "rarity": "UR",
     "release_date": "2016-07-05",
@@ -8897,6 +6564,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 5040,
+      "display": 5040,
       "idlz": 5340
     },
     "sub_unit": "CYaRon!",
@@ -8906,12 +6574,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Pure",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": null,
     "full_name": "SSR Initial Kurosawa Ruby",
     "id": 954,
@@ -8919,12 +6581,6 @@ app.constant('CardData',
     "japan_only": false,
     "main_unit": "Aqours",
     "name": "Kurosawa Ruby",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": true,
     "rarity": "SSR",
     "release_date": "2016-07-05",
@@ -8939,6 +6595,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 4840,
+      "display": 4840,
       "idlz": 5140
     },
     "sub_unit": "CYaRon!",
@@ -8948,12 +6605,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Smile",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": null,
     "full_name": "SSR Initial Ohara Mari",
     "id": 953,
@@ -8961,12 +6612,6 @@ app.constant('CardData',
     "japan_only": false,
     "main_unit": "Aqours",
     "name": "Ohara Mari",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": true,
     "rarity": "SSR",
     "release_date": "2016-07-05",
@@ -8981,6 +6626,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 4870,
+      "display": 4870,
       "idlz": 5170
     },
     "sub_unit": "Guilty Kiss",
@@ -8990,12 +6636,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Smile",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": null,
     "full_name": "SSR Initial Kunikida Hanamaru",
     "id": 952,
@@ -9003,12 +6643,6 @@ app.constant('CardData',
     "japan_only": false,
     "main_unit": "Aqours",
     "name": "Kunikida Hanamaru",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": true,
     "rarity": "SSR",
     "release_date": "2016-07-05",
@@ -9023,6 +6657,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 4780,
+      "display": 4780,
       "idlz": 5080
     },
     "sub_unit": "AZALEA",
@@ -9032,12 +6667,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Cool",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": null,
     "full_name": "SSR Initial Tsushima Yoshiko",
     "id": 951,
@@ -9045,12 +6674,6 @@ app.constant('CardData',
     "japan_only": false,
     "main_unit": "Aqours",
     "name": "Tsushima Yoshiko",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": true,
     "rarity": "SSR",
     "release_date": "2016-07-05",
@@ -9065,6 +6688,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 4870,
+      "display": 4870,
       "idlz": 5170
     },
     "sub_unit": "Guilty Kiss",
@@ -9074,12 +6698,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Pure",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": null,
     "full_name": "SSR Initial Watanabe You",
     "id": 950,
@@ -9087,12 +6705,6 @@ app.constant('CardData',
     "japan_only": false,
     "main_unit": "Aqours",
     "name": "Watanabe You",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": true,
     "rarity": "SSR",
     "release_date": "2016-07-05",
@@ -9107,6 +6719,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 4870,
+      "display": 4870,
       "idlz": 5170
     },
     "sub_unit": "CYaRon!",
@@ -9116,12 +6729,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Cool",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": null,
     "full_name": "SSR Initial Kurosawa Dia",
     "id": 949,
@@ -9129,12 +6736,6 @@ app.constant('CardData',
     "japan_only": false,
     "main_unit": "Aqours",
     "name": "Kurosawa Dia",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": true,
     "rarity": "SSR",
     "release_date": "2016-07-05",
@@ -9149,6 +6750,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 4840,
+      "display": 4840,
       "idlz": 5140
     },
     "sub_unit": "AZALEA",
@@ -9158,12 +6760,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Pure",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": null,
     "full_name": "SSR Initial Matsuura Kanan",
     "id": 948,
@@ -9171,12 +6767,6 @@ app.constant('CardData',
     "japan_only": false,
     "main_unit": "Aqours",
     "name": "Matsuura Kanan",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": true,
     "rarity": "SSR",
     "release_date": "2016-07-05",
@@ -9191,6 +6781,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 4790,
+      "display": 4790,
       "idlz": 5090
     },
     "sub_unit": "AZALEA",
@@ -9200,12 +6791,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Cool",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": null,
     "full_name": "SSR Initial Sakurauchi Riko",
     "id": 947,
@@ -9213,12 +6798,6 @@ app.constant('CardData',
     "japan_only": false,
     "main_unit": "Aqours",
     "name": "Sakurauchi Riko",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": true,
     "rarity": "SSR",
     "release_date": "2016-07-05",
@@ -9233,6 +6812,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 4790,
+      "display": 4790,
       "idlz": 5090
     },
     "sub_unit": "Guilty Kiss",
@@ -9242,12 +6822,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Smile",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": null,
     "full_name": "SSR Initial Takami Chika",
     "id": 946,
@@ -9255,12 +6829,6 @@ app.constant('CardData',
     "japan_only": false,
     "main_unit": "Aqours",
     "name": "Takami Chika",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": true,
     "rarity": "SSR",
     "release_date": "2016-07-05",
@@ -9275,6 +6843,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 4840,
+      "display": 4840,
       "idlz": 5140
     },
     "sub_unit": "CYaRon!",
@@ -9284,12 +6853,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Smile",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": null,
     "full_name": "SSR Initial Yazawa Nico",
     "id": 945,
@@ -9297,12 +6860,6 @@ app.constant('CardData',
     "japan_only": false,
     "main_unit": "Muse",
     "name": "Yazawa Nico",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": true,
     "rarity": "SSR",
     "release_date": "2016-07-05",
@@ -9317,6 +6874,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 4840,
+      "display": 4840,
       "idlz": 5140
     },
     "sub_unit": "Bibi",
@@ -9326,12 +6884,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Pure",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": null,
     "full_name": "SSR Initial Koizumi Hanayo",
     "id": 944,
@@ -9339,12 +6891,6 @@ app.constant('CardData',
     "japan_only": false,
     "main_unit": "Muse",
     "name": "Koizumi Hanayo",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": true,
     "rarity": "SSR",
     "release_date": "2016-07-05",
@@ -9359,6 +6905,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 4780,
+      "display": 4780,
       "idlz": 5080
     },
     "sub_unit": "Printemps",
@@ -9368,12 +6915,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Pure",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": null,
     "full_name": "SSR Initial Toujou Nozomi",
     "id": 943,
@@ -9381,12 +6922,6 @@ app.constant('CardData',
     "japan_only": false,
     "main_unit": "Muse",
     "name": "Toujou Nozomi",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": true,
     "rarity": "SSR",
     "release_date": "2016-07-05",
@@ -9401,6 +6936,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 4870,
+      "display": 4870,
       "idlz": 5170
     },
     "sub_unit": "Lily White",
@@ -9410,12 +6946,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Cool",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": null,
     "full_name": "SSR Initial Nishikino Maki",
     "id": 942,
@@ -9423,12 +6953,6 @@ app.constant('CardData',
     "japan_only": false,
     "main_unit": "Muse",
     "name": "Nishikino Maki",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": true,
     "rarity": "SSR",
     "release_date": "2016-07-05",
@@ -9443,6 +6967,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 4840,
+      "display": 4840,
       "idlz": 5140
     },
     "sub_unit": "Bibi",
@@ -9452,12 +6977,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Smile",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": null,
     "full_name": "SSR Initial Hoshizora Rin",
     "id": 941,
@@ -9465,12 +6984,6 @@ app.constant('CardData',
     "japan_only": false,
     "main_unit": "Muse",
     "name": "Hoshizora Rin",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": true,
     "rarity": "SSR",
     "release_date": "2016-07-05",
@@ -9485,6 +6998,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 4870,
+      "display": 4870,
       "idlz": 5170
     },
     "sub_unit": "Lily White",
@@ -9494,12 +7008,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Cool",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": null,
     "full_name": "SSR Initial Sonoda Umi",
     "id": 940,
@@ -9507,12 +7015,6 @@ app.constant('CardData',
     "japan_only": false,
     "main_unit": "Muse",
     "name": "Sonoda Umi",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": true,
     "rarity": "SSR",
     "release_date": "2016-07-05",
@@ -9527,6 +7029,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 4870,
+      "display": 4870,
       "idlz": 5170
     },
     "sub_unit": "Lily White",
@@ -9536,12 +7039,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Pure",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": null,
     "full_name": "SSR Initial Minami Kotori",
     "id": 939,
@@ -9549,12 +7046,6 @@ app.constant('CardData',
     "japan_only": false,
     "main_unit": "Muse",
     "name": "Minami Kotori",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": true,
     "rarity": "SSR",
     "release_date": "2016-07-05",
@@ -9569,6 +7060,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 4840,
+      "display": 4840,
       "idlz": 5140
     },
     "sub_unit": "Printemps",
@@ -9578,12 +7070,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Cool",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": null,
     "full_name": "SSR Initial Ayase Eli",
     "id": 938,
@@ -9591,12 +7077,6 @@ app.constant('CardData',
     "japan_only": false,
     "main_unit": "Muse",
     "name": "Ayase Eli",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": true,
     "rarity": "SSR",
     "release_date": "2016-07-05",
@@ -9611,6 +7091,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 4800,
+      "display": 4800,
       "idlz": 5100
     },
     "sub_unit": "Bibi",
@@ -9620,12 +7101,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Smile",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": null,
     "full_name": "SSR Initial Kousaka Honoka",
     "id": 937,
@@ -9633,12 +7108,6 @@ app.constant('CardData',
     "japan_only": false,
     "main_unit": "Muse",
     "name": "Kousaka Honoka",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": true,
     "rarity": "SSR",
     "release_date": "2016-07-05",
@@ -9653,6 +7122,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 4810,
+      "display": 4810,
       "idlz": 5110
     },
     "sub_unit": "Printemps",
@@ -9662,12 +7132,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Pure",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": null,
     "full_name": "SR Initial Kurosawa Ruby",
     "id": 936,
@@ -9675,12 +7139,6 @@ app.constant('CardData',
     "japan_only": false,
     "main_unit": "Aqours",
     "name": "Kurosawa Ruby",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": true,
     "rarity": "SR",
     "release_date": "2016-07-05",
@@ -9695,6 +7153,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 4700,
+      "display": 4700,
       "idlz": 4980
     },
     "sub_unit": "CYaRon!",
@@ -9704,12 +7163,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Smile",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": null,
     "full_name": "SR Initial Ohara Mari",
     "id": 935,
@@ -9717,12 +7170,6 @@ app.constant('CardData',
     "japan_only": false,
     "main_unit": "Aqours",
     "name": "Ohara Mari",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": true,
     "rarity": "SR",
     "release_date": "2016-07-05",
@@ -9737,6 +7184,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 4620,
+      "display": 4620,
       "idlz": 4900
     },
     "sub_unit": "Guilty Kiss",
@@ -9746,12 +7194,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Smile",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": null,
     "full_name": "SR Initial Kunikida Hanamaru",
     "id": 934,
@@ -9759,12 +7201,6 @@ app.constant('CardData',
     "japan_only": false,
     "main_unit": "Aqours",
     "name": "Kunikida Hanamaru",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": true,
     "rarity": "SR",
     "release_date": "2016-07-05",
@@ -9779,6 +7215,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 4660,
+      "display": 4660,
       "idlz": 4940
     },
     "sub_unit": "AZALEA",
@@ -9788,12 +7225,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Cool",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": null,
     "full_name": "SR Initial Tsushima Yoshiko",
     "id": 933,
@@ -9801,12 +7232,6 @@ app.constant('CardData',
     "japan_only": false,
     "main_unit": "Aqours",
     "name": "Tsushima Yoshiko",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": true,
     "rarity": "SR",
     "release_date": "2016-07-05",
@@ -9821,6 +7246,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 4620,
+      "display": 4620,
       "idlz": 4900
     },
     "sub_unit": "Guilty Kiss",
@@ -9830,12 +7256,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Pure",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": null,
     "full_name": "SR Initial Watanabe You",
     "id": 932,
@@ -9843,12 +7263,6 @@ app.constant('CardData',
     "japan_only": false,
     "main_unit": "Aqours",
     "name": "Watanabe You",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": true,
     "rarity": "SR",
     "release_date": "2016-07-05",
@@ -9863,6 +7277,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 4610,
+      "display": 4610,
       "idlz": 4890
     },
     "sub_unit": "CYaRon!",
@@ -9872,12 +7287,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Cool",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": null,
     "full_name": "SR Initial Kurosawa Dia",
     "id": 931,
@@ -9885,12 +7294,6 @@ app.constant('CardData',
     "japan_only": false,
     "main_unit": "Aqours",
     "name": "Kurosawa Dia",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": true,
     "rarity": "SR",
     "release_date": "2016-07-05",
@@ -9905,6 +7308,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 4690,
+      "display": 4690,
       "idlz": 4970
     },
     "sub_unit": "AZALEA",
@@ -9914,12 +7318,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Pure",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": null,
     "full_name": "SR Initial Matsuura Kanan",
     "id": 930,
@@ -9927,12 +7325,6 @@ app.constant('CardData',
     "japan_only": false,
     "main_unit": "Aqours",
     "name": "Matsuura Kanan",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": true,
     "rarity": "SR",
     "release_date": "2016-07-05",
@@ -9947,6 +7339,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 4660,
+      "display": 4660,
       "idlz": 4940
     },
     "sub_unit": "AZALEA",
@@ -9956,12 +7349,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Cool",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": null,
     "full_name": "SR Initial Sakurauchi Riko",
     "id": 929,
@@ -9969,12 +7356,6 @@ app.constant('CardData',
     "japan_only": false,
     "main_unit": "Aqours",
     "name": "Sakurauchi Riko",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": true,
     "rarity": "SR",
     "release_date": "2016-07-05",
@@ -9989,6 +7370,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 4660,
+      "display": 4660,
       "idlz": 4940
     },
     "sub_unit": "Guilty Kiss",
@@ -9998,12 +7380,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Smile",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": null,
     "full_name": "SR Initial Takami Chika",
     "id": 928,
@@ -10011,12 +7387,6 @@ app.constant('CardData',
     "japan_only": false,
     "main_unit": "Aqours",
     "name": "Takami Chika",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": true,
     "rarity": "SR",
     "release_date": "2016-07-05",
@@ -10031,6 +7401,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 4700,
+      "display": 4700,
       "idlz": 4980
     },
     "sub_unit": "CYaRon!",
@@ -10040,12 +7411,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Cool",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": null,
     "full_name": "UR Little Devil Yazawa Nico",
     "id": 909,
@@ -10053,12 +7418,6 @@ app.constant('CardData',
     "japan_only": false,
     "main_unit": "Muse",
     "name": "Yazawa Nico",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": true,
     "rarity": "UR",
     "release_date": "2016-06-30",
@@ -10073,6 +7432,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 5020,
+      "display": 5020,
       "idlz": 5320
     },
     "sub_unit": "Bibi",
@@ -10082,12 +7442,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Smile",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": null,
     "full_name": "SR Little Devil Koizumi Hanayo",
     "id": 908,
@@ -10095,12 +7449,6 @@ app.constant('CardData',
     "japan_only": false,
     "main_unit": "Muse",
     "name": "Koizumi Hanayo",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": true,
     "rarity": "SR",
     "release_date": "2016-06-30",
@@ -10115,6 +7463,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 4700,
+      "display": 4700,
       "idlz": 4980
     },
     "sub_unit": "Printemps",
@@ -10124,12 +7473,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Cool",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": null,
     "full_name": "SR Little Devil Toujou Nozomi",
     "id": 907,
@@ -10137,12 +7480,6 @@ app.constant('CardData',
     "japan_only": false,
     "main_unit": "Muse",
     "name": "Toujou Nozomi",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": true,
     "rarity": "SR",
     "release_date": "2016-06-30",
@@ -10157,6 +7494,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 4610,
+      "display": 4610,
       "idlz": 4890
     },
     "sub_unit": "Lily White",
@@ -10166,12 +7504,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Pure",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": null,
     "full_name": "SR Little Devil Nishikino Maki",
     "id": 906,
@@ -10179,12 +7511,6 @@ app.constant('CardData',
     "japan_only": false,
     "main_unit": "Muse",
     "name": "Nishikino Maki",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": true,
     "rarity": "SR",
     "release_date": "2016-06-30",
@@ -10199,6 +7525,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 4630,
+      "display": 4630,
       "idlz": 4910
     },
     "sub_unit": "Bibi",
@@ -10208,12 +7535,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Smile",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": null,
     "full_name": "SR Little Devil Kousaka Honoka",
     "id": 905,
@@ -10221,12 +7542,6 @@ app.constant('CardData',
     "japan_only": false,
     "main_unit": "Muse",
     "name": "Kousaka Honoka",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": true,
     "rarity": "SR",
     "release_date": "2016-06-30",
@@ -10241,6 +7556,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 4670,
+      "display": 4670,
       "idlz": 4950
     },
     "sub_unit": "Printemps",
@@ -10250,12 +7566,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Smile",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": true,
     "full_name": "SR Rainy Season Koizumi Hanayo",
     "id": 903,
@@ -10263,12 +7573,6 @@ app.constant('CardData',
     "japan_only": false,
     "main_unit": "Muse",
     "name": "Koizumi Hanayo",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": false,
     "rarity": "SR",
     "release_date": "2016-06-20",
@@ -10283,6 +7587,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 4450,
+      "display": 4450,
       "idlz": 4730
     },
     "sub_unit": "Printemps",
@@ -10292,12 +7597,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Cool",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": true,
     "full_name": "SR Rainy Season Toujou Nozomi",
     "id": 902,
@@ -10305,12 +7604,6 @@ app.constant('CardData',
     "japan_only": false,
     "main_unit": "Muse",
     "name": "Toujou Nozomi",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": false,
     "rarity": "SR",
     "release_date": "2016-06-20",
@@ -10325,6 +7618,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 4530,
+      "display": 4530,
       "idlz": 4810
     },
     "sub_unit": "Lily White",
@@ -10334,12 +7628,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Cool",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": null,
     "full_name": "UR Idol Outfit Kousaka Honoka",
     "id": 900,
@@ -10347,12 +7635,6 @@ app.constant('CardData',
     "japan_only": false,
     "main_unit": "Muse",
     "name": "Kousaka Honoka",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": true,
     "rarity": "UR",
     "release_date": "2016-06-15",
@@ -10367,6 +7649,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 5020,
+      "display": 5020,
       "idlz": 5320
     },
     "sub_unit": "Printemps",
@@ -10376,12 +7659,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Pure",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": null,
     "full_name": "SR Idol Outfit Yazawa Nico",
     "id": 899,
@@ -10389,12 +7666,6 @@ app.constant('CardData',
     "japan_only": false,
     "main_unit": "Muse",
     "name": "Yazawa Nico",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": true,
     "rarity": "SR",
     "release_date": "2016-06-15",
@@ -10409,6 +7680,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 4610,
+      "display": 4610,
       "idlz": 4890
     },
     "sub_unit": "Bibi",
@@ -10418,12 +7690,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Cool",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": null,
     "full_name": "SR Idol Outfit Nishikino Maki",
     "id": 898,
@@ -10431,12 +7697,6 @@ app.constant('CardData',
     "japan_only": false,
     "main_unit": "Muse",
     "name": "Nishikino Maki",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": true,
     "rarity": "SR",
     "release_date": "2016-06-15",
@@ -10451,6 +7711,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 4640,
+      "display": 4640,
       "idlz": 4920
     },
     "sub_unit": "Bibi",
@@ -10460,12 +7721,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Smile",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": null,
     "full_name": "SR Idol Outfit Hoshizora Rin",
     "id": 897,
@@ -10473,12 +7728,6 @@ app.constant('CardData',
     "japan_only": false,
     "main_unit": "Muse",
     "name": "Hoshizora Rin",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": true,
     "rarity": "SR",
     "release_date": "2016-06-15",
@@ -10493,6 +7742,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 4660,
+      "display": 4660,
       "idlz": 4940
     },
     "sub_unit": "Lily White",
@@ -10502,12 +7752,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Cool",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": true,
     "full_name": "SR Rainy Season Sakurauchi Riko",
     "id": 895,
@@ -10515,12 +7759,6 @@ app.constant('CardData',
     "japan_only": false,
     "main_unit": "Aqours",
     "name": "Sakurauchi Riko",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": false,
     "rarity": "SR",
     "release_date": "2016-06-05",
@@ -10535,6 +7773,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 4410,
+      "display": 4410,
       "idlz": 4690
     },
     "sub_unit": "Guilty Kiss",
@@ -10544,12 +7783,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Smile",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": true,
     "full_name": "SR Rainy Season Takami Chika",
     "id": 894,
@@ -10557,12 +7790,6 @@ app.constant('CardData',
     "japan_only": false,
     "main_unit": "Aqours",
     "name": "Takami Chika",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": false,
     "rarity": "SR",
     "release_date": "2016-06-05",
@@ -10577,6 +7804,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 4530,
+      "display": 4530,
       "idlz": 4810
     },
     "sub_unit": "CYaRon!",
@@ -10586,12 +7814,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Smile",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": null,
     "full_name": "UR Promo Yazawa Nico",
     "id": 892,
@@ -10599,12 +7821,6 @@ app.constant('CardData',
     "japan_only": false,
     "main_unit": "Muse",
     "name": "Yazawa Nico",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": false,
     "rarity": "UR",
     "release_date": "2016-05-31",
@@ -10619,6 +7835,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 4360,
+      "display": 4360,
       "idlz": 4360
     },
     "sub_unit": "Bibi",
@@ -10628,12 +7845,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Pure",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": null,
     "full_name": "UR Promo Toujou Nozomi",
     "id": 891,
@@ -10641,12 +7852,6 @@ app.constant('CardData',
     "japan_only": false,
     "main_unit": "Muse",
     "name": "Toujou Nozomi",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": false,
     "rarity": "UR",
     "release_date": "2016-05-31",
@@ -10661,6 +7866,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 4350,
+      "display": 4350,
       "idlz": 4350
     },
     "sub_unit": "Lily White",
@@ -10670,12 +7876,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Smile",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": null,
     "full_name": "UR Idol Outfit Toujou Nozomi",
     "id": 890,
@@ -10683,12 +7883,6 @@ app.constant('CardData',
     "japan_only": false,
     "main_unit": "Muse",
     "name": "Toujou Nozomi",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": true,
     "rarity": "UR",
     "release_date": "2016-05-31",
@@ -10703,6 +7897,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 5030,
+      "display": 5030,
       "idlz": 5330
     },
     "sub_unit": "Lily White",
@@ -10712,12 +7907,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Cool",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": null,
     "full_name": "UR Promo Ayase Eli",
     "id": 889,
@@ -10725,12 +7914,6 @@ app.constant('CardData',
     "japan_only": false,
     "main_unit": "Muse",
     "name": "Ayase Eli",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": false,
     "rarity": "UR",
     "release_date": "2016-05-31",
@@ -10745,6 +7928,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 4340,
+      "display": 4340,
       "idlz": 4340
     },
     "sub_unit": "Bibi",
@@ -10754,12 +7938,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Cool",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": null,
     "full_name": "SR Idol Outfit Koizumi Hanayo",
     "id": 888,
@@ -10767,12 +7945,6 @@ app.constant('CardData',
     "japan_only": false,
     "main_unit": "Muse",
     "name": "Koizumi Hanayo",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": true,
     "rarity": "SR",
     "release_date": "2016-05-31",
@@ -10787,6 +7959,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 4700,
+      "display": 4700,
       "idlz": 4980
     },
     "sub_unit": "Printemps",
@@ -10796,12 +7969,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Pure",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": null,
     "full_name": "SR Idol Outfit Sonoda Umi",
     "id": 887,
@@ -10809,12 +7976,6 @@ app.constant('CardData',
     "japan_only": false,
     "main_unit": "Muse",
     "name": "Sonoda Umi",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": true,
     "rarity": "SR",
     "release_date": "2016-05-31",
@@ -10829,6 +7990,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 4650,
+      "display": 4650,
       "idlz": 4930
     },
     "sub_unit": "Lily White",
@@ -10838,12 +8000,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Smile",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": null,
     "full_name": "SR Idol Outfit Minami Kotori",
     "id": 886,
@@ -10851,12 +8007,6 @@ app.constant('CardData',
     "japan_only": false,
     "main_unit": "Muse",
     "name": "Minami Kotori",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": true,
     "rarity": "SR",
     "release_date": "2016-05-31",
@@ -10871,6 +8021,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 4600,
+      "display": 4600,
       "idlz": 4880
     },
     "sub_unit": "Printemps",
@@ -10880,12 +8031,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Pure",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": null,
     "full_name": "SR Idol Outfit Ayase Eli",
     "id": 885,
@@ -10893,12 +8038,6 @@ app.constant('CardData',
     "japan_only": false,
     "main_unit": "Muse",
     "name": "Ayase Eli",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": true,
     "rarity": "SR",
     "release_date": "2016-05-31",
@@ -10913,6 +8052,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 4670,
+      "display": 4670,
       "idlz": 4950
     },
     "sub_unit": "Bibi",
@@ -10922,12 +8062,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Smile",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": true,
     "full_name": "SR Sweets Kousaka Honoka",
     "id": 883,
@@ -10935,12 +8069,6 @@ app.constant('CardData',
     "japan_only": false,
     "main_unit": "Muse",
     "name": "Kousaka Honoka",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": false,
     "rarity": "SR",
     "release_date": "2016-05-20",
@@ -10955,6 +8083,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 4410,
+      "display": 4410,
       "idlz": 4690
     },
     "sub_unit": "Printemps",
@@ -10964,12 +8093,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Pure",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": null,
     "full_name": "UR Dancer Hoshizora Rin",
     "id": 881,
@@ -10977,12 +8100,6 @@ app.constant('CardData',
     "japan_only": false,
     "main_unit": "Muse",
     "name": "Hoshizora Rin",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": true,
     "rarity": "UR",
     "release_date": "2016-05-15",
@@ -10997,6 +8114,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 5000,
+      "display": 5000,
       "idlz": 5300
     },
     "sub_unit": "Lily White",
@@ -11006,12 +8124,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Cool",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": null,
     "full_name": "SR Dancer Yazawa Nico",
     "id": 880,
@@ -11019,12 +8131,6 @@ app.constant('CardData',
     "japan_only": false,
     "main_unit": "Muse",
     "name": "Yazawa Nico",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": true,
     "rarity": "SR",
     "release_date": "2016-05-15",
@@ -11039,6 +8145,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 4700,
+      "display": 4700,
       "idlz": 4980
     },
     "sub_unit": "Bibi",
@@ -11048,12 +8155,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Smile",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": null,
     "full_name": "SR Dancer Toujou Nozomi",
     "id": 879,
@@ -11061,12 +8162,6 @@ app.constant('CardData',
     "japan_only": false,
     "main_unit": "Muse",
     "name": "Toujou Nozomi",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": true,
     "rarity": "SR",
     "release_date": "2016-05-15",
@@ -11081,6 +8176,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 4610,
+      "display": 4610,
       "idlz": 4890
     },
     "sub_unit": "Lily White",
@@ -11090,12 +8186,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Pure",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": null,
     "full_name": "SR Dancer Nishikino Maki",
     "id": 878,
@@ -11103,12 +8193,6 @@ app.constant('CardData',
     "japan_only": false,
     "main_unit": "Muse",
     "name": "Nishikino Maki",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": true,
     "rarity": "SR",
     "release_date": "2016-05-15",
@@ -11123,6 +8207,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 4660,
+      "display": 4660,
       "idlz": 4940
     },
     "sub_unit": "Bibi",
@@ -11132,12 +8217,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Pure",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": true,
     "full_name": "SR Children's Day Toujou Nozomi",
     "id": 876,
@@ -11145,12 +8224,6 @@ app.constant('CardData',
     "japan_only": true,
     "main_unit": "Muse",
     "name": "Toujou Nozomi",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": false,
     "rarity": "SR",
     "release_date": "2016-05-05",
@@ -11165,6 +8238,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 4460,
+      "display": 4460,
       "idlz": 4740
     },
     "sub_unit": "Lily White",
@@ -11174,12 +8248,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Pure",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": null,
     "full_name": "UR Promo Koizumi Hanayo",
     "id": 874,
@@ -11187,12 +8255,6 @@ app.constant('CardData',
     "japan_only": false,
     "main_unit": "Muse",
     "name": "Koizumi Hanayo",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": false,
     "rarity": "UR",
     "release_date": "2016-04-30",
@@ -11207,6 +8269,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 4340,
+      "display": 4340,
       "idlz": 4340
     },
     "sub_unit": "Printemps",
@@ -11216,12 +8279,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Cool",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": null,
     "full_name": "UR Promo Nishikino Maki",
     "id": 873,
@@ -11229,12 +8286,6 @@ app.constant('CardData',
     "japan_only": false,
     "main_unit": "Muse",
     "name": "Nishikino Maki",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": false,
     "rarity": "UR",
     "release_date": "2016-04-30",
@@ -11249,6 +8300,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 4360,
+      "display": 4360,
       "idlz": 4360
     },
     "sub_unit": "Bibi",
@@ -11258,12 +8310,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Smile",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": null,
     "full_name": "UR Promo Hoshizora Rin",
     "id": 872,
@@ -11271,12 +8317,6 @@ app.constant('CardData',
     "japan_only": false,
     "main_unit": "Muse",
     "name": "Hoshizora Rin",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": false,
     "rarity": "UR",
     "release_date": "2016-04-30",
@@ -11291,6 +8331,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 4350,
+      "display": 4350,
       "idlz": 4350
     },
     "sub_unit": "Lily White",
@@ -11300,12 +8341,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Cool",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": null,
     "full_name": "UR Dancer Minami Kotori",
     "id": 871,
@@ -11313,12 +8348,6 @@ app.constant('CardData',
     "japan_only": false,
     "main_unit": "Muse",
     "name": "Minami Kotori",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": true,
     "rarity": "UR",
     "release_date": "2016-04-30",
@@ -11333,6 +8362,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 5020,
+      "display": 5020,
       "idlz": 5320
     },
     "sub_unit": "Printemps",
@@ -11342,12 +8372,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Smile",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": null,
     "full_name": "SR Dancer Koizumi Hanayo",
     "id": 870,
@@ -11355,12 +8379,6 @@ app.constant('CardData',
     "japan_only": false,
     "main_unit": "Muse",
     "name": "Koizumi Hanayo",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": true,
     "rarity": "SR",
     "release_date": "2016-04-30",
@@ -11375,6 +8393,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 4670,
+      "display": 4670,
       "idlz": 4950
     },
     "sub_unit": "Printemps",
@@ -11384,12 +8403,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Smile",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": null,
     "full_name": "SR Dancer Sonoda Umi",
     "id": 869,
@@ -11397,12 +8410,6 @@ app.constant('CardData',
     "japan_only": false,
     "main_unit": "Muse",
     "name": "Sonoda Umi",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": true,
     "rarity": "SR",
     "release_date": "2016-04-30",
@@ -11417,6 +8424,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 4700,
+      "display": 4700,
       "idlz": 4980
     },
     "sub_unit": "Lily White",
@@ -11426,12 +8434,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Cool",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": null,
     "full_name": "SR Dancer Ayase Eli",
     "id": 868,
@@ -11439,12 +8441,6 @@ app.constant('CardData',
     "japan_only": false,
     "main_unit": "Muse",
     "name": "Ayase Eli",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": true,
     "rarity": "SR",
     "release_date": "2016-04-30",
@@ -11459,6 +8455,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 4610,
+      "display": 4610,
       "idlz": 4890
     },
     "sub_unit": "Bibi",
@@ -11468,12 +8465,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Pure",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": null,
     "full_name": "SR Dancer Kousaka Honoka",
     "id": 867,
@@ -11481,12 +8472,6 @@ app.constant('CardData',
     "japan_only": false,
     "main_unit": "Muse",
     "name": "Kousaka Honoka",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": true,
     "rarity": "SR",
     "release_date": "2016-04-30",
@@ -11501,6 +8486,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 4690,
+      "display": 4690,
       "idlz": 4970
     },
     "sub_unit": "Printemps",
@@ -11510,12 +8496,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Cool",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": true,
     "full_name": "SR Flower Viewing Hoshizora Rin",
     "id": 865,
@@ -11523,12 +8503,6 @@ app.constant('CardData',
     "japan_only": false,
     "main_unit": "Muse",
     "name": "Hoshizora Rin",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": false,
     "rarity": "SR",
     "release_date": "2016-04-20",
@@ -11543,6 +8517,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 4520,
+      "display": 4520,
       "idlz": 4800
     },
     "sub_unit": "Lily White",
@@ -11552,12 +8527,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Pure",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": null,
     "full_name": "UR Baseball Ayase Eli",
     "id": 862,
@@ -11565,12 +8534,6 @@ app.constant('CardData',
     "japan_only": false,
     "main_unit": "Muse",
     "name": "Ayase Eli",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": true,
     "rarity": "UR",
     "release_date": "2016-04-15",
@@ -11585,6 +8548,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 5020,
+      "display": 5020,
       "idlz": 5320
     },
     "sub_unit": "Bibi",
@@ -11594,12 +8558,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Smile",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": null,
     "full_name": "SR Baseball Yazawa Nico",
     "id": 861,
@@ -11607,12 +8565,6 @@ app.constant('CardData',
     "japan_only": false,
     "main_unit": "Muse",
     "name": "Yazawa Nico",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": true,
     "rarity": "SR",
     "release_date": "2016-04-15",
@@ -11627,6 +8579,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 4610,
+      "display": 4610,
       "idlz": 4890
     },
     "sub_unit": "Bibi",
@@ -11636,12 +8589,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Cool",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": null,
     "full_name": "SR Baseball Sonoda Umi",
     "id": 860,
@@ -11649,12 +8596,6 @@ app.constant('CardData',
     "japan_only": false,
     "main_unit": "Muse",
     "name": "Sonoda Umi",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": true,
     "rarity": "SR",
     "release_date": "2016-04-15",
@@ -11669,6 +8610,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 4670,
+      "display": 4670,
       "idlz": 4950
     },
     "sub_unit": "Lily White",
@@ -11678,12 +8620,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Pure",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": null,
     "full_name": "SR Baseball Minami Kotori",
     "id": 859,
@@ -11691,12 +8627,6 @@ app.constant('CardData',
     "japan_only": false,
     "main_unit": "Muse",
     "name": "Minami Kotori",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": true,
     "rarity": "SR",
     "release_date": "2016-04-15",
@@ -11711,6 +8641,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 4670,
+      "display": 4670,
       "idlz": 4950
     },
     "sub_unit": "Printemps",
@@ -11720,12 +8651,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Pure",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": true,
     "full_name": "SR Reading Koizumi Hanayo",
     "id": 857,
@@ -11733,12 +8658,6 @@ app.constant('CardData',
     "japan_only": true,
     "main_unit": "Muse",
     "name": "Koizumi Hanayo",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": false,
     "rarity": "SR",
     "release_date": "2016-04-05",
@@ -11753,6 +8672,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 4470,
+      "display": 4470,
       "idlz": 4750
     },
     "sub_unit": "Printemps",
@@ -11762,12 +8682,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Smile",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": null,
     "full_name": "UR Baseball Nishikino Maki",
     "id": 855,
@@ -11775,12 +8689,6 @@ app.constant('CardData',
     "japan_only": false,
     "main_unit": "Muse",
     "name": "Nishikino Maki",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": true,
     "rarity": "UR",
     "release_date": "2016-03-31",
@@ -11795,6 +8703,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 5030,
+      "display": 5030,
       "idlz": 5330
     },
     "sub_unit": "Bibi",
@@ -11804,12 +8713,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Cool",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": null,
     "full_name": "UR Promo Sonoda Umi",
     "id": 854,
@@ -11817,12 +8720,6 @@ app.constant('CardData',
     "japan_only": false,
     "main_unit": "Muse",
     "name": "Sonoda Umi",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": false,
     "rarity": "UR",
     "release_date": "2016-03-31",
@@ -11837,6 +8734,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 4350,
+      "display": 4350,
       "idlz": 4350
     },
     "sub_unit": "Lily White",
@@ -11846,12 +8744,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Pure",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": null,
     "full_name": "UR Promo Minami Kotori",
     "id": 853,
@@ -11859,12 +8751,6 @@ app.constant('CardData',
     "japan_only": false,
     "main_unit": "Muse",
     "name": "Minami Kotori",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": false,
     "rarity": "UR",
     "release_date": "2016-03-31",
@@ -11879,6 +8765,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 4360,
+      "display": 4360,
       "idlz": 4360
     },
     "sub_unit": "Printemps",
@@ -11888,12 +8775,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Smile",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": null,
     "full_name": "UR Promo Kousaka Honoka",
     "id": 852,
@@ -11901,12 +8782,6 @@ app.constant('CardData',
     "japan_only": false,
     "main_unit": "Muse",
     "name": "Kousaka Honoka",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": false,
     "rarity": "UR",
     "release_date": "2016-03-31",
@@ -11921,6 +8796,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 4340,
+      "display": 4340,
       "idlz": 4340
     },
     "sub_unit": "Printemps",
@@ -11930,12 +8806,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Cool",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": null,
     "full_name": "SR Baseball Koizumi Hanayo",
     "id": 851,
@@ -11943,12 +8813,6 @@ app.constant('CardData',
     "japan_only": false,
     "main_unit": "Muse",
     "name": "Koizumi Hanayo",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": true,
     "rarity": "SR",
     "release_date": "2016-03-31",
@@ -11963,6 +8827,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 4630,
+      "display": 4630,
       "idlz": 4910
     },
     "sub_unit": "Printemps",
@@ -11972,12 +8837,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Cool",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": null,
     "full_name": "SR Baseball Toujou Nozomi",
     "id": 850,
@@ -11985,12 +8844,6 @@ app.constant('CardData',
     "japan_only": false,
     "main_unit": "Muse",
     "name": "Toujou Nozomi",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": true,
     "rarity": "SR",
     "release_date": "2016-03-31",
@@ -12005,6 +8858,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 4700,
+      "display": 4700,
       "idlz": 4980
     },
     "sub_unit": "Lily White",
@@ -12014,12 +8868,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Pure",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": null,
     "full_name": "SR Baseball Hoshizora Rin",
     "id": 849,
@@ -12027,12 +8875,6 @@ app.constant('CardData',
     "japan_only": false,
     "main_unit": "Muse",
     "name": "Hoshizora Rin",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": true,
     "rarity": "SR",
     "release_date": "2016-03-31",
@@ -12047,6 +8889,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 4640,
+      "display": 4640,
       "idlz": 4920
     },
     "sub_unit": "Lily White",
@@ -12056,12 +8899,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Smile",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": null,
     "full_name": "SR Baseball Kousaka Honoka",
     "id": 848,
@@ -12069,12 +8906,6 @@ app.constant('CardData',
     "japan_only": false,
     "main_unit": "Muse",
     "name": "Kousaka Honoka",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": true,
     "rarity": "SR",
     "release_date": "2016-03-31",
@@ -12089,6 +8920,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 4620,
+      "display": 4620,
       "idlz": 4900
     },
     "sub_unit": "Printemps",
@@ -12098,12 +8930,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Smile",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": null,
     "full_name": "UR Promo Kousaka Honoka",
     "id": 846,
@@ -12111,12 +8937,6 @@ app.constant('CardData',
     "japan_only": true,
     "main_unit": "Muse",
     "name": "Kousaka Honoka",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": false,
     "rarity": "UR",
     "release_date": "2016-03-20",
@@ -12131,6 +8951,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 4350,
+      "display": 4350,
       "idlz": 4350
     },
     "sub_unit": "Printemps",
@@ -12140,12 +8961,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Cool",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": true,
     "full_name": "SR Rock Yazawa Nico",
     "id": 845,
@@ -12153,12 +8968,6 @@ app.constant('CardData',
     "japan_only": false,
     "main_unit": "Muse",
     "name": "Yazawa Nico",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": false,
     "rarity": "SR",
     "release_date": "2016-03-20",
@@ -12173,6 +8982,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 4410,
+      "display": 4410,
       "idlz": 4690
     },
     "sub_unit": "Bibi",
@@ -12182,12 +8992,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Smile",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": null,
     "full_name": "UR Taisho Roman Koizumi Hanayo",
     "id": 843,
@@ -12195,12 +8999,6 @@ app.constant('CardData',
     "japan_only": false,
     "main_unit": "Muse",
     "name": "Koizumi Hanayo",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": true,
     "rarity": "UR",
     "release_date": "2016-03-15",
@@ -12215,6 +9013,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 5040,
+      "display": 5040,
       "idlz": 5340
     },
     "sub_unit": "Printemps",
@@ -12224,12 +9023,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Pure",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": null,
     "full_name": "SR Taisho Roman Yazawa Nico",
     "id": 842,
@@ -12237,12 +9030,6 @@ app.constant('CardData',
     "japan_only": false,
     "main_unit": "Muse",
     "name": "Yazawa Nico",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": true,
     "rarity": "SR",
     "release_date": "2016-03-15",
@@ -12257,6 +9044,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 4660,
+      "display": 4660,
       "idlz": 4940
     },
     "sub_unit": "Bibi",
@@ -12266,12 +9054,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Cool",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": null,
     "full_name": "SR Taisho Roman Nishikino Maki",
     "id": 841,
@@ -12279,12 +9061,6 @@ app.constant('CardData',
     "japan_only": false,
     "main_unit": "Muse",
     "name": "Nishikino Maki",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": true,
     "rarity": "SR",
     "release_date": "2016-03-15",
@@ -12299,6 +9075,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 4710,
+      "display": 4710,
       "idlz": 4990
     },
     "sub_unit": "Bibi",
@@ -12308,12 +9085,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Smile",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": null,
     "full_name": "SR Taisho Roman Sonoda Umi",
     "id": 840,
@@ -12321,12 +9092,6 @@ app.constant('CardData',
     "japan_only": false,
     "main_unit": "Muse",
     "name": "Sonoda Umi",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": true,
     "rarity": "SR",
     "release_date": "2016-03-15",
@@ -12341,6 +9106,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 4600,
+      "display": 4600,
       "idlz": 4880
     },
     "sub_unit": "Lily White",
@@ -12350,12 +9116,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Smile",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": true,
     "full_name": "SR Easter Nishikino Maki",
     "id": 835,
@@ -12363,12 +9123,6 @@ app.constant('CardData',
     "japan_only": false,
     "main_unit": "Muse",
     "name": "Nishikino Maki",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": false,
     "rarity": "SR",
     "release_date": "2016-03-05",
@@ -12383,6 +9137,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 4530,
+      "display": 4530,
       "idlz": 4810
     },
     "sub_unit": "Bibi",
@@ -12392,12 +9147,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Pure",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": null,
     "full_name": "UR Taisho Roman Kousaka Honoka",
     "id": 833,
@@ -12405,12 +9154,6 @@ app.constant('CardData',
     "japan_only": false,
     "main_unit": "Muse",
     "name": "Kousaka Honoka",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": true,
     "rarity": "UR",
     "release_date": "2016-02-29",
@@ -12425,6 +9168,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 5010,
+      "display": 5010,
       "idlz": 5310
     },
     "sub_unit": "Printemps",
@@ -12434,12 +9178,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Smile",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": null,
     "full_name": "SR Promo Yazawa Nico",
     "id": 832,
@@ -12447,12 +9185,6 @@ app.constant('CardData',
     "japan_only": true,
     "main_unit": "Muse",
     "name": "Yazawa Nico",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": false,
     "rarity": "SR",
     "release_date": "2016-02-29",
@@ -12467,6 +9199,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 4280,
+      "display": 4280,
       "idlz": 4280
     },
     "sub_unit": "Bibi",
@@ -12476,12 +9209,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Pure",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": null,
     "full_name": "SR Promo Koizumi Hanayo",
     "id": 831,
@@ -12489,12 +9216,6 @@ app.constant('CardData',
     "japan_only": true,
     "main_unit": "Muse",
     "name": "Koizumi Hanayo",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": false,
     "rarity": "SR",
     "release_date": "2016-02-29",
@@ -12509,6 +9230,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 4180,
+      "display": 4180,
       "idlz": 4180
     },
     "sub_unit": "Printemps",
@@ -12518,12 +9240,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Pure",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": null,
     "full_name": "SR Promo Toujou Nozomi",
     "id": 830,
@@ -12531,12 +9247,6 @@ app.constant('CardData',
     "japan_only": true,
     "main_unit": "Muse",
     "name": "Toujou Nozomi",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": false,
     "rarity": "SR",
     "release_date": "2016-02-29",
@@ -12551,6 +9261,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 4180,
+      "display": 4180,
       "idlz": 4180
     },
     "sub_unit": "Lily White",
@@ -12560,12 +9271,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Smile",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": null,
     "full_name": "SR Taisho Roman Toujou Nozomi",
     "id": 829,
@@ -12573,12 +9278,6 @@ app.constant('CardData',
     "japan_only": false,
     "main_unit": "Muse",
     "name": "Toujou Nozomi",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": true,
     "rarity": "SR",
     "release_date": "2016-02-29",
@@ -12593,6 +9292,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 4660,
+      "display": 4660,
       "idlz": 4940
     },
     "sub_unit": "Lily White",
@@ -12602,12 +9302,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Cool",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": null,
     "full_name": "SR Promo Nishikino Maki",
     "id": 828,
@@ -12615,12 +9309,6 @@ app.constant('CardData',
     "japan_only": true,
     "main_unit": "Muse",
     "name": "Nishikino Maki",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": false,
     "rarity": "SR",
     "release_date": "2016-02-29",
@@ -12635,6 +9323,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 4230,
+      "display": 4230,
       "idlz": 4230
     },
     "sub_unit": "Bibi",
@@ -12644,12 +9333,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Cool",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": null,
     "full_name": "SR Taisho Roman Hoshizora Rin",
     "id": 827,
@@ -12657,12 +9340,6 @@ app.constant('CardData',
     "japan_only": false,
     "main_unit": "Muse",
     "name": "Hoshizora Rin",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": true,
     "rarity": "SR",
     "release_date": "2016-02-29",
@@ -12677,6 +9354,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 4700,
+      "display": 4700,
       "idlz": 4980
     },
     "sub_unit": "Lily White",
@@ -12686,12 +9364,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Smile",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": null,
     "full_name": "SR Promo Hoshizora Rin",
     "id": 826,
@@ -12699,12 +9371,6 @@ app.constant('CardData',
     "japan_only": true,
     "main_unit": "Muse",
     "name": "Hoshizora Rin",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": false,
     "rarity": "SR",
     "release_date": "2016-02-29",
@@ -12719,6 +9385,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 4280,
+      "display": 4280,
       "idlz": 4280
     },
     "sub_unit": "Lily White",
@@ -12728,12 +9395,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Cool",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": null,
     "full_name": "SR Promo Sonoda Umi",
     "id": 825,
@@ -12741,12 +9402,6 @@ app.constant('CardData',
     "japan_only": true,
     "main_unit": "Muse",
     "name": "Sonoda Umi",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": false,
     "rarity": "SR",
     "release_date": "2016-02-29",
@@ -12761,6 +9416,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 4230,
+      "display": 4230,
       "idlz": 4230
     },
     "sub_unit": "Lily White",
@@ -12770,12 +9426,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Cool",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": null,
     "full_name": "SR Taisho Roman Minami Kotori",
     "id": 824,
@@ -12783,12 +9433,6 @@ app.constant('CardData',
     "japan_only": false,
     "main_unit": "Muse",
     "name": "Minami Kotori",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": true,
     "rarity": "SR",
     "release_date": "2016-02-29",
@@ -12803,6 +9447,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 4620,
+      "display": 4620,
       "idlz": 4900
     },
     "sub_unit": "Printemps",
@@ -12812,12 +9457,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Pure",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": null,
     "full_name": "SR Promo Minami Kotori",
     "id": 823,
@@ -12825,12 +9464,6 @@ app.constant('CardData',
     "japan_only": true,
     "main_unit": "Muse",
     "name": "Minami Kotori",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": false,
     "rarity": "SR",
     "release_date": "2016-02-29",
@@ -12845,6 +9478,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 4180,
+      "display": 4180,
       "idlz": 4180
     },
     "sub_unit": "Printemps",
@@ -12854,12 +9488,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Cool",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": null,
     "full_name": "SR Promo Ayase Eli",
     "id": 822,
@@ -12867,12 +9495,6 @@ app.constant('CardData',
     "japan_only": true,
     "main_unit": "Muse",
     "name": "Ayase Eli",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": false,
     "rarity": "SR",
     "release_date": "2016-02-29",
@@ -12887,6 +9509,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 4230,
+      "display": 4230,
       "idlz": 4230
     },
     "sub_unit": "Bibi",
@@ -12896,12 +9519,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Pure",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": null,
     "full_name": "SR Taisho Roman Ayase Eli",
     "id": 821,
@@ -12909,12 +9526,6 @@ app.constant('CardData',
     "japan_only": false,
     "main_unit": "Muse",
     "name": "Ayase Eli",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": true,
     "rarity": "SR",
     "release_date": "2016-02-29",
@@ -12929,6 +9540,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 4630,
+      "display": 4630,
       "idlz": 4910
     },
     "sub_unit": "Bibi",
@@ -12938,12 +9550,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Smile",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": null,
     "full_name": "SR Promo Kousaka Honoka",
     "id": 820,
@@ -12951,12 +9557,6 @@ app.constant('CardData',
     "japan_only": true,
     "main_unit": "Muse",
     "name": "Kousaka Honoka",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": false,
     "rarity": "SR",
     "release_date": "2016-02-29",
@@ -12971,6 +9571,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 4280,
+      "display": 4280,
       "idlz": 4280
     },
     "sub_unit": "Printemps",
@@ -12980,12 +9581,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Smile",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": null,
     "full_name": "UR Promo Kousaka Honoka",
     "id": 818,
@@ -12993,12 +9588,6 @@ app.constant('CardData',
     "japan_only": true,
     "main_unit": "Muse",
     "name": "Kousaka Honoka",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": false,
     "rarity": "UR",
     "release_date": "2016-02-20",
@@ -13013,6 +9602,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 4360,
+      "display": 4360,
       "idlz": 4360
     },
     "sub_unit": "Printemps",
@@ -13022,12 +9612,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Smile",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": true,
     "full_name": "SR Bubbles Sonoda Umi",
     "id": 817,
@@ -13035,12 +9619,6 @@ app.constant('CardData',
     "japan_only": false,
     "main_unit": "Muse",
     "name": "Sonoda Umi",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": false,
     "rarity": "SR",
     "release_date": "2016-02-20",
@@ -13055,6 +9633,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 4460,
+      "display": 4460,
       "idlz": 4740
     },
     "sub_unit": "Lily White",
@@ -13064,12 +9643,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Cool",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": null,
     "full_name": "UR Land of Fairies Hoshizora Rin",
     "id": 815,
@@ -13077,12 +9650,6 @@ app.constant('CardData',
     "japan_only": false,
     "main_unit": "Muse",
     "name": "Hoshizora Rin",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": true,
     "rarity": "UR",
     "release_date": "2016-02-15",
@@ -13097,6 +9664,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 5030,
+      "display": 5030,
       "idlz": 5330
     },
     "sub_unit": "Lily White",
@@ -13106,12 +9674,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Smile",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": null,
     "full_name": "SR Land of Fairies Nishikino Maki",
     "id": 814,
@@ -13119,12 +9681,6 @@ app.constant('CardData',
     "japan_only": false,
     "main_unit": "Muse",
     "name": "Nishikino Maki",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": true,
     "rarity": "SR",
     "release_date": "2016-02-15",
@@ -13139,6 +9695,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 4610,
+      "display": 4610,
       "idlz": 4890
     },
     "sub_unit": "Bibi",
@@ -13148,12 +9705,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Pure",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": null,
     "full_name": "SR Land of Fairies Minami Kotori",
     "id": 813,
@@ -13161,12 +9712,6 @@ app.constant('CardData',
     "japan_only": false,
     "main_unit": "Muse",
     "name": "Minami Kotori",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": true,
     "rarity": "SR",
     "release_date": "2016-02-15",
@@ -13181,6 +9726,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 4670,
+      "display": 4670,
       "idlz": 4950
     },
     "sub_unit": "Printemps",
@@ -13190,12 +9736,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Cool",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": null,
     "full_name": "SR Land of Fairies Kousaka Honoka",
     "id": 812,
@@ -13203,12 +9743,6 @@ app.constant('CardData',
     "japan_only": false,
     "main_unit": "Muse",
     "name": "Kousaka Honoka",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": true,
     "rarity": "SR",
     "release_date": "2016-02-15",
@@ -13223,6 +9757,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 4710,
+      "display": 4710,
       "idlz": 4990
     },
     "sub_unit": "Printemps",
@@ -13232,12 +9767,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Pure",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": true,
     "full_name": "SR Rock Ayase Eli",
     "id": 810,
@@ -13245,12 +9774,6 @@ app.constant('CardData',
     "japan_only": false,
     "main_unit": "Muse",
     "name": "Ayase Eli",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": false,
     "rarity": "SR",
     "release_date": "2016-02-05",
@@ -13265,6 +9788,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 4450,
+      "display": 4450,
       "idlz": 4730
     },
     "sub_unit": "Bibi",
@@ -13274,12 +9798,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Pure",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": null,
     "full_name": "UR Land of Fairies Yazawa Nico",
     "id": 799,
@@ -13287,12 +9805,6 @@ app.constant('CardData',
     "japan_only": false,
     "main_unit": "Muse",
     "name": "Yazawa Nico",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": true,
     "rarity": "UR",
     "release_date": "2016-01-31",
@@ -13307,6 +9819,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 5020,
+      "display": 5020,
       "idlz": 5320
     },
     "sub_unit": "Bibi",
@@ -13316,12 +9829,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Cool",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": null,
     "full_name": "SR Land of Fairies Koizumi Hanayo",
     "id": 798,
@@ -13329,12 +9836,6 @@ app.constant('CardData',
     "japan_only": false,
     "main_unit": "Muse",
     "name": "Koizumi Hanayo",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": true,
     "rarity": "SR",
     "release_date": "2016-01-31",
@@ -13349,6 +9850,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 4670,
+      "display": 4670,
       "idlz": 4950
     },
     "sub_unit": "Printemps",
@@ -13358,12 +9860,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Pure",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": null,
     "full_name": "SR Land of Fairies Toujou Nozomi",
     "id": 797,
@@ -13371,12 +9867,6 @@ app.constant('CardData',
     "japan_only": false,
     "main_unit": "Muse",
     "name": "Toujou Nozomi",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": true,
     "rarity": "SR",
     "release_date": "2016-01-31",
@@ -13391,6 +9881,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 4610,
+      "display": 4610,
       "idlz": 4890
     },
     "sub_unit": "Lily White",
@@ -13400,12 +9891,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Pure",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": null,
     "full_name": "SR Land of Fairies Sonoda Umi",
     "id": 796,
@@ -13413,12 +9898,6 @@ app.constant('CardData',
     "japan_only": false,
     "main_unit": "Muse",
     "name": "Sonoda Umi",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": true,
     "rarity": "SR",
     "release_date": "2016-01-31",
@@ -13433,6 +9912,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 4700,
+      "display": 4700,
       "idlz": 4980
     },
     "sub_unit": "Lily White",
@@ -13442,12 +9922,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Smile",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": null,
     "full_name": "SR Land of Fairies Ayase Eli",
     "id": 795,
@@ -13455,12 +9929,6 @@ app.constant('CardData',
     "japan_only": false,
     "main_unit": "Muse",
     "name": "Ayase Eli",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": true,
     "rarity": "SR",
     "release_date": "2016-01-31",
@@ -13475,6 +9943,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 4670,
+      "display": 4670,
       "idlz": 4950
     },
     "sub_unit": "Bibi",
@@ -13484,12 +9953,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Cool",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": true,
     "full_name": "SR Setsubun Minami Kotori",
     "id": 784,
@@ -13497,12 +9960,6 @@ app.constant('CardData',
     "japan_only": false,
     "main_unit": "Muse",
     "name": "Minami Kotori",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": false,
     "rarity": "SR",
     "release_date": "2016-01-20",
@@ -13517,6 +9974,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 4530,
+      "display": 4530,
       "idlz": 4810
     },
     "sub_unit": "Printemps",
@@ -13526,12 +9984,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Smile",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": null,
     "full_name": "UR Circus Sonoda Umi",
     "id": 782,
@@ -13539,12 +9991,6 @@ app.constant('CardData',
     "japan_only": false,
     "main_unit": "Muse",
     "name": "Sonoda Umi",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": true,
     "rarity": "UR",
     "release_date": "2016-01-15",
@@ -13559,6 +10005,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 5010,
+      "display": 5010,
       "idlz": 5310
     },
     "sub_unit": "Lily White",
@@ -13568,12 +10015,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Cool",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": null,
     "full_name": "SR Promo Yazawa Nico",
     "id": 781,
@@ -13581,12 +10022,6 @@ app.constant('CardData',
     "japan_only": true,
     "main_unit": "Muse",
     "name": "Yazawa Nico",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": false,
     "rarity": "SR",
     "release_date": "2016-01-15",
@@ -13601,6 +10036,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 4160,
+      "display": 4160,
       "idlz": 4160
     },
     "sub_unit": "Bibi",
@@ -13610,12 +10046,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Pure",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": null,
     "full_name": "SR Circus Koizumi Hanayo",
     "id": 780,
@@ -13623,12 +10053,6 @@ app.constant('CardData',
     "japan_only": false,
     "main_unit": "Muse",
     "name": "Koizumi Hanayo",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": true,
     "rarity": "SR",
     "release_date": "2016-01-15",
@@ -13643,6 +10067,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 4640,
+      "display": 4640,
       "idlz": 4920
     },
     "sub_unit": "Printemps",
@@ -13652,12 +10077,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Cool",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": null,
     "full_name": "SR Promo Nishikino Maki",
     "id": 779,
@@ -13665,12 +10084,6 @@ app.constant('CardData',
     "japan_only": true,
     "main_unit": "Muse",
     "name": "Nishikino Maki",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": false,
     "rarity": "SR",
     "release_date": "2016-01-15",
@@ -13685,6 +10098,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 4160,
+      "display": 4160,
       "idlz": 4160
     },
     "sub_unit": "Bibi",
@@ -13694,12 +10108,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Smile",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": null,
     "full_name": "SR Circus Minami Kotori",
     "id": 778,
@@ -13707,12 +10115,6 @@ app.constant('CardData',
     "japan_only": false,
     "main_unit": "Muse",
     "name": "Minami Kotori",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": true,
     "rarity": "SR",
     "release_date": "2016-01-15",
@@ -13727,6 +10129,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 4680,
+      "display": 4680,
       "idlz": 4960
     },
     "sub_unit": "Printemps",
@@ -13736,12 +10139,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Cool",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": null,
     "full_name": "SR Promo Ayase Eli",
     "id": 777,
@@ -13749,12 +10146,6 @@ app.constant('CardData',
     "japan_only": true,
     "main_unit": "Muse",
     "name": "Ayase Eli",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": false,
     "rarity": "SR",
     "release_date": "2016-01-15",
@@ -13769,6 +10160,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 4160,
+      "display": 4160,
       "idlz": 4160
     },
     "sub_unit": "Bibi",
@@ -13778,12 +10170,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Cool",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": null,
     "full_name": "SR Circus Ayase Eli",
     "id": 776,
@@ -13791,12 +10177,6 @@ app.constant('CardData',
     "japan_only": false,
     "main_unit": "Muse",
     "name": "Ayase Eli",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": true,
     "rarity": "SR",
     "release_date": "2016-01-15",
@@ -13811,6 +10191,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 4660,
+      "display": 4660,
       "idlz": 4940
     },
     "sub_unit": "Bibi",
@@ -13820,12 +10201,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Smile",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": true,
     "full_name": "SR New Year's Food Toujou Nozomi",
     "id": 774,
@@ -13833,12 +10208,6 @@ app.constant('CardData',
     "japan_only": false,
     "main_unit": "Muse",
     "name": "Toujou Nozomi",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": false,
     "rarity": "SR",
     "release_date": "2016-01-05",
@@ -13853,6 +10222,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 4480,
+      "display": 4480,
       "idlz": 4760
     },
     "sub_unit": "Lily White",
@@ -13862,12 +10232,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Pure",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": null,
     "full_name": "UR Circus Nishikino Maki",
     "id": 772,
@@ -13875,12 +10239,6 @@ app.constant('CardData',
     "japan_only": false,
     "main_unit": "Muse",
     "name": "Nishikino Maki",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": true,
     "rarity": "UR",
     "release_date": "2015-12-31",
@@ -13895,6 +10253,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 5040,
+      "display": 5040,
       "idlz": 5340
     },
     "sub_unit": "Bibi",
@@ -13904,12 +10263,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Cool",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": null,
     "full_name": "SR Circus Yazawa Nico",
     "id": 771,
@@ -13917,12 +10270,6 @@ app.constant('CardData',
     "japan_only": false,
     "main_unit": "Muse",
     "name": "Yazawa Nico",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": true,
     "rarity": "SR",
     "release_date": "2015-12-31",
@@ -13937,6 +10284,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 4610,
+      "display": 4610,
       "idlz": 4890
     },
     "sub_unit": "Bibi",
@@ -13946,12 +10294,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Cool",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": null,
     "full_name": "SR Circus Toujou Nozomi",
     "id": 770,
@@ -13959,12 +10301,6 @@ app.constant('CardData',
     "japan_only": false,
     "main_unit": "Muse",
     "name": "Toujou Nozomi",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": true,
     "rarity": "SR",
     "release_date": "2015-12-31",
@@ -13979,6 +10315,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 4690,
+      "display": 4690,
       "idlz": 4970
     },
     "sub_unit": "Lily White",
@@ -13988,12 +10325,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Smile",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": null,
     "full_name": "SR Circus Hoshizora Rin",
     "id": 769,
@@ -14001,12 +10332,6 @@ app.constant('CardData',
     "japan_only": false,
     "main_unit": "Muse",
     "name": "Hoshizora Rin",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": true,
     "rarity": "SR",
     "release_date": "2015-12-31",
@@ -14021,6 +10346,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 4620,
+      "display": 4620,
       "idlz": 4900
     },
     "sub_unit": "Lily White",
@@ -14030,12 +10356,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Pure",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": null,
     "full_name": "SR Circus Kousaka Honoka",
     "id": 768,
@@ -14043,12 +10363,6 @@ app.constant('CardData',
     "japan_only": false,
     "main_unit": "Muse",
     "name": "Kousaka Honoka",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": true,
     "rarity": "SR",
     "release_date": "2015-12-31",
@@ -14063,6 +10377,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 4680,
+      "display": 4680,
       "idlz": 4960
     },
     "sub_unit": "Printemps",
@@ -14072,12 +10387,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Pure",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": null,
     "full_name": "SR Promo Toujou Nozomi",
     "id": 766,
@@ -14085,12 +10394,6 @@ app.constant('CardData',
     "japan_only": true,
     "main_unit": "Muse",
     "name": "Toujou Nozomi",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": false,
     "rarity": "SR",
     "release_date": "2015-12-20",
@@ -14105,6 +10408,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 4360,
+      "display": 4360,
       "idlz": 4360
     },
     "sub_unit": "Lily White",
@@ -14114,12 +10418,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Pure",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": null,
     "full_name": "SR Promo Hoshizora Rin",
     "id": 765,
@@ -14127,12 +10425,6 @@ app.constant('CardData',
     "japan_only": true,
     "main_unit": "Muse",
     "name": "Hoshizora Rin",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": false,
     "rarity": "SR",
     "release_date": "2015-12-20",
@@ -14147,6 +10439,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 4360,
+      "display": 4360,
       "idlz": 4360
     },
     "sub_unit": "Lily White",
@@ -14156,12 +10449,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Pure",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": true,
     "full_name": "SR Shrine Maiden Hoshizora Rin",
     "id": 764,
@@ -14169,12 +10456,6 @@ app.constant('CardData',
     "japan_only": false,
     "main_unit": "Muse",
     "name": "Hoshizora Rin",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": false,
     "rarity": "SR",
     "release_date": "2015-12-20",
@@ -14189,6 +10470,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 4410,
+      "display": 4410,
       "idlz": 4690
     },
     "sub_unit": "Lily White",
@@ -14198,12 +10480,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Pure",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": null,
     "full_name": "SR Promo Sonoda Umi",
     "id": 763,
@@ -14211,12 +10487,6 @@ app.constant('CardData',
     "japan_only": true,
     "main_unit": "Muse",
     "name": "Sonoda Umi",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": false,
     "rarity": "SR",
     "release_date": "2015-12-20",
@@ -14231,6 +10501,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 4360,
+      "display": 4360,
       "idlz": 4360
     },
     "sub_unit": "Lily White",
@@ -14240,12 +10511,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Cool",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": null,
     "full_name": "UR Christmas Koizumi Hanayo",
     "id": 761,
@@ -14253,12 +10518,6 @@ app.constant('CardData',
     "japan_only": false,
     "main_unit": "Muse",
     "name": "Koizumi Hanayo",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": true,
     "rarity": "UR",
     "release_date": "2015-12-15",
@@ -14273,6 +10532,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 5040,
+      "display": 5040,
       "idlz": 5340
     },
     "sub_unit": "Printemps",
@@ -14282,12 +10542,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Pure",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": null,
     "full_name": "SR Christmas Yazawa Nico",
     "id": 760,
@@ -14295,12 +10549,6 @@ app.constant('CardData',
     "japan_only": false,
     "main_unit": "Muse",
     "name": "Yazawa Nico",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": true,
     "rarity": "SR",
     "release_date": "2015-12-15",
@@ -14315,6 +10563,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 4700,
+      "display": 4700,
       "idlz": 4980
     },
     "sub_unit": "Bibi",
@@ -14324,12 +10573,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Cool",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": null,
     "full_name": "SR Christmas Minami Kotori",
     "id": 759,
@@ -14337,12 +10580,6 @@ app.constant('CardData',
     "japan_only": false,
     "main_unit": "Muse",
     "name": "Minami Kotori",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": true,
     "rarity": "SR",
     "release_date": "2015-12-15",
@@ -14357,6 +10594,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 4640,
+      "display": 4640,
       "idlz": 4920
     },
     "sub_unit": "Printemps",
@@ -14366,12 +10604,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Smile",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": null,
     "full_name": "SR Christmas Kousaka Honoka",
     "id": 758,
@@ -14379,12 +10611,6 @@ app.constant('CardData',
     "japan_only": false,
     "main_unit": "Muse",
     "name": "Kousaka Honoka",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": true,
     "rarity": "SR",
     "release_date": "2015-12-15",
@@ -14399,6 +10625,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 4610,
+      "display": 4610,
       "idlz": 4890
     },
     "sub_unit": "Printemps",
@@ -14408,12 +10635,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Smile",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": null,
     "full_name": "UR Promo Kousaka Honoka",
     "id": 747,
@@ -14421,12 +10642,6 @@ app.constant('CardData',
     "japan_only": true,
     "main_unit": "Muse",
     "name": "Kousaka Honoka",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": false,
     "rarity": "UR",
     "release_date": "2015-12-05",
@@ -14441,6 +10656,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 4230,
+      "display": 4230,
       "idlz": 4230
     },
     "sub_unit": "Printemps",
@@ -14450,12 +10666,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Cool",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": true,
     "full_name": "SR Vampire Kousaka Honoka",
     "id": 746,
@@ -14463,12 +10673,6 @@ app.constant('CardData',
     "japan_only": false,
     "main_unit": "Muse",
     "name": "Kousaka Honoka",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": false,
     "rarity": "SR",
     "release_date": "2015-12-05",
@@ -14483,6 +10687,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 4540,
+      "display": 4540,
       "idlz": 4820
     },
     "sub_unit": "Printemps",
@@ -14492,12 +10697,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Smile",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": null,
     "full_name": "UR Christmas Ayase Eli",
     "id": 744,
@@ -14505,12 +10704,6 @@ app.constant('CardData',
     "japan_only": false,
     "main_unit": "Muse",
     "name": "Ayase Eli",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": true,
     "rarity": "UR",
     "release_date": "2015-11-30",
@@ -14525,6 +10718,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 5040,
+      "display": 5040,
       "idlz": 5340
     },
     "sub_unit": "Bibi",
@@ -14534,12 +10728,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Pure",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": null,
     "full_name": "SR Christmas Toujou Nozomi",
     "id": 743,
@@ -14547,12 +10735,6 @@ app.constant('CardData',
     "japan_only": false,
     "main_unit": "Muse",
     "name": "Toujou Nozomi",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": true,
     "rarity": "SR",
     "release_date": "2015-11-30",
@@ -14567,6 +10749,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 4690,
+      "display": 4690,
       "idlz": 4970
     },
     "sub_unit": "Lily White",
@@ -14576,12 +10759,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Smile",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": null,
     "full_name": "SR Christmas Nishikino Maki",
     "id": 742,
@@ -14589,12 +10766,6 @@ app.constant('CardData',
     "japan_only": false,
     "main_unit": "Muse",
     "name": "Nishikino Maki",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": true,
     "rarity": "SR",
     "release_date": "2015-11-30",
@@ -14609,6 +10780,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 4680,
+      "display": 4680,
       "idlz": 4960
     },
     "sub_unit": "Bibi",
@@ -14618,12 +10790,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Cool",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": null,
     "full_name": "SR Christmas Hoshizora Rin",
     "id": 741,
@@ -14631,12 +10797,6 @@ app.constant('CardData',
     "japan_only": false,
     "main_unit": "Muse",
     "name": "Hoshizora Rin",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": true,
     "rarity": "SR",
     "release_date": "2015-11-30",
@@ -14651,6 +10811,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 4630,
+      "display": 4630,
       "idlz": 4910
     },
     "sub_unit": "Lily White",
@@ -14660,12 +10821,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Pure",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": null,
     "full_name": "SR Christmas Sonoda Umi",
     "id": 740,
@@ -14673,12 +10828,6 @@ app.constant('CardData',
     "japan_only": false,
     "main_unit": "Muse",
     "name": "Sonoda Umi",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": true,
     "rarity": "SR",
     "release_date": "2015-11-30",
@@ -14693,6 +10842,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 4680,
+      "display": 4680,
       "idlz": 4960
     },
     "sub_unit": "Lily White",
@@ -14702,12 +10852,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Smile",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": null,
     "full_name": "SR Promo Koizumi Hanayo",
     "id": 738,
@@ -14715,12 +10859,6 @@ app.constant('CardData',
     "japan_only": true,
     "main_unit": "Muse",
     "name": "Koizumi Hanayo",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": false,
     "rarity": "SR",
     "release_date": "2015-11-20",
@@ -14735,6 +10873,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 4260,
+      "display": 4260,
       "idlz": 4260
     },
     "sub_unit": "Printemps",
@@ -14744,12 +10883,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Cool",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": true,
     "full_name": "SR Explorer Sonoda Umi",
     "id": 737,
@@ -14757,12 +10890,6 @@ app.constant('CardData',
     "japan_only": false,
     "main_unit": "Muse",
     "name": "Sonoda Umi",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": false,
     "rarity": "SR",
     "release_date": "2015-11-20",
@@ -14777,6 +10904,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 4480,
+      "display": 4480,
       "idlz": 4760
     },
     "sub_unit": "Lily White",
@@ -14786,12 +10914,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Smile",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": null,
     "full_name": "SR Promo Minami Kotori",
     "id": 736,
@@ -14799,12 +10921,6 @@ app.constant('CardData',
     "japan_only": true,
     "main_unit": "Muse",
     "name": "Minami Kotori",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": false,
     "rarity": "SR",
     "release_date": "2015-11-20",
@@ -14819,6 +10935,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 4260,
+      "display": 4260,
       "idlz": 4260
     },
     "sub_unit": "Printemps",
@@ -14828,12 +10945,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Smile",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": null,
     "full_name": "SR Promo Kousaka Honoka",
     "id": 735,
@@ -14841,12 +10952,6 @@ app.constant('CardData',
     "japan_only": true,
     "main_unit": "Muse",
     "name": "Kousaka Honoka",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": false,
     "rarity": "SR",
     "release_date": "2015-11-20",
@@ -14861,6 +10966,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 4260,
+      "display": 4260,
       "idlz": 4260
     },
     "sub_unit": "Printemps",
@@ -14870,12 +10976,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Cool",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": null,
     "full_name": "UR Ball Toujou Nozomi",
     "id": 733,
@@ -14883,12 +10983,6 @@ app.constant('CardData',
     "japan_only": false,
     "main_unit": "Muse",
     "name": "Toujou Nozomi",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": true,
     "rarity": "UR",
     "release_date": "2015-11-15",
@@ -14903,6 +10997,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 5020,
+      "display": 5020,
       "idlz": 5320
     },
     "sub_unit": "Lily White",
@@ -14912,12 +11007,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Smile",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": null,
     "full_name": "SR Ball Koizumi Hanayo",
     "id": 732,
@@ -14925,12 +11014,6 @@ app.constant('CardData',
     "japan_only": false,
     "main_unit": "Muse",
     "name": "Koizumi Hanayo",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": true,
     "rarity": "SR",
     "release_date": "2015-11-15",
@@ -14945,6 +11028,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 4630,
+      "display": 4630,
       "idlz": 4910
     },
     "sub_unit": "Printemps",
@@ -14954,12 +11038,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Pure",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": null,
     "full_name": "SR Ball Nishikino Maki",
     "id": 731,
@@ -14967,12 +11045,6 @@ app.constant('CardData',
     "japan_only": false,
     "main_unit": "Muse",
     "name": "Nishikino Maki",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": true,
     "rarity": "SR",
     "release_date": "2015-11-15",
@@ -14987,6 +11059,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 4710,
+      "display": 4710,
       "idlz": 4990
     },
     "sub_unit": "Bibi",
@@ -14996,12 +11069,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Cool",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": null,
     "full_name": "SR Ball Kousaka Honoka",
     "id": 730,
@@ -15009,12 +11076,6 @@ app.constant('CardData',
     "japan_only": false,
     "main_unit": "Muse",
     "name": "Kousaka Honoka",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": true,
     "rarity": "SR",
     "release_date": "2015-11-15",
@@ -15029,6 +11090,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 4680,
+      "display": 4680,
       "idlz": 4960
     },
     "sub_unit": "Printemps",
@@ -15038,12 +11100,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Smile",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": true,
     "full_name": "SR Autumn Yazawa Nico",
     "id": 728,
@@ -15051,12 +11107,6 @@ app.constant('CardData',
     "japan_only": false,
     "main_unit": "Muse",
     "name": "Yazawa Nico",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": false,
     "rarity": "SR",
     "release_date": "2015-11-05",
@@ -15071,6 +11121,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 4520,
+      "display": 4520,
       "idlz": 4800
     },
     "sub_unit": "Bibi",
@@ -15080,12 +11131,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Smile",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": null,
     "full_name": "UR Ball Minami Kotori",
     "id": 726,
@@ -15093,12 +11138,6 @@ app.constant('CardData',
     "japan_only": false,
     "main_unit": "Muse",
     "name": "Minami Kotori",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": true,
     "rarity": "UR",
     "release_date": "2015-10-31",
@@ -15113,6 +11152,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 5050,
+      "display": 5050,
       "idlz": 5350
     },
     "sub_unit": "Printemps",
@@ -15122,12 +11162,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Cool",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": null,
     "full_name": "SR Ball Yazawa Nico",
     "id": 725,
@@ -15135,12 +11169,6 @@ app.constant('CardData',
     "japan_only": false,
     "main_unit": "Muse",
     "name": "Yazawa Nico",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": true,
     "rarity": "SR",
     "release_date": "2015-10-31",
@@ -15155,6 +11183,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 4680,
+      "display": 4680,
       "idlz": 4960
     },
     "sub_unit": "Bibi",
@@ -15164,12 +11193,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Pure",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": null,
     "full_name": "SR Ball Hoshizora Rin",
     "id": 724,
@@ -15177,12 +11200,6 @@ app.constant('CardData',
     "japan_only": false,
     "main_unit": "Muse",
     "name": "Hoshizora Rin",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": true,
     "rarity": "SR",
     "release_date": "2015-10-31",
@@ -15197,6 +11214,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 4650,
+      "display": 4650,
       "idlz": 4930
     },
     "sub_unit": "Lily White",
@@ -15206,12 +11224,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Smile",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": null,
     "full_name": "SR Ball Sonoda Umi",
     "id": 723,
@@ -15219,12 +11231,6 @@ app.constant('CardData',
     "japan_only": false,
     "main_unit": "Muse",
     "name": "Sonoda Umi",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": true,
     "rarity": "SR",
     "release_date": "2015-10-31",
@@ -15239,6 +11245,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 4630,
+      "display": 4630,
       "idlz": 4910
     },
     "sub_unit": "Lily White",
@@ -15248,12 +11255,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Pure",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": null,
     "full_name": "SR Ball Ayase Eli",
     "id": 722,
@@ -15261,12 +11262,6 @@ app.constant('CardData',
     "japan_only": false,
     "main_unit": "Muse",
     "name": "Ayase Eli",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": true,
     "rarity": "SR",
     "release_date": "2015-10-31",
@@ -15281,6 +11276,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 4710,
+      "display": 4710,
       "idlz": 4990
     },
     "sub_unit": "Bibi",
@@ -15290,12 +11286,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Smile",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": null,
     "full_name": "UR Promo Koizumi Hanayo",
     "id": 720,
@@ -15303,12 +11293,6 @@ app.constant('CardData',
     "japan_only": false,
     "main_unit": "Muse",
     "name": "Koizumi Hanayo",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": false,
     "rarity": "UR",
     "release_date": "2015-10-20",
@@ -15323,6 +11307,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 4240,
+      "display": 4240,
       "idlz": 4240
     },
     "sub_unit": "Printemps",
@@ -15332,12 +11317,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Smile",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": null,
     "full_name": "SR Promo Yazawa Nico",
     "id": 719,
@@ -15345,12 +11324,6 @@ app.constant('CardData',
     "japan_only": true,
     "main_unit": "Muse",
     "name": "Yazawa Nico",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": false,
     "rarity": "SR",
     "release_date": "2015-10-20",
@@ -15365,6 +11338,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 4180,
+      "display": 4180,
       "idlz": 4180
     },
     "sub_unit": "Bibi",
@@ -15374,12 +11348,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Pure",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": null,
     "full_name": "SR Promo Koizumi Hanayo",
     "id": 718,
@@ -15387,12 +11355,6 @@ app.constant('CardData',
     "japan_only": true,
     "main_unit": "Muse",
     "name": "Koizumi Hanayo",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": false,
     "rarity": "SR",
     "release_date": "2015-10-20",
@@ -15407,6 +11369,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 4280,
+      "display": 4280,
       "idlz": 4280
     },
     "sub_unit": "Printemps",
@@ -15416,12 +11379,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Pure",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": null,
     "full_name": "SR Promo Toujou Nozomi",
     "id": 717,
@@ -15429,12 +11386,6 @@ app.constant('CardData',
     "japan_only": true,
     "main_unit": "Muse",
     "name": "Toujou Nozomi",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": false,
     "rarity": "SR",
     "release_date": "2015-10-20",
@@ -15449,6 +11400,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 4270,
+      "display": 4270,
       "idlz": 4270
     },
     "sub_unit": "Lily White",
@@ -15458,12 +11410,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Cool",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": null,
     "full_name": "SR Promo Nishikino Maki",
     "id": 716,
@@ -15471,12 +11417,6 @@ app.constant('CardData',
     "japan_only": true,
     "main_unit": "Muse",
     "name": "Nishikino Maki",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": false,
     "rarity": "SR",
     "release_date": "2015-10-20",
@@ -15491,6 +11431,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 4210,
+      "display": 4210,
       "idlz": 4210
     },
     "sub_unit": "Bibi",
@@ -15500,12 +11441,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Smile",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": null,
     "full_name": "SR Promo Hoshizora Rin",
     "id": 715,
@@ -15513,12 +11448,6 @@ app.constant('CardData',
     "japan_only": true,
     "main_unit": "Muse",
     "name": "Hoshizora Rin",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": false,
     "rarity": "SR",
     "release_date": "2015-10-20",
@@ -15533,6 +11462,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 4180,
+      "display": 4180,
       "idlz": 4180
     },
     "sub_unit": "Lily White",
@@ -15542,12 +11472,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Cool",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": null,
     "full_name": "SR Promo Sonoda Umi",
     "id": 714,
@@ -15555,12 +11479,6 @@ app.constant('CardData',
     "japan_only": true,
     "main_unit": "Muse",
     "name": "Sonoda Umi",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": false,
     "rarity": "SR",
     "release_date": "2015-10-20",
@@ -15575,6 +11493,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 4210,
+      "display": 4210,
       "idlz": 4210
     },
     "sub_unit": "Lily White",
@@ -15584,12 +11503,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Pure",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": null,
     "full_name": "SR Promo Minami Kotori",
     "id": 713,
@@ -15597,12 +11510,6 @@ app.constant('CardData',
     "japan_only": true,
     "main_unit": "Muse",
     "name": "Minami Kotori",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": false,
     "rarity": "SR",
     "release_date": "2015-10-20",
@@ -15617,6 +11524,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 4270,
+      "display": 4270,
       "idlz": 4270
     },
     "sub_unit": "Printemps",
@@ -15626,12 +11534,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Cool",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": null,
     "full_name": "SR Promo Ayase Eli",
     "id": 712,
@@ -15639,12 +11541,6 @@ app.constant('CardData',
     "japan_only": true,
     "main_unit": "Muse",
     "name": "Ayase Eli",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": false,
     "rarity": "SR",
     "release_date": "2015-10-20",
@@ -15659,6 +11555,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 4210,
+      "display": 4210,
       "idlz": 4210
     },
     "sub_unit": "Bibi",
@@ -15668,12 +11565,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Smile",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": true,
     "full_name": "SR Steampunk Ayase Eli",
     "id": 711,
@@ -15681,12 +11572,6 @@ app.constant('CardData',
     "japan_only": false,
     "main_unit": "Muse",
     "name": "Ayase Eli",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": false,
     "rarity": "SR",
     "release_date": "2015-10-20",
@@ -15701,6 +11586,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 4420,
+      "display": 4420,
       "idlz": 4700
     },
     "sub_unit": "Bibi",
@@ -15710,12 +11596,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Smile",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": null,
     "full_name": "SR Promo Kousaka Honoka",
     "id": 710,
@@ -15723,12 +11603,6 @@ app.constant('CardData',
     "japan_only": true,
     "main_unit": "Muse",
     "name": "Kousaka Honoka",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": false,
     "rarity": "SR",
     "release_date": "2015-10-20",
@@ -15743,6 +11617,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 4180,
+      "display": 4180,
       "idlz": 4180
     },
     "sub_unit": "Printemps",
@@ -15752,12 +11627,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Smile",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": null,
     "full_name": "UR Animal v2 Kousaka Honoka",
     "id": 708,
@@ -15765,12 +11634,6 @@ app.constant('CardData',
     "japan_only": false,
     "main_unit": "Muse",
     "name": "Kousaka Honoka",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": true,
     "rarity": "UR",
     "release_date": "2015-10-15",
@@ -15785,6 +11648,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 5020,
+      "display": 5020,
       "idlz": 5320
     },
     "sub_unit": "Printemps",
@@ -15794,12 +11658,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Smile",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": null,
     "full_name": "SR Animal v2 Hoshizora Rin",
     "id": 707,
@@ -15807,12 +11665,6 @@ app.constant('CardData',
     "japan_only": false,
     "main_unit": "Muse",
     "name": "Hoshizora Rin",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": true,
     "rarity": "SR",
     "release_date": "2015-10-15",
@@ -15827,6 +11679,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 4710,
+      "display": 4710,
       "idlz": 4990
     },
     "sub_unit": "Lily White",
@@ -15836,12 +11689,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Pure",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": null,
     "full_name": "SR Animal v2 Minami Kotori",
     "id": 706,
@@ -15849,12 +11696,6 @@ app.constant('CardData',
     "japan_only": false,
     "main_unit": "Muse",
     "name": "Minami Kotori",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": true,
     "rarity": "SR",
     "release_date": "2015-10-15",
@@ -15869,6 +11710,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 4650,
+      "display": 4650,
       "idlz": 4930
     },
     "sub_unit": "Printemps",
@@ -15878,12 +11720,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Cool",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": null,
     "full_name": "SR Animal v2 Ayase Eli",
     "id": 705,
@@ -15891,12 +11727,6 @@ app.constant('CardData',
     "japan_only": false,
     "main_unit": "Muse",
     "name": "Ayase Eli",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": true,
     "rarity": "SR",
     "release_date": "2015-10-15",
@@ -15911,6 +11741,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 4680,
+      "display": 4680,
       "idlz": 4960
     },
     "sub_unit": "Bibi",
@@ -15920,12 +11751,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Pure",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": true,
     "full_name": "SR Rock Nishikino Maki",
     "id": 703,
@@ -15933,12 +11758,6 @@ app.constant('CardData',
     "japan_only": false,
     "main_unit": "Muse",
     "name": "Nishikino Maki",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": false,
     "rarity": "SR",
     "release_date": "2015-10-05",
@@ -15953,6 +11772,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 4510,
+      "display": 4510,
       "idlz": 4790
     },
     "sub_unit": "Bibi",
@@ -15962,12 +11782,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Cool",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": null,
     "full_name": "UR Animal v2 Nishikino Maki",
     "id": 701,
@@ -15975,12 +11789,6 @@ app.constant('CardData',
     "japan_only": false,
     "main_unit": "Muse",
     "name": "Nishikino Maki",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": true,
     "rarity": "UR",
     "release_date": "2015-09-30",
@@ -15995,6 +11803,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 5040,
+      "display": 5040,
       "idlz": 5340
     },
     "sub_unit": "Bibi",
@@ -16004,12 +11813,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Pure",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": null,
     "full_name": "SR Animal v2 Yazawa Nico",
     "id": 700,
@@ -16017,12 +11820,6 @@ app.constant('CardData',
     "japan_only": false,
     "main_unit": "Muse",
     "name": "Yazawa Nico",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": true,
     "rarity": "SR",
     "release_date": "2015-09-30",
@@ -16037,6 +11834,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 4640,
+      "display": 4640,
       "idlz": 4920
     },
     "sub_unit": "Bibi",
@@ -16046,12 +11844,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Smile",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": null,
     "full_name": "SR Animal v2 Koizumi Hanayo",
     "id": 699,
@@ -16059,12 +11851,6 @@ app.constant('CardData',
     "japan_only": false,
     "main_unit": "Muse",
     "name": "Koizumi Hanayo",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": true,
     "rarity": "SR",
     "release_date": "2015-09-30",
@@ -16079,6 +11865,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 4710,
+      "display": 4710,
       "idlz": 4990
     },
     "sub_unit": "Printemps",
@@ -16088,12 +11875,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Cool",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": null,
     "full_name": "SR Animal v2 Toujou Nozomi",
     "id": 698,
@@ -16101,12 +11882,6 @@ app.constant('CardData',
     "japan_only": false,
     "main_unit": "Muse",
     "name": "Toujou Nozomi",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": true,
     "rarity": "SR",
     "release_date": "2015-09-30",
@@ -16121,6 +11896,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 4700,
+      "display": 4700,
       "idlz": 4980
     },
     "sub_unit": "Lily White",
@@ -16130,12 +11906,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Pure",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": null,
     "full_name": "SR Animal v2 Sonoda Umi",
     "id": 697,
@@ -16143,12 +11913,6 @@ app.constant('CardData',
     "japan_only": false,
     "main_unit": "Muse",
     "name": "Sonoda Umi",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": true,
     "rarity": "SR",
     "release_date": "2015-09-30",
@@ -16163,6 +11927,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 4710,
+      "display": 4710,
       "idlz": 4990
     },
     "sub_unit": "Lily White",
@@ -16172,12 +11937,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Cool",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": true,
     "full_name": "SR Moon Viewing Koizumi Hanayo",
     "id": 695,
@@ -16185,12 +11944,6 @@ app.constant('CardData',
     "japan_only": false,
     "main_unit": "Muse",
     "name": "Koizumi Hanayo",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": false,
     "rarity": "SR",
     "release_date": "2015-09-20",
@@ -16205,6 +11958,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 4480,
+      "display": 4480,
       "idlz": 4760
     },
     "sub_unit": "Printemps",
@@ -16214,12 +11968,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Cool",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": null,
     "full_name": "SR Promo Nishikino Maki",
     "id": 694,
@@ -16227,12 +11975,6 @@ app.constant('CardData',
     "japan_only": true,
     "main_unit": "Muse",
     "name": "Nishikino Maki",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": false,
     "rarity": "SR",
     "release_date": "2015-09-20",
@@ -16247,6 +11989,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 4130,
+      "display": 4130,
       "idlz": 4130
     },
     "sub_unit": "Bibi",
@@ -16256,12 +11999,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Smile",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": null,
     "full_name": "UR Kunoichi Yazawa Nico",
     "id": 692,
@@ -16269,12 +12006,6 @@ app.constant('CardData',
     "japan_only": false,
     "main_unit": "Muse",
     "name": "Yazawa Nico",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": true,
     "rarity": "UR",
     "release_date": "2015-09-15",
@@ -16289,6 +12020,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 5080,
+      "display": 5080,
       "idlz": 5380
     },
     "sub_unit": "Bibi",
@@ -16298,12 +12030,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Cool",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": null,
     "full_name": "UR Promo Ayase Eli",
     "id": 691,
@@ -16311,12 +12037,6 @@ app.constant('CardData',
     "japan_only": true,
     "main_unit": "Muse",
     "name": "Ayase Eli",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": false,
     "rarity": "UR",
     "release_date": "2015-09-15",
@@ -16331,6 +12051,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 4250,
+      "display": 4250,
       "idlz": 4250
     },
     "sub_unit": "Bibi",
@@ -16340,12 +12061,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Pure",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": null,
     "full_name": "SR Kunoichi Toujou Nozomi",
     "id": 690,
@@ -16353,12 +12068,6 @@ app.constant('CardData',
     "japan_only": false,
     "main_unit": "Muse",
     "name": "Toujou Nozomi",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": true,
     "rarity": "SR",
     "release_date": "2015-09-15",
@@ -16373,6 +12082,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 4650,
+      "display": 4650,
       "idlz": 4930
     },
     "sub_unit": "Lily White",
@@ -16382,12 +12092,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Cool",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": null,
     "full_name": "SR Kunoichi Hoshizora Rin",
     "id": 689,
@@ -16395,12 +12099,6 @@ app.constant('CardData',
     "japan_only": false,
     "main_unit": "Muse",
     "name": "Hoshizora Rin",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": true,
     "rarity": "SR",
     "release_date": "2015-09-15",
@@ -16415,6 +12113,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 4710,
+      "display": 4710,
       "idlz": 4990
     },
     "sub_unit": "Lily White",
@@ -16424,12 +12123,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Smile",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": null,
     "full_name": "SR Kunoichi Minami Kotori",
     "id": 688,
@@ -16437,12 +12130,6 @@ app.constant('CardData',
     "japan_only": false,
     "main_unit": "Muse",
     "name": "Minami Kotori",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": true,
     "rarity": "SR",
     "release_date": "2015-09-15",
@@ -16457,6 +12144,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 4690,
+      "display": 4690,
       "idlz": 4970
     },
     "sub_unit": "Printemps",
@@ -16466,12 +12154,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Pure",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": true,
     "full_name": "SR Festival Minami Kotori",
     "id": 677,
@@ -16479,12 +12161,6 @@ app.constant('CardData',
     "japan_only": false,
     "main_unit": "Muse",
     "name": "Minami Kotori",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": false,
     "rarity": "SR",
     "release_date": "2015-09-05",
@@ -16499,6 +12175,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 4520,
+      "display": 4520,
       "idlz": 4800
     },
     "sub_unit": "Printemps",
@@ -16508,12 +12185,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Pure",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": null,
     "full_name": "UR Kunoichi Koizumi Hanayo",
     "id": 675,
@@ -16521,12 +12192,6 @@ app.constant('CardData',
     "japan_only": false,
     "main_unit": "Muse",
     "name": "Koizumi Hanayo",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": true,
     "rarity": "UR",
     "release_date": "2015-08-31",
@@ -16541,6 +12206,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 5000,
+      "display": 5000,
       "idlz": 5300
     },
     "sub_unit": "Printemps",
@@ -16550,12 +12216,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Cool",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": null,
     "full_name": "SR Kunoichi Nishikino Maki",
     "id": 674,
@@ -16563,12 +12223,6 @@ app.constant('CardData',
     "japan_only": false,
     "main_unit": "Muse",
     "name": "Nishikino Maki",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": true,
     "rarity": "SR",
     "release_date": "2015-08-31",
@@ -16583,6 +12237,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 4650,
+      "display": 4650,
       "idlz": 4930
     },
     "sub_unit": "Bibi",
@@ -16592,12 +12247,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Cool",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": null,
     "full_name": "SR Kunoichi Sonoda Umi",
     "id": 673,
@@ -16605,12 +12254,6 @@ app.constant('CardData',
     "japan_only": false,
     "main_unit": "Muse",
     "name": "Sonoda Umi",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": true,
     "rarity": "SR",
     "release_date": "2015-08-31",
@@ -16625,6 +12268,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 4710,
+      "display": 4710,
       "idlz": 4990
     },
     "sub_unit": "Lily White",
@@ -16634,12 +12278,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Pure",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": null,
     "full_name": "SR Kunoichi Ayase Eli",
     "id": 672,
@@ -16647,12 +12285,6 @@ app.constant('CardData',
     "japan_only": false,
     "main_unit": "Muse",
     "name": "Ayase Eli",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": true,
     "rarity": "SR",
     "release_date": "2015-08-31",
@@ -16667,6 +12299,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 4690,
+      "display": 4690,
       "idlz": 4970
     },
     "sub_unit": "Bibi",
@@ -16676,12 +12309,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Smile",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": null,
     "full_name": "SR Kunoichi Kousaka Honoka",
     "id": 671,
@@ -16689,12 +12316,6 @@ app.constant('CardData',
     "japan_only": false,
     "main_unit": "Muse",
     "name": "Kousaka Honoka",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": true,
     "rarity": "SR",
     "release_date": "2015-08-31",
@@ -16709,6 +12330,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 4710,
+      "display": 4710,
       "idlz": 4990
     },
     "sub_unit": "Printemps",
@@ -16718,12 +12340,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Cool",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": true,
     "full_name": "SR Track and Field Club Hoshizora Rin",
     "id": 669,
@@ -16731,12 +12347,6 @@ app.constant('CardData',
     "japan_only": false,
     "main_unit": "Muse",
     "name": "Hoshizora Rin",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": false,
     "rarity": "SR",
     "release_date": "2015-08-20",
@@ -16751,6 +12361,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 4490,
+      "display": 4490,
       "idlz": 4770
     },
     "sub_unit": "Lily White",
@@ -16760,12 +12371,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Smile",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": null,
     "full_name": "UR Pool Hoshizora Rin",
     "id": 666,
@@ -16773,12 +12378,6 @@ app.constant('CardData',
     "japan_only": false,
     "main_unit": "Muse",
     "name": "Hoshizora Rin",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": true,
     "rarity": "UR",
     "release_date": "2015-08-15",
@@ -16793,6 +12392,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 5070,
+      "display": 5070,
       "idlz": 5370
     },
     "sub_unit": "Lily White",
@@ -16802,12 +12402,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Smile",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": null,
     "full_name": "SR Pool Yazawa Nico",
     "id": 665,
@@ -16815,12 +12409,6 @@ app.constant('CardData',
     "japan_only": false,
     "main_unit": "Muse",
     "name": "Yazawa Nico",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": true,
     "rarity": "SR",
     "release_date": "2015-08-15",
@@ -16835,6 +12423,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 4690,
+      "display": 4690,
       "idlz": 4970
     },
     "sub_unit": "Bibi",
@@ -16844,12 +12433,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Pure",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": null,
     "full_name": "SR Pool Nishikino Maki",
     "id": 664,
@@ -16857,12 +12440,6 @@ app.constant('CardData',
     "japan_only": false,
     "main_unit": "Muse",
     "name": "Nishikino Maki",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": true,
     "rarity": "SR",
     "release_date": "2015-08-15",
@@ -16877,6 +12454,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 4700,
+      "display": 4700,
       "idlz": 4980
     },
     "sub_unit": "Bibi",
@@ -16886,12 +12464,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Cool",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": null,
     "full_name": "SR Pool Kousaka Honoka",
     "id": 663,
@@ -16899,12 +12471,6 @@ app.constant('CardData',
     "japan_only": false,
     "main_unit": "Muse",
     "name": "Kousaka Honoka",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": true,
     "rarity": "SR",
     "release_date": "2015-08-15",
@@ -16919,6 +12485,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 4640,
+      "display": 4640,
       "idlz": 4920
     },
     "sub_unit": "Printemps",
@@ -16928,12 +12495,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Pure",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": true,
     "full_name": "SR Bathrobe Toujou Nozomi",
     "id": 661,
@@ -16941,12 +12502,6 @@ app.constant('CardData',
     "japan_only": false,
     "main_unit": "Muse",
     "name": "Toujou Nozomi",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": false,
     "rarity": "SR",
     "release_date": "2015-08-05",
@@ -16961,6 +12516,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 4510,
+      "display": 4510,
       "idlz": 4790
     },
     "sub_unit": "Lily White",
@@ -16970,12 +12526,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Cool",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": null,
     "full_name": "UR Pool Ayase Eli",
     "id": 659,
@@ -16983,12 +12533,6 @@ app.constant('CardData',
     "japan_only": false,
     "main_unit": "Muse",
     "name": "Ayase Eli",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": true,
     "rarity": "UR",
     "release_date": "2015-07-31",
@@ -17003,6 +12547,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 5050,
+      "display": 5050,
       "idlz": 5350
     },
     "sub_unit": "Bibi",
@@ -17012,12 +12557,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Pure",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": null,
     "full_name": "SR Pool Koizumi Hanayo",
     "id": 658,
@@ -17025,12 +12564,6 @@ app.constant('CardData',
     "japan_only": false,
     "main_unit": "Muse",
     "name": "Koizumi Hanayo",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": true,
     "rarity": "SR",
     "release_date": "2015-07-31",
@@ -17045,6 +12578,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 4680,
+      "display": 4680,
       "idlz": 4960
     },
     "sub_unit": "Printemps",
@@ -17054,12 +12588,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Smile",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": null,
     "full_name": "SR Pool Toujou Nozomi",
     "id": 657,
@@ -17067,12 +12595,6 @@ app.constant('CardData',
     "japan_only": false,
     "main_unit": "Muse",
     "name": "Toujou Nozomi",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": true,
     "rarity": "SR",
     "release_date": "2015-07-31",
@@ -17087,6 +12609,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 4670,
+      "display": 4670,
       "idlz": 4950
     },
     "sub_unit": "Lily White",
@@ -17096,12 +12619,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Pure",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": null,
     "full_name": "SR Pool Sonoda Umi",
     "id": 656,
@@ -17109,12 +12626,6 @@ app.constant('CardData',
     "japan_only": false,
     "main_unit": "Muse",
     "name": "Sonoda Umi",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": true,
     "rarity": "SR",
     "release_date": "2015-07-31",
@@ -17129,6 +12640,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 4660,
+      "display": 4660,
       "idlz": 4940
     },
     "sub_unit": "Lily White",
@@ -17138,12 +12650,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Cool",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": null,
     "full_name": "SR Pool Minami Kotori",
     "id": 655,
@@ -17151,12 +12657,6 @@ app.constant('CardData',
     "japan_only": false,
     "main_unit": "Muse",
     "name": "Minami Kotori",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": true,
     "rarity": "SR",
     "release_date": "2015-07-31",
@@ -17171,6 +12671,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 4670,
+      "display": 4670,
       "idlz": 4950
     },
     "sub_unit": "Printemps",
@@ -17180,12 +12681,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Smile",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": null,
     "full_name": "SR Promo Yazawa Nico",
     "id": 653,
@@ -17193,12 +12688,6 @@ app.constant('CardData',
     "japan_only": true,
     "main_unit": "Muse",
     "name": "Yazawa Nico",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": false,
     "rarity": "SR",
     "release_date": "2015-07-20",
@@ -17213,6 +12702,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 4140,
+      "display": 4140,
       "idlz": 4140
     },
     "sub_unit": "Bibi",
@@ -17222,12 +12712,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Smile",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": true,
     "full_name": "SR Retro Pop Sonoda Umi",
     "id": 652,
@@ -17235,12 +12719,6 @@ app.constant('CardData',
     "japan_only": false,
     "main_unit": "Muse",
     "name": "Sonoda Umi",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": false,
     "rarity": "SR",
     "release_date": "2015-07-20",
@@ -17255,6 +12733,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 4540,
+      "display": 4540,
       "idlz": 4820
     },
     "sub_unit": "Lily White",
@@ -17264,12 +12743,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Pure",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": null,
     "full_name": "UR Marine Toujou Nozomi",
     "id": 650,
@@ -17277,12 +12750,6 @@ app.constant('CardData',
     "japan_only": false,
     "main_unit": "Muse",
     "name": "Toujou Nozomi",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": true,
     "rarity": "UR",
     "release_date": "2015-07-15",
@@ -17297,6 +12764,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 5010,
+      "display": 5010,
       "idlz": 5310
     },
     "sub_unit": "Lily White",
@@ -17306,12 +12774,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Cool",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": null,
     "full_name": "SR Marine Koizumi Hanayo",
     "id": 649,
@@ -17319,12 +12781,6 @@ app.constant('CardData',
     "japan_only": false,
     "main_unit": "Muse",
     "name": "Koizumi Hanayo",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": true,
     "rarity": "SR",
     "release_date": "2015-07-15",
@@ -17339,6 +12795,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 4700,
+      "display": 4700,
       "idlz": 4980
     },
     "sub_unit": "Printemps",
@@ -17348,12 +12805,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Pure",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": null,
     "full_name": "SR Marine Minami Kotori",
     "id": 648,
@@ -17361,12 +12812,6 @@ app.constant('CardData',
     "japan_only": false,
     "main_unit": "Muse",
     "name": "Minami Kotori",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": true,
     "rarity": "SR",
     "release_date": "2015-07-15",
@@ -17381,6 +12826,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 4660,
+      "display": 4660,
       "idlz": 4940
     },
     "sub_unit": "Printemps",
@@ -17390,12 +12836,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Smile",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": null,
     "full_name": "SR Marine Ayase Eli",
     "id": 647,
@@ -17403,12 +12843,6 @@ app.constant('CardData',
     "japan_only": false,
     "main_unit": "Muse",
     "name": "Ayase Eli",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": true,
     "rarity": "SR",
     "release_date": "2015-07-15",
@@ -17423,6 +12857,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 4670,
+      "display": 4670,
       "idlz": 4950
     },
     "sub_unit": "Bibi",
@@ -17432,12 +12867,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Pure",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": true,
     "full_name": "SR Masquerade Ayase Eli",
     "id": 645,
@@ -17445,12 +12874,6 @@ app.constant('CardData',
     "japan_only": false,
     "main_unit": "Muse",
     "name": "Ayase Eli",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": false,
     "rarity": "SR",
     "release_date": "2015-07-05",
@@ -17465,6 +12888,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 4480,
+      "display": 4480,
       "idlz": 4760
     },
     "sub_unit": "Bibi",
@@ -17474,12 +12898,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Cool",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": null,
     "full_name": "UR Marine Sonoda Umi",
     "id": 643,
@@ -17487,12 +12905,6 @@ app.constant('CardData',
     "japan_only": false,
     "main_unit": "Muse",
     "name": "Sonoda Umi",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": true,
     "rarity": "UR",
     "release_date": "2015-06-30",
@@ -17507,6 +12919,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 5050,
+      "display": 5050,
       "idlz": 5350
     },
     "sub_unit": "Lily White",
@@ -17516,12 +12929,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Cool",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": null,
     "full_name": "SR Marine Yazawa Nico",
     "id": 642,
@@ -17529,12 +12936,6 @@ app.constant('CardData',
     "japan_only": false,
     "main_unit": "Muse",
     "name": "Yazawa Nico",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": true,
     "rarity": "SR",
     "release_date": "2015-06-30",
@@ -17549,6 +12950,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 4690,
+      "display": 4690,
       "idlz": 4970
     },
     "sub_unit": "Bibi",
@@ -17558,12 +12960,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Smile",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": null,
     "full_name": "SR Marine Nishikino Maki",
     "id": 641,
@@ -17571,12 +12967,6 @@ app.constant('CardData',
     "japan_only": false,
     "main_unit": "Muse",
     "name": "Nishikino Maki",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": true,
     "rarity": "SR",
     "release_date": "2015-06-30",
@@ -17591,6 +12981,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 4670,
+      "display": 4670,
       "idlz": 4950
     },
     "sub_unit": "Bibi",
@@ -17600,12 +12991,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Smile",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": null,
     "full_name": "SR Marine Hoshizora Rin",
     "id": 640,
@@ -17613,12 +12998,6 @@ app.constant('CardData',
     "japan_only": false,
     "main_unit": "Muse",
     "name": "Hoshizora Rin",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": true,
     "rarity": "SR",
     "release_date": "2015-06-30",
@@ -17633,6 +13012,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 4700,
+      "display": 4700,
       "idlz": 4980
     },
     "sub_unit": "Lily White",
@@ -17642,12 +13022,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Pure",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": null,
     "full_name": "SR Marine Kousaka Honoka",
     "id": 639,
@@ -17655,12 +13029,6 @@ app.constant('CardData',
     "japan_only": false,
     "main_unit": "Muse",
     "name": "Kousaka Honoka",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": true,
     "rarity": "SR",
     "release_date": "2015-06-30",
@@ -17675,6 +13043,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 4670,
+      "display": 4670,
       "idlz": 4950
     },
     "sub_unit": "Printemps",
@@ -17684,12 +13053,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Smile",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": null,
     "full_name": "UR Promo Yazawa Nico",
     "id": 637,
@@ -17697,12 +13060,6 @@ app.constant('CardData',
     "japan_only": false,
     "main_unit": "Muse",
     "name": "Yazawa Nico",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": false,
     "rarity": "UR",
     "release_date": "2015-06-20",
@@ -17717,6 +13074,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 4240,
+      "display": 4240,
       "idlz": 4240
     },
     "sub_unit": "Bibi",
@@ -17726,12 +13084,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Pure",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": true,
     "full_name": "SR Momotarou Kousaka Honoka",
     "id": 636,
@@ -17739,12 +13091,6 @@ app.constant('CardData',
     "japan_only": false,
     "main_unit": "Muse",
     "name": "Kousaka Honoka",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": false,
     "rarity": "SR",
     "release_date": "2015-06-20",
@@ -17759,6 +13105,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 4420,
+      "display": 4420,
       "idlz": 4700
     },
     "sub_unit": "Printemps",
@@ -17768,12 +13115,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Pure",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": null,
     "full_name": "UR Magician Minami Kotori",
     "id": 634,
@@ -17781,12 +13122,6 @@ app.constant('CardData',
     "japan_only": false,
     "main_unit": "Muse",
     "name": "Minami Kotori",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": true,
     "rarity": "UR",
     "release_date": "2015-06-15",
@@ -17801,6 +13136,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 5030,
+      "display": 5030,
       "idlz": 5330
     },
     "sub_unit": "Printemps",
@@ -17810,12 +13146,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Smile",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": null,
     "full_name": "SR Magician Yazawa Nico",
     "id": 633,
@@ -17823,12 +13153,6 @@ app.constant('CardData',
     "japan_only": false,
     "main_unit": "Muse",
     "name": "Yazawa Nico",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": true,
     "rarity": "SR",
     "release_date": "2015-06-15",
@@ -17843,6 +13167,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 4670,
+      "display": 4670,
       "idlz": 4950
     },
     "sub_unit": "Bibi",
@@ -17852,12 +13177,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Cool",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": null,
     "full_name": "SR Magician Toujou Nozomi",
     "id": 632,
@@ -17865,12 +13184,6 @@ app.constant('CardData',
     "japan_only": false,
     "main_unit": "Muse",
     "name": "Toujou Nozomi",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": true,
     "rarity": "SR",
     "release_date": "2015-06-15",
@@ -17885,6 +13198,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 4640,
+      "display": 4640,
       "idlz": 4920
     },
     "sub_unit": "Lily White",
@@ -17894,12 +13208,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Pure",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": null,
     "full_name": "SR Magician Hoshizora Rin",
     "id": 631,
@@ -17907,12 +13215,6 @@ app.constant('CardData',
     "japan_only": false,
     "main_unit": "Muse",
     "name": "Hoshizora Rin",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": true,
     "rarity": "SR",
     "release_date": "2015-06-15",
@@ -17927,6 +13229,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 4640,
+      "display": 4640,
       "idlz": 4920
     },
     "sub_unit": "Lily White",
@@ -17936,12 +13239,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Cool",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": true,
     "full_name": "SR Apparition Yazawa Nico",
     "id": 628,
@@ -17949,12 +13246,6 @@ app.constant('CardData',
     "japan_only": false,
     "main_unit": "Muse",
     "name": "Yazawa Nico",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": false,
     "rarity": "SR",
     "release_date": "2015-06-05",
@@ -17969,6 +13260,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 4470,
+      "display": 4470,
       "idlz": 4750
     },
     "sub_unit": "Bibi",
@@ -17978,12 +13270,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Smile",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": null,
     "full_name": "SR Promo Yazawa Nico",
     "id": 627,
@@ -17991,12 +13277,6 @@ app.constant('CardData',
     "japan_only": false,
     "main_unit": "Muse",
     "name": "Yazawa Nico",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": false,
     "rarity": "SR",
     "release_date": "2015-06-05",
@@ -18011,6 +13291,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 4270,
+      "display": 4270,
       "idlz": 4270
     },
     "sub_unit": "Bibi",
@@ -18020,12 +13301,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Pure",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": null,
     "full_name": "SR Promo Koizumi Hanayo",
     "id": 626,
@@ -18033,12 +13308,6 @@ app.constant('CardData',
     "japan_only": false,
     "main_unit": "Muse",
     "name": "Koizumi Hanayo",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": false,
     "rarity": "SR",
     "release_date": "2015-06-05",
@@ -18053,6 +13322,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 4350,
+      "display": 4350,
       "idlz": 4350
     },
     "sub_unit": "Printemps",
@@ -18062,12 +13332,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Pure",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": null,
     "full_name": "SR Promo Toujou Nozomi",
     "id": 625,
@@ -18075,12 +13339,6 @@ app.constant('CardData',
     "japan_only": false,
     "main_unit": "Muse",
     "name": "Toujou Nozomi",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": false,
     "rarity": "SR",
     "release_date": "2015-06-05",
@@ -18095,6 +13353,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 4270,
+      "display": 4270,
       "idlz": 4270
     },
     "sub_unit": "Lily White",
@@ -18104,12 +13363,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Cool",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": null,
     "full_name": "SR Promo Nishikino Maki",
     "id": 624,
@@ -18117,12 +13370,6 @@ app.constant('CardData',
     "japan_only": false,
     "main_unit": "Muse",
     "name": "Nishikino Maki",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": false,
     "rarity": "SR",
     "release_date": "2015-06-05",
@@ -18137,6 +13384,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 4300,
+      "display": 4300,
       "idlz": 4300
     },
     "sub_unit": "Bibi",
@@ -18146,12 +13394,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Smile",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": null,
     "full_name": "SR Promo Hoshizora Rin",
     "id": 623,
@@ -18159,12 +13401,6 @@ app.constant('CardData',
     "japan_only": false,
     "main_unit": "Muse",
     "name": "Hoshizora Rin",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": false,
     "rarity": "SR",
     "release_date": "2015-06-05",
@@ -18179,6 +13415,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 4290,
+      "display": 4290,
       "idlz": 4290
     },
     "sub_unit": "Lily White",
@@ -18188,12 +13425,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Cool",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": null,
     "full_name": "SR Promo Sonoda Umi",
     "id": 622,
@@ -18201,12 +13432,6 @@ app.constant('CardData',
     "japan_only": false,
     "main_unit": "Muse",
     "name": "Sonoda Umi",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": false,
     "rarity": "SR",
     "release_date": "2015-06-05",
@@ -18221,6 +13446,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 4270,
+      "display": 4270,
       "idlz": 4270
     },
     "sub_unit": "Lily White",
@@ -18230,12 +13456,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Pure",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": null,
     "full_name": "SR Promo Minami Kotori",
     "id": 621,
@@ -18243,12 +13463,6 @@ app.constant('CardData',
     "japan_only": false,
     "main_unit": "Muse",
     "name": "Minami Kotori",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": false,
     "rarity": "SR",
     "release_date": "2015-06-05",
@@ -18263,6 +13477,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 4280,
+      "display": 4280,
       "idlz": 4280
     },
     "sub_unit": "Printemps",
@@ -18272,12 +13487,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Cool",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": null,
     "full_name": "SR Promo Ayase Eli",
     "id": 620,
@@ -18285,12 +13494,6 @@ app.constant('CardData',
     "japan_only": false,
     "main_unit": "Muse",
     "name": "Ayase Eli",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": false,
     "rarity": "SR",
     "release_date": "2015-06-05",
@@ -18305,6 +13508,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 4330,
+      "display": 4330,
       "idlz": 4330
     },
     "sub_unit": "Bibi",
@@ -18314,12 +13518,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Smile",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": null,
     "full_name": "SR Promo Kousaka Honoka",
     "id": 619,
@@ -18327,12 +13525,6 @@ app.constant('CardData',
     "japan_only": false,
     "main_unit": "Muse",
     "name": "Kousaka Honoka",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": false,
     "rarity": "SR",
     "release_date": "2015-06-05",
@@ -18347,6 +13539,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 4330,
+      "display": 4330,
       "idlz": 4330
     },
     "sub_unit": "Printemps",
@@ -18356,12 +13549,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Smile",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": null,
     "full_name": "UR Magician Nishikino Maki",
     "id": 608,
@@ -18369,12 +13556,6 @@ app.constant('CardData',
     "japan_only": false,
     "main_unit": "Muse",
     "name": "Nishikino Maki",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": true,
     "rarity": "UR",
     "release_date": "2015-05-31",
@@ -18389,6 +13570,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 4990,
+      "display": 4990,
       "idlz": 5290
     },
     "sub_unit": "Bibi",
@@ -18398,12 +13580,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Pure",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": null,
     "full_name": "SR Magician Koizumi Hanayo",
     "id": 607,
@@ -18411,12 +13587,6 @@ app.constant('CardData',
     "japan_only": false,
     "main_unit": "Muse",
     "name": "Koizumi Hanayo",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": true,
     "rarity": "SR",
     "release_date": "2015-05-31",
@@ -18431,6 +13601,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 4700,
+      "display": 4700,
       "idlz": 4980
     },
     "sub_unit": "Printemps",
@@ -18440,12 +13611,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Cool",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": null,
     "full_name": "SR Magician Sonoda Umi",
     "id": 606,
@@ -18453,12 +13618,6 @@ app.constant('CardData',
     "japan_only": false,
     "main_unit": "Muse",
     "name": "Sonoda Umi",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": true,
     "rarity": "SR",
     "release_date": "2015-05-31",
@@ -18473,6 +13632,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 4710,
+      "display": 4710,
       "idlz": 4990
     },
     "sub_unit": "Lily White",
@@ -18482,12 +13642,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Cool",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": null,
     "full_name": "SR Magician Ayase Eli",
     "id": 605,
@@ -18495,12 +13649,6 @@ app.constant('CardData',
     "japan_only": false,
     "main_unit": "Muse",
     "name": "Ayase Eli",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": true,
     "rarity": "SR",
     "release_date": "2015-05-31",
@@ -18515,6 +13663,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 4700,
+      "display": 4700,
       "idlz": 4980
     },
     "sub_unit": "Bibi",
@@ -18524,12 +13673,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Smile",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": null,
     "full_name": "SR Magician Kousaka Honoka",
     "id": 604,
@@ -18537,12 +13680,6 @@ app.constant('CardData',
     "japan_only": false,
     "main_unit": "Muse",
     "name": "Kousaka Honoka",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": true,
     "rarity": "SR",
     "release_date": "2015-05-31",
@@ -18557,6 +13694,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 4680,
+      "display": 4680,
       "idlz": 4960
     },
     "sub_unit": "Printemps",
@@ -18566,12 +13704,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Smile",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": true,
     "full_name": "SR Detective Koizumi Hanayo",
     "id": 602,
@@ -18579,12 +13711,6 @@ app.constant('CardData',
     "japan_only": false,
     "main_unit": "Muse",
     "name": "Koizumi Hanayo",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": false,
     "rarity": "SR",
     "release_date": "2015-05-20",
@@ -18599,6 +13725,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 4490,
+      "display": 4490,
       "idlz": 4770
     },
     "sub_unit": "Printemps",
@@ -18608,12 +13735,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Cool",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": null,
     "full_name": "UR Cyber Kousaka Honoka",
     "id": 600,
@@ -18621,12 +13742,6 @@ app.constant('CardData',
     "japan_only": false,
     "main_unit": "Muse",
     "name": "Kousaka Honoka",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": true,
     "rarity": "UR",
     "release_date": "2015-05-15",
@@ -18641,6 +13756,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 5020,
+      "display": 5020,
       "idlz": 5320
     },
     "sub_unit": "Printemps",
@@ -18650,12 +13766,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Cool",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": null,
     "full_name": "SR Cyber Koizumi Hanayo",
     "id": 599,
@@ -18663,12 +13773,6 @@ app.constant('CardData',
     "japan_only": false,
     "main_unit": "Muse",
     "name": "Koizumi Hanayo",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": true,
     "rarity": "SR",
     "release_date": "2015-05-15",
@@ -18683,6 +13787,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 4670,
+      "display": 4670,
       "idlz": 4950
     },
     "sub_unit": "Printemps",
@@ -18692,12 +13797,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Pure",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": null,
     "full_name": "SR Cyber Nishikino Maki",
     "id": 598,
@@ -18705,12 +13804,6 @@ app.constant('CardData',
     "japan_only": false,
     "main_unit": "Muse",
     "name": "Nishikino Maki",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": true,
     "rarity": "SR",
     "release_date": "2015-05-15",
@@ -18725,6 +13818,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 4660,
+      "display": 4660,
       "idlz": 4940
     },
     "sub_unit": "Bibi",
@@ -18734,12 +13828,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Smile",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": null,
     "full_name": "SR Cyber Ayase Eli",
     "id": 597,
@@ -18747,12 +13835,6 @@ app.constant('CardData',
     "japan_only": false,
     "main_unit": "Muse",
     "name": "Ayase Eli",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": true,
     "rarity": "SR",
     "release_date": "2015-05-15",
@@ -18767,6 +13849,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 4640,
+      "display": 4640,
       "idlz": 4920
     },
     "sub_unit": "Bibi",
@@ -18776,12 +13859,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Cool",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": true,
     "full_name": "SR Military Nishikino Maki",
     "id": 595,
@@ -18789,12 +13866,6 @@ app.constant('CardData',
     "japan_only": false,
     "main_unit": "Muse",
     "name": "Nishikino Maki",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": false,
     "rarity": "SR",
     "release_date": "2015-05-05",
@@ -18809,6 +13880,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 4560,
+      "display": 4560,
       "idlz": 4840
     },
     "sub_unit": "Bibi",
@@ -18818,12 +13890,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Pure",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": null,
     "full_name": "UR Cyber Yazawa Nico",
     "id": 590,
@@ -18831,12 +13897,6 @@ app.constant('CardData',
     "japan_only": false,
     "main_unit": "Muse",
     "name": "Yazawa Nico",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": true,
     "rarity": "UR",
     "release_date": "2015-04-30",
@@ -18851,6 +13911,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 5020,
+      "display": 5020,
       "idlz": 5320
     },
     "sub_unit": "Bibi",
@@ -18860,12 +13921,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Pure",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": null,
     "full_name": "SR Cyber Toujou Nozomi",
     "id": 589,
@@ -18873,12 +13928,6 @@ app.constant('CardData',
     "japan_only": false,
     "main_unit": "Muse",
     "name": "Toujou Nozomi",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": true,
     "rarity": "SR",
     "release_date": "2015-04-30",
@@ -18893,6 +13942,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 4670,
+      "display": 4670,
       "idlz": 4950
     },
     "sub_unit": "Lily White",
@@ -18902,12 +13952,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Cool",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": null,
     "full_name": "SR Cyber Hoshizora Rin",
     "id": 588,
@@ -18915,12 +13959,6 @@ app.constant('CardData',
     "japan_only": false,
     "main_unit": "Muse",
     "name": "Hoshizora Rin",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": true,
     "rarity": "SR",
     "release_date": "2015-04-30",
@@ -18935,6 +13973,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 4690,
+      "display": 4690,
       "idlz": 4970
     },
     "sub_unit": "Lily White",
@@ -18944,12 +13983,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Smile",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": null,
     "full_name": "SR Cyber Sonoda Umi",
     "id": 587,
@@ -18957,12 +13990,6 @@ app.constant('CardData',
     "japan_only": false,
     "main_unit": "Muse",
     "name": "Sonoda Umi",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": true,
     "rarity": "SR",
     "release_date": "2015-04-30",
@@ -18977,6 +14004,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 4620,
+      "display": 4620,
       "idlz": 4900
     },
     "sub_unit": "Lily White",
@@ -18986,12 +14014,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Smile",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": null,
     "full_name": "SR Cyber Minami Kotori",
     "id": 586,
@@ -18999,12 +14021,6 @@ app.constant('CardData',
     "japan_only": false,
     "main_unit": "Muse",
     "name": "Minami Kotori",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": true,
     "rarity": "SR",
     "release_date": "2015-04-30",
@@ -19019,6 +14035,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 4610,
+      "display": 4610,
       "idlz": 4890
     },
     "sub_unit": "Printemps",
@@ -19028,12 +14045,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Cool",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": null,
     "full_name": "UR Promo Toujou Nozomi",
     "id": 584,
@@ -19041,12 +14052,6 @@ app.constant('CardData',
     "japan_only": false,
     "main_unit": "Muse",
     "name": "Toujou Nozomi",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": false,
     "rarity": "UR",
     "release_date": "2015-04-20",
@@ -19061,6 +14066,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 4270,
+      "display": 4270,
       "idlz": 4270
     },
     "sub_unit": "Lily White",
@@ -19070,12 +14076,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Smile",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": true,
     "full_name": "SR Easter Minami Kotori",
     "id": 583,
@@ -19083,12 +14083,6 @@ app.constant('CardData',
     "japan_only": false,
     "main_unit": "Muse",
     "name": "Minami Kotori",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": false,
     "rarity": "SR",
     "release_date": "2015-04-20",
@@ -19103,6 +14097,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 4470,
+      "display": 4470,
       "idlz": 4750
     },
     "sub_unit": "Printemps",
@@ -19112,12 +14107,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Pure",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": null,
     "full_name": "UR Job v2 Ayase Eli",
     "id": 581,
@@ -19125,12 +14114,6 @@ app.constant('CardData',
     "japan_only": false,
     "main_unit": "Muse",
     "name": "Ayase Eli",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": true,
     "rarity": "UR",
     "release_date": "2015-04-15",
@@ -19145,6 +14128,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 4980,
+      "display": 4980,
       "idlz": 5280
     },
     "sub_unit": "Bibi",
@@ -19154,12 +14138,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Pure",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": null,
     "full_name": "SR Job v2 Yazawa Nico",
     "id": 580,
@@ -19167,12 +14145,6 @@ app.constant('CardData',
     "japan_only": false,
     "main_unit": "Muse",
     "name": "Yazawa Nico",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": true,
     "rarity": "SR",
     "release_date": "2015-04-15",
@@ -19187,6 +14159,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 4660,
+      "display": 4660,
       "idlz": 4940
     },
     "sub_unit": "Bibi",
@@ -19196,12 +14169,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Smile",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": null,
     "full_name": "SR Job v2 Koizumi Hanayo",
     "id": 579,
@@ -19209,12 +14176,6 @@ app.constant('CardData',
     "japan_only": false,
     "main_unit": "Muse",
     "name": "Koizumi Hanayo",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": true,
     "rarity": "SR",
     "release_date": "2015-04-15",
@@ -19229,6 +14190,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 4640,
+      "display": 4640,
       "idlz": 4920
     },
     "sub_unit": "Printemps",
@@ -19238,12 +14200,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Cool",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": null,
     "full_name": "SR Job v2 Sonoda Umi",
     "id": 578,
@@ -19251,12 +14207,6 @@ app.constant('CardData',
     "japan_only": false,
     "main_unit": "Muse",
     "name": "Sonoda Umi",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": true,
     "rarity": "SR",
     "release_date": "2015-04-15",
@@ -19271,6 +14221,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 4630,
+      "display": 4630,
       "idlz": 4910
     },
     "sub_unit": "Lily White",
@@ -19280,12 +14231,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Pure",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": true,
     "full_name": "SR Flower Viewing Sonoda Umi",
     "id": 567,
@@ -19293,12 +14238,6 @@ app.constant('CardData',
     "japan_only": false,
     "main_unit": "Muse",
     "name": "Sonoda Umi",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": false,
     "rarity": "SR",
     "release_date": "2015-04-05",
@@ -19313,6 +14252,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 4480,
+      "display": 4480,
       "idlz": 4760
     },
     "sub_unit": "Lily White",
@@ -19322,12 +14262,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Cool",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": null,
     "full_name": "UR Job v2 Minami Kotori",
     "id": 565,
@@ -19335,12 +14269,6 @@ app.constant('CardData',
     "japan_only": false,
     "main_unit": "Muse",
     "name": "Minami Kotori",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": true,
     "rarity": "UR",
     "release_date": "2015-03-31",
@@ -19355,6 +14283,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 4950,
+      "display": 4950,
       "idlz": 5250
     },
     "sub_unit": "Printemps",
@@ -19364,12 +14293,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Smile",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": null,
     "full_name": "SR Job v2 Toujou Nozomi",
     "id": 564,
@@ -19377,12 +14300,6 @@ app.constant('CardData',
     "japan_only": false,
     "main_unit": "Muse",
     "name": "Toujou Nozomi",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": true,
     "rarity": "SR",
     "release_date": "2015-03-31",
@@ -19397,6 +14314,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 4640,
+      "display": 4640,
       "idlz": 4920
     },
     "sub_unit": "Lily White",
@@ -19406,12 +14324,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Cool",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": null,
     "full_name": "SR Job v2 Nishikino Maki",
     "id": 563,
@@ -19419,12 +14331,6 @@ app.constant('CardData',
     "japan_only": false,
     "main_unit": "Muse",
     "name": "Nishikino Maki",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": true,
     "rarity": "SR",
     "release_date": "2015-03-31",
@@ -19439,6 +14345,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 4700,
+      "display": 4700,
       "idlz": 4980
     },
     "sub_unit": "Bibi",
@@ -19448,12 +14355,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Pure",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": null,
     "full_name": "SR Job v2 Hoshizora Rin",
     "id": 562,
@@ -19461,12 +14362,6 @@ app.constant('CardData',
     "japan_only": false,
     "main_unit": "Muse",
     "name": "Hoshizora Rin",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": true,
     "rarity": "SR",
     "release_date": "2015-03-31",
@@ -19481,6 +14376,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 4610,
+      "display": 4610,
       "idlz": 4890
     },
     "sub_unit": "Lily White",
@@ -19490,12 +14386,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Smile",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": null,
     "full_name": "SR Job v2 Kousaka Honoka",
     "id": 561,
@@ -19503,12 +14393,6 @@ app.constant('CardData',
     "japan_only": false,
     "main_unit": "Muse",
     "name": "Kousaka Honoka",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": true,
     "rarity": "SR",
     "release_date": "2015-03-31",
@@ -19523,6 +14407,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 4650,
+      "display": 4650,
       "idlz": 4930
     },
     "sub_unit": "Printemps",
@@ -19532,12 +14417,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Smile",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": null,
     "full_name": "UR Promo Yazawa Nico",
     "id": 559,
@@ -19545,12 +14424,6 @@ app.constant('CardData',
     "japan_only": true,
     "main_unit": "Muse",
     "name": "Yazawa Nico",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": false,
     "rarity": "UR",
     "release_date": "2015-03-20",
@@ -19565,6 +14438,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 4300,
+      "display": 4300,
       "idlz": 4300
     },
     "sub_unit": "Bibi",
@@ -19574,12 +14448,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Smile",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": true,
     "full_name": "SR Catch Hoshizora Rin",
     "id": 558,
@@ -19587,12 +14455,6 @@ app.constant('CardData',
     "japan_only": false,
     "main_unit": "Muse",
     "name": "Hoshizora Rin",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": false,
     "rarity": "SR",
     "release_date": "2015-03-20",
@@ -19607,6 +14469,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 4440,
+      "display": 4440,
       "idlz": 4720
     },
     "sub_unit": "Lily White",
@@ -19616,12 +14479,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Cool",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": null,
     "full_name": "UR White Day Koizumi Hanayo",
     "id": 556,
@@ -19629,12 +14486,6 @@ app.constant('CardData',
     "japan_only": false,
     "main_unit": "Muse",
     "name": "Koizumi Hanayo",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": true,
     "rarity": "UR",
     "release_date": "2015-03-15",
@@ -19649,6 +14500,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 4940,
+      "display": 4940,
       "idlz": 5240
     },
     "sub_unit": "Printemps",
@@ -19658,12 +14510,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Smile",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": null,
     "full_name": "SR White Day Yazawa Nico",
     "id": 555,
@@ -19671,12 +14517,6 @@ app.constant('CardData',
     "japan_only": false,
     "main_unit": "Muse",
     "name": "Yazawa Nico",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": true,
     "rarity": "SR",
     "release_date": "2015-03-15",
@@ -19691,6 +14531,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 4620,
+      "display": 4620,
       "idlz": 4900
     },
     "sub_unit": "Bibi",
@@ -19700,12 +14541,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Cool",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": null,
     "full_name": "SR White Day Toujou Nozomi",
     "id": 554,
@@ -19713,12 +14548,6 @@ app.constant('CardData',
     "japan_only": false,
     "main_unit": "Muse",
     "name": "Toujou Nozomi",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": true,
     "rarity": "SR",
     "release_date": "2015-03-15",
@@ -19733,6 +14562,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 4610,
+      "display": 4610,
       "idlz": 4890
     },
     "sub_unit": "Lily White",
@@ -19742,12 +14572,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Pure",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": null,
     "full_name": "SR White Day Kousaka Honoka",
     "id": 553,
@@ -19755,12 +14579,6 @@ app.constant('CardData',
     "japan_only": false,
     "main_unit": "Muse",
     "name": "Kousaka Honoka",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": true,
     "rarity": "SR",
     "release_date": "2015-03-15",
@@ -19775,6 +14593,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 4640,
+      "display": 4640,
       "idlz": 4920
     },
     "sub_unit": "Printemps",
@@ -19784,12 +14603,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Cool",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": true,
     "full_name": "SR Doll Festival Ayase Eli",
     "id": 551,
@@ -19797,12 +14610,6 @@ app.constant('CardData',
     "japan_only": false,
     "main_unit": "Muse",
     "name": "Ayase Eli",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": false,
     "rarity": "SR",
     "release_date": "2015-03-05",
@@ -19817,6 +14624,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 4440,
+      "display": 4440,
       "idlz": 4720
     },
     "sub_unit": "Bibi",
@@ -19826,12 +14634,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Smile",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": null,
     "full_name": "UR White Day Sonoda Umi",
     "id": 549,
@@ -19839,12 +14641,6 @@ app.constant('CardData',
     "japan_only": false,
     "main_unit": "Muse",
     "name": "Sonoda Umi",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": true,
     "rarity": "UR",
     "release_date": "2015-02-28",
@@ -19859,6 +14655,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 4980,
+      "display": 4980,
       "idlz": 5280
     },
     "sub_unit": "Lily White",
@@ -19868,12 +14665,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Smile",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": null,
     "full_name": "SR White Day Nishikino Maki",
     "id": 548,
@@ -19881,12 +14672,6 @@ app.constant('CardData',
     "japan_only": false,
     "main_unit": "Muse",
     "name": "Nishikino Maki",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": true,
     "rarity": "SR",
     "release_date": "2015-02-28",
@@ -19901,6 +14686,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 4640,
+      "display": 4640,
       "idlz": 4920
     },
     "sub_unit": "Bibi",
@@ -19910,12 +14696,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Cool",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": null,
     "full_name": "SR White Day Hoshizora Rin",
     "id": 547,
@@ -19923,12 +14703,6 @@ app.constant('CardData',
     "japan_only": false,
     "main_unit": "Muse",
     "name": "Hoshizora Rin",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": true,
     "rarity": "SR",
     "release_date": "2015-02-28",
@@ -19943,6 +14717,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 4680,
+      "display": 4680,
       "idlz": 4960
     },
     "sub_unit": "Lily White",
@@ -19952,12 +14727,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Pure",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": null,
     "full_name": "SR White Day Minami Kotori",
     "id": 546,
@@ -19965,12 +14734,6 @@ app.constant('CardData',
     "japan_only": false,
     "main_unit": "Muse",
     "name": "Minami Kotori",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": true,
     "rarity": "SR",
     "release_date": "2015-02-28",
@@ -19985,6 +14748,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 4630,
+      "display": 4630,
       "idlz": 4910
     },
     "sub_unit": "Printemps",
@@ -19994,12 +14758,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Pure",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": null,
     "full_name": "SR White Day Ayase Eli",
     "id": 545,
@@ -20007,12 +14765,6 @@ app.constant('CardData',
     "japan_only": false,
     "main_unit": "Muse",
     "name": "Ayase Eli",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": true,
     "rarity": "SR",
     "release_date": "2015-02-28",
@@ -20027,6 +14779,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 4660,
+      "display": 4660,
       "idlz": 4940
     },
     "sub_unit": "Bibi",
@@ -20036,12 +14789,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Pure",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": null,
     "full_name": "SR Promo Koizumi Hanayo",
     "id": 543,
@@ -20049,12 +14796,6 @@ app.constant('CardData',
     "japan_only": true,
     "main_unit": "Muse",
     "name": "Koizumi Hanayo",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": false,
     "rarity": "SR",
     "release_date": "2015-02-20",
@@ -20069,6 +14810,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 4270,
+      "display": 4270,
       "idlz": 4270
     },
     "sub_unit": "Printemps",
@@ -20078,12 +14820,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Pure",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": true,
     "full_name": "SR Snow Bunny Toujou Nozomi",
     "id": 542,
@@ -20091,12 +14827,6 @@ app.constant('CardData',
     "japan_only": false,
     "main_unit": "Muse",
     "name": "Toujou Nozomi",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": false,
     "rarity": "SR",
     "release_date": "2015-02-20",
@@ -20111,6 +14841,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 4470,
+      "display": 4470,
       "idlz": 4750
     },
     "sub_unit": "Lily White",
@@ -20120,12 +14851,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Smile",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": null,
     "full_name": "SR Promo Hoshizora Rin",
     "id": 541,
@@ -20133,12 +14858,6 @@ app.constant('CardData',
     "japan_only": true,
     "main_unit": "Muse",
     "name": "Hoshizora Rin",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": false,
     "rarity": "SR",
     "release_date": "2015-02-20",
@@ -20153,6 +14872,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 4250,
+      "display": 4250,
       "idlz": 4250
     },
     "sub_unit": "Lily White",
@@ -20162,12 +14882,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Pure",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": null,
     "full_name": "UR Valentine's Hoshizora Rin",
     "id": 538,
@@ -20175,12 +14889,6 @@ app.constant('CardData',
     "japan_only": false,
     "main_unit": "Muse",
     "name": "Hoshizora Rin",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": true,
     "rarity": "UR",
     "release_date": "2015-02-15",
@@ -20195,6 +14903,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 5030,
+      "display": 5030,
       "idlz": 5330
     },
     "sub_unit": "Lily White",
@@ -20204,12 +14913,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Pure",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": null,
     "full_name": "SR Valentine's Yazawa Nico",
     "id": 537,
@@ -20217,12 +14920,6 @@ app.constant('CardData',
     "japan_only": false,
     "main_unit": "Muse",
     "name": "Yazawa Nico",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": true,
     "rarity": "SR",
     "release_date": "2015-02-15",
@@ -20237,6 +14934,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 4640,
+      "display": 4640,
       "idlz": 4920
     },
     "sub_unit": "Bibi",
@@ -20246,12 +14944,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Smile",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": null,
     "full_name": "SR Valentine's Sonoda Umi",
     "id": 536,
@@ -20259,12 +14951,6 @@ app.constant('CardData',
     "japan_only": false,
     "main_unit": "Muse",
     "name": "Sonoda Umi",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": true,
     "rarity": "SR",
     "release_date": "2015-02-15",
@@ -20279,6 +14965,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 4550,
+      "display": 4550,
       "idlz": 4830
     },
     "sub_unit": "Lily White",
@@ -20288,12 +14975,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Cool",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": null,
     "full_name": "SR Valentine's Minami Kotori",
     "id": 535,
@@ -20301,12 +14982,6 @@ app.constant('CardData',
     "japan_only": false,
     "main_unit": "Muse",
     "name": "Minami Kotori",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": true,
     "rarity": "SR",
     "release_date": "2015-02-15",
@@ -20321,6 +14996,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 4690,
+      "display": 4690,
       "idlz": 4970
     },
     "sub_unit": "Printemps",
@@ -20330,12 +15006,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Cool",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": true,
     "full_name": "SR Setsubun Kousaka Honoka",
     "id": 533,
@@ -20343,12 +15013,6 @@ app.constant('CardData',
     "japan_only": false,
     "main_unit": "Muse",
     "name": "Kousaka Honoka",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": false,
     "rarity": "SR",
     "release_date": "2015-02-05",
@@ -20363,6 +15027,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 4400,
+      "display": 4400,
       "idlz": 4680
     },
     "sub_unit": "Printemps",
@@ -20372,12 +15037,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Smile",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": null,
     "full_name": "UR Valentine's Toujou Nozomi",
     "id": 531,
@@ -20385,12 +15044,6 @@ app.constant('CardData',
     "japan_only": false,
     "main_unit": "Muse",
     "name": "Toujou Nozomi",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": true,
     "rarity": "UR",
     "release_date": "2015-01-31",
@@ -20405,6 +15058,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 4930,
+      "display": 4930,
       "idlz": 5230
     },
     "sub_unit": "Lily White",
@@ -20414,12 +15068,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Cool",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": null,
     "full_name": "SR Valentine's Koizumi Hanayo",
     "id": 530,
@@ -20427,12 +15075,6 @@ app.constant('CardData',
     "japan_only": false,
     "main_unit": "Muse",
     "name": "Koizumi Hanayo",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": true,
     "rarity": "SR",
     "release_date": "2015-01-31",
@@ -20447,6 +15089,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 4640,
+      "display": 4640,
       "idlz": 4920
     },
     "sub_unit": "Printemps",
@@ -20456,12 +15099,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Pure",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": null,
     "full_name": "SR Valentine's Nishikino Maki",
     "id": 529,
@@ -20469,12 +15106,6 @@ app.constant('CardData',
     "japan_only": false,
     "main_unit": "Muse",
     "name": "Nishikino Maki",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": true,
     "rarity": "SR",
     "release_date": "2015-01-31",
@@ -20489,6 +15120,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 4610,
+      "display": 4610,
       "idlz": 4890
     },
     "sub_unit": "Bibi",
@@ -20498,12 +15130,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Cool",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": null,
     "full_name": "SR Valentine's Ayase Eli",
     "id": 528,
@@ -20511,12 +15137,6 @@ app.constant('CardData',
     "japan_only": false,
     "main_unit": "Muse",
     "name": "Ayase Eli",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": true,
     "rarity": "SR",
     "release_date": "2015-01-31",
@@ -20531,6 +15151,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 4700,
+      "display": 4700,
       "idlz": 4980
     },
     "sub_unit": "Bibi",
@@ -20540,12 +15161,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Smile",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": null,
     "full_name": "SR Valentine's Kousaka Honoka",
     "id": 527,
@@ -20553,12 +15168,6 @@ app.constant('CardData',
     "japan_only": false,
     "main_unit": "Muse",
     "name": "Kousaka Honoka",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": true,
     "rarity": "SR",
     "release_date": "2015-01-31",
@@ -20573,6 +15182,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 4630,
+      "display": 4630,
       "idlz": 4910
     },
     "sub_unit": "Printemps",
@@ -20582,12 +15192,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Smile",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": null,
     "full_name": "SR Promo Yazawa Nico",
     "id": 525,
@@ -20595,12 +15199,6 @@ app.constant('CardData',
     "japan_only": false,
     "main_unit": "Muse",
     "name": "Yazawa Nico",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": false,
     "rarity": "SR",
     "release_date": "2015-01-20",
@@ -20615,6 +15213,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 4200,
+      "display": 4200,
       "idlz": 4200
     },
     "sub_unit": "Bibi",
@@ -20624,12 +15223,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Pure",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": null,
     "full_name": "SR Promo Koizumi Hanayo",
     "id": 524,
@@ -20637,12 +15230,6 @@ app.constant('CardData',
     "japan_only": false,
     "main_unit": "Muse",
     "name": "Koizumi Hanayo",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": false,
     "rarity": "SR",
     "release_date": "2015-01-20",
@@ -20657,6 +15244,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 4270,
+      "display": 4270,
       "idlz": 4270
     },
     "sub_unit": "Printemps",
@@ -20666,12 +15254,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Smile",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": true,
     "full_name": "SR Fairy Koizumi Hanayo",
     "id": 523,
@@ -20679,12 +15261,6 @@ app.constant('CardData',
     "japan_only": false,
     "main_unit": "Muse",
     "name": "Koizumi Hanayo",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": false,
     "rarity": "SR",
     "release_date": "2015-01-20",
@@ -20699,6 +15275,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 4510,
+      "display": 4510,
       "idlz": 4790
     },
     "sub_unit": "Printemps",
@@ -20708,12 +15285,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Pure",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": null,
     "full_name": "SR Promo Toujou Nozomi",
     "id": 522,
@@ -20721,12 +15292,6 @@ app.constant('CardData',
     "japan_only": false,
     "main_unit": "Muse",
     "name": "Toujou Nozomi",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": false,
     "rarity": "SR",
     "release_date": "2015-01-20",
@@ -20741,6 +15306,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 4190,
+      "display": 4190,
       "idlz": 4190
     },
     "sub_unit": "Lily White",
@@ -20750,12 +15316,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Cool",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": null,
     "full_name": "SR Promo Nishikino Maki",
     "id": 521,
@@ -20763,12 +15323,6 @@ app.constant('CardData',
     "japan_only": false,
     "main_unit": "Muse",
     "name": "Nishikino Maki",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": false,
     "rarity": "SR",
     "release_date": "2015-01-20",
@@ -20783,6 +15337,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 4220,
+      "display": 4220,
       "idlz": 4220
     },
     "sub_unit": "Bibi",
@@ -20792,12 +15347,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Smile",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": null,
     "full_name": "SR Promo Hoshizora Rin",
     "id": 520,
@@ -20805,12 +15354,6 @@ app.constant('CardData',
     "japan_only": false,
     "main_unit": "Muse",
     "name": "Hoshizora Rin",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": false,
     "rarity": "SR",
     "release_date": "2015-01-20",
@@ -20825,6 +15368,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 4210,
+      "display": 4210,
       "idlz": 4210
     },
     "sub_unit": "Lily White",
@@ -20834,12 +15378,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Cool",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": null,
     "full_name": "SR Promo Sonoda Umi",
     "id": 519,
@@ -20847,12 +15385,6 @@ app.constant('CardData',
     "japan_only": false,
     "main_unit": "Muse",
     "name": "Sonoda Umi",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": false,
     "rarity": "SR",
     "release_date": "2015-01-20",
@@ -20867,6 +15399,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 4190,
+      "display": 4190,
       "idlz": 4190
     },
     "sub_unit": "Lily White",
@@ -20876,12 +15409,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Pure",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": null,
     "full_name": "SR Promo Minami Kotori",
     "id": 518,
@@ -20889,12 +15416,6 @@ app.constant('CardData',
     "japan_only": false,
     "main_unit": "Muse",
     "name": "Minami Kotori",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": false,
     "rarity": "SR",
     "release_date": "2015-01-20",
@@ -20909,6 +15430,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 4200,
+      "display": 4200,
       "idlz": 4200
     },
     "sub_unit": "Printemps",
@@ -20918,12 +15440,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Cool",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": null,
     "full_name": "SR Promo Ayase Eli",
     "id": 517,
@@ -20931,12 +15447,6 @@ app.constant('CardData',
     "japan_only": false,
     "main_unit": "Muse",
     "name": "Ayase Eli",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": false,
     "rarity": "SR",
     "release_date": "2015-01-20",
@@ -20951,6 +15461,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 4250,
+      "display": 4250,
       "idlz": 4250
     },
     "sub_unit": "Bibi",
@@ -20960,12 +15471,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Smile",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": null,
     "full_name": "SR Promo Kousaka Honoka",
     "id": 516,
@@ -20973,12 +15478,6 @@ app.constant('CardData',
     "japan_only": false,
     "main_unit": "Muse",
     "name": "Kousaka Honoka",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": false,
     "rarity": "SR",
     "release_date": "2015-01-20",
@@ -20993,6 +15492,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 4250,
+      "display": 4250,
       "idlz": 4250
     },
     "sub_unit": "Printemps",
@@ -21002,12 +15502,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Cool",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": null,
     "full_name": "UR Seven Lucky Gods Yazawa Nico",
     "id": 514,
@@ -21015,12 +15509,6 @@ app.constant('CardData',
     "japan_only": false,
     "main_unit": "Muse",
     "name": "Yazawa Nico",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": true,
     "rarity": "UR",
     "release_date": "2015-01-15",
@@ -21035,6 +15523,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 4940,
+      "display": 4940,
       "idlz": 5240
     },
     "sub_unit": "Bibi",
@@ -21044,12 +15533,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Cool",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": null,
     "full_name": "SR Seven Lucky Gods Nishikino Maki",
     "id": 513,
@@ -21057,12 +15540,6 @@ app.constant('CardData',
     "japan_only": false,
     "main_unit": "Muse",
     "name": "Nishikino Maki",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": true,
     "rarity": "SR",
     "release_date": "2015-01-15",
@@ -21077,6 +15554,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 4680,
+      "display": 4680,
       "idlz": 4960
     },
     "sub_unit": "Bibi",
@@ -21086,12 +15564,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Smile",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": null,
     "full_name": "SR Seven Lucky Gods Hoshizora Rin",
     "id": 512,
@@ -21099,12 +15571,6 @@ app.constant('CardData',
     "japan_only": false,
     "main_unit": "Muse",
     "name": "Hoshizora Rin",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": true,
     "rarity": "SR",
     "release_date": "2015-01-15",
@@ -21119,6 +15585,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 4640,
+      "display": 4640,
       "idlz": 4920
     },
     "sub_unit": "Lily White",
@@ -21128,12 +15595,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Pure",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": null,
     "full_name": "SR Seven Lucky Gods Sonoda Umi",
     "id": 511,
@@ -21141,12 +15602,6 @@ app.constant('CardData',
     "japan_only": false,
     "main_unit": "Muse",
     "name": "Sonoda Umi",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": true,
     "rarity": "SR",
     "release_date": "2015-01-15",
@@ -21161,6 +15616,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 4580,
+      "display": 4580,
       "idlz": 4860
     },
     "sub_unit": "Lily White",
@@ -21170,12 +15626,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Cool",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": true,
     "full_name": "SR New Year's Food Minami Kotori",
     "id": 509,
@@ -21183,12 +15633,6 @@ app.constant('CardData',
     "japan_only": false,
     "main_unit": "Muse",
     "name": "Minami Kotori",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": false,
     "rarity": "SR",
     "release_date": "2015-01-05",
@@ -21203,6 +15647,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 4440,
+      "display": 4440,
       "idlz": 4720
     },
     "sub_unit": "Printemps",
@@ -21212,12 +15657,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Smile",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": null,
     "full_name": "UR Seven Lucky Gods Ayase Eli",
     "id": 507,
@@ -21225,12 +15664,6 @@ app.constant('CardData',
     "japan_only": false,
     "main_unit": "Muse",
     "name": "Ayase Eli",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": true,
     "rarity": "UR",
     "release_date": "2014-12-31",
@@ -21245,6 +15678,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 5000,
+      "display": 5000,
       "idlz": 5300
     },
     "sub_unit": "Bibi",
@@ -21254,12 +15688,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Pure",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": null,
     "full_name": "SR Seven Lucky Gods Koizumi Hanayo",
     "id": 506,
@@ -21267,12 +15695,6 @@ app.constant('CardData',
     "japan_only": false,
     "main_unit": "Muse",
     "name": "Koizumi Hanayo",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": true,
     "rarity": "SR",
     "release_date": "2014-12-31",
@@ -21287,6 +15709,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 4620,
+      "display": 4620,
       "idlz": 4900
     },
     "sub_unit": "Printemps",
@@ -21296,12 +15719,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Smile",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": null,
     "full_name": "SR Seven Lucky Gods Toujou Nozomi",
     "id": 505,
@@ -21309,12 +15726,6 @@ app.constant('CardData',
     "japan_only": false,
     "main_unit": "Muse",
     "name": "Toujou Nozomi",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": true,
     "rarity": "SR",
     "release_date": "2014-12-31",
@@ -21329,6 +15740,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 4630,
+      "display": 4630,
       "idlz": 4910
     },
     "sub_unit": "Lily White",
@@ -21338,12 +15750,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Pure",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": null,
     "full_name": "SR Seven Lucky Gods Minami Kotori",
     "id": 504,
@@ -21351,12 +15757,6 @@ app.constant('CardData',
     "japan_only": false,
     "main_unit": "Muse",
     "name": "Minami Kotori",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": true,
     "rarity": "SR",
     "release_date": "2014-12-31",
@@ -21371,6 +15771,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 4640,
+      "display": 4640,
       "idlz": 4920
     },
     "sub_unit": "Printemps",
@@ -21380,12 +15781,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Cool",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": null,
     "full_name": "SR Seven Lucky Gods Kousaka Honoka",
     "id": 503,
@@ -21393,12 +15788,6 @@ app.constant('CardData',
     "japan_only": false,
     "main_unit": "Muse",
     "name": "Kousaka Honoka",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": true,
     "rarity": "SR",
     "release_date": "2014-12-31",
@@ -21413,6 +15802,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 4660,
+      "display": 4660,
       "idlz": 4940
     },
     "sub_unit": "Printemps",
@@ -21422,12 +15812,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Smile",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": null,
     "full_name": "UR Promo Kousaka Honoka",
     "id": 492,
@@ -21435,12 +15819,6 @@ app.constant('CardData',
     "japan_only": true,
     "main_unit": "Muse",
     "name": "Kousaka Honoka",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": false,
     "rarity": "UR",
     "release_date": "2014-12-20",
@@ -21455,6 +15833,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 4260,
+      "display": 4260,
       "idlz": 4260
     },
     "sub_unit": "Printemps",
@@ -21464,12 +15843,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Cool",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": null,
     "full_name": "SR Promo Yazawa Nico",
     "id": 491,
@@ -21477,12 +15850,6 @@ app.constant('CardData',
     "japan_only": true,
     "main_unit": "Muse",
     "name": "Yazawa Nico",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": false,
     "rarity": "SR",
     "release_date": "2014-12-20",
@@ -21497,6 +15864,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 4260,
+      "display": 4260,
       "idlz": 4260
     },
     "sub_unit": "Bibi",
@@ -21506,12 +15874,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Smile",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": true,
     "full_name": "SR Angel Yazawa Nico",
     "id": 490,
@@ -21519,12 +15881,6 @@ app.constant('CardData',
     "japan_only": false,
     "main_unit": "Muse",
     "name": "Yazawa Nico",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": false,
     "rarity": "SR",
     "release_date": "2014-12-20",
@@ -21539,6 +15895,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 4430,
+      "display": 4430,
       "idlz": 4710
     },
     "sub_unit": "Bibi",
@@ -21548,12 +15905,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Pure",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": null,
     "full_name": "SR Promo Toujou Nozomi",
     "id": 489,
@@ -21561,12 +15912,6 @@ app.constant('CardData',
     "japan_only": false,
     "main_unit": "Muse",
     "name": "Toujou Nozomi",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": false,
     "rarity": "SR",
     "release_date": "2014-12-20",
@@ -21581,6 +15926,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 4230,
+      "display": 4230,
       "idlz": 4230
     },
     "sub_unit": "Lily White",
@@ -21590,12 +15936,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Cool",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": null,
     "full_name": "SR Promo Nishikino Maki",
     "id": 488,
@@ -21603,12 +15943,6 @@ app.constant('CardData',
     "japan_only": true,
     "main_unit": "Muse",
     "name": "Nishikino Maki",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": false,
     "rarity": "SR",
     "release_date": "2014-12-20",
@@ -21623,6 +15957,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 4330,
+      "display": 4330,
       "idlz": 4330
     },
     "sub_unit": "Bibi",
@@ -21632,12 +15967,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Cool",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": null,
     "full_name": "SR Promo Ayase Eli",
     "id": 487,
@@ -21645,12 +15974,6 @@ app.constant('CardData',
     "japan_only": false,
     "main_unit": "Muse",
     "name": "Ayase Eli",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": false,
     "rarity": "SR",
     "release_date": "2014-12-20",
@@ -21665,6 +15988,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 4210,
+      "display": 4210,
       "idlz": 4210
     },
     "sub_unit": "Bibi",
@@ -21674,12 +15998,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Cool",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": null,
     "full_name": "SR Promo Ayase Eli",
     "id": 486,
@@ -21687,12 +16005,6 @@ app.constant('CardData',
     "japan_only": true,
     "main_unit": "Muse",
     "name": "Ayase Eli",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": false,
     "rarity": "SR",
     "release_date": "2014-12-20",
@@ -21707,6 +16019,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 4400,
+      "display": 4400,
       "idlz": 4400
     },
     "sub_unit": "Bibi",
@@ -21716,12 +16029,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Smile",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": null,
     "full_name": "UR Promo Nishikino Maki",
     "id": 484,
@@ -21729,12 +16036,6 @@ app.constant('CardData',
     "japan_only": false,
     "main_unit": "Muse",
     "name": "Nishikino Maki",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": false,
     "rarity": "UR",
     "release_date": "2014-12-15",
@@ -21749,6 +16050,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 4230,
+      "display": 4230,
       "idlz": 4230
     },
     "sub_unit": "Bibi",
@@ -21758,12 +16060,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Pure",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": null,
     "full_name": "UR Snowy Mountain Kousaka Honoka",
     "id": 483,
@@ -21771,12 +16067,6 @@ app.constant('CardData',
     "japan_only": false,
     "main_unit": "Muse",
     "name": "Kousaka Honoka",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": true,
     "rarity": "UR",
     "release_date": "2014-12-15",
@@ -21791,6 +16081,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 4940,
+      "display": 4940,
       "idlz": 5240
     },
     "sub_unit": "Printemps",
@@ -21800,12 +16091,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Smile",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": null,
     "full_name": "SR Snowy Mountain Nishikino Maki",
     "id": 482,
@@ -21813,12 +16098,6 @@ app.constant('CardData',
     "japan_only": false,
     "main_unit": "Muse",
     "name": "Nishikino Maki",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": true,
     "rarity": "SR",
     "release_date": "2014-12-15",
@@ -21833,6 +16112,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 4600,
+      "display": 4600,
       "idlz": 4880
     },
     "sub_unit": "Bibi",
@@ -21842,12 +16122,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Pure",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": null,
     "full_name": "SR Snowy Mountain Hoshizora Rin",
     "id": 481,
@@ -21855,12 +16129,6 @@ app.constant('CardData',
     "japan_only": false,
     "main_unit": "Muse",
     "name": "Hoshizora Rin",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": true,
     "rarity": "SR",
     "release_date": "2014-12-15",
@@ -21875,6 +16143,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 4500,
+      "display": 4500,
       "idlz": 4780
     },
     "sub_unit": "Lily White",
@@ -21884,12 +16153,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Cool",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": null,
     "full_name": "SR Snowy Mountain Ayase Eli",
     "id": 480,
@@ -21897,12 +16160,6 @@ app.constant('CardData',
     "japan_only": false,
     "main_unit": "Muse",
     "name": "Ayase Eli",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": true,
     "rarity": "SR",
     "release_date": "2014-12-15",
@@ -21917,6 +16174,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 4600,
+      "display": 4600,
       "idlz": 4880
     },
     "sub_unit": "Bibi",
@@ -21926,12 +16184,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Pure",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": true,
     "full_name": "SR Santa Nishikino Maki",
     "id": 478,
@@ -21939,12 +16191,6 @@ app.constant('CardData',
     "japan_only": false,
     "main_unit": "Muse",
     "name": "Nishikino Maki",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": false,
     "rarity": "SR",
     "release_date": "2014-12-05",
@@ -21959,6 +16205,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 4460,
+      "display": 4460,
       "idlz": 4740
     },
     "sub_unit": "Bibi",
@@ -21968,12 +16215,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Smile",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": null,
     "full_name": "UR Snowy Mountain Minami Kotori",
     "id": 476,
@@ -21981,12 +16222,6 @@ app.constant('CardData',
     "japan_only": false,
     "main_unit": "Muse",
     "name": "Minami Kotori",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": true,
     "rarity": "UR",
     "release_date": "2014-11-30",
@@ -22001,6 +16236,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 5020,
+      "display": 5020,
       "idlz": 5320
     },
     "sub_unit": "Printemps",
@@ -22010,12 +16246,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Cool",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": null,
     "full_name": "SR Snowy Mountain Yazawa Nico",
     "id": 475,
@@ -22023,12 +16253,6 @@ app.constant('CardData',
     "japan_only": false,
     "main_unit": "Muse",
     "name": "Yazawa Nico",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": true,
     "rarity": "SR",
     "release_date": "2014-11-30",
@@ -22043,6 +16267,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 4560,
+      "display": 4560,
       "idlz": 4840
     },
     "sub_unit": "Bibi",
@@ -22052,12 +16277,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Cool",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": null,
     "full_name": "SR Snowy Mountain Koizumi Hanayo",
     "id": 474,
@@ -22065,12 +16284,6 @@ app.constant('CardData',
     "japan_only": false,
     "main_unit": "Muse",
     "name": "Koizumi Hanayo",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": true,
     "rarity": "SR",
     "release_date": "2014-11-30",
@@ -22085,6 +16298,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 4650,
+      "display": 4650,
       "idlz": 4930
     },
     "sub_unit": "Printemps",
@@ -22094,12 +16308,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Pure",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": null,
     "full_name": "SR Snowy Mountain Toujou Nozomi",
     "id": 473,
@@ -22107,12 +16315,6 @@ app.constant('CardData',
     "japan_only": false,
     "main_unit": "Muse",
     "name": "Toujou Nozomi",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": true,
     "rarity": "SR",
     "release_date": "2014-11-30",
@@ -22127,6 +16329,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 4610,
+      "display": 4610,
       "idlz": 4890
     },
     "sub_unit": "Lily White",
@@ -22136,12 +16339,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Smile",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": null,
     "full_name": "SR Snowy Mountain Sonoda Umi",
     "id": 472,
@@ -22149,12 +16346,6 @@ app.constant('CardData',
     "japan_only": false,
     "main_unit": "Muse",
     "name": "Sonoda Umi",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": true,
     "rarity": "SR",
     "release_date": "2014-11-30",
@@ -22169,6 +16360,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 4600,
+      "display": 4600,
       "idlz": 4880
     },
     "sub_unit": "Lily White",
@@ -22178,12 +16370,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Pure",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": null,
     "full_name": "SR Promo Toujou Nozomi",
     "id": 470,
@@ -22191,12 +16377,6 @@ app.constant('CardData',
     "japan_only": true,
     "main_unit": "Muse",
     "name": "Toujou Nozomi",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": false,
     "rarity": "SR",
     "release_date": "2014-11-20",
@@ -22211,6 +16391,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 4400,
+      "display": 4400,
       "idlz": 4400
     },
     "sub_unit": "Lily White",
@@ -22220,12 +16401,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Pure",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": true,
     "full_name": "SR Fairy Toujou Nozomi",
     "id": 469,
@@ -22233,12 +16408,6 @@ app.constant('CardData',
     "japan_only": false,
     "main_unit": "Muse",
     "name": "Toujou Nozomi",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": false,
     "rarity": "SR",
     "release_date": "2014-11-20",
@@ -22253,6 +16422,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 4430,
+      "display": 4430,
       "idlz": 4710
     },
     "sub_unit": "Lily White",
@@ -22262,12 +16432,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Pure",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": null,
     "full_name": "SR Promo Hoshizora Rin",
     "id": 468,
@@ -22275,12 +16439,6 @@ app.constant('CardData',
     "japan_only": true,
     "main_unit": "Muse",
     "name": "Hoshizora Rin",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": false,
     "rarity": "SR",
     "release_date": "2014-11-20",
@@ -22295,6 +16453,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 4380,
+      "display": 4380,
       "idlz": 4380
     },
     "sub_unit": "Lily White",
@@ -22304,12 +16463,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Pure",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": null,
     "full_name": "SR Promo Sonoda Umi",
     "id": 467,
@@ -22317,12 +16470,6 @@ app.constant('CardData',
     "japan_only": true,
     "main_unit": "Muse",
     "name": "Sonoda Umi",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": false,
     "rarity": "SR",
     "release_date": "2014-11-20",
@@ -22337,6 +16484,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 4340,
+      "display": 4340,
       "idlz": 4340
     },
     "sub_unit": "Lily White",
@@ -22346,12 +16494,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Pure",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": null,
     "full_name": "UR Promo Koizumi Hanayo",
     "id": 465,
@@ -22359,12 +16501,6 @@ app.constant('CardData',
     "japan_only": true,
     "main_unit": "Muse",
     "name": "Koizumi Hanayo",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": false,
     "rarity": "UR",
     "release_date": "2014-11-15",
@@ -22379,6 +16515,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 4330,
+      "display": 4330,
       "idlz": 4330
     },
     "sub_unit": "Printemps",
@@ -22388,12 +16525,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Cool",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": null,
     "full_name": "UR Constellation Hoshizora Rin",
     "id": 464,
@@ -22401,12 +16532,6 @@ app.constant('CardData',
     "japan_only": false,
     "main_unit": "Muse",
     "name": "Hoshizora Rin",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": true,
     "rarity": "UR",
     "release_date": "2014-11-15",
@@ -22421,6 +16546,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 4980,
+      "display": 4980,
       "idlz": 5280
     },
     "sub_unit": "Lily White",
@@ -22430,12 +16556,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Pure",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": null,
     "full_name": "UR Promo Minami Kotori",
     "id": 463,
@@ -22443,12 +16563,6 @@ app.constant('CardData',
     "japan_only": true,
     "main_unit": "Muse",
     "name": "Minami Kotori",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": false,
     "rarity": "UR",
     "release_date": "2014-11-15",
@@ -22463,6 +16577,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 4310,
+      "display": 4310,
       "idlz": 4310
     },
     "sub_unit": "Printemps",
@@ -22472,12 +16587,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Smile",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": null,
     "full_name": "SR Constellation Yazawa Nico",
     "id": 462,
@@ -22485,12 +16594,6 @@ app.constant('CardData',
     "japan_only": false,
     "main_unit": "Muse",
     "name": "Yazawa Nico",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": true,
     "rarity": "SR",
     "release_date": "2014-11-15",
@@ -22505,6 +16608,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 4620,
+      "display": 4620,
       "idlz": 4900
     },
     "sub_unit": "Bibi",
@@ -22514,12 +16618,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Cool",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": null,
     "full_name": "SR Constellation Sonoda Umi",
     "id": 461,
@@ -22527,12 +16625,6 @@ app.constant('CardData',
     "japan_only": false,
     "main_unit": "Muse",
     "name": "Sonoda Umi",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": true,
     "rarity": "SR",
     "release_date": "2014-11-15",
@@ -22547,6 +16639,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 4540,
+      "display": 4540,
       "idlz": 4820
     },
     "sub_unit": "Lily White",
@@ -22556,12 +16649,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Pure",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": null,
     "full_name": "SR Constellation Ayase Eli",
     "id": 460,
@@ -22569,12 +16656,6 @@ app.constant('CardData',
     "japan_only": false,
     "main_unit": "Muse",
     "name": "Ayase Eli",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": true,
     "rarity": "SR",
     "release_date": "2014-11-15",
@@ -22589,6 +16670,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 4630,
+      "display": 4630,
       "idlz": 4910
     },
     "sub_unit": "Bibi",
@@ -22598,12 +16680,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Smile",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": true,
     "full_name": "SR Craftwork Ayase Eli",
     "id": 458,
@@ -22611,12 +16687,6 @@ app.constant('CardData',
     "japan_only": false,
     "main_unit": "Muse",
     "name": "Ayase Eli",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": false,
     "rarity": "SR",
     "release_date": "2014-11-05",
@@ -22631,6 +16701,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 4360,
+      "display": 4360,
       "idlz": 4640
     },
     "sub_unit": "Bibi",
@@ -22640,12 +16711,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Pure",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": null,
     "full_name": "UR Constellation Nishikino Maki",
     "id": 456,
@@ -22653,12 +16718,6 @@ app.constant('CardData',
     "japan_only": false,
     "main_unit": "Muse",
     "name": "Nishikino Maki",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": true,
     "rarity": "UR",
     "release_date": "2014-10-31",
@@ -22673,6 +16732,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 5010,
+      "display": 5010,
       "idlz": 5310
     },
     "sub_unit": "Bibi",
@@ -22682,12 +16742,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Smile",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": null,
     "full_name": "SR Constellation Koizumi Hanayo",
     "id": 455,
@@ -22695,12 +16749,6 @@ app.constant('CardData',
     "japan_only": false,
     "main_unit": "Muse",
     "name": "Koizumi Hanayo",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": true,
     "rarity": "SR",
     "release_date": "2014-10-31",
@@ -22715,6 +16763,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 4620,
+      "display": 4620,
       "idlz": 4900
     },
     "sub_unit": "Printemps",
@@ -22724,12 +16773,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Cool",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": null,
     "full_name": "SR Constellation Toujou Nozomi",
     "id": 454,
@@ -22737,12 +16780,6 @@ app.constant('CardData',
     "japan_only": false,
     "main_unit": "Muse",
     "name": "Toujou Nozomi",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": true,
     "rarity": "SR",
     "release_date": "2014-10-31",
@@ -22757,6 +16794,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 4600,
+      "display": 4600,
       "idlz": 4880
     },
     "sub_unit": "Lily White",
@@ -22766,12 +16804,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Smile",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": null,
     "full_name": "SR Constellation Minami Kotori",
     "id": 453,
@@ -22779,12 +16811,6 @@ app.constant('CardData',
     "japan_only": false,
     "main_unit": "Muse",
     "name": "Minami Kotori",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": true,
     "rarity": "SR",
     "release_date": "2014-10-31",
@@ -22799,6 +16825,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 4580,
+      "display": 4580,
       "idlz": 4860
     },
     "sub_unit": "Printemps",
@@ -22808,12 +16835,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Pure",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": null,
     "full_name": "SR Constellation Kousaka Honoka",
     "id": 452,
@@ -22821,12 +16842,6 @@ app.constant('CardData',
     "japan_only": false,
     "main_unit": "Muse",
     "name": "Kousaka Honoka",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": true,
     "rarity": "SR",
     "release_date": "2014-10-31",
@@ -22841,6 +16856,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 4590,
+      "display": 4590,
       "idlz": 4870
     },
     "sub_unit": "Printemps",
@@ -22850,12 +16866,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Pure",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": null,
     "full_name": "UR Promo Toujou Nozomi",
     "id": 450,
@@ -22863,12 +16873,6 @@ app.constant('CardData',
     "japan_only": true,
     "main_unit": "Muse",
     "name": "Toujou Nozomi",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": false,
     "rarity": "UR",
     "release_date": "2014-10-20",
@@ -22883,6 +16887,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 4290,
+      "display": 4290,
       "idlz": 4290
     },
     "sub_unit": "Lily White",
@@ -22892,12 +16897,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Smile",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": null,
     "full_name": "SR Promo Koizumi Hanayo",
     "id": 449,
@@ -22905,12 +16904,6 @@ app.constant('CardData',
     "japan_only": true,
     "main_unit": "Muse",
     "name": "Koizumi Hanayo",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": false,
     "rarity": "SR",
     "release_date": "2014-10-20",
@@ -22925,6 +16918,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 4160,
+      "display": 4160,
       "idlz": 4160
     },
     "sub_unit": "Printemps",
@@ -22934,12 +16928,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Smile",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": true,
     "full_name": "SR Cat Girl Hoshizora Rin",
     "id": 448,
@@ -22947,12 +16935,6 @@ app.constant('CardData',
     "japan_only": false,
     "main_unit": "Muse",
     "name": "Hoshizora Rin",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": false,
     "rarity": "SR",
     "release_date": "2014-10-20",
@@ -22967,6 +16949,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 4420,
+      "display": 4420,
       "idlz": 4700
     },
     "sub_unit": "Lily White",
@@ -22976,12 +16959,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Cool",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": null,
     "full_name": "SR Promo Sonoda Umi",
     "id": 447,
@@ -22989,12 +16966,6 @@ app.constant('CardData',
     "japan_only": false,
     "main_unit": "Muse",
     "name": "Sonoda Umi",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": false,
     "rarity": "SR",
     "release_date": "2014-10-20",
@@ -23009,6 +16980,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 4200,
+      "display": 4200,
       "idlz": 4200
     },
     "sub_unit": "Lily White",
@@ -23018,12 +16990,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Smile",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": null,
     "full_name": "SR Promo Minami Kotori",
     "id": 446,
@@ -23031,12 +16997,6 @@ app.constant('CardData',
     "japan_only": true,
     "main_unit": "Muse",
     "name": "Minami Kotori",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": false,
     "rarity": "SR",
     "release_date": "2014-10-20",
@@ -23051,6 +17011,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 4200,
+      "display": 4200,
       "idlz": 4200
     },
     "sub_unit": "Printemps",
@@ -23060,12 +17021,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Smile",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": null,
     "full_name": "SR Promo Kousaka Honoka",
     "id": 445,
@@ -23073,12 +17028,6 @@ app.constant('CardData',
     "japan_only": true,
     "main_unit": "Muse",
     "name": "Kousaka Honoka",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": false,
     "rarity": "SR",
     "release_date": "2014-10-20",
@@ -23093,6 +17042,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 4230,
+      "display": 4230,
       "idlz": 4230
     },
     "sub_unit": "Printemps",
@@ -23102,12 +17052,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Smile",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": null,
     "full_name": "SR Promo Kousaka Honoka",
     "id": 444,
@@ -23115,12 +17059,6 @@ app.constant('CardData',
     "japan_only": false,
     "main_unit": "Muse",
     "name": "Kousaka Honoka",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": false,
     "rarity": "SR",
     "release_date": "2014-10-20",
@@ -23135,6 +17073,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 4170,
+      "display": 4170,
       "idlz": 4170
     },
     "sub_unit": "Printemps",
@@ -23144,12 +17083,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Cool",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": null,
     "full_name": "UR Halloween Toujou Nozomi",
     "id": 442,
@@ -23157,12 +17090,6 @@ app.constant('CardData',
     "japan_only": false,
     "main_unit": "Muse",
     "name": "Toujou Nozomi",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": true,
     "rarity": "UR",
     "release_date": "2014-10-15",
@@ -23177,6 +17104,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 5000,
+      "display": 5000,
       "idlz": 5300
     },
     "sub_unit": "Lily White",
@@ -23186,12 +17114,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Cool",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": null,
     "full_name": "SR Halloween Hoshizora Rin",
     "id": 441,
@@ -23199,12 +17121,6 @@ app.constant('CardData',
     "japan_only": false,
     "main_unit": "Muse",
     "name": "Hoshizora Rin",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": true,
     "rarity": "SR",
     "release_date": "2014-10-15",
@@ -23219,6 +17135,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 4630,
+      "display": 4630,
       "idlz": 4910
     },
     "sub_unit": "Lily White",
@@ -23228,12 +17145,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Pure",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": null,
     "full_name": "SR Halloween Minami Kotori",
     "id": 440,
@@ -23241,12 +17152,6 @@ app.constant('CardData',
     "japan_only": false,
     "main_unit": "Muse",
     "name": "Minami Kotori",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": true,
     "rarity": "SR",
     "release_date": "2014-10-15",
@@ -23261,6 +17166,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 4590,
+      "display": 4590,
       "idlz": 4870
     },
     "sub_unit": "Printemps",
@@ -23270,12 +17176,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Smile",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": null,
     "full_name": "SR Halloween Ayase Eli",
     "id": 439,
@@ -23283,12 +17183,6 @@ app.constant('CardData',
     "japan_only": false,
     "main_unit": "Muse",
     "name": "Ayase Eli",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": true,
     "rarity": "SR",
     "release_date": "2014-10-15",
@@ -23303,6 +17197,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 4620,
+      "display": 4620,
       "idlz": 4900
     },
     "sub_unit": "Bibi",
@@ -23312,12 +17207,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Cool",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": true,
     "full_name": "SR Harvest Season Koizumi Hanayo",
     "id": 428,
@@ -23325,12 +17214,6 @@ app.constant('CardData',
     "japan_only": false,
     "main_unit": "Muse",
     "name": "Koizumi Hanayo",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": false,
     "rarity": "SR",
     "release_date": "2014-10-05",
@@ -23345,6 +17228,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 4430,
+      "display": 4430,
       "idlz": 4710
     },
     "sub_unit": "Printemps",
@@ -23354,12 +17238,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Smile",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": null,
     "full_name": "UR Halloween Koizumi Hanayo",
     "id": 426,
@@ -23367,12 +17245,6 @@ app.constant('CardData',
     "japan_only": false,
     "main_unit": "Muse",
     "name": "Koizumi Hanayo",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": true,
     "rarity": "UR",
     "release_date": "2014-09-30",
@@ -23387,6 +17259,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 5010,
+      "display": 5010,
       "idlz": 5310
     },
     "sub_unit": "Printemps",
@@ -23396,12 +17269,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Cool",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": null,
     "full_name": "SR Halloween Yazawa Nico",
     "id": 425,
@@ -23409,12 +17276,6 @@ app.constant('CardData',
     "japan_only": false,
     "main_unit": "Muse",
     "name": "Yazawa Nico",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": true,
     "rarity": "SR",
     "release_date": "2014-09-30",
@@ -23429,6 +17290,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 4550,
+      "display": 4550,
       "idlz": 4830
     },
     "sub_unit": "Bibi",
@@ -23438,12 +17300,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Pure",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": null,
     "full_name": "SR Halloween Nishikino Maki",
     "id": 424,
@@ -23451,12 +17307,6 @@ app.constant('CardData',
     "japan_only": false,
     "main_unit": "Muse",
     "name": "Nishikino Maki",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": true,
     "rarity": "SR",
     "release_date": "2014-09-30",
@@ -23471,6 +17321,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 4520,
+      "display": 4520,
       "idlz": 4800
     },
     "sub_unit": "Bibi",
@@ -23480,12 +17331,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Pure",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": null,
     "full_name": "SR Halloween Sonoda Umi",
     "id": 423,
@@ -23493,12 +17338,6 @@ app.constant('CardData',
     "japan_only": false,
     "main_unit": "Muse",
     "name": "Sonoda Umi",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": true,
     "rarity": "SR",
     "release_date": "2014-09-30",
@@ -23513,6 +17352,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 4500,
+      "display": 4500,
       "idlz": 4780
     },
     "sub_unit": "Lily White",
@@ -23522,12 +17362,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Smile",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": null,
     "full_name": "SR Halloween Kousaka Honoka",
     "id": 422,
@@ -23535,12 +17369,6 @@ app.constant('CardData',
     "japan_only": false,
     "main_unit": "Muse",
     "name": "Kousaka Honoka",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": true,
     "rarity": "SR",
     "release_date": "2014-09-30",
@@ -23555,6 +17383,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 4630,
+      "display": 4630,
       "idlz": 4910
     },
     "sub_unit": "Printemps",
@@ -23564,12 +17393,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Cool",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": null,
     "full_name": "UR Promo Sonoda Umi",
     "id": 419,
@@ -23577,12 +17400,6 @@ app.constant('CardData',
     "japan_only": true,
     "main_unit": "Muse",
     "name": "Sonoda Umi",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": false,
     "rarity": "UR",
     "release_date": "2014-09-20",
@@ -23597,6 +17414,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 4280,
+      "display": 4280,
       "idlz": 4280
     },
     "sub_unit": "Lily White",
@@ -23606,12 +17424,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Cool",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": null,
     "full_name": "UR Promo Ayase Eli",
     "id": 418,
@@ -23619,12 +17431,6 @@ app.constant('CardData',
     "japan_only": true,
     "main_unit": "Muse",
     "name": "Ayase Eli",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": false,
     "rarity": "UR",
     "release_date": "2014-09-20",
@@ -23639,6 +17445,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 4240,
+      "display": 4240,
       "idlz": 4240
     },
     "sub_unit": "Bibi",
@@ -23648,12 +17455,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Cool",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": true,
     "full_name": "SR Hero Sonoda Umi",
     "id": 417,
@@ -23661,12 +17462,6 @@ app.constant('CardData',
     "japan_only": false,
     "main_unit": "Muse",
     "name": "Sonoda Umi",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": false,
     "rarity": "SR",
     "release_date": "2014-09-20",
@@ -23681,6 +17476,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 4410,
+      "display": 4410,
       "idlz": 4690
     },
     "sub_unit": "Lily White",
@@ -23690,12 +17486,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Pure",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": null,
     "full_name": "UR Caf\u00c3\u00a9 Maid Sonoda Umi",
     "id": 415,
@@ -23703,12 +17493,6 @@ app.constant('CardData',
     "japan_only": false,
     "main_unit": "Muse",
     "name": "Sonoda Umi",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": true,
     "rarity": "UR",
     "release_date": "2014-09-15",
@@ -23723,6 +17507,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 5020,
+      "display": 5020,
       "idlz": 5320
     },
     "sub_unit": "Lily White",
@@ -23732,12 +17517,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Smile",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": null,
     "full_name": "SR Caf\u00c3\u00a9 Maid Koizumi Hanayo",
     "id": 414,
@@ -23745,12 +17524,6 @@ app.constant('CardData',
     "japan_only": false,
     "main_unit": "Muse",
     "name": "Koizumi Hanayo",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": true,
     "rarity": "SR",
     "release_date": "2014-09-15",
@@ -23765,6 +17538,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 4580,
+      "display": 4580,
       "idlz": 4860
     },
     "sub_unit": "Printemps",
@@ -23774,12 +17548,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Cool",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": null,
     "full_name": "SR Caf\u00c3\u00a9 Maid Ayase Eli",
     "id": 413,
@@ -23787,12 +17555,6 @@ app.constant('CardData',
     "japan_only": false,
     "main_unit": "Muse",
     "name": "Ayase Eli",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": true,
     "rarity": "SR",
     "release_date": "2014-09-15",
@@ -23807,6 +17569,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 4550,
+      "display": 4550,
       "idlz": 4830
     },
     "sub_unit": "Bibi",
@@ -23816,12 +17579,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Pure",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": null,
     "full_name": "SR Caf\u00c3\u00a9 Maid Kousaka Honoka",
     "id": 412,
@@ -23829,12 +17586,6 @@ app.constant('CardData',
     "japan_only": false,
     "main_unit": "Muse",
     "name": "Kousaka Honoka",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": true,
     "rarity": "SR",
     "release_date": "2014-09-15",
@@ -23849,6 +17600,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 4610,
+      "display": 4610,
       "idlz": 4890
     },
     "sub_unit": "Printemps",
@@ -23858,12 +17610,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Smile",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": true,
     "full_name": "SR Festival Kousaka Honoka",
     "id": 410,
@@ -23871,12 +17617,6 @@ app.constant('CardData',
     "japan_only": false,
     "main_unit": "Muse",
     "name": "Kousaka Honoka",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": false,
     "rarity": "SR",
     "release_date": "2014-09-05",
@@ -23891,6 +17631,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 4480,
+      "display": 4480,
       "idlz": 4760
     },
     "sub_unit": "Printemps",
@@ -23900,12 +17641,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Smile",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": null,
     "full_name": "UR Caf\u00c3\u00a9 Maid Hoshizora Rin",
     "id": 408,
@@ -23913,12 +17648,6 @@ app.constant('CardData',
     "japan_only": false,
     "main_unit": "Muse",
     "name": "Hoshizora Rin",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": true,
     "rarity": "UR",
     "release_date": "2014-08-31",
@@ -23933,6 +17662,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 5030,
+      "display": 5030,
       "idlz": 5330
     },
     "sub_unit": "Lily White",
@@ -23942,12 +17672,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Pure",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": null,
     "full_name": "SR Caf\u00c3\u00a9 Maid Yazawa Nico",
     "id": 407,
@@ -23955,12 +17679,6 @@ app.constant('CardData',
     "japan_only": false,
     "main_unit": "Muse",
     "name": "Yazawa Nico",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": true,
     "rarity": "SR",
     "release_date": "2014-08-31",
@@ -23975,6 +17693,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 4510,
+      "display": 4510,
       "idlz": 4790
     },
     "sub_unit": "Bibi",
@@ -23984,12 +17703,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Smile",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": null,
     "full_name": "SR Caf\u00c3\u00a9 Maid Toujou Nozomi",
     "id": 406,
@@ -23997,12 +17710,6 @@ app.constant('CardData',
     "japan_only": false,
     "main_unit": "Muse",
     "name": "Toujou Nozomi",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": true,
     "rarity": "SR",
     "release_date": "2014-08-31",
@@ -24017,6 +17724,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 4570,
+      "display": 4570,
       "idlz": 4850
     },
     "sub_unit": "Lily White",
@@ -24026,12 +17734,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Cool",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": null,
     "full_name": "SR Caf\u00c3\u00a9 Maid Nishikino Maki",
     "id": 405,
@@ -24039,12 +17741,6 @@ app.constant('CardData',
     "japan_only": false,
     "main_unit": "Muse",
     "name": "Nishikino Maki",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": true,
     "rarity": "SR",
     "release_date": "2014-08-31",
@@ -24059,6 +17755,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 4610,
+      "display": 4610,
       "idlz": 4890
     },
     "sub_unit": "Bibi",
@@ -24068,12 +17765,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Cool",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": null,
     "full_name": "SR Caf\u00c3\u00a9 Maid Minami Kotori",
     "id": 404,
@@ -24081,12 +17772,6 @@ app.constant('CardData',
     "japan_only": false,
     "main_unit": "Muse",
     "name": "Minami Kotori",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": true,
     "rarity": "SR",
     "release_date": "2014-08-31",
@@ -24101,6 +17786,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 4700,
+      "display": 4700,
       "idlz": 4980
     },
     "sub_unit": "Printemps",
@@ -24110,12 +17796,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Smile",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": null,
     "full_name": "UR Promo Hoshizora Rin",
     "id": 402,
@@ -24123,12 +17803,6 @@ app.constant('CardData',
     "japan_only": true,
     "main_unit": "Muse",
     "name": "Hoshizora Rin",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": false,
     "rarity": "UR",
     "release_date": "2014-08-20",
@@ -24143,6 +17817,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 4280,
+      "display": 4280,
       "idlz": 4280
     },
     "sub_unit": "Lily White",
@@ -24152,12 +17827,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Smile",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": null,
     "full_name": "SR Promo Yazawa Nico",
     "id": 401,
@@ -24165,12 +17834,6 @@ app.constant('CardData',
     "japan_only": false,
     "main_unit": "Muse",
     "name": "Yazawa Nico",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": false,
     "rarity": "SR",
     "release_date": "2014-08-20",
@@ -24185,6 +17848,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 4140,
+      "display": 4140,
       "idlz": 4140
     },
     "sub_unit": "Bibi",
@@ -24194,12 +17858,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Cool",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": null,
     "full_name": "SR Promo Nishikino Maki",
     "id": 400,
@@ -24207,12 +17865,6 @@ app.constant('CardData',
     "japan_only": false,
     "main_unit": "Muse",
     "name": "Nishikino Maki",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": false,
     "rarity": "SR",
     "release_date": "2014-08-20",
@@ -24227,6 +17879,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 4220,
+      "display": 4220,
       "idlz": 4220
     },
     "sub_unit": "Bibi",
@@ -24236,12 +17889,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Cool",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": true,
     "full_name": "SR Ghost Story Nishikino Maki",
     "id": 399,
@@ -24249,12 +17896,6 @@ app.constant('CardData',
     "japan_only": false,
     "main_unit": "Muse",
     "name": "Nishikino Maki",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": false,
     "rarity": "SR",
     "release_date": "2014-08-20",
@@ -24269,6 +17910,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 4400,
+      "display": 4400,
       "idlz": 4680
     },
     "sub_unit": "Bibi",
@@ -24278,12 +17920,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Smile",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": null,
     "full_name": "UR China Dress Yazawa Nico",
     "id": 397,
@@ -24291,12 +17927,6 @@ app.constant('CardData',
     "japan_only": false,
     "main_unit": "Muse",
     "name": "Yazawa Nico",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": true,
     "rarity": "UR",
     "release_date": "2014-08-15",
@@ -24311,6 +17941,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 5020,
+      "display": 5020,
       "idlz": 5320
     },
     "sub_unit": "Bibi",
@@ -24320,12 +17951,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Pure",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": null,
     "full_name": "SR China Dress Koizumi Hanayo",
     "id": 396,
@@ -24333,12 +17958,6 @@ app.constant('CardData',
     "japan_only": false,
     "main_unit": "Muse",
     "name": "Koizumi Hanayo",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": true,
     "rarity": "SR",
     "release_date": "2014-08-15",
@@ -24353,6 +17972,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 4530,
+      "display": 4530,
       "idlz": 4810
     },
     "sub_unit": "Printemps",
@@ -24362,12 +17982,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Smile",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": null,
     "full_name": "SR China Dress Nishikino Maki",
     "id": 395,
@@ -24375,12 +17989,6 @@ app.constant('CardData',
     "japan_only": false,
     "main_unit": "Muse",
     "name": "Nishikino Maki",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": true,
     "rarity": "SR",
     "release_date": "2014-08-15",
@@ -24395,6 +18003,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 4570,
+      "display": 4570,
       "idlz": 4850
     },
     "sub_unit": "Bibi",
@@ -24404,12 +18013,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Cool",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": null,
     "full_name": "SR China Dress Sonoda Umi",
     "id": 394,
@@ -24417,12 +18020,6 @@ app.constant('CardData',
     "japan_only": false,
     "main_unit": "Muse",
     "name": "Sonoda Umi",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": true,
     "rarity": "SR",
     "release_date": "2014-08-15",
@@ -24437,6 +18034,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 4480,
+      "display": 4480,
       "idlz": 4760
     },
     "sub_unit": "Lily White",
@@ -24446,12 +18044,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Pure",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": true,
     "full_name": "SR Swimsuit Yazawa Nico",
     "id": 392,
@@ -24459,12 +18051,6 @@ app.constant('CardData',
     "japan_only": false,
     "main_unit": "Muse",
     "name": "Yazawa Nico",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": false,
     "rarity": "SR",
     "release_date": "2014-08-05",
@@ -24479,6 +18065,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 4450,
+      "display": 4450,
       "idlz": 4730
     },
     "sub_unit": "Bibi",
@@ -24488,12 +18075,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Pure",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": null,
     "full_name": "UR China Dress Minami Kotori",
     "id": 378,
@@ -24501,12 +18082,6 @@ app.constant('CardData',
     "japan_only": false,
     "main_unit": "Muse",
     "name": "Minami Kotori",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": true,
     "rarity": "UR",
     "release_date": "2014-07-31",
@@ -24521,6 +18096,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 5000,
+      "display": 5000,
       "idlz": 5300
     },
     "sub_unit": "Printemps",
@@ -24530,12 +18106,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Cool",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": null,
     "full_name": "SR China Dress Toujou Nozomi",
     "id": 377,
@@ -24543,12 +18113,6 @@ app.constant('CardData',
     "japan_only": false,
     "main_unit": "Muse",
     "name": "Toujou Nozomi",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": true,
     "rarity": "SR",
     "release_date": "2014-07-31",
@@ -24563,6 +18127,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 4490,
+      "display": 4490,
       "idlz": 4770
     },
     "sub_unit": "Lily White",
@@ -24572,12 +18137,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Pure",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": null,
     "full_name": "SR China Dress Hoshizora Rin",
     "id": 376,
@@ -24585,12 +18144,6 @@ app.constant('CardData',
     "japan_only": false,
     "main_unit": "Muse",
     "name": "Hoshizora Rin",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": true,
     "rarity": "SR",
     "release_date": "2014-07-31",
@@ -24605,6 +18158,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 4510,
+      "display": 4510,
       "idlz": 4790
     },
     "sub_unit": "Lily White",
@@ -24614,12 +18168,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Smile",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": null,
     "full_name": "SR China Dress Ayase Eli",
     "id": 375,
@@ -24627,12 +18175,6 @@ app.constant('CardData',
     "japan_only": false,
     "main_unit": "Muse",
     "name": "Ayase Eli",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": true,
     "rarity": "SR",
     "release_date": "2014-07-31",
@@ -24647,6 +18189,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 4470,
+      "display": 4470,
       "idlz": 4750
     },
     "sub_unit": "Bibi",
@@ -24656,12 +18199,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Cool",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": null,
     "full_name": "SR China Dress Kousaka Honoka",
     "id": 374,
@@ -24669,12 +18206,6 @@ app.constant('CardData',
     "japan_only": false,
     "main_unit": "Muse",
     "name": "Kousaka Honoka",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": true,
     "rarity": "SR",
     "release_date": "2014-07-31",
@@ -24689,6 +18220,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 4550,
+      "display": 4550,
       "idlz": 4830
     },
     "sub_unit": "Printemps",
@@ -24698,12 +18230,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Smile",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": null,
     "full_name": "UR Promo Yazawa Nico",
     "id": 372,
@@ -24711,12 +18237,6 @@ app.constant('CardData',
     "japan_only": true,
     "main_unit": "Muse",
     "name": "Yazawa Nico",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": false,
     "rarity": "UR",
     "release_date": "2014-07-20",
@@ -24731,6 +18251,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 4220,
+      "display": 4220,
       "idlz": 4220
     },
     "sub_unit": "Bibi",
@@ -24740,12 +18261,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Cool",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": null,
     "full_name": "UR Promo Nishikino Maki",
     "id": 371,
@@ -24753,12 +18268,6 @@ app.constant('CardData',
     "japan_only": true,
     "main_unit": "Muse",
     "name": "Nishikino Maki",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": false,
     "rarity": "UR",
     "release_date": "2014-07-20",
@@ -24773,6 +18282,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 4300,
+      "display": 4300,
       "idlz": 4300
     },
     "sub_unit": "Bibi",
@@ -24782,12 +18292,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Cool",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": null,
     "full_name": "UR Promo Ayase Eli",
     "id": 370,
@@ -24795,12 +18299,6 @@ app.constant('CardData',
     "japan_only": false,
     "main_unit": "Muse",
     "name": "Ayase Eli",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": false,
     "rarity": "UR",
     "release_date": "2014-07-20",
@@ -24815,6 +18313,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 4250,
+      "display": 4250,
       "idlz": 4250
     },
     "sub_unit": "Bibi",
@@ -24824,12 +18323,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Pure",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": true,
     "full_name": "SR Swimsuit Minami Kotori",
     "id": 369,
@@ -24837,12 +18330,6 @@ app.constant('CardData',
     "japan_only": false,
     "main_unit": "Muse",
     "name": "Minami Kotori",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": false,
     "rarity": "SR",
     "release_date": "2014-07-20",
@@ -24857,6 +18344,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 4360,
+      "display": 4360,
       "idlz": 4640
     },
     "sub_unit": "Printemps",
@@ -24866,12 +18354,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Pure",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": null,
     "full_name": "UR July Toujou Nozomi",
     "id": 367,
@@ -24879,12 +18361,6 @@ app.constant('CardData',
     "japan_only": false,
     "main_unit": "Muse",
     "name": "Toujou Nozomi",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": true,
     "rarity": "UR",
     "release_date": "2014-07-15",
@@ -24899,6 +18375,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 5030,
+      "display": 5030,
       "idlz": 5330
     },
     "sub_unit": "Lily White",
@@ -24908,12 +18385,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Cool",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": null,
     "full_name": "SR July Koizumi Hanayo",
     "id": 366,
@@ -24921,12 +18392,6 @@ app.constant('CardData',
     "japan_only": false,
     "main_unit": "Muse",
     "name": "Koizumi Hanayo",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": true,
     "rarity": "SR",
     "release_date": "2014-07-15",
@@ -24941,6 +18406,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 4620,
+      "display": 4620,
       "idlz": 4900
     },
     "sub_unit": "Printemps",
@@ -24950,12 +18416,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Smile",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": null,
     "full_name": "SR July Minami Kotori",
     "id": 365,
@@ -24963,12 +18423,6 @@ app.constant('CardData',
     "japan_only": false,
     "main_unit": "Muse",
     "name": "Minami Kotori",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": true,
     "rarity": "SR",
     "release_date": "2014-07-15",
@@ -24983,6 +18437,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 4580,
+      "display": 4580,
       "idlz": 4860
     },
     "sub_unit": "Printemps",
@@ -24992,12 +18447,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Pure",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": null,
     "full_name": "SR July Ayase Eli",
     "id": 364,
@@ -25005,12 +18454,6 @@ app.constant('CardData',
     "japan_only": false,
     "main_unit": "Muse",
     "name": "Ayase Eli",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": true,
     "rarity": "SR",
     "release_date": "2014-07-15",
@@ -25025,6 +18468,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 4600,
+      "display": 4600,
       "idlz": 4880
     },
     "sub_unit": "Bibi",
@@ -25034,12 +18478,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Cool",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": null,
     "full_name": "UR Promo Nishikino Maki",
     "id": 362,
@@ -25047,12 +18485,6 @@ app.constant('CardData',
     "japan_only": true,
     "main_unit": "Muse",
     "name": "Nishikino Maki",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": false,
     "rarity": "UR",
     "release_date": "2014-07-05",
@@ -25067,6 +18499,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 4190,
+      "display": 4190,
       "idlz": 4190
     },
     "sub_unit": "Bibi",
@@ -25076,12 +18509,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Cool",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": null,
     "full_name": "UR Promo Ayase Eli",
     "id": 361,
@@ -25089,12 +18516,6 @@ app.constant('CardData',
     "japan_only": true,
     "main_unit": "Muse",
     "name": "Ayase Eli",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": false,
     "rarity": "UR",
     "release_date": "2014-07-05",
@@ -25109,6 +18530,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 4160,
+      "display": 4160,
       "idlz": 4160
     },
     "sub_unit": "Bibi",
@@ -25118,12 +18540,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Smile",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": true,
     "full_name": "SR Campaign Girl Toujou Nozomi",
     "id": 360,
@@ -25131,12 +18547,6 @@ app.constant('CardData',
     "japan_only": false,
     "main_unit": "Muse",
     "name": "Toujou Nozomi",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": false,
     "rarity": "SR",
     "release_date": "2014-07-05",
@@ -25151,6 +18561,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 4450,
+      "display": 4450,
       "idlz": 4730
     },
     "sub_unit": "Lily White",
@@ -25160,12 +18571,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Cool",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": null,
     "full_name": "UR July Nishikino Maki",
     "id": 358,
@@ -25173,12 +18578,6 @@ app.constant('CardData',
     "japan_only": false,
     "main_unit": "Muse",
     "name": "Nishikino Maki",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": true,
     "rarity": "UR",
     "release_date": "2014-06-30",
@@ -25193,6 +18592,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 5000,
+      "display": 5000,
       "idlz": 5300
     },
     "sub_unit": "Bibi",
@@ -25202,12 +18602,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Smile",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": null,
     "full_name": "SR July Yazawa Nico",
     "id": 357,
@@ -25215,12 +18609,6 @@ app.constant('CardData',
     "japan_only": false,
     "main_unit": "Muse",
     "name": "Yazawa Nico",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": true,
     "rarity": "SR",
     "release_date": "2014-06-30",
@@ -25235,6 +18623,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 4600,
+      "display": 4600,
       "idlz": 4880
     },
     "sub_unit": "Bibi",
@@ -25244,12 +18633,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Cool",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": null,
     "full_name": "SR July Hoshizora Rin",
     "id": 356,
@@ -25257,12 +18640,6 @@ app.constant('CardData',
     "japan_only": false,
     "main_unit": "Muse",
     "name": "Hoshizora Rin",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": true,
     "rarity": "SR",
     "release_date": "2014-06-30",
@@ -25277,6 +18654,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 4550,
+      "display": 4550,
       "idlz": 4830
     },
     "sub_unit": "Lily White",
@@ -25286,12 +18664,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Smile",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": null,
     "full_name": "SR July Sonoda Umi",
     "id": 355,
@@ -25299,12 +18671,6 @@ app.constant('CardData',
     "japan_only": false,
     "main_unit": "Muse",
     "name": "Sonoda Umi",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": true,
     "rarity": "SR",
     "release_date": "2014-06-30",
@@ -25319,6 +18685,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 4580,
+      "display": 4580,
       "idlz": 4860
     },
     "sub_unit": "Lily White",
@@ -25328,12 +18695,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Pure",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": null,
     "full_name": "SR July Kousaka Honoka",
     "id": 354,
@@ -25341,12 +18702,6 @@ app.constant('CardData',
     "japan_only": false,
     "main_unit": "Muse",
     "name": "Kousaka Honoka",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": true,
     "rarity": "SR",
     "release_date": "2014-06-30",
@@ -25361,6 +18716,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 4570,
+      "display": 4570,
       "idlz": 4850
     },
     "sub_unit": "Printemps",
@@ -25370,12 +18726,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Pure",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": null,
     "full_name": "SR Promo Toujou Nozomi",
     "id": 352,
@@ -25383,12 +18733,6 @@ app.constant('CardData',
     "japan_only": true,
     "main_unit": "Muse",
     "name": "Toujou Nozomi",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": false,
     "rarity": "SR",
     "release_date": "2014-06-20",
@@ -25403,6 +18747,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 4120,
+      "display": 4120,
       "idlz": 4120
     },
     "sub_unit": "Lily White",
@@ -25412,12 +18757,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Cool",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": null,
     "full_name": "SR Promo Ayase Eli",
     "id": 351,
@@ -25425,12 +18764,6 @@ app.constant('CardData',
     "japan_only": true,
     "main_unit": "Muse",
     "name": "Ayase Eli",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": false,
     "rarity": "SR",
     "release_date": "2014-06-20",
@@ -25445,6 +18778,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 4100,
+      "display": 4100,
       "idlz": 4100
     },
     "sub_unit": "Bibi",
@@ -25454,12 +18788,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Cool",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": true,
     "full_name": "SR Rain Shower Ayase Eli",
     "id": 350,
@@ -25467,12 +18795,6 @@ app.constant('CardData',
     "japan_only": false,
     "main_unit": "Muse",
     "name": "Ayase Eli",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": false,
     "rarity": "SR",
     "release_date": "2014-06-20",
@@ -25487,6 +18809,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 4380,
+      "display": 4380,
       "idlz": 4660
     },
     "sub_unit": "Bibi",
@@ -25496,12 +18819,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Smile",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": null,
     "full_name": "SR Promo Kousaka Honoka",
     "id": 349,
@@ -25509,12 +18826,6 @@ app.constant('CardData',
     "japan_only": false,
     "main_unit": "Muse",
     "name": "Kousaka Honoka",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": false,
     "rarity": "SR",
     "release_date": "2014-06-20",
@@ -25529,6 +18840,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 4110,
+      "display": 4110,
       "idlz": 4110
     },
     "sub_unit": "Printemps",
@@ -25538,12 +18850,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Smile",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": null,
     "full_name": "UR Promo Kousaka Honoka",
     "id": 347,
@@ -25551,12 +18857,6 @@ app.constant('CardData',
     "japan_only": true,
     "main_unit": "Muse",
     "name": "Kousaka Honoka",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": false,
     "rarity": "UR",
     "release_date": "2014-06-15",
@@ -25571,6 +18871,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 4240,
+      "display": 4240,
       "idlz": 4240
     },
     "sub_unit": "Printemps",
@@ -25580,12 +18881,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Smile",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": null,
     "full_name": "UR June Kousaka Honoka",
     "id": 346,
@@ -25593,12 +18888,6 @@ app.constant('CardData',
     "japan_only": false,
     "main_unit": "Muse",
     "name": "Kousaka Honoka",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": true,
     "rarity": "UR",
     "release_date": "2014-06-15",
@@ -25613,6 +18902,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 5040,
+      "display": 5040,
       "idlz": 5340
     },
     "sub_unit": "Printemps",
@@ -25622,12 +18912,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Smile",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": null,
     "full_name": "SR June Koizumi Hanayo",
     "id": 345,
@@ -25635,12 +18919,6 @@ app.constant('CardData',
     "japan_only": false,
     "main_unit": "Muse",
     "name": "Koizumi Hanayo",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": true,
     "rarity": "SR",
     "release_date": "2014-06-15",
@@ -25655,6 +18933,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 4590,
+      "display": 4590,
       "idlz": 4870
     },
     "sub_unit": "Printemps",
@@ -25664,12 +18943,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Pure",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": null,
     "full_name": "SR June Nishikino Maki",
     "id": 344,
@@ -25677,12 +18950,6 @@ app.constant('CardData',
     "japan_only": false,
     "main_unit": "Muse",
     "name": "Nishikino Maki",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": true,
     "rarity": "SR",
     "release_date": "2014-06-15",
@@ -25697,6 +18964,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 4550,
+      "display": 4550,
       "idlz": 4830
     },
     "sub_unit": "Bibi",
@@ -25706,12 +18974,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Cool",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": null,
     "full_name": "SR June Minami Kotori",
     "id": 343,
@@ -25719,12 +18981,6 @@ app.constant('CardData',
     "japan_only": false,
     "main_unit": "Muse",
     "name": "Minami Kotori",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": true,
     "rarity": "SR",
     "release_date": "2014-06-15",
@@ -25739,6 +18995,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 4620,
+      "display": 4620,
       "idlz": 4900
     },
     "sub_unit": "Printemps",
@@ -25748,12 +19005,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Smile",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": true,
     "full_name": "SR Rainy Season Hoshizora Rin",
     "id": 332,
@@ -25761,12 +19012,6 @@ app.constant('CardData',
     "japan_only": false,
     "main_unit": "Muse",
     "name": "Hoshizora Rin",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": false,
     "rarity": "SR",
     "release_date": "2014-06-05",
@@ -25781,6 +19026,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 4400,
+      "display": 4400,
       "idlz": 4680
     },
     "sub_unit": "Lily White",
@@ -25790,12 +19036,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Cool",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": null,
     "full_name": "UR June Ayase Eli",
     "id": 330,
@@ -25803,12 +19043,6 @@ app.constant('CardData',
     "japan_only": false,
     "main_unit": "Muse",
     "name": "Ayase Eli",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": true,
     "rarity": "UR",
     "release_date": "2014-05-31",
@@ -25823,6 +19057,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 5020,
+      "display": 5020,
       "idlz": 5320
     },
     "sub_unit": "Bibi",
@@ -25832,12 +19067,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Cool",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": null,
     "full_name": "SR June Yazawa Nico",
     "id": 329,
@@ -25845,12 +19074,6 @@ app.constant('CardData',
     "japan_only": false,
     "main_unit": "Muse",
     "name": "Yazawa Nico",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": true,
     "rarity": "SR",
     "release_date": "2014-05-31",
@@ -25865,6 +19088,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 4590,
+      "display": 4590,
       "idlz": 4870
     },
     "sub_unit": "Bibi",
@@ -25874,12 +19098,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Smile",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": null,
     "full_name": "SR June Toujou Nozomi",
     "id": 328,
@@ -25887,12 +19105,6 @@ app.constant('CardData',
     "japan_only": false,
     "main_unit": "Muse",
     "name": "Toujou Nozomi",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": true,
     "rarity": "SR",
     "release_date": "2014-05-31",
@@ -25907,6 +19119,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 4540,
+      "display": 4540,
       "idlz": 4820
     },
     "sub_unit": "Lily White",
@@ -25916,12 +19129,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Pure",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": null,
     "full_name": "SR June Hoshizora Rin",
     "id": 327,
@@ -25929,12 +19136,6 @@ app.constant('CardData',
     "japan_only": false,
     "main_unit": "Muse",
     "name": "Hoshizora Rin",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": true,
     "rarity": "SR",
     "release_date": "2014-05-31",
@@ -25949,6 +19150,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 4580,
+      "display": 4580,
       "idlz": 4860
     },
     "sub_unit": "Lily White",
@@ -25958,12 +19160,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Pure",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": null,
     "full_name": "SR June Sonoda Umi",
     "id": 326,
@@ -25971,12 +19167,6 @@ app.constant('CardData',
     "japan_only": false,
     "main_unit": "Muse",
     "name": "Sonoda Umi",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": true,
     "rarity": "SR",
     "release_date": "2014-05-31",
@@ -25991,6 +19181,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 4560,
+      "display": 4560,
       "idlz": 4840
     },
     "sub_unit": "Lily White",
@@ -26000,12 +19191,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Smile",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": true,
     "full_name": "SR Hiking Kousaka Honoka",
     "id": 324,
@@ -26013,12 +19198,6 @@ app.constant('CardData',
     "japan_only": false,
     "main_unit": "Muse",
     "name": "Kousaka Honoka",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": false,
     "rarity": "SR",
     "release_date": "2014-05-20",
@@ -26033,6 +19212,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 4380,
+      "display": 4380,
       "idlz": 4660
     },
     "sub_unit": "Printemps",
@@ -26042,12 +19222,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Pure",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": null,
     "full_name": "UR May Koizumi Hanayo",
     "id": 322,
@@ -26055,12 +19229,6 @@ app.constant('CardData',
     "japan_only": false,
     "main_unit": "Muse",
     "name": "Koizumi Hanayo",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": true,
     "rarity": "UR",
     "release_date": "2014-05-15",
@@ -26075,6 +19243,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 4980,
+      "display": 4980,
       "idlz": 5280
     },
     "sub_unit": "Printemps",
@@ -26084,12 +19253,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Smile",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": null,
     "full_name": "SR May Yazawa Nico",
     "id": 321,
@@ -26097,12 +19260,6 @@ app.constant('CardData',
     "japan_only": false,
     "main_unit": "Muse",
     "name": "Yazawa Nico",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": true,
     "rarity": "SR",
     "release_date": "2014-05-15",
@@ -26117,6 +19274,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 4510,
+      "display": 4510,
       "idlz": 4790
     },
     "sub_unit": "Bibi",
@@ -26126,12 +19284,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Pure",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": null,
     "full_name": "SR May Ayase Eli",
     "id": 320,
@@ -26139,12 +19291,6 @@ app.constant('CardData',
     "japan_only": false,
     "main_unit": "Muse",
     "name": "Ayase Eli",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": true,
     "rarity": "SR",
     "release_date": "2014-05-15",
@@ -26159,6 +19305,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 4530,
+      "display": 4530,
       "idlz": 4810
     },
     "sub_unit": "Bibi",
@@ -26168,12 +19315,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Cool",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": null,
     "full_name": "SR May Kousaka Honoka",
     "id": 319,
@@ -26181,12 +19322,6 @@ app.constant('CardData',
     "japan_only": false,
     "main_unit": "Muse",
     "name": "Kousaka Honoka",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": true,
     "rarity": "SR",
     "release_date": "2014-05-15",
@@ -26201,6 +19336,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 4540,
+      "display": 4540,
       "idlz": 4820
     },
     "sub_unit": "Printemps",
@@ -26210,12 +19346,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Pure",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": true,
     "full_name": "SR Children's Day Sonoda Umi",
     "id": 317,
@@ -26223,12 +19353,6 @@ app.constant('CardData',
     "japan_only": false,
     "main_unit": "Muse",
     "name": "Sonoda Umi",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": false,
     "rarity": "SR",
     "release_date": "2014-05-05",
@@ -26243,6 +19367,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 4440,
+      "display": 4440,
       "idlz": 4720
     },
     "sub_unit": "Lily White",
@@ -26252,12 +19377,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Smile",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": null,
     "full_name": "UR May Minami Kotori",
     "id": 315,
@@ -26265,12 +19384,6 @@ app.constant('CardData',
     "japan_only": false,
     "main_unit": "Muse",
     "name": "Minami Kotori",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": true,
     "rarity": "UR",
     "release_date": "2014-04-30",
@@ -26285,6 +19398,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 4910,
+      "display": 4910,
       "idlz": 5210
     },
     "sub_unit": "Printemps",
@@ -26294,12 +19408,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Pure",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": null,
     "full_name": "SR May Toujou Nozomi",
     "id": 314,
@@ -26307,12 +19415,6 @@ app.constant('CardData',
     "japan_only": false,
     "main_unit": "Muse",
     "name": "Toujou Nozomi",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": true,
     "rarity": "SR",
     "release_date": "2014-04-30",
@@ -26327,6 +19429,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 4460,
+      "display": 4460,
       "idlz": 4740
     },
     "sub_unit": "Lily White",
@@ -26336,12 +19439,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Cool",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": null,
     "full_name": "SR May Nishikino Maki",
     "id": 313,
@@ -26349,12 +19446,6 @@ app.constant('CardData',
     "japan_only": false,
     "main_unit": "Muse",
     "name": "Nishikino Maki",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": true,
     "rarity": "SR",
     "release_date": "2014-04-30",
@@ -26369,6 +19460,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 4530,
+      "display": 4530,
       "idlz": 4810
     },
     "sub_unit": "Bibi",
@@ -26378,12 +19470,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Cool",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": null,
     "full_name": "SR May Hoshizora Rin",
     "id": 312,
@@ -26391,12 +19477,6 @@ app.constant('CardData',
     "japan_only": false,
     "main_unit": "Muse",
     "name": "Hoshizora Rin",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": true,
     "rarity": "SR",
     "release_date": "2014-04-30",
@@ -26411,6 +19491,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 4510,
+      "display": 4510,
       "idlz": 4790
     },
     "sub_unit": "Lily White",
@@ -26420,12 +19501,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Smile",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": null,
     "full_name": "SR May Sonoda Umi",
     "id": 311,
@@ -26433,12 +19508,6 @@ app.constant('CardData',
     "japan_only": false,
     "main_unit": "Muse",
     "name": "Sonoda Umi",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": true,
     "rarity": "SR",
     "release_date": "2014-04-30",
@@ -26453,6 +19522,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 4570,
+      "display": 4570,
       "idlz": 4850
     },
     "sub_unit": "Lily White",
@@ -26462,12 +19532,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Pure",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": null,
     "full_name": "SR Promo Koizumi Hanayo",
     "id": 309,
@@ -26475,12 +19539,6 @@ app.constant('CardData',
     "japan_only": true,
     "main_unit": "Muse",
     "name": "Koizumi Hanayo",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": false,
     "rarity": "SR",
     "release_date": "2014-04-20",
@@ -26495,6 +19553,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 4130,
+      "display": 4130,
       "idlz": 4130
     },
     "sub_unit": "Printemps",
@@ -26504,12 +19563,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Pure",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": true,
     "full_name": "SR Clam Digging Koizumi Hanayo",
     "id": 308,
@@ -26517,12 +19570,6 @@ app.constant('CardData',
     "japan_only": false,
     "main_unit": "Muse",
     "name": "Koizumi Hanayo",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": false,
     "rarity": "SR",
     "release_date": "2014-04-20",
@@ -26537,6 +19584,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 4400,
+      "display": 4400,
       "idlz": 4680
     },
     "sub_unit": "Printemps",
@@ -26546,12 +19594,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Smile",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": null,
     "full_name": "SR Promo Hoshizora Rin",
     "id": 307,
@@ -26559,12 +19601,6 @@ app.constant('CardData',
     "japan_only": true,
     "main_unit": "Muse",
     "name": "Hoshizora Rin",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": false,
     "rarity": "SR",
     "release_date": "2014-04-20",
@@ -26579,6 +19615,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 4100,
+      "display": 4100,
       "idlz": 4100
     },
     "sub_unit": "Lily White",
@@ -26588,12 +19625,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Cool",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": null,
     "full_name": "UR April Sonoda Umi",
     "id": 296,
@@ -26601,12 +19632,6 @@ app.constant('CardData',
     "japan_only": false,
     "main_unit": "Muse",
     "name": "Sonoda Umi",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": true,
     "rarity": "UR",
     "release_date": "2014-04-15",
@@ -26621,6 +19646,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 4990,
+      "display": 4990,
       "idlz": 5290
     },
     "sub_unit": "Lily White",
@@ -26630,12 +19656,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Pure",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": null,
     "full_name": "SR April Yazawa Nico",
     "id": 295,
@@ -26643,12 +19663,6 @@ app.constant('CardData',
     "japan_only": false,
     "main_unit": "Muse",
     "name": "Yazawa Nico",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": true,
     "rarity": "SR",
     "release_date": "2014-04-15",
@@ -26663,6 +19677,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 4530,
+      "display": 4530,
       "idlz": 4810
     },
     "sub_unit": "Bibi",
@@ -26672,12 +19687,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Cool",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": null,
     "full_name": "SR April Toujou Nozomi",
     "id": 294,
@@ -26685,12 +19694,6 @@ app.constant('CardData',
     "japan_only": false,
     "main_unit": "Muse",
     "name": "Toujou Nozomi",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": true,
     "rarity": "SR",
     "release_date": "2014-04-15",
@@ -26705,6 +19708,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 4560,
+      "display": 4560,
       "idlz": 4840
     },
     "sub_unit": "Lily White",
@@ -26714,12 +19718,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Smile",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": null,
     "full_name": "SR April Nishikino Maki",
     "id": 293,
@@ -26727,12 +19725,6 @@ app.constant('CardData',
     "japan_only": false,
     "main_unit": "Muse",
     "name": "Nishikino Maki",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": true,
     "rarity": "SR",
     "release_date": "2014-04-15",
@@ -26747,6 +19739,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 4590,
+      "display": 4590,
       "idlz": 4870
     },
     "sub_unit": "Bibi",
@@ -26756,12 +19749,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Cool",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": true,
     "full_name": "SR Flower Viewing Nishikino Maki",
     "id": 282,
@@ -26769,12 +19756,6 @@ app.constant('CardData',
     "japan_only": false,
     "main_unit": "Muse",
     "name": "Nishikino Maki",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": false,
     "rarity": "SR",
     "release_date": "2014-04-05",
@@ -26789,6 +19770,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 4420,
+      "display": 4420,
       "idlz": 4700
     },
     "sub_unit": "Bibi",
@@ -26798,12 +19780,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Smile",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": null,
     "full_name": "UR April Ayase Eli",
     "id": 280,
@@ -26811,12 +19787,6 @@ app.constant('CardData',
     "japan_only": false,
     "main_unit": "Muse",
     "name": "Ayase Eli",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": true,
     "rarity": "UR",
     "release_date": "2014-03-31",
@@ -26831,6 +19801,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 4920,
+      "display": 4920,
       "idlz": 5220
     },
     "sub_unit": "Bibi",
@@ -26840,12 +19811,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Cool",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": null,
     "full_name": "SR April Koizumi Hanayo",
     "id": 279,
@@ -26853,12 +19818,6 @@ app.constant('CardData',
     "japan_only": false,
     "main_unit": "Muse",
     "name": "Koizumi Hanayo",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": true,
     "rarity": "SR",
     "release_date": "2014-03-31",
@@ -26873,6 +19832,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 4550,
+      "display": 4550,
       "idlz": 4830
     },
     "sub_unit": "Printemps",
@@ -26882,12 +19842,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Smile",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": null,
     "full_name": "SR April Hoshizora Rin",
     "id": 278,
@@ -26895,12 +19849,6 @@ app.constant('CardData',
     "japan_only": false,
     "main_unit": "Muse",
     "name": "Hoshizora Rin",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": true,
     "rarity": "SR",
     "release_date": "2014-03-31",
@@ -26915,6 +19863,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 4500,
+      "display": 4500,
       "idlz": 4780
     },
     "sub_unit": "Lily White",
@@ -26924,12 +19873,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Pure",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": null,
     "full_name": "SR April Minami Kotori",
     "id": 277,
@@ -26937,12 +19880,6 @@ app.constant('CardData',
     "japan_only": false,
     "main_unit": "Muse",
     "name": "Minami Kotori",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": true,
     "rarity": "SR",
     "release_date": "2014-03-31",
@@ -26957,6 +19894,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 4520,
+      "display": 4520,
       "idlz": 4800
     },
     "sub_unit": "Printemps",
@@ -26966,12 +19904,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Pure",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": null,
     "full_name": "SR April Kousaka Honoka",
     "id": 276,
@@ -26979,12 +19911,6 @@ app.constant('CardData',
     "japan_only": false,
     "main_unit": "Muse",
     "name": "Kousaka Honoka",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": true,
     "rarity": "SR",
     "release_date": "2014-03-31",
@@ -26999,6 +19925,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 4540,
+      "display": 4540,
       "idlz": 4820
     },
     "sub_unit": "Printemps",
@@ -27008,12 +19935,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Cool",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": true,
     "full_name": "SR Birdwatching Minami Kotori",
     "id": 274,
@@ -27021,12 +19942,6 @@ app.constant('CardData',
     "japan_only": false,
     "main_unit": "Muse",
     "name": "Minami Kotori",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": false,
     "rarity": "SR",
     "release_date": "2014-03-20",
@@ -27041,6 +19956,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 4390,
+      "display": 4390,
       "idlz": 4670
     },
     "sub_unit": "Printemps",
@@ -27050,12 +19966,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Pure",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": null,
     "full_name": "UR March Hoshizora Rin",
     "id": 272,
@@ -27063,12 +19973,6 @@ app.constant('CardData',
     "japan_only": false,
     "main_unit": "Muse",
     "name": "Hoshizora Rin",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": true,
     "rarity": "UR",
     "release_date": "2014-03-15",
@@ -27083,6 +19987,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 4930,
+      "display": 4930,
       "idlz": 5230
     },
     "sub_unit": "Lily White",
@@ -27092,12 +19997,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Cool",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": null,
     "full_name": "SR March Yazawa Nico",
     "id": 271,
@@ -27105,12 +20004,6 @@ app.constant('CardData',
     "japan_only": false,
     "main_unit": "Muse",
     "name": "Yazawa Nico",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": true,
     "rarity": "SR",
     "release_date": "2014-03-15",
@@ -27125,6 +20018,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 4520,
+      "display": 4520,
       "idlz": 4800
     },
     "sub_unit": "Bibi",
@@ -27134,12 +20028,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Pure",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": null,
     "full_name": "SR March Nishikino Maki",
     "id": 270,
@@ -27147,12 +20035,6 @@ app.constant('CardData',
     "japan_only": false,
     "main_unit": "Muse",
     "name": "Nishikino Maki",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": true,
     "rarity": "SR",
     "release_date": "2014-03-15",
@@ -27167,6 +20049,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 4480,
+      "display": 4480,
       "idlz": 4760
     },
     "sub_unit": "Bibi",
@@ -27176,12 +20059,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Smile",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": null,
     "full_name": "SR March Minami Kotori",
     "id": 269,
@@ -27189,12 +20066,6 @@ app.constant('CardData',
     "japan_only": false,
     "main_unit": "Muse",
     "name": "Minami Kotori",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": true,
     "rarity": "SR",
     "release_date": "2014-03-15",
@@ -27209,6 +20080,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 4580,
+      "display": 4580,
       "idlz": 4860
     },
     "sub_unit": "Printemps",
@@ -27218,12 +20090,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Pure",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": true,
     "full_name": "SR Doll Festival Yazawa Nico",
     "id": 267,
@@ -27231,12 +20097,6 @@ app.constant('CardData',
     "japan_only": false,
     "main_unit": "Muse",
     "name": "Yazawa Nico",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": false,
     "rarity": "SR",
     "release_date": "2014-03-05",
@@ -27251,6 +20111,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 4430,
+      "display": 4430,
       "idlz": 4710
     },
     "sub_unit": "Bibi",
@@ -27260,12 +20121,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Smile",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": null,
     "full_name": "UR March Koizumi Hanayo",
     "id": 265,
@@ -27273,12 +20128,6 @@ app.constant('CardData',
     "japan_only": false,
     "main_unit": "Muse",
     "name": "Koizumi Hanayo",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": true,
     "rarity": "UR",
     "release_date": "2014-02-28",
@@ -27293,6 +20142,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 4940,
+      "display": 4940,
       "idlz": 5240
     },
     "sub_unit": "Printemps",
@@ -27302,12 +20152,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Pure",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": null,
     "full_name": "SR March Toujou Nozomi",
     "id": 264,
@@ -27315,12 +20159,6 @@ app.constant('CardData',
     "japan_only": false,
     "main_unit": "Muse",
     "name": "Toujou Nozomi",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": true,
     "rarity": "SR",
     "release_date": "2014-02-28",
@@ -27335,6 +20173,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 4510,
+      "display": 4510,
       "idlz": 4790
     },
     "sub_unit": "Lily White",
@@ -27344,12 +20183,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Cool",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": null,
     "full_name": "SR March Sonoda Umi",
     "id": 263,
@@ -27357,12 +20190,6 @@ app.constant('CardData',
     "japan_only": false,
     "main_unit": "Muse",
     "name": "Sonoda Umi",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": true,
     "rarity": "SR",
     "release_date": "2014-02-28",
@@ -27377,6 +20204,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 4530,
+      "display": 4530,
       "idlz": 4810
     },
     "sub_unit": "Lily White",
@@ -27386,12 +20214,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Smile",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": null,
     "full_name": "SR March Ayase Eli",
     "id": 262,
@@ -27399,12 +20221,6 @@ app.constant('CardData',
     "japan_only": false,
     "main_unit": "Muse",
     "name": "Ayase Eli",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": true,
     "rarity": "SR",
     "release_date": "2014-02-28",
@@ -27419,6 +20235,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 4560,
+      "display": 4560,
       "idlz": 4840
     },
     "sub_unit": "Bibi",
@@ -27428,12 +20245,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Cool",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": null,
     "full_name": "SR March Kousaka Honoka",
     "id": 261,
@@ -27441,12 +20252,6 @@ app.constant('CardData',
     "japan_only": false,
     "main_unit": "Muse",
     "name": "Kousaka Honoka",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": true,
     "rarity": "SR",
     "release_date": "2014-02-28",
@@ -27461,6 +20266,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 4490,
+      "display": 4490,
       "idlz": 4770
     },
     "sub_unit": "Printemps",
@@ -27470,12 +20276,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Smile",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": true,
     "full_name": "SR Setsubun Nishikino Maki",
     "id": 259,
@@ -27483,12 +20283,6 @@ app.constant('CardData',
     "japan_only": false,
     "main_unit": "Muse",
     "name": "Nishikino Maki",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": false,
     "rarity": "SR",
     "release_date": "2014-02-20",
@@ -27503,6 +20297,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 4390,
+      "display": 4390,
       "idlz": 4670
     },
     "sub_unit": "Bibi",
@@ -27512,12 +20307,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Pure",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": null,
     "full_name": "UR February Nishikino Maki",
     "id": 257,
@@ -27525,12 +20314,6 @@ app.constant('CardData',
     "japan_only": false,
     "main_unit": "Muse",
     "name": "Nishikino Maki",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": true,
     "rarity": "UR",
     "release_date": "2014-02-15",
@@ -27545,6 +20328,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 4930,
+      "display": 4930,
       "idlz": 5230
     },
     "sub_unit": "Bibi",
@@ -27554,12 +20338,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Smile",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": null,
     "full_name": "SR February Toujou Nozomi",
     "id": 256,
@@ -27567,12 +20345,6 @@ app.constant('CardData',
     "japan_only": false,
     "main_unit": "Muse",
     "name": "Toujou Nozomi",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": true,
     "rarity": "SR",
     "release_date": "2014-02-15",
@@ -27587,6 +20359,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 4620,
+      "display": 4620,
       "idlz": 4900
     },
     "sub_unit": "Lily White",
@@ -27596,12 +20369,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Cool",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": null,
     "full_name": "SR February Minami Kotori",
     "id": 255,
@@ -27609,12 +20376,6 @@ app.constant('CardData',
     "japan_only": false,
     "main_unit": "Muse",
     "name": "Minami Kotori",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": true,
     "rarity": "SR",
     "release_date": "2014-02-15",
@@ -27629,6 +20390,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 4570,
+      "display": 4570,
       "idlz": 4850
     },
     "sub_unit": "Printemps",
@@ -27638,12 +20400,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Pure",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": null,
     "full_name": "SR February Ayase Eli",
     "id": 254,
@@ -27651,12 +20407,6 @@ app.constant('CardData',
     "japan_only": false,
     "main_unit": "Muse",
     "name": "Ayase Eli",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": true,
     "rarity": "SR",
     "release_date": "2014-02-15",
@@ -27671,6 +20421,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 4540,
+      "display": 4540,
       "idlz": 4820
     },
     "sub_unit": "Bibi",
@@ -27680,12 +20431,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Pure",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": true,
     "full_name": "SR Fairy Hoshizora Rin",
     "id": 252,
@@ -27693,12 +20438,6 @@ app.constant('CardData',
     "japan_only": false,
     "main_unit": "Muse",
     "name": "Hoshizora Rin",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": false,
     "rarity": "SR",
     "release_date": "2014-02-05",
@@ -27713,6 +20452,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 4360,
+      "display": 4360,
       "idlz": 4640
     },
     "sub_unit": "Lily White",
@@ -27722,12 +20462,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Cool",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": null,
     "full_name": "UR February Yazawa Nico",
     "id": 250,
@@ -27735,12 +20469,6 @@ app.constant('CardData',
     "japan_only": false,
     "main_unit": "Muse",
     "name": "Yazawa Nico",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": true,
     "rarity": "UR",
     "release_date": "2014-01-31",
@@ -27755,6 +20483,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 4890,
+      "display": 4890,
       "idlz": 5190
     },
     "sub_unit": "Bibi",
@@ -27764,12 +20493,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Pure",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": null,
     "full_name": "UR Promo Minami Kotori",
     "id": 249,
@@ -27777,12 +20500,6 @@ app.constant('CardData',
     "japan_only": true,
     "main_unit": "Muse",
     "name": "Minami Kotori",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": false,
     "rarity": "UR",
     "release_date": "2014-01-31",
@@ -27797,6 +20514,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 4190,
+      "display": 4190,
       "idlz": 4190
     },
     "sub_unit": "Printemps",
@@ -27806,12 +20524,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Pure",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": null,
     "full_name": "SR February Koizumi Hanayo",
     "id": 248,
@@ -27819,12 +20531,6 @@ app.constant('CardData',
     "japan_only": false,
     "main_unit": "Muse",
     "name": "Koizumi Hanayo",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": true,
     "rarity": "SR",
     "release_date": "2014-01-31",
@@ -27839,6 +20545,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 4560,
+      "display": 4560,
       "idlz": 4840
     },
     "sub_unit": "Printemps",
@@ -27848,12 +20555,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Cool",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": null,
     "full_name": "SR February Hoshizora Rin",
     "id": 247,
@@ -27861,12 +20562,6 @@ app.constant('CardData',
     "japan_only": false,
     "main_unit": "Muse",
     "name": "Hoshizora Rin",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": true,
     "rarity": "SR",
     "release_date": "2014-01-31",
@@ -27881,6 +20576,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 4530,
+      "display": 4530,
       "idlz": 4810
     },
     "sub_unit": "Lily White",
@@ -27890,12 +20586,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Smile",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": null,
     "full_name": "SR February Sonoda Umi",
     "id": 246,
@@ -27903,12 +20593,6 @@ app.constant('CardData',
     "japan_only": false,
     "main_unit": "Muse",
     "name": "Sonoda Umi",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": true,
     "rarity": "SR",
     "release_date": "2014-01-31",
@@ -27923,6 +20607,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 4580,
+      "display": 4580,
       "idlz": 4860
     },
     "sub_unit": "Lily White",
@@ -27932,12 +20617,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Smile",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": null,
     "full_name": "SR February Kousaka Honoka",
     "id": 245,
@@ -27945,12 +20624,6 @@ app.constant('CardData',
     "japan_only": false,
     "main_unit": "Muse",
     "name": "Kousaka Honoka",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": true,
     "rarity": "SR",
     "release_date": "2014-01-31",
@@ -27965,6 +20638,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 4600,
+      "display": 4600,
       "idlz": 4880
     },
     "sub_unit": "Printemps",
@@ -27974,12 +20648,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Smile",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": null,
     "full_name": "SR Promo Yazawa Nico",
     "id": 243,
@@ -27987,12 +20655,6 @@ app.constant('CardData',
     "japan_only": true,
     "main_unit": "Muse",
     "name": "Yazawa Nico",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": false,
     "rarity": "SR",
     "release_date": "2014-01-20",
@@ -28007,6 +20669,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 4180,
+      "display": 4180,
       "idlz": 4180
     },
     "sub_unit": "Bibi",
@@ -28016,12 +20679,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Pure",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": null,
     "full_name": "SR Promo Koizumi Hanayo",
     "id": 242,
@@ -28029,12 +20686,6 @@ app.constant('CardData',
     "japan_only": true,
     "main_unit": "Muse",
     "name": "Koizumi Hanayo",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": false,
     "rarity": "SR",
     "release_date": "2014-01-20",
@@ -28049,6 +20700,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 4200,
+      "display": 4200,
       "idlz": 4200
     },
     "sub_unit": "Printemps",
@@ -28058,12 +20710,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Pure",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": null,
     "full_name": "SR Promo Toujou Nozomi",
     "id": 241,
@@ -28071,12 +20717,6 @@ app.constant('CardData',
     "japan_only": true,
     "main_unit": "Muse",
     "name": "Toujou Nozomi",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": false,
     "rarity": "SR",
     "release_date": "2014-01-20",
@@ -28091,6 +20731,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 4210,
+      "display": 4210,
       "idlz": 4210
     },
     "sub_unit": "Lily White",
@@ -28100,12 +20741,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Cool",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": null,
     "full_name": "SR Promo Nishikino Maki",
     "id": 240,
@@ -28113,12 +20748,6 @@ app.constant('CardData',
     "japan_only": true,
     "main_unit": "Muse",
     "name": "Nishikino Maki",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": false,
     "rarity": "SR",
     "release_date": "2014-01-20",
@@ -28133,6 +20762,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 4230,
+      "display": 4230,
       "idlz": 4230
     },
     "sub_unit": "Bibi",
@@ -28142,12 +20772,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Smile",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": null,
     "full_name": "SR Promo Hoshizora Rin",
     "id": 239,
@@ -28155,12 +20779,6 @@ app.constant('CardData',
     "japan_only": true,
     "main_unit": "Muse",
     "name": "Hoshizora Rin",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": false,
     "rarity": "SR",
     "release_date": "2014-01-20",
@@ -28175,6 +20793,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 4210,
+      "display": 4210,
       "idlz": 4210
     },
     "sub_unit": "Lily White",
@@ -28184,12 +20803,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Cool",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": null,
     "full_name": "SR Promo Sonoda Umi",
     "id": 238,
@@ -28197,12 +20810,6 @@ app.constant('CardData',
     "japan_only": true,
     "main_unit": "Muse",
     "name": "Sonoda Umi",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": false,
     "rarity": "SR",
     "release_date": "2014-01-20",
@@ -28217,6 +20824,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 4250,
+      "display": 4250,
       "idlz": 4250
     },
     "sub_unit": "Lily White",
@@ -28226,12 +20834,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Pure",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": null,
     "full_name": "SR Promo Minami Kotori",
     "id": 237,
@@ -28239,12 +20841,6 @@ app.constant('CardData',
     "japan_only": true,
     "main_unit": "Muse",
     "name": "Minami Kotori",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": false,
     "rarity": "SR",
     "release_date": "2014-01-20",
@@ -28259,6 +20855,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 4200,
+      "display": 4200,
       "idlz": 4200
     },
     "sub_unit": "Printemps",
@@ -28268,12 +20865,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Cool",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": null,
     "full_name": "SR Promo Ayase Eli",
     "id": 236,
@@ -28281,12 +20872,6 @@ app.constant('CardData',
     "japan_only": true,
     "main_unit": "Muse",
     "name": "Ayase Eli",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": false,
     "rarity": "SR",
     "release_date": "2014-01-20",
@@ -28301,6 +20886,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 4220,
+      "display": 4220,
       "idlz": 4220
     },
     "sub_unit": "Bibi",
@@ -28310,12 +20896,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Smile",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": null,
     "full_name": "SR Promo Kousaka Honoka",
     "id": 235,
@@ -28323,12 +20903,6 @@ app.constant('CardData',
     "japan_only": true,
     "main_unit": "Muse",
     "name": "Kousaka Honoka",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": false,
     "rarity": "SR",
     "release_date": "2014-01-20",
@@ -28343,6 +20917,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 4190,
+      "display": 4190,
       "idlz": 4190
     },
     "sub_unit": "Printemps",
@@ -28352,12 +20927,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Smile",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": null,
     "full_name": "SR Promo Yazawa Nico",
     "id": 234,
@@ -28365,12 +20934,6 @@ app.constant('CardData',
     "japan_only": false,
     "main_unit": "Muse",
     "name": "Yazawa Nico",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": false,
     "rarity": "SR",
     "release_date": "2014-01-20",
@@ -28385,6 +20948,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 4230,
+      "display": 4230,
       "idlz": 4230
     },
     "sub_unit": "Bibi",
@@ -28394,12 +20958,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Pure",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": null,
     "full_name": "SR Promo Koizumi Hanayo",
     "id": 233,
@@ -28407,12 +20965,6 @@ app.constant('CardData',
     "japan_only": false,
     "main_unit": "Muse",
     "name": "Koizumi Hanayo",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": false,
     "rarity": "SR",
     "release_date": "2014-01-20",
@@ -28427,6 +20979,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 4230,
+      "display": 4230,
       "idlz": 4230
     },
     "sub_unit": "Printemps",
@@ -28436,12 +20989,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Pure",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": null,
     "full_name": "SR Promo Toujou Nozomi",
     "id": 232,
@@ -28449,12 +20996,6 @@ app.constant('CardData',
     "japan_only": false,
     "main_unit": "Muse",
     "name": "Toujou Nozomi",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": false,
     "rarity": "SR",
     "release_date": "2014-01-20",
@@ -28469,6 +21010,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 4220,
+      "display": 4220,
       "idlz": 4220
     },
     "sub_unit": "Lily White",
@@ -28478,12 +21020,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Cool",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": null,
     "full_name": "SR Promo Nishikino Maki",
     "id": 231,
@@ -28491,12 +21027,6 @@ app.constant('CardData',
     "japan_only": false,
     "main_unit": "Muse",
     "name": "Nishikino Maki",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": false,
     "rarity": "SR",
     "release_date": "2014-01-20",
@@ -28511,6 +21041,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 4210,
+      "display": 4210,
       "idlz": 4210
     },
     "sub_unit": "Bibi",
@@ -28520,12 +21051,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Smile",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": null,
     "full_name": "SR Promo Hoshizora Rin",
     "id": 230,
@@ -28533,12 +21058,6 @@ app.constant('CardData',
     "japan_only": false,
     "main_unit": "Muse",
     "name": "Hoshizora Rin",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": false,
     "rarity": "SR",
     "release_date": "2014-01-20",
@@ -28553,6 +21072,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 4180,
+      "display": 4180,
       "idlz": 4180
     },
     "sub_unit": "Lily White",
@@ -28562,12 +21082,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Cool",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": null,
     "full_name": "SR Promo Sonoda Umi",
     "id": 229,
@@ -28575,12 +21089,6 @@ app.constant('CardData',
     "japan_only": false,
     "main_unit": "Muse",
     "name": "Sonoda Umi",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": false,
     "rarity": "SR",
     "release_date": "2014-01-20",
@@ -28595,6 +21103,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 4170,
+      "display": 4170,
       "idlz": 4170
     },
     "sub_unit": "Lily White",
@@ -28604,12 +21113,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Pure",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": null,
     "full_name": "SR Promo Minami Kotori",
     "id": 228,
@@ -28617,12 +21120,6 @@ app.constant('CardData',
     "japan_only": false,
     "main_unit": "Muse",
     "name": "Minami Kotori",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": false,
     "rarity": "SR",
     "release_date": "2014-01-20",
@@ -28637,6 +21134,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 4250,
+      "display": 4250,
       "idlz": 4250
     },
     "sub_unit": "Printemps",
@@ -28646,12 +21144,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Cool",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": null,
     "full_name": "SR Promo Ayase Eli",
     "id": 227,
@@ -28659,12 +21151,6 @@ app.constant('CardData',
     "japan_only": false,
     "main_unit": "Muse",
     "name": "Ayase Eli",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": false,
     "rarity": "SR",
     "release_date": "2014-01-20",
@@ -28679,6 +21165,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 4200,
+      "display": 4200,
       "idlz": 4200
     },
     "sub_unit": "Bibi",
@@ -28688,12 +21175,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Smile",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": null,
     "full_name": "SR Promo Kousaka Honoka",
     "id": 226,
@@ -28701,12 +21182,6 @@ app.constant('CardData',
     "japan_only": false,
     "main_unit": "Muse",
     "name": "Kousaka Honoka",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": false,
     "rarity": "SR",
     "release_date": "2014-01-20",
@@ -28721,6 +21196,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 4200,
+      "display": 4200,
       "idlz": 4200
     },
     "sub_unit": "Printemps",
@@ -28730,12 +21206,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Cool",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": true,
     "full_name": "SR Shrine Maiden Toujou Nozomi",
     "id": 224,
@@ -28743,12 +21213,6 @@ app.constant('CardData',
     "japan_only": false,
     "main_unit": "Muse",
     "name": "Toujou Nozomi",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": false,
     "rarity": "SR",
     "release_date": "2014-01-20",
@@ -28763,6 +21227,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 4310,
+      "display": 4310,
       "idlz": 4590
     },
     "sub_unit": "Lily White",
@@ -28772,12 +21237,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Cool",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": null,
     "full_name": "UR January Kousaka Honoka",
     "id": 222,
@@ -28785,12 +21244,6 @@ app.constant('CardData',
     "japan_only": false,
     "main_unit": "Muse",
     "name": "Kousaka Honoka",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": true,
     "rarity": "UR",
     "release_date": "2014-01-15",
@@ -28805,6 +21258,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 4880,
+      "display": 4880,
       "idlz": 5180
     },
     "sub_unit": "Printemps",
@@ -28814,12 +21268,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Smile",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": null,
     "full_name": "SR January Koizumi Hanayo",
     "id": 221,
@@ -28827,12 +21275,6 @@ app.constant('CardData',
     "japan_only": false,
     "main_unit": "Muse",
     "name": "Koizumi Hanayo",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": true,
     "rarity": "SR",
     "release_date": "2014-01-15",
@@ -28847,6 +21289,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 4610,
+      "display": 4610,
       "idlz": 4890
     },
     "sub_unit": "Printemps",
@@ -28856,12 +21299,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Pure",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": null,
     "full_name": "SR January Nishikino Maki",
     "id": 220,
@@ -28869,12 +21306,6 @@ app.constant('CardData',
     "japan_only": false,
     "main_unit": "Muse",
     "name": "Nishikino Maki",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": true,
     "rarity": "SR",
     "release_date": "2014-01-15",
@@ -28889,6 +21320,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 4570,
+      "display": 4570,
       "idlz": 4850
     },
     "sub_unit": "Bibi",
@@ -28898,12 +21330,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Cool",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": null,
     "full_name": "SR January Ayase Eli",
     "id": 219,
@@ -28911,12 +21337,6 @@ app.constant('CardData',
     "japan_only": false,
     "main_unit": "Muse",
     "name": "Ayase Eli",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": true,
     "rarity": "SR",
     "release_date": "2014-01-15",
@@ -28931,6 +21351,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 4590,
+      "display": 4590,
       "idlz": 4870
     },
     "sub_unit": "Bibi",
@@ -28940,12 +21361,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Smile",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": true,
     "full_name": "SR New Year's Food Yazawa Nico",
     "id": 217,
@@ -28953,12 +21368,6 @@ app.constant('CardData',
     "japan_only": false,
     "main_unit": "Muse",
     "name": "Yazawa Nico",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": false,
     "rarity": "SR",
     "release_date": "2014-01-05",
@@ -28973,6 +21382,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 4410,
+      "display": 4410,
       "idlz": 4690
     },
     "sub_unit": "Bibi",
@@ -28982,12 +21392,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Cool",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": null,
     "full_name": "SR Promo Nishikino Maki",
     "id": 216,
@@ -28995,12 +21399,6 @@ app.constant('CardData',
     "japan_only": false,
     "main_unit": "Muse",
     "name": "Nishikino Maki",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": false,
     "rarity": "SR",
     "release_date": "2014-01-05",
@@ -29015,6 +21413,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 4200,
+      "display": 4200,
       "idlz": 4200
     },
     "sub_unit": "Bibi",
@@ -29024,12 +21423,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Pure",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": null,
     "full_name": "UR January Sonoda Umi",
     "id": 214,
@@ -29037,12 +21430,6 @@ app.constant('CardData',
     "japan_only": false,
     "main_unit": "Muse",
     "name": "Sonoda Umi",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": true,
     "rarity": "UR",
     "release_date": "2013-12-31",
@@ -29057,6 +21444,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 4920,
+      "display": 4920,
       "idlz": 5220
     },
     "sub_unit": "Lily White",
@@ -29066,12 +21454,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Cool",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": null,
     "full_name": "SR January Yazawa Nico",
     "id": 213,
@@ -29079,12 +21461,6 @@ app.constant('CardData',
     "japan_only": false,
     "main_unit": "Muse",
     "name": "Yazawa Nico",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": true,
     "rarity": "SR",
     "release_date": "2013-12-31",
@@ -29099,6 +21475,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 4570,
+      "display": 4570,
       "idlz": 4850
     },
     "sub_unit": "Bibi",
@@ -29108,12 +21485,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Smile",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": null,
     "full_name": "SR January Toujou Nozomi",
     "id": 212,
@@ -29121,12 +21492,6 @@ app.constant('CardData',
     "japan_only": false,
     "main_unit": "Muse",
     "name": "Toujou Nozomi",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": true,
     "rarity": "SR",
     "release_date": "2013-12-31",
@@ -29141,6 +21506,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 4580,
+      "display": 4580,
       "idlz": 4860
     },
     "sub_unit": "Lily White",
@@ -29150,12 +21516,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Smile",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": null,
     "full_name": "SR January Hoshizora Rin",
     "id": 211,
@@ -29163,12 +21523,6 @@ app.constant('CardData',
     "japan_only": false,
     "main_unit": "Muse",
     "name": "Hoshizora Rin",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": true,
     "rarity": "SR",
     "release_date": "2013-12-31",
@@ -29183,6 +21537,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 4590,
+      "display": 4590,
       "idlz": 4870
     },
     "sub_unit": "Lily White",
@@ -29192,12 +21547,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Pure",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": null,
     "full_name": "SR January Minami Kotori",
     "id": 210,
@@ -29205,12 +21554,6 @@ app.constant('CardData',
     "japan_only": false,
     "main_unit": "Muse",
     "name": "Minami Kotori",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": true,
     "rarity": "SR",
     "release_date": "2013-12-31",
@@ -29225,6 +21568,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 4620,
+      "display": 4620,
       "idlz": 4900
     },
     "sub_unit": "Printemps",
@@ -29234,12 +21578,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Cool",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": null,
     "full_name": "UR Promo Sonoda Umi",
     "id": 208,
@@ -29247,12 +21585,6 @@ app.constant('CardData',
     "japan_only": true,
     "main_unit": "Muse",
     "name": "Sonoda Umi",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": false,
     "rarity": "UR",
     "release_date": "2013-12-20",
@@ -29267,6 +21599,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 4200,
+      "display": 4200,
       "idlz": 4200
     },
     "sub_unit": "Lily White",
@@ -29276,12 +21609,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Smile",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": null,
     "full_name": "SR Promo Yazawa Nico",
     "id": 207,
@@ -29289,12 +21616,6 @@ app.constant('CardData',
     "japan_only": false,
     "main_unit": "Muse",
     "name": "Yazawa Nico",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": false,
     "rarity": "SR",
     "release_date": "2013-12-20",
@@ -29309,6 +21630,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 4100,
+      "display": 4100,
       "idlz": 4100
     },
     "sub_unit": "Bibi",
@@ -29318,12 +21640,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Pure",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": true,
     "full_name": "SR Snow Maiden Sonoda Umi",
     "id": 206,
@@ -29331,12 +21647,6 @@ app.constant('CardData',
     "japan_only": false,
     "main_unit": "Muse",
     "name": "Sonoda Umi",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": false,
     "rarity": "SR",
     "release_date": "2013-12-20",
@@ -29351,6 +21661,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 4370,
+      "display": 4370,
       "idlz": 4650
     },
     "sub_unit": "Lily White",
@@ -29360,12 +21671,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Pure",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": null,
     "full_name": "UR Promo Minami Kotori",
     "id": 204,
@@ -29373,12 +21678,6 @@ app.constant('CardData',
     "japan_only": false,
     "main_unit": "Muse",
     "name": "Minami Kotori",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": false,
     "rarity": "UR",
     "release_date": "2013-12-15",
@@ -29393,6 +21692,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 4150,
+      "display": 4150,
       "idlz": 4150
     },
     "sub_unit": "Printemps",
@@ -29402,12 +21702,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Cool",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": null,
     "full_name": "UR December Toujou Nozomi",
     "id": 203,
@@ -29415,12 +21709,6 @@ app.constant('CardData',
     "japan_only": false,
     "main_unit": "Muse",
     "name": "Toujou Nozomi",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": true,
     "rarity": "UR",
     "release_date": "2013-12-15",
@@ -29435,6 +21723,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 4900,
+      "display": 4900,
       "idlz": 5200
     },
     "sub_unit": "Lily White",
@@ -29444,12 +21733,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Smile",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": null,
     "full_name": "SR December Koizumi Hanayo",
     "id": 202,
@@ -29457,12 +21740,6 @@ app.constant('CardData',
     "japan_only": false,
     "main_unit": "Muse",
     "name": "Koizumi Hanayo",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": true,
     "rarity": "SR",
     "release_date": "2013-12-15",
@@ -29477,6 +21754,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 4580,
+      "display": 4580,
       "idlz": 4860
     },
     "sub_unit": "Printemps",
@@ -29486,12 +21764,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Cool",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": null,
     "full_name": "SR December Minami Kotori",
     "id": 201,
@@ -29499,12 +21771,6 @@ app.constant('CardData',
     "japan_only": false,
     "main_unit": "Muse",
     "name": "Minami Kotori",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": true,
     "rarity": "SR",
     "release_date": "2013-12-15",
@@ -29519,6 +21785,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 4600,
+      "display": 4600,
       "idlz": 4880
     },
     "sub_unit": "Printemps",
@@ -29528,12 +21795,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Pure",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": null,
     "full_name": "SR December Kousaka Honoka",
     "id": 200,
@@ -29541,12 +21802,6 @@ app.constant('CardData',
     "japan_only": false,
     "main_unit": "Muse",
     "name": "Kousaka Honoka",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": true,
     "rarity": "SR",
     "release_date": "2013-12-15",
@@ -29561,6 +21816,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 4560,
+      "display": 4560,
       "idlz": 4840
     },
     "sub_unit": "Printemps",
@@ -29570,12 +21826,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Cool",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": true,
     "full_name": "SR Skating Koizumi Hanayo",
     "id": 198,
@@ -29583,12 +21833,6 @@ app.constant('CardData',
     "japan_only": false,
     "main_unit": "Muse",
     "name": "Koizumi Hanayo",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": false,
     "rarity": "SR",
     "release_date": "2013-12-05",
@@ -29603,6 +21847,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 4330,
+      "display": 4330,
       "idlz": 4610
     },
     "sub_unit": "Printemps",
@@ -29612,12 +21857,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Pure",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": null,
     "full_name": "UR December Ayase Eli",
     "id": 196,
@@ -29625,12 +21864,6 @@ app.constant('CardData',
     "japan_only": false,
     "main_unit": "Muse",
     "name": "Ayase Eli",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": true,
     "rarity": "UR",
     "release_date": "2013-11-30",
@@ -29645,6 +21878,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 4940,
+      "display": 4940,
       "idlz": 5240
     },
     "sub_unit": "Bibi",
@@ -29654,12 +21888,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Pure",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": null,
     "full_name": "SR December Yazawa Nico",
     "id": 195,
@@ -29667,12 +21895,6 @@ app.constant('CardData',
     "japan_only": false,
     "main_unit": "Muse",
     "name": "Yazawa Nico",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": true,
     "rarity": "SR",
     "release_date": "2013-11-30",
@@ -29687,6 +21909,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 4580,
+      "display": 4580,
       "idlz": 4860
     },
     "sub_unit": "Bibi",
@@ -29696,12 +21919,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Smile",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": null,
     "full_name": "SR December Nishikino Maki",
     "id": 194,
@@ -29709,12 +21926,6 @@ app.constant('CardData',
     "japan_only": false,
     "main_unit": "Muse",
     "name": "Nishikino Maki",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": true,
     "rarity": "SR",
     "release_date": "2013-11-30",
@@ -29729,6 +21940,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 4590,
+      "display": 4590,
       "idlz": 4870
     },
     "sub_unit": "Bibi",
@@ -29738,12 +21950,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Cool",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": null,
     "full_name": "SR December Hoshizora Rin",
     "id": 193,
@@ -29751,12 +21957,6 @@ app.constant('CardData',
     "japan_only": false,
     "main_unit": "Muse",
     "name": "Hoshizora Rin",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": true,
     "rarity": "SR",
     "release_date": "2013-11-30",
@@ -29771,6 +21971,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 4570,
+      "display": 4570,
       "idlz": 4850
     },
     "sub_unit": "Lily White",
@@ -29780,12 +21981,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Smile",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": null,
     "full_name": "SR December Sonoda Umi",
     "id": 192,
@@ -29793,12 +21988,6 @@ app.constant('CardData',
     "japan_only": false,
     "main_unit": "Muse",
     "name": "Sonoda Umi",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": true,
     "rarity": "SR",
     "release_date": "2013-11-30",
@@ -29813,6 +22002,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 4550,
+      "display": 4550,
       "idlz": 4830
     },
     "sub_unit": "Lily White",
@@ -29822,12 +22012,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Pure",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": null,
     "full_name": "SR Promo Minami Kotori",
     "id": 190,
@@ -29835,12 +22019,6 @@ app.constant('CardData',
     "japan_only": true,
     "main_unit": "Muse",
     "name": "Minami Kotori",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": false,
     "rarity": "SR",
     "release_date": "2013-11-20",
@@ -29855,6 +22033,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 4160,
+      "display": 4160,
       "idlz": 4160
     },
     "sub_unit": "Printemps",
@@ -29864,12 +22043,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Pure",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": true,
     "full_name": "SR Homura Kousaka Honoka",
     "id": 189,
@@ -29877,12 +22050,6 @@ app.constant('CardData',
     "japan_only": false,
     "main_unit": "Muse",
     "name": "Kousaka Honoka",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": false,
     "rarity": "SR",
     "release_date": "2013-11-20",
@@ -29897,6 +22064,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 4340,
+      "display": 4340,
       "idlz": 4620
     },
     "sub_unit": "Printemps",
@@ -29906,12 +22074,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Smile",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": null,
     "full_name": "UR November Nishikino Maki",
     "id": 187,
@@ -29919,12 +22081,6 @@ app.constant('CardData',
     "japan_only": false,
     "main_unit": "Muse",
     "name": "Nishikino Maki",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": true,
     "rarity": "UR",
     "release_date": "2013-11-15",
@@ -29939,6 +22095,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 4910,
+      "display": 4910,
       "idlz": 5210
     },
     "sub_unit": "Bibi",
@@ -29948,12 +22105,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Cool",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": null,
     "full_name": "SR November Toujou Nozomi",
     "id": 186,
@@ -29961,12 +22112,6 @@ app.constant('CardData',
     "japan_only": false,
     "main_unit": "Muse",
     "name": "Toujou Nozomi",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": true,
     "rarity": "SR",
     "release_date": "2013-11-15",
@@ -29981,6 +22126,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 4510,
+      "display": 4510,
       "idlz": 4790
     },
     "sub_unit": "Lily White",
@@ -29990,12 +22136,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Pure",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": null,
     "full_name": "SR November Hoshizora Rin",
     "id": 185,
@@ -30003,12 +22143,6 @@ app.constant('CardData',
     "japan_only": false,
     "main_unit": "Muse",
     "name": "Hoshizora Rin",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": true,
     "rarity": "SR",
     "release_date": "2013-11-15",
@@ -30023,6 +22157,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 4450,
+      "display": 4450,
       "idlz": 4730
     },
     "sub_unit": "Lily White",
@@ -30032,12 +22167,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Smile",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": null,
     "full_name": "SR November Sonoda Umi",
     "id": 184,
@@ -30045,12 +22174,6 @@ app.constant('CardData',
     "japan_only": false,
     "main_unit": "Muse",
     "name": "Sonoda Umi",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": true,
     "rarity": "SR",
     "release_date": "2013-11-15",
@@ -30065,6 +22188,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 4480,
+      "display": 4480,
       "idlz": 4760
     },
     "sub_unit": "Lily White",
@@ -30074,12 +22198,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Cool",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": true,
     "full_name": "SR Health Committee Minami Kotori",
     "id": 182,
@@ -30087,12 +22205,6 @@ app.constant('CardData',
     "japan_only": false,
     "main_unit": "Muse",
     "name": "Minami Kotori",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": false,
     "rarity": "SR",
     "release_date": "2013-11-05",
@@ -30107,6 +22219,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 4360,
+      "display": 4360,
       "idlz": 4640
     },
     "sub_unit": "Printemps",
@@ -30116,12 +22229,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Cool",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": null,
     "full_name": "UR November Koizumi Hanayo",
     "id": 180,
@@ -30129,12 +22236,6 @@ app.constant('CardData',
     "japan_only": false,
     "main_unit": "Muse",
     "name": "Koizumi Hanayo",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": true,
     "rarity": "UR",
     "release_date": "2013-10-31",
@@ -30149,6 +22250,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 4920,
+      "display": 4920,
       "idlz": 5220
     },
     "sub_unit": "Printemps",
@@ -30158,12 +22260,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Pure",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": null,
     "full_name": "SR November Yazawa Nico",
     "id": 179,
@@ -30171,12 +22267,6 @@ app.constant('CardData',
     "japan_only": false,
     "main_unit": "Muse",
     "name": "Yazawa Nico",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": true,
     "rarity": "SR",
     "release_date": "2013-10-31",
@@ -30191,6 +22281,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 4430,
+      "display": 4430,
       "idlz": 4710
     },
     "sub_unit": "Bibi",
@@ -30200,12 +22291,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Smile",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": null,
     "full_name": "SR November Minami Kotori",
     "id": 178,
@@ -30213,12 +22298,6 @@ app.constant('CardData',
     "japan_only": false,
     "main_unit": "Muse",
     "name": "Minami Kotori",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": true,
     "rarity": "SR",
     "release_date": "2013-10-31",
@@ -30233,6 +22312,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 4460,
+      "display": 4460,
       "idlz": 4740
     },
     "sub_unit": "Printemps",
@@ -30242,12 +22322,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Pure",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": null,
     "full_name": "SR November Ayase Eli",
     "id": 177,
@@ -30255,12 +22329,6 @@ app.constant('CardData',
     "japan_only": false,
     "main_unit": "Muse",
     "name": "Ayase Eli",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": true,
     "rarity": "SR",
     "release_date": "2013-10-31",
@@ -30275,6 +22343,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 4490,
+      "display": 4490,
       "idlz": 4770
     },
     "sub_unit": "Bibi",
@@ -30284,12 +22353,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Cool",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": null,
     "full_name": "SR November Kousaka Honoka",
     "id": 176,
@@ -30297,12 +22360,6 @@ app.constant('CardData',
     "japan_only": false,
     "main_unit": "Muse",
     "name": "Kousaka Honoka",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": true,
     "rarity": "SR",
     "release_date": "2013-10-31",
@@ -30317,6 +22374,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 4470,
+      "display": 4470,
       "idlz": 4750
     },
     "sub_unit": "Printemps",
@@ -30326,12 +22384,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Smile",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": true,
     "full_name": "SR Reading Ayase Eli",
     "id": 174,
@@ -30339,12 +22391,6 @@ app.constant('CardData',
     "japan_only": false,
     "main_unit": "Muse",
     "name": "Ayase Eli",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": false,
     "rarity": "SR",
     "release_date": "2013-10-20",
@@ -30359,6 +22405,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 4330,
+      "display": 4330,
       "idlz": 4610
     },
     "sub_unit": "Bibi",
@@ -30368,12 +22415,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Cool",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": null,
     "full_name": "UR October Hoshizora Rin",
     "id": 172,
@@ -30381,12 +22422,6 @@ app.constant('CardData',
     "japan_only": false,
     "main_unit": "Muse",
     "name": "Hoshizora Rin",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": true,
     "rarity": "UR",
     "release_date": "2013-10-15",
@@ -30401,6 +22436,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 4960,
+      "display": 4960,
       "idlz": 5260
     },
     "sub_unit": "Lily White",
@@ -30410,12 +22446,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Cool",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": null,
     "full_name": "SR October Yazawa Nico",
     "id": 171,
@@ -30423,12 +22453,6 @@ app.constant('CardData',
     "japan_only": false,
     "main_unit": "Muse",
     "name": "Yazawa Nico",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": true,
     "rarity": "SR",
     "release_date": "2013-10-15",
@@ -30443,6 +22467,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 4510,
+      "display": 4510,
       "idlz": 4790
     },
     "sub_unit": "Bibi",
@@ -30452,12 +22477,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Pure",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": null,
     "full_name": "SR October Nishikino Maki",
     "id": 170,
@@ -30465,12 +22484,6 @@ app.constant('CardData',
     "japan_only": false,
     "main_unit": "Muse",
     "name": "Nishikino Maki",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": true,
     "rarity": "SR",
     "release_date": "2013-10-15",
@@ -30485,6 +22498,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 4500,
+      "display": 4500,
       "idlz": 4780
     },
     "sub_unit": "Bibi",
@@ -30494,12 +22508,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Smile",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": null,
     "full_name": "SR October Minami Kotori",
     "id": 169,
@@ -30507,12 +22515,6 @@ app.constant('CardData',
     "japan_only": false,
     "main_unit": "Muse",
     "name": "Minami Kotori",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": true,
     "rarity": "SR",
     "release_date": "2013-10-15",
@@ -30527,6 +22529,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 4480,
+      "display": 4480,
       "idlz": 4760
     },
     "sub_unit": "Printemps",
@@ -30536,12 +22539,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Smile",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": true,
     "full_name": "SR Maid Nishikino Maki",
     "id": 167,
@@ -30549,12 +22546,6 @@ app.constant('CardData',
     "japan_only": false,
     "main_unit": "Muse",
     "name": "Nishikino Maki",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": false,
     "rarity": "SR",
     "release_date": "2013-10-05",
@@ -30569,6 +22560,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 4310,
+      "display": 4310,
       "idlz": 4590
     },
     "sub_unit": "Bibi",
@@ -30578,12 +22570,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Pure",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": null,
     "full_name": "UR October Kousaka Honoka",
     "id": 165,
@@ -30591,12 +22577,6 @@ app.constant('CardData',
     "japan_only": false,
     "main_unit": "Muse",
     "name": "Kousaka Honoka",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": true,
     "rarity": "UR",
     "release_date": "2013-09-30",
@@ -30611,6 +22591,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 4910,
+      "display": 4910,
       "idlz": 5210
     },
     "sub_unit": "Printemps",
@@ -30620,12 +22601,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Cool",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": null,
     "full_name": "SR October Koizumi Hanayo",
     "id": 164,
@@ -30633,12 +22608,6 @@ app.constant('CardData',
     "japan_only": false,
     "main_unit": "Muse",
     "name": "Koizumi Hanayo",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": true,
     "rarity": "SR",
     "release_date": "2013-09-30",
@@ -30653,6 +22622,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 4470,
+      "display": 4470,
       "idlz": 4750
     },
     "sub_unit": "Printemps",
@@ -30662,12 +22632,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Smile",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": null,
     "full_name": "SR October Toujou Nozomi",
     "id": 163,
@@ -30675,12 +22639,6 @@ app.constant('CardData',
     "japan_only": false,
     "main_unit": "Muse",
     "name": "Toujou Nozomi",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": true,
     "rarity": "SR",
     "release_date": "2013-09-30",
@@ -30695,6 +22653,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 4490,
+      "display": 4490,
       "idlz": 4770
     },
     "sub_unit": "Lily White",
@@ -30704,12 +22663,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Pure",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": null,
     "full_name": "SR October Sonoda Umi",
     "id": 162,
@@ -30717,12 +22670,6 @@ app.constant('CardData',
     "japan_only": false,
     "main_unit": "Muse",
     "name": "Sonoda Umi",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": true,
     "rarity": "SR",
     "release_date": "2013-09-30",
@@ -30737,6 +22684,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 4480,
+      "display": 4480,
       "idlz": 4760
     },
     "sub_unit": "Lily White",
@@ -30746,12 +22694,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Smile",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": null,
     "full_name": "SR October Ayase Eli",
     "id": 161,
@@ -30759,12 +22701,6 @@ app.constant('CardData',
     "japan_only": false,
     "main_unit": "Muse",
     "name": "Ayase Eli",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": true,
     "rarity": "SR",
     "release_date": "2013-09-30",
@@ -30779,6 +22715,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 4460,
+      "display": 4460,
       "idlz": 4740
     },
     "sub_unit": "Bibi",
@@ -30788,12 +22725,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Smile",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": null,
     "full_name": "UR Promo Kousaka Honoka",
     "id": 159,
@@ -30801,12 +22732,6 @@ app.constant('CardData',
     "japan_only": true,
     "main_unit": "Muse",
     "name": "Kousaka Honoka",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": false,
     "rarity": "UR",
     "release_date": "2013-09-20",
@@ -30821,6 +22746,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 4230,
+      "display": 4230,
       "idlz": 4230
     },
     "sub_unit": "Printemps",
@@ -30830,12 +22756,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Cool",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": null,
     "full_name": "SR Promo Sonoda Umi",
     "id": 158,
@@ -30843,12 +22763,6 @@ app.constant('CardData',
     "japan_only": true,
     "main_unit": "Muse",
     "name": "Sonoda Umi",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": false,
     "rarity": "SR",
     "release_date": "2013-09-20",
@@ -30863,6 +22777,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 4110,
+      "display": 4110,
       "idlz": 4110
     },
     "sub_unit": "Lily White",
@@ -30872,12 +22787,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Pure",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": true,
     "full_name": "SR Moon Viewing Hoshizora Rin",
     "id": 157,
@@ -30885,12 +22794,6 @@ app.constant('CardData',
     "japan_only": false,
     "main_unit": "Muse",
     "name": "Hoshizora Rin",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": false,
     "rarity": "SR",
     "release_date": "2013-09-20",
@@ -30905,6 +22808,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 4130,
+      "display": 4130,
       "idlz": 4410
     },
     "sub_unit": "Lily White",
@@ -30914,12 +22818,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Cool",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": null,
     "full_name": "UR September Minami Kotori",
     "id": 155,
@@ -30927,12 +22825,6 @@ app.constant('CardData',
     "japan_only": false,
     "main_unit": "Muse",
     "name": "Minami Kotori",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": true,
     "rarity": "UR",
     "release_date": "2013-09-15",
@@ -30947,6 +22839,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 4900,
+      "display": 4900,
       "idlz": 5200
     },
     "sub_unit": "Printemps",
@@ -30956,12 +22849,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Cool",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": null,
     "full_name": "SR September Yazawa Nico",
     "id": 154,
@@ -30969,12 +22856,6 @@ app.constant('CardData',
     "japan_only": false,
     "main_unit": "Muse",
     "name": "Yazawa Nico",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": true,
     "rarity": "SR",
     "release_date": "2013-09-15",
@@ -30989,6 +22870,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 4420,
+      "display": 4420,
       "idlz": 4700
     },
     "sub_unit": "Bibi",
@@ -30998,12 +22880,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Smile",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": null,
     "full_name": "SR September Koizumi Hanayo",
     "id": 153,
@@ -31011,12 +22887,6 @@ app.constant('CardData',
     "japan_only": false,
     "main_unit": "Muse",
     "name": "Koizumi Hanayo",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": true,
     "rarity": "SR",
     "release_date": "2013-09-15",
@@ -31031,6 +22901,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 4450,
+      "display": 4450,
       "idlz": 4730
     },
     "sub_unit": "Printemps",
@@ -31040,12 +22911,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Pure",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": null,
     "full_name": "SR September Ayase Eli",
     "id": 152,
@@ -31053,12 +22918,6 @@ app.constant('CardData',
     "japan_only": false,
     "main_unit": "Muse",
     "name": "Ayase Eli",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": true,
     "rarity": "SR",
     "release_date": "2013-09-15",
@@ -31073,6 +22932,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 4430,
+      "display": 4430,
       "idlz": 4710
     },
     "sub_unit": "Bibi",
@@ -31082,12 +22942,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Cool",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": true,
     "full_name": "SR Ghost Story Toujou Nozomi",
     "id": 150,
@@ -31095,12 +22949,6 @@ app.constant('CardData',
     "japan_only": false,
     "main_unit": "Muse",
     "name": "Toujou Nozomi",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": false,
     "rarity": "SR",
     "release_date": "2013-09-05",
@@ -31115,6 +22963,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 4160,
+      "display": 4160,
       "idlz": 4440
     },
     "sub_unit": "Lily White",
@@ -31124,12 +22973,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Smile",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": null,
     "full_name": "UR September Sonoda Umi",
     "id": 145,
@@ -31137,12 +22980,6 @@ app.constant('CardData',
     "japan_only": false,
     "main_unit": "Muse",
     "name": "Sonoda Umi",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": true,
     "rarity": "UR",
     "release_date": "2013-08-31",
@@ -31157,6 +22994,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 4940,
+      "display": 4940,
       "idlz": 5240
     },
     "sub_unit": "Lily White",
@@ -31166,12 +23004,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Cool",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": null,
     "full_name": "SR September Toujou Nozomi",
     "id": 144,
@@ -31179,12 +23011,6 @@ app.constant('CardData',
     "japan_only": false,
     "main_unit": "Muse",
     "name": "Toujou Nozomi",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": true,
     "rarity": "SR",
     "release_date": "2013-08-31",
@@ -31199,6 +23025,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 4430,
+      "display": 4430,
       "idlz": 4710
     },
     "sub_unit": "Lily White",
@@ -31208,12 +23035,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Smile",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": null,
     "full_name": "SR September Nishikino Maki",
     "id": 143,
@@ -31221,12 +23042,6 @@ app.constant('CardData',
     "japan_only": false,
     "main_unit": "Muse",
     "name": "Nishikino Maki",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": true,
     "rarity": "SR",
     "release_date": "2013-08-31",
@@ -31241,6 +23056,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 4390,
+      "display": 4390,
       "idlz": 4670
     },
     "sub_unit": "Bibi",
@@ -31250,12 +23066,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Pure",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": null,
     "full_name": "SR September Hoshizora Rin",
     "id": 142,
@@ -31263,12 +23073,6 @@ app.constant('CardData',
     "japan_only": false,
     "main_unit": "Muse",
     "name": "Hoshizora Rin",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": true,
     "rarity": "SR",
     "release_date": "2013-08-31",
@@ -31283,6 +23087,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 4410,
+      "display": 4410,
       "idlz": 4690
     },
     "sub_unit": "Lily White",
@@ -31292,12 +23097,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Pure",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": null,
     "full_name": "SR September Kousaka Honoka",
     "id": 141,
@@ -31305,12 +23104,6 @@ app.constant('CardData',
     "japan_only": false,
     "main_unit": "Muse",
     "name": "Kousaka Honoka",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": true,
     "rarity": "SR",
     "release_date": "2013-08-31",
@@ -31325,6 +23118,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 4370,
+      "display": 4370,
       "idlz": 4650
     },
     "sub_unit": "Printemps",
@@ -31334,12 +23128,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Pure",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": null,
     "full_name": "UR Promo Toujou Nozomi",
     "id": 139,
@@ -31347,12 +23135,6 @@ app.constant('CardData',
     "japan_only": true,
     "main_unit": "Muse",
     "name": "Toujou Nozomi",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": false,
     "rarity": "UR",
     "release_date": "2013-08-20",
@@ -31367,6 +23149,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 4240,
+      "display": 4240,
       "idlz": 4240
     },
     "sub_unit": "Lily White",
@@ -31376,12 +23159,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Cool",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": null,
     "full_name": "UR Promo Ayase Eli",
     "id": 138,
@@ -31389,12 +23166,6 @@ app.constant('CardData',
     "japan_only": true,
     "main_unit": "Muse",
     "name": "Ayase Eli",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": false,
     "rarity": "UR",
     "release_date": "2013-08-20",
@@ -31409,6 +23180,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 4210,
+      "display": 4210,
       "idlz": 4210
     },
     "sub_unit": "Bibi",
@@ -31418,12 +23190,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Smile",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": null,
     "full_name": "UR Promo Kousaka Honoka",
     "id": 137,
@@ -31431,12 +23197,6 @@ app.constant('CardData',
     "japan_only": true,
     "main_unit": "Muse",
     "name": "Kousaka Honoka",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": false,
     "rarity": "UR",
     "release_date": "2013-08-20",
@@ -31451,6 +23211,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 4260,
+      "display": 4260,
       "idlz": 4260
     },
     "sub_unit": "Printemps",
@@ -31460,12 +23221,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Pure",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": true,
     "full_name": "SR Animal Koizumi Hanayo",
     "id": 136,
@@ -31473,12 +23228,6 @@ app.constant('CardData',
     "japan_only": false,
     "main_unit": "Muse",
     "name": "Koizumi Hanayo",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": false,
     "rarity": "SR",
     "release_date": "2013-08-20",
@@ -31493,6 +23242,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 4280,
+      "display": 4280,
       "idlz": 4560
     },
     "sub_unit": "Printemps",
@@ -31502,12 +23252,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Smile",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": null,
     "full_name": "UR August Toujou Nozomi",
     "id": 134,
@@ -31515,12 +23259,6 @@ app.constant('CardData',
     "japan_only": false,
     "main_unit": "Muse",
     "name": "Toujou Nozomi",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": true,
     "rarity": "UR",
     "release_date": "2013-08-15",
@@ -31535,6 +23273,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 4970,
+      "display": 4970,
       "idlz": 5270
     },
     "sub_unit": "Lily White",
@@ -31544,12 +23283,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Cool",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": null,
     "full_name": "SR August Koizumi Hanayo",
     "id": 133,
@@ -31557,12 +23290,6 @@ app.constant('CardData',
     "japan_only": false,
     "main_unit": "Muse",
     "name": "Koizumi Hanayo",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": true,
     "rarity": "SR",
     "release_date": "2013-08-15",
@@ -31577,6 +23304,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 4410,
+      "display": 4410,
       "idlz": 4690
     },
     "sub_unit": "Printemps",
@@ -31586,12 +23314,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Pure",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": null,
     "full_name": "SR August Nishikino Maki",
     "id": 132,
@@ -31599,12 +23321,6 @@ app.constant('CardData',
     "japan_only": false,
     "main_unit": "Muse",
     "name": "Nishikino Maki",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": true,
     "rarity": "SR",
     "release_date": "2013-08-15",
@@ -31619,6 +23335,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 4440,
+      "display": 4440,
       "idlz": 4720
     },
     "sub_unit": "Bibi",
@@ -31628,12 +23345,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Smile",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": null,
     "full_name": "SR August Minami Kotori",
     "id": 131,
@@ -31641,12 +23352,6 @@ app.constant('CardData',
     "japan_only": false,
     "main_unit": "Muse",
     "name": "Minami Kotori",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": true,
     "rarity": "SR",
     "release_date": "2013-08-15",
@@ -31661,6 +23366,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 4390,
+      "display": 4390,
       "idlz": 4670
     },
     "sub_unit": "Printemps",
@@ -31670,12 +23376,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Cool",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": true,
     "full_name": "SR Animal Ayase Eli",
     "id": 129,
@@ -31683,12 +23383,6 @@ app.constant('CardData',
     "japan_only": false,
     "main_unit": "Muse",
     "name": "Ayase Eli",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": false,
     "rarity": "SR",
     "release_date": "2013-08-05",
@@ -31703,6 +23397,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 4200,
+      "display": 4200,
       "idlz": 4480
     },
     "sub_unit": "Bibi",
@@ -31712,12 +23407,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Pure",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": null,
     "full_name": "UR August Yazawa Nico",
     "id": 127,
@@ -31725,12 +23414,6 @@ app.constant('CardData',
     "japan_only": false,
     "main_unit": "Muse",
     "name": "Yazawa Nico",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": true,
     "rarity": "UR",
     "release_date": "2013-07-31",
@@ -31745,6 +23428,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 4950,
+      "display": 4950,
       "idlz": 5250
     },
     "sub_unit": "Bibi",
@@ -31754,12 +23438,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Cool",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": null,
     "full_name": "UR Initial Nishikino Maki",
     "id": 126,
@@ -31767,12 +23445,6 @@ app.constant('CardData',
     "japan_only": false,
     "main_unit": "Muse",
     "name": "Nishikino Maki",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": true,
     "rarity": "UR",
     "release_date": "2013-07-31",
@@ -31787,6 +23459,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 4980,
+      "display": 4980,
       "idlz": 5280
     },
     "sub_unit": "Bibi",
@@ -31796,12 +23469,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Cool",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": null,
     "full_name": "SR August Hoshizora Rin",
     "id": 125,
@@ -31809,12 +23476,6 @@ app.constant('CardData',
     "japan_only": false,
     "main_unit": "Muse",
     "name": "Hoshizora Rin",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": true,
     "rarity": "SR",
     "release_date": "2013-07-31",
@@ -31829,6 +23490,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 4380,
+      "display": 4380,
       "idlz": 4660
     },
     "sub_unit": "Lily White",
@@ -31838,12 +23500,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Pure",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": null,
     "full_name": "SR August Sonoda Umi",
     "id": 124,
@@ -31851,12 +23507,6 @@ app.constant('CardData',
     "japan_only": false,
     "main_unit": "Muse",
     "name": "Sonoda Umi",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": true,
     "rarity": "SR",
     "release_date": "2013-07-31",
@@ -31871,6 +23521,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 4470,
+      "display": 4470,
       "idlz": 4750
     },
     "sub_unit": "Lily White",
@@ -31880,12 +23531,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Smile",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": null,
     "full_name": "SR August Ayase Eli",
     "id": 123,
@@ -31893,12 +23538,6 @@ app.constant('CardData',
     "japan_only": false,
     "main_unit": "Muse",
     "name": "Ayase Eli",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": true,
     "rarity": "SR",
     "release_date": "2013-07-31",
@@ -31913,6 +23552,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 4430,
+      "display": 4430,
       "idlz": 4710
     },
     "sub_unit": "Bibi",
@@ -31922,12 +23562,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Cool",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": null,
     "full_name": "SR August Kousaka Honoka",
     "id": 122,
@@ -31935,12 +23569,6 @@ app.constant('CardData',
     "japan_only": false,
     "main_unit": "Muse",
     "name": "Kousaka Honoka",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": true,
     "rarity": "SR",
     "release_date": "2013-07-31",
@@ -31955,6 +23583,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 4400,
+      "display": 4400,
       "idlz": 4680
     },
     "sub_unit": "Printemps",
@@ -31964,12 +23593,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Pure",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": null,
     "full_name": "UR Promo Minami Kotori",
     "id": 119,
@@ -31977,12 +23600,6 @@ app.constant('CardData',
     "japan_only": true,
     "main_unit": "Muse",
     "name": "Minami Kotori",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": false,
     "rarity": "UR",
     "release_date": "2013-07-19",
@@ -31997,6 +23614,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 4020,
+      "display": 4020,
       "idlz": 4020
     },
     "sub_unit": "Printemps",
@@ -32006,12 +23624,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Smile",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": null,
     "full_name": "UR Promo Yazawa Nico",
     "id": 118,
@@ -32019,12 +23631,6 @@ app.constant('CardData',
     "japan_only": true,
     "main_unit": "Muse",
     "name": "Yazawa Nico",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": false,
     "rarity": "UR",
     "release_date": "2013-07-19",
@@ -32039,6 +23645,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 4250,
+      "display": 4250,
       "idlz": 4250
     },
     "sub_unit": "Bibi",
@@ -32048,12 +23655,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Smile",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": null,
     "full_name": "SR Promo Yazawa Nico",
     "id": 117,
@@ -32061,12 +23662,6 @@ app.constant('CardData',
     "japan_only": true,
     "main_unit": "Muse",
     "name": "Yazawa Nico",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": false,
     "rarity": "SR",
     "release_date": "2013-07-19",
@@ -32081,6 +23676,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 4170,
+      "display": 4170,
       "idlz": 4170
     },
     "sub_unit": "Bibi",
@@ -32090,12 +23686,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Pure",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": null,
     "full_name": "SR Promo Koizumi Hanayo",
     "id": 116,
@@ -32103,12 +23693,6 @@ app.constant('CardData',
     "japan_only": true,
     "main_unit": "Muse",
     "name": "Koizumi Hanayo",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": false,
     "rarity": "SR",
     "release_date": "2013-07-19",
@@ -32123,6 +23707,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 4240,
+      "display": 4240,
       "idlz": 4240
     },
     "sub_unit": "Printemps",
@@ -32132,12 +23717,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Pure",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": null,
     "full_name": "SR Promo Toujou Nozomi",
     "id": 115,
@@ -32145,12 +23724,6 @@ app.constant('CardData',
     "japan_only": true,
     "main_unit": "Muse",
     "name": "Toujou Nozomi",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": false,
     "rarity": "SR",
     "release_date": "2013-07-19",
@@ -32165,6 +23738,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 4160,
+      "display": 4160,
       "idlz": 4160
     },
     "sub_unit": "Lily White",
@@ -32174,12 +23748,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Cool",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": null,
     "full_name": "SR Promo Nishikino Maki",
     "id": 114,
@@ -32187,12 +23755,6 @@ app.constant('CardData',
     "japan_only": true,
     "main_unit": "Muse",
     "name": "Nishikino Maki",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": false,
     "rarity": "SR",
     "release_date": "2013-07-19",
@@ -32207,6 +23769,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 4190,
+      "display": 4190,
       "idlz": 4190
     },
     "sub_unit": "Bibi",
@@ -32216,12 +23779,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Smile",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": null,
     "full_name": "SR Promo Hoshizora Rin",
     "id": 113,
@@ -32229,12 +23786,6 @@ app.constant('CardData',
     "japan_only": true,
     "main_unit": "Muse",
     "name": "Hoshizora Rin",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": false,
     "rarity": "SR",
     "release_date": "2013-07-19",
@@ -32249,6 +23800,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 4180,
+      "display": 4180,
       "idlz": 4180
     },
     "sub_unit": "Lily White",
@@ -32258,12 +23810,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Cool",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": null,
     "full_name": "SR Promo Sonoda Umi",
     "id": 112,
@@ -32271,12 +23817,6 @@ app.constant('CardData',
     "japan_only": true,
     "main_unit": "Muse",
     "name": "Sonoda Umi",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": false,
     "rarity": "SR",
     "release_date": "2013-07-19",
@@ -32291,6 +23831,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 4160,
+      "display": 4160,
       "idlz": 4160
     },
     "sub_unit": "Lily White",
@@ -32300,12 +23841,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Pure",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": null,
     "full_name": "SR Promo Minami Kotori",
     "id": 111,
@@ -32313,12 +23848,6 @@ app.constant('CardData',
     "japan_only": true,
     "main_unit": "Muse",
     "name": "Minami Kotori",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": false,
     "rarity": "SR",
     "release_date": "2013-07-19",
@@ -32333,6 +23862,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 4170,
+      "display": 4170,
       "idlz": 4170
     },
     "sub_unit": "Printemps",
@@ -32342,12 +23872,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Cool",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": null,
     "full_name": "SR Promo Ayase Eli",
     "id": 110,
@@ -32355,12 +23879,6 @@ app.constant('CardData',
     "japan_only": true,
     "main_unit": "Muse",
     "name": "Ayase Eli",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": false,
     "rarity": "SR",
     "release_date": "2013-07-19",
@@ -32375,6 +23893,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 4220,
+      "display": 4220,
       "idlz": 4220
     },
     "sub_unit": "Bibi",
@@ -32384,12 +23903,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Smile",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": null,
     "full_name": "SR Promo Kousaka Honoka",
     "id": 109,
@@ -32397,12 +23910,6 @@ app.constant('CardData',
     "japan_only": true,
     "main_unit": "Muse",
     "name": "Kousaka Honoka",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": false,
     "rarity": "SR",
     "release_date": "2013-07-19",
@@ -32417,6 +23924,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 4220,
+      "display": 4220,
       "idlz": 4220
     },
     "sub_unit": "Printemps",
@@ -32426,12 +23934,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Smile",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": null,
     "full_name": "SR Promo Kousaka Honoka",
     "id": 108,
@@ -32439,12 +23941,6 @@ app.constant('CardData',
     "japan_only": true,
     "main_unit": "Muse",
     "name": "Kousaka Honoka",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": false,
     "rarity": "SR",
     "release_date": "2013-07-19",
@@ -32459,6 +23955,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 4090,
+      "display": 4090,
       "idlz": 4090
     },
     "sub_unit": "Printemps",
@@ -32468,12 +23965,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Smile",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": true,
     "full_name": "SR Animal Kousaka Honoka",
     "id": 107,
@@ -32481,12 +23972,6 @@ app.constant('CardData',
     "japan_only": false,
     "main_unit": "Muse",
     "name": "Kousaka Honoka",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": false,
     "rarity": "SR",
     "release_date": "2013-07-19",
@@ -32501,6 +23986,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 4250,
+      "display": 4250,
       "idlz": 4530
     },
     "sub_unit": "Printemps",
@@ -32510,12 +23996,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Smile",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": null,
     "full_name": "UR Initial Hoshizora Rin",
     "id": 105,
@@ -32523,12 +24003,6 @@ app.constant('CardData',
     "japan_only": false,
     "main_unit": "Muse",
     "name": "Hoshizora Rin",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": true,
     "rarity": "UR",
     "release_date": "2013-07-15",
@@ -32543,6 +24017,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 4990,
+      "display": 4990,
       "idlz": 5290
     },
     "sub_unit": "Lily White",
@@ -32552,12 +24027,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Pure",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": null,
     "full_name": "SR Animal Toujou Nozomi",
     "id": 104,
@@ -32565,12 +24034,6 @@ app.constant('CardData',
     "japan_only": false,
     "main_unit": "Muse",
     "name": "Toujou Nozomi",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": true,
     "rarity": "SR",
     "release_date": "2013-07-15",
@@ -32585,6 +24048,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 4450,
+      "display": 4450,
       "idlz": 4730
     },
     "sub_unit": "Lily White",
@@ -32594,12 +24058,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Cool",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": null,
     "full_name": "SR Job Ayase Eli",
     "id": 103,
@@ -32607,12 +24065,6 @@ app.constant('CardData',
     "japan_only": false,
     "main_unit": "Muse",
     "name": "Ayase Eli",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": true,
     "rarity": "SR",
     "release_date": "2013-07-15",
@@ -32627,6 +24079,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 4320,
+      "display": 4320,
       "idlz": 4600
     },
     "sub_unit": "Bibi",
@@ -32636,12 +24089,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Pure",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": null,
     "full_name": "UR Initial Toujou Nozomi",
     "id": 101,
@@ -32649,12 +24096,6 @@ app.constant('CardData',
     "japan_only": false,
     "main_unit": "Muse",
     "name": "Toujou Nozomi",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": true,
     "rarity": "UR",
     "release_date": "2013-06-30",
@@ -32669,6 +24110,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 5000,
+      "display": 5000,
       "idlz": 5300
     },
     "sub_unit": "Lily White",
@@ -32678,12 +24120,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Smile",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": null,
     "full_name": "SR Job Yazawa Nico",
     "id": 100,
@@ -32691,12 +24127,6 @@ app.constant('CardData',
     "japan_only": false,
     "main_unit": "Muse",
     "name": "Yazawa Nico",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": true,
     "rarity": "SR",
     "release_date": "2013-06-30",
@@ -32711,6 +24141,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 4310,
+      "display": 4310,
       "idlz": 4590
     },
     "sub_unit": "Bibi",
@@ -32720,12 +24151,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Cool",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": null,
     "full_name": "SR Animal Nishikino Maki",
     "id": 99,
@@ -32733,12 +24158,6 @@ app.constant('CardData',
     "japan_only": false,
     "main_unit": "Muse",
     "name": "Nishikino Maki",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": true,
     "rarity": "SR",
     "release_date": "2013-06-30",
@@ -32753,6 +24172,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 4330,
+      "display": 4330,
       "idlz": 4610
     },
     "sub_unit": "Bibi",
@@ -32762,12 +24182,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Cool",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": null,
     "full_name": "UR Promo Nishikino Maki",
     "id": 96,
@@ -32775,12 +24189,6 @@ app.constant('CardData',
     "japan_only": true,
     "main_unit": "Muse",
     "name": "Nishikino Maki",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": false,
     "rarity": "UR",
     "release_date": "2013-06-14",
@@ -32795,6 +24203,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 4280,
+      "display": 4280,
       "idlz": 4280
     },
     "sub_unit": "Bibi",
@@ -32804,12 +24213,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Smile",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": null,
     "full_name": "UR Promo Hoshizora Rin",
     "id": 95,
@@ -32817,12 +24220,6 @@ app.constant('CardData',
     "japan_only": true,
     "main_unit": "Muse",
     "name": "Hoshizora Rin",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": false,
     "rarity": "UR",
     "release_date": "2013-06-14",
@@ -32837,6 +24234,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 4300,
+      "display": 4300,
       "idlz": 4300
     },
     "sub_unit": "Lily White",
@@ -32846,12 +24244,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Cool",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": null,
     "full_name": "UR Initial Ayase Eli",
     "id": 94,
@@ -32859,12 +24251,6 @@ app.constant('CardData',
     "japan_only": false,
     "main_unit": "Muse",
     "name": "Ayase Eli",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": true,
     "rarity": "UR",
     "release_date": "2013-06-14",
@@ -32879,6 +24265,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 4960,
+      "display": 4960,
       "idlz": 5260
     },
     "sub_unit": "Bibi",
@@ -32888,12 +24275,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Smile",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": null,
     "full_name": "SR Animal Hoshizora Rin",
     "id": 93,
@@ -32901,12 +24282,6 @@ app.constant('CardData',
     "japan_only": false,
     "main_unit": "Muse",
     "name": "Hoshizora Rin",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": true,
     "rarity": "SR",
     "release_date": "2013-06-14",
@@ -32921,6 +24296,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 4480,
+      "display": 4480,
       "idlz": 4760
     },
     "sub_unit": "Lily White",
@@ -32930,12 +24306,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Pure",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": null,
     "full_name": "SR Job Minami Kotori",
     "id": 92,
@@ -32943,12 +24313,6 @@ app.constant('CardData',
     "japan_only": false,
     "main_unit": "Muse",
     "name": "Minami Kotori",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": true,
     "rarity": "SR",
     "release_date": "2013-06-14",
@@ -32963,6 +24327,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 4350,
+      "display": 4350,
       "idlz": 4630
     },
     "sub_unit": "Printemps",
@@ -32972,12 +24337,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Smile",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": true,
     "full_name": "SR Animal Yazawa Nico",
     "id": 90,
@@ -32985,12 +24344,6 @@ app.constant('CardData',
     "japan_only": false,
     "main_unit": "Muse",
     "name": "Yazawa Nico",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": false,
     "rarity": "SR",
     "release_date": "2013-06-12",
@@ -33005,6 +24358,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 4080,
+      "display": 4080,
       "idlz": 4360
     },
     "sub_unit": "Bibi",
@@ -33014,12 +24368,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Pure",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": null,
     "full_name": "UR Initial Minami Kotori",
     "id": 88,
@@ -33027,12 +24375,6 @@ app.constant('CardData',
     "japan_only": false,
     "main_unit": "Muse",
     "name": "Minami Kotori",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": true,
     "rarity": "UR",
     "release_date": "2013-05-31",
@@ -33047,6 +24389,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 4890,
+      "display": 4890,
       "idlz": 5190
     },
     "sub_unit": "Printemps",
@@ -33056,12 +24399,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Smile",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": null,
     "full_name": "SR Job Hoshizora Rin",
     "id": 87,
@@ -33069,12 +24406,6 @@ app.constant('CardData',
     "japan_only": false,
     "main_unit": "Muse",
     "name": "Hoshizora Rin",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": true,
     "rarity": "SR",
     "release_date": "2013-05-31",
@@ -33089,6 +24420,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 4440,
+      "display": 4440,
       "idlz": 4720
     },
     "sub_unit": "Lily White",
@@ -33098,12 +24430,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Cool",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": null,
     "full_name": "SR Job Sonoda Umi",
     "id": 86,
@@ -33111,12 +24437,6 @@ app.constant('CardData',
     "japan_only": false,
     "main_unit": "Muse",
     "name": "Sonoda Umi",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": true,
     "rarity": "SR",
     "release_date": "2013-05-31",
@@ -33131,6 +24451,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 4280,
+      "display": 4280,
       "idlz": 4560
     },
     "sub_unit": "Lily White",
@@ -33140,12 +24461,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Pure",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": null,
     "full_name": "UR Promo Koizumi Hanayo",
     "id": 82,
@@ -33153,12 +24468,6 @@ app.constant('CardData',
     "japan_only": true,
     "main_unit": "Muse",
     "name": "Koizumi Hanayo",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": false,
     "rarity": "UR",
     "release_date": "2013-05-21",
@@ -33173,6 +24482,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 4290,
+      "display": 4290,
       "idlz": 4290
     },
     "sub_unit": "Printemps",
@@ -33182,12 +24492,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Cool",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": true,
     "full_name": "SR Animal Sonoda Umi",
     "id": 81,
@@ -33195,12 +24499,6 @@ app.constant('CardData',
     "japan_only": false,
     "main_unit": "Muse",
     "name": "Sonoda Umi",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": false,
     "rarity": "SR",
     "release_date": "2013-05-21",
@@ -33215,6 +24513,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 4100,
+      "display": 4100,
       "idlz": 4380
     },
     "sub_unit": "Lily White",
@@ -33224,12 +24523,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Smile",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": null,
     "full_name": "UR Initial Kousaka Honoka",
     "id": 79,
@@ -33237,12 +24530,6 @@ app.constant('CardData',
     "japan_only": false,
     "main_unit": "Muse",
     "name": "Kousaka Honoka",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": true,
     "rarity": "UR",
     "release_date": "2013-05-16",
@@ -33257,6 +24544,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 4920,
+      "display": 4920,
       "idlz": 5220
     },
     "sub_unit": "Printemps",
@@ -33266,12 +24554,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Pure",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": null,
     "full_name": "SR Job Koizumi Hanayo",
     "id": 78,
@@ -33279,12 +24561,6 @@ app.constant('CardData',
     "japan_only": false,
     "main_unit": "Muse",
     "name": "Koizumi Hanayo",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": true,
     "rarity": "SR",
     "release_date": "2013-05-16",
@@ -33299,6 +24575,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 4430,
+      "display": 4430,
       "idlz": 4710
     },
     "sub_unit": "Printemps",
@@ -33308,12 +24585,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Cool",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": null,
     "full_name": "SR Job Nishikino Maki",
     "id": 77,
@@ -33321,12 +24592,6 @@ app.constant('CardData',
     "japan_only": false,
     "main_unit": "Muse",
     "name": "Nishikino Maki",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": true,
     "rarity": "SR",
     "release_date": "2013-05-16",
@@ -33341,6 +24606,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 4450,
+      "display": 4450,
       "idlz": 4730
     },
     "sub_unit": "Bibi",
@@ -33350,12 +24616,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Pure",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": true,
     "full_name": "SR Animal Minami Kotori",
     "id": 75,
@@ -33363,12 +24623,6 @@ app.constant('CardData',
     "japan_only": false,
     "main_unit": "Muse",
     "name": "Minami Kotori",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": false,
     "rarity": "SR",
     "release_date": "2013-05-03",
@@ -33383,6 +24637,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 4050,
+      "display": 4050,
       "idlz": 4330
     },
     "sub_unit": "Printemps",
@@ -33392,12 +24647,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Cool",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": null,
     "full_name": "UR Initial Sonoda Umi",
     "id": 73,
@@ -33405,12 +24654,6 @@ app.constant('CardData',
     "japan_only": false,
     "main_unit": "Muse",
     "name": "Sonoda Umi",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": true,
     "rarity": "UR",
     "release_date": "2013-04-30",
@@ -33425,6 +24668,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 4950,
+      "display": 4950,
       "idlz": 5250
     },
     "sub_unit": "Lily White",
@@ -33434,12 +24678,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Pure",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": null,
     "full_name": "SR Job Toujou Nozomi",
     "id": 72,
@@ -33447,12 +24685,6 @@ app.constant('CardData',
     "japan_only": false,
     "main_unit": "Muse",
     "name": "Toujou Nozomi",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": true,
     "rarity": "SR",
     "release_date": "2013-04-30",
@@ -33467,6 +24699,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 4230,
+      "display": 4230,
       "idlz": 4510
     },
     "sub_unit": "Lily White",
@@ -33476,12 +24709,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Smile",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": null,
     "full_name": "SR Job Kousaka Honoka",
     "id": 71,
@@ -33489,12 +24716,6 @@ app.constant('CardData',
     "japan_only": false,
     "main_unit": "Muse",
     "name": "Kousaka Honoka",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": true,
     "rarity": "SR",
     "release_date": "2013-04-30",
@@ -33509,6 +24730,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 4400,
+      "display": 4400,
       "idlz": 4680
     },
     "sub_unit": "Printemps",
@@ -33518,12 +24740,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Cool",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": null,
     "full_name": "UR Promo Sonoda Umi",
     "id": 68,
@@ -33531,12 +24747,6 @@ app.constant('CardData',
     "japan_only": true,
     "main_unit": "Muse",
     "name": "Sonoda Umi",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": false,
     "rarity": "UR",
     "release_date": "2013-04-16",
@@ -33551,6 +24761,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 4170,
+      "display": 4170,
       "idlz": 4170
     },
     "sub_unit": "Lily White",
@@ -33560,12 +24771,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Pure",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": null,
     "full_name": "UR Promo Minami Kotori",
     "id": 67,
@@ -33573,12 +24778,6 @@ app.constant('CardData',
     "japan_only": true,
     "main_unit": "Muse",
     "name": "Minami Kotori",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": false,
     "rarity": "UR",
     "release_date": "2013-04-16",
@@ -33593,6 +24792,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 4270,
+      "display": 4270,
       "idlz": 4270
     },
     "sub_unit": "Printemps",
@@ -33602,12 +24802,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Smile",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": null,
     "full_name": "UR Initial Yazawa Nico",
     "id": 66,
@@ -33615,12 +24809,6 @@ app.constant('CardData',
     "japan_only": false,
     "main_unit": "Muse",
     "name": "Yazawa Nico",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": true,
     "rarity": "UR",
     "release_date": "2013-04-16",
@@ -33635,6 +24823,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 4980,
+      "display": 4980,
       "idlz": 5280
     },
     "sub_unit": "Bibi",
@@ -33644,12 +24833,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Smile",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": null,
     "full_name": "UR Promo Kousaka Honoka",
     "id": 65,
@@ -33657,12 +24840,6 @@ app.constant('CardData',
     "japan_only": false,
     "main_unit": "Muse",
     "name": "Kousaka Honoka",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": false,
     "rarity": "UR",
     "release_date": "2013-04-16",
@@ -33677,6 +24854,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 4200,
+      "display": 4200,
       "idlz": 4200
     },
     "sub_unit": "Printemps",
@@ -33686,12 +24864,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Pure",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": null,
     "full_name": "UR Initial Koizumi Hanayo",
     "id": 64,
@@ -33699,12 +24871,6 @@ app.constant('CardData',
     "japan_only": false,
     "main_unit": "Muse",
     "name": "Koizumi Hanayo",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": true,
     "rarity": "UR",
     "release_date": "2013-04-16",
@@ -33719,6 +24885,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 4930,
+      "display": 4930,
       "idlz": 5230
     },
     "sub_unit": "Printemps",
@@ -33728,12 +24895,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Smile",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": null,
     "full_name": "SR Initial Yazawa Nico",
     "id": 63,
@@ -33741,12 +24902,6 @@ app.constant('CardData',
     "japan_only": false,
     "main_unit": "Muse",
     "name": "Yazawa Nico",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": true,
     "rarity": "SR",
     "release_date": "2013-04-16",
@@ -33761,6 +24916,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 4180,
+      "display": 4180,
       "idlz": 4460
     },
     "sub_unit": "Bibi",
@@ -33770,12 +24926,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Pure",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": null,
     "full_name": "SR Initial Koizumi Hanayo",
     "id": 62,
@@ -33783,12 +24933,6 @@ app.constant('CardData',
     "japan_only": false,
     "main_unit": "Muse",
     "name": "Koizumi Hanayo",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": true,
     "rarity": "SR",
     "release_date": "2013-04-16",
@@ -33803,6 +24947,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 4350,
+      "display": 4350,
       "idlz": 4630
     },
     "sub_unit": "Printemps",
@@ -33812,12 +24957,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Pure",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": null,
     "full_name": "SR Initial Toujou Nozomi",
     "id": 61,
@@ -33825,12 +24964,6 @@ app.constant('CardData',
     "japan_only": false,
     "main_unit": "Muse",
     "name": "Toujou Nozomi",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": true,
     "rarity": "SR",
     "release_date": "2013-04-16",
@@ -33845,6 +24978,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 4130,
+      "display": 4130,
       "idlz": 4410
     },
     "sub_unit": "Lily White",
@@ -33854,12 +24988,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Cool",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": null,
     "full_name": "SR Initial Nishikino Maki",
     "id": 60,
@@ -33867,12 +24995,6 @@ app.constant('CardData',
     "japan_only": false,
     "main_unit": "Muse",
     "name": "Nishikino Maki",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": true,
     "rarity": "SR",
     "release_date": "2013-04-16",
@@ -33887,6 +25009,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 4400,
+      "display": 4400,
       "idlz": 4680
     },
     "sub_unit": "Bibi",
@@ -33896,12 +25019,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Smile",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": null,
     "full_name": "SR Initial Hoshizora Rin",
     "id": 59,
@@ -33909,12 +25026,6 @@ app.constant('CardData',
     "japan_only": false,
     "main_unit": "Muse",
     "name": "Hoshizora Rin",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": true,
     "rarity": "SR",
     "release_date": "2013-04-16",
@@ -33929,6 +25040,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 4430,
+      "display": 4430,
       "idlz": 4710
     },
     "sub_unit": "Lily White",
@@ -33938,12 +25050,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Cool",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": null,
     "full_name": "SR Initial Sonoda Umi",
     "id": 58,
@@ -33951,12 +25057,6 @@ app.constant('CardData',
     "japan_only": false,
     "main_unit": "Muse",
     "name": "Sonoda Umi",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": true,
     "rarity": "SR",
     "release_date": "2013-04-16",
@@ -33971,6 +25071,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 4160,
+      "display": 4160,
       "idlz": 4440
     },
     "sub_unit": "Lily White",
@@ -33980,12 +25081,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Pure",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": null,
     "full_name": "SR Initial Minami Kotori",
     "id": 57,
@@ -33993,12 +25088,6 @@ app.constant('CardData',
     "japan_only": false,
     "main_unit": "Muse",
     "name": "Minami Kotori",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": true,
     "rarity": "SR",
     "release_date": "2013-04-16",
@@ -34013,6 +25102,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 4320,
+      "display": 4320,
       "idlz": 4600
     },
     "sub_unit": "Printemps",
@@ -34022,12 +25112,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Cool",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": null,
     "full_name": "SR Initial Ayase Eli",
     "id": 56,
@@ -34035,12 +25119,6 @@ app.constant('CardData',
     "japan_only": false,
     "main_unit": "Muse",
     "name": "Ayase Eli",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": true,
     "rarity": "SR",
     "release_date": "2013-04-16",
@@ -34055,6 +25133,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 4030,
+      "display": 4030,
       "idlz": 4310
     },
     "sub_unit": "Bibi",
@@ -34064,12 +25143,6 @@ app.constant('CardData',
   },
   {
     "attribute": "Smile",
-    "cScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "event": null,
     "full_name": "SR Initial Kousaka Honoka",
     "id": 55,
@@ -34077,12 +25150,6 @@ app.constant('CardData',
     "japan_only": false,
     "main_unit": "Muse",
     "name": "Kousaka Honoka",
-    "oScore": {
-      "base": 0,
-      "heel": 0,
-      "idlz": 0,
-      "idlz_heel": 0
-    },
     "premium": true,
     "rarity": "SR",
     "release_date": "2013-04-16",
@@ -34097,6 +25164,7 @@ app.constant('CardData',
     },
     "stat": {
       "base": 4330,
+      "display": 4330,
       "idlz": 4610
     },
     "sub_unit": "Printemps",

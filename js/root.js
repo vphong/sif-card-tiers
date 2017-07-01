@@ -26,10 +26,7 @@ app.constant('InitFilters', {
     hl: true,
     muse: true,
     aqours: true,
-    idlz: false,
-    su: true,
-    pl: true,
-    hl: true,
+    sis: false,
     subunit: "all",
     year: "all"
 })

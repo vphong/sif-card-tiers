@@ -234,5 +234,5 @@ footer.well {
   background-color: #f8f5f0
 }
 .th {
-  vertical-align: middle;
+  vertical-align: middle !important;
 }
