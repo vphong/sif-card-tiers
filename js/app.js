@@ -256,15 +256,25 @@ app.factory('Cards', function($rootScope, $http, Calculations) {
 
     })
 
+    ret.idlzAll = function(cards, idlz) {
+      angular.forEach(cards, function(card) {
+        card.idlz = idlz
+      })
+    }
 
   }
 
 
-  ret.sortBy = function(sort, type) {
+  ret.sortBy = function(sort, type, desc) {
     // temp var for previous sort obj to set sort.desc
     var oldSort = sort;
     sort.type = type;
-    sort.desc = (sort.type == oldSort.type) ? !sort.desc : false;
+    if (desc) {
+      sort.desc = true
+    } else {
+
+      sort.desc = (sort.type == oldSort.type) ? !sort.desc : false;
+    }
   }
 
   return ret;

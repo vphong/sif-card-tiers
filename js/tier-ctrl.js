@@ -3,7 +3,7 @@ app.controller('TierCtrl', function($rootScope, $scope, Cards, localStorageServi
   // $rootScope = $rootScope.$new(true)
   // $scope = $scope.$new(true)
   $scope.init = function() {
-
+    $scope.allIdlz = false;
     $scope.filters = localStorageService.get('filters');
     if (!$scope.filters) $scope.filters = angular.copy($rootScope.InitFilters);
 
@@ -41,15 +41,26 @@ app.controller('TierCtrl', function($rootScope, $scope, Cards, localStorageServi
     localStorageService.set('song', $scope.song);
   }
 
-  $scope.sortBy = function(type) {
+  $scope.sortBy = function(type, desc) {
 
-    Cards.sortBy($scope.sort, type)
+    Cards.sortBy($scope.sort, type, desc)
     localStorageService.set('sort', $scope.sort)
   }
 
   $scope.toggleIdlz = function(card) {
     // console.log(card)
     card.stat.display = card.idlz ? card.stat.idlz : card.stat.base
+  }
+  $scope.idlzAll = function() {
+    Cards.idlzAll($scope.cards, $scope.allIdlz)
+    $scope.allIdlz = !$scope.allIdlz
+    angular.forEach($scope.cards, function(card) {
+      $scope.toggleIdlz(card)
+    })
+
+    if ($scope.sort.type == 'stat.display') {
+      $scope.sortBy('stat.display', true)
+    }
   }
   $scope.toggleHeel = function() {
     Cards.calcSkill($scope.cards, $scope.song);
