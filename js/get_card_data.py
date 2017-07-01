@@ -582,15 +582,16 @@ def cleanCard(d, keys):
     # ret['oScore'] = score(ret,"o")
 
     # grab relevant stat only
+    ret['stat'] = {}
     if ret['attribute'] == 'Smile':
-        ret['base_stat'] = ret['non_idolized_maximum_statistics_smile']
-        ret['idlz_stat'] = ret['idolized_maximum_statistics_smile']
+        ret['stat']['base'] = ret['non_idolized_maximum_statistics_smile']
+        ret['stat']['idlz'] = ret['idolized_maximum_statistics_smile']
     elif ret['attribute'] == 'Pure':
-        ret['base_stat'] = ret['non_idolized_maximum_statistics_pure']
-        ret['idlz_stat'] = ret['idolized_maximum_statistics_pure']
+        ret['stat']['base'] = ret['non_idolized_maximum_statistics_pure']
+        ret['stat']['idlz'] = ret['idolized_maximum_statistics_pure']
     elif ret['attribute'] == 'Cool':
-        ret['base_stat'] = ret['non_idolized_maximum_statistics_cool']
-        ret['idlz_stat'] = ret['idolized_maximum_statistics_cool']
+        ret['stat']['base'] = ret['non_idolized_maximum_statistics_cool']
+        ret['stat']['idlz'] = ret['idolized_maximum_statistics_cool']
 
     ret.pop('non_idolized_maximum_statistics_cool', None)
     ret.pop('non_idolized_maximum_statistics_pure', None)

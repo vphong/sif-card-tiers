@@ -210,6 +210,25 @@ app.factory('Cards', function($rootScope, $http, Calculations) {
         return newCards;
     }
 
+    var calcStatBonus = function (card) {
+        var base, bonus = {};
+        if (!card.idlz) {
+            base = card.on_attr.base
+        } else base = card.on_attr.idlz
+
+        if (!card.equippedSIS) {
+            bonus.avg = card.skill.stat_bonus_avg
+            bonus.best = card.skill.stat_bonus_best
+        }
+        else {
+            bonus.avg = card.sis.stat_bonus_avg
+            bonus.best = card.sis.stat_bonus_best
+        }
+
+        card.stat.avg = base + bonus.avg
+        card.stat.best = base + bonus.best
+    }
+
     ret.calcSkill = function(cards, song, heel) {
         var score_up_mod = 0;
         var activations = 0;
@@ -224,11 +243,10 @@ app.factory('Cards', function($rootScope, $http, Calculations) {
 
             card.skill.avg = Math.floor(activations * card.skill.percent) * card.skill.amount
             card.skill.best = activations * card.skill.amount
-            card.on_attr = {}
 
             if (card.skill.category == "Perfect Lock" || card.skill.category.includes("Trick")) {
-                card.skill.stat_bonus_avg = Calculations.plScoreBonus(card.on_attr.base, song, card.skill.avg)
-                card.skill.stat_bonus_best = Calculations.plScoreBonus(card.on_attr.base, song, card.skill.best)
+                card.skill.stat_bonus_avg = Calculations.plScoreBonus(card.stat.base, song, card.skill.avg)
+                card.skill.stat_bonus_best = Calculations.plScoreBonus(card.stat.base, song, card.skill.best)
             }
             else if ((card.skill.category == "Healer" || card.skill.category.includes("Yell")) && !card.equippedSIS) {
                 card.skill.stat_bonus_avg = card.skill.stat_bonus_best = 0;
@@ -237,6 +255,8 @@ app.factory('Cards', function($rootScope, $http, Calculations) {
                 card.skill.stat_bonus_avg = Calculations.scoreUpMod(song, card.skill.avg)
                 card.skill.stat_bonus_best = Calculations.scoreUpMod(song, card.skill.best)
             }
+
+            calcStatBonus(card)
 
         })
 
@@ -258,9 +278,6 @@ app.factory('Cards', function($rootScope, $http, Calculations) {
 
         sort.desc = (sort.type == oldSort.type) ? !sort.desc : false;
     }
-
-
-
 
     return ret;
 })

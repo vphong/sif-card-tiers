@@ -1,7 +1,25 @@
 <div class="container-fluid row">
     <div class="col-xs-2" id="filters-md-screens" master>
         <div class="row">
-            <div class="btn-group-vertical col-xs-12" uib-tooltip="Compare by skill" tooltip-placement="top">
+
+            <div class="col-xs-12 no-padding">
+                <div class="input-group input-group-sm">
+                    <span
+                        class="input-group-addon"
+                        style="cursor: help"
+                        popover-append-to-body="true"
+                        popover-trigger="'mouseenter'"
+                        popover-placement="top-left"
+                        uib-popover="Terms include: girl, attribute, skill type, main unit, subunit, and English schoolido.lu set name.">
+                        <i class="fa fa-search"></i>
+                    </span>
+                    <input type="text" class="form-control" ng-model="search" ng-change="updateSearch()" placeholder="search" uib-typeahead="type for type in $root.Typeahead | filter:$viewValue | limitTo:8">
+
+                </div>
+            </div>
+
+
+            <div class="btn-group-vertical col-xs-12" uib-tooltip="Filter by skill" tooltip-placement="top">
                 <label class="btn btn-success btn-sm" ng-model="filters.su" ng-click="filterCards()" uib-btn-checkbox>Score Up</label>
                 <label class="btn btn-success btn-sm" ng-model="filters.pl" ng-click="filterCards()" uib-btn-checkbox>Perfect Lock</label>
                 <label class="btn btn-success btn-sm" ng-model="filters.hl" ng-click="filterCards()" uib-btn-checkbox>Healer</label>
@@ -54,13 +72,17 @@
                 </button>
                 <ul class="dropdown-menu" uib-dropdown-menu role="menu" aria-labelledby="split-button">
                     <li role="menuitem">
-                        <a ng-model="filters.premium" ng-click="filterCards()" uib-btn-checkbox>Premium</a>
+                        <a ng-model="filters.origin" ng-click="filterCards()" uib-btn-radio="'all'">All</a>
+                    </li>
+                    <li class="divider"></li>
+                    <li role="menuitem">
+                        <a ng-model="filters.origin" ng-click="filterCards()" uib-btn-radio="'premium'">Premium</a>
                     </li>
                     <li role="menuitem">
-                        <a ng-model="filters.event" ng-click="filterCards()" uib-btn-checkbox>Event</a>
+                        <a ng-model="filters.origin" ng-click="filterCards()" uib-btn-radio="'event'">Event</a>
                     </li>
                     <li role="menuitem">
-                        <a ng-model="filters.promo" ng-click="filterCards()" uib-btn-checkbox>Promo</a>
+                        <a ng-model="filters.origin" ng-click="filterCards()" uib-btn-radio="'promo'">Promo</a>
                     </li>
                 </ul>
             </div>
@@ -131,53 +153,63 @@
 
     <div id="search_table" class="container-fluid col-xs-10">
 
-        <div id="search" class="row">
+        <div id="input" class="row">
 
-            <div class="col-xs-4 no-padding">
-                <div class="input-group input-group-sm">
-                    <span
-                        class="input-group-addon"
-                        style="cursor: help"
-                        popover-append-to-body="true"
-                        popover-trigger="'mouseenter'"
-                        popover-placement="top-left"
-                        uib-popover="Terms include: girl, attribute, skill type, main unit, subunit, and English schoolido.lu set name.">
-                        <i class="fa fa-search"></i>
-                    </span>
-                    <input type="text" class="form-control" ng-model="search" ng-change="updateSearch()" placeholder="search by card" uib-typeahead="type for type in $root.Typeahead | filter:$viewValue | limitTo:8">
-                </div>
-            </div>
+            <div class="col-xs-3 no-padding" style="padding-left: 3px">
 
-            <div class="col-xs-2 no-padding" style="padding-left: 3px">
+                <span class="icon" popover-append-to-body="true" popover-trigger="'mouseenter'" popover-placement="top" uib-popover="The numbers you input are used to calculate how effective each card's skill will be.">
+                    <i class="text-primary fa fa-question-circle"></i>
+                </span>
                 <div class="input-group input-group-sm">
-                    <span class="input-group-addon" style="cursor: help" popover-append-to-body="true" popover-trigger="'mouseenter'" popover-placement="top" uib-popover="Number of notes in song for skill evaluation">
+                    <span class="input-group-addon">
                         <i class="fa fa-music"></i>
                     </span>
                     <input type="number" class="form-control" ng-model="song.notes" ng-change="updateSong()" popover-trigger="'mouseenter'" placeholder="song length (notes)">
+                    <span class="input-group-addon">
+                        total notes
+                    </span>
                 </div>
             </div>
-            <div class="col-xs-2 no-padding" style="padding-left: 3px">
+            <div class="col-xs-3 no-padding" style="padding-left: 3px">
                 <div class="input-group input-group-sm">
-                    <span class="input-group-addon" style="cursor: help" popover-append-to-body="true" popover-trigger="'mouseenter'" popover-placement="top" uib-popover="Number of seconds in song for skill evaluation">
+                    <span class="input-group-addon">
                         <i class="fa fa-clock-o"></i>
                     </span>
                     <input type="number" class="form-control" ng-model="song.seconds" ng-change="updateSong()" popover-trigger="'mouseenter'" placeholder="song length (secs)">
-                </div>
-            </div>
-            <div class="col-xs-2 no-padding" style="padding-left: 3px">
-                <div class="input-group input-group-sm">
-                    <span class="input-group-addon" style="cursor: help" popover-append-to-body="true" popover-trigger="'mouseenter'" popover-placement="top" uib-popover="Percent of perfects per song for skill evaluation">
-                        <i class="fa fa-bolt"></i>
+                    <span class="input-group-addon">
+                        total seconds
                     </span>
-                    <input type="number" class="form-control" ng-model="song.perfects" ng-change="updateSong()" placeholder="perfects">
                 </div>
             </div>
-            <div class="col-xs-2 no-padding" style="padding-left: 3px">
+            <!-- <div class="col-xs-2 no-padding" style="padding-left: 3px">
                 <div class="input-group input-group-sm">
-                    <span class="input-group-addon" style="cursor: help" popover-append-to-body="true" popover-trigger="'mouseenter'" popover-placement="top-right" uib-popover="Number of star notes in song">
+                    <span class="input-group-addon" style="cursor: help" popover-append-to-body="true" popover-trigger="'mouseenter'" popover-placement="top-right" uib-popover="Number of star notes per song">
                         <i class="fa fa-star"></i>
                     </span>
                     <input type="number" class="form-control" ng-model="song.stars" ng-change="updateSong()" placeholder="star notes">
+                    <span class="input-group-addon">
+                        star notes
+                    </span>
+                </div>
+            </div> -->
+            <div class="col-xs-3 no-padding" style="padding-left: 3px">
+                <div class="input-group input-group-sm">
+                    <span class="input-group-addon">
+                        <i class="fa fa-percent"></i>
+                    </span>
+                    <input type="number" class="form-control" ng-model="song.perfects" ng-change="updateSong()" placeholder="perfects"><span class="input-group-addon">
+                        % perfects
+                    </span>
+                </div>
+            </div>
+            <div class="col-xs-3 no-padding" style="padding-left: 3px">
+                <div class="input-group input-group-sm">
+                    <span class="input-group-addon">
+                        <i class="fa fa-tasks"></i>
+                    </span>
+                    <input type="number" class="form-control" ng-model="song.score" ng-change="updateSong()" placeholder="score"><span class="input-group-addon">
+                        final score
+                    </span>
                 </div>
             </div>
         </div>
@@ -203,9 +235,17 @@
                                 <i ng-show="sort.desc && sort.type=='skill.avg'" class="fa fa-chevron-down"></i>
                                 <i ng-show="!sort.desc && sort.type=='skill.avg'" class="fa fa-chevron-up"></i>
                             </th>
-                            <th class="num-header" style="min-width:100px" ng-click="sortBy('skill.best')">Skill (Best)
+                            <th class="num-header" style="min-width:100px" ng-click="sortBy('skill.best')">Skill (Max)
                                 <i ng-show="sort.desc && sort.type=='skill.best'" class="fa fa-chevron-down"></i>
                                 <i ng-show="!sort.desc && sort.type=='skill.best'" class="fa fa-chevron-up"></i>
+                            </th>
+                            <th class="num-header" style="min-width:100px" ng-click="sortBy('stat.avg')">Stat + Skill (Avg)
+                                <i ng-show="sort.desc && sort.type=='stat.avg'" class="fa fa-chevron-down"></i>
+                                <i ng-show="!sort.desc && sort.type=='stat.avg'" class="fa fa-chevron-up"></i>
+                            </th>
+                            <th class="num-header" style="min-width:100px" ng-click="sortBy('stat.best')">Stat + Skill (Max)
+                                <i ng-show="sort.desc && sort.type=='stat.best'" class="fa fa-chevron-down"></i>
+                                <i ng-show="!sort.desc && sort.type=='stat.best'" class="fa fa-chevron-up"></i>
                             </th>
                         </tr>
                     </thead>
@@ -243,22 +283,31 @@
                                 </div>
                             </td>
                             <td>{{card.id}}</td>
-                            <td>{{filters.idlz ? card.idlz_stat : card.base_stat}} <br/><span ng-class="{'text-smile': card.attribute=='Smile', 'text-pure': card.attribute=='Pure', 'text-cool': card.attribute=='Cool'}">{{card.attribute}}</span></td>
+                            <td>{{filters.idlz ? card.stat.idlz : card.stat.base}}
+                              <br/><span ng-class="{'text-smile': card.attribute=='Smile', 'text-pure': card.attribute=='Pure', 'text-cool': card.attribute=='Cool'}">{{card.attribute}}</span>
+                            </td>
                             <td>
-                                {{card.skill.avg |number:2}}
-                                <i ng-if="card.skill.category=='Score Up' || (card.skill.category=='Healer' && filters.heel && !card.is_promo)" class="fa fa-level-up" uib-tooltip="Points"></i>
-                                <i ng-if="card.skill.category=='Healer' && (!filters.heel || card.is_promo)" class="fa fa-heart" uib-tooltip="Stamina"></i>
-                                <i ng-if="card.skill.category=='Perfect Lock'" class="fa fa-lock" uib-tooltip="Seconds"></i>
+                                {{card.skill.avg |number:0}}
+
+                                <span ng-if="card.skill.category=='Score Up'">points</span>
+                                <span ng-if="card.skill.category=='Healer'">stamina</span>
+                                <span ng-if="card.skill.category=='Perfect Lock'">seconds</span>
 
                                 <br><small><b>(+{{card.equippedSIS ? card.sis.stat_bonus_avg : card.skill.stat_bonus_avg|number:0}} <span ng-class="{'text-smile': card.attribute=='Smile', 'text-pure': card.attribute=='Pure', 'text-cool': card.attribute=='Cool'}">{{card.attribute}}</span>)</b></small>
                             </td>
-                            <td>{{card.skill.best |number:2}}
-                                <i ng-if="card.skill.category=='Score Up' || (card.skill.category=='Healer' && filters.heel && !card.is_promo)" class="fa fa-level-up" uib-tooltip="Points"></i>
-                                <i ng-if="card.skill.category=='Healer' && (!filters.heel || card.is_promo)" class="fa fa-heart" uib-tooltip="Stamina"></i>
-                                <i ng-if="card.skill.category=='Perfect Lock'" class="fa fa-lock" uib-tooltip="Seconds"></i>
+                            <td>{{card.skill.best |number:0}}
+                                <span ng-if="card.skill.category=='Score Up'">points</span>
+                                <span ng-if="card.skill.category=='Healer'">stamina</span>
+                                <span ng-if="card.skill.category=='Perfect Lock'">seconds</span>
 
                                 <br><small><b>(+{{card.equippedSIS ? card.sis.stat_bonus_best : card.skill.stat_bonus_best|number:0}} <span ng-class="{'text-smile': card.attribute=='Smile', 'text-pure': card.attribute=='Pure', 'text-cool': card.attribute=='Cool'}">{{card.attribute}}</span>)</b></small>
 
+                            </td>
+                            <td>
+                              {{card.stat.avg}} <span ng-class="{'text-smile': card.attribute=='Smile', 'text-pure': card.attribute=='Pure', 'text-cool': card.attribute=='Cool'}">{{card.attribute}}</span>
+                            </td>
+                            <td>
+                                {{card.stat.best}} <span ng-class="{'text-smile': card.attribute=='Smile', 'text-pure': card.attribute=='Pure', 'text-cool': card.attribute=='Cool'}">{{card.attribute}}</span>
                             </td>
                         </tr>
                     </tbody>

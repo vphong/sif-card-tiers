@@ -144,6 +144,23 @@ footer.well {
     table-layout: fixed;
 }
 
+.icon {
+  cursor: help;
+  background-color: #d9edf7;
+  color: #325d88;
+  border: #a9c7e4 1px solid;
+  display: inline-block;
+  vertical-align: middle;
+  width: auto;
+  float: left;
+  margin-right: 3px;
+  height: 30px;
+  padding: 5px 10px;
+  font-size: 12px;
+  line-height: 1.5;
+  border-radius: 3px;
+}
+
 
 /*.fixed-first-col {
   position: absolute;
