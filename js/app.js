@@ -249,22 +249,14 @@ app.factory('Cards', function($rootScope, $http, Calculations) {
         // temp var for previous sort obj to set sort.desc
         var oldSort = sort;
 
-        if (type == 'smile' && idlz) {
-            sort.type = "idolized_maximum_statistics_smile";
-        } else if (type == 'smile' && !idlz) {
-            sort.type = "non_idolized_maximum_statistics_smile";
-        } else if (type == 'pure' && idlz) {
-            sort.type = "idolized_maximum_statistics_pure"
-        } else if (type == 'pure' && !idlz) {
-            sort.type = "non_idolized_maximum_statistics_pure"
-        } else if (type == 'cool' && idlz) {
-            sort.type = "idolized_maximum_statistics_cool"
-        } else if (type == 'cool' && !idlz) {
-            sort.type = "non_idolized_maximum_statistics_cool"
-        } else {
-            sort.type = type;
+        if (type == 'stat' && idlz) {
+          sort.type = 'idlz_stat'
+        } else if (type == 'stat' && !idlz) {
+          sort.type = 'base_stat'
         }
-        sort.desc = (sort.type == oldSort.type) ? !sort.desc : true;
+        else sort.type = type;
+
+        sort.desc = (sort.type == oldSort.type) ? !sort.desc : false;
     }
 
 

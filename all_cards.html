@@ -243,21 +243,21 @@
                                 </div>
                             </td>
                             <td>{{card.id}}</td>
-                            <td>{{filters.idlz ? card.idlz_stat : card.base_stat}}</td>
+                            <td>{{filters.idlz ? card.idlz_stat : card.base_stat}} <br/><span ng-class="{'text-smile': card.attribute=='Smile', 'text-pure': card.attribute=='Pure', 'text-cool': card.attribute=='Cool'}">{{card.attribute}}</span></td>
                             <td>
                                 {{card.skill.avg |number:2}}
                                 <i ng-if="card.skill.category=='Score Up' || (card.skill.category=='Healer' && filters.heel && !card.is_promo)" class="fa fa-level-up" uib-tooltip="Points"></i>
                                 <i ng-if="card.skill.category=='Healer' && (!filters.heel || card.is_promo)" class="fa fa-heart" uib-tooltip="Stamina"></i>
                                 <i ng-if="card.skill.category=='Perfect Lock'" class="fa fa-lock" uib-tooltip="Seconds"></i>
 
-                                <br><small><b>(+{{card.equippedSIS ? card.sis.stat_bonus_avg : card.skill.stat_bonus_avg|number:0}} <span  ng-class="{'text-smile': card.attribute=='Smile', 'text-pure': card.attribute=='Pure', 'text-cool': card.attribute=='Cool'}">{{card.attribute}}</span>)</b></small>
+                                <br><small><b>(+{{card.equippedSIS ? card.sis.stat_bonus_avg : card.skill.stat_bonus_avg|number:0}} <span ng-class="{'text-smile': card.attribute=='Smile', 'text-pure': card.attribute=='Pure', 'text-cool': card.attribute=='Cool'}">{{card.attribute}}</span>)</b></small>
                             </td>
                             <td>{{card.skill.best |number:2}}
                                 <i ng-if="card.skill.category=='Score Up' || (card.skill.category=='Healer' && filters.heel && !card.is_promo)" class="fa fa-level-up" uib-tooltip="Points"></i>
                                 <i ng-if="card.skill.category=='Healer' && (!filters.heel || card.is_promo)" class="fa fa-heart" uib-tooltip="Stamina"></i>
                                 <i ng-if="card.skill.category=='Perfect Lock'" class="fa fa-lock" uib-tooltip="Seconds"></i>
 
-                                <br><small><b>(+{{card.equippedSIS ? card.sis.stat_bonus_best : card.skill.stat_bonus_best|number:0}} <span  ng-class="{'text-smile': card.attribute=='Smile', 'text-pure': card.attribute=='Pure', 'text-cool': card.attribute=='Cool'}">{{card.attribute}}</span>)</b></small>
+                                <br><small><b>(+{{card.equippedSIS ? card.sis.stat_bonus_best : card.skill.stat_bonus_best|number:0}} <span ng-class="{'text-smile': card.attribute=='Smile', 'text-pure': card.attribute=='Pure', 'text-cool': card.attribute=='Cool'}">{{card.attribute}}</span>)</b></small>
 
                             </td>
                         </tr>
