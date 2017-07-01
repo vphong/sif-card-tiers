@@ -59,19 +59,19 @@ def skillDetails(card):
     skill['type'] = card['skill']
     skillType = card['skill']
     card['skill'] = {}
-    card['skill']['type'] = skillType
+    card['skill']['category'] = skillType
 
     # API bug: Fairyland Umi has incorrect skill value in API database
     if card['full_name'] == "SR Land of Fairies Sonoda Umi":
         card['skill_details'] = "For every 25 notes, there is a 35% chance stamina gets recovered by 3."
 
     # promo skills
-    if "Charm" in card['skill']['type']:
-        card['skill']['type'] = "Score Up"
-    elif "Yell" in card['skill']['type']:
-        card['skill']['type'] = "Healer"
-    elif "Trick" in card['skill']['type']:
-        card['skill']['type'] = "Perfect Lock"
+    if "Charm" in card['skill']['category']:
+        card['skill']['category'] = "Score Up"
+    elif "Yell" in card['skill']['category']:
+        card['skill']['category'] = "Healer"
+    elif "Trick" in card['skill']['category']:
+        card['skill']['category'] = "Perfect Lock"
 
     # extract raw skill data from skill_details string
     # logging.info("skillDetails(): processing skill_details...")
@@ -82,27 +82,27 @@ def skillDetails(card):
         # corner case: star note activated skills
         if "star" in card['skill_details']:
             # star notes per EX song * 85% perfects
-            skillNums['activation_count'] = 65 * .85
-            skillNums['activation_type'] = "star"
+            skillNums['interval'] = 65 * .85
+            skillNums['type'] = "star"
             if isnumber(word):
                 # 3. skill activation value
                 #   ("by ___ points/seconds/stamina")
-                skillNums['activation_value'] = float(word)
+                skillNums['amount'] = float(word)
 
             if "%" in word:
                 # 4. skill activation percentage
                 #   ("there is a __% chance")
-                skillNums['activation_percent'] = float(word.strip("%")) / 100
+                skillNums['percent'] = float(word.strip("%")) / 100
 
         else:
             if isnumber(word) and numCount < 1:
                 # 1. skill activation count
                 #   ("for every ## notes/seconds/hit combo/perfects...")
-                skillNums['activation_count'] = float(word)
+                skillNums['interval'] = float(word)
 
                 # 2. skill activation type
                 #   ("for every ## notes/seconds/hit combo/perfects...")
-                skillNums['activation_type'] = skillWords[
+                skillNums['type'] = skillWords[
                     skillWords.index(word) + 1].strip(',')
 
                 numCount = numCount + 1
@@ -111,19 +111,19 @@ def skillDetails(card):
                 # 3. skill activation value
                 #   ("...by ___ points/seconds/stamina")
 
-                skillNums['activation_value'] = float(word)
+                skillNums['amount'] = float(word)
 
             if "%" in word:
                 # 4. skill activation percentage
                 #   ("...there is a ##% chance of...")
-                skillNums['activation_percent'] = float(word.strip("%")) / 100
+                skillNums['percent'] = float(word.strip("%")) / 100
 
     card['skill'].update(skillNums)
     card.pop('skill_details', None)
     # static skill contribution calculation
     # theoretical 550 note, 125 second song with 85% greats and 65 star notes
-    # timeActivation = (125 / skillNums['activation_count']) * skillNums[
-    #     'activation_percent'] * skillNums['activation_value']
+    # timeActivation = (125 / skillNums['interval']) * skillNums[
+    #     'percent'] * skillNums['amount']
     #
     # card['skill']['su'] = 0
     # card['skill']['pl'] = 0
@@ -133,30 +133,30 @@ def skillDetails(card):
     # logging.info("skillDetails(): calculating skill contribution...")
     # if card['skill']['type'] == "Score Up":
     #
-    #     if skillNums['activation_type'] == "perfects":
-    #         card['skill']['su'] = (550 * .85 / skillNums['activation_count']) * skillNums[
-    #             'activation_percent'] * skillNums['activation_value']
-    #     elif skillNums['activation_type'] == "seconds":
+    #     if skillNums['type'] == "perfects":
+    #         card['skill']['su'] = (550 * .85 / skillNums['interval']) * skillNums[
+    #             'percent'] * skillNums['amount']
+    #     elif skillNums['type'] == "seconds":
     #         card['skill']['su'] = timeActivation
     #     else:  # notes or combo string
-    #         card['skill']['su'] = (550 / skillNums['activation_count']) * \
-    #             skillNums['activation_percent'] * skillNums['activation_value']
+    #         card['skill']['su'] = (550 / skillNums['interval']) * \
+    #             skillNums['percent'] * skillNums['amount']
     #
     # elif card['skill']['type'] == "Perfect Lock":
     #
-    #     if (skillNums['activation_type']) == "seconds":
+    #     if (skillNums['type']) == "seconds":
     #         card['skill']['pl'] = timeActivation
     #     else:  # notes or combo
-    #         card['skill']['pl'] = (550 / skillNums['activation_count']) * \
-    #             skillNums['activation_percent'] * skillNums['activation_value']
+    #         card['skill']['pl'] = (550 / skillNums['interval']) * \
+    #             skillNums['percent'] * skillNums['amount']
     #
     # elif card['skill']['type'] == "Healer":
     #
-    #     if (skillNums['activation_type']) == "seconds":
+    #     if (skillNums['type']) == "seconds":
     #         card['skill']['hl'] = timeActivation
     #     else:  # notes or combo
-    #         card['skill']['hl'] = (550 / skillNums['activation_count']) * \
-    #             skillNums['activation_percent'] * skillNums['activation_value']
+    #         card['skill']['hl'] = (550 / skillNums['interval']) * \
+    #             skillNums['percent'] * skillNums['amount']
     #
     #     card['skill']['hl_heel'] = card['skill']['hl'] * 270
 
@@ -552,9 +552,9 @@ def cleanCard(d, keys):
 
     ret['full_name'] = ret['full_name'] + " " + ret['name']
 
-    # handle unicode error output for "e'"
-    if ret['translated_collection'] and "Maid" in ret['translated_collection']:
-        ret['translated_collection'] = "Café Maid"
+    # # handle unicode error output for "e'"
+    # if ret['translated_collection'] and "Maid" in ret['translated_collection']:
+    #     ret['translated_collection'] = "Café Maid"
 
     ret['full_name'] = ret['rarity']
     if ret['is_promo']:
@@ -578,18 +578,26 @@ def cleanCard(d, keys):
     # stats/scores
     skillDetails(ret)
     ret['cScore'] = ret['oScore'] = {'base': 0, 'idlz': 0, 'heel': 0, 'idlz_heel': 0}
-    ret['cScore'] = score(ret,"c")
-    ret['oScore'] = score(ret,"o")
+    # ret['cScore'] = score(ret,"c")
+    # ret['oScore'] = score(ret,"o")
 
-    if "Yukata Matsuura" in ret['full_name']:
-        logging.info(ret['cScore'])
-        logging.info(ret['oScore'])
+    # grab relevant stat only
+    if ret['attribute'] == 'Smile':
+        ret['base_stat'] = ret['non_idolized_maximum_statistics_smile']
+        ret['idlz_stat'] = ret['idolized_maximum_statistics_smile']
+    elif ret['attribute'] == 'Pure':
+        ret['base_stat'] = ret['non_idolized_maximum_statistics_pure']
+        ret['idlz_stat'] = ret['idolized_maximum_statistics_pure']
+    elif ret['attribute'] == 'Cool':
+        ret['base_stat'] = ret['non_idolized_maximum_statistics_cool']
+        ret['idlz_stat'] = ret['idolized_maximum_statistics_cool']
 
-    # load links over https
-    # ret['website_url'] = "https" + ret['website_url'][4:]
-    # ret['round_card_image'] = "https" + repr(ret['round_card_image'])[5:]
-    # ret['round_card_idolized_image'] = "https" + \
-    #     repr(ret['round_card_idolized_image'])[5:]
+    ret.pop('non_idolized_maximum_statistics_cool', None)
+    ret.pop('non_idolized_maximum_statistics_pure', None)
+    ret.pop('non_idolized_maximum_statistics_smile', None)
+    ret.pop('idolized_maximum_statistics_cool', None)
+    ret.pop('idolized_maximum_statistics_pure', None)
+    ret.pop('idolized_maximum_statistics_smile', None)
 
     return ret
 

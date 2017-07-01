@@ -11,10 +11,6 @@
                 <label class="btn btn-danger btn-sm" ng-click="resetFilters()">Reset Filters</label>
             </div>
 
-            <div class="btn-group btn-group-justified">
-                <label class="btn btn-default btn-sm" ng-model="filters.heel" ng-click="toggleHeel()" uib-btn-checkbox>Heel?</label>
-            </div>
-
             <div class="btn-group-vertical col-xs-12">
                 <label class="btn btn-default btn-sm" ng-model="filters.displayImg" ng-click="setLocalStorageFilters()" uib-btn-checkbox>Display imgs?</label>
             </div>
@@ -198,25 +194,10 @@
                                 <i ng-show="sort.desc && sort.type=='id'" class="fa fa-chevron-down"></i>
                                 <i ng-show="!sort.desc && sort.type=='id'" class="fa fa-chevron-up"></i>
                             </th>
-                            <th class="num-header" ng-click="sortBy('smile')">Smile
-                                <i ng-show="sort.desc && sort.type.includes('smile')" class="fa fa-chevron-down"></i>
-                                <i ng-show="!sort.desc && sort.type.includes('smile')" class="fa fa-chevron-up"></i>
+                            <th class="num-header" ng-click="sortBy('stat')">Stat
+                                <i ng-show="sort.desc && sort.type.includes('stat')" class="fa fa-chevron-down"></i>
+                                <i ng-show="!sort.desc && sort.type.includes('stat')" class="fa fa-chevron-up"></i>
                             </th>
-                            <th class="num-header" ng-click="sortBy('pure')">Pure
-                                <i ng-show="sort.desc && sort.type.includes('pure')" class="fa fa-chevron-down"></i>
-                                <i ng-show="!sort.desc && sort.type.includes('pure')" class="fa fa-chevron-up"></i>
-                            </th>
-                            <th class="num-header" ng-click="sortBy('cool')">Cool
-                                <i ng-show="sort.desc && sort.type.includes('cool')" class="fa fa-chevron-down"></i>
-                                <i ng-show="!sort.desc && sort.type.includes('cool')" class="fa fa-chevron-up"></i>
-                            </th>
-                            <th class="num-header" style="min-width:90px" ng-click="sortBy('cScore')">C-Score
-                                <i ng-show="sort.desc && sort.type.includes('cScore')" class="fa fa-chevron-down"></i>
-                                <i ng-show="!sort.desc && sort.type.includes('cScore')" class="fa fa-chevron-up"></i>
-                            </th>
-                            <th class="num-header" style="min-width:90px" ng-click="sortBy('oScore')">O-Score
-                                <i ng-show="sort.desc && sort.type.includes('oScore')" class="fa fa-chevron-down"></i>
-                                <i ng-show="!sort.desc && sort.type.includes('oScore')" class="fa fa-chevron-up"></i>
                             </th>
                             <th class="num-header" style="min-width:100px" ng-click="sortBy('skill.avg')">Skill (Avg)
                                 <i ng-show="sort.desc && sort.type=='skill.avg'" class="fa fa-chevron-down"></i>
@@ -252,9 +233,9 @@
                                                 <i class="fa fa-info-circle"></i>
                                             </span>
                                             <a href="{{card.website_url}}" ng-class="{'text-smile': card.attribute=='Smile', 'text-pure': card.attribute=='Pure', 'text-cool': card.attribute=='Cool'}">
-                                                <i ng-if="card.skill.type=='Score Up'" class="fa fa-level-up" uib-tooltip="Score Up"></i>
-                                                <i ng-if="card.skill.type=='Healer'" class="fa fa-heart" uib-tooltip="Healer"></i>
-                                                <i ng-if="card.skill.type=='Perfect Lock'" class="fa fa-lock" uib-tooltip="Perfect Lock"></i>
+                                                <i ng-if="card.skill.category=='Score Up'" class="fa fa-level-up" uib-tooltip="Score Up"></i>
+                                                <i ng-if="card.skill.category=='Healer'" class="fa fa-heart" uib-tooltip="Healer"></i>
+                                                <i ng-if="card.skill.category=='Perfect Lock'" class="fa fa-lock" uib-tooltip="Perfect Lock"></i>
                                                 <i ng-if="card.event" class="fa fa-star" uib-tooltip="Event Only"></i>
                                                 {{card.full_name}}</a>
                                         </span>
@@ -262,32 +243,22 @@
                                 </div>
                             </td>
                             <td>{{card.id}}</td>
-                            <td>{{filters.idlz ? card.idolized_maximum_statistics_smile : card.non_idolized_maximum_statistics_smile}}</td>
-                            <td>{{filters.idlz ? card.idolized_maximum_statistics_pure : card.non_idolized_maximum_statistics_pure}}</td>
-                            <td>{{filters.idlz ? card.idolized_maximum_statistics_cool : card.non_idolized_maximum_statistics_cool}}</td>
-                            <td>
-                                <span uib-popover="Cannot equip Heel to a card with >4 SIS Slots. Displaying C-Score w/ default optimized SIS." popover-trigger="'mouseenter'" popover-enable="filters.heel && card.skill.type=='Healer' && (card.rarity!='UR' || card.is_promo)">
-                                    <i ng-if="filters.heel && card.skill.type=='Healer' && (card.rarity!='UR' || card.is_promo)" class="fa fa-warning text-danger"></i>
-                                    {{displayScore(card, "c") | number:2}}</span>
-                            </td>
-                            <td>
-                                <span
-                                    uib-popover="Cannot equip Heel to a card with >4 SIS Slots. Displaying O-Score w/ default optimized SIS."
-                                    popover-trigger="'mouseenter'"
-                                    popover-enable="filters.heel && card.skill.type=='Healer' && ((!filters.idlz && card.rarity!='UR') || card.is_promo)">
-                                    <i ng-if="filters.heel && card.skill.type=='Healer' && ((!filters.idlz && card.rarity!='UR') || card.is_promo)" class="fa fa-warning text-danger"></i>
-                                    {{displayScore(card, "o") | number:2}}</span>
-                            </td>
+                            <td>{{filters.idlz ? card.idlz_stat : card.base_stat}}</td>
                             <td>
                                 {{card.skill.avg |number:2}}
-                                <i ng-if="card.skill.type=='Score Up' || (card.skill.type=='Healer' && filters.heel && !card.is_promo)" class="fa fa-level-up" uib-tooltip="Score Up"></i>
-                                <i ng-if="card.skill.type=='Healer' && (!filters.heel || card.is_promo)" class="fa fa-heart" uib-tooltip="Healer"></i>
-                                <i ng-if="card.skill.type=='Perfect Lock'" class="fa fa-lock" uib-tooltip="Perfect Lock"></i>
+                                <i ng-if="card.skill.category=='Score Up' || (card.skill.category=='Healer' && filters.heel && !card.is_promo)" class="fa fa-level-up" uib-tooltip="Points"></i>
+                                <i ng-if="card.skill.category=='Healer' && (!filters.heel || card.is_promo)" class="fa fa-heart" uib-tooltip="Stamina"></i>
+                                <i ng-if="card.skill.category=='Perfect Lock'" class="fa fa-lock" uib-tooltip="Seconds"></i>
+
+                                <br><small><b>(+{{card.equippedSIS ? card.sis.stat_bonus_avg : card.skill.stat_bonus_avg|number:0}} <span  ng-class="{'text-smile': card.attribute=='Smile', 'text-pure': card.attribute=='Pure', 'text-cool': card.attribute=='Cool'}">{{card.attribute}}</span>)</b></small>
                             </td>
                             <td>{{card.skill.best |number:2}}
-                                <i ng-if="card.skill.type=='Score Up' || (card.skill.type=='Healer' && filters.heel && !card.is_promo)" class="fa fa-level-up" uib-tooltip="Score Up"></i>
-                                <i ng-if="card.skill.type=='Healer' && (!filters.heel || card.is_promo)" class="fa fa-heart" uib-tooltip="Healer"></i>
-                                <i ng-if="card.skill.type=='Perfect Lock'" class="fa fa-lock" uib-tooltip="Perfect Lock"></i>
+                                <i ng-if="card.skill.category=='Score Up' || (card.skill.category=='Healer' && filters.heel && !card.is_promo)" class="fa fa-level-up" uib-tooltip="Points"></i>
+                                <i ng-if="card.skill.category=='Healer' && (!filters.heel || card.is_promo)" class="fa fa-heart" uib-tooltip="Stamina"></i>
+                                <i ng-if="card.skill.category=='Perfect Lock'" class="fa fa-lock" uib-tooltip="Seconds"></i>
+
+                                <br><small><b>(+{{card.equippedSIS ? card.sis.stat_bonus_best : card.skill.stat_bonus_best|number:0}} <span  ng-class="{'text-smile': card.attribute=='Smile', 'text-pure': card.attribute=='Pure', 'text-cool': card.attribute=='Cool'}">{{card.attribute}}</span>)</b></small>
+
                             </td>
                         </tr>
                     </tbody>

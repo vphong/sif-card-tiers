@@ -94,7 +94,68 @@ app.controller('TabCtrl', function($rootScope, $scope, $state) {
     });
 });
 
-app.factory('Cards', function($rootScope, $http) {
+app.factory('Calculations', function () {
+    var ret = {};
+
+    ret.activations = function (song, skill) {
+      // console.log(skill)
+        if (skill.type == "notes" || skill.type == "hit" || skill.type == "combo") {
+            return Math.floor(song.notes / skill.interval)
+        }
+        else if (skill.type == "perfects") {
+            return Math.floor(Math.floor(song.notes * song.perfects) / skill.interval)
+        }
+        else if (skill.type == "seconds") {
+            return Math.floor(song.seconds / skill.interval)
+        }
+        else if (skill.type == "points") {
+            return Math.floor(song.points / skill.interval)
+        }
+        else {
+            //TODO: handle Snow Maiden Umi
+            return 0
+        }
+    };
+
+    // score = floor(stat * 0.0125 * accuracy * combo_position * note_type * attribute_bool * group_bool)
+    ret.scoreUpMod = function (song, scoreUp) {
+        // given a score that a card has generated, return stat corresponding to that score
+        return Math.floor(scoreUp / song.notes / 0.0125);
+    };
+
+    ret.plScoreBonus = function (on_attr, song, pl_time, type) {
+        // calculate exactly how many notes are estimated to go great -> perfect
+        var pl_proportion_of_song = pl_time < song.seconds ? pl_time / song.seconds : 1
+        var notes_during_pl = Math.floor(song.notes * pl_proportion_of_song)
+        var transformed_greats_proportion_of_song = notes_during_pl * (1 - song.perfects) / song.notes
+
+        // how much the score changed due to greats -> perfects
+        var score_difference = Math.floor(on_attr * 0.0125 * .22 * Math.floor(song.notes / 2) * 1 * 1.1 * 1.1) * transformed_greats_proportion_of_song
+
+        return Math.floor(score_difference / song.notes / (0.0125 * 1.1 * 1.1))
+    }
+
+    ret.trickStatBonus = function (on_attr, song, pl_time) {
+        // calculate exactly how many notes are estimated to go great -> perfect
+        var pl_proportion_of_song = pl_time < song.seconds ? pl_time / song.seconds : 1
+        var notes_during_pl = Math.floor(song.notes * pl_proportion_of_song)
+        var greats_during_pl = notes_during_pl * (1 - song.perfects) / song.notes
+        var perfects_during_pl = notes_during_pl * song.perfects / song.notes
+
+        var bonus = Math.floor(on_attr * 0.33)
+        // how many more points greats give
+        var trick_greats_bonus = Math.floor(bonus * 0.0125 * .22 * Math.floor(song.notes / 2) * 1 * 1.1 * 1.1) * greats_during_pl
+        // how many more points perfects give
+        var trick_perfects_bonus = Math.floor(bonus * 0.0125 * 1 * Math.floor(song.notes / 2) * 1 * 1.1 * 1.1) * perfects_during_pl
+
+        return ret.scoreUpMod(song, trick_greats_bonus + trick_perfects_bonus)
+    }
+
+
+    return ret;
+})
+
+app.factory('Cards', function($rootScope, $http, Calculations) {
     var ret = {};
 
     ret.getUrl = function(url) {
@@ -122,9 +183,9 @@ app.factory('Cards', function($rootScope, $http) {
                 ((filters.premium && !card.event && !card.is_promo) ||
                     filters.event && card.event || filters.promo && card.is_promo) &&
 
-                (filters.su && card.skill.type == "Score Up" ||
-                    filters.pl && card.skill.type == "Perfect Lock" ||
-                    filters.hl && card.skill.type == "Healer") &&
+                (filters.su && card.skill.category == "Score Up" ||
+                    filters.pl && card.skill.category == "Perfect Lock" ||
+                    filters.hl && card.skill.category == "Healer") &&
 
                 (filters.muse && card.main_unit == "Muse" ||
                     filters.aqours && card.main_unit == "Aqours") &&
@@ -157,83 +218,29 @@ app.factory('Cards', function($rootScope, $http) {
 
             // for each ~act_count~ ~act_type~, ~act_percent~ chance of ~act_val~
             // skill value = (# of activation times) * (chance of activation) * (activation value)
-            if (card.skill.activation_type == "perfects") {
-                activations = Math.floor(song.notes * song.perfects / card.skill.activation_count)
-            } else if (card.skill.activation_type == "seconds") {
-                activations = Math.floor(song.seconds / card.skill.activation_count)
-            } else if (card.skill.activation_type.includes("star")) {
-                activations = Math.floor(song.stars / card.skill.activation_count)
-            } else { // notes or combo string
-                activations = Math.floor(song.notes / card.skill.activation_count)
+            // console.log(card)
+            activations = Calculations.activations(song, card.skill)
+            // console.log(activations)
+
+            card.skill.avg = Math.floor(activations * card.skill.percent) * card.skill.amount
+            card.skill.best = activations * card.skill.amount
+            card.on_attr = {}
+
+            if (card.skill.category == "Perfect Lock" || card.skill.category.includes("Trick")) {
+                card.skill.stat_bonus_avg = Calculations.plScoreBonus(card.on_attr.base, song, card.skill.avg)
+                card.skill.stat_bonus_best = Calculations.plScoreBonus(card.on_attr.base, song, card.skill.best)
             }
-            card.skill.avg = activations * card.skill.activation_percent * card.skill.activation_value
-            card.skill.best = activations * card.skill.activation_value
-
-            if (heel && card.skill.type == "Healer" && !card.is_promo) {
-                card.skill.avg *= 270;
-                card.skill.best *= 270;
+            else if ((card.skill.category == "Healer" || card.skill.category.includes("Yell")) && !card.equippedSIS) {
+                card.skill.stat_bonus_avg = card.skill.stat_bonus_best = 0;
             }
-
-            // deep copy for score up addition, array for orderBy use
-            card.cScore_modded = [angular.copy(card.cScore)]
-            card.oScore_modded = [angular.copy(card.oScore)]
-
-            // convert score up to stat
-            if (card.is_promo) score_up_mod = 0
-            else if (card.skill.type == 'Score Up' || (heel && card.skill.type == "Healer")) {
-                score_up_mod = Math.floor((card.skill.avg / song.notes) / (0.0125 * (.88 * song.perfects) * Math.floor(song.notes / 2) * 1 * 1.1 * 1.1)) * song.notes;
-                if (isNaN(score_up_mod)) score_up_mod = 0;
-            } else score_up_mod = 0
-
-
-            if (card.skill.type == "Score Up") {
-                card.cScore_modded[0].base += score_up_mod
-                card.cScore_modded[0].idlz += score_up_mod
-
-                card.oScore_modded[0].base += score_up_mod
-                card.oScore_modded[0].idlz += score_up_mod
-            } else if (heel && card.skill.type == "Healer") {
-                card.cScore_modded[0].heel += score_up_mod
-                card.cScore_modded[0].idlz_heel += score_up_mod
-
-                card.oScore_modded[0].heel += score_up_mod
-                card.oScore_modded[0].idlz_heel += score_up_mod
+            else { // scorer
+                card.skill.stat_bonus_avg = Calculations.scoreUpMod(song, card.skill.avg)
+                card.skill.stat_bonus_best = Calculations.scoreUpMod(song, card.skill.best)
             }
-
-            // if (card.full_name.includes("Yukata Matsuura") && card.skill.type=="Healer") {
-            //     console.log(card.full_name)
-            //     console.log(score_up_mod)
-            //     console.log(card.cScore)
-            //     console.log(card.cScore_modded[0])
-            //     // console.log(card.cScore.base + score_up_mod)
-            //     console.log(card.oScore)
-            //     console.log(card.oScore_modded[0])
-            // }
 
         })
 
 
-    }
-
-    ret.displayScore = function(card, scoreType, filters) {
-        if (scoreType == "c") {
-            if (card.is_promo && filters.idlz) return card.cScore_modded[0].idlz;
-            else if (card.is_promo && filters.idlz) return card.cScore_modded[0].base;
-
-            if (filters.idlz && filters.heel) return card.cScore_modded[0].idlz_heel;
-            else if (filters.idlz && !filters.heel) return card.cScore_modded[0].idlz;
-            else if (!filters.idlz && filters.heel) return card.cScore_modded[0].heel;
-            else return card.cScore_modded[0].base
-
-        } else if (scoreType == "o") {
-            if (card.is_promo && filters.idlz) return card.oScore_modded[0].idlz;
-            else if (card.is_promo && filters.idlz) return card.oScore_modded[0].base;
-
-            if (filters.idlz && filters.heel) return card.oScore_modded[0].idlz_heel
-            else if (filters.idlz && !filters.heel) return card.oScore_modded[0].idlz
-            else if (!filters.idlz && filters.heel) return card.oScore_modded[0].heel
-            else return card.oScore_modded[0].base
-        } else return 0;
     }
 
 
@@ -255,27 +262,7 @@ app.factory('Cards', function($rootScope, $http) {
         } else if (type == 'cool' && !idlz) {
             sort.type = "non_idolized_maximum_statistics_cool"
         } else {
-
-          // console.log(sort)
-            // console.log(type)
-            if (type == 'cScore') {
-                if (idlz) sort.type = "cScore_modded[0].idlz";
-                else sort.type = "cScore_modded[0].base";
-            } else if (type == 'oScore') {
-                if (idlz) sort.type = "oScore_modded[0].idlz";
-                else sort.type = "oScore_modded[0].base";
-
-            } else if (type == 'cScore.heel') {
-                if (idlz) sort.type = "cScore_modded[0].idlz_heel";
-                else sort.type = "cScore_modded[0].heel";
-            } else if (type == 'oScore.heel') {
-                if (idlz) sort.type = "oScore_modded[0].idlz_heel";
-                else sort.type = "oScore_modded[0].heel";
-            }
-            else {
             sort.type = type;
-            }
-
         }
         sort.desc = (sort.type == oldSort.type) ? !sort.desc : true;
     }
