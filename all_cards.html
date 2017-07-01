@@ -164,7 +164,7 @@
                     <span class="input-group-addon">
                         <i class="fa fa-music"></i>
                     </span>
-                    <input type="number" class="form-control" ng-model="song.notes" ng-change="updateSong()" popover-trigger="'mouseenter'" placeholder="song length (notes)">
+                    <input type="number" class="form-control" ng-model="song.notes">
                     <span class="input-group-addon">
                         total notes
                     </span>
@@ -175,7 +175,7 @@
                     <span class="input-group-addon">
                         <i class="fa fa-clock-o"></i>
                     </span>
-                    <input type="number" class="form-control" ng-model="song.seconds" ng-change="updateSong()" popover-trigger="'mouseenter'" placeholder="song length (secs)">
+                    <input type="number" class="form-control" ng-model="song.seconds">
                     <span class="input-group-addon">
                         total seconds
                     </span>
@@ -197,7 +197,7 @@
                     <span class="input-group-addon">
                         <i class="fa fa-percent"></i>
                     </span>
-                    <input type="number" class="form-control" ng-model="song.perfects" ng-change="updateSong()" placeholder="perfects"><span class="input-group-addon">
+                    <input type="number" class="form-control" ng-model="song.perfects" placeholder="perfects"><span class="input-group-addon">
                         % perfects
                     </span>
                 </div>
@@ -207,7 +207,7 @@
                     <span class="input-group-addon">
                         <i class="fa fa-tasks"></i>
                     </span>
-                    <input type="number" class="form-control" ng-model="song.score" ng-change="updateSong()" placeholder="score"><span class="input-group-addon">
+                    <input type="number" class="form-control" ng-model="song.score" placeholder="score"><span class="input-group-addon">
                         final score
                     </span>
                 </div>
@@ -239,6 +239,11 @@
                                 <i ng-show="sort.desc && sort.type=='skill.best'" class="fa fa-chevron-down"></i>
                                 <i ng-show="!sort.desc && sort.type=='skill.best'" class="fa fa-chevron-up"></i>
                             </th>
+                            <th class="num-header" style="min-width:100px" ng-click="sortBy('skill.best')">Activated By
+                                <i ng-show="sort.desc && sort.type=='skill.type'" class="fa fa-chevron-down"></i>
+                                <i ng-show="!sort.desc && sort.type=='skill.type'" class="fa fa-chevron-up"></i>
+                            </th>
+
                             <th class="num-header" style="min-width:100px" ng-click="sortBy('stat.avg')">Stat + Skill (Avg)
                                 <i ng-show="sort.desc && sort.type=='stat.avg'" class="fa fa-chevron-down"></i>
                                 <i ng-show="!sort.desc && sort.type=='stat.avg'" class="fa fa-chevron-up"></i>
@@ -264,14 +269,6 @@
                                     <div class="media-left"><img ng-if="filters.displayImg" ng-src="{{filters.idlz || card.is_promo ? card.round_card_idolized_image : card.round_card_image}}" class="display-image media-image">
                                     </div>
                                     <div class="media-body media-middle">
-                                        <span
-                                            uib-popover="This card's skill is dependent on team strength. C-Score, O-Score, and Score Up value may be innaccuate. See Info page for more detailed explanation."
-                                            popover-title="Disclaimer"
-                                            popover-trigger="'mouseenter'"
-                                            popover-enable="card.full_name=='SR Animal Yazawa Nico'||card.full_name=='SR Health Committee Minami Kotori'||card.full_name=='SR Animal Kousaka Honoka'||card.full_name=='SR October Sonoda Umi'">
-                                            <span ng-if="card.full_name=='SR Animal Yazawa Nico'||card.full_name=='SR Health Committee Minami Kotori'||card.full_name=='SR Animal Kousaka Honoka'||card.full_name=='SR October Sonoda Umi'">
-                                                <i class="fa fa-info-circle"></i>
-                                            </span>
                                             <a href="{{card.website_url}}" ng-class="{'text-smile': card.attribute=='Smile', 'text-pure': card.attribute=='Pure', 'text-cool': card.attribute=='Cool'}">
                                                 <i ng-if="card.skill.category=='Score Up'" class="fa fa-level-up" uib-tooltip="Score Up"></i>
                                                 <i ng-if="card.skill.category=='Healer'" class="fa fa-heart" uib-tooltip="Healer"></i>
@@ -302,6 +299,9 @@
 
                                 <br><small><b>(+{{card.equippedSIS ? card.sis.stat_bonus_best : card.skill.stat_bonus_best|number:0}} <span ng-class="{'text-smile': card.attribute=='Smile', 'text-pure': card.attribute=='Pure', 'text-cool': card.attribute=='Cool'}">{{card.attribute}}</span>)</b></small>
 
+                            </td>
+                            <td>
+                              {{card.skill.type}}
                             </td>
                             <td>
                               {{card.stat.avg}} <span ng-class="{'text-smile': card.attribute=='Smile', 'text-pure': card.attribute=='Pure', 'text-cool': card.attribute=='Cool'}">{{card.attribute}}</span>

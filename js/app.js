@@ -109,7 +109,7 @@ app.factory('Calculations', function () {
             return Math.floor(song.seconds / skill.interval)
         }
         else if (skill.type == "points") {
-            return Math.floor(song.points / skill.interval)
+            return Math.floor(song.score / skill.interval)
         }
         else {
             //TODO: handle Snow Maiden Umi

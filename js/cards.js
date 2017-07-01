@@ -115,7 +115,7 @@ app.constant('CardData',
       "category": "Score Up",
       "interval": 19.0,
       "percent": 0.26,
-      "type": "hit"
+      "type": "combo"
     },
     "stat": {
       "base": 4650,
@@ -325,7 +325,7 @@ app.constant('CardData',
       "category": "Score Up",
       "interval": 17.0,
       "percent": 0.36,
-      "type": "hit"
+      "type": "combo"
     },
     "stat": {
       "base": 4360,
@@ -493,7 +493,7 @@ app.constant('CardData',
       "category": "Score Up",
       "interval": 22.0,
       "percent": 0.37,
-      "type": "hit"
+      "type": "combo"
     },
     "stat": {
       "base": 4800,
@@ -955,7 +955,7 @@ app.constant('CardData',
       "category": "Score Up",
       "interval": 24.0,
       "percent": 0.36,
-      "type": "hit"
+      "type": "combo"
     },
     "stat": {
       "base": 4640,
@@ -1501,7 +1501,7 @@ app.constant('CardData',
       "category": "Score Up",
       "interval": 26.0,
       "percent": 0.36,
-      "type": "hit"
+      "type": "combo"
     },
     "stat": {
       "base": 4480,
@@ -1753,7 +1753,7 @@ app.constant('CardData',
       "category": "Score Up",
       "interval": 18.0,
       "percent": 0.28,
-      "type": "hit"
+      "type": "combo"
     },
     "stat": {
       "base": 4800,
@@ -2089,7 +2089,7 @@ app.constant('CardData',
       "category": "Score Up",
       "interval": 20.0,
       "percent": 0.27,
-      "type": "hit"
+      "type": "combo"
     },
     "stat": {
       "base": 5030,
@@ -2761,7 +2761,7 @@ app.constant('CardData',
       "category": "Score Up",
       "interval": 20.0,
       "percent": 0.27,
-      "type": "hit"
+      "type": "combo"
     },
     "stat": {
       "base": 4650,
@@ -2929,7 +2929,7 @@ app.constant('CardData',
       "category": "Score Up",
       "interval": 23.0,
       "percent": 0.37,
-      "type": "hit"
+      "type": "combo"
     },
     "stat": {
       "base": 4480,
@@ -3013,7 +3013,7 @@ app.constant('CardData',
       "category": "Score Up",
       "interval": 22.0,
       "percent": 0.31,
-      "type": "hit"
+      "type": "combo"
     },
     "stat": {
       "base": 5060,
@@ -3433,7 +3433,7 @@ app.constant('CardData',
       "category": "Score Up",
       "interval": 26.0,
       "percent": 0.4,
-      "type": "hit"
+      "type": "combo"
     },
     "stat": {
       "base": 4790,
@@ -3643,7 +3643,7 @@ app.constant('CardData',
       "category": "Score Up",
       "interval": 26.0,
       "percent": 0.35,
-      "type": "hit"
+      "type": "combo"
     },
     "stat": {
       "base": 4650,
@@ -3937,7 +3937,7 @@ app.constant('CardData',
       "category": "Score Up",
       "interval": 26.0,
       "percent": 0.33,
-      "type": "hit"
+      "type": "combo"
     },
     "stat": {
       "base": 4630,
@@ -4273,7 +4273,7 @@ app.constant('CardData',
       "category": "Score Up",
       "interval": 21.0,
       "percent": 0.28,
-      "type": "hit"
+      "type": "combo"
     },
     "stat": {
       "base": 4630,
@@ -4399,7 +4399,7 @@ app.constant('CardData',
       "category": "Score Up",
       "interval": 28.0,
       "percent": 0.39,
-      "type": "hit"
+      "type": "combo"
     },
     "stat": {
       "base": 4480,
@@ -4525,7 +4525,7 @@ app.constant('CardData',
       "category": "Score Up",
       "interval": 25.0,
       "percent": 0.41,
-      "type": "hit"
+      "type": "combo"
     },
     "stat": {
       "base": 4800,
@@ -4777,7 +4777,7 @@ app.constant('CardData',
       "category": "Score Up",
       "interval": 17.0,
       "percent": 0.36,
-      "type": "hit"
+      "type": "combo"
     },
     "stat": {
       "base": 4360,
@@ -4819,7 +4819,7 @@ app.constant('CardData',
       "category": "Score Up",
       "interval": 25.0,
       "percent": 0.34,
-      "type": "hit"
+      "type": "combo"
     },
     "stat": {
       "base": 4490,
@@ -4903,7 +4903,7 @@ app.constant('CardData',
       "category": "Score Up",
       "interval": 25.0,
       "percent": 0.33,
-      "type": "hit"
+      "type": "combo"
     },
     "stat": {
       "base": 5020,
@@ -5155,7 +5155,7 @@ app.constant('CardData',
       "category": "Score Up",
       "interval": 22.0,
       "percent": 0.3,
-      "type": "hit"
+      "type": "combo"
     },
     "stat": {
       "base": 4630,
@@ -5491,7 +5491,7 @@ app.constant('CardData',
       "category": "Score Up",
       "interval": 21.0,
       "percent": 0.32,
-      "type": "hit"
+      "type": "combo"
     },
     "stat": {
       "base": 4800,
@@ -5575,7 +5575,7 @@ app.constant('CardData',
       "category": "Score Up",
       "interval": 22.0,
       "percent": 0.35,
-      "type": "hit"
+      "type": "combo"
     },
     "stat": {
       "base": 4480,
@@ -6247,7 +6247,7 @@ app.constant('CardData',
       "category": "Score Up",
       "interval": 24.0,
       "percent": 0.37,
-      "type": "hit"
+      "type": "combo"
     },
     "stat": {
       "base": 4800,
@@ -6373,7 +6373,7 @@ app.constant('CardData',
       "category": "Score Up",
       "interval": 20.0,
       "percent": 0.3,
-      "type": "hit"
+      "type": "combo"
     },
     "stat": {
       "base": 4480,
@@ -6457,7 +6457,7 @@ app.constant('CardData',
       "category": "Score Up",
       "interval": 23.0,
       "percent": 0.39,
-      "type": "hit"
+      "type": "combo"
     },
     "stat": {
       "base": 4790,
@@ -8221,7 +8221,7 @@ app.constant('CardData',
       "category": "Score Up",
       "interval": 19.0,
       "percent": 0.31,
-      "type": "hit"
+      "type": "combo"
     },
     "stat": {
       "base": 4440,
@@ -8893,7 +8893,7 @@ app.constant('CardData',
       "category": "Score Up",
       "interval": 19.0,
       "percent": 0.3,
-      "type": "hit"
+      "type": "combo"
     },
     "stat": {
       "base": 5040,
@@ -9187,7 +9187,7 @@ app.constant('CardData',
       "category": "Score Up",
       "interval": 20.0,
       "percent": 0.26,
-      "type": "hit"
+      "type": "combo"
     },
     "stat": {
       "base": 4790,
@@ -9607,7 +9607,7 @@ app.constant('CardData',
       "category": "Score Up",
       "interval": 22.0,
       "percent": 0.34,
-      "type": "hit"
+      "type": "combo"
     },
     "stat": {
       "base": 4800,
@@ -9817,7 +9817,7 @@ app.constant('CardData',
       "category": "Score Up",
       "interval": 19.0,
       "percent": 0.31,
-      "type": "hit"
+      "type": "combo"
     },
     "stat": {
       "base": 4620,
@@ -10279,7 +10279,7 @@ app.constant('CardData',
       "category": "Score Up",
       "interval": 24.0,
       "percent": 0.37,
-      "type": "hit"
+      "type": "combo"
     },
     "stat": {
       "base": 4450,
@@ -10657,7 +10657,7 @@ app.constant('CardData',
       "category": "Score Up",
       "interval": 17.0,
       "percent": 0.36,
-      "type": "hit"
+      "type": "combo"
     },
     "stat": {
       "base": 4350,
@@ -10825,7 +10825,7 @@ app.constant('CardData',
       "category": "Score Up",
       "interval": 27.0,
       "percent": 0.4,
-      "type": "hit"
+      "type": "combo"
     },
     "stat": {
       "base": 4650,
@@ -11077,7 +11077,7 @@ app.constant('CardData',
       "category": "Score Up",
       "interval": 24.0,
       "percent": 0.34,
-      "type": "hit"
+      "type": "combo"
     },
     "stat": {
       "base": 4610,
@@ -11161,7 +11161,7 @@ app.constant('CardData',
       "category": "Score Up",
       "interval": 21.0,
       "percent": 0.36,
-      "type": "hit"
+      "type": "combo"
     },
     "stat": {
       "base": 4460,
@@ -11287,7 +11287,7 @@ app.constant('CardData',
       "category": "Score Up",
       "interval": 17.0,
       "percent": 0.36,
-      "type": "hit"
+      "type": "combo"
     },
     "stat": {
       "base": 4350,
@@ -11833,7 +11833,7 @@ app.constant('CardData',
       "category": "Score Up",
       "interval": 17.0,
       "percent": 0.36,
-      "type": "hit"
+      "type": "combo"
     },
     "stat": {
       "base": 4350,
@@ -12085,7 +12085,7 @@ app.constant('CardData',
       "category": "Score Up",
       "interval": 19.0,
       "percent": 0.33,
-      "type": "hit"
+      "type": "combo"
     },
     "stat": {
       "base": 4620,
@@ -12127,7 +12127,7 @@ app.constant('CardData',
       "category": "Score Up",
       "interval": 17.0,
       "percent": 0.36,
-      "type": "hit"
+      "type": "combo"
     },
     "stat": {
       "base": 4350,
@@ -12421,7 +12421,7 @@ app.constant('CardData',
       "category": "Score Up",
       "interval": 24.0,
       "percent": 0.37,
-      "type": "hit"
+      "type": "combo"
     },
     "stat": {
       "base": 5010,
@@ -12799,7 +12799,7 @@ app.constant('CardData',
       "category": "Score Up",
       "interval": 23.0,
       "percent": 0.42,
-      "type": "hit"
+      "type": "combo"
     },
     "stat": {
       "base": 4620,
@@ -13135,7 +13135,7 @@ app.constant('CardData',
       "category": "Score Up",
       "interval": 29.0,
       "percent": 0.41,
-      "type": "hit"
+      "type": "combo"
     },
     "stat": {
       "base": 4610,
@@ -14017,7 +14017,7 @@ app.constant('CardData',
       "category": "Score Up",
       "interval": 26.0,
       "percent": 0.33,
-      "type": "hit"
+      "type": "combo"
     },
     "stat": {
       "base": 4620,
@@ -14521,7 +14521,7 @@ app.constant('CardData',
       "category": "Score Up",
       "interval": 21.0,
       "percent": 0.28,
-      "type": "hit"
+      "type": "combo"
     },
     "stat": {
       "base": 5040,
@@ -15235,7 +15235,7 @@ app.constant('CardData',
       "category": "Score Up",
       "interval": 18.0,
       "percent": 0.24,
-      "type": "hit"
+      "type": "combo"
     },
     "stat": {
       "base": 4630,
@@ -15991,7 +15991,7 @@ app.constant('CardData',
       "category": "Score Up",
       "interval": 16.0,
       "percent": 0.26,
-      "type": "hit"
+      "type": "combo"
     },
     "stat": {
       "base": 5040,
@@ -16033,7 +16033,7 @@ app.constant('CardData',
       "category": "Score Up",
       "interval": 24.0,
       "percent": 0.3,
-      "type": "hit"
+      "type": "combo"
     },
     "stat": {
       "base": 4640,
@@ -16201,7 +16201,7 @@ app.constant('CardData',
       "category": "Score Up",
       "interval": 27.0,
       "percent": 0.43,
-      "type": "hit"
+      "type": "combo"
     },
     "stat": {
       "base": 4480,
@@ -16327,7 +16327,7 @@ app.constant('CardData',
       "category": "Score Up",
       "interval": 17.0,
       "percent": 0.36,
-      "type": "hit"
+      "type": "combo"
     },
     "stat": {
       "base": 4250,
@@ -16747,7 +16747,7 @@ app.constant('CardData',
       "category": "Score Up",
       "interval": 20.0,
       "percent": 0.24,
-      "type": "hit"
+      "type": "combo"
     },
     "stat": {
       "base": 4490,
@@ -17125,7 +17125,7 @@ app.constant('CardData',
       "category": "Score Up",
       "interval": 19.0,
       "percent": 0.57,
-      "type": "hit"
+      "type": "combo"
     },
     "stat": {
       "base": 4660,
@@ -17671,7 +17671,7 @@ app.constant('CardData',
       "category": "Score Up",
       "interval": 31.0,
       "percent": 0.39,
-      "type": "hit"
+      "type": "combo"
     },
     "stat": {
       "base": 4670,
@@ -17713,7 +17713,7 @@ app.constant('CardData',
       "category": "Score Up",
       "interval": 17.0,
       "percent": 0.36,
-      "type": "hit"
+      "type": "combo"
     },
     "stat": {
       "base": 4240,
@@ -18133,7 +18133,7 @@ app.constant('CardData',
       "category": "Score Up",
       "interval": 17.0,
       "percent": 0.36,
-      "type": "hit"
+      "type": "combo"
     },
     "stat": {
       "base": 4300,
@@ -18217,7 +18217,7 @@ app.constant('CardData',
       "category": "Score Up",
       "interval": 17.0,
       "percent": 0.36,
-      "type": "hit"
+      "type": "combo"
     },
     "stat": {
       "base": 4270,
@@ -18301,7 +18301,7 @@ app.constant('CardData',
       "category": "Score Up",
       "interval": 17.0,
       "percent": 0.36,
-      "type": "hit"
+      "type": "combo"
     },
     "stat": {
       "base": 4330,
@@ -18511,7 +18511,7 @@ app.constant('CardData',
       "category": "Score Up",
       "interval": 21.0,
       "percent": 0.26,
-      "type": "hit"
+      "type": "combo"
     },
     "stat": {
       "base": 4700,
@@ -18721,7 +18721,7 @@ app.constant('CardData',
       "category": "Score Up",
       "interval": 29.0,
       "percent": 0.62,
-      "type": "hit"
+      "type": "combo"
     },
     "stat": {
       "base": 4660,
@@ -19267,7 +19267,7 @@ app.constant('CardData',
       "category": "Score Up",
       "interval": 23.0,
       "percent": 0.33,
-      "type": "hit"
+      "type": "combo"
     },
     "stat": {
       "base": 4630,
@@ -19477,7 +19477,7 @@ app.constant('CardData',
       "category": "Score Up",
       "interval": 25.0,
       "percent": 0.4,
-      "type": "hit"
+      "type": "combo"
     },
     "stat": {
       "base": 4610,
@@ -21031,7 +21031,7 @@ app.constant('CardData',
       "category": "Score Up",
       "interval": 18.0,
       "percent": 0.35,
-      "type": "hit"
+      "type": "combo"
     },
     "stat": {
       "base": 4940,
@@ -21451,7 +21451,7 @@ app.constant('CardData',
       "category": "Healer",
       "interval": 17.0,
       "percent": 0.36,
-      "type": "hit"
+      "type": "combo"
     },
     "stat": {
       "base": 4260,
@@ -21745,7 +21745,7 @@ app.constant('CardData',
       "category": "Score Up",
       "interval": 17.0,
       "percent": 0.36,
-      "type": "hit"
+      "type": "combo"
     },
     "stat": {
       "base": 4230,
@@ -22081,7 +22081,7 @@ app.constant('CardData',
       "category": "Score Up",
       "interval": 25.0,
       "percent": 0.26,
-      "type": "hit"
+      "type": "combo"
     },
     "stat": {
       "base": 4650,
@@ -22459,7 +22459,7 @@ app.constant('CardData',
       "category": "Healer",
       "interval": 17.0,
       "percent": 0.36,
-      "type": "hit"
+      "type": "combo"
     },
     "stat": {
       "base": 4310,
@@ -22501,7 +22501,7 @@ app.constant('CardData',
       "category": "Score Up",
       "interval": 23.0,
       "percent": 0.56,
-      "type": "hit"
+      "type": "combo"
     },
     "stat": {
       "base": 4620,
@@ -22795,7 +22795,7 @@ app.constant('CardData',
       "category": "Score Up",
       "interval": 21.0,
       "percent": 0.4,
-      "type": "hit"
+      "type": "combo"
     },
     "stat": {
       "base": 4580,
@@ -23005,7 +23005,7 @@ app.constant('CardData',
       "category": "Healer",
       "interval": 17.0,
       "percent": 0.36,
-      "type": "hit"
+      "type": "combo"
     },
     "stat": {
       "base": 4200,
@@ -23131,7 +23131,7 @@ app.constant('CardData',
       "category": "Score Up",
       "interval": 17.0,
       "percent": 0.36,
-      "type": "hit"
+      "type": "combo"
     },
     "stat": {
       "base": 4170,
@@ -23593,7 +23593,7 @@ app.constant('CardData',
       "category": "Healer",
       "interval": 17.0,
       "percent": 0.36,
-      "type": "hit"
+      "type": "combo"
     },
     "stat": {
       "base": 4280,
@@ -23761,7 +23761,7 @@ app.constant('CardData',
       "category": "Score Up",
       "interval": 19.0,
       "percent": 0.32,
-      "type": "hit"
+      "type": "combo"
     },
     "stat": {
       "base": 4580,
@@ -23971,7 +23971,7 @@ app.constant('CardData',
       "category": "Score Up",
       "interval": 30.0,
       "percent": 0.37,
-      "type": "hit"
+      "type": "combo"
     },
     "stat": {
       "base": 4510,
@@ -24139,7 +24139,7 @@ app.constant('CardData',
       "category": "Healer",
       "interval": 17.0,
       "percent": 0.36,
-      "type": "hit"
+      "type": "combo"
     },
     "stat": {
       "base": 4280,
@@ -24265,7 +24265,7 @@ app.constant('CardData',
       "category": "Score Up",
       "interval": 35.0,
       "percent": 0.23,
-      "type": "hit"
+      "type": "combo"
     },
     "stat": {
       "base": 4400,
@@ -24643,7 +24643,7 @@ app.constant('CardData',
       "category": "Score Up",
       "interval": 27.0,
       "percent": 0.4,
-      "type": "hit"
+      "type": "combo"
     },
     "stat": {
       "base": 4470,
@@ -25063,7 +25063,7 @@ app.constant('CardData',
       "category": "Score Up",
       "interval": 17.0,
       "percent": 0.36,
-      "type": "hit"
+      "type": "combo"
     },
     "stat": {
       "base": 4190,
@@ -25441,7 +25441,7 @@ app.constant('CardData',
       "category": "Score Up",
       "interval": 17.0,
       "percent": 0.36,
-      "type": "hit"
+      "type": "combo"
     },
     "stat": {
       "base": 4100,
@@ -25777,7 +25777,7 @@ app.constant('CardData',
       "category": "Score Up",
       "interval": 17.0,
       "percent": 0.27,
-      "type": "hit"
+      "type": "combo"
     },
     "stat": {
       "base": 4400,
@@ -26323,7 +26323,7 @@ app.constant('CardData',
       "category": "Score Up",
       "interval": 33.0,
       "percent": 0.37,
-      "type": "hit"
+      "type": "combo"
     },
     "stat": {
       "base": 4460,
@@ -26659,7 +26659,7 @@ app.constant('CardData',
       "category": "Score Up",
       "interval": 29.0,
       "percent": 0.34,
-      "type": "hit"
+      "type": "combo"
     },
     "stat": {
       "base": 4530,
@@ -26911,7 +26911,7 @@ app.constant('CardData',
       "category": "Score Up",
       "interval": 28.0,
       "percent": 0.36,
-      "type": "hit"
+      "type": "combo"
     },
     "stat": {
       "base": 4500,
@@ -27037,7 +27037,7 @@ app.constant('CardData',
       "category": "Score Up",
       "interval": 25.0,
       "percent": 0.34,
-      "type": "hit"
+      "type": "combo"
     },
     "stat": {
       "base": 4390,
@@ -27457,7 +27457,7 @@ app.constant('CardData',
       "category": "Score Up",
       "interval": 18.0,
       "percent": 0.32,
-      "type": "hit"
+      "type": "combo"
     },
     "stat": {
       "base": 4490,
@@ -27667,7 +27667,7 @@ app.constant('CardData',
       "category": "Score Up",
       "interval": 20.0,
       "percent": 0.4,
-      "type": "hit"
+      "type": "combo"
     },
     "stat": {
       "base": 4540,
@@ -27877,7 +27877,7 @@ app.constant('CardData',
       "category": "Score Up",
       "interval": 24.0,
       "percent": 0.36,
-      "type": "hit"
+      "type": "combo"
     },
     "stat": {
       "base": 4530,
@@ -28003,7 +28003,7 @@ app.constant('CardData',
       "category": "Score Up",
       "interval": 17.0,
       "percent": 0.36,
-      "type": "hit"
+      "type": "combo"
     },
     "stat": {
       "base": 4180,
@@ -28129,7 +28129,7 @@ app.constant('CardData',
       "category": "Healer",
       "interval": 17.0,
       "percent": 0.36,
-      "type": "hit"
+      "type": "combo"
     },
     "stat": {
       "base": 4230,
@@ -28171,7 +28171,7 @@ app.constant('CardData',
       "category": "Score Up",
       "interval": 17.0,
       "percent": 0.36,
-      "type": "hit"
+      "type": "combo"
     },
     "stat": {
       "base": 4210,
@@ -28213,7 +28213,7 @@ app.constant('CardData',
       "category": "Healer",
       "interval": 17.0,
       "percent": 0.36,
-      "type": "hit"
+      "type": "combo"
     },
     "stat": {
       "base": 4250,
@@ -28297,7 +28297,7 @@ app.constant('CardData',
       "category": "Healer",
       "interval": 17.0,
       "percent": 0.36,
-      "type": "hit"
+      "type": "combo"
     },
     "stat": {
       "base": 4220,
@@ -28339,7 +28339,7 @@ app.constant('CardData',
       "category": "Score Up",
       "interval": 17.0,
       "percent": 0.36,
-      "type": "hit"
+      "type": "combo"
     },
     "stat": {
       "base": 4190,
@@ -29053,7 +29053,7 @@ app.constant('CardData',
       "category": "Score Up",
       "interval": 25.0,
       "percent": 0.34,
-      "type": "hit"
+      "type": "combo"
     },
     "stat": {
       "base": 4920,
@@ -29263,7 +29263,7 @@ app.constant('CardData',
       "category": "Healer",
       "interval": 17.0,
       "percent": 0.36,
-      "type": "hit"
+      "type": "combo"
     },
     "stat": {
       "base": 4200,
@@ -29809,7 +29809,7 @@ app.constant('CardData',
       "category": "Score Up",
       "interval": 22.0,
       "percent": 0.33,
-      "type": "hit"
+      "type": "combo"
     },
     "stat": {
       "base": 4550,
@@ -30145,7 +30145,7 @@ app.constant('CardData',
       "category": "Score Up",
       "interval": 23.0,
       "percent": 0.36,
-      "type": "hit"
+      "type": "combo"
     },
     "stat": {
       "base": 4920,
@@ -30565,7 +30565,7 @@ app.constant('CardData',
       "category": "Score Up",
       "interval": 32.0,
       "percent": 0.36,
-      "type": "hit"
+      "type": "combo"
     },
     "stat": {
       "base": 4310,
@@ -31321,7 +31321,7 @@ app.constant('CardData',
       "category": "Score Up",
       "interval": 26.0,
       "percent": 0.36,
-      "type": "hit"
+      "type": "combo"
     },
     "stat": {
       "base": 4370,
@@ -31699,7 +31699,7 @@ app.constant('CardData',
       "category": "Score Up",
       "interval": 30.0,
       "percent": 0.36,
-      "type": "hit"
+      "type": "combo"
     },
     "stat": {
       "base": 4200,
@@ -32119,7 +32119,7 @@ app.constant('CardData',
       "category": "Score Up",
       "interval": 17.0,
       "percent": 0.36,
-      "type": "hit"
+      "type": "combo"
     },
     "stat": {
       "base": 4240,
@@ -32161,7 +32161,7 @@ app.constant('CardData',
       "category": "Score Up",
       "interval": 17.0,
       "percent": 0.36,
-      "type": "hit"
+      "type": "combo"
     },
     "stat": {
       "base": 4160,
@@ -32329,7 +32329,7 @@ app.constant('CardData',
       "category": "Score Up",
       "interval": 17.0,
       "percent": 0.36,
-      "type": "hit"
+      "type": "combo"
     },
     "stat": {
       "base": 4170,
@@ -32665,7 +32665,7 @@ app.constant('CardData',
       "category": "Score Up",
       "interval": 17.0,
       "percent": 0.36,
-      "type": "hit"
+      "type": "combo"
     },
     "stat": {
       "base": 5000,
@@ -32833,7 +32833,7 @@ app.constant('CardData',
       "category": "Score Up",
       "interval": 17.0,
       "percent": 0.36,
-      "type": "hit"
+      "type": "combo"
     },
     "stat": {
       "base": 4300,
@@ -33169,7 +33169,7 @@ app.constant('CardData',
       "category": "Healer",
       "interval": 17.0,
       "percent": 0.36,
-      "type": "hit"
+      "type": "combo"
     },
     "stat": {
       "base": 4290,
@@ -33337,7 +33337,7 @@ app.constant('CardData',
       "category": "Score Up",
       "interval": 35.0,
       "percent": 0.36,
-      "type": "hit"
+      "type": "combo"
     },
     "stat": {
       "base": 4450,
@@ -33589,7 +33589,7 @@ app.constant('CardData',
       "category": "Healer",
       "interval": 17.0,
       "percent": 0.36,
-      "type": "hit"
+      "type": "combo"
     },
     "stat": {
       "base": 4270,
@@ -33673,7 +33673,7 @@ app.constant('CardData',
       "category": "Score Up",
       "interval": 17.0,
       "percent": 0.36,
-      "type": "hit"
+      "type": "combo"
     },
     "stat": {
       "base": 4200,
@@ -33757,7 +33757,7 @@ app.constant('CardData',
       "category": "Healer",
       "interval": 17.0,
       "percent": 0.36,
-      "type": "hit"
+      "type": "combo"
     },
     "stat": {
       "base": 4180,
@@ -33799,7 +33799,7 @@ app.constant('CardData',
       "category": "Score Up",
       "interval": 17.0,
       "percent": 0.36,
-      "type": "hit"
+      "type": "combo"
     },
     "stat": {
       "base": 4350,
@@ -33841,7 +33841,7 @@ app.constant('CardData',
       "category": "Perfect Lock",
       "interval": 17.0,
       "percent": 0.36,
-      "type": "hit"
+      "type": "combo"
     },
     "stat": {
       "base": 4130,

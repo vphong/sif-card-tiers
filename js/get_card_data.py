@@ -104,6 +104,8 @@ def skillDetails(card):
                 #   ("for every ## notes/seconds/hit combo/perfects...")
                 skillNums['type'] = skillWords[
                     skillWords.index(word) + 1].strip(',')
+                if skillNums['type'] == 'hit':
+                    skillNums['type'] = 'combo'
 
                 numCount = numCount + 1
 
