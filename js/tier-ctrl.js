@@ -2,8 +2,8 @@ app.controller('TierCtrl', function($rootScope, $scope, Cards, localStorageServi
 
   // $rootScope = $rootScope.$new(true)
   // $scope = $scope.$new(true)
+  var allIdlz = false;
   $scope.init = function() {
-    $scope.allIdlz = false;
     $scope.filters = localStorageService.get('filters');
     if (!$scope.filters) $scope.filters = angular.copy($rootScope.InitFilters);
 
@@ -52,8 +52,8 @@ app.controller('TierCtrl', function($rootScope, $scope, Cards, localStorageServi
     card.stat.display = card.idlz ? card.stat.idlz : card.stat.base
   }
   $scope.idlzAll = function() {
+    allIdlz = !allIdlz
     Cards.idlzAll($scope.cards, $scope.allIdlz)
-    $scope.allIdlz = !$scope.allIdlz
     angular.forEach($scope.cards, function(card) {
       $scope.toggleIdlz(card)
     })

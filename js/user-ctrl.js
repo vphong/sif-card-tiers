@@ -2,60 +2,57 @@ app.controller('UserCtrl', function($rootScope, $scope, Cards, localStorageServi
   // $rootScope = $rootScope.$new(true)
   // $scope = $scope.$new(true)
   // localStorageService.clearAll()
+  var allIdlz = false;
 
   var init = function() {
-    $scope.userFilters = localStorageService.get('userFilters');
-    if (!$scope.userFilters) {
-      $scope.userFilters = angular.copy($rootScope.InitFilters);
-      $scope.userFilters.displayImg = true;
+    $scope.filters = localStorageService.get('userFilters');
+    if (!$scope.filters) {
+      $scope.filters = angular.copy($rootScope.InitFilters);
+      $scope.filters.displayImg = true;
     }
 
-    $scope.userSort = localStorageService.get('userSort');
-    if (!$scope.userSort) {
-      $scope.userSort = {
+    $scope.sort = localStorageService.get('sort');
+    if (!$scope.sort) {
+      $scope.sort = {
         type: 'stat.avg',
         desc: true,
       }
-      localStorageService.set('userSort', $scope.userSort);
+      localStorageService.set('sort', $scope.sort);
     }
 
     $scope.sit = localStorageService.get('sit');
     if (!$scope.sit) {
       $scope.sit = {};
     } else {
-      // $scope.userCards = [];
+      // $scope.cards = [];
     }
 
 
-    $scope.userSong = localStorageService.get('userSong');
-    if (!$scope.userSong) $scope.userSong = angular.copy($rootScope.Song);
+    $scope.song = localStorageService.get('userSong');
+    if (!$scope.song) $scope.song = angular.copy($rootScope.Song);
 
 
-    $scope.userSearch = localStorageService.get('userSearch');
-    if (!$scope.userSearch) $scope.userSearch = "";
+    $scope.search = localStorageService.get('userSearch');
+    if (!$scope.search) $scope.userSearch = "";
 
     // storage for http result of account grabbing
     $scope.rawUserCards = localStorageService.get('rawUserCards');
     // storage for card data of rawUserCards
     $scope.rawUserCardsData = localStorageService.get('rawUserCardsData');
 
-    if ($scope.rawUserCardsData) $scope.userCards = angular.copy(Cards.filterCards($scope.userFilters, $scope.rawUserCardsData))
-    else $scope.userCards = [];
+    if ($scope.rawUserCardsData) $scope.cards = angular.copy(Cards.filterCards($scope.filters, $scope.rawUserCardsData))
+    else $scope.cards = [];
 
-    Cards.calcSkill($scope.userCards, $scope.userSong, $scope.userFilters.heel);
+    Cards.calcSkill($scope.cards, $scope.song);
 
   }
   init();
-  $scope.toggleHeel = function() {
-    Cards.calcSkill($scope.userCards, $scope.userSong, $scope.userFilters.heel);
-    $scope.sortBy('stat.avg')
-  }
   $scope.updateSearch = function() {
     localStorageService.set('userSearch', $scope.userSearch);
   }
 
   $scope.updateSong = function() {
-    localStorageService.set('userSong', $scope.userSong);
+    localStorageService.set('userSong', $scope.song);
   }
 
   // get accounts from sit username
@@ -96,9 +93,9 @@ app.controller('UserCtrl', function($rootScope, $scope, Cards, localStorageServi
       $scope.sit.accErr = true;
       $scope.rawUserCards = [];
       $scope.rawUserCardsData = [];
-      $scope.userCards = [];
+      $scope.cards = [];
       localStorageService.set('sit', $scope.sit);
-      localStorageService.set('userCards', $scope.userCards);
+      localStorageService.set('userCards', $scope.cards);
       localStorageService.set('rawUserCards', $scope.rawUserCards);
       localStorageService.set('rawUserCardsData', $scope.rawUserCardsData);
 
@@ -109,7 +106,7 @@ app.controller('UserCtrl', function($rootScope, $scope, Cards, localStorageServi
   $scope.getAccounts = function() {
     $scope.grabbedAccounts = true;
     $scope.rawUserCards = [];
-    $scope.userCards = [];
+    $scope.cards = [];
     $scope.rawUserCardsData = [];
 
     Cards.getUrl($scope.sit.accountsUrl).then(getAccountsSuccess);
@@ -146,20 +143,7 @@ app.controller('UserCtrl', function($rootScope, $scope, Cards, localStorageServi
           // if userCard game id == database id and SIT ids are different
           // then card is found, push card data and idlz status
           card.user_idlz = userCard.idolized;
-
-          if (card.user_idlz) {
-            // set smile, pure, cool stats to idolized stats
-            card.max_smile = card.idolized_maximum_statistics_smile;
-            card.max_pure = card.idolized_maximum_statistics_pure;
-            card.max_cool = card.idolized_maximum_statistics_cool;
-
-          } else {
-            // set smile, pure, cool stats to idolized stats
-            card.max_smile = card.non_idolized_maximum_statistics_smile;
-            card.max_pure = card.non_idolized_maximum_statistics_pure;
-            card.max_cool = card.non_idolized_maximum_statistics_cool;
-
-          }
+          card.idlz = card.user_idlz
 
           $scope.rawUserCardsData.push(angular.copy(card));
         }
@@ -170,9 +154,9 @@ app.controller('UserCtrl', function($rootScope, $scope, Cards, localStorageServi
     localStorageService.set('rawUserCardsData', $scope.rawUserCardsData);
 
     // filter for display
-    $scope.userCards = angular.copy(Cards.filterCards($scope.userFilters, $scope.rawUserCardsData));
-    Cards.calcSkill($scope.userCards, $scope.userSong, $scope.userFilters.heel);
-    localStorageService.set('userCards', $scope.userCards)
+    $scope.cards = angular.copy(Cards.filterCards($scope.filters, $scope.rawUserCardsData));
+    Cards.calcSkill($scope.cards, $scope.song);
+    localStorageService.set('userCards', $scope.cards)
 
   };
   var getCardsError = function(response) {
@@ -180,47 +164,57 @@ app.controller('UserCtrl', function($rootScope, $scope, Cards, localStorageServi
   }
   $scope.getCards = function() {
     $scope.rawUserCardsData = [];
-    $scope.userCards = [];
+    $scope.cards = [];
     Cards.getUrl($scope.sit.ownedCardsUrl).then(getCardsSuccess);
   };
 
 
   $scope.filterCards = function() {
-    $scope.userCards = Cards.filterCards($scope.userFilters, angular.copy($scope.rawUserCardsData));
-    Cards.calcSkill($scope.userCards, $scope.userSong, $scope.userFilters.heel);
+    console.log($scope.filters)
+    $scope.cards = Cards.filterCards($scope.filters, angular.copy($scope.rawUserCardsData));
+    Cards.calcSkill($scope.cards, $scope.song);
 
-    localStorageService.set('userFilters', $scope.userFilters);
+    localStorageService.set('userFilters', $scope.filters);
   }
 
-  $scope.$watch('userFilters.compare', function(n, o) {
-    if (n != o) {
-      $scope.userSort.type = 'stat.avg';
-      localStorageService.set('userSort', $scope.userSort)
-    }
-  })
-
   $scope.setLocalStorageFilters = function() {
-    localStorageService.set('userFilters', $scope.userFilters)
+    localStorageService.set('userFilters', $scope.filters)
   }
 
   $scope.resetFilters = function() {
-    $scope.userFilters = angular.copy($rootScope.InitFilters);
-    localStorageService.set('userFilters', $scope.userFilters);
+    $scope.filters = angular.copy($rootScope.InitFilters);
+    localStorageService.set('userFilters', $scope.filters);
 
-    $scope.userSort = {
+    $scope.sort = {
       type: 'stat.avg',
       desc: true,
     }
     $scope.filterCards()
-    $scope.sortBy($scope.userSort.type);
+    $scope.sortBy($scope.sort.type);
+  }
+
+  $scope.toggleIdlz = function(card) {
+    // console.log(card)
+    card.stat.display = card.idlz ? card.stat.idlz : card.stat.base
+  }
+  $scope.idlzAll = function() {
+    allIdlz = !allIdlz
+    Cards.idlzAll($scope.cards, allIdlz)
+    angular.forEach($scope.cards, function(card) {
+      $scope.toggleIdlz(card)
+    })
+
+    if ($scope.sort.type == 'stat.display') {
+      $scope.sortBy('stat.display', true)
+    }
   }
 
   $scope.sortBy = function(type) {
-    Cards.sortBy($scope.userSort, type)
-    localStorageService.set('userSort', $scope.userSort)
+    Cards.sortBy($scope.sort, type)
+    localStorageService.set('sort', $scope.sort)
   }
   $scope.displayScore = function(card, scoreType) {
-    return Cards.displayScore(card, scoreType, $scope.userFilters)
+    return Cards.displayScore(card, scoreType, $scope.filters)
   }
 
 });

@@ -1,7 +1,7 @@
 <td>{{sort.desc ? $index+1 : filtered.length - $index}}</td>
 <td class="name-display">
   <div class="media">
-    <div class="media-left"><img ng-if="filters.displayImg" ng-src="{{filters.idlz || card.is_promo ? card.round_card_idolized_image : card.round_card_image}}" class="display-image media-image">
+    <div class="media-left"><img ng-if="filters.displayImg || userFilters.displayImg" ng-src="{{card.idlz || card.is_promo ? card.round_card_idolized_image : card.round_card_image}}" class="display-image media-image">
     </div>
     <div class="media-body media-middle">
       <a href="{{card.website_url}}" ng-class="{'text-smile': card.attribute=='Smile', 'text-pure': card.attribute=='Pure', 'text-cool': card.attribute=='Cool'}">
@@ -15,7 +15,7 @@
   </div>
 </td>
 <td>
-  <input type="checkbox" ng-model="card.idlz" ng-click="toggleIdlz(card)">
+  <input type="checkbox" ng-model="card.idlz" ng-click="toggleIdlz(card)" ng-disabled="card.user_idlz">
 </td>
 <td>{{card.id}}</td>
 <td>{{card.stat.display}}
