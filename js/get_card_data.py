@@ -1,3 +1,5 @@
+# coding=utf-8
+
 import urllib.request
 import json
 import datetime
@@ -550,7 +552,7 @@ def cleanCard(d, keys):
 
     ret['full_name'] = ret['full_name'] + " " + ret['name']
 
-    # handle unicode error output for "é"
+    # handle unicode error output for "e'"
     if ret['translated_collection'] and "Maid" in ret['translated_collection']:
         ret['translated_collection'] = "Café Maid"
 
@@ -620,7 +622,7 @@ def getRawCards():
             cards.append(card)
 
     # write raw data to file
-    with open('js/cards.json', 'w') as f:
+    with open('cards.json', 'w') as f:
         logging.info("getRawCards(): writing to file...")
         json.dump(cards, f, indent=2, sort_keys=True)
 
@@ -632,7 +634,7 @@ def processCards():
     logging.info("processCards: begin")
     # initalization
     logging.info("processCards(): loading card data...")
-    with open('js/cards.json', 'r') as infile:
+    with open('cards.json', 'r') as infile:
         data = json.loads(infile.read())
 
     cards = []
@@ -645,7 +647,7 @@ def processCards():
     # logging.info(cards[0]['oScore'])
     # write to file with use for angular
     logging.info("processCards(): done cleaning. writing to file...")
-    with open('js/cards.js', 'w') as f:
+    with open('cards.js', 'w') as f:
         f.write("app.constant('CardData',\n")
         json.dump(cards, f, indent=2, sort_keys=True)
         f.write("\n);")
