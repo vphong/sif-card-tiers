@@ -199,6 +199,18 @@ app.factory('Cards', function($rootScope, $http, Calculations) {
           filters.year == "2" && card.year == "second" ||
           filters.year == "3" && card.year == "third")
       ) {
+        if (card.rarity == "UR"){
+          card.stat.base += 500
+          card.stat.idlz += 1000
+        } else if (card.rarity == "SSR") {
+          card.stat.base += 375
+          card.stat.idlz += 750
+        } else if (card.rarity == "SR") {
+          card.stat.base += 250
+          card.stat.idlz += 500
+        }
+        card.stat.display = card.stat.base
+
         newCards.push(card);
       }
 
@@ -255,9 +267,15 @@ app.factory('Cards', function($rootScope, $http, Calculations) {
 
     })
 
+    ret.toggleIdlz = function(card) {
+      card.stat.display = card.idlz ? card.stat.idlz : card.stat.base
+    }
     ret.idlzAll = function(cards, idlz) {
       angular.forEach(cards, function(card) {
-        if (!card.user_idlz) card.idlz = idlz
+        if (!card.user_idlz) {
+           card.idlz = idlz
+           ret.toggleIdlz(card)
+        }
       })
     }
 

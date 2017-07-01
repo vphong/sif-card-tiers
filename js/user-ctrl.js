@@ -170,7 +170,6 @@ app.controller('UserCtrl', function($rootScope, $scope, Cards, localStorageServi
 
 
   $scope.filterCards = function() {
-    console.log($scope.filters)
     $scope.cards = Cards.filterCards($scope.filters, angular.copy($scope.rawUserCardsData));
     Cards.calcSkill($scope.cards, $scope.song);
 
@@ -192,16 +191,14 @@ app.controller('UserCtrl', function($rootScope, $scope, Cards, localStorageServi
     $scope.filterCards()
     $scope.sortBy($scope.sort.type);
   }
-
   $scope.toggleIdlz = function(card) {
-    // console.log(card)
-    card.stat.display = card.idlz ? card.stat.idlz : card.stat.base
+    Cards.toggleIdlz(card)
   }
   $scope.idlzAll = function() {
     allIdlz = !allIdlz
     Cards.idlzAll($scope.cards, allIdlz)
     angular.forEach($scope.cards, function(card) {
-      $scope.toggleIdlz(card)
+     Cards.toggleIdlz(card)
     })
 
     if ($scope.sort.type == 'stat.display') {

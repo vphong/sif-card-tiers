@@ -47,16 +47,13 @@ app.controller('TierCtrl', function($rootScope, $scope, Cards, localStorageServi
     localStorageService.set('sort', $scope.sort)
   }
 
+
   $scope.toggleIdlz = function(card) {
-    // console.log(card)
-    card.stat.display = card.idlz ? card.stat.idlz : card.stat.base
-  }
+    Cards.toggleIdlz(card)
+  } 
   $scope.idlzAll = function() {
     allIdlz = !allIdlz
     Cards.idlzAll($scope.cards, $scope.allIdlz)
-    angular.forEach($scope.cards, function(card) {
-      $scope.toggleIdlz(card)
-    })
 
     if ($scope.sort.type == 'stat.display') {
       $scope.sortBy('stat.display', true)
