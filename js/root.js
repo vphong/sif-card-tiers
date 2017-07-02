@@ -21,7 +21,7 @@ app.constant('InitFilters', {
     premium: true,
     event: true,
     promo: true,
-    sc: true,
+    su: true,
     pl: true,
     hl: true,
     muse: true,

@@ -1,97 +1,96 @@
 <div modal="changelog" close="close()">
-    <div class="modal-header">
-        <button type="button" class="close" ng-click="close()" aria-hidden="true">&times;</button>
-        <h4 class="modal-title">Changelog</h4>
+  <div class="modal-header">
+    <button type="button" class="close" ng-click="close()" aria-hidden="true">&times;</button>
+    <h4 class="modal-title">Changelog</h4>
+  </div>
+  <div class="modal-body" style="height: 500px; overflow: auto">
+    <div class="alert alert-danger">If something doesn't work, try clearing your cache. </div>
+
+    <div class="well well-sm container-fluid">
+      <label class="label label-info col-xs-2">Currently</label>
+      <div class="col-xs-10">
+        lol
+      </div>
+    </div <div class="well well-sm container-fluid">
+    <label class="label label-default col-xs-2">Jul. 1, 2017</label>
+    <div class="col-xs-10">
+      Dang. Haven't worked on this in a while.
+      <ul>
+        <li>I was working on making Tier List v2.0 a Schoolido.lu page, but Deby and I have been busy and we both keep missing each other, so I thought I would take a day to fix up this page. It was easier than anticipated.</li>
+        <li><b>TL;DR New stuff is mostly better math.</b> C- and O-score are gone. Maybe I'll get around to documenting it soon. I don't get excited talking about this stuff anymore since I don't even get excited about the game anymore, but people still use
+          this page. I didn't want to develop something and never publish it.</li>
+        <li><u>School Idol Skills and Center Skills are not included.</u> If I get around to it, I would account for two SIS options - Optimal SIS (stat-boosting) and Skill Enhancement (Trick/Heel/whatever the last one is).</li>
+        <li><u>Card skill calculation is much more robust.</u> I won't get in depth, but <a href="https://github.com/vphong/sif-card-tiers/blob/revamp/js/app.js#L97-L156">you can check out the math for yourself</a>.</li>
+        <li>I figured out the <u>song score/points to card stat equivalence rate.</u> I thought that was cool and helpful to compare cards individually.</li>
+        <li>Also figured out <u>how much Perfect Locks actually contribute to score increase.</u> <a href="https://github.com/vphong/sif-card-tiers/blob/revamp/js/app.js#L126-L136">Not much unless you get tons of Greats, as expected, but it was fun.</a> </li>
+      </ul>
+      Uhh, I think that's it. Again, this page is open source, so please contribute if you have the time. I still don't know how I'm going to pull off automatically updating the card database.
+
     </div>
-    <div class="modal-body" style="height: 500px; overflow: auto">
-      <div class="alert alert-danger">If something doesn't work, try clearing your cache. </div>
-
-        <div class="well well-sm container-fluid">
-            <label class="label label-info col-xs-2">Currently</label>
-            <div class="col-xs-10">
-                lol
-            </div>
-        </div
-        <div class="well well-sm container-fluid">
-            <label class="label label-default col-xs-2">Jul. 1, 2017</label>
-            <div class="col-xs-10">
-                Dang. Haven't worked on this in a while.
-                <ul>
-                  <li>I was working on making Tier List v2.0 a Schoolido.lu page, but Deby and I have been busy and we both keep missing each other, so I thought I would take a day to fix up this page. It was easier than anticipated.</li>
-                  <li><b>TL;DR New stuff is mostly better math.</b> C- and O-score are gone. Maybe I'll get around to documenting it soon. I don't get excited talking about this stuff anymore since I don't even get excited about the game anymore, but people still use this page. I didn't want to develop something and never publish it.</li>
-                  <li><u>School Idol Skills and Center Skills are not currently accounted for.</u> If I get around to it, I would account for two SIS options - Optimal SIS (stat-boosting) and Skill Enhancement (Trick/Heel/whatever the last one is).</li>
-                  <li><u>Card skill calculation is much more robust.</u> I won't get in depth, but <a href="https://github.com/vphong/sif-card-tiers/blob/revamp/js/app.js#L97-L156">you can check out the math for yourself</a>.</li>
-                  <li><u>I figured out the song score/points to card stat equivalence rate.</u> I thought that was cool and helpful to compare cards individually.</li>
-                  <li><u>Also figured out how much Perfect Locks actually contribute to score increase.</u> <a href="https://github.com/vphong/sif-card-tiers/blob/revamp/js/app.js#L126-L136">Not much unless you get tons of Greats, as expected, but it was fun.</a> </li>
-                </ul>
-                Uhh, I think that's it. Again, this page is open source, so please contribute if you have the time. I still don't know how I'm going to pull off automatically updating the card database.
-
-            </div>
-        </div>
-        <div class="well well-sm container-fluid">
-            <label class="label label-default col-xs-2">Oct. 1</label>
-            <div class="col-xs-10">
-                Fixed some bugs with score calculation and sorting.
-            </div>
-        </div>
-        <div class="well well-sm container-fluid">
-            <label class="label label-default col-xs-2">Sept. 30</label>
-            <div class="col-xs-10">
-                Fixed up some backend-ish bits to make things easier on me. Pretty sure everything still works as intended, but if you catch something wrong, let me know.
-            </div>
-        </div>
-
-        <div class="well well-sm container-fluid">
-            <label class="label label-default col-xs-2">Sept. 29</label>
-            <div class="col-xs-10">Quick and dirty update.
-                <ul class="list">
-                    <li>Subunit/year filters on All Cards page, will be added to User Cards soon.
-                    </li>
-                    <li>
-                        The filters sidebar may undergo some visual changes over the next few days. If you have any suggestions on improving it/reducing clutter, let me know!</li>
-                </ul>
-            </div>
-        </div>
-        <div class="well well-sm container-fluid">
-            <label class="label label-default col-xs-2">Sept. 28</label>
-            <div class="col-xs-10">4.0!?!?! I have to kick this page into gear qq
-                <ul class="list">
-                    <li>Revised scoring formula to convert Score Up to its equivalent in raw stat and added it back into the scoring formula. Read more
-                        <a href="http://dreamsicl.github.io/sif-card-tiers/#/#scoring">here</a>.</li>
-                    <li>Fixed a couple User Cards bugs</li>
-                </ul>
-            </div>
-        </div>
-        <div class="well well-sm container-fluid">
-            <label class="label label-default col-xs-2">Sept. 24</label>
-            <div class="col-xs-10">Pretty important update!
-                <ul class="list">
-                    <li>allow song parameters input for better skill calculation;
-                        <a href="https://dreamsicl.github.io/sif-card-tiers/#/#skill">read more here</a>
-                    </li>
-                    <li>revised scoring formula to be more reflective of the actual game, check info page.
-                        <ul>
-                            <li>Summary: the scoring formula is now more reflective of the actual stats you will see in game if you equip optimal SIS. I have taken away score_up_boost for now, but it may come back with a weight (eg
-                                <code>+ score_up_boost * some_weight</code>) since Score Up doesn't directy affect a card's stats but still is something to consider when choosing a card. The same goes for perfect locks (turning goods/greats into perfects).</li>
-                        </ul>
-                    </li>
-                    <li>better Heel display</li>
-                    <li>allow viewing multiple skill types at once (eg. Score Up + Healer, or all 3)</li>
-                    <li>User Cards page may be a bit buggy for the time being</li>
-                </ul>
-            </div>
-        </div>
-        <div class="well well-sm container-fluid">
-            <label class="label label-default col-xs-2">Sept. 19</label>
-            <div class="col-xs-10">Fixed an error in the logic for calculating C- and O- score.</div>
-        </div>
-        <div class="well well-sm container-fluid">
-            <label class="label label-default col-xs-2">Sept. 18</label>
-            <div class="col-xs-10">Prepping for public release. Updated card database, minor styling/bug fixes. Now grabs all user cards instead of just the first 100.</div>
-        </div>
-        <div class="well well-sm container-fluid">
-            <label class="label label-default col-xs-2">Sept. 16</label>
-            <div class="col-xs-10">Made this changelog and everything leading up to it.</div>
-        </div>
+    <div class="well well-sm container-fluid">
+      <label class="label label-default col-xs-2">Oct. 1</label>
+      <div class="col-xs-10">
+        Fixed some bugs with score calculation and sorting.
+      </div>
     </div>
+    <div class="well well-sm container-fluid">
+      <label class="label label-default col-xs-2">Sept. 30</label>
+      <div class="col-xs-10">
+        Fixed up some backend-ish bits to make things easier on me. Pretty sure everything still works as intended, but if you catch something wrong, let me know.
+      </div>
+    </div>
+
+    <div class="well well-sm container-fluid">
+      <label class="label label-default col-xs-2">Sept. 29</label>
+      <div class="col-xs-10">Quick and dirty update.
+        <ul class="list">
+          <li>Subunit/year filters on All Cards page, will be added to User Cards soon.
+          </li>
+          <li>
+            The filters sidebar may undergo some visual changes over the next few days. If you have any suggestions on improving it/reducing clutter, let me know!</li>
+        </ul>
+      </div>
+    </div>
+    <div class="well well-sm container-fluid">
+      <label class="label label-default col-xs-2">Sept. 28</label>
+      <div class="col-xs-10">4.0!?!?! I have to kick this page into gear qq
+        <ul class="list">
+          <li>Revised scoring formula to convert Score Up to its equivalent in raw stat and added it back into the scoring formula. Read more
+            <a href="http://dreamsicl.github.io/sif-card-tiers/#/#scoring">here</a>.</li>
+          <li>Fixed a couple User Cards bugs</li>
+        </ul>
+      </div>
+    </div>
+    <div class="well well-sm container-fluid">
+      <label class="label label-default col-xs-2">Sept. 24</label>
+      <div class="col-xs-10">Pretty important update!
+        <ul class="list">
+          <li>allow song parameters input for better skill calculation;
+            <a href="https://dreamsicl.github.io/sif-card-tiers/#/#skill">read more here</a>
+          </li>
+          <li>revised scoring formula to be more reflective of the actual game, check info page.
+            <ul>
+              <li>Summary: the scoring formula is now more reflective of the actual stats you will see in game if you equip optimal SIS. I have taken away score_up_boost for now, but it may come back with a weight (eg
+                <code>+ score_up_boost * some_weight</code>) since Score Up doesn't directy affect a card's stats but still is something to consider when choosing a card. The same goes for perfect locks (turning goods/greats into perfects).</li>
+            </ul>
+          </li>
+          <li>better Heel display</li>
+          <li>allow viewing multiple skill types at once (eg. Score Up + Healer, or all 3)</li>
+          <li>User Cards page may be a bit buggy for the time being</li>
+        </ul>
+      </div>
+    </div>
+    <div class="well well-sm container-fluid">
+      <label class="label label-default col-xs-2">Sept. 19</label>
+      <div class="col-xs-10">Fixed an error in the logic for calculating C- and O- score.</div>
+    </div>
+    <div class="well well-sm container-fluid">
+      <label class="label label-default col-xs-2">Sept. 18</label>
+      <div class="col-xs-10">Prepping for public release. Updated card database, minor styling/bug fixes. Now grabs all user cards instead of just the first 100.</div>
+    </div>
+    <div class="well well-sm container-fluid">
+      <label class="label label-default col-xs-2">Sept. 16</label>
+      <div class="col-xs-10">Made this changelog and everything leading up to it.</div>
+    </div>
+  </div>
 </div>
