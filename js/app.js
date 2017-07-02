@@ -268,7 +268,16 @@ app.factory('Cards', function($rootScope, $http, Calculations) {
     })
 
     ret.toggleIdlz = function(card) {
-      card.stat.display = card.idlz ? card.stat.idlz : card.stat.base
+      if (card.idlz) {
+        card.stat.display = card.stat.idlz
+        card.stat.avg = card.stat.idlz + card.skill.stat_bonus_avg
+        card.stat.best = card.stat.idlz + card.skill.stat_bonus_best
+      } else {
+
+        card.stat.display = card.stat.base
+        card.stat.avg = card.stat.base + card.skill.stat_bonus_avg
+        card.stat.best = card.stat.base + card.skill.stat_bonus_best
+      }
     }
     ret.idlzAll = function(cards, idlz) {
       angular.forEach(cards, function(card) {
