@@ -12,6 +12,7 @@ logging.basicConfig(level=logging.INFO)
 # initalization
 # original card endpoint
 sitURL = "http://schoolido.lu/api/cards/?ordering=-id&is_special=False&page_size=10&rarity=SR%2CSSR%2CUR"
+sitIDs = "http://schoolido.lu/api/cardids/?&is_special=False&rarity=SR%2CSSR%2CUR&ids="
 krrURL = "https://sif.kirara.ca/card/"
 
 # keys to grab from json
@@ -51,18 +52,19 @@ def isnumber(s):
 
 # function: extract a card's skill level details from sif.kirara.ca
 # input: card id #
-def getSkillLevel(id):
-    logging.info("getSkillLevel():", repr(id))
+def getSkillLevels(id):
+    logging.info("getSkillLevels():" + repr(id))
     response = urllib.request.urlopen(krrURL + repr(id))
-    soup = BeautifulSoup(response.read(), "html.parser")
+    soup = BeautifulSoup(response.read(), "lxml")
     script_contents = str(soup.find(id="iv").string)
     card_info_str = script_contents[script_contents.find("{"):script_contents.find("}")] + "}}"
     card_info = json.loads(card_info_str)
-    skill_levels = {}
+    skill_levels = {"levels": {}}
     for lvl, info in enumerate(card_info[repr(id)]['skill']):
-        skill_levels[lvl+1] = info
+        percent = info[0]/100
+        amount = info[1]
+        skill_levels['levels'][lvl+1] = {'percent': percent, 'amount': amount}
     return skill_levels
-
 
 # function: extract a card's skill details and write averages to card
 # input: dict card
@@ -123,7 +125,6 @@ def skillDetails(card):
                 numCount = numCount + 1
 
     card['skill'].update(skillNums)
-    card['skill'].update(getSkillLevel(card['id']))
     card.pop('skill_details', None)
     #     card['skill']['hl_heel'] = card['skill']['hl'] * 270
 
@@ -205,8 +206,8 @@ def cleanCard(d, keys):
     ret['full_name'] = ret['full_name'] + " " + ret['name']
 
     # # handle unicode error output for "e'"
-    # if ret['translated_collection'] and "Maid" in ret['translated_collection']:
-    #     ret['translated_collection'] = "Café Maid"
+    if ret['translated_collection'] and "Maid" in ret['translated_collection']:
+        ret['translated_collection'] = "Cafe Maid"
 
     ret['full_name'] = ret['rarity']
     if ret['is_promo']:
@@ -270,7 +271,7 @@ def getJSON(url):
     return data
 
 def mostRecentSITCard():
-    mostRecentSIT= getJSON("http://schoolido.lu/api/cards/?ordering=-id&page=1&page_size=1")
+    mostRecentSIT= getJSON("http://schoolido.lu/api/cards/?ordering=-id&page=1&page_size=1&rarity=SR%2CSSR%2CUR&is_special=False")
     mostRecentSIT = mostRecentSIT['results'][0]
     return mostRecentSIT['id']
 
@@ -279,8 +280,80 @@ def mostRecentLocalCard(cards):
     for card in cards:
         if card['id'] > mostRecentId:
             mostRecentId = card['id']
-
+    return mostRecentId
 ###########
+def populateCardSkills():
+    logging.info("populateCardSkills: begin")
+    response = urllib.request.urlopen(sitIDs)
+    ids = json.loads(response.read())
+
+    logging.info("populateCardSkills: getting")
+    logging.info(ids)
+
+    # print(firstHalf)
+    skills = []
+    for i in ids:
+        skill = {'id': i}
+        try:
+            skill.update(getSkillLevels(i))
+            skills.append(skill)
+        except:
+            break
+
+    logging.info("populateCardSkills: writing to skills.json ")
+    with open("skills.json", 'w') as f:
+        json.dump(skills, f, sort_keys=True)
+
+# populateCardSkills()
+def updateSkillLevels():
+    skills = []
+    with open("skills.json", 'r') as f:
+        skills = json.loads(f.read())
+
+    mostRecentLocal = mostRecentLocalCard(skills)
+    mostRecentSIT = mostRecentSITCard()
+
+    logging.info("updateSkillLevels(): most recent local: " + repr(mostRecentLocal))
+    logging.info("updateSkillLevels(): most recent Sit: " + repr(mostRecentSIT))
+
+
+
+    if mostRecentLocal < mostRecentSIT:
+        possibleIds = ",".join([repr(i) for i in range(mostRecentLocal+1, mostRecentSIT+1)])
+        # print(sitIDs+possibleIds)
+        response = urllib.request.urlopen(sitIDs+possibleIds)
+        ids = json.loads(response.read())
+
+        # mostRecentSIT = max(ids)
+        logging.info("updateSkillLevels(): getting")
+        logging.info(ids)
+        # mostRecentLocal = 1201
+        # mostRecentSIT = 1206
+
+        for i in ids:
+            logging.info(i)
+            skill = {'id': i}
+
+            try:
+                skill.update(getSkillLevels(i))
+                skills.append(skill)
+            except Exception as e:
+                print(e)
+                print(skill)
+                break
+
+        logging.info("updateSkillLevels: appending to skills.json ")
+        with open("skills.json", 'w') as f:
+            json.dump(skills, f, sort_keys=True)
+    else:
+        logging.info("updateSkillLevels: up to date")
+
+
+# updateSkillLevels()
+# updateSkillLevels()
+    # data = urllib.request.urlopen("http://schoolido.lu/api/cardids/?is_special=False&rarity=SR,SSR,UR&ids=" + cards)
+    # newIDs = json.loads(data.read())
+    # print(cards)
 
 # function: get raw card data from schoolido.lu API
 def getRawCards():
@@ -304,25 +377,75 @@ def getRawCards():
 
     logging.info("getRawCards(): done")
 
+# function: only make http requests to SIT for new cards
+def updateCardsJSON():
+    logging.info("getNewCards(): begin")
+    with open('cards.json', 'r', encoding='utf-8') as f:
+        oldCards = json.loads(f.read())
+
+    mostRecentLocal = mostRecentLocalCard(oldCards)
+    mostRecentSIT = mostRecentSITCard()
+    # mostRecentLocal = 1201
+    # mostRecentSIT = 1206
+    logging.info("getNewCards(): most recent local: " + str(mostRecentLocal))
+    logging.info("getNewCards(): most recent on SIT: " + str(mostRecentSIT))
+
+    if mostRecentLocal < mostRecentSIT:
+        logging.info("getNewCards(): getting new card info from schoolido.lu")
+
+        possibleIds = ",".join([repr(i) for i in range(mostRecentLocal+1, mostRecentSIT+1)])
+            # print(sitIDs+possibleIds)
+        response = urllib.request.urlopen(sitIDs+possibleIds)
+        ids = json.loads(response.read())
+
+        cards = ",".join([repr(i) for i in ids])
+        newCardsData = getJSON("http://schoolido.lu/api/cards/?is_special=False&rarity=SR,SSR,UR&ids=" + cards)
+        newCards = []
+        for newCard in newCardsData['results']:
+            newCards.append(newCard)
+
+        logging.info("getNewCards(): combining new & old cards")
+        cards = oldCards + newCards
+
+        logging.info("getNewCards(): writing to cards.json")
+        with open('cards.json', 'w', encoding='utf-8') as f:
+            json.dump(cards, f, indent=2, sort_keys=True)
+
+    else:
+        logging.info("getNewCards(): up to date")
+
+def processNewCards():
+    with open("new-cards.json", 'r', encoding='utf-8') as f:
+        newCards = json.loads(f.read())
+
+    with open("cards.json", 'r', encoding='utf-8') as f:
+        oldCards = json.loads(f.read())
+
+    cards = oldCards + newCards
+    print(cards)
+
+    with open("cards.json", 'w', encoding='utf-8') as f:
+        json.dumps(cards, f, indent=2)
+    # lines.in
+# processNewCards()
 
 # function: grab info needed for use in web app
+# input: cards in json/dict
 def processCards():
     logging.info("processCards: begin")
     # initalization
-    logging.info("processCards(): loading card data...")
+    logging.info("processCards(): loading card data")
     with open('cards.json', 'r', encoding='utf-8') as infile:
         data = json.loads(infile.read())
 
     cards = []
-    logging.info("processCards(): cleaning cards...")
+    logging.info("processCards(): cleaning cards")
     for card in data:
         card = cleanCard(card, keysNeeded)
-        # addFullName(card)
         cards.append(card)
-    # logging.info(cards[0]['cScore'])
-    # logging.info(cards[0]['oScore'])
-    # write to file with use for angular
-    logging.info("processCards(): done cleaning. writing to file...")
+
+    # write to file for angular
+    logging.info("processCards(): done cleaning. writing to cards.js")
     with open('cards.js', 'w', encoding='utf-8') as f:
         f.write("app.constant('CardData',\n")
         json.dump(cards, f, indent=2)
@@ -331,5 +454,5 @@ def processCards():
     logging.info("processCards(): done")
 
 
-# getRawCards()
+getRawCards()
 # processCards()

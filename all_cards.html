@@ -1,181 +1,175 @@
 <div class="container-fluid row">
-    <div class="col-xs-2" id="filters-md-screens" master>
-        <div class="row">
+  <div class="col-xs-2" id="filters-md-screens" master>
+    <div class="row">
 
-            <div class="col-xs-12 no-padding">
-                <div class="input-group input-group-sm">
-                    <span
-                        class="input-group-addon"
-                        style="cursor: help"
-                        popover-append-to-body="true"
-                        popover-trigger="'mouseenter'"
-                        popover-placement="top-left"
-                        uib-popover="Terms include: girl, attribute, skill type, main unit, subunit, and English schoolido.lu set name.">
+      <div class="col-xs-12 no-padding">
+        <div class="input-group input-group-sm">
+          <span class="input-group-addon" style="cursor: help" popover-append-to-body="true" popover-trigger="'mouseenter'" popover-placement="top-left" uib-popover="Terms include: girl, attribute, skill type, main unit, subunit, and English schoolido.lu set name.">
                         <i class="fa fa-search"></i>
                     </span>
-                    <input type="text" class="form-control" ng-model="search" ng-change="updateSearch()" placeholder="search" uib-typeahead="type for type in $root.Typeahead | filter:$viewValue | limitTo:8">
+          <input type="text" class="form-control" ng-model="search" ng-change="updateSearch()" placeholder="search" uib-typeahead="type for type in $root.Typeahead | filter:$viewValue | limitTo:8">
 
-                </div>
-            </div>
+        </div>
+      </div>
 
 
-            <div class="btn-group-vertical col-xs-12" uib-tooltip="Filter by skill" tooltip-placement="top">
-                <label class="btn btn-success btn-sm" ng-model="filters.su" ng-click="filterCards()" uib-btn-checkbox>Score Up</label>
-                <label class="btn btn-success btn-sm" ng-model="filters.pl" ng-click="filterCards()" uib-btn-checkbox>Perfect Lock</label>
-                <label class="btn btn-success btn-sm" ng-model="filters.hl" ng-click="filterCards()" uib-btn-checkbox>Healer</label>
-            </div>
+      <div class="btn-group-vertical col-xs-12" uib-tooltip="Filter by skill" tooltip-placement="top">
+        <label class="btn btn-success btn-sm" ng-model="filters.su" ng-click="filterCards()" uib-btn-checkbox>Score Up</label>
+        <label class="btn btn-success btn-sm" ng-model="filters.pl" ng-click="filterCards()" uib-btn-checkbox>Perfect Lock</label>
+        <label class="btn btn-success btn-sm" ng-model="filters.hl" ng-click="filterCards()" uib-btn-checkbox>Healer</label>
+      </div>
 
-            <div class="btn-group btn-group-justified">
-                <label class="btn btn-danger btn-sm" ng-click="resetFilters()">Reset Filters</label>
-            </div>
+      <div class="btn-group btn-group-justified">
+        <label class="btn btn-danger btn-sm" ng-click="resetFilters()">Reset Filters</label>
+      </div>
 
-            <div class="btn-group-vertical col-xs-12">
-                <label class="btn btn-default btn-sm" ng-model="filters.displayImg" ng-click="setLocalStorageFilters()" uib-btn-checkbox>Display images?</label>
-                <label class="btn btn-default btn-sm" ng-model="filters.idlz" ng-click="idlzAll()">Idolize all cards?</label>
-                <!-- <label class="btn btn-default btn-sm" ng-model="filters.idlz" ng-click="sisAll()">Equip SIS to all?</label> -->
-            </div>
+      <div class="btn-group-vertical col-xs-12">
+        <label class="btn btn-default btn-sm" ng-model="filters.displayImg" ng-click="setLocalStorageFilters()" uib-btn-checkbox>Display images?</label>
+        <label class="btn btn-default btn-sm" ng-model="filters.idlz" ng-click="idlzAll()">Idolize all cards?</label>
+        <!-- <label class="btn btn-default btn-sm" ng-model="filters.idlz" ng-click="sisAll()">Equip SIS to all?</label> -->
+      </div>
 
-            <div class="btn-group btn-group-justified" uib-tooltip="Server" tooltip-placement="top">
-                <label class="btn btn-info btn-sm" ng-model="filters.server" ng-click="filterCards()" uib-btn-radio="'jp'">JP</label>
-                <label class="btn btn-info btn-sm" ng-model="filters.server" ng-click="filterCards()" uib-btn-radio="'en'">EN</label>
-            </div>
+      <div class="btn-group btn-group-justified" uib-tooltip="Server" tooltip-placement="top">
+        <label class="btn btn-info btn-sm" ng-model="filters.server" ng-click="filterCards()" uib-btn-radio="'jp'">JP</label>
+        <label class="btn btn-info btn-sm" ng-model="filters.server" ng-click="filterCards()" uib-btn-radio="'en'">EN</label>
+      </div>
 
-            <div uib-tooltip="Attribute" tooltip-placement="top">
-                <div class="btn-group btn-group-justified col-xs-12 no-padding" style="margin-bottom:0px">
-                    <label class="btn btn-info btn-sm" style="border-bottom-left-radius:0" ng-model="filters.attribute" ng-click="filterCards()" uib-btn-radio="'all'">All</label>
-                    <label class="btn btn-info btn-sm" style="border-bottom-right-radius:0" ng-model="filters.attribute" ng-click="filterCards()" uib-btn-radio="'smile'">Smile</label>
-                </div>
+      <div uib-tooltip="Attribute" tooltip-placement="top">
+        <div class="btn-group btn-group-justified col-xs-12 no-padding" style="margin-bottom:0px">
+          <label class="btn btn-info btn-sm" style="border-bottom-left-radius:0" ng-model="filters.attribute" ng-click="filterCards()" uib-btn-radio="'all'">All</label>
+          <label class="btn btn-info btn-sm" style="border-bottom-right-radius:0" ng-model="filters.attribute" ng-click="filterCards()" uib-btn-radio="'smile'">Smile</label>
+        </div>
 
-                <div class="btn-group btn-group-justified col-xs-12 no-padding">
-                    <label class="btn btn-info btn-sm" style="border-top-left-radius:0" ng-model="filters.attribute" ng-click="filterCards()" uib-btn-radio="'pure'">Pure</label>
-                    <label class="btn btn-info btn-sm" style="border-top-right-radius:0" ng-model="filters.attribute" ng-click="filterCards()" uib-btn-radio="'cool'">Cool</label>
-                </div>
-            </div>
+        <div class="btn-group btn-group-justified col-xs-12 no-padding">
+          <label class="btn btn-info btn-sm" style="border-top-left-radius:0" ng-model="filters.attribute" ng-click="filterCards()" uib-btn-radio="'pure'">Pure</label>
+          <label class="btn btn-info btn-sm" style="border-top-right-radius:0" ng-model="filters.attribute" ng-click="filterCards()" uib-btn-radio="'cool'">Cool</label>
+        </div>
+      </div>
 
-            <div class="btn-group btn-group-justified col-xs-12" uib-tooltip="Main unit" tooltip-placement="top">
-                <label class="btn btn-info btn-sm" ng-model="filters.muse" ng-click="filterCards()" uib-btn-checkbox>Muse</label>
-                <label class="btn btn-info btn-sm" ng-model="filters.aqours" ng-click="filterCards()" uib-btn-checkbox>Aqours</label>
-            </div>
+      <div class="btn-group btn-group-justified col-xs-12" uib-tooltip="Main unit" tooltip-placement="top">
+        <label class="btn btn-info btn-sm" ng-model="filters.muse" ng-click="filterCards()" uib-btn-checkbox>Muse</label>
+        <label class="btn btn-info btn-sm" ng-model="filters.aqours" ng-click="filterCards()" uib-btn-checkbox>Aqours</label>
+      </div>
 
-            <div class="btn-group btn-group-justified col-xs-12" uib-tooltip="Rarity" tooltip-placement="top">
-                <label class="btn btn-info btn-sm" ng-model="filters.sr" ng-click="toggleBool(filters.sr);filterCards()" uib-btn-checkbox>SR</label>
-                <label class="btn btn-info btn-sm" ng-model="filters.ssr" ng-click="toggleBool(filters.ssr);filterCards()" uib-btn-checkbox>SSR</label>
-                <label class="btn btn-info btn-sm" ng-model="filters.ur" ng-click="toggleBool(filters.ur);filterCards()" uib-btn-checkbox>UR</label>
-            </div>
+      <div class="btn-group btn-group-justified col-xs-12" uib-tooltip="Rarity" tooltip-placement="top">
+        <label class="btn btn-info btn-sm" ng-model="filters.sr" ng-click="toggleBool(filters.sr);filterCards()" uib-btn-checkbox>SR</label>
+        <label class="btn btn-info btn-sm" ng-model="filters.ssr" ng-click="toggleBool(filters.ssr);filterCards()" uib-btn-checkbox>SSR</label>
+        <label class="btn btn-info btn-sm" ng-model="filters.ur" ng-click="toggleBool(filters.ur);filterCards()" uib-btn-checkbox>UR</label>
+      </div>
 
-            <div class="btn-group btn-group-dropdown dropup col-xs-12 no-padding" style="margin-bottom: 10px;" uib-dropdown>
-                <button type="button" class="btn btn-sm btn-info name">Origin</button>
-                <button type="button" class="btn btn-sm btn-info drop" uib-dropdown-toggle>
+      <div class="btn-group btn-group-dropdown dropup col-xs-12 no-padding" style="margin-bottom: 10px;" uib-dropdown>
+        <button type="button" class="btn btn-sm btn-info name">Origin</button>
+        <button type="button" class="btn btn-sm btn-info drop" uib-dropdown-toggle>
                     <span class="caret"></span>
                 </button>
-                <ul class="dropdown-menu" uib-dropdown-menu role="menu" aria-labelledby="split-button">
-                    <li role="menuitem">
-                        <a ng-model="filters.premium" ng-click="filterCards()" uib-btn-checkbox>Premium</a>
-                    </li>
-                    <li role="menuitem">
-                        <a ng-model="filters.event" ng-click="filterCards()" uib-btn-checkbox>Event</a>
-                    </li>
-                    <li role="menuitem">
-                        <a ng-model="filters.promo" ng-click="filterCards()" uib-btn-checkbox>Promo</a>
-                    </li>
-                </ul>
-            </div>
+        <ul class="dropdown-menu" uib-dropdown-menu role="menu" aria-labelledby="split-button">
+          <li role="menuitem">
+            <a ng-model="filters.premium" ng-click="filterCards()" uib-btn-checkbox>Premium</a>
+          </li>
+          <li role="menuitem">
+            <a ng-model="filters.event" ng-click="filterCards()" uib-btn-checkbox>Event</a>
+          </li>
+          <li role="menuitem">
+            <a ng-model="filters.promo" ng-click="filterCards()" uib-btn-checkbox>Promo</a>
+          </li>
+        </ul>
+      </div>
 
-            <div class="btn-group btn-group-dropdown dropup col-xs-12 no-padding" style="margin-bottom: 10px;" uib-dropdown>
-                <button type="button" class="btn btn-sm btn-info name">Subunit</button>
-                <button type="button" class="btn btn-sm btn-info drop" uib-dropdown-toggle>
+      <div class="btn-group btn-group-dropdown dropup col-xs-12 no-padding" style="margin-bottom: 10px;" uib-dropdown>
+        <button type="button" class="btn btn-sm btn-info name">Subunit</button>
+        <button type="button" class="btn btn-sm btn-info drop" uib-dropdown-toggle>
                     <span class="caret"></span>
                 </button>
-                <ul class="dropdown-menu" uib-dropdown-menu role="menu" aria-labelledby="split-button">
-                    <li role="menuitem">
-                        <a ng-model="filters.subunit" ng-click="filterCards()" uib-btn-radio="'all'">All</a>
-                    </li>
-                    <li class="divider"></li>
-                    <li role="menuitem">
-                        <a ng-model="filters.subunit" ng-click="filterCards()" uib-btn-radio="'lily white'">lily white</a>
-                    </li>
-                    <li role="menuitem">
-                        <a ng-model="filters.subunit" ng-click="filterCards()" uib-btn-radio="'Printemps'">Printemps</a>
-                    </li>
-                    <li role="menuitem">
-                        <a ng-model="filters.subunit" ng-click="filterCards()" uib-btn-radio="'BiBi'">BiBi</a>
-                    </li>
-                    <li class="divider"></li>
-                    <li role="menuitem">
-                        <a ng-model="filters.subunit" ng-click="filterCards()" uib-btn-radio="'AZALEA'">AZALEA</a>
-                    </li>
-                    <li role="menuitem">
-                        <a ng-model="filters.subunit" ng-click="filterCards()" uib-btn-radio="'CYaRon'">CYaRon</a>
-                    </li>
-                    <li role="menuitem">
-                        <a ng-model="filters.subunit" ng-click="filterCards()" uib-btn-radio="'Guilty Kiss'">Guilty Kiss</a>
-                    </li>
-                </ul>
-            </div>
+        <ul class="dropdown-menu" uib-dropdown-menu role="menu" aria-labelledby="split-button">
+          <li role="menuitem">
+            <a ng-model="filters.subunit" ng-click="filterCards()" uib-btn-radio="'all'">All</a>
+          </li>
+          <li class="divider"></li>
+          <li role="menuitem">
+            <a ng-model="filters.subunit" ng-click="filterCards()" uib-btn-radio="'lily white'">lily white</a>
+          </li>
+          <li role="menuitem">
+            <a ng-model="filters.subunit" ng-click="filterCards()" uib-btn-radio="'Printemps'">Printemps</a>
+          </li>
+          <li role="menuitem">
+            <a ng-model="filters.subunit" ng-click="filterCards()" uib-btn-radio="'BiBi'">BiBi</a>
+          </li>
+          <li class="divider"></li>
+          <li role="menuitem">
+            <a ng-model="filters.subunit" ng-click="filterCards()" uib-btn-radio="'AZALEA'">AZALEA</a>
+          </li>
+          <li role="menuitem">
+            <a ng-model="filters.subunit" ng-click="filterCards()" uib-btn-radio="'CYaRon'">CYaRon</a>
+          </li>
+          <li role="menuitem">
+            <a ng-model="filters.subunit" ng-click="filterCards()" uib-btn-radio="'Guilty Kiss'">Guilty Kiss</a>
+          </li>
+        </ul>
+      </div>
 
-            <div class="btn-group btn-group-dropdown dropup col-xs-12 no-padding" style="margin-bottom: 10px;" uib-dropdown>
-                <button type="button" class="btn btn-sm btn-info name">Year</button>
-                <button type="button" class="btn btn-sm btn-info drop" uib-dropdown-toggle>
+      <div class="btn-group btn-group-dropdown dropup col-xs-12 no-padding" style="margin-bottom: 10px;" uib-dropdown>
+        <button type="button" class="btn btn-sm btn-info name">Year</button>
+        <button type="button" class="btn btn-sm btn-info drop" uib-dropdown-toggle>
                     <span class="caret"></span>
                 </button>
-                <ul class="dropdown-menu" uib-dropdown-menu role="menu" aria-labelledby="split-button">
-                    <li role="menuitem">
-                        <a ng-model="filters.year" ng-click="filterCards()" uib-btn-radio="'all'">All</a>
-                    </li>
-                    <li class="divider"></li>
-                    <li role="menuitem">
-                        <a ng-model="filters.year" ng-click="filterCards()" uib-btn-radio="'1'">First</a>
-                    </li>
-                    <li role="menuitem">
-                        <a ng-model="filters.year" ng-click="filterCards()" uib-btn-radio="'2'">Second</a>
-                    </li>
-                    <li role="menuitem">
-                        <a ng-model="filters.year" ng-click="filterCards()" uib-btn-radio="'3'">Third</a>
-                    </li>
-                </ul>
-            </div>
+        <ul class="dropdown-menu" uib-dropdown-menu role="menu" aria-labelledby="split-button">
+          <li role="menuitem">
+            <a ng-model="filters.year" ng-click="filterCards()" uib-btn-radio="'all'">All</a>
+          </li>
+          <li class="divider"></li>
+          <li role="menuitem">
+            <a ng-model="filters.year" ng-click="filterCards()" uib-btn-radio="'1'">First</a>
+          </li>
+          <li role="menuitem">
+            <a ng-model="filters.year" ng-click="filterCards()" uib-btn-radio="'2'">Second</a>
+          </li>
+          <li role="menuitem">
+            <a ng-model="filters.year" ng-click="filterCards()" uib-btn-radio="'3'">Third</a>
+          </li>
+        </ul>
+      </div>
 
-            <small class="col-xs-12">
+      <small class="col-xs-12">
                 Showing
                 <b>{{filtered.length}}</b>
                 of
                 <b>{{$root.Cards.length}}</b>
                 total cards.
             </small>
-        </div>
     </div>
+  </div>
 
-    <div id="search_table" class="container-fluid col-xs-10">
+  <div id="search_table" class="container-fluid col-xs-10">
 
-        <div id="input" class="row">
+    <div id="input" class="row">
 
-            <div class="col-xs-3 no-padding" style="padding-left: 3px">
+      <div class="col-xs-3 no-padding" style="padding-left: 3px">
 
-                <span class="icon" popover-append-to-body="true" popover-trigger="'mouseenter'" popover-placement="top" uib-popover="The numbers you input are used to calculate how effective each card's skill will be.">
+        <span class="icon" popover-append-to-body="true" popover-trigger="'mouseenter'" popover-placement="top" uib-popover="The numbers you input are used to calculate how effective each card's skill will be.">
                     <i class="text-primary fa fa-question-circle"></i>
                 </span>
-                <div class="input-group input-group-sm">
-                    <span class="input-group-addon">
+        <div class="input-group input-group-sm">
+          <span class="input-group-addon">
                         <i class="fa fa-music"></i>
                     </span>
-                    <input type="number" class="form-control" ng-model="song.notes">
-                    <span class="input-group-addon">
+          <input type="number" class="form-control" ng-model="song.notes">
+          <span class="input-group-addon">
                         total notes
                     </span>
-                </div>
-            </div>
-            <div class="col-xs-3 no-padding" style="padding-left: 3px">
-                <div class="input-group input-group-sm">
-                    <span class="input-group-addon">
+        </div>
+      </div>
+      <div class="col-xs-3 no-padding" style="padding-left: 3px">
+        <div class="input-group input-group-sm">
+          <span class="input-group-addon">
                         <i class="fa fa-clock-o"></i>
                     </span>
-                    <input type="number" class="form-control" ng-model="song.seconds">
-                    <span class="input-group-addon">
+          <input type="number" class="form-control" ng-model="song.seconds">
+          <span class="input-group-addon">
                         total seconds
                     </span>
-                </div>
-            </div>
-            <!-- <div class="col-xs-2 no-padding" style="padding-left: 3px">
+        </div>
+      </div>
+      <!-- <div class="col-xs-2 no-padding" style="padding-left: 3px">
                 <div class="input-group input-group-sm">
                     <span class="input-group-addon" style="cursor: help" popover-append-to-body="true" popover-trigger="'mouseenter'" popover-placement="top-right" uib-popover="Number of star notes per song">
                         <i class="fa fa-star"></i>
@@ -186,83 +180,85 @@
                     </span>
                 </div>
             </div> -->
-            <div class="col-xs-3 no-padding" style="padding-left: 3px">
-                <div class="input-group input-group-sm">
-                    <span class="input-group-addon">
+      <div class="col-xs-3 no-padding" style="padding-left: 3px">
+        <div class="input-group input-group-sm">
+          <span class="input-group-addon">
                         <i class="fa fa-percent"></i>
                     </span>
-                    <input type="number" class="form-control" ng-model="song.perfects" placeholder="perfects"><span class="input-group-addon">
+          <input type="number" class="form-control" ng-model="song.perfects" placeholder="perfects"><span class="input-group-addon">
                         % perfects
                     </span>
-                </div>
-            </div>
-            <div class="col-xs-3 no-padding" style="padding-left: 3px">
-                <div class="input-group input-group-sm">
-                    <span class="input-group-addon">
+        </div>
+      </div>
+      <div class="col-xs-3 no-padding" style="padding-left: 3px">
+        <div class="input-group input-group-sm">
+          <span class="input-group-addon">
                         <i class="fa fa-tasks"></i>
                     </span>
-                    <input type="number" class="form-control" ng-model="song.score" placeholder="score"><span class="input-group-addon">
+          <input type="number" class="form-control" ng-model="song.score" placeholder="score"><span class="input-group-addon">
                         final score
                     </span>
-                </div>
-            </div>
         </div>
+      </div>
+    </div>
 
-        <div style="border: 1px solid #dfd7ca;border-radius: 3px; position: relative" class="row" bs-loading-overlay bs-loading-overlay-reference-id="all">
-            <div class="table-container" ng-style="style">
-              <table class="table table-striped" id="tbl">
-                <thead fix-head>
-                  <tr ng-show="filtered.length!=0">
-                    <th>Rank</th>
-                    <th>Card Name</th>
-                    <th>Idolized?</th>
-                    <th class="num-header" ng-click="sortBy('id')">ID
-                      <i ng-show="sort.desc && sort.type=='id'" class="fa fa-chevron-down"></i>
-                      <i ng-show="!sort.desc && sort.type=='id'" class="fa fa-chevron-up"></i>
-                    </th>
-                    <th class="num-header" ng-click="sortBy('stat.display')">Stat
-                      <span popover-append-to-body="true" popover-trigger="'mouseenter'" popover-placement="top" uib-popover="Max bond for the card's rarity and idolization status is included.">
+    <div style="border: 1px solid #dfd7ca;border-radius: 3px; position: relative" class="row" bs-loading-overlay bs-loading-overlay-reference-id="all">
+      <div class="table-container" ng-style="style">
+        <table class="table table-striped" id="tbl">
+          <thead fix-head>
+            <tr ng-show="filtered.length!=0">
+              <th>Rank</th>
+              <th>Card Name</th>
+              <th>Idolized?</th>
+              <th class="num-header" ng-click="sortBy('id')">ID
+                <i ng-show="sort.desc && sort.type=='id'" class="fa fa-chevron-down"></i>
+                <i ng-show="!sort.desc && sort.type=='id'" class="fa fa-chevron-up"></i>
+              </th>
+              <th class="num-header" ng-click="sortBy('stat.display')">Stat
+                <span popover-append-to-body="true" popover-trigger="'mouseenter'" popover-placement="top" uib-popover="Max bond for the card's rarity and idolization status is included.">
                           <i class="fa fa-info-circle"></i>
                       </span>
-                      <i ng-show="sort.desc && sort.type == 'stat.display'" class="fa fa-chevron-down"></i>
-                      <i ng-show="!sort.desc && sort.type == 'stat.display'" class="fa fa-chevron-up"></i>
-                    </th>
-                    </th>
-                    <th class="num-header" style="min-width:100px" ng-click="sortBy('skill.avg')">Skill (Avg)
-                      <i ng-show="sort.desc && sort.type=='skill.avg'" class="fa fa-chevron-down"></i>
-                      <i ng-show="!sort.desc && sort.type=='skill.avg'" class="fa fa-chevron-up"></i>
-                    </th>
-                    <th class="num-header" style="min-width:100px" ng-click="sortBy('skill.best')">Skill (Max)
-                      <i ng-show="sort.desc && sort.type=='skill.best'" class="fa fa-chevron-down"></i>
-                      <i ng-show="!sort.desc && sort.type=='skill.best'" class="fa fa-chevron-up"></i>
-                    </th>
-                    <th style="min-width: 90px">Activated By
-                    </th>
-                    <th class="num-header" style="min-width:100px" ng-click="sortBy('stat.avg')">Stat + Skill (Avg)
-                      <i ng-show="sort.desc && sort.type=='stat.avg'" class="fa fa-chevron-down"></i>
-                      <i ng-show="!sort.desc && sort.type=='stat.avg'" class="fa fa-chevron-up"></i>
-                    </th>
-                    <th class="num-header" style="min-width:100px" ng-click="sortBy('stat.best')">Stat + Skill (Max)
-                      <i ng-show="sort.desc && sort.type=='stat.best'" class="fa fa-chevron-down"></i>
-                      <i ng-show="!sort.desc && sort.type=='stat.best'" class="fa fa-chevron-up"></i>
-                    </th>
-                  </tr>
-                </thead>
+                <i ng-show="sort.desc && sort.type == 'stat.display'" class="fa fa-chevron-down"></i>
+                <i ng-show="!sort.desc && sort.type == 'stat.display'" class="fa fa-chevron-up"></i>
+              </th>
+              <th>
+                Skill Level
+              </th>
+              <th class="num-header" style="min-width:100px" ng-click="sortBy('skill.avg')">Skill (Avg)
+                <i ng-show="sort.desc && sort.type=='skill.avg'" class="fa fa-chevron-down"></i>
+                <i ng-show="!sort.desc && sort.type=='skill.avg'" class="fa fa-chevron-up"></i>
+              </th>
+              <th class="num-header" style="min-width:100px" ng-click="sortBy('skill.best')">Skill (Max)
+                <i ng-show="sort.desc && sort.type=='skill.best'" class="fa fa-chevron-down"></i>
+                <i ng-show="!sort.desc && sort.type=='skill.best'" class="fa fa-chevron-up"></i>
+              </th>
+              <th style="min-width: 90px">Activated By
+              </th>
+              <th class="num-header" style="min-width:100px" ng-click="sortBy('stat.avg')">Stat + Skill (Avg)
+                <i ng-show="sort.desc && sort.type=='stat.avg'" class="fa fa-chevron-down"></i>
+                <i ng-show="!sort.desc && sort.type=='stat.avg'" class="fa fa-chevron-up"></i>
+              </th>
+              <th class="num-header" style="min-width:100px" ng-click="sortBy('stat.best')">Stat + Skill (Max)
+                <i ng-show="sort.desc && sort.type=='stat.best'" class="fa fa-chevron-down"></i>
+                <i ng-show="!sort.desc && sort.type=='stat.best'" class="fa fa-chevron-up"></i>
+              </th>
+            </tr>
+          </thead>
 
-                <tbody>
-                  <tr ng-if="filtered.length==0">
-                    <td colspan=15 style="word-wrap: normal">
-                      <span class="text-danger">No cards found.</span>
-                      <a style="cursor: pointer" ng-click="resetFilters()">Reset filters?</a>
-                    </td>
-                  </tr>
-                  <tr ng-repeat="card in filtered = (cards | filter:search) | orderBy:sort.type:sort.desc:true track by $index" ng-include src="'table-body.html'">
+          <tbody>
+            <tr ng-if="filtered.length==0">
+              <td colspan=15 style="word-wrap: normal">
+                <span class="text-danger">No cards found.</span>
+                <a style="cursor: pointer" ng-click="resetFilters()">Reset filters?</a>
+              </td>
+            </tr>
+            <tr ng-repeat="card in filtered = (cards | filter:search) | orderBy:sort.type:sort.desc:true track by $index" ng-include src="'table-body.html'">
 
-                  </tr>
-                </tbody>
-              </table>
+            </tr>
+          </tbody>
+        </table>
 
-            </div>
-        </div>
+      </div>
     </div>
+  </div>
 </div>
