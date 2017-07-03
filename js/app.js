@@ -242,16 +242,19 @@ app.factory('Cards', function($rootScope, $http, Calculations) {
   ret.calcSkill = function(cards, song, heel) {
     var score_up_mod = 0;
     var activations = 0;
+    // console.log("calcSkill()")
 
     angular.forEach(cards, function(card) {
 
       // for each ~act_count~ ~act_type~, ~act_percent~ chance of ~act_val~
       // skill value = (# of activation times) * (chance of activation) * (activation value)
       // console.log(card)
+      // console.log(card)
       activations = Calculations.activations(song, card.skill)
-
-      card.skill.avg = Math.floor(activations * card.skill.percent) * card.skill.amount
-      card.skill.best = activations * card.skill.amount
+      percent = card.skill.levels[card.skill.lvl].percent
+      amount = card.skill.levels[card.skill.lvl].amount
+      card.skill.avg = Math.floor(activations * percent) * amount
+      card.skill.best = activations * amount
 
       if (card.skill.category == "Perfect Lock" || card.skill.category.includes("Trick")) {
         card.skill.stat_bonus_avg = Calculations.plScoreBonus(card.stat.base, song, card.skill.avg)

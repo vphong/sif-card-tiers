@@ -230,6 +230,7 @@ def cleanCard(d, keys):
 
     # stats/scores
     skillDetails(ret)
+    ret['skill']['lvl'] = 1
     # ret['cScore'] = ret['oScore'] = {'base': 0, 'idlz': 0, 'heel': 0, 'idlz_heel': 0}
     # ret['cScore'] = score(ret,"c")
     # ret['oScore'] = score(ret,"o")
@@ -454,5 +455,37 @@ def processCards():
     logging.info("processCards(): done")
 
 
-getRawCards()
+# getRawCards()
 # processCards()
+
+def consolidateCardsAndSkillsJSON():
+    cardData = []
+    with open("cards.json", 'r') as c:
+        cardData = json.loads(c.read())
+
+    skills = []
+    with open("skills.json", 'r') as s:
+        skills = json.loads(s.read())
+
+    cards = []
+    for card in cardData:
+        card = cleanCard(card, keysNeeded)
+        # search for skill in skills
+        skill = next(skill for skill in skills if skill['id'] == card['id'])
+        levels = {'levels': skill['levels']}
+        # print(card['skill'])
+        card['skill'].update(levels)
+        # print(card)
+        # update card['skill'] w/ levels
+        cards.append(card)
+
+    with open('data.json', 'w') as f:
+        json.dump(cards, f, indent=2)
+
+    with open('cards.js', 'w', encoding='utf-8') as f:
+        f.write("app.constant('CardData',\n")
+        json.dump(cards, f, indent=2)
+        f.write("\n);")
+
+
+consolidateCardsAndSkillsJSON()
