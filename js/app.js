@@ -100,7 +100,6 @@ app.factory('Calculations', function() {
   var ret = {};
 
   ret.activations = function(song, skill) {
-    // console.log(skill)
     if (skill.type == "notes" || skill.type == "hit" || skill.type == "combo") {
       return Math.floor(song.notes / skill.interval)
     } else if (skill.type == "perfects") {
@@ -149,47 +148,6 @@ app.factory('Calculations', function() {
     return ret.scoreUpMod(song, trick_greats_bonus + trick_perfects_bonus)
   }
 
-  var calcStatBonus = function(card) {
-    var base, bonus = {};
-    if (!card.idlz) {
-      base = card.stat.base
-    } else base = card.stat.idlz
-
-    // TODO: delete
-    card.sis = {}
-
-    if (!card.equippedSIS) {
-      bonus.avg = card.skill.stat_bonus_avg
-      bonus.best = card.skill.stat_bonus_best
-    } else {
-      bonus.avg = card.sis.stat_bonus_avg
-      bonus.best = card.sis.stat_bonus_best
-    }
-
-    card.stat.avg = base + bonus.avg
-    card.stat.best = base + bonus.best
-  }
-
-  ret.skill = function(card, song, heel) {
-    var score_up_mod = 0;
-    var activations = ret.activations(song, card.skill)
-    percent = card.skill.levels[card.skill.lvl].percent
-    amount = card.skill.levels[card.skill.lvl].amount
-    card.skill.avg = Math.floor(activations * percent) * amount
-    card.skill.best = activations * amount
-
-    if (card.skill.category == "Perfect Lock" || card.skill.category.includes("Trick")) {
-      card.skill.stat_bonus_avg = Calculations.plScoreBonus(card.stat.base, song, card.skill.avg)
-      card.skill.stat_bonus_best = Calculations.plScoreBonus(card.stat.base, song, card.skill.best)
-    } else if ((card.skill.category == "Healer" || card.skill.category.includes("Yell")) && !card.equippedSIS) {
-      card.skill.stat_bonus_avg = card.skill.stat_bonus_best = 0;
-    } else { // scorer
-      card.skill.stat_bonus_avg = Calculations.scoreUpMod(song, card.skill.avg)
-      card.skill.stat_bonus_best = Calculations.scoreUpMod(song, card.skill.best)
-    }
-
-    calcStatBonus(card)
-  }
 
 
 
@@ -197,9 +155,19 @@ app.factory('Calculations', function() {
   return ret;
 })
 
-app.factory('Cards', function($rootScope, $http, Calculations, $firebaseObject) {
+app.factory('Cards', function($rootScope, $http, Calculations, $firebaseObject, $firebaseArray) {
   var ret = {};
 
+  ret.data = function(orderBy) {
+    var ref = firebase.database().ref().child('cards').orderByChild(orderBy)
+    $firebaseArray(ref).$loaded().then(function(x){
+      console.log(x)
+      return x
+    }).catch(function(e){
+      console.error("Cards.data: " + e)
+      return
+    })
+  }
   ret.getUrl = function(url) {
     return $http.get(url)
   }
@@ -209,47 +177,16 @@ app.factory('Cards', function($rootScope, $http, Calculations, $firebaseObject) 
     return $firebaseObject(ref)
   }
 
+
+
   ret.filterCards = function(filters, cards) {
     var card;
     var newCards = [];
     var len = cards.length;
 
-    angular.forEach(cards, function(card) {
-      if ((filters.server == 'en' && !card.japan_only ||
-          filters.server == 'jp') &&
+    cards.$loaded(function(ret) {
 
-        (filters.sr && card.rarity == "SR" ||
-          filters.ssr && card.rarity == "SSR" ||
-          filters.ur && card.rarity == "UR") &&
 
-        (filters.attribute == 'all' && card.attribute ||
-          filters.attribute == 'smile' && card.attribute == "Smile" ||
-          filters.attribute == 'pure' && card.attribute == "Pure" ||
-          filters.attribute == 'cool' && card.attribute == "Cool") &&
-
-        ((filters.premium && !card.event && !card.is_promo) ||
-          filters.event && card.event || filters.promo && card.is_promo) &&
-
-        (filters.su && card.skill.category == "Score Up" ||
-          filters.pl && card.skill.category == "Perfect Lock" ||
-          filters.hl && card.skill.category == "Healer") &&
-
-        (filters.muse && card.main_unit == "Muse" ||
-          filters.aqours && card.main_unit == "Aqours") &&
-
-        (filters.subunit == "all" && card.sub_unit ||
-          filters.subunit == "BiBi" && card.sub_unit == "Bibi" ||
-          filters.subunit == "Printemps" && card.sub_unit == "Printemps" ||
-          filters.subunit == "lily white" && card.sub_unit == "Lily White" ||
-          filters.subunit == "AZALEA" && card.sub_unit == "AZALEA" ||
-          filters.subunit == "CYaRon" && card.sub_unit == "CYaRon!" ||
-          filters.subunit == "Guilty Kiss" && card.sub_unit == "Guilty Kiss") &&
-
-        (filters.year == "all" && card.year ||
-          filters.year == "1" && card.year == "first" ||
-          filters.year == "2" && card.year == "second" ||
-          filters.year == "3" && card.year == "third")
-      ) {
         if (card.rarity == "UR") {
           card.stat.base += 500
           card.stat.idlz += 1000
@@ -262,8 +199,10 @@ app.factory('Cards', function($rootScope, $http, Calculations, $firebaseObject) 
         }
         card.stat.display = card.stat.base
 
-        newCards.push(card);
-      }
+        // newCards.push(card);
+
+
+
 
     })
     return newCards;
@@ -291,6 +230,47 @@ app.factory('Cards', function($rootScope, $http, Calculations, $firebaseObject) 
   }
 
 
+  var calcStatBonus = function(card) {
+    var base, bonus = {};
+    if (!card.idlz) {
+      base = card.stat.base
+    } else base = card.stat.idlz
+
+    // TODO: delete
+    card.sis = {}
+
+    if (!card.equippedSIS) {
+      bonus.avg = card.skill.stat_bonus_avg
+      bonus.best = card.skill.stat_bonus_best
+    } else {
+      bonus.avg = card.sis.stat_bonus_avg
+      bonus.best = card.sis.stat_bonus_best
+    }
+
+    card.stat.avg = base + bonus.avg
+    card.stat.best = base + bonus.best
+  }
+
+  ret.skill = function(card, song, heel) {
+    var score_up_mod = 0;
+    var activations = Calculations.activations(song, card.skill)
+    percent = card.skill.levels[card.skill.lvl].percent
+    amount = card.skill.levels[card.skill.lvl].amount
+    card.skill.avg = Math.floor(activations * percent) * amount
+    card.skill.best = activations * amount
+
+    if (card.skill.category == "Perfect Lock" || card.skill.category.includes("Trick")) {
+      card.skill.stat_bonus_avg = Calculations.plScoreBonus(card.stat.base, song, card.skill.avg)
+      card.skill.stat_bonus_best = Calculations.plScoreBonus(card.stat.base, song, card.skill.best)
+    } else if ((card.skill.category == "Healer" || card.skill.category.includes("Yell")) && !card.equippedSIS) {
+      card.skill.stat_bonus_avg = card.skill.stat_bonus_best = 0;
+    } else { // scorer
+      card.skill.stat_bonus_avg = Calculations.scoreUpMod(song, card.skill.avg)
+      card.skill.stat_bonus_best = Calculations.scoreUpMod(song, card.skill.best)
+    }
+
+    calcStatBonus(card)
+  }
 
   ret.sortBy = function(sort, type, desc) {
     // temp var for previous sort obj to set sort.desc

@@ -1,4 +1,4 @@
-app.controller('TierCtrl', function($rootScope, $scope, Cards, localStorageService, $filter) {
+app.controller('TierCtrl', function($rootScope, $scope, Cards, localStorageService, $filter, $firebaseArray) {
 
   // $rootScope = $rootScope.$new(true)
   // $scope = $scope.$new(true)
@@ -13,7 +13,15 @@ app.controller('TierCtrl', function($rootScope, $scope, Cards, localStorageServi
     $scope.song = localStorageService.get('song');
     if (!$scope.song) $scope.song = angular.copy($rootScope.Song);
 
-    $scope.cards = angular.copy(Cards.filterCards($scope.filters, $rootScope.Cards));
+    var ref = firebase.database().ref().child('cards').orderByChild('-stat');
+    $scope.cards = $firebaseArray(ref)
+
+    $scope.cards.$loaded().then(function() {
+      // run calcs
+      angular.forEach($scope.cards, function(card) {
+        Cards.skill(card, $scope.song)
+      })
+    })
 
     $scope.sort = localStorageService.get('sort');
     if (!$scope.sort) {
@@ -25,7 +33,6 @@ app.controller('TierCtrl', function($rootScope, $scope, Cards, localStorageServi
     $scope.search = localStorageService.get('search');
     if (!$scope.search) $scope.search = "";
 
-    Calculations.skillSkill($scope.cards, $scope.song);
 
 
   }
@@ -37,7 +44,7 @@ app.controller('TierCtrl', function($rootScope, $scope, Cards, localStorageServi
   }
 
   $scope.updateSong = function() {
-    Calculations.skillSkill($scope.cards, $scope.song, $scope.filters.heel);
+    Cards.skill($scope.cards, $scope.song, $scope.filters.heel);
     localStorageService.set('song', $scope.song);
   }
 
@@ -60,13 +67,13 @@ app.controller('TierCtrl', function($rootScope, $scope, Cards, localStorageServi
     }
   }
   $scope.toggleHeel = function() {
-    Calculations.skillSkill($scope.cards, $scope.song);
+    Cards.skill($scope.cards, $scope.song);
   }
 
 
   $scope.filterCards = function() {
     $scope.cards = Cards.filterCards($scope.filters, angular.copy($rootScope.Cards));
-    Calculations.skillSkill($scope.cards, $scope.song, $scope.filters.heel);
+    Cards.skill($scope.cards, $scope.song, $scope.filters.heel);
     localStorageService.set('filters', $scope.filters);
   }
 
