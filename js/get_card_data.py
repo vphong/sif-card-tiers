@@ -479,13 +479,20 @@ def consolidateCardsAndSkillsJSON():
         # update card['skill'] w/ levels
         cards.append(card)
 
-    with open('data.json', 'w') as f:
-        json.dump(cards, f, indent=2)
+    # with open('cards.js', 'w', encoding='utf-8') as f:
+    #     f.write("app.constant('CardData',\n")
+    #     json.dump(cards, f, indent=2)
+    #     f.write("\n);")
 
-    with open('cards.js', 'w', encoding='utf-8') as f:
-        f.write("app.constant('CardData',\n")
-        json.dump(cards, f, indent=2)
-        f.write("\n);")
+
+    data = { "cards": {}}
+    for card in cards:
+        data['cards']["id"+repr(card['id'])] = card
+
+    # data['cards']['0'] = {}
+
+    with open('data.json', 'w') as f:
+        json.dump(data, f, indent=2)
 
 
 consolidateCardsAndSkillsJSON()

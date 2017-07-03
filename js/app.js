@@ -1,6 +1,8 @@
+firebase.initializeApp(config)
+
 var app = angular.module('tierList', ['ui.bootstrap', 'ui.router.tabs',
   'bsLoadingOverlay', 'bsLoadingOverlayHttpInterceptor', 'mgcrea.ngStrap',
-  'ui.router', 'LocalStorageModule', 'fixed.table.header'
+  'ui.router', 'LocalStorageModule', 'fixed.table.header', 'firebase'
 ]);
 
 app.factory('cardInterceptor', function(bsLoadingOverlayHttpInterceptorFactoryFactory) {
@@ -147,15 +149,64 @@ app.factory('Calculations', function() {
     return ret.scoreUpMod(song, trick_greats_bonus + trick_perfects_bonus)
   }
 
+  var calcStatBonus = function(card) {
+    var base, bonus = {};
+    if (!card.idlz) {
+      base = card.stat.base
+    } else base = card.stat.idlz
+
+    // TODO: delete
+    card.sis = {}
+
+    if (!card.equippedSIS) {
+      bonus.avg = card.skill.stat_bonus_avg
+      bonus.best = card.skill.stat_bonus_best
+    } else {
+      bonus.avg = card.sis.stat_bonus_avg
+      bonus.best = card.sis.stat_bonus_best
+    }
+
+    card.stat.avg = base + bonus.avg
+    card.stat.best = base + bonus.best
+  }
+
+  ret.skill = function(card, song, heel) {
+    var score_up_mod = 0;
+    var activations = ret.activations(song, card.skill)
+    percent = card.skill.levels[card.skill.lvl].percent
+    amount = card.skill.levels[card.skill.lvl].amount
+    card.skill.avg = Math.floor(activations * percent) * amount
+    card.skill.best = activations * amount
+
+    if (card.skill.category == "Perfect Lock" || card.skill.category.includes("Trick")) {
+      card.skill.stat_bonus_avg = Calculations.plScoreBonus(card.stat.base, song, card.skill.avg)
+      card.skill.stat_bonus_best = Calculations.plScoreBonus(card.stat.base, song, card.skill.best)
+    } else if ((card.skill.category == "Healer" || card.skill.category.includes("Yell")) && !card.equippedSIS) {
+      card.skill.stat_bonus_avg = card.skill.stat_bonus_best = 0;
+    } else { // scorer
+      card.skill.stat_bonus_avg = Calculations.scoreUpMod(song, card.skill.avg)
+      card.skill.stat_bonus_best = Calculations.scoreUpMod(song, card.skill.best)
+    }
+
+    calcStatBonus(card)
+  }
+
+
+
 
   return ret;
 })
 
-app.factory('Cards', function($rootScope, $http, Calculations) {
+app.factory('Cards', function($rootScope, $http, Calculations, $firebaseObject) {
   var ret = {};
 
   ret.getUrl = function(url) {
     return $http.get(url)
+  }
+
+  ret.getCardById = function(id) {
+    var ref = firebase.database().ref().child('cards/id' + id)
+    return $firebaseObject(ref)
   }
 
   ret.filterCards = function(filters, cards) {
@@ -199,7 +250,7 @@ app.factory('Cards', function($rootScope, $http, Calculations) {
           filters.year == "2" && card.year == "second" ||
           filters.year == "3" && card.year == "third")
       ) {
-        if (card.rarity == "UR"){
+        if (card.rarity == "UR") {
           card.stat.base += 500
           card.stat.idlz += 1000
         } else if (card.rarity == "SSR") {
@@ -218,80 +269,27 @@ app.factory('Cards', function($rootScope, $http, Calculations) {
     return newCards;
   }
 
-  var calcStatBonus = function(card) {
-    var base, bonus = {};
-    if (!card.idlz) {
-      base = card.stat.base
-    } else base = card.stat.idlz
-
-    // TODO: delete
-    card.sis = {}
-
-    if (!card.equippedSIS) {
-      bonus.avg = card.skill.stat_bonus_avg
-      bonus.best = card.skill.stat_bonus_best
+  ret.toggleIdlz = function(card) {
+    if (card.idlz) {
+      card.stat.display = card.stat.idlz
+      card.stat.avg = card.stat.idlz + card.skill.stat_bonus_avg
+      card.stat.best = card.stat.idlz + card.skill.stat_bonus_best
     } else {
-      bonus.avg = card.sis.stat_bonus_avg
-      bonus.best = card.sis.stat_bonus_best
+
+      card.stat.display = card.stat.base
+      card.stat.avg = card.stat.base + card.skill.stat_bonus_avg
+      card.stat.best = card.stat.base + card.skill.stat_bonus_best
     }
-
-    card.stat.avg = base + bonus.avg
-    card.stat.best = base + bonus.best
   }
-
-  ret.calcSkill = function(cards, song, heel) {
-    var score_up_mod = 0;
-    var activations = 0;
-    // console.log("calcSkill()")
-
+  ret.idlzAll = function(cards, idlz) {
     angular.forEach(cards, function(card) {
-
-      // for each ~act_count~ ~act_type~, ~act_percent~ chance of ~act_val~
-      // skill value = (# of activation times) * (chance of activation) * (activation value)
-      // console.log(card)
-      // console.log(card)
-      activations = Calculations.activations(song, card.skill)
-      percent = card.skill.levels[card.skill.lvl].percent
-      amount = card.skill.levels[card.skill.lvl].amount
-      card.skill.avg = Math.floor(activations * percent) * amount
-      card.skill.best = activations * amount
-
-      if (card.skill.category == "Perfect Lock" || card.skill.category.includes("Trick")) {
-        card.skill.stat_bonus_avg = Calculations.plScoreBonus(card.stat.base, song, card.skill.avg)
-        card.skill.stat_bonus_best = Calculations.plScoreBonus(card.stat.base, song, card.skill.best)
-      } else if ((card.skill.category == "Healer" || card.skill.category.includes("Yell")) && !card.equippedSIS) {
-        card.skill.stat_bonus_avg = card.skill.stat_bonus_best = 0;
-      } else { // scorer
-        card.skill.stat_bonus_avg = Calculations.scoreUpMod(song, card.skill.avg)
-        card.skill.stat_bonus_best = Calculations.scoreUpMod(song, card.skill.best)
+      if (!card.user_idlz) {
+        card.idlz = idlz
+        ret.toggleIdlz(card)
       }
-
-      calcStatBonus(card)
-
     })
-
-    ret.toggleIdlz = function(card) {
-      if (card.idlz) {
-        card.stat.display = card.stat.idlz
-        card.stat.avg = card.stat.idlz + card.skill.stat_bonus_avg
-        card.stat.best = card.stat.idlz + card.skill.stat_bonus_best
-      } else {
-
-        card.stat.display = card.stat.base
-        card.stat.avg = card.stat.base + card.skill.stat_bonus_avg
-        card.stat.best = card.stat.base + card.skill.stat_bonus_best
-      }
-    }
-    ret.idlzAll = function(cards, idlz) {
-      angular.forEach(cards, function(card) {
-        if (!card.user_idlz) {
-           card.idlz = idlz
-           ret.toggleIdlz(card)
-        }
-      })
-    }
-
   }
+
 
 
   ret.sortBy = function(sort, type, desc) {

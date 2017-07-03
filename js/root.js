@@ -37,10 +37,10 @@ app.constant('InitSong', {
   stars: 65,
   score: 1000000
 })
-app.run(function($rootScope, Typeahead, InitFilters, InitSong, CardData, SongData) {
+app.run(function($rootScope, Typeahead, InitFilters, InitSong, CardData, SongData, $firebaseObject) {
     $rootScope.Typeahead = angular.copy(Typeahead);
     $rootScope.InitFilters = angular.copy(InitFilters);
-    $rootScope.Cards = angular.copy(CardData);
+    // $rootScope.Cards = angular.copy(CardData);
     $rootScope.Song = angular.copy(InitSong);
 
 

@@ -25,7 +25,7 @@ app.controller('TierCtrl', function($rootScope, $scope, Cards, localStorageServi
     $scope.search = localStorageService.get('search');
     if (!$scope.search) $scope.search = "";
 
-    Cards.calcSkill($scope.cards, $scope.song);
+    Calculations.skillSkill($scope.cards, $scope.song);
 
 
   }
@@ -37,7 +37,7 @@ app.controller('TierCtrl', function($rootScope, $scope, Cards, localStorageServi
   }
 
   $scope.updateSong = function() {
-    Cards.calcSkill($scope.cards, $scope.song, $scope.filters.heel);
+    Calculations.skillSkill($scope.cards, $scope.song, $scope.filters.heel);
     localStorageService.set('song', $scope.song);
   }
 
@@ -50,7 +50,7 @@ app.controller('TierCtrl', function($rootScope, $scope, Cards, localStorageServi
 
   $scope.toggleIdlz = function(card) {
     Cards.toggleIdlz(card)
-  } 
+  }
   $scope.idlzAll = function() {
     allIdlz = !allIdlz
     Cards.idlzAll($scope.cards, $scope.allIdlz)
@@ -60,13 +60,13 @@ app.controller('TierCtrl', function($rootScope, $scope, Cards, localStorageServi
     }
   }
   $scope.toggleHeel = function() {
-    Cards.calcSkill($scope.cards, $scope.song);
+    Calculations.skillSkill($scope.cards, $scope.song);
   }
 
 
   $scope.filterCards = function() {
     $scope.cards = Cards.filterCards($scope.filters, angular.copy($rootScope.Cards));
-    Cards.calcSkill($scope.cards, $scope.song, $scope.filters.heel);
+    Calculations.skillSkill($scope.cards, $scope.song, $scope.filters.heel);
     localStorageService.set('filters', $scope.filters);
   }
 

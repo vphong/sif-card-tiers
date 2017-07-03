@@ -43,7 +43,7 @@ app.controller('UserCtrl', function($rootScope, $scope, Cards, localStorageServi
     if ($scope.rawUserCardsData) $scope.cards = angular.copy(Cards.filterCards($scope.filters, $scope.rawUserCardsData))
     else $scope.cards = [];
 
-    Cards.calcSkill($scope.cards, $scope.song);
+    Calculations.skillSkill($scope.cards, $scope.song);
 
   }
   init();
@@ -155,7 +155,7 @@ app.controller('UserCtrl', function($rootScope, $scope, Cards, localStorageServi
 
     // filter for display
     $scope.cards = angular.copy(Cards.filterCards($scope.filters, $scope.rawUserCardsData));
-    Cards.calcSkill($scope.cards, $scope.song);
+    Calculations.skillSkill($scope.cards, $scope.song);
     localStorageService.set('userCards', $scope.cards)
 
   };
@@ -171,7 +171,7 @@ app.controller('UserCtrl', function($rootScope, $scope, Cards, localStorageServi
 
   $scope.filterCards = function() {
     $scope.cards = Cards.filterCards($scope.filters, angular.copy($scope.rawUserCardsData));
-    Cards.calcSkill($scope.cards, $scope.song);
+    Calculations.skillSkill($scope.cards, $scope.song);
 
     localStorageService.set('userFilters', $scope.filters);
   }
