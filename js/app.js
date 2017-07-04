@@ -8,9 +8,8 @@ var config = {
 }
 firebase.initializeApp(config)
 
-var app = angular.module('tierList', ['ui.bootstrap', 'ui.router.tabs',
-  'bsLoadingOverlay', 'mgcrea.ngStrap',
-  'ui.router', 'LocalStorageModule', 'fixed.table.header', 'firebase'
+var app = angular.module('tierList', ['ui.bootstrap', 'ui.router.tabs', 'firebase',
+  'bsLoadingOverlay', 'ui.router', 'LocalStorageModule', 'fixed.table.header',
 ]);
 
 app.run(function(bsLoadingOverlayService) {
