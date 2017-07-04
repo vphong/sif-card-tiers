@@ -236,3 +236,15 @@ footer.well {
 .th {
   vertical-align: middle !important;
 }
+.levels {
+  background-color: #3e3f3a;
+  border-radius: 3px;
+  color: #ffffff;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 10px;
+  padding: 3px 4px;
+  border-radius: 3px 3px 0px 0px;
+  display: inline-block;
+  width: 100%;
+}

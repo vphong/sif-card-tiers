@@ -26,6 +26,11 @@
         <label class="btn btn-default btn-sm" ng-click="idlzAll()">Idolize all cards?</label>
       </div>
 
+      <div class="col-xs-12 no-padding" style="margin-bottom: 10px;">
+        <div class="levels text-center">Set all skill lvls:</div>
+        <br/><input type="number" class="form-control input-sm nopadding" style="border-radius: 0px 0px 3px 3px" name="skill_lvls" ng-model="lvl" ng-change="updateSkillLevels()" ng-min="1" ng-max="8" min="1" max="8"/>
+      </div>
+
       <div uib-tooltip="Attribute" tooltip-placement="top">
         <div class="btn-group btn-group-justified col-xs-12 no-padding" style="margin-bottom:0px">
           <label class="btn btn-info btn-sm" style="border-bottom-left-radius:0" ng-model="filters.attribute" ng-click="filterCards()" uib-btn-radio="'all'">All</label>

@@ -238,7 +238,14 @@ app.controller('UserCtrl', function($rootScope, $scope, Cards, localStorageServi
     localStorageService.set('eUserCards', editedCards)
 
   }
-
+  
+  $scope.lvl = 1
+  $scope.updateSkillLevels = function() {
+    for (var i = 0; i < $scope.cards.length; i++) {
+      $scope.cards[i].skill.lvl = $scope.lvl
+      Cards.skill($scope.cards[i], $scope.song)
+    }
+  }
   $scope.updateSkillLevel = function(card) {
     Cards.skill(card, $scope.song)
     storeEditedCard(card)

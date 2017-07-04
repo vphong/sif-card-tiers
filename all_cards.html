@@ -29,6 +29,11 @@
         <!-- <label class="btn btn-default btn-sm" ng-model="filters.idlz" ng-click="sisAll()">Equip SIS to all?</label> -->
       </div>
 
+      <div class="col-xs-12 no-padding" style="margin-bottom: 10px;">
+        <div class="levels text-center">Set all skill lvls:</div>
+        <br/><input type="number" class="form-control input-sm nopadding" style="border-radius: 0px 0px 3px 3px" name="skill_lvls" ng-model="lvl" ng-change="updateSkillLevels()" ng-min="1" ng-max="8" min="1" max="8"/>
+      </div>
+
       <div class="btn-group btn-group-justified" uib-tooltip="Server" tooltip-placement="top">
         <label class="btn btn-info btn-sm" ng-model="filters.server" ng-click="filterCards()" uib-btn-radio="'jp'">JP</label>
         <label class="btn btn-info btn-sm" ng-model="filters.server" ng-click="filterCards()" uib-btn-radio="'en'">EN</label>
