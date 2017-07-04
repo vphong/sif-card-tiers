@@ -78,7 +78,6 @@ app.controller('TierCtrl', function($rootScope, $scope, Cards, localStorageServi
       }
     }
     if (!found) editedCards.push(card)
-    console.log(editedCards)
     localStorageService.set('cards', editedCards)
 
   }

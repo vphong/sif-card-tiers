@@ -1,8 +1,11 @@
-app.controller('UserCtrl', function($rootScope, $scope, Cards, localStorageService, $filter) {
-  // $rootScope = $rootScope.$new(true)
-  // $scope = $scope.$new(true)
-  // localStorageService.clearAll()
+app.controller('UserCtrl', function($rootScope, $scope, Cards, localStorageService, $filter, bsLoadingOverlayService) {
+
+  var editedCards = []
   var allIdlz = false;
+  var allCards = [];
+  var overlayHandler = bsLoadingOverlayService.createHandler({
+    referenceId: 'user'
+  });
 
   var init = function() {
     $scope.filters = localStorageService.get('userFilters');
@@ -33,13 +36,25 @@ app.controller('UserCtrl', function($rootScope, $scope, Cards, localStorageServi
     $scope.search = localStorageService.get('userSearch');
     if (!$scope.search) $scope.userSearch = "";
 
-    // storage for http result of account grabbing
-    // storage for card data of rawUserCards
-    $scope.cards = localStorageService.get('userCards')
+    $scope.cards = localStorageService.get('userCards');
     if (!$scope.cards) $scope.cards = [];
+    else {
+      editedCards = localStorageService.get('eUserCards')
+      if (!editedCards) editedCards = []
+      else {
 
-    // Cards.skill($scope.cards, $scope.song);
+        for (var i = 0; i < editedCards.length; i++) {
+          var edited = editedCards[i]
+          for (var j = 0; j < $scope.cards.length; j++) {
+            if (edited.id == $scope.cards[j].id) {
+              $scope.cards[j] = edited
+              break;
+            }
+          }
+        }
 
+      }
+    }
   }
   init();
   $scope.updateSearch = function() {
@@ -131,14 +146,15 @@ app.controller('UserCtrl', function($rootScope, $scope, Cards, localStorageServi
         for (var j = 0; j < allCards.length; j++) {
           // console.log(card)
           var card = allCards[j]
-            if (ownedCard.card == card.id) {
-              card.user_idlz = ownedCard.idolized;
-              card.idlz = card.user_idlz
-              card.skill.lvl = ownedCard.skill
-              Cards.skill(card, $scope.song)
-              $scope.cards.push(card)
-              break;
-            }
+          if (ownedCard.card == card.id) {
+            card.sit_id = ownedCard.id
+            card.user_idlz = ownedCard.idolized;
+            card.idlz = card.user_idlz
+            card.skill.lvl = ownedCard.skill
+            Cards.skill(card, $scope.song)
+            $scope.cards.push(card)
+            break;
+          }
         }
       }
 
@@ -188,9 +204,29 @@ app.controller('UserCtrl', function($rootScope, $scope, Cards, localStorageServi
     $scope.filterCards()
     $scope.sortBy($scope.sort.type);
   }
+
+  var storeEditedCard = function(card) {
+    var found = false
+    for (var i = 0; i < editedCards.length; i++) {
+      if (editedCards[i].sit_id == card.sit_id) {
+        editedCards[i] = card
+        found = true
+        break;
+      }
+    }
+    if (!found) editedCards.push(card)
+    localStorageService.set('eUserCards', editedCards)
+
+  }
+
+  $scope.updateSkillLevel = function(card) {
+    Cards.skill(card, $scope.song)
+    storeEditedCard(card)
+  }
+
   $scope.toggleIdlz = function(card) {
     Cards.toggleIdlz(card)
-    localStorageService.set('cards', $scope.cards)
+    storeEditedCard(card)
   }
   $scope.idlzAll = function() {
     allIdlz = !allIdlz
