@@ -1,3 +1,11 @@
+var config = {
+  "apiKey": "AIzaSyAWgi_XmsZezNTabJ920EEyeH-meRgA2FE",
+  "authDomain": "sif-tiers.firebaseapp.com",
+  "databaseURL": "https://sif-tiers.firebaseio.com",
+  "projectId": "sif-tiers",
+  "storageBucket": "sif-tiers.appspot.com",
+  "messagingSenderId": "359814860496"
+}
 firebase.initializeApp(config)
 
 var app = angular.module('tierList', ['ui.bootstrap', 'ui.router.tabs',
