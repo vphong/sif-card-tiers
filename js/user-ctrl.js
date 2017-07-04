@@ -23,8 +23,6 @@ app.controller('UserCtrl', function($rootScope, $scope, Cards, localStorageServi
     $scope.sit = localStorageService.get('sit');
     if (!$scope.sit) {
       $scope.sit = {};
-    } else {
-      // $scope.cards = [];
     }
 
 
@@ -36,14 +34,11 @@ app.controller('UserCtrl', function($rootScope, $scope, Cards, localStorageServi
     if (!$scope.search) $scope.userSearch = "";
 
     // storage for http result of account grabbing
-    $scope.rawUserCards = localStorageService.get('rawUserCards');
     // storage for card data of rawUserCards
-    $scope.rawUserCardsData = localStorageService.get('rawUserCardsData');
+    $scope.cards = localStorageService.get('userCards')
+    if (!$scope.cards) $scope.cards = [];
 
-    if ($scope.rawUserCardsData) $scope.cards = angular.copy(Cards.filterCards($scope.filters, $scope.rawUserCardsData))
-    else $scope.cards = [];
-
-    Cards.skill($scope.cards, $scope.song);
+    // Cards.skill($scope.cards, $scope.song);
 
   }
   init();
@@ -91,13 +86,9 @@ app.controller('UserCtrl', function($rootScope, $scope, Cards, localStorageServi
         "id": ""
       }];
       $scope.sit.accErr = true;
-      $scope.rawUserCards = [];
-      $scope.rawUserCardsData = [];
       $scope.cards = [];
       localStorageService.set('sit', $scope.sit);
       localStorageService.set('userCards', $scope.cards);
-      localStorageService.set('rawUserCards', $scope.rawUserCards);
-      localStorageService.set('rawUserCardsData', $scope.rawUserCardsData);
 
     };
     localStorageService.set('sit', $scope.sit)
@@ -105,9 +96,7 @@ app.controller('UserCtrl', function($rootScope, $scope, Cards, localStorageServi
 
   $scope.getAccounts = function() {
     $scope.grabbedAccounts = true;
-    $scope.rawUserCards = [];
     $scope.cards = [];
-    $scope.rawUserCardsData = [];
 
     Cards.getUrl($scope.sit.accountsUrl).then(getAccountsSuccess);
   };
@@ -124,38 +113,46 @@ app.controller('UserCtrl', function($rootScope, $scope, Cards, localStorageServi
     if (response.data.next) nextUrl = "https" + response.data.next.substring(4);
     else nextUrl = null;
 
-    var rawUserCards = response.data.results;
+    // console.log(response.data)
+    var ownedCards = response.data.results;
     // localStorageService.set('rawUserCards', $scope.rawUserCards);
 
 
     // grab owned card ids
-    // populate rawUserCardsData with cards owned from root cards
-    // angular.forEach($scope.rawUserCards, function(userCard) {
-    var userCard;
-    for (var i = 0; i < rawUserCards.length; i++) {
-      // for each user card
-      if (rawUserCards[i - 1]) prevUserCard = rawUserCards[i - 1];
-      else prevUserCard = "";
-      userCard = rawUserCards[i];
-      angular.forEach($rootScope.Cards, function(card) {
-        // search card database
-        if (userCard.card == card.id) {
-          // if userCard game id == database id and SIT ids are different
-          // then card is found, push card data and idlz status
-          card.user_idlz = userCard.idolized;
-          card.idlz = card.user_idlz
+    // populate ownedCards with cards owned from root cards
+    var allCards = Cards.data("id")
+    // for each user card
+    $scope.cards = []
+    allCards.$loaded().then(function() {
+      // console.log(ownedCards.length)
+      for (var i = 0; i < response.data.count; i++) {
+        var ownedCard = ownedCards[i]
+        var found = false
 
-          $scope.rawUserCardsData.push(angular.copy(card));
+        for (var j = 0; j < allCards.length; j++) {
+          // console.log(card)
+          var card = allCards[j]
+            if (ownedCard.card == card.id) {
+              console.log(card)
+              card.user_idlz = ownedCard.idolized;
+              card.idlz = card.user_idlz
+              card.skill.lvl = ownedCard.skill
+              Cards.skill(card, $scope.song)
+              $scope.cards.push(card)
+              break;
+            }
         }
-      })
-    }
+      }
+
+      console.log($scope.cards)
+    })
+
 
     if (nextUrl) Cards.getUrl(nextUrl).then(getCardsSuccess);
-    localStorageService.set('rawUserCardsData', $scope.rawUserCardsData);
 
     // filter for display
-    $scope.cards = angular.copy(Cards.filterCards($scope.filters, $scope.rawUserCardsData));
-    Cards.skill($scope.cards, $scope.song);
+    // $scope.cards = angular.copy(Cards.filterCards($scope.filters, $scope.ownedCards));
+    // Cards.skill($scope.cards, $scope.song);
     localStorageService.set('userCards', $scope.cards)
 
   };
@@ -163,14 +160,13 @@ app.controller('UserCtrl', function($rootScope, $scope, Cards, localStorageServi
     // TODO
   }
   $scope.getCards = function() {
-    $scope.rawUserCardsData = [];
     $scope.cards = [];
     Cards.getUrl($scope.sit.ownedCardsUrl).then(getCardsSuccess);
   };
 
 
   $scope.filterCards = function() {
-    $scope.cards = Cards.filterCards($scope.filters, angular.copy($scope.rawUserCardsData));
+    // $scope.cards = Cards.filterCards($scope.filters, angular.copy($scope.ownedCards));
     Cards.skill($scope.cards, $scope.song);
 
     localStorageService.set('userFilters', $scope.filters);
@@ -198,7 +194,7 @@ app.controller('UserCtrl', function($rootScope, $scope, Cards, localStorageServi
     allIdlz = !allIdlz
     Cards.idlzAll($scope.cards, allIdlz)
     angular.forEach($scope.cards, function(card) {
-     Cards.toggleIdlz(card)
+      Cards.toggleIdlz(card)
     })
 
     if ($scope.sort.type == 'stat.display') {

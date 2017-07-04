@@ -13,8 +13,7 @@ app.controller('TierCtrl', function($rootScope, $scope, Cards, localStorageServi
     $scope.song = localStorageService.get('song');
     if (!$scope.song) $scope.song = angular.copy($rootScope.Song);
 
-    var ref = firebase.database().ref().child('cards').orderByChild('-stat');
-    $scope.cards = $firebaseArray(ref)
+    $scope.cards = Cards.data('-stat')
 
     $scope.cards.$loaded().then(function() {
       // run calcs

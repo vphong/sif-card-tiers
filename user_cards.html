@@ -243,6 +243,7 @@
                 <i ng-show="!sort.desc && sort.type == 'stat.display'" class="fa fa-chevron-up"></i>
               </th>
               </th>
+              <th class="text-center">Skill Level</th>
               <th class="num-header" style="min-width:100px" ng-click="sortBy('skill.avg')">Skill (Avg)
                 <i ng-show="sort.desc && sort.type=='skill.avg'" class="fa fa-chevron-down"></i>
                 <i ng-show="!sort.desc && sort.type=='skill.avg'" class="fa fa-chevron-up"></i>
@@ -272,7 +273,7 @@
                 <a href="http://schoolido.lu">schoolido.lu</a> is online, your username is correct, and the account you've selected has SR+ cards.</td>
             </tr>
             <tr ng-if="cards.length==0">
-              <td>Enter your
+              <td colspan=11>Enter your
                 <a href="http://schoolido.lu">schoolido.lu</a> username and press
                 <b>Get Accounts</b>. Choose an account and press
                 <b>Get Cards</b>.
@@ -280,12 +281,12 @@
             </tr>
 
             <tr ng-if="!cards || filtered.length==0 && sit.chosenAccount.id != '' && grabbedCards">
-              <td colspan=15 style="word-wrap: normal">
+              <td colspan=20 style="word-wrap: normal">
                 <span class="text-danger">No cards found.</span>
                 <a style="cursor: pointer" ng-click="resetFilters()">Reset filters?</a>
               </td>
             </tr>
-            <tr ng-repeat="card in filtered = (cards | filter:search) | orderBy:sort.type:sort.desc track by $index" ng-include src="'table-body.html'">
+            <tr ng-repeat="card in cards | orderBy:sort.type:sort.desc track by $index" ng-include src="'table-body.html'">
             </tr>
           </tbody>
         </table>

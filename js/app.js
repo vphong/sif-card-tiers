@@ -159,14 +159,8 @@ app.factory('Cards', function($rootScope, $http, Calculations, $firebaseObject, 
   var ret = {};
 
   ret.data = function(orderBy) {
-    var ref = firebase.database().ref().child('cards').orderByChild(orderBy)
-    $firebaseArray(ref).$loaded().then(function(x){
-      console.log(x)
-      return x
-    }).catch(function(e){
-      console.error("Cards.data: " + e)
-      return
-    })
+    var ref = firebase.database().ref().child('cards').orderByChild(orderBy);
+    return $firebaseArray(ref)
   }
   ret.getUrl = function(url) {
     return $http.get(url)
