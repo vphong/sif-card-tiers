@@ -18,10 +18,14 @@ app.controller('TierCtrl', function($rootScope, $scope, Cards, localStorageServi
     if (!$scope.song) $scope.song = angular.copy($rootScope.Song);
 
     overlayHandler.start()
+
+    var data = Cards.data()
+    data.$loaded().then(function(data) {
+      $scope.cards_len = data.length
+    })
     Cards.filter($scope.filters).then(function(data) {
       // run calcs
       $scope.cards = data
-      $scope.cards_len = data.length
       angular.forEach($scope.cards, function(card) {
         Cards.skill(card, $scope.song)
       })
