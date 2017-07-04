@@ -141,65 +141,8 @@
 
   <div id="search_table" class="container-fluid col-xs-10">
 
-    <div id="input" class="row">
+    <div id="input" class="row" ng-include src="'input.html'">
 
-      <div class="col-xs-3 no-padding" style="padding-left: 3px">
-
-        <span class="icon" popover-append-to-body="true" popover-trigger="'mouseenter'" popover-placement="top" uib-popover="The numbers you input are used to calculate how effective each card's skill will be.">
-                    <i class="text-primary fa fa-question-circle"></i>
-                </span>
-        <div class="input-group input-group-sm">
-          <span class="input-group-addon">
-                        <i class="fa fa-music"></i>
-                    </span>
-          <input type="number" class="form-control" ng-model="song.notes" ng-change="updateSong()">
-          <span class="input-group-addon">
-                        total notes
-                    </span>
-        </div>
-      </div>
-      <div class="col-xs-3 no-padding" style="padding-left: 3px">
-        <div class="input-group input-group-sm">
-          <span class="input-group-addon">
-                        <i class="fa fa-clock-o"></i>
-                    </span>
-          <input type="number" class="form-control" ng-model="song.seconds" ng-change="updateSong()">
-          <span class="input-group-addon">
-                        total seconds
-                    </span>
-        </div>
-      </div>
-      <!-- <div class="col-xs-2 no-padding" style="padding-left: 3px">
-                <div class="input-group input-group-sm">
-                    <span class="input-group-addon" style="cursor: help" popover-append-to-body="true" popover-trigger="'mouseenter'" popover-placement="top-right" uib-popover="Number of star notes per song">
-                        <i class="fa fa-star"></i>
-                    </span>
-                    <input type="number" class="form-control" ng-model="song.stars" ng-change="updateSong()" placeholder="star notes">
-                    <span class="input-group-addon">
-                        star notes
-                    </span>
-                </div>
-            </div> -->
-      <div class="col-xs-3 no-padding" style="padding-left: 3px">
-        <div class="input-group input-group-sm">
-          <span class="input-group-addon">
-                        <i class="fa fa-percent"></i>
-                    </span>
-          <input type="number" class="form-control" ng-model="song.perfects" ng-change="updateSong()"><span class="input-group-addon">
-                        % perfects
-                    </span>
-        </div>
-      </div>
-      <div class="col-xs-3 no-padding" style="padding-left: 3px">
-        <div class="input-group input-group-sm">
-          <span class="input-group-addon">
-                        <i class="fa fa-tasks"></i>
-                    </span>
-          <input type="number" class="form-control" ng-model="song.score" ng-change="updateSong()"><span class="input-group-addon">
-                        final score
-                    </span>
-        </div>
-      </div>
     </div>
 
     <div style="border: 1px solid #dfd7ca;border-radius: 3px; position: relative" class="row" bs-loading-overlay bs-loading-overlay-reference-id="all">

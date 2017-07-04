@@ -44,8 +44,7 @@ app.controller('UserCtrl', function($rootScope, $scope, Cards, localStorageServi
     if (!$scope.cards) {
       $scope.cards = [];
       $scope.ownedcards_len = 0
-    }
-    else {
+    } else {
       $scope.ownedcards_len = $scope.cards.length
       editedCards = localStorageService.get('eUserCards')
       if (!editedCards) editedCards = []
@@ -66,6 +65,25 @@ app.controller('UserCtrl', function($rootScope, $scope, Cards, localStorageServi
     overlayHandlerCards.stop()
   }
   init();
+
+  $scope.filterCards = function() {
+    overlayHandlerCards.start()
+    var filtered = []
+    var cards = localStorageService.get('userCards')
+    angular.forEach(cards, function(card) {
+      if (Cards.matchesFilter($scope.filters, card)) {
+        Cards.skill(card, $scope.song)
+        filtered.push(card)
+      }
+    })
+
+    $scope.cards = filtered
+
+    localStorageService.set('userFilters', $scope.filters);
+    overlayHandlerCards.stop()
+  }
+  $scope.filterCards()
+
   $scope.updateSearch = function() {
     localStorageService.set('userSearch', $scope.userSearch);
   }
@@ -194,27 +212,7 @@ app.controller('UserCtrl', function($rootScope, $scope, Cards, localStorageServi
     Cards.getUrl($scope.sit.ownedCardsUrl).then(getCardsSuccess);
   };
 
-  $scope.updateSkillLevel = function(card) {
-    Cards.skill(card, $scope.song)
-    localStorageService.set('userCards', $scope.cards)
-  }
 
-  $scope.filterCards = function() {
-    overlayHandlerCards.start()
-    var filtered = []
-    var cards = localStorageService.get('userCards')
-    angular.forEach(cards, function(card) {
-      if (Cards.matchesFilter($scope.filters, card)) {
-        Cards.skill(card, $scope.song)
-        filtered.push(card)
-      }
-    })
-
-    $scope.cards = filtered
-
-    localStorageService.set('userFilters', $scope.filters);
-    overlayHandlerCards.stop()
-  }
 
   $scope.setLocalStorageFilters = function() {
     localStorageService.set('userFilters', $scope.filters)
