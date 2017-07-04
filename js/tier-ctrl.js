@@ -40,8 +40,8 @@ app.controller('TierCtrl', function($rootScope, $scope, Cards, localStorageServi
         }
 
       }
-      console.log($scope.cards)
       overlayHandler.stop();
+      $rootScope.loading = false
     })
 
     $scope.sort = localStorageService.get('sort');

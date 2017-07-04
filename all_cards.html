@@ -189,10 +189,8 @@
           </thead>
 
           <tbody>
-            <tr ng-if="filtered.length==0">
-              <td colspan=15 style="word-wrap: normal">
-                <span class="text-danger">No cards found.</span>
-                <a style="cursor: pointer" ng-click="resetFilters()">Reset filters?</a>
+            <tr ng-show="$root.loading">
+              <td colspan=15 style="word-wrap: normal">Loading cards...
               </td>
             </tr>
             <tr ng-repeat="card in cards | orderBy:sort.type:sort.desc:true track by $index" ng-include src="'table-body.html'">

@@ -42,6 +42,6 @@ app.run(function($rootScope, Typeahead, InitFilters, InitSong, CardData, SongDat
   $rootScope.InitFilters = angular.copy(InitFilters);
 
   $rootScope.Song = angular.copy(InitSong);
-
+  $rootScope.loading = true
 
 });
