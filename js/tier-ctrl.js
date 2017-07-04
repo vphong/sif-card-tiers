@@ -13,14 +13,18 @@ app.controller('TierCtrl', function($rootScope, $scope, Cards, localStorageServi
     $scope.song = localStorageService.get('song');
     if (!$scope.song) $scope.song = angular.copy($rootScope.Song);
 
-    $scope.cards = Cards.data('-stat')
+    $scope.cards = localStorageService.get('cards')
+    if (!$scope.cards) {
+      $scope.cards = Cards.data('-stat')
 
-    $scope.cards.$loaded().then(function() {
-      // run calcs
-      angular.forEach($scope.cards, function(card) {
-        Cards.skill(card, $scope.song)
+      $scope.cards.$loaded().then(function() {
+        // run calcs
+        angular.forEach($scope.cards, function(card) {
+          Cards.skill(card, $scope.song)
+        })
       })
-    })
+
+    }
 
     $scope.sort = localStorageService.get('sort');
     if (!$scope.sort) {
@@ -47,6 +51,11 @@ app.controller('TierCtrl', function($rootScope, $scope, Cards, localStorageServi
     localStorageService.set('song', $scope.song);
   }
 
+  $scope.updateSkillLevel = function(card) {
+    Cards.skill(card, $scope.song)
+    localStorageService.set('cards', $scope.cards)
+  }
+
   $scope.sortBy = function(type, desc) {
 
     Cards.sortBy($scope.sort, type, desc)
@@ -56,6 +65,7 @@ app.controller('TierCtrl', function($rootScope, $scope, Cards, localStorageServi
 
   $scope.toggleIdlz = function(card) {
     Cards.toggleIdlz(card)
+    localStorageService.set('cards', $scope.cards)
   }
   $scope.idlzAll = function() {
     allIdlz = !allIdlz

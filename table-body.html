@@ -21,7 +21,7 @@
 <td>{{card.stat.display}}
   <br/><span ng-class="{'text-smile': card.attribute=='Smile', 'text-pure': card.attribute=='Pure', 'text-cool': card.attribute=='Cool'}">{{card.attribute}}</span>
 </td>
-<td><input type="number" name="skill_lvl" ng-model="card.skill.lvl" ng-min="1" ng-max="8" min="1" max="8"/></td>
+<td><input type="number" name="skill_lvl" ng-model="card.skill.lvl" ng-change="updateSkillLevel(card)" ng-min="1" ng-max="8" min="1" max="8"/></td>
 <td>
   {{card.skill.avg |number:0}}
 

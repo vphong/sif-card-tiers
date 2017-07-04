@@ -113,7 +113,6 @@ app.controller('UserCtrl', function($rootScope, $scope, Cards, localStorageServi
     if (response.data.next) nextUrl = "https" + response.data.next.substring(4);
     else nextUrl = null;
 
-    // console.log(response.data)
     var ownedCards = response.data.results;
     // localStorageService.set('rawUserCards', $scope.rawUserCards);
 
@@ -133,7 +132,6 @@ app.controller('UserCtrl', function($rootScope, $scope, Cards, localStorageServi
           // console.log(card)
           var card = allCards[j]
             if (ownedCard.card == card.id) {
-              console.log(card)
               card.user_idlz = ownedCard.idolized;
               card.idlz = card.user_idlz
               card.skill.lvl = ownedCard.skill
@@ -144,7 +142,7 @@ app.controller('UserCtrl', function($rootScope, $scope, Cards, localStorageServi
         }
       }
 
-      console.log($scope.cards)
+      localStorageService.set('userCards', $scope.cards)
     })
 
 
@@ -153,7 +151,6 @@ app.controller('UserCtrl', function($rootScope, $scope, Cards, localStorageServi
     // filter for display
     // $scope.cards = angular.copy(Cards.filterCards($scope.filters, $scope.ownedCards));
     // Cards.skill($scope.cards, $scope.song);
-    localStorageService.set('userCards', $scope.cards)
 
   };
   var getCardsError = function(response) {
@@ -164,6 +161,10 @@ app.controller('UserCtrl', function($rootScope, $scope, Cards, localStorageServi
     Cards.getUrl($scope.sit.ownedCardsUrl).then(getCardsSuccess);
   };
 
+  $scope.updateSkillLevel = function(card) {
+    Cards.skill(card, $scope.song)
+    localStorageService.set('userCards', $scope.cards)
+  }
 
   $scope.filterCards = function() {
     // $scope.cards = Cards.filterCards($scope.filters, angular.copy($scope.ownedCards));
@@ -189,6 +190,7 @@ app.controller('UserCtrl', function($rootScope, $scope, Cards, localStorageServi
   }
   $scope.toggleIdlz = function(card) {
     Cards.toggleIdlz(card)
+    localStorageService.set('cards', $scope.cards)
   }
   $scope.idlzAll = function() {
     allIdlz = !allIdlz
