@@ -2,7 +2,7 @@
   <div class="col-xs-2" id="filters-md-screens" master>
     <div class="row">
 
-      <div class="col-xs-12 no-padding">
+      <!-- <div class="col-xs-12 no-padding">
         <div class="input-group input-group-sm">
           <span class="input-group-addon" style="cursor: help" popover-append-to-body="true" popover-trigger="'mouseenter'" popover-placement="top-left" uib-popover="Terms include: girl, attribute, skill type, main unit, subunit, and English schoolido.lu set name.">
                         <i class="fa fa-search"></i>
@@ -10,7 +10,7 @@
           <input type="text" class="form-control" ng-model="search" ng-change="updateSearch()" placeholder="search" uib-typeahead="type for type in $root.Typeahead | filter:$viewValue | limitTo:8">
 
         </div>
-      </div>
+      </div> -->
 
 
       <div class="btn-group-vertical col-xs-12" uib-tooltip="Filter by skill" tooltip-placement="top">
@@ -131,9 +131,9 @@
 
       <small class="col-xs-12">
                 Showing
-                <b>{{filtered.length}}</b>
+                <b>{{cards.length}}</b>
                 of
-                <b>{{$root.Cards.length}}</b>
+                <b>{{cards_len}}</b>
                 total cards.
             </small>
     </div>
@@ -152,7 +152,7 @@
           <span class="input-group-addon">
                         <i class="fa fa-music"></i>
                     </span>
-          <input type="number" class="form-control" ng-model="song.notes">
+          <input type="number" class="form-control" ng-model="song.notes" ng-change="updateSong()">
           <span class="input-group-addon">
                         total notes
                     </span>
@@ -163,7 +163,7 @@
           <span class="input-group-addon">
                         <i class="fa fa-clock-o"></i>
                     </span>
-          <input type="number" class="form-control" ng-model="song.seconds">
+          <input type="number" class="form-control" ng-model="song.seconds" ng-change="updateSong()">
           <span class="input-group-addon">
                         total seconds
                     </span>
@@ -185,7 +185,7 @@
           <span class="input-group-addon">
                         <i class="fa fa-percent"></i>
                     </span>
-          <input type="number" class="form-control" ng-model="song.perfects" placeholder="perfects"><span class="input-group-addon">
+          <input type="number" class="form-control" ng-model="song.perfects" ng-change="updateSong()"><span class="input-group-addon">
                         % perfects
                     </span>
         </div>
@@ -195,7 +195,7 @@
           <span class="input-group-addon">
                         <i class="fa fa-tasks"></i>
                     </span>
-          <input type="number" class="form-control" ng-model="song.score" placeholder="score"><span class="input-group-addon">
+          <input type="number" class="form-control" ng-model="song.score" ng-change="updateSong()"><span class="input-group-addon">
                         final score
                     </span>
         </div>
@@ -252,7 +252,7 @@
                 <a style="cursor: pointer" ng-click="resetFilters()">Reset filters?</a>
               </td>
             </tr>
-            <tr ng-repeat="card in filtered = (cards | filter:search) | orderBy:sort.type:sort.desc:true track by $index" ng-include src="'table-body.html'">
+            <tr ng-repeat="card in cards | orderBy:sort.type:sort.desc:true track by $index" ng-include src="'table-body.html'">
 
             </tr>
           </tbody>

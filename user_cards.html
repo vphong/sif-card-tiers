@@ -2,14 +2,14 @@
   <div class="col-xs-2" id="filters-md-screens">
     <div class="row">
 
-      <div class="col-xs-12 no-padding">
+      <!-- <div class="col-xs-12 no-padding">
         <div class="input-group input-group-sm">
           <span class="input-group-addon" style="cursor: pointer" popover-append-to-body="true" popover-placement="top-left" uib-popover="Terms include: girl, attribute, skill type, main unit, subunit, and English schoolido.lu set name.">
                           <i class="fa fa-search"></i>
                       </span>
           <input type="text" class="form-control" ng-model="search" ng-change="updateSearch()" placeholder="search by card" uib-typeahead="type for type in $root.Typeahead | filter:$viewValue | limitTo:8">
         </div>
-      </div>
+      </div> -->
 
       <div class="btn-group-vertical col-xs-12" uib-tooltip="Skill" tooltip-placement="top">
         <label class="btn btn-success btn-sm" ng-model="filters.su" ng-click="filterCards()" uib-btn-checkbox>Score Up</label>
@@ -123,15 +123,15 @@
 
       <small class="col-xs-12">
                 Showing
-                <b>{{filtered.length}}</b>
+                <b>{{cards.length}}</b>
                 of
-                <b>{{rawUserCardsData ? rawUserCardsData.length : 0}}</b>
+                <b>{{ownedcards_len}}</b>
                 total cards.
             </small>
     </div>
   </div>
 
-  <div id="search_table" class="col-xs-10" bs-loading-overlay bs-loading-overlay-reference-id="accounts">
+  <div id="search_table" class="col-xs-10" bs-loading-overlay bs-loading-overlay-reference-id="sit">
 
     <div id="search" class="row">
 
@@ -223,7 +223,7 @@
       </div>
     </div>
 
-    <div style="border: 1px solid #dfd7ca;border-radius: 3px;position:relative" bs-loading-overlay bs-loading-overlay-reference-id="user">
+    <div style="border: 1px solid #dfd7ca;border-radius: 3px;position:relative" bs-loading-overlay bs-loading-overlay-reference-id="owned">
       <div class="table-container user-table">
         <table class="table table-striped" id="tbl">
           <thead fix-head>
@@ -286,7 +286,7 @@
                 <a style="cursor: pointer" ng-click="resetFilters()">Reset filters?</a>
               </td>
             </tr>
-            <tr ng-repeat="card in cards | orderBy:sort.type:sort.desc track by $index" ng-include src="'table-body.html'">
+            <tr ng-repeat="card in cards | orderBy:sort.type:sort.desc:true track by $index" ng-include src="'table-body.html'">
             </tr>
           </tbody>
         </table>

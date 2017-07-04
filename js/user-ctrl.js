@@ -3,8 +3,11 @@ app.controller('UserCtrl', function($rootScope, $scope, Cards, localStorageServi
   var editedCards = []
   var allIdlz = false;
   var allCards = [];
-  var overlayHandler = bsLoadingOverlayService.createHandler({
-    referenceId: 'user'
+  var overlayHandlerCards = bsLoadingOverlayService.createHandler({
+    referenceId: 'owned'
+  });
+  var overlayHandlerGet = bsLoadingOverlayService.createHandler({
+    referenceId: 'sit'
   });
 
   var init = function() {
@@ -36,9 +39,14 @@ app.controller('UserCtrl', function($rootScope, $scope, Cards, localStorageServi
     $scope.search = localStorageService.get('userSearch');
     if (!$scope.search) $scope.userSearch = "";
 
+    overlayHandlerCards.start()
     $scope.cards = localStorageService.get('userCards');
-    if (!$scope.cards) $scope.cards = [];
+    if (!$scope.cards) {
+      $scope.cards = [];
+      $scope.ownedcards_len = 0
+    }
     else {
+      $scope.ownedcards_len = $scope.cards.length
       editedCards = localStorageService.get('eUserCards')
       if (!editedCards) editedCards = []
       else {
@@ -55,6 +63,7 @@ app.controller('UserCtrl', function($rootScope, $scope, Cards, localStorageServi
 
       }
     }
+    overlayHandlerCards.stop()
   }
   init();
   $scope.updateSearch = function() {
@@ -62,6 +71,9 @@ app.controller('UserCtrl', function($rootScope, $scope, Cards, localStorageServi
   }
 
   $scope.updateSong = function() {
+    for (var i = 0; i < $scope.cards.length; i++) {
+      Cards.skill($scope.cards[i], $scope.song);
+    }
     localStorageService.set('userSong', $scope.song);
   }
 
@@ -107,9 +119,11 @@ app.controller('UserCtrl', function($rootScope, $scope, Cards, localStorageServi
 
     };
     localStorageService.set('sit', $scope.sit)
+    overlayHandlerGet.stop()
   };
 
   $scope.getAccounts = function() {
+    overlayHandlerGet.start()
     $scope.grabbedAccounts = true;
     $scope.cards = [];
 
@@ -134,7 +148,7 @@ app.controller('UserCtrl', function($rootScope, $scope, Cards, localStorageServi
 
     // grab owned card ids
     // populate ownedCards with cards owned from root cards
-    var allCards = Cards.data("id")
+    var allCards = Cards.data()
     // for each user card
     $scope.cards = []
     allCards.$loaded().then(function() {
@@ -157,15 +171,17 @@ app.controller('UserCtrl', function($rootScope, $scope, Cards, localStorageServi
           }
         }
       }
-
+      $scope.ownedcards_len = $scope.cards.length
       localStorageService.set('userCards', $scope.cards)
     })
 
 
     if (nextUrl) Cards.getUrl(nextUrl).then(getCardsSuccess);
 
+    overlayHandlerGet.stop()
+
     // filter for display
-    // $scope.cards = angular.copy(Cards.filterCards($scope.filters, $scope.ownedCards));
+    // $scope.cards = angular.copy(Cards.filter($scope.filters, $scope.ownedCards));
     // Cards.skill($scope.cards, $scope.song);
 
   };
@@ -174,6 +190,7 @@ app.controller('UserCtrl', function($rootScope, $scope, Cards, localStorageServi
   }
   $scope.getCards = function() {
     $scope.cards = [];
+    overlayHandlerGet.start()
     Cards.getUrl($scope.sit.ownedCardsUrl).then(getCardsSuccess);
   };
 
@@ -183,10 +200,20 @@ app.controller('UserCtrl', function($rootScope, $scope, Cards, localStorageServi
   }
 
   $scope.filterCards = function() {
-    $scope.cards = Cards.filterCards($scope.filters, angular.copy($scope.ownedCards));
-    Cards.skill($scope.cards, $scope.song);
+    overlayHandlerCards.start()
+    var filtered = []
+    var cards = localStorageService.get('userCards')
+    angular.forEach(cards, function(card) {
+      if (Cards.matchesFilter($scope.filters, card)) {
+        Cards.skill(card, $scope.song)
+        filtered.push(card)
+      }
+    })
+
+    $scope.cards = filtered
 
     localStorageService.set('userFilters', $scope.filters);
+    overlayHandlerCards.stop()
   }
 
   $scope.setLocalStorageFilters = function() {
@@ -228,6 +255,7 @@ app.controller('UserCtrl', function($rootScope, $scope, Cards, localStorageServi
     Cards.toggleIdlz(card)
     storeEditedCard(card)
   }
+
   $scope.idlzAll = function() {
     allIdlz = !allIdlz
     Cards.idlzAll($scope.cards, allIdlz)
@@ -243,9 +271,6 @@ app.controller('UserCtrl', function($rootScope, $scope, Cards, localStorageServi
   $scope.sortBy = function(type) {
     Cards.sortBy($scope.sort, type)
     localStorageService.set('sort', $scope.sort)
-  }
-  $scope.displayScore = function(card, scoreType) {
-    return Cards.displayScore(card, scoreType, $scope.filters)
   }
 
 });

@@ -162,7 +162,7 @@ app.factory('Cards', function($rootScope, $http, Calculations, $firebaseObject, 
     return $http.get(url)
   }
 
-  var matchesFilter = function(filters, card) {
+  ret.matchesFilter = function(filters, card) {
     return ((filters.server == 'en' && !card.japan_only ||
         filters.server == 'jp') &&
 
@@ -208,7 +208,7 @@ app.factory('Cards', function($rootScope, $http, Calculations, $firebaseObject, 
     cards.$loaded().then(function() {
       for (var i = 0; i < cards.length; i++) {
         var card = cards[i]
-        if (matchesFilter(filters, card)) {
+        if (ret.matchesFilter(filters, card)) {
           newCards.push(card);
         }
       }
@@ -267,7 +267,7 @@ app.factory('Cards', function($rootScope, $http, Calculations, $firebaseObject, 
     card.stat.best = base + bonus.best
   }
 
-  ret.skill = function(card, song, heel) {
+  ret.skill = function(card, song) {
     var score_up_mod = 0;
     var activations = Calculations.activations(song, card.skill)
     percent = card.skill.levels[card.skill.lvl].percent
