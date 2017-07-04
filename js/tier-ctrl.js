@@ -124,13 +124,13 @@ app.controller('TierCtrl', function($rootScope, $scope, Cards, localStorageServi
 
 
   $scope.filterCards = function() {
-    overlayHandler.start()
+    // overlayHandler.start()
     Cards.filter($scope.filters).then(function(data) {
       $scope.cards = data
       angular.forEach($scope.cards, function(card) {
         Cards.skill(card, $scope.song)
       })
-      overlayHandler.stop()
+      // overlayHandler.stop()
     });
     // Cards.skill($scope.cards, $scope.song);
     localStorageService.set('filters', $scope.filters);
