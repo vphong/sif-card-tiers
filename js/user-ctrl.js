@@ -74,9 +74,8 @@ app.controller('UserCtrl', function($rootScope, $scope, Cards, localStorageServi
 
     localStorageService.set('userFilters', $scope.filters);
 
-    $scope.$on('ngRepeatComplete', function() {
-      overlayHandlerCards.stop();
-    })
+
+    overlayHandlerCards.stop();
   }
   $scope.filterCards() // initial filtering
 
@@ -238,7 +237,7 @@ app.controller('UserCtrl', function($rootScope, $scope, Cards, localStorageServi
     localStorageService.set('eUserCards', editedCards)
 
   }
-  
+
   $scope.lvl = 1
   $scope.updateSkillLevels = function() {
     for (var i = 0; i < $scope.cards.length; i++) {
