@@ -1,7 +1,11 @@
-app.controller('TierCtrl', function($rootScope, $scope, Cards, localStorageService, $filter, $firebaseArray) {
+app.controller('TierCtrl', function($rootScope, $scope, Cards, localStorageService, $filter, $firebaseArray, bsLoadingOverlayService) {
 
-  // $rootScope = $rootScope.$new(true)
-  // $scope = $scope.$new(true)
+  var editedCards = []
+
+  var overlayHandler = bsLoadingOverlayService.createHandler({
+    referenceId: 'all'
+  });
+
   var allIdlz = false;
   $scope.init = function() {
     $scope.filters = localStorageService.get('filters');
@@ -13,18 +17,31 @@ app.controller('TierCtrl', function($rootScope, $scope, Cards, localStorageServi
     $scope.song = localStorageService.get('song');
     if (!$scope.song) $scope.song = angular.copy($rootScope.Song);
 
-    $scope.cards = localStorageService.get('cards')
-    if (!$scope.cards) {
-      $scope.cards = Cards.data('-stat')
-
-      $scope.cards.$loaded().then(function() {
-        // run calcs
-        angular.forEach($scope.cards, function(card) {
-          Cards.skill(card, $scope.song)
-        })
+    overlayHandler.start()
+    $scope.cards = Cards.filter($scope.filters).then(function(data) {
+      // run calcs
+      $scope.cards = data
+      angular.forEach($scope.cards, function(card) {
+        Cards.skill(card, $scope.song)
       })
+      editedCards = localStorageService.get('cards')
+      if (!editedCards) editedCards = []
+      else {
 
-    }
+        for (var i = 0; i < editedCards.length; i++) {
+          var edited = editedCards[i]
+          for (var j = 0; j < $scope.cards.length; j++) {
+            if (edited.id == $scope.cards[j].id) {
+              $scope.cards[j] = edited
+              break;
+            }
+          }
+        }
+
+      }
+      console.log($scope.cards)
+      overlayHandler.stop();
+    })
 
     $scope.sort = localStorageService.get('sort');
     if (!$scope.sort) {
@@ -47,25 +64,38 @@ app.controller('TierCtrl', function($rootScope, $scope, Cards, localStorageServi
   }
 
   $scope.updateSong = function() {
-    Cards.skill($scope.cards, $scope.song, $scope.filters.heel);
+    Cards.skill($scope.cards, $scope.song);
     localStorageService.set('song', $scope.song);
   }
 
-  $scope.updateSkillLevel = function(card) {
-    Cards.skill(card, $scope.song)
-    localStorageService.set('cards', $scope.cards)
+  var storeEditedCard = function(card) {
+    var found = false
+    for (var i = 0; i < editedCards.length; i++) {
+      if (editedCards[i].id == card.id) {
+        editedCards[i] = card
+        found = true
+        break;
+      }
+    }
+    if (!found) editedCards.push(card)
+    console.log(editedCards)
+    localStorageService.set('cards', editedCards)
+
   }
 
   $scope.sortBy = function(type, desc) {
-
     Cards.sortBy($scope.sort, type, desc)
     localStorageService.set('sort', $scope.sort)
   }
 
+  $scope.updateSkillLevel = function(card) {
+    Cards.skill(card, $scope.song)
+    storeEditedCard(card)
+  }
 
   $scope.toggleIdlz = function(card) {
     Cards.toggleIdlz(card)
-    localStorageService.set('cards', $scope.cards)
+    storeEditedCard(card)
   }
   $scope.idlzAll = function() {
     allIdlz = !allIdlz
@@ -81,8 +111,15 @@ app.controller('TierCtrl', function($rootScope, $scope, Cards, localStorageServi
 
 
   $scope.filterCards = function() {
-    $scope.cards = Cards.filterCards($scope.filters, angular.copy($rootScope.Cards));
-    Cards.skill($scope.cards, $scope.song, $scope.filters.heel);
+    overlayHandler.start()
+    Cards.filter($scope.filters).then(function(data) {
+      $scope.cards = data
+      angular.forEach($scope.cards, function(card) {
+        Cards.skill(card, $scope.song)
+      })
+      overlayHandler.stop()
+    });
+    // Cards.skill($scope.cards, $scope.song);
     localStorageService.set('filters', $scope.filters);
   }
 

@@ -167,7 +167,7 @@ app.controller('UserCtrl', function($rootScope, $scope, Cards, localStorageServi
   }
 
   $scope.filterCards = function() {
-    // $scope.cards = Cards.filterCards($scope.filters, angular.copy($scope.ownedCards));
+    $scope.cards = Cards.filterCards($scope.filters, angular.copy($scope.ownedCards));
     Cards.skill($scope.cards, $scope.song);
 
     localStorageService.set('userFilters', $scope.filters);

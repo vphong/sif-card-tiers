@@ -40,7 +40,7 @@ app.config(function($httpProvider) {
 
 app.run(function(bsLoadingOverlayService) {
   bsLoadingOverlayService.setGlobalConfig({
-    delay: 900, // Minimal delay to hide loading overlay in ms.
+    delay: 500, // Minimal delay to hide loading overlay in ms.
     templateUrl: 'loading-overlay.html' // Template url for overlay element. If not specified - no overlay element is created.
   });
 });
@@ -148,59 +148,81 @@ app.factory('Calculations', function() {
     return ret.scoreUpMod(song, trick_greats_bonus + trick_perfects_bonus)
   }
 
-
-
-
-
   return ret;
 })
 
-app.factory('Cards', function($rootScope, $http, Calculations, $firebaseObject, $firebaseArray) {
+app.factory('Cards', function($rootScope, $http, Calculations, $firebaseObject, $firebaseArray, $q) {
   var ret = {};
 
-  ret.data = function(orderBy) {
-    var ref = firebase.database().ref().child('cards').orderByChild(orderBy);
+  ret.data = function() {
+    var ref = firebase.database().ref().child('cards');
     return $firebaseArray(ref)
   }
   ret.getUrl = function(url) {
     return $http.get(url)
   }
 
-  ret.getCardById = function(id) {
-    var ref = firebase.database().ref().child('cards/id' + id)
-    return $firebaseObject(ref)
+  var matchesFilter = function(filters, card) {
+    return ((filters.server == 'en' && !card.japan_only ||
+        filters.server == 'jp') &&
+
+      (filters.sr && card.rarity == "SR" ||
+        filters.ssr && card.rarity == "SSR" ||
+        filters.ur && card.rarity == "UR") &&
+
+      (filters.attribute == 'all' && card.attribute ||
+        filters.attribute == 'smile' && card.attribute == "Smile" ||
+        filters.attribute == 'pure' && card.attribute == "Pure" ||
+        filters.attribute == 'cool' && card.attribute == "Cool") &&
+
+      ((filters.premium && !card.event && !card.is_promo) ||
+        filters.event && card.event || filters.promo && card.is_promo) &&
+
+      (filters.su && card.skill.category == "Score Up" ||
+        filters.pl && card.skill.category == "Perfect Lock" ||
+        filters.hl && card.skill.category == "Healer") &&
+
+      (filters.muse && card.main_unit == "Muse" ||
+        filters.aqours && card.main_unit == "Aqours") &&
+
+      (filters.subunit == "all" && card.sub_unit ||
+        filters.subunit == "BiBi" && card.sub_unit == "Bibi" ||
+        filters.subunit == "Printemps" && card.sub_unit == "Printemps" ||
+        filters.subunit == "lily white" && card.sub_unit == "Lily White" ||
+        filters.subunit == "AZALEA" && card.sub_unit == "AZALEA" ||
+        filters.subunit == "CYaRon" && card.sub_unit == "CYaRon!" ||
+        filters.subunit == "Guilty Kiss" && card.sub_unit == "Guilty Kiss") &&
+
+      (filters.year == "all" && card.year ||
+        filters.year == "1" && card.year == "first" ||
+        filters.year == "2" && card.year == "second" ||
+        filters.year == "3" && card.year == "third")
+    )
   }
 
-
-
-  ret.filterCards = function(filters, cards) {
-    var card;
+  ret.filter = function(filters) {
     var newCards = [];
-    var len = cards.length;
+    var deferred = $q.defer();
 
-    cards.$loaded(function(ret) {
-
-
-        if (card.rarity == "UR") {
-          card.stat.base += 500
-          card.stat.idlz += 1000
-        } else if (card.rarity == "SSR") {
-          card.stat.base += 375
-          card.stat.idlz += 750
-        } else if (card.rarity == "SR") {
-          card.stat.base += 250
-          card.stat.idlz += 500
+    var cards = ret.data()
+    cards.$loaded().then(function() {
+      for (var i = 0; i < cards.length; i++) {
+        var card = cards[i]
+        if (matchesFilter(filters, card)) {
+          newCards.push(card);
         }
-        card.stat.display = card.stat.base
-
-        // newCards.push(card);
-
-
-
-
+      }
+      // console.log(newCards)
+      cards = newCards
+      deferred.resolve(cards)
+    }).catch(function(error) {
+      deferred.reject(error)
     })
-    return newCards;
+
+    return deferred.promise;
+
   }
+
 
   ret.toggleIdlz = function(card) {
     if (card.idlz) {

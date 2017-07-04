@@ -247,6 +247,17 @@ def cleanCard(d, keys):
         ret['stat']['base'] = ret['non_idolized_maximum_statistics_cool']
         ret['stat']['idlz'] = ret['idolized_maximum_statistics_cool']
 
+
+    if ret['rarity'] == "UR":
+        ret['stat']['base'] += 500
+        ret['stat']['idlz'] += 1000
+    elif ret['rarity'] == "SSR":
+        ret['stat']['base'] += 375
+        ret['stat']['idlz'] += 750
+    elif ret['rarity'] == "SR":
+        ret['stat']['base'] += 250
+        ret['stat']['idlz'] += 500
+
     ret['stat']['display'] = ret['stat']['base']
 
     ret.pop('non_idolized_maximum_statistics_cool', None)
