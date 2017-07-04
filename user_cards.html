@@ -159,7 +159,7 @@
       </div>
 
 
-      <div id="input" class="col-xs-12" ng-include src="'input.html'">
+      <div id="input" class="col-xs-12" ng-include src="'templates/input.html'">
 
       </div>
     </div>
@@ -227,7 +227,7 @@
                 <a style="cursor: pointer" ng-click="resetFilters()">Reset filters?</a>
               </td>
             </tr>
-            <tr ng-repeat="card in cards | orderBy:sort.type:sort.desc:true track by $index" ng-include src="'table-body.html'">
+            <tr ng-repeat="card in cards | orderBy:sort.type:sort.desc:true track by $index" on-complete-render="ngRepeatComplete" ng-include src="'templates/table-body.html'">
             </tr>
           </tbody>
         </table>

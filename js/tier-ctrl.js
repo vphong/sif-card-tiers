@@ -40,8 +40,10 @@ app.controller('TierCtrl', function($rootScope, $scope, Cards, localStorageServi
         }
 
       }
-      overlayHandler.stop();
+    })
+    $scope.$on('ngRepeatComplete', function() {
       $rootScope.loading = false
+      overlayHandler.stop();
     })
 
     $scope.sort = localStorageService.get('sort');
@@ -103,11 +105,7 @@ app.controller('TierCtrl', function($rootScope, $scope, Cards, localStorageServi
 
   $scope.idlzAll = function() {
     allIdlz = !allIdlz
-    Cards.idlzAll($scope.cards, $scope.allIdlz)
-
-    if ($scope.sort.type == 'stat.display') {
-      $scope.sortBy('stat.display', true)
-    }
+    Cards.idlzAll($scope.cards, allIdlz)
   }
   $scope.toggleHeel = function() {
     Cards.skill($scope.cards, $scope.song);

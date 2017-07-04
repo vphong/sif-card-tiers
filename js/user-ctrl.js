@@ -12,32 +12,21 @@ app.controller('UserCtrl', function($rootScope, $scope, Cards, localStorageServi
 
   var init = function() {
     $scope.filters = localStorageService.get('userFilters');
-    if (!$scope.filters) {
-      $scope.filters = angular.copy($rootScope.InitFilters);
-      $scope.filters.displayImg = true;
-    }
+    if (!$scope.filters) $scope.filters = angular.copy($rootScope.InitFilters);
 
     $scope.sort = localStorageService.get('sort');
-    if (!$scope.sort) {
-      $scope.sort = {
-        type: 'stat.avg',
-        desc: true,
-      }
-      localStorageService.set('sort', $scope.sort);
-    }
+    if (!$scope.sort) $scope.sort = angular.copy($rootScope.InitSort);
 
     $scope.sit = localStorageService.get('sit');
-    if (!$scope.sit) {
-      $scope.sit = {};
-    }
+    if (!$scope.sit) $scope.sit = {};
 
 
     $scope.song = localStorageService.get('userSong');
     if (!$scope.song) $scope.song = angular.copy($rootScope.Song);
 
 
-    $scope.search = localStorageService.get('userSearch');
-    if (!$scope.search) $scope.userSearch = "";
+    // $scope.search = localStorageService.get('userSearch');
+    // if (!$scope.search) $scope.userSearch = "";
 
     overlayHandlerCards.start()
     $scope.cards = localStorageService.get('userCards');
@@ -62,7 +51,11 @@ app.controller('UserCtrl', function($rootScope, $scope, Cards, localStorageServi
 
       }
     }
-    overlayHandlerCards.stop()
+
+    $scope.$on('ngRepeatComplete', function() {
+      $rootScope.loading = false
+      overlayHandlerCards.stop();
+    })
   }
   init();
 
@@ -80,13 +73,16 @@ app.controller('UserCtrl', function($rootScope, $scope, Cards, localStorageServi
     $scope.cards = filtered
 
     localStorageService.set('userFilters', $scope.filters);
-    overlayHandlerCards.stop()
-  }
-  $scope.filterCards()
 
-  $scope.updateSearch = function() {
-    localStorageService.set('userSearch', $scope.userSearch);
+    $scope.$on('ngRepeatComplete', function() {
+      overlayHandlerCards.stop();
+    })
   }
+  $scope.filterCards() // initial filtering
+
+  // $scope.updateSearch = function() {
+  //   localStorageService.set('userSearch', $scope.userSearch);
+  // }
 
   $scope.updateSong = function() {
     for (var i = 0; i < $scope.cards.length; i++) {
@@ -160,15 +156,11 @@ app.controller('UserCtrl', function($rootScope, $scope, Cards, localStorageServi
     if (response.data.next) nextUrl = "https" + response.data.next.substring(4);
     else nextUrl = null;
 
-    var ownedCards = response.data.results;
-    // localStorageService.set('rawUserCards', $scope.rawUserCards);
-
-
-    // grab owned card ids
-    // populate ownedCards with cards owned from root cards
-    var allCards = Cards.data()
-    // for each user card
     $scope.cards = []
+
+    var ownedCards = response.data.results;
+    var allCards = Cards.data()
+
     allCards.$loaded().then(function() {
       // console.log(ownedCards.length)
       for (var i = 0; i < response.data.count; i++) {
@@ -196,7 +188,6 @@ app.controller('UserCtrl', function($rootScope, $scope, Cards, localStorageServi
 
     if (nextUrl) Cards.getUrl(nextUrl).then(getCardsSuccess);
 
-    overlayHandlerGet.stop()
 
     // filter for display
     // $scope.cards = angular.copy(Cards.filter($scope.filters, $scope.ownedCards));
@@ -210,6 +201,10 @@ app.controller('UserCtrl', function($rootScope, $scope, Cards, localStorageServi
     $scope.cards = [];
     overlayHandlerGet.start()
     Cards.getUrl($scope.sit.ownedCardsUrl).then(getCardsSuccess);
+
+    $scope.$on('ngRepeatComplete', function() {
+      overlayHandlerGet.stop();
+    })
   };
 
 

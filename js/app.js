@@ -9,47 +9,14 @@ var config = {
 firebase.initializeApp(config)
 
 var app = angular.module('tierList', ['ui.bootstrap', 'ui.router.tabs',
-  'bsLoadingOverlay', 'bsLoadingOverlayHttpInterceptor', 'mgcrea.ngStrap',
+  'bsLoadingOverlay', 'mgcrea.ngStrap',
   'ui.router', 'LocalStorageModule', 'fixed.table.header', 'firebase'
 ]);
-
-app.factory('cardInterceptor', function(bsLoadingOverlayHttpInterceptorFactoryFactory) {
-  return bsLoadingOverlayHttpInterceptorFactoryFactory({
-    referenceId: 'table',
-    requestsMatcher: function(requestConfig) {
-      return requestConfig.url.indexOf('ownedcards') !== -1;
-    }
-  });
-});
-
-app.factory('accountInterceptor', function(bsLoadingOverlayHttpInterceptorFactoryFactory) {
-  return bsLoadingOverlayHttpInterceptorFactoryFactory({
-    referenceId: 'accounts',
-    requestsMatcher: function(requestConfig) {
-      return requestConfig.url.indexOf('owner__username') !== -1;
-    }
-  });
-});
-
-app.factory('allCardsInterceptor', function(bsLoadingOverlayHttpInterceptorFactoryFactory) {
-  return bsLoadingOverlayHttpInterceptorFactoryFactory({
-    referenceId: 'all',
-    // requestsMatcher: function(requestConfig) {
-    //     return requestConfig.url.indexOf('cards') !== -1;
-    // }
-  });
-});
-
-app.config(function($httpProvider) {
-  $httpProvider.interceptors.push('allCardsInterceptor');
-  $httpProvider.interceptors.push('cardInterceptor');
-  $httpProvider.interceptors.push('accountInterceptor');
-});
 
 app.run(function(bsLoadingOverlayService) {
   bsLoadingOverlayService.setGlobalConfig({
     delay: 500, // Minimal delay to hide loading overlay in ms.
-    templateUrl: 'loading-overlay.html' // Template url for overlay element. If not specified - no overlay element is created.
+    templateUrl: 'templates/loading-overlay.html' // Template url for overlay element. If not specified - no overlay element is created.
   });
 });
 
@@ -96,6 +63,7 @@ app.controller('TabCtrl', function($rootScope, $scope, $state) {
   $scope.active = function(route) {
     return $state.is(route);
   };
+
 
   $scope.$on("$stateChangeSuccess", function() {
     $scope.tabs.forEach(function(tab) {
@@ -214,15 +182,16 @@ app.factory('Cards', function($rootScope, $http, Calculations, $firebaseObject, 
 
     var cards = ret.data()
     cards.$loaded().then(function() {
+
       for (var i = 0; i < cards.length; i++) {
         var card = cards[i]
         if (ret.matchesFilter(filters, card)) {
           newCards.push(card);
         }
       }
-      // console.log(newCards)
       cards = newCards
       deferred.resolve(cards)
+
     }).catch(function(error) {
       deferred.reject(error)
     })
@@ -231,19 +200,18 @@ app.factory('Cards', function($rootScope, $http, Calculations, $firebaseObject, 
 
   }
 
-
   ret.toggleIdlz = function(card) {
     if (card.idlz) {
       card.stat.display = card.stat.idlz
       card.stat.avg = card.stat.idlz + card.skill.stat_bonus_avg
       card.stat.best = card.stat.idlz + card.skill.stat_bonus_best
     } else {
-
       card.stat.display = card.stat.base
       card.stat.avg = card.stat.base + card.skill.stat_bonus_avg
       card.stat.best = card.stat.base + card.skill.stat_bonus_best
     }
   }
+
   ret.idlzAll = function(cards, idlz) {
     angular.forEach(cards, function(card) {
       if (!card.user_idlz) {
@@ -338,3 +306,16 @@ app.directive('master', function() { //declaration; identifier master
     link: link // the function to link to our element
   };
 });
+
+app.directive('onCompleteRender', function($timeout) {
+  return {
+      restrict: 'A',
+      link: function (scope, element, attr) {
+          if (scope.$last === true) {
+              $timeout(function () {
+                  scope.$emit(attr.onCompleteRender);
+              });
+          }
+      }
+  }
+})

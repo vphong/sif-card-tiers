@@ -1,0 +1,50 @@
+<td>{{sort.desc ? $index+1 : filtered.length - $index}}</td>
+<td class="name-display">
+  <div class="media">
+    <div class="media-left"><img ng-if="filters.displayImg || userFilters.displayImg" ng-src="{{card.idlz || card.is_promo ? card.round_card_idolized_image : card.round_card_image}}" class="display-image media-image">
+    </div>
+    <div class="media-body media-middle">
+      <a href="{{card.website_url}}" ng-class="{'text-smile': card.attribute=='Smile', 'text-pure': card.attribute=='Pure', 'text-cool': card.attribute=='Cool'}">
+                          <i ng-if="card.skill.category=='Score Up'" class="fa fa-level-up" uib-tooltip="Score Up"></i>
+                          <i ng-if="card.skill.category=='Healer'" class="fa fa-heart" uib-tooltip="Healer"></i>
+                          <i ng-if="card.skill.category=='Perfect Lock'" class="fa fa-lock" uib-tooltip="Perfect Lock"></i>
+                          <i ng-if="card.event" class="fa fa-star" uib-tooltip="Event Only"></i>
+                          {{card.full_name}}</a>
+      </span>
+    </div>
+  </div>
+</td>
+<td>
+  <input type="checkbox" ng-model="card.idlz" ng-click="toggleIdlz(card)" ng-disabled="card.user_idlz || card.is_promo">
+</td>
+<td>{{card.id}}</td>
+<td>{{card.stat.display}}
+  <br/><span ng-class="{'text-smile': card.attribute=='Smile', 'text-pure': card.attribute=='Pure', 'text-cool': card.attribute=='Cool'}">{{card.attribute}}</span>
+</td>
+<td><input type="number" name="skill_lvl" ng-model="card.skill.lvl" ng-change="updateSkillLevel(card)" ng-min="1" ng-max="8" min="1" max="8"/></td>
+<td>
+  {{card.skill.avg |number:0}}
+
+  <span ng-if="card.skill.category=='Score Up'">points</span>
+  <span ng-if="card.skill.category=='Healer'">stamina</span>
+  <span ng-if="card.skill.category=='Perfect Lock'">seconds</span>
+
+  <br><small><b>(+{{card.equippedSIS ? card.sis.stat_bonus_avg : card.skill.stat_bonus_avg|number:0}} <span ng-class="{'text-smile': card.attribute=='Smile', 'text-pure': card.attribute=='Pure', 'text-cool': card.attribute=='Cool'}">{{card.attribute}}</span>)</b></small>
+</td>
+<td>{{card.skill.best |number:0}}
+  <span ng-if="card.skill.category=='Score Up'">points</span>
+  <span ng-if="card.skill.category=='Healer'">stamina</span>
+  <span ng-if="card.skill.category=='Perfect Lock'">seconds</span>
+
+  <br><small><b>(+{{card.equippedSIS ? card.sis.stat_bonus_best : card.skill.stat_bonus_best|number:0}} <span ng-class="{'text-smile': card.attribute=='Smile', 'text-pure': card.attribute=='Pure', 'text-cool': card.attribute=='Cool'}">{{card.attribute}}</span>)</b></small>
+
+</td>
+<td>
+  {{card.skill.type}}
+</td>
+<td>
+  {{card.stat.avg}} <span ng-class="{'text-smile': card.attribute=='Smile', 'text-pure': card.attribute=='Pure', 'text-cool': card.attribute=='Cool'}">{{card.attribute}}</span>
+</td>
+<td>
+  {{card.stat.best}} <span ng-class="{'text-smile': card.attribute=='Smile', 'text-pure': card.attribute=='Pure', 'text-cool': card.attribute=='Cool'}">{{card.attribute}}</span>
+</td>
