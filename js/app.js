@@ -19,8 +19,9 @@ app.run(function(bsLoadingOverlayService) {
   });
 });
 
-app.config(function($stateProvider, $urlRouterProvider) {
-
+app.config(function($stateProvider, $urlRouterProvider, $qProvider) {
+  $qProvider.errorOnUnhandledRejections(false)
+  
   $urlRouterProvider.otherwise("/");
 
   $stateProvider
