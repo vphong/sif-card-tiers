@@ -11,7 +11,7 @@ logging.basicConfig(level=logging.INFO)
 # initalization
 # original card endpoint
 sitURL = "http://schoolido.lu/api/cards/?ordering=-id&is_special=False&page_size=10&rarity=SR%2CSSR%2CUR"
-sitIDs = "http://schoolido.lu/api/cardids/?&is_special=False&rarity=SR%2CSSR%2CUR&ids="
+sitIDs = "http://schoolido.lu/api/cardids/?&is_special=False&rarity=SR%2CSSR%2CUR"
 krrURL = "https://sif.kirara.ca/card/"
 
 # keys to grab from json
@@ -332,7 +332,7 @@ def updateSkillLevels():
     if mostRecentLocal < mostRecentSIT:
         possibleIds = ",".join([repr(i) for i in range(mostRecentLocal+1, mostRecentSIT+1)])
         # print(sitIDs+possibleIds)
-        response = urllib.request.urlopen(sitIDs+possibleIds)
+        response = urllib.request.urlopen(sitIDs+"&ids="+possibleIds)
         ids = json.loads(response.read())
 
         # mostRecentSIT = max(ids)
@@ -387,7 +387,7 @@ def getRawCards():
         json.dump(cards, f, indent=2, sort_keys=True)
 
     logging.info("getRawCards(): done")
-
+# getRawCards()
 # function: only make http requests to SIT for new cards
 def updateCardsJSON():
     logging.info("getNewCards(): begin")
@@ -479,10 +479,9 @@ def consolidateCardsAndSkillsJSON():
     #     json.dump(cards, f, indent=2)
     #     f.write("\n);")
 
-
-    data = { "cards": {}}
+    data = {}
     for card in cards:
-        data['cards']["id"+repr(card['id'])] = card
+        data["id"+repr(card['id'])] = card
 
     # data['cards']['0'] = {}
 
@@ -490,6 +489,6 @@ def consolidateCardsAndSkillsJSON():
         json.dump(data, f, indent=2)
 
 
-updateSkillLevels()
-updateCardsJSON()
+# updateSkillLevels()
+# updateCardsJSON()
 consolidateCardsAndSkillsJSON()
