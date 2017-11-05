@@ -44,7 +44,6 @@ app.controller('TierCtrl', function($rootScope, $scope, Cards, localStorageServi
         }
 
       }
-      console.log(data)
     })
     $scope.$on('ngRepeatComplete', function() {
       $rootScope.loading = false

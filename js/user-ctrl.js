@@ -24,7 +24,6 @@ app.controller('UserCtrl', function($rootScope, $scope, Cards, localStorageServi
     $scope.song = localStorageService.get('userSong');
     if (!$scope.song) $scope.song = angular.copy($rootScope.Song);
 
-
     // $scope.search = localStorageService.get('userSearch');
     // if (!$scope.search) $scope.userSearch = "";
 

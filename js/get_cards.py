@@ -4,7 +4,10 @@ import urllib.request
 import json
 import datetime
 import logging
+import pprint
 from bs4 import BeautifulSoup
+
+pp = pprint.PrettyPrinter(indent=2)
 
 logging.basicConfig(level=logging.INFO)
 
@@ -281,17 +284,23 @@ def getJSON(url):
     data = json.loads(data)
     return data
 
-def mostRecentSITCard():
-    mostRecentSIT= getJSON("http://schoolido.lu/api/cards/?ordering=-id&page=1&page_size=1&rarity=SR%2CSSR%2CUR&is_special=False")
-    mostRecentSIT = mostRecentSIT['results'][0]
-    return mostRecentSIT['id']
 
-def mostRecentLocalCard(cards):
-    mostRecentId = 0
-    for card in cards:
-        if card['id'] > mostRecentId:
-            mostRecentId = card['id']
-    return mostRecentId
+def difference(cards):
+    # extract ids from cards
+    # logging.info(cards.keys())
+    ids = [int(i) for i in cards.keys()]
+
+    # compare to sit
+    sit = getJSON(sitIDs)
+
+    diff = set(sit) - set(ids)
+    worldwide_poster = set(range(2001, 2010))
+    diff = diff - worldwide_poster
+
+    logging.info("difference():")
+    logging.info(diff)
+    return diff
+
 ###########
 def populateCardSkills():
     logging.info("populateCardSkills: begin")
@@ -304,12 +313,13 @@ def populateCardSkills():
     # print(firstHalf)
     skills = []
     for i in ids:
-        skill = {'id': i}
-        try:
-            skill.update(getSkillLevels(i))
-            skills.append(skill)
-        except:
-            break
+        if i not in range(2001,2010):
+            skill = {'id': i}
+            try:
+                skill.update(getSkillLevels(i))
+                skills.append(skill)
+            except:
+                break
 
     logging.info("populateCardSkills: writing to skills.json ")
     with open("skills.json", 'w') as f:
@@ -321,33 +331,16 @@ def updateSkillLevels():
     with open("skills.json", 'r') as f:
         skills = json.loads(f.read())
 
-    mostRecentLocal = mostRecentLocalCard(skills)
-    mostRecentSIT = mostRecentSITCard()
+    diff = difference(skills)
 
-    logging.info("updateSkillLevels(): most recent local: " + repr(mostRecentLocal))
-    logging.info("updateSkillLevels(): most recent Sit: " + repr(mostRecentSIT))
-
-
-
-    if mostRecentLocal < mostRecentSIT:
-        possibleIds = ",".join([repr(i) for i in range(mostRecentLocal+1, mostRecentSIT+1)])
-        # print(sitIDs+possibleIds)
-        response = urllib.request.urlopen(sitIDs+"&ids="+possibleIds)
-        ids = json.loads(response.read())
-
-        # mostRecentSIT = max(ids)
-        logging.info("updateSkillLevels(): getting")
-        logging.info(ids)
-        # mostRecentLocal = 1201
-        # mostRecentSIT = 1206
-
-        for i in ids:
-            logging.info(i)
-            skill = {'id': i}
+    if diff:
+        for i in diff:
+            skill = {}
+            skill[repr(i)] = {'id': i}
 
             try:
-                skill.update(getSkillLevels(i))
-                skills.append(skill)
+                skill[repr(i)].update(getSkillLevels(i))
+                skills.update(skill)
             except Exception as e:
                 print(e)
                 print(skill)
@@ -355,16 +348,11 @@ def updateSkillLevels():
 
         logging.info("updateSkillLevels: appending to skills.json ")
         with open("skills.json", 'w') as f:
-            json.dump(skills, f, sort_keys=True)
+            json.dump(skills, f, sort_keys=True, indent=2)
     else:
         logging.info("updateSkillLevels: up to date")
 
 
-# updateSkillLevels()
-# updateSkillLevels()
-    # data = urllib.request.urlopen("http://schoolido.lu/api/cardids/?is_special=False&rarity=SR,SSR,UR&ids=" + cards)
-    # newIDs = json.loads(data.read())
-    # print(cards)
 
 # function: get raw card data from schoolido.lu API
 def getRawCards():
@@ -372,14 +360,20 @@ def getRawCards():
     logging.info("getRawCards(): begin")
     data = getJSON(sitURL)
     nextURL = data['next']
-    cards = data['results']
+    cardsList = data['results']
 
     # iterate through API's paginated data
     while nextURL:
         data = getJSON(nextURL)
         nextURL = data['next']
         for card in data['results']:
-            cards.append(card)
+            if card['id'] not in range(2001,2010):
+                cardsList.append(card)
+
+    cards = temp = {}
+    for card in cardsList:
+        temp[repr(card['id'])] = card
+        cards.update(temp)
 
     # write raw data to file
     with open('cards.json', 'w', encoding='utf-8') as f:
@@ -390,105 +384,64 @@ def getRawCards():
 # getRawCards()
 # function: only make http requests to SIT for new cards
 def updateCardsJSON():
-    logging.info("getNewCards(): begin")
+    logging.info("updateCardsJSON(): begin")
     with open('cards.json', 'r', encoding='utf-8') as f:
-        oldCards = json.loads(f.read())
+        old = json.loads(f.read())
 
-    mostRecentLocal = mostRecentLocalCard(oldCards)
-    mostRecentSIT = mostRecentSITCard()
-    # mostRecentLocal = 1201
-    # mostRecentSIT = 1206
-    logging.info("getNewCards(): most recent local: " + str(mostRecentLocal))
-    logging.info("getNewCards(): most recent on SIT: " + str(mostRecentSIT))
+    diff = difference(old)
 
-    if mostRecentLocal < mostRecentSIT:
-        logging.info("getNewCards(): getting new card info from schoolido.lu")
+    if diff:
+        logging.info("updateCardsJSON(): getting new card info from schoolido.lu")
 
-        possibleIds = ",".join([repr(i) for i in range(mostRecentLocal+1, mostRecentSIT+1)])
-            # print(sitIDs+possibleIds)
-        response = urllib.request.urlopen(sitIDs+possibleIds)
-        ids = json.loads(response.read())
+        diffStr = ",".join([repr(i) for i in diff])
+        newData = getJSON(sitURL+"&ids=" + diffStr)
 
-        cards = ",".join([repr(i) for i in ids])
-        newCardsData = getJSON("http://schoolido.lu/api/cards/?is_special=False&rarity=SR,SSR,UR&ids=" + cards)
-        newCards = []
-        for newCard in newCardsData['results']:
-            newCards.append(newCard)
+        new = temp = {}
+        for card in newData['results']:
+            temp[repr(card['id'])] = card
+            new.update(temp)
 
-        logging.info("getNewCards(): combining new & old cards")
-        cards = oldCards + newCards
+        logging.info("updateCardsJSON(): combining new & old cards")
+        old.update(new)
 
-        logging.info("getNewCards(): writing to cards.json")
+        logging.info("updateCardsJSON(): writing to cards.json")
         with open('cards.json', 'w', encoding='utf-8') as f:
-            json.dump(cards, f, indent=2, sort_keys=True)
+            json.dump(old, f, indent=2, sort_keys=True)
 
     else:
-        logging.info("getNewCards(): up to date")
-
-# function: grab info needed for use in web app
-# input: cards in json/dict
-def processCards():
-    logging.info("processCards: begin")
-    # initalization
-    logging.info("processCards(): loading card data")
-    with open('cards.json', 'r', encoding='utf-8') as infile:
-        data = json.loads(infile.read())
-
-    cards = []
-    logging.info("processCards(): cleaning cards")
-    for card in data:
-        card = cleanCard(card, keysNeeded)
-        cards.append(card)
-
-    # write to file for angular
-    logging.info("processCards(): done cleaning. writing to cards.js")
-    with open('cards.js', 'w', encoding='utf-8') as f:
-        f.write("app.constant('CardData',\n")
-        json.dump(cards, f, indent=2)
-        f.write("\n);")
-
-    logging.info("processCards(): done")
+        logging.info("updateCardsJSON(): up to date")
 
 
-# getRawCards()
-# processCards()
 
-def consolidateCardsAndSkillsJSON():
-    cardData = []
+def consolidate():
+    cardData = {}
+    logging.info("consolidate(): reading cards")
     with open("cards.json", 'r') as c:
         cardData = json.loads(c.read())
 
+    logging.info("consolidate(): reading skills")
     skills = []
     with open("skills.json", 'r') as s:
         skills = json.loads(s.read())
 
-    cards = []
-    for card in cardData:
+    logging.info("consolidate(): cleaning cards")
+    data = temp = {}
+    for card in cardData.values():
         card = cleanCard(card, keysNeeded)
         # search for skill in skills
-        skill = next(skill for skill in skills if skill['id'] == card['id'])
+        skill = skills[repr(card['id'])]
         levels = {'levels': skill['levels']}
-        # print(card['skill'])
         card['skill'].update(levels)
-        # print(card)
         # update card['skill'] w/ levels
-        cards.append(card)
+        temp[repr(card['id'])] = card
+        data.update(temp)
 
-    # with open('cards.js', 'w', encoding='utf-8') as f:
-    #     f.write("app.constant('CardData',\n")
-    #     json.dump(cards, f, indent=2)
-    #     f.write("\n);")
 
-    data = {}
-    for card in cards:
-        data["id"+repr(card['id'])] = card
-
-    # data['cards']['0'] = {}
-
+    logging.info("consolidate(): writing to data.json")
     with open('data.json', 'w') as f:
-        json.dump(data, f, indent=2)
+        json.dump(data, f, indent=2, sort_keys=True)
 
 
 # updateSkillLevels()
 # updateCardsJSON()
-consolidateCardsAndSkillsJSON()
+consolidate()
