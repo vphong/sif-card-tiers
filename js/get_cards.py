@@ -63,11 +63,15 @@ def getSkillLevels(id):
     card_info = json.loads(card_info_str)
     skill_levels = {"levels": {}}
     for lvl, info in enumerate(card_info[repr(id)]['skill']):
-        percent = info[0]/100
-        amount = info[1]
+        percent = info[0]/100.0
+        if info[1] != 0:
+            amount = info[1]
+        else:
+            amount = info[2]
         skill_levels['levels'][lvl+1] = {'percent': percent, 'amount': amount}
+    # logging.info(skill_levels)
     return skill_levels
-
+# getSkillLevels(1289)
 # function: extract a card's skill details and write averages to card
 # input: dict card
 def skillDetails(card):
@@ -128,9 +132,6 @@ def skillDetails(card):
 
     card['skill'].update(skillNums)
     card.pop('skill_details', None)
-    #     card['skill']['hl_heel'] = card['skill']['hl'] * 270
-
-    # logging.info("skillDetails(): done")
 
 
 
@@ -314,10 +315,11 @@ def populateCardSkills():
     skills = []
     for i in ids:
         if i not in range(2001,2010):
-            skill = {'id': i}
+            skill = {}
+            skill[repr(i)] = {'id': i}
             try:
-                skill.update(getSkillLevels(i))
-                skills.append(skill)
+                skill[repr(i)].update(getSkillLevels(i))
+                skills.update(skill)
             except:
                 break
 
@@ -412,7 +414,6 @@ def updateCardsJSON():
         logging.info("updateCardsJSON(): up to date")
 
 
-
 def consolidate():
     cardData = {}
     logging.info("consolidate(): reading cards")
@@ -420,10 +421,9 @@ def consolidate():
         cardData = json.loads(c.read())
 
     logging.info("consolidate(): reading skills")
-    skills = []
     with open("skills.json", 'r') as s:
         skills = json.loads(s.read())
-
+        
     logging.info("consolidate(): cleaning cards")
     data = temp = {}
     for card in cardData.values():
